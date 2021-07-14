@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+{% block title %}
+    Quiz
+{% endblock %}
+
+{% block main %}
+<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
+    <div class="" id="inner">
+        <h1 class="text-white" >{{ questions[count].question}}</h1>
+          
+    <form action="/quiz" method="post">      
+    <div class=" btn-group-toggle p-5" data-toggle="buttons" name="answer">
+    {% for key,value in answer[count].items() %}
+        <div class="btn btn-outline-light">
+            <input type="radio" class="form-check-input" name="radio-stacked"  value= {{key}} required>{{value}}
+        </div>
+    {% endfor %}
+            </div>
+                <br><button class="btn btn-secondary" type="submit">Next</button>
+            </form>
+            </div>
+
+                <img src="/static/giphy.gif" alt="Paris" class="walking" height="20%">
+            </div>
+
+        
+{% endblock %}

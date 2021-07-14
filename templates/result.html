@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+{% block title %}
+    Quiz
+{% endblock %}
+
+{% block main %}
+
+<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
+    <div class="" id="inner">
+        <h1 class="text-white" >You are <strong>at least</strong> in the top {{result | convert}}% of the world</h1>
+        <br><a class="btn btn-secondary btn-lg" href="/result" role="button">View detailed results</a>
+    </div>
+</div>
+{% endblock %}

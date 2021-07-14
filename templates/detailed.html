@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}
+    Quiz
+{% endblock %}
+
+{% block main %}
+
+<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
+       <div class="" id="inner">
+          <h1 class="text-white" >In terms of</h1>
+
+    <form action="/result" method="post">
+    <div class="col-auto p-5 ">
+      <select name= "interm" class="custom-select " id="inlineFormCustomSelect" required>
+        <option disabled value="" selected>Choose...</option>
+        <option  value="wealth"> Finance </option>
+        <option  value="access"> Accessibility </option>
+        <option  value="country"> Location </option>
+        <option  value="education"> Education </option>
+      </select>
+    </div>
+    <br><button class="btn btn-secondary" type="submit">Check</button><br>
+    <br><a class="btn btn-secondary" href="/" role="button">Home</a>
+</form>
+    </div>
+</div>
+{% endblock %}

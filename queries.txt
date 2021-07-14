@@ -1,0 +1,24 @@
+CREATE TABLE stocks (
+    StocksID INTERGER,
+    StocksAmount INTERGER,
+    PersonID INTERGER,
+    Symbol TEXT NOT NULL UNIQUE,
+    StockPrice NUMERIC,
+    StockTotal NUMERIC,
+    StockName TEXT NOT NULL UNIQUE,
+    PRIMARY KEY (StocksID),
+    FOREIGN KEY (PersonID) REFERENCES users(id)
+);
+
+export API_KEY=pk_9ebb0572340f4c24958af99f47fbf06c
+
+CREATE TABLE history (
+    StocksID INTERGER,
+    StocksAmount INTERGER,
+    PersonID INTERGER,
+    Symbol TEXT NOT NULL,
+    StockPrice NUMERIC,
+    Time TEXT,
+    PRIMARY KEY (StocksID),
+    FOREIGN KEY (PersonID) REFERENCES users(id)
+);

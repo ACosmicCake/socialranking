@@ -1,0 +1,44 @@
+.navbar-inner {
+    background:transparent;
+}
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+#outer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(to bottom, #2e2e2e ,black);
+}
+
+
+
+#inner {
+  margin: auto;
+}
+
+#people {
+    font-size: 80px;
+}
+

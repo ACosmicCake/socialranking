@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+    Quiz
+{% endblock %}
+    {% block main %}
+
+<div class="bg-image d-flex flex-column justify-content-center align-items-center " style="
+      background-image: url('/static/world.gif');
+      background-size: cover;
+      height: 100vh;
+    ">
+          <h1 class="text-white">Welcome</h1>
+        <p class="text-white container">
+            What percentage of the world in terms of socioeconomic status do you belong to?
+        </p>
+    <br><a class="btn btn-secondary btn-lg" href="/quiz" role="button">Start Quiz</a>
+
+</div>
+    {% endblock %}
+
+</html>
+

@@ -1,0 +1,27 @@
+
+{% extends "layout.html" %}
+{% block title %}
+    Quiz
+{% endblock %}
+
+{% block main %}
+<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
+       <div class="" id="inner">
+          <h1 class="text-white" >What country are you from?</h1>
+
+    <form action="/quiz" method="post">
+    <div class="col-auto p-5 ">
+      <select name= "country" class="custom-select " id="inlineFormCustomSelect" required>
+        <option disabled value="" selected>Choose...</option>
+        {% for country in countries %}
+        <option  value="{{country}}"> {{country}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <br><button class="btn btn-secondary" type="submit">Next</button>
+    </form>
+        </div>
+        <img src="/static/giphy.gif" alt="Paris" class="" height="20%">
+        </div>
+
+{% endblock %}
