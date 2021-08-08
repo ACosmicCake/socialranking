@@ -27,6 +27,15 @@ countries=["Afghanistan","Albania","Algeria","Andorra","Angola","Antigua & Deps"
 "Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan",
 "Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (U.S.)","Yemen","West Bank and Gaza","Zambia","Zimbabwe"]
 
+
+currentquestion = -1
+country = 0
+education = 0
+wealth = 0
+access = 0
+result = 0
+
+
 highincome = [
 "Andorra",
 "Greece",
