@@ -28,13 +28,6 @@ countries=["Afghanistan","Albania","Algeria","Andorra","Angola","Antigua & Deps"
 "Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (U.S.)","Yemen","West Bank and Gaza","Zambia","Zimbabwe"]
 
 
-currentquestion = -1
-country = 0
-education = 0
-wealth = 0
-access = 0
-result = 0
-
 
 highincome = [
 "Andorra",
