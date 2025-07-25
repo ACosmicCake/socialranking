@@ -1,27 +1,151 @@
 {% extends "layout.html" %}
 {% block title %}
-    Quiz
+    Detailed Results
 {% endblock %}
 
 {% block main %}
-
-<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
-       <div class="" id="inner">
-          <h1 class="text-white" >In terms of</h1>
-
-    <form action="/result" method="post">
-    <div class="col-auto p-5 ">
-      <select name= "interm" class="custom-select " id="inlineFormCustomSelect" required>
-        <option disabled value="" selected>Choose...</option>
-        <option  value="wealth"> Finance </option>
-        <option  value="access"> Accessibility </option>
-        <option  value="country"> Location </option>
-        <option  value="education"> Education </option>
-      </select>
-    </div>
-    <br><button class="btn btn-secondary" type="submit">Check</button><br>
-    <br><a class="btn btn-secondary" href="/" role="button">Home</a>
-</form>
+<div class="bg-image d-flex flex-column justify-content-center align-items-center" id="outer">
+    <div class="container" id="inner">
+        <h1 class="text-white text-center mb-4">Your Socioeconomic Profile</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="spiderChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <div id="results-container" class="text-white">
+                    <h2>Dimensions</h2>
+                    <p><strong>Wealth:</strong> {{ result.wealth }}</p>
+                    <p><strong>Access:</strong> {{ result.access }}</p>
+                    <p><strong>Education:</strong> {{ result.education }}</p>
+                    <p><strong>Country:</strong> {{ result.country }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12 text-white">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="wealth-tab" data-toggle="tab" href="#wealth" role="tab" aria-controls="wealth" aria-selected="true">Wealth</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="access-tab" data-toggle="tab" href="#access" role="tab" aria-controls="access" aria-selected="false">Access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="false">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="country-tab" data-toggle="tab" href="#country" role="tab" aria-controls="country" aria-selected="false">Country</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="wealth" role="tabpanel" aria-labelledby="wealth-tab">
+                        <h3>Wealth</h3>
+                        <p>Your wealth score is a measure of your financial well-being. It is calculated based on your daily income and financial situation. A higher score indicates a higher level of wealth.</p>
+                        <p>The global average wealth score is 76.27. This score is based on the global average GDP per capita of $19,422.</p>
+                        <p>Learn more about global wealth and income inequality:</p>
+                        <ul>
+                            <li><a href="https://www.worldbank.org/en/topic/poverty" class="text-white">World Bank: Poverty</a></li>
+                            <li><a href="https://www.un.org/en/global-issues/ending-poverty" class="text-white">United Nations: Ending Poverty</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="access" role="tabpanel" aria-labelledby="access-tab">
+                        <h3>Access</h3>
+                        <p>Your access score is a measure of your access to basic services such as clean water, cooking fuels, electricity, internet, and health services. A higher score indicates better access to these services.</p>
+                        <p>The global average access to electricity is 87.15%.</p>
+                        <p>Learn more about access to basic services:</p>
+                        <ul>
+                            <li><a href="https://www.worldbank.org/en/topic/energy" class="text-white">World Bank: Energy</a></li>
+                            <li><a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water" class="text-white">WHO: Drinking-water</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
+                        <h3>Education</h3>
+                        <p>Your education score is a measure of your level of education. It is calculated based on your highest level of education completed. A higher score indicates a higher level of education.</p>
+                        <p>The global average literacy rate is 81.36%.</p>
+                        <p>Learn more about global education:</p>
+                        <ul>
+                            <li><a href="https://www.worldbank.org/en/topic/education" class="text-white">World Bank: Education</a></li>
+                            <li><a href="https://www.unesco.org/en/education" class="text-white">UNESCO: Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="country" role="tabpanel" aria-labelledby="country-tab">
+                        <h3>Country</h3>
+                        <p>Your country's income group is based on the World Bank's GNI per capita classifications. The income groups are: low income, lower-middle income, upper-middle income, and high income.</p>
+                        <p>Learn more about country income classifications:</p>
+                        <ul>
+                            <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups" class="text-white">World Bank: Country and Lending Groups</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctxSpider = document.getElementById('spiderChart').getContext('2d');
+    const spiderChart = new Chart(ctxSpider, {
+        type: 'radar',
+        data: {
+            labels: ['Wealth', 'Access', 'Education', 'Country'],
+            datasets: [{
+                label: 'Your Profile',
+                data: [
+                    {{ result.wealth }},
+                    {{ result.access }},
+                    {{ result.education }},
+                    100
+                ],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                r: {
+                    angleLines: {
+                        display: false
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 100
+                }
+            }
+        }
+    });
+
+    const ctxBar = document.getElementById('barChart').getContext('2d');
+    const barChart = new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+            labels: ['Wealth', 'Access', 'Education'],
+            datasets: [{
+                label: 'Your Score',
+                data: [{{ result.wealth }}, {{ result.access }}, {{ result.education }}],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }, {
+                label: 'Global Average',
+                data: [76.27, 87.15, 81.36],
+                backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                borderColor: 'rgba(255, 206, 86, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
 {% endblock %}

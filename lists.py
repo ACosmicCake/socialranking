@@ -222,33 +222,48 @@ lowmiddleincome = [
 "Haiti",
 "Papua New Guinea"]
 
-lowincome = ["Afghanistan",
-"Guinea-Bissau",
-"Somalia",
-"Burkina Faso",
-"Korea South",
-"South Sudan",
-"Burundi",
-"Liberia" ,
-"Sudan",
-"Central African Rep",
-"Madagascar",
-"Syrian Arab Republic",
-"Chad",
-"Malawi",
-"Togo",
-"Congo {Democratic Rep}",
-"Mali",
-"Uganda",
-"Eritrea",
-"Mozambique",
-"Yemen",
-"Ethiopia",
-"Niger",
-"Gambia",
-"Rwanda",
-"Guinea",
-"Sierra Leone"]
+income_groups = {
+    "high_income": [
+        "Andorra", "Antigua and Barbuda", "Aruba", "Australia", "Austria", "Bahamas, The", "Bahrain", "Barbados",
+        "Belgium", "Bermuda", "British Virgin Islands", "Brunei Darussalam", "Canada", "Cayman Islands",
+        "Channel Islands", "Chile", "Croatia", "Curaçao", "Cyprus", "Czech Republic", "Denmark", "Estonia",
+        "Faroe Islands", "Finland", "France", "French Polynesia", "Germany", "Gibraltar", "Greece", "Greenland",
+        "Guam", "Hong Kong SAR, China", "Hungary", "Iceland", "Ireland", "Isle of Man", "Israel", "Italy", "Japan",
+        "Korea, Rep.", "Kuwait", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Macao SAR, China", "Malta",
+        "Monaco", "Nauru", "Netherlands", "New Caledonia", "New Zealand", "Northern Mariana Islands", "Norway",
+        "Oman", "Palau", "Panama", "Poland", "Portugal", "Puerto Rico", "Qatar", "San Marino", "Saudi Arabia",
+        "Seychelles", "Singapore", "Sint Maarten (Dutch part)", "Slovak Republic", "Slovenia", "Spain",
+        "St. Kitts and Nevis", "St. Martin (French part)", "Sweden", "Switzerland", "Taiwan, China",
+        "Trinidad and Tobago", "Turks and Caicos Islands", "United Arab Emirates", "United Kingdom",
+        "United States", "Uruguay", "Virgin Islands (U.S.)"
+    ],
+    "upper_middle_income": [
+        "Albania", "Algeria", "American Samoa", "Argentina", "Armenia", "Azerbaijan", "Belarus", "Belize",
+        "Bosnia and Herzegovina", "Botswana", "Brazil", "Bulgaria", "China", "Colombia", "Costa Rica", "Cuba",
+        "Dominica", "Dominican Republic", "El Salvador", "Equatorial Guinea", "Fiji", "Gabon", "Georgia",
+        "Grenada", "Guatemala", "Guyana", "Indonesia", "Iran, Islamic Rep.", "Iraq", "Jamaica", "Jordan",
+        "Kazakhstan", "Kosovo", "Lebanon", "Libya", "Malaysia", "Maldives", "Marshall Islands", "Mauritius",
+        "Mexico", "Moldova", "Montenegro", "Namibia", "North Macedonia", "Paraguay", "Peru", "Romania",
+        "Russian Federation", "Samoa", "Serbia", "South Africa", "Sri Lanka", "St. Lucia",
+        "St. Vincent and the Grenadines", "Suriname", "Thailand", "Tonga", "Turkey", "Turkmenistan", "Tuvalu",
+        "Venezuela, RB", "Vietnam"
+    ],
+    "lower_middle_income": [
+        "Angola", "Bangladesh", "Benin", "Bhutan", "Bolivia", "Cabo Verde", "Cambodia", "Cameroon", "Comoros",
+        "Congo, Rep.", "Côte d'Ivoire", "Djibouti", "Egypt, Arab Rep.", "Eswatini", "Ghana", "Honduras",
+        "India", "Kenya", "Kiribati", "Kyrgyz Republic", "Lao PDR", "Lesotho", "Mauritania",
+        "Micronesia, Fed. Sts.", "Mongolia", "Morocco", "Mozambique", "Myanmar", "Nepal", "Nicaragua", "Nigeria",
+        "Pakistan", "Papua New Guinea", "Philippines", "Sao Tome and Principe", "Senegal", "Solomon Islands",
+        "Tajikistan", "Tanzania", "Timor-Leste", "Tunisia", "Ukraine", "Uzbekistan", "Vanuatu", "West Bank and Gaza",
+        "Zambia", "Zimbabwe"
+    ],
+    "low_income": [
+        "Afghanistan", "Burkina Faso", "Burundi", "Central African Republic", "Chad", "Congo, Dem. Rep.",
+        "Eritrea", "Ethiopia", "Gambia, The", "Guinea", "Guinea-Bissau", "Korea, Dem. People's Rep.",
+        "Liberia", "Madagascar", "Malawi", "Mali", "Niger", "Rwanda", "Sierra Leone", "Somalia", "South Sudan",
+        "Sudan", "Syrian Arab Republic", "Togo", "Uganda", "Yemen, Rep."
+    ]
+}
 
 
 

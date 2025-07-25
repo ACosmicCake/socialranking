@@ -1,19 +1,17 @@
 {% extends "layout.html" %}
 {% block title %}
-    Quiz
+    Country Details
 {% endblock %}
 
 {% block main %}
-
-<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
-       <div class="" id="inner">
-          <h1 class="text-white" >Location</h1>
-    <h2 class="text-white">you are <strong>at least</strong> better than </h2>
-    <h1 id="people" class="text-white" >{{country | people}} people</h1>
-    <h2 class="text-white" >in the world</h2>
-
-    <br><a class="btn btn-secondary btn-lg" href="/result" role="button">View result again</a><br>
-    <br><a class="btn btn-secondary btn-lg" href="/" role="button">Home</a>
+<div class="bg-image d-flex flex-column justify-content-center align-items-center" id="outer">
+    <div class="container" id="inner">
+        <h1 class="text-white text-center mb-4">Country Details</h1>
+        <div class="text-white">
+            <p>Your country's income group is: {{ country }}</p>
+            <p>This is based on the World Bank's GNI per capita classifications.</p>
+            <a class="btn btn-secondary" href="/result" role="button">Back to Results</a>
+        </div>
     </div>
 </div>
 {% endblock %}

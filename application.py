@@ -7,7 +7,7 @@ from werkzeug.exceptions import default_exceptions, HTTPException, InternalServe
 from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
 from helpers import apology,convert,people
-from lists import countries,questions,answer,lowincome,lowmiddleincome,uppermiddleincome,highincome
+from lists import countries,questions,answer,income_groups
 
 
 # Configure application
@@ -58,16 +58,18 @@ def quiz():
         session['currentquestion'] = currentquestion
 
 
-        # get the GNI capita of the users country
+        # Get the country from the form
         country = request.form.get("country")
-        if country in highincome:
-            session['country'] = 16
-        if country in uppermiddleincome:
-            session['country'] = 51
-        if country in lowmiddleincome:
-            session['country'] = 91
-        if country in lowincome:
-            session['country'] = 100
+
+        # Get the income group for the selected country
+        income_group = ""
+        for group, countries_in_group in income_groups.items():
+            if country in countries_in_group:
+                income_group = group
+                break
+
+        # Store the income group in the session
+        session['country'] = income_group
 
         if currentquestion == 0 or currentquestion == 1 or currentquestion == 2 or currentquestion == 3 or currentquestion == 4 or currentquestion == 5:
             if request.form.get("radio-stacked") != None:
@@ -86,10 +88,14 @@ def quiz():
             if request.form.get("radio-stacked") != None:
                 questionpoint = request.form.get("radio-stacked")
                 session['wealth'] = int(questionpoint)
-                session['result'] = (session['wealth']+session['education'])/2
-                print(session['wealth'],session['education'],session['access'],session['country'])
-                result = session['result']
-                return render_template("result.html",result = result)
+                # Create a dictionary to hold the results
+                result = {
+                    'wealth': session['wealth'],
+                    'education': session['education'],
+                    'access': session['access'],
+                    'country': session['country']
+                }
+                return render_template("detailed.html", result=result)
 
 
         return render_template("quiz.html",questions=questions, count=currentquestion, answer = answer)
@@ -128,20 +134,16 @@ def source():
 
     return render_template("source.html",)
 
-@app.route("/result",methods=["GET", "POST"])
+@app.route("/result", methods=["GET", "POST"])
 def result():
-    if request.form.get("interm") != None:
-        resultcheck = request.form.get("interm")
-        if resultcheck == "wealth":
-            return render_template("detailedfinance.html", wealth = session['wealth'])
-        if resultcheck == "access":
-            return render_template("detailedaccess.html", access = session['access'])
-        if resultcheck == "education":
-            return render_template("detailededucation.html", education = session['education'])
-        if resultcheck == "country":
-            return render_template("detailedcountry.html", country = session['country'])
-    """Display the quiz"""
-    return render_template("detailed.html",access = session['access'], wealth = session['wealth'], education = session['education'], country = session['country'])
+    """Display the quiz results."""
+    result = {
+        'wealth': session.get('wealth'),
+        'education': session.get('education'),
+        'access': session.get('access'),
+        'country': session.get('country')
+    }
+    return render_template("detailed.html", result=result)
 
 
 def errorhandler(e):
