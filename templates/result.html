@@ -5,11 +5,71 @@
 {% endblock %}
 
 {% block main %}
-
-<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
-    <div class="" id="inner">
-        <h1 class="text-white" >You are <strong>at least</strong> in the top {{result | convert}}% of the world</h1>
-        <br><a class="btn btn-secondary btn-lg" href="/result" role="button">View detailed results</a>
+<div class="bg-image d-flex flex-column justify-content-center align-items-center" id="outer">
+    <div class="text-center" id="inner">
+        <h1 class="text-white">You are <strong>at least</strong> in the top {{ result | convert }}% of the world</h1>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="col-md-6 text-white" style="text-align: left;">
+                <h2>Detailed Breakdown:</h2>
+                <p><strong>Wealth:</strong> {{ session['wealth'] }}%</p>
+                <p>This score reflects your daily income and financial stability.</p>
+                <p><strong>Education:</strong> {{ session['education'] }}%</p>
+                <p>This score is based on your level of educational attainment.</p>
+                <p><strong>Access:</strong> {{ session['access'] }}%</p>
+                <p>This score represents your access to essential services like clean water, electricity, and healthcare.</p>
+                <p><strong>Country:</strong> {{ session['country'] }}%</p>
+                <p>This score is determined by the income level of your country of residence.</p>
+            </div>
+        </div>
+        <br>
+        <div class="text-white">
+            <h2>Learn More and Get Involved</h2>
+            <p>Socioeconomic status is a complex issue with far-reaching consequences. Here are some resources to learn more and get involved in organizations working to address global inequality:</p>
+            <ul>
+                <li><a href="https://www.worldbank.org/en/topic/poverty" target="_blank">The World Bank: Poverty</a></li>
+                <li><a href="https://www.un.org/en/global-issues/ending-poverty" target="_blank">United Nations: End Poverty</a></li>
+                <li><a href="https://www.oxfam.org/" target="_blank">Oxfam International</a></li>
+            </ul>
+        </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Wealth', 'Education', 'Access', 'Country'],
+            datasets: [{
+                label: 'Your Score',
+                data: [{{ session['wealth'] }}, {{ session['education'] }}, {{ session['access'] }}, {{ session['country'] }}],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
 {% endblock %}

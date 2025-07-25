@@ -1,0 +1,302 @@
+{
+    "Aruba": {
+        "incomeLevel": "High income",
+        "capitalCity": "Oranjestad",
+        "longitude": "-70.0167",
+        "latitude": "latitude"
+    },
+    "Africa Eastern and Southern": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Afghanistan": {
+        "incomeLevel": "Low income",
+        "capitalCity": "Kabul",
+        "longitude": "69.1761",
+        "latitude": "latitude"
+    },
+    "Africa": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Africa Western and Central": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Angola": {
+        "incomeLevel": "Lower middle income",
+        "capitalCity": "Luanda",
+        "longitude": "13.242",
+        "latitude": "latitude"
+    },
+    "Albania": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Tirane",
+        "longitude": "19.8172",
+        "latitude": "latitude"
+    },
+    "Andorra": {
+        "incomeLevel": "High income",
+        "capitalCity": "Andorra la Vella",
+        "longitude": "1.5218",
+        "latitude": "latitude"
+    },
+    "Arab World": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "United Arab Emirates": {
+        "incomeLevel": "High income",
+        "capitalCity": "Abu Dhabi",
+        "longitude": "54.3705",
+        "latitude": "latitude"
+    },
+    "Argentina": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Buenos Aires",
+        "longitude": "-58.4173",
+        "latitude": "latitude"
+    },
+    "Armenia": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Yerevan",
+        "longitude": "44.509",
+        "latitude": "latitude"
+    },
+    "American Samoa": {
+        "incomeLevel": "High income",
+        "capitalCity": "Pago Pago",
+        "longitude": "-170.691",
+        "latitude": "latitude"
+    },
+    "Antigua and Barbuda": {
+        "incomeLevel": "High income",
+        "capitalCity": "Saint John's",
+        "longitude": "-61.8456",
+        "latitude": "latitude"
+    },
+    "Australia": {
+        "incomeLevel": "High income",
+        "capitalCity": "Canberra",
+        "longitude": "149.129",
+        "latitude": "latitude"
+    },
+    "Austria": {
+        "incomeLevel": "High income",
+        "capitalCity": "Vienna",
+        "longitude": "16.3798",
+        "latitude": "latitude"
+    },
+    "Azerbaijan": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Baku",
+        "longitude": "49.8932",
+        "latitude": "latitude"
+    },
+    "Burundi": {
+        "incomeLevel": "Low income",
+        "capitalCity": "Bujumbura",
+        "longitude": "29.3639",
+        "latitude": "latitude"
+    },
+    "East Asia & Pacific (IBRD-only countries)": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Europe & Central Asia (IBRD-only countries)": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Belgium": {
+        "incomeLevel": "High income",
+        "capitalCity": "Brussels",
+        "longitude": "4.36761",
+        "latitude": "latitude"
+    },
+    "Benin": {
+        "incomeLevel": "Lower middle income",
+        "capitalCity": "Porto-Novo",
+        "longitude": "2.6323",
+        "latitude": "latitude"
+    },
+    "Burkina Faso": {
+        "incomeLevel": "Low income",
+        "capitalCity": "Ouagadougou",
+        "longitude": "-1.53395",
+        "latitude": "latitude"
+    },
+    "Bangladesh": {
+        "incomeLevel": "Lower middle income",
+        "capitalCity": "Dhaka",
+        "longitude": "90.4113",
+        "latitude": "latitude"
+    },
+    "Bulgaria": {
+        "incomeLevel": "High income",
+        "capitalCity": "Sofia",
+        "longitude": "23.3238",
+        "latitude": "latitude"
+    },
+    "IBRD countries classified as high income": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Bahrain": {
+        "incomeLevel": "High income",
+        "capitalCity": "Manama",
+        "longitude": "50.5354",
+        "latitude": "latitude"
+    },
+    "Bahamas, The": {
+        "incomeLevel": "High income",
+        "capitalCity": "Nassau",
+        "longitude": "-77.339",
+        "latitude": "latitude"
+    },
+    "Bosnia and Herzegovina": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Sarajevo",
+        "longitude": "18.4214",
+        "latitude": "latitude"
+    },
+    "Latin America & the Caribbean (IBRD-only countries)": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Belarus": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Minsk",
+        "longitude": "27.5766",
+        "latitude": "latitude"
+    },
+    "Belize": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Belmopan",
+        "longitude": "-88.7713",
+        "latitude": "latitude"
+    },
+    "Middle East, North Africa, Afghanistan & Pakistan (IBRD only)": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Bermuda": {
+        "incomeLevel": "High income",
+        "capitalCity": "Hamilton",
+        "longitude": "-64.706",
+        "latitude": "latitude"
+    },
+    "Bolivia": {
+        "incomeLevel": "Lower middle income",
+        "capitalCity": "La Paz",
+        "longitude": "-66.1936",
+        "latitude": "latitude"
+    },
+    "Brazil": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Brasilia",
+        "longitude": "-47.9292",
+        "latitude": "latitude"
+    },
+    "Barbados": {
+        "incomeLevel": "High income",
+        "capitalCity": "Bridgetown",
+        "longitude": "-59.6105",
+        "latitude": "latitude"
+    },
+    "Brunei Darussalam": {
+        "incomeLevel": "High income",
+        "capitalCity": "Bandar Seri Begawan",
+        "longitude": "114.946",
+        "latitude": "latitude"
+    },
+    "Sub-Saharan Africa (IBRD-only countries)": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Bhutan": {
+        "incomeLevel": "Lower middle income",
+        "capitalCity": "Thimphu",
+        "longitude": "89.6177",
+        "latitude": "latitude"
+    },
+    "Botswana": {
+        "incomeLevel": "Upper middle income",
+        "capitalCity": "Gaborone",
+        "longitude": "25.9201",
+        "latitude": "latitude"
+    },
+    "Sub-Saharan Africa (IFC classification)": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Central African Republic": {
+        "incomeLevel": "Low income",
+        "capitalCity": "Bangui",
+        "longitude": "21.6407",
+        "latitude": "latitude"
+    },
+    "Canada": {
+        "incomeLevel": "High income",
+        "capitalCity": "Ottawa",
+        "longitude": "-75.6919",
+        "latitude": "latitude"
+    },
+    "East Asia and the Pacific (IFC classification)": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Central Europe and the Baltics": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Europe and Central Asia (IFC classification)": {
+        "incomeLevel": "Aggregates",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Switzerland": {
+        "incomeLevel": "High income",
+        "capitalCity": "Bern",
+        "longitude": "7.44821",
+        "latitude": "latitude"
+    },
+    "Channel Islands": {
+        "incomeLevel": "High income",
+        "capitalCity": "",
+        "longitude": "",
+        "latitude": "latitude"
+    },
+    "Chile": {
+        "incomeLevel": "High income",
+        "capitalCity": "Santiago",
+        "longitude": "-70.6475",
+        "latitude": "latitude"
+    }
+}

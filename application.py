@@ -1,4 +1,5 @@
 import os
+import json
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
@@ -7,7 +8,7 @@ from werkzeug.exceptions import default_exceptions, HTTPException, InternalServe
 from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
 from helpers import apology,convert,people
-from lists import countries,questions,answer,lowincome,lowmiddleincome,uppermiddleincome,highincome
+from lists import questions,answer
 
 
 # Configure application
@@ -33,7 +34,16 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
+with open('countries.json') as f:
+    countries = json.load(f)
 
+with open('income_levels.json') as f:
+    income_levels = json.load(f)
+
+highincome = [country for country, data in income_levels.items() if data['incomeLevel'] == 'High income']
+uppermiddleincome = [country for country, data in income_levels.items() if data['incomeLevel'] == 'Upper middle income']
+lowmiddleincome = [country for country, data in income_levels.items() if data['incomeLevel'] == 'Lower middle income']
+lowincome = [country for country, data in income_levels.items() if data['incomeLevel'] == 'Low income']
 
 
 @app.route("/")
@@ -48,60 +58,85 @@ def index():
     return render_template("index.html",)
 
 
-@app.route("/quiz",methods=["GET", "POST"])
+def calculate_score(country, access, education, wealth):
+    """
+    Calculates the final socioeconomic status (SES) score based on the user's answers.
+
+    The score is calculated using a weighted average of the following four components:
+    - Country: Based on the income level of the user's country of residence.
+    - Access: Reflects the user's access to essential services like clean water, electricity, and healthcare.
+    - Education: Based on the user's level of educational attainment.
+    - Wealth: Reflects the user's daily income and financial stability.
+
+    Each component is assigned a weight based on its relative importance in determining SES.
+    """
+    # Weights for each category, based on the following justification:
+    # - Wealth and Education are given the highest weights as they are the most significant predictors of socioeconomic status.
+    # - Occupation is also a strong predictor, but it is often correlated with education and income, so it is given a slightly lower weight.
+    # - Access to basic services is a fundamental component of well-being, but it is often a consequence of wealth and education, so it is given a lower weight.
+    # - Social capital and intergenerational mobility are also important factors, but they are more difficult to measure and are given a lower weight in this model.
+    weights = {
+        'wealth': 0.30,
+        'education': 0.30,
+        'occupation': 0.20,
+        'access': 0.10,
+        'social_capital': 0.05,
+        'intergenerational_mobility': 0.05
+    }
+
+    # Calculate the weighted score
+    score = (session.get('wealth', 0) * weights['wealth']) + \
+            (session.get('education', 0) * weights['education']) + \
+            (session.get('occupation', 0) * weights['occupation']) + \
+            (session.get('access', 0) * weights['access']) + \
+            (session.get('social_capital', 0) * weights['social_capital']) + \
+            (session.get('intergenerational_mobility', 0) * weights['intergenerational_mobility'])
+    return score
+
+@app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     if request.method == "POST":
-
-        #itterate through questions everytimr the user clicks next
-        currentquestion = session['currentquestion']
-        currentquestion = currentquestion + 1
+        currentquestion = session.get('currentquestion', -1) + 1
         session['currentquestion'] = currentquestion
 
-
-        # get the GNI capita of the users country
         country = request.form.get("country")
-        if country in highincome:
-            session['country'] = 16
-        if country in uppermiddleincome:
-            session['country'] = 51
-        if country in lowmiddleincome:
-            session['country'] = 91
-        if country in lowincome:
-            session['country'] = 100
+        if country:
+            if country in highincome:
+                session['country'] = 16
+            elif country in uppermiddleincome:
+                session['country'] = 51
+            elif country in lowmiddleincome:
+                session['country'] = 91
+            elif country in lowincome:
+                session['country'] = 100
 
-        if currentquestion == 0 or currentquestion == 1 or currentquestion == 2 or currentquestion == 3 or currentquestion == 4 or currentquestion == 5:
-            if request.form.get("radio-stacked") != None:
-                questionpoint = request.form.get("radio-stacked")
-                session['access'] += int(questionpoint)
-        if currentquestion == 6:
-            if request.form.get("radio-stacked") != None:
-                session['access'] = session['access']/5
-                questionpoint = request.form.get("radio-stacked")
-                session['access'] = (int(questionpoint) + session['access'])/2
-        if currentquestion == 7:
-            if request.form.get("radio-stacked") != None:
-                questionpoint = request.form.get("radio-stacked")
-                session['education'] = int(questionpoint)
-        if currentquestion == 8:
-            if request.form.get("radio-stacked") != None:
-                questionpoint = request.form.get("radio-stacked")
-                session['wealth'] = int(questionpoint)
-                session['result'] = (session['wealth']+session['education'])/2
-                print(session['wealth'],session['education'],session['access'],session['country'])
-                result = session['result']
-                return render_template("result.html",result = result)
+        question_category = questions[currentquestion -1]['category']
+        question_point = request.form.get("radio-stacked")
 
+        if question_point:
+            if question_category not in session:
+                session[question_category] = 0
+            session[question_category] += int(question_point)
 
-        return render_template("quiz.html",questions=questions, count=currentquestion, answer = answer)
+        if currentquestion == len(questions):
+            # Calculate the average score for each category
+            for category in set(q['category'] for q in questions):
+                if category in session:
+                    session[category] = session[category] / len([q for q in questions if q['category'] == category])
+            session['result'] = calculate_score(
+                session.get('country', 0),
+                session.get('access', 0),
+                session.get('education', 0),
+                session.get('wealth', 0)
+            )
+            return render_template("result.html", result=session['result'])
+
+        return render_template("quiz.html", questions=questions, count=currentquestion, answer=answer)
 
     else:
+        session.clear()
         session['currentquestion'] = -1
-        session['country'] = 0
-        session['education'] = 0
-        session['wealth'] = 0
-        session['access'] = 0
-        session['result'] = 0
-        return render_template("quizcountry.html",countries=countries)
+        return render_template("quizcountry.html", countries=countries)
 
 
 
@@ -127,6 +162,12 @@ def source():
     """Display the quiz"""
 
     return render_template("source.html",)
+
+@app.route("/learn")
+def learn():
+    """Display the learn more page"""
+
+    return render_template("learn.html",)
 
 @app.route("/result",methods=["GET", "POST"])
 def result():
