@@ -1,13 +1,13 @@
 import os
 import json
-from cs50 import SQL
+import sqlite3
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
-from helpers import apology,convert,people
+from helpers import convert,people
 from lists import questions,answer
 
 
@@ -33,7 +33,6 @@ def after_request(response):
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-# Configure CS50 Library to use SQLite database
 with open('countries.json') as f:
     countries = json.load(f)
 
