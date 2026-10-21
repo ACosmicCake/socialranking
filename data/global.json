@@ -7,7 +7,7 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (105 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
+   "name": "World Bank World Development Indicators API (106 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
   },
@@ -3152,6 +3152,7 @@
   "SI.DST.10TH.10": "Income share held by highest 10%",
   "SI.DST.FRST.20": "Income share held by lowest 20%",
   "SI.POV.NAHC": "Poverty headcount ratio at national poverty lines (% of population)",
+  "GD_WBL_OVL_LAW": "Women, Business and the Law: legal framework index (0-100)",
   "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
   "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
   "FX.OWN.TOTL.FE.ZS": "Account ownership, female (% of age 15+)",
@@ -3365,6 +3366,10 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      23.23
+    ],
+    "GD_WBL_OVL_LAW": [
+     2025,
+     66.97
     ],
     "SP.DYN.LE00.FE.IN": [
      2024,
@@ -5047,6 +5052,10 @@
     "EN.POP.SLUM.UR.ZS": [
      2019,
      5.41
+    ],
+    "GD_WBL_OVL_LAW": [
+     2025,
+     50.4
     ],
     "SP.DYN.LE00.FE.IN": [
      2024,

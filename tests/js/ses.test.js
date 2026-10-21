@@ -449,3 +449,8 @@ test("inequality and national poverty in the country overview", () => {
     assert.ok(g["SI.DST.10TH.10"] > g["SI.DST.FRST.20"]);
     assert.ok(g["SI.POV.NAHC"] >= 0 && g["SI.POV.NAHC"] <= 100);
 });
+
+test("women's legal equality in the country overview", () => {
+    const wbl = run(FULL).location.glance.find(g => g.code === "GD_WBL_OVL_LAW");
+    assert.ok(wbl.value > 0 && wbl.value <= 100 && wbl.world > 0);
+});

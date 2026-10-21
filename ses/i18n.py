@@ -360,6 +360,7 @@ LABELS = {
         "SI.DST.10TH.10": "Tỷ trọng thu nhập của 10% giàu nhất",
         "SI.DST.FRST.20": "Tỷ trọng thu nhập của 20% nghèo nhất",
         "SI.POV.NAHC": "Tỷ lệ nghèo theo chuẩn nghèo quốc gia",
+        "GD_WBL_OVL_LAW": "Bình đẳng pháp lý cho phụ nữ (Phụ nữ, Kinh doanh và Pháp luật, 0-100)",
         "HD.HCI.OVRL": "Chỉ số Vốn nhân lực (0-1)",
         "HD.HCI.OVRL.FE": "Chỉ số Vốn nhân lực, trẻ em gái (0-1)",
         "HD.HCI.OVRL.MA": "Chỉ số Vốn nhân lực, trẻ em trai (0-1)",
