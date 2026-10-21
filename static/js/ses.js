@@ -63,6 +63,10 @@
                 "SP.DYN.LE00.MA.IN": "Life expectancy at birth, men (years)",
                 "HD.HCI.OVRL": "Human Capital Index (0-1)",
                 "HD.HCI.OVRL.FE": "Human Capital Index, girls (0-1)",
+                "SE.ADT.LITR.FE.ZS": "Women who can read and write",
+                "SE.ADT.LITR.MA.ZS": "Men who can read and write",
+                "IT.NET.USER.FE.ZS": "Women using the internet",
+                "IT.NET.USER.MA.ZS": "Men using the internet",
                 "HD.HCI.OVRL.MA": "Human Capital Index, boys (0-1)",
                 "HD.HCI.EYRS": "Expected years of school by age 18",
                 "HD.HCI.LAYS": "Learning-adjusted years of school",
@@ -1040,17 +1044,27 @@
             ["SE.LPV.PRIM", "pct"], ["IT.CEL.SETS.P2", "number"], ["SH.XPD.CHEX.PC.CD", "money"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);
 
+        // Total indicator and its female and male versions.
+        const SEX_GLANCE = [
+            ["SP.DYN.LE00.IN", "SP.DYN.LE00.FE.IN", "SP.DYN.LE00.MA.IN"],
+            ["SE.ADT.LITR.ZS", "SE.ADT.LITR.FE.ZS", "SE.ADT.LITR.MA.ZS"],
+            ["HD.HCI.OVRL", "HD.HCI.OVRL.FE", "HD.HCI.OVRL.MA"],
+        ];
+
         function scoreLocation(country, answers) {
             const result = {glance: []};
             const region = regionAggregate(country), group = incomeAggregate(country);
             const glance = GLANCE.slice();
             if (answers.sex === "F" || answers.sex === "M") {
-                const code = answers.sex === "F" ? "SP.DYN.LE00.FE.IN" : "SP.DYN.LE00.MA.IN";
-                glance.splice(1, 1, [code, L.glance[code], "number"]);
-                // The Human Capital Index for children of your sex, where published.
-                const hci = answers.sex === "F" ? "HD.HCI.OVRL.FE" : "HD.HCI.OVRL.MA";
-                const at = glance.findIndex(g => g[0] === "HD.HCI.OVRL");
-                if (value(country.wdi, hci) !== null) glance.splice(at, 1, [hci, L.glance[hci], "index"]);
+                // Swap in the figure for your sex where the country publishes one, and add internet use.
+                const fe = answers.sex === "F";
+                for (const [total, female, male] of SEX_GLANCE) {
+                    const code = fe ? female : male;
+                    const at = glance.findIndex(g => g[0] === total);
+                    if (at >= 0 && value(country.wdi, code) !== null) glance.splice(at, 1, [code, L.glance[code], glance[at][2]]);
+                }
+                const net = fe ? "IT.NET.USER.FE.ZS" : "IT.NET.USER.MA.ZS";
+                glance.push([net, L.glance[net], "pct"]);
             }
             for (const [code, label, fmt] of glance) {
                 const v = value(country.wdi, code);

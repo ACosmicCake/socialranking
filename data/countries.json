@@ -648,6 +648,14 @@
     2024,
     64.7
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    26.6
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    52.06
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2017,
     7.16
@@ -1502,6 +1510,22 @@
     2024,
     77.92
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    97.22
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    98.15
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    81.72
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    84.59
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     41.16
@@ -2354,6 +2378,18 @@
     2024,
     75.1
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    74.21
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2018,
+    42.86
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2018,
+    55.13
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     18.07
@@ -2953,6 +2989,14 @@
     2024,
     82.26
    ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    90.27
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    92.85
+   ],
    "IT.CEL.SETS.P2": [
     2024,
     155.69
@@ -3405,6 +3449,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     62.27
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    54.37
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    83.97
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2014,
+    20.2
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2014,
+    22.39
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2014,
@@ -4527,6 +4587,22 @@
     2024,
     74.98
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    99.16
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    99.13
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    89.14
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    90.22
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     84.25
@@ -5451,6 +5527,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     75.1
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    99.9
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    99.77
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    81.86
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    77.88
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -6548,6 +6640,14 @@
     2024,
     81.1
    ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    86.12
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    87.02
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     97.72
@@ -7331,6 +7431,14 @@
     2024,
     79.8
    ],
+   "IT.NET.USER.FE.ZS": [
+    2025,
+    90.43
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2025,
+    93.48
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     99.19
@@ -7897,6 +8005,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     71.71
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    99.73
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    99.84
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2025,
+    87.25
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2025,
+    94.42
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -9065,6 +9189,22 @@
     2024,
     80.86
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    96.29
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    98.67
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    100.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    100.0
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     83.02
@@ -9938,6 +10078,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     73.3
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    76.54
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    81.39
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    50.06
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    56.86
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -11147,6 +11303,22 @@
     2024,
     69.74
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    99.88
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    99.87
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    94.65
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    93.7
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2017,
     81.34
@@ -11970,6 +12142,14 @@
     2024,
     80.3
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    95.12
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    96.43
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     97.92
@@ -12758,6 +12938,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     71.08
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    87.88
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    87.88
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    81.71
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    78.27
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -13604,6 +13800,14 @@
     2024,
     59.52
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    41.51
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    62.62
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     49.06
@@ -14448,6 +14652,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     71.57
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    57.0
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    73.39
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    86.25
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    84.79
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2014,
@@ -15356,6 +15576,22 @@
     2024,
     66.27
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    94.82
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    98.76
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    63.71
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    68.32
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     53.46
@@ -15943,6 +16179,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     74.65
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    84.72
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    87.3
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -16839,6 +17083,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     66.78
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    57.96
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    56.9
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -17752,6 +18004,22 @@
     2024,
     72.95
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    95.01
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    94.45
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    83.79
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    85.17
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     82.28
@@ -18128,6 +18396,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     74.7
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    78.6
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    76.8
    ],
    "IT.CEL.SETS.P2": [
     2024,
@@ -18681,6 +18957,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     73.49
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    98.87
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    93.98
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -19500,6 +19784,14 @@
     2024,
     72.2
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    81.65
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    83.26
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     85.04
@@ -20061,6 +20353,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     59.11
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    35.73
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    48.68
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2019,
+    6.62
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2019,
+    12.28
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -20861,6 +21169,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     61.75
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    66.11
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    77.89
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    1.49
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    3.91
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -21736,6 +22060,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     68.15
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    63.64
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    90.29
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2019,
+    51.71
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2019,
+    52.96
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -22616,6 +22956,22 @@
     2024,
     61.78
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2018,
+    66.16
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2018,
+    79.71
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    19.2
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    27.4
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     52.9
@@ -23440,6 +23796,14 @@
     2024,
     80.03
    ],
+   "IT.NET.USER.FE.ZS": [
+    2022,
+    94.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2022,
+    95.0
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     98.75
@@ -23947,6 +24311,22 @@
     2024,
     73.05
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    84.12
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    92.9
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2019,
+    60.97
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2019,
+    62.92
+   ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
     52.79
@@ -24265,6 +24645,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     78.2
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2017,
+    99.02
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2017,
+    98.72
    ],
    "IT.CEL.SETS.P2": [
     2022,
@@ -24911,6 +25299,14 @@
     2024,
     55.51
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    27.13
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    59.84
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2017,
     9.72
@@ -25542,6 +25938,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     53.36
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    18.64
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    44.52
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -26709,6 +27113,22 @@
     2024,
     79.45
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2017,
+    96.33
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2017,
+    96.48
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    94.84
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    96.39
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     83.17
@@ -27640,6 +28060,22 @@
     2024,
     75.25
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    95.05
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    98.38
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    77.32
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    77.64
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     89.2
@@ -28566,6 +29002,22 @@
     2024,
     75.16
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    95.69
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    94.97
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    80.07
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    78.58
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     50.99
@@ -29253,6 +29705,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     65.02
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    71.98
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    79.58
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -30117,6 +30577,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     59.96
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    53.78
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    85.36
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -31824,6 +32292,18 @@
     2024,
     78.37
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2018,
+    94.12
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    85.82
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    84.92
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     68.28
@@ -32739,6 +33219,14 @@
     2024,
     76.1
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    81.08
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    86.28
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     92.06
@@ -33494,6 +33982,22 @@
     2024,
     75.86
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    96.35
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    99.03
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2019,
+    75.11
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2019,
+    60.73
+   ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
     81.06
@@ -33808,6 +34312,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     72.66
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    68.68
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    67.45
    ],
    "IT.CEL.SETS.P2": [
     2023,
@@ -34507,6 +35019,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     79.84
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    90.82
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    88.31
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -35353,6 +35873,14 @@
     2024,
     77.1
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    87.36
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    88.05
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     89.68
@@ -36163,6 +36691,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     60.17
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    40.26
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    68.05
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    38.29
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    44.52
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -37047,6 +37591,14 @@
     2024,
     80.4
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    99.86
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    99.68
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     98.11
@@ -37629,6 +38181,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     63.73
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    51.65
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    59.9
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -38834,6 +39394,22 @@
     2024,
     70.66
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    94.43
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    93.6
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    91.3
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    90.69
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     61.44
@@ -39768,6 +40344,22 @@
     2024,
     74.88
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    92.58
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    94.49
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    78.15
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    76.15
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     63.51
@@ -40696,6 +41288,22 @@
     2024,
     69.65
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    73.3
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    85.29
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2022,
+    65.19
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2022,
+    79.26
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     40.21
@@ -41616,6 +42224,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     67.76
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    88.25
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    91.62
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2020,
+    52.37
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2020,
+    57.2
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -43224,6 +43848,14 @@
     2024,
     75.1
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    92.91
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    91.56
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     99.77
@@ -44103,6 +44735,14 @@
     2024,
     61.32
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    90.41
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    91.11
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     65.35
@@ -44790,6 +45430,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     64.36
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    49.96
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    71.04
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    13.71
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    19.72
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -45777,6 +46433,10 @@
     2024,
     65.47
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    92.43
+   ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
     67.63
@@ -46620,6 +47280,14 @@
     2024,
     79.8
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    92.86
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    94.62
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     99.69
@@ -47454,6 +48122,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     80.2
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    88.1
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    89.26
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -48520,6 +49196,14 @@
     2024,
     66.06
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    87.07
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    90.79
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     63.72
@@ -49433,6 +50117,14 @@
     2024,
     64.35
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    40.45
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    65.27
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     34.86
@@ -50110,6 +50802,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     69.75
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    99.62
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    99.75
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    84.41
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    83.1
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -50983,6 +51691,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     78.5
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    92.98
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    94.02
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -51866,6 +52582,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     63.31
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    72.14
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    81.33
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -52936,6 +53660,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     79.4
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    84.69
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    87.93
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -54566,6 +55298,22 @@
     2024,
     70.44
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    78.46
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    86.87
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    48.55
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    53.38
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     32.5
@@ -55164,6 +55912,22 @@
     2024,
     59.66
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2018,
+    27.69
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2018,
+    54.43
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2018,
+    15.4
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2018,
+    29.4
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     31.24
@@ -55746,6 +56510,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     61.82
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    52.16
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    77.32
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -56498,6 +57270,14 @@
     2024,
     66.62
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    86.9
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    84.21
+   ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
     70.76
@@ -57198,6 +57978,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     61.9
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2017,
+    63.87
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2017,
+    72.94
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2017,
@@ -58095,6 +58883,22 @@
     2024,
     70.49
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    88.78
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    87.61
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2019,
+    40.7
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2019,
+    37.96
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     34.08
@@ -58832,6 +59636,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     82.7
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    94.94
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    96.67
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -59672,6 +60484,14 @@
     2024,
     73.7
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    93.81
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    93.74
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     83.71
@@ -60494,6 +61314,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     81.2
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    99.68
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    99.69
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -61358,6 +62186,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     70.73
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    70.74
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    85.69
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2025,
+    63.1
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2025,
+    76.7
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -62281,6 +63125,22 @@
     2024,
     69.16
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    94.55
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    97.45
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    69.9
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    75.65
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     58.03
@@ -63191,6 +64051,22 @@
     2024,
     76.0
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    85.09
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    92.75
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    77.69
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    79.5
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     86.79
@@ -64094,6 +64970,22 @@
     2024,
     70.5
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    77.75
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    90.31
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2022,
+    72.3
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2022,
+    84.72
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     18.81
@@ -64988,6 +65880,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     81.4
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2020,
+    93.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2020,
+    90.98
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -65948,6 +66848,14 @@
     2024,
     81.1
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    88.34
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    88.02
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     88.1
@@ -66787,6 +67695,22 @@
     2024,
     82.0
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    99.22
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    99.48
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    88.32
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    90.13
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     79.79
@@ -67566,6 +68490,18 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     69.08
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    90.81
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    92.29
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    86.59
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2021,
@@ -68377,6 +69313,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     81.09
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    82.64
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    88.62
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -69207,6 +70151,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     75.89
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    92.03
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    96.6
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    94.61
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    96.51
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -70052,6 +71012,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     70.27
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    92.62
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    94.21
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -70909,6 +71877,14 @@
     2024,
     61.64
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    32.19
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    37.82
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     86.52
@@ -71442,6 +72418,14 @@
     2024,
     64.69
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    98.86
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    98.59
+   ],
    "HD.HCI.OVRL": [
     2020,
     0.49
@@ -71841,6 +72825,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     76.01
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2018,
+    89.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2018,
+    89.94
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -72527,6 +73519,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     83.8
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    95.35
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    97.05
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    100.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    99.59
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -74249,6 +75257,14 @@
     2024,
     67.02
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    66.73
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    85.13
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     43.59
@@ -75104,6 +76120,14 @@
     2024,
     71.6
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    93.74
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    92.43
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     95.41
@@ -75744,6 +76768,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     75.88
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    89.52
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    94.77
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -76619,6 +77651,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     55.03
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    96.63
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    83.15
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2019,
+    44.92
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2019,
+    38.35
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -79223,6 +80271,14 @@
     2024,
     73.0
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    90.4
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    87.86
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     98.4
@@ -80102,6 +81158,14 @@
     2024,
     81.0
    ],
+   "IT.NET.USER.FE.ZS": [
+    2025,
+    98.73
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2025,
+    99.52
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2017,
     98.18
@@ -80756,6 +81820,22 @@
     2024,
     80.6
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2016,
+    95.03
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2016,
+    98.19
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    88.36
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    88.62
+   ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
     95.78
@@ -81363,6 +82443,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     62.12
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    71.75
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    77.9
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -82182,6 +83270,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     64.27
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    62.68
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    78.62
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    16.12
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    18.84
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -83006,6 +84110,22 @@
     2024,
     74.45
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    94.67
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    96.82
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    97.64
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    98.36
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     88.23
@@ -83806,6 +84926,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     79.95
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    98.26
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    98.16
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2022,
+    95.5
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2022,
+    76.37
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2017,
@@ -84633,6 +85769,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     59.25
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    27.74
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    45.18
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -85501,6 +86645,14 @@
     2024,
     81.2
    ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    94.02
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    90.34
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     96.05
@@ -85951,6 +87103,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     65.03
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    96.27
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    95.67
    ],
    "HD.HCI.OVRL": [
     2020,
@@ -86751,6 +87911,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     66.7
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    51.81
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    70.1
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -87623,6 +88791,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     70.35
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    92.74
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    96.1
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    72.44
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    74.23
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -88537,6 +89721,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     72.44
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    94.87
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    96.32
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    82.28
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    84.07
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -89510,6 +90710,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     66.7
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2014,
+    99.14
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2014,
+    99.6
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -90677,6 +91885,22 @@
     2024,
     67.92
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    98.88
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    98.38
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    80.41
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    82.91
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     98.97
@@ -91337,6 +92561,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     75.5
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2018,
+    97.95
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2018,
+    99.15
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    89.35
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    88.47
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -92139,6 +93379,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     73.35
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2014,
+    53.37
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2014,
+    75.44
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    86.36
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    89.92
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -93044,6 +94300,22 @@
     2024,
     60.49
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    50.89
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    74.04
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    6.14
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    9.63
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     45.49
@@ -93937,6 +95209,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     63.99
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    92.63
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    94.6
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    19.4
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    28.59
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2021,
@@ -94848,6 +96136,14 @@
     2024,
     63.45
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    87.39
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    87.9
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     75.04
@@ -95344,6 +96640,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     60.41
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    99.72
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    93.37
    ],
    "IT.CEL.SETS.P2": [
     2022,
@@ -96096,6 +97400,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     69.09
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    59.41
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    79.75
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -96945,6 +98257,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     80.6
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    95.94
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    98.09
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -98809,6 +100129,14 @@
     2024,
     72.46
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2014,
+    88.1
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2014,
+    86.66
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     21.23
@@ -99733,6 +101061,22 @@
     2024,
     60.49
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    25.69
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    47.89
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    5.29
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    15.99
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     12.2
@@ -100361,6 +101705,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     54.33
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    62.42
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    78.43
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -101371,6 +102723,18 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     74.48
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2018,
+    97.78
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2020,
+    79.25
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2020,
+    83.54
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -102386,6 +103750,14 @@
     2024,
     81.6
    ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    99.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    99.0
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     97.82
@@ -102898,6 +104270,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     78.72
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    94.86
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    98.62
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2020,
+    97.15
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2020,
+    94.4
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -103771,6 +105159,22 @@
     2024,
     65.46
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    48.52
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    69.14
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2020,
+    13.61
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2020,
+    24.04
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     11.91
@@ -104268,6 +105672,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     67.25
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2020,
+    99.71
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    100.0
    ],
    "HD.HCI.OVRL": [
     2020,
@@ -104998,6 +106410,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     76.88
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    95.83
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    97.07
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2019,
+    63.81
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2019,
+    63.43
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -105787,6 +107215,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     63.84
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2017,
+    61.55
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    90.24
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -106687,6 +108123,22 @@
     2024,
     71.01
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    94.34
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    95.42
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    82.13
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    81.0
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     60.11
@@ -107579,6 +109031,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     75.63
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    90.65
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    97.0
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    80.22
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    83.69
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -108514,6 +109982,22 @@
     2024,
     66.99
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    97.0
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2020,
+    98.41
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    69.94
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    64.61
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     57.1
@@ -109411,6 +110895,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     74.8
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    88.5
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    88.68
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -110311,6 +111803,14 @@
     2024,
     79.7
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    88.59
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    88.37
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     88.17
@@ -110759,6 +112259,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     78.28
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2017,
+    92.39
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2017,
+    92.39
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2022,
+    87.66
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2022,
+    86.88
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2014,
@@ -111461,6 +112977,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     81.78
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2014,
+    97.56
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2014,
+    97.79
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2020,
+    99.32
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2020,
+    100.0
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -112287,6 +113819,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     72.8
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    99.28
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    99.02
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    90.91
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    91.67
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -113175,6 +114723,22 @@
     2024,
     68.26
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    99.94
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    99.92
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    94.21
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    94.54
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     77.27
@@ -114048,6 +115612,14 @@
     2024,
     65.71
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    76.7
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    81.03
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2017,
     44.96
@@ -114611,6 +116183,14 @@
     2024,
     69.96
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    97.66
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    98.32
+   ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
     62.69
@@ -115036,6 +116616,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     84.32
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    99.93
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    99.9
    ],
    "IT.CEL.SETS.P2": [
     2022,
@@ -115711,6 +117299,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     77.33
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    96.69
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    98.58
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    100.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    100.0
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -116529,6 +118133,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     67.01
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    41.5
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    61.47
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -117463,6 +119075,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     73.7
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    99.1
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    99.61
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    85.2
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    90.28
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -118745,6 +120373,14 @@
     2024,
     60.23
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    33.94
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    54.6
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     35.93
@@ -119538,6 +121174,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     81.2
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    96.42
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    98.94
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    93.81
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    94.96
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -120565,6 +122217,14 @@
     2024,
     75.2
    ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    88.83
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    90.83
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     91.09
@@ -121424,6 +123084,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     79.7
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    91.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    90.54
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -122426,6 +124094,14 @@
     2024,
     56.49
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    43.9
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    64.5
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2014,
     33.66
@@ -123303,6 +124979,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     62.78
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    90.83
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    91.5
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -124182,6 +125866,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     80.8
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    98.18
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    97.62
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -125478,6 +127170,22 @@
     2024,
     81.4
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    99.59
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    99.81
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    96.16
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    95.35
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     97.8
@@ -126346,6 +128054,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     74.45
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    92.06
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    93.53
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    52.24
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    57.18
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -128510,6 +130234,14 @@
     2024,
     63.45
    ],
+   "IT.NET.USER.FE.ZS": [
+    2016,
+    11.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2016,
+    16.9
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2014,
     9.98
@@ -129845,6 +131577,14 @@
     2024,
     82.6
    ],
+   "IT.NET.USER.FE.ZS": [
+    2025,
+    95.1
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2025,
+    96.43
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     97.61
@@ -130680,6 +132420,14 @@
     2024,
     82.7
    ],
+   "IT.NET.USER.FE.ZS": [
+    2025,
+    96.81
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2025,
+    97.84
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     97.61
@@ -131361,6 +133109,14 @@
     2024,
     70.21
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    91.82
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    97.17
+   ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
     76.56
@@ -131860,6 +133616,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     66.41
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    82.75
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    92.5
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -133075,6 +134839,10 @@
     2024,
     69.68
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    95.76
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     46.9
@@ -134006,6 +135774,14 @@
     2024,
     64.4
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    73.13
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    84.25
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     54.93
@@ -134917,6 +136693,22 @@
     2024,
     72.34
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    91.49
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    90.67
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    89.91
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    91.91
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     92.7
@@ -135527,6 +137319,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     66.27
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    65.72
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    73.08
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -136400,6 +138200,22 @@
     2024,
     62.7
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    63.66
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    82.85
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2017,
+    8.61
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2017,
+    16.31
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     45.35
@@ -137209,6 +139025,14 @@
     2024,
     69.5
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    99.64
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    99.28
+   ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
     57.18
@@ -137928,6 +139752,10 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     70.51
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    93.83
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -138803,6 +140631,22 @@
     2024,
     74.13
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    80.07
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    92.69
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2019,
+    61.11
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2019,
+    72.46
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     26.61
@@ -139312,6 +141156,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     67.0
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    99.9
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    99.9
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2017,
@@ -140050,6 +141902,14 @@
     2024,
     63.91
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    100.0
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    100.0
+   ],
    "HD.HCI.OVRL": [
     2020,
     0.45
@@ -140750,6 +142610,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     74.62
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2021,
+    95.27
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2021,
+    99.26
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2025,
+    87.03
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2025,
+    92.51
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -141997,6 +143873,22 @@
     2024,
     65.49
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    73.48
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    81.26
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    7.59
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    10.59
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     66.37
@@ -142828,6 +144720,14 @@
     2024,
     69.79
    ],
+   "IT.NET.USER.FE.ZS": [
+    2021,
+    76.81
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2021,
+    82.0
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     83.89
@@ -143647,6 +145547,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     82.17
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    98.43
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    99.03
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    100.0
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    100.0
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2021,
@@ -144485,6 +146401,14 @@
     2024,
     79.54
    ],
+   "IT.NET.USER.FE.ZS": [
+    2020,
+    94.41
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2020,
+    95.24
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     99.27
@@ -145315,6 +147239,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     76.5
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2015,
+    74.88
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2015,
+    74.21
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -146147,6 +148079,22 @@
     2024,
     74.38
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    99.17
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    98.63
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    92.45
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    91.49
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     73.29
@@ -146770,6 +148718,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     69.56
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    100.0
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    100.0
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    87.13
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    90.91
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -147402,6 +149366,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     69.58
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    88.18
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2023,
+    87.73
    ],
    "SL.EMP.WORK.FE.ZS": [
     2025,
@@ -148139,6 +150111,14 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     68.89
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2017,
+    97.24
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2017,
+    97.19
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -148927,6 +150907,22 @@
     2024,
     70.05
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2022,
+    95.08
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2022,
+    97.24
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2024,
+    82.23
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2024,
+    86.08
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     69.88
@@ -149605,6 +151601,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     65.22
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    96.85
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    99.44
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2023,
+    86.28
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2023,
+    86.98
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
@@ -150404,6 +152416,10 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     67.37
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2023,
+    54.13
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2022,
@@ -151320,6 +153336,22 @@
     2024,
     64.1
    ],
+   "SE.ADT.LITR.FE.ZS": [
+    2024,
+    64.44
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2024,
+    80.6
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2018,
+    13.17
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2018,
+    15.52
+   ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,
     70.17
@@ -152231,6 +154263,22 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     60.49
+   ],
+   "SE.ADT.LITR.FE.ZS": [
+    2019,
+    93.36
+   ],
+   "SE.ADT.LITR.MA.ZS": [
+    2019,
+    93.07
+   ],
+   "IT.NET.USER.FE.ZS": [
+    2020,
+    29.69
+   ],
+   "IT.NET.USER.MA.ZS": [
+    2020,
+    28.88
    ],
    "FX.OWN.TOTL.FE.ZS": [
     2024,

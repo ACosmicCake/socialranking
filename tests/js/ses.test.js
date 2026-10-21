@@ -454,3 +454,10 @@ test("women's legal equality in the country overview", () => {
     const wbl = run(FULL).location.glance.find(g => g.code === "GD_WBL_OVL_LAW");
     assert.ok(wbl.value > 0 && wbl.value <= 100 && wbl.world > 0);
 });
+
+test("literacy and internet use for your sex", () => {
+    const codes = run({...FULL, sex: "M"}).location.glance.map(g => g.code);
+    assert.ok(codes.includes("SE.ADT.LITR.MA.ZS") && !codes.includes("SE.ADT.LITR.ZS"));
+    assert.ok(codes.includes("IT.NET.USER.MA.ZS") && codes.includes("SP.DYN.LE00.MA.IN") && codes.includes("HD.HCI.OVRL.MA"));
+    assert.ok(run(FULL).location.glance.some(g => g.code === "SE.ADT.LITR.ZS"));
+});
