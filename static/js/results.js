@@ -93,33 +93,43 @@
 
     // ---------------------------------------------------------------- income
     const survey = r.country.survey;
+    let surveyText = "";
+    if (survey) {
+        const coverage = survey.coverage !== "national" ? ` (${esc(survey.coverage)} areas only)` : "";
+        surveyText = survey.estimation_type === "CMD estimation" || !survey.survey_year
+            ? `${cname}: World Bank model estimate for ${survey.reference_year}${coverage}; there's no recent household survey.`
+            : `${cname}: World Bank estimate for ${survey.reference_year}, based on its ${survey.survey_year} national ${esc(survey.welfare_type)} survey${coverage}.`;
+    }
     const dl = (k, v, bold) => `<dt class="col-7">${k}</dt><dd class="col-5 text-end${bold ? " fw-bold" : ""}">${v}</dd>`;
     html.push(`<hr class="my-5"><h2 id="income" class="h3">Income</h2>
     <div class="row g-4">
         <div class="col-lg-7">
             <div class="chart-box"><canvas id="incomeChart" aria-label="Cumulative income distribution of the world${inc.chart.country ? ` and ${cname}` : ""}, with your position marked"></canvas></div>
             <p class="small text-secondary mt-2">Share of people living on less than each amount per person per day
-                (2017 international dollars, log scale). World: ${cite("pip")}, lined up to 2019.
-                ${survey ? `${cname}: national ${esc(survey.welfare_type)} survey, ${survey.survey_year}${survey.coverage !== "national" ? ` (${esc(survey.coverage)} only)` : ""}.` : ""}</p>
+                (2021 international dollars, log scale). World: ${cite("pip")}, ${D.global.income.reference_year}.
+                ${surveyText}</p>
         </div>
         <div class="col-lg-5">
             <dl class="row small">
                 ${inc.mode === "exact" ? dl("Household income per person per day", `${fixed(inc.local_per_day, 2)} ${esc(r.country.currency || "")}`)
-                    + dl(`Prices today vs 2017 (${cname})`, `&times;${fixed(inc.price_level_vs_2017, 3)}`)
-                    + dl(`PPP factor, 2017 (${esc(r.country.currency)} per int. $)`, fixed(inc.ppp_2017, 3)) : ""}
-                ${dl("Your income, 2017 int. $ per day", money(inc.ppp_per_day), true)}
-                ${dl("World median (2019)", money(inc.world_median))}
+                    + dl(`Prices in ${inc.price_year} vs 2021 (${cname})`, `&times;${fixed(inc.price_level_vs_2021, 3)}`)
+                    + dl(`PPP factor, 2021 (${esc(r.country.currency || "local currency")} per int. $)`, fixed(inc.ppp_2021, 3)) : ""}
+                ${dl("Your income, 2021 int. $ per day", money(inc.ppp_per_day), true)}
+                ${dl(`World median (${D.global.income.reference_year})`, money(inc.world_median))}
                 ${dl("You vs the world median", `${fixed(inc.multiple_of_world_median, 1)}&times;`)}
-                ${r.country.median_ppp ? dl(`${cname} median (${survey.survey_year})`, money(r.country.median_ppp)) : ""}
+                ${r.country.median_ppp ? dl(`${cname} median (${survey.reference_year})`, money(r.country.median_ppp)) : ""}
                 ${dl(`Richer than, in ${cname}`, inc.national_pct !== undefined ? pct(inc.national_pct) : "no survey data", true)}
             </dl>
             <ul class="list-unstyled small">
                 ${inc.lines.map(l => `<li>${l.above ? "&#10003; Above" : "&#10007; Below"} the ${esc(l.label)}, ${esc(l.meaning)}.
                     ${pct(l.share_below)} of the world live below it.</li>`).join("")}
             </ul>
-            ${inc.mode === "exact" && inc.extrapolated_years ? `<p class="small text-secondary">Inflation data for ${cname} run to
-                ${inc.prices_through}; we carried prices forward ${inc.extrapolated_years} year(s) at the recent average of
-                ${pct(inc.recent_inflation * 100)} a year. ${cite("wdi")}</p>` : ""}
+            ${inc.mode === "exact" ? `<p class="small text-secondary">Prices: ${cname}'s consumer-price inflation since 2021
+                ${cite("imf_weo")}${inc.estimated_years.length || inc.extrapolated_years
+                    ? ` (the IMF has no figure for ${[...inc.estimated_years].join(", ") || "recent years"}, so we carried the latest rate forward)` : ""}.
+                PPP: ${inc.ppp_source === "PIP" ? cite("pip") : cite("wdi")}.
+                ${inc.currency_change ? `Currency: ${esc(inc.currency_change)}; we converted the PPP factor to today's currency.` : ""}</p>` : ""}
+            ${r.country.income_group ? `<p class="small text-secondary">World Bank income group of ${cname}: ${esc(r.country.income_group)}. ${cite("wdi")}</p>` : ""}
         </div>
     </div>`);
 
@@ -254,7 +264,7 @@
             responsive: true,
             maintainAspectRatio: false,
             scales: {
-                x: {type: "logarithmic", min: 0.5, max: 1000, title: axis("Income per person per day (2017 int. $)"), grid,
+                x: {type: "logarithmic", min: 0.5, max: 1000, title: axis("Income per person per day (2021 int. $)"), grid,
                     ticks: {color: "#ccc", callback: v => [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000].includes(v) ? `$${v}` : ""}},
                 y: {min: 0, max: 100, title: axis("% of people living on less"), grid, ticks: {color: "#ccc", callback: v => `${v}%`}},
             },

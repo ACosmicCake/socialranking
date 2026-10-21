@@ -33,34 +33,43 @@
     <h2 id="income">1. Income</h2>
     <h3 class="h5">What is compared</h3>
     <p>The World Bank's Poverty and Inequality Platform (PIP) ranks people by household income or consumption
-        <em>per person per day</em>, in international dollars at 2017 purchasing-power parity (PPP) {{ cite("pip") }}.
-        We convert your answer into the same unit:</p>
+        <em>per person per day</em>, in international dollars at 2021 purchasing-power parity (PPP). We use PIP's
+        September 2026 release ({{ inc.pip_version }}) {{ cite("pip") }} and convert your answer into the same unit:</p>
     <pre class="formula">daily income per person = household income &times; (12 if monthly) / 365 / household size
-2017 PPP $ per day   = daily income per person / (prices today &divide; prices in 2017) / PPP factor for 2017</pre>
+2021 PPP $ per day      = daily income per person / (prices this year &divide; prices in 2021) / PPP factor for 2021</pre>
     <ul>
-        <li><em>Prices today vs 2017</em> compounds the country's annual consumer-price inflation (WDI FP.CPI.TOTL.ZG) from
-            2018 to the latest year available (usually 2023 or 2024), then carries it forward up to
-            3 years at the country's average inflation over the previous 3 years {{ cite("wdi") }}.</li>
-        <li><em>PPP factor</em> is local currency units per international dollar in 2017 (WDI PA.NUS.PPP, GDP-based).
-            PIP uses the private-consumption PPP from the same 2017 ICP round. The two usually differ by a few percent.</li>
-        <li>Countries without price data, or with average inflation above 100% a year or a recent currency
-            redenomination (e.g. Zimbabwe, Sudan, Lebanon), can only use the range question.</li>
+        <li><em>Prices this year vs 2021</em> compounds the country's annual average consumer-price inflation from 2022 to
+            {{ g.prices.last_year }} in the {{ g.prices.source }} {{ cite("imf_weo") }}. The figure for {{ g.prices.last_year }} is the IMF's
+            estimate. Where the IMF has no figure for the latest one or two years, we carry the last rate forward and say so on your results.</li>
+        <li><em>PPP factor</em> is local currency per international dollar in 2021: PIP's own factor where the country has a
+            survey, which keeps the conversion consistent with the distribution, and otherwise the World Bank's private-consumption
+            PPP (WDI PA.NUS.PRVT.PP) {{ cite("wdi") }}. For currencies replaced at a fixed rate since the survey (Croatia and
+            Bulgaria to the euro, Sierra Leone's new leone, Belarus and Mauritania), the factor is converted to today's currency.
+            The build checks PIP against WDI for every country and flags any remaining mismatch.</li>
+        <li>Venezuela and Zimbabwe (currency changes without a fixed rate), countries where inflation is projected above
+            {{ (g.prices.max_current_inflation * 100) | round | int }}% this year, and economies with no price data
+            (e.g. Cuba, North Korea, Syria, several small territories) can only use the range question.</li>
     </ul>
 
+    <h3 class="h5">The national distributions</h3>
+    <p>For every economy, PIP reports the income below which 1%, 2%, 5%, 10%, 20% ... 90%, 95%, 98% and 99% of people live,
+        lined up to {{ inc.reference_year }}. Countries surveyed in another year are projected with national-accounts growth,
+        and the few without any household survey are modelled by the World Bank (shown as "model estimate" on your results). We interpolate
+        between these 15 points in log income and extend above the 99th percentile with a Pareto tail fitted to the
+        95th-99th percentile segment.</p>
+
     <h3 class="h5">The global distribution</h3>
-    <p>PIP publishes the share of the world's population below a handful of lines for {{ inc.reference_year }}, the
-        latest "lined-up" global year in the 2017-PPP release. To get a smooth curve, including the top tail, we:</p>
+    <p>PIP publishes the share of the world's population below any line. To get one smooth curve, including the top tail,
+        we:</p>
     <ol>
-        <li>model each of the {{ inc.countries_in_mixture }} countries' latest national survey from its nine decile
-            thresholds, using a linear bottom decile and a Pareto top decile matched to the published decile averages;</li>
-        <li>mix these national curves, weighted by {{ inc.reference_year }} population (they cover
-            {{ (inc.population_coverage * 100) | pct }} of the world);</li>
-        <li>calibrate the mixture so it passes exactly through PIP's official world headcounts, keeping the
-            mixture's shape between and beyond those points.</li>
+        <li>mix the {{ inc.countries_in_mixture }} national distributions, weighted by their {{ inc.reference_year }} population
+            (together {{ (100 * inc.population_in_mixture / inc.world_population) | pct }} of the world);</li>
+        <li>calibrate the mixture so it passes exactly through PIP's official world headcounts at {{ inc.anchors | length }} lines
+            from $1 to $150 a day, keeping the mixture's shape between and beyond those points.</li>
     </ol>
-    <p>Before calibration, the mixture is already within about 1.4 percentage points of the official figures:</p>
+    <p>Before calibration, the mixture is already within a few tenths of a percentage point of the official figures:</p>
     <div class="table-responsive"><table class="table table-dark table-sm w-auto">
-        <thead><tr><th>Line ($/day)</th><th>Official PIP world headcount</th><th>Our uncalibrated mixture</th></tr></thead>
+        <thead><tr><th>Line ($/day)</th><th>Official PIP world headcount ({{ inc.reference_year }})</th><th>Our uncalibrated mixture</th></tr></thead>
         <tbody>{% for v in inc.validation %}<tr><td>{{ v.line | money }}</td><td>{{ v.official | pct(2) }}</td><td>{{ v.mixture | pct(2) }}</td></tr>{% endfor %}</tbody>
     </table></div>
 
@@ -83,7 +92,7 @@
     <h3 class="h5">The range option</h3>
     <p>If you pick a range, you're placed at the midpoint between the shares of people below its two ends:</p>
     <div class="table-responsive"><table class="table table-dark table-sm w-auto">
-        <thead><tr><th>Range (2017 int. $ per person per day)</th><th>World percentile</th></tr></thead>
+        <thead><tr><th>Range (2021 int. $ per person per day)</th><th>World percentile</th></tr></thead>
         <tbody>{% for b in band_rows %}<tr><td>{{ b.label }}</td><td>{{ b.low | pct }} to {{ b.high | pct }}</td></tr>{% endfor %}</tbody>
     </table></div>
 
@@ -94,12 +103,10 @@
         <li>Many countries (including India, China and Vietnam) measure <em>consumption</em>, not income. Consumption is
             lower than income for better-off households, so if you report income in those countries you'll rank somewhat
             higher than an equivalent survey respondent.</li>
-        <li>National survey years vary (shown on your results). Real incomes have mostly grown since, so national
-            percentiles are slightly flattering.</li>
-        <li>In June 2025 the World Bank moved to 2021 PPPs and a $3.00 extreme-poverty line {{ cite("wb_lines_2025") }}.
-            By its September 2026 update, about {{ poverty.people | people }} people lived below that line in {{ poverty.year }}
-            {{ cite(poverty.cite) }}. Our distribution uses the complete, openly mirrored 2017-PPP release, so all of our lines are
-            in 2017 dollars ($2.15, $3.65, $6.85). Rankings change little between the two vintages.</li>
+        <li>The distributions describe {{ inc.reference_year }}. Your income is measured in today's prices and deflated to 2021,
+            so any real growth since {{ inc.reference_year }} makes your result slightly flattering.</li>
+        <li>About {{ poverty.people | people }} people lived below the $3.00 extreme-poverty line in {{ poverty.year }}
+            {{ cite(poverty.cite) }}, matching the {{ (inc.anchors[2].share_below * 100) | pct }} share in our data.</li>
     </ul>
 
     <h2 id="education">2. Education</h2>
@@ -180,8 +187,7 @@
 
     <h2 id="coverage">Data coverage</h2>
     <ul>
-        <li>{{ coverage.economies }} economies in the country list (World Bank economies with ISO codes; Taiwan isn't in the
-            World Bank population series).</li>
+        <li>{{ coverage.economies }} economies in the country list (the World Bank's 217 economies plus Taiwan, which PIP covers).</li>
         <li>{{ coverage.income }} with a national income/consumption distribution; {{ coverage.exact }} accept an exact
             local-currency income ({{ coverage.prices }} have price data).</li>
         <li>{{ coverage.education }} with national education data; {{ coverage.gdp }} with GDP per person.</li>
@@ -197,14 +203,15 @@
             Congo DR) left those countries unscored, and South Korea was listed as low income. Country data now come from
             ISO codes.</li>
         <li>Daily income was asked in unadjusted dollars. It's now converted with each country's inflation and PPP factor and
-            placed on the World Bank's global distribution.</li>
+            placed on the World Bank's global distribution, in the 2021 prices the World Bank adopted in June 2025.</li>
         <li>The quiz no longer depends on a server-side session counter, which broke when users pressed Back or used two tabs.</li>
         <li>Statistics were updated to the latest reports (2024-2026), and the questions use the surveys' own wording.</li>
     </ul>
 
     <h2 id="reproduce">Reproducing the data</h2>
-    <p>All country-level data are built by <code>scripts/build_data.py</code> from pinned commits of public mirrors
-        (see <a href="{{ base }}sources.html">sources</a>). Running it again gives identical files. The cited global figures live in
+    <p>All country-level data are built by <code>scripts/build_data.py</code> directly from the World Bank (PIP and WDI) and
+        IMF APIs, with the PIP release pinned, plus pinned commits of the Barro-Lee and ISO code files
+        (see <a href="{{ base }}sources.html">sources</a>). The data were last built on {{ g.built }}. The cited global figures live in
         <code>ses/facts.py</code>. <code>scripts/build_site.py</code> renders this static site, and the scoring runs in your browser
         (<code>static/js/ses.js</code>), so your answers never leave your device.</p>
 </section>

@@ -1,27 +1,35 @@
 """Build the datasets the quiz scores against.
 
-Every number the quiz uses either comes out of this script or out of the
-hand-curated, cited figures in ``ses/facts.py``.  This script downloads raw
-files from pinned commits of public GitHub mirrors, so re-running it always
-produces the same output:
+Every number the quiz uses comes either from this script or from the
+hand-curated, cited figures in ``ses/facts.py``.  Sources:
 
-* World Bank Poverty and Inequality Platform (PIP), as published by
-  Our World in Data (owid/poverty-data)       -> income distributions
-* World Bank WDI mirrors from datahub.io (datasets/*)
-    - SP.POP.TOTL  population
-    - NY.GDP.MKTP.CD  GDP (current US$)
-    - PA.NUS.PPP  PPP conversion factor (LCU per international $)
-    - FP.CPI.TOTL.ZG  consumer price inflation (annual %)
-  plus ISO 3166 / ISO 4217 country and currency codes
-* Barro-Lee Educational Attainment Dataset v3 (barrolee/BarroLeeDataSet)
-                                              -> education distributions
+* World Bank Poverty and Inequality Platform (PIP) API, pinned release
+  PIP_VERSION (2021 PPP)                     -> income distributions
+* World Bank World Development Indicators (WDI) API
+    - list of economies and income classification
+    - SP.POP.TOTL      population
+    - NY.GDP.PCAP.CD   GDP per capita (current US$)
+    - PA.NUS.PRVT.PP   2021 PPP conversion factor, private consumption
+* IMF World Economic Outlook (DataMapper API), PCPIPCH
+                                             -> consumer price inflation since 2021
+* Barro-Lee Educational Attainment Dataset v3 (GitHub, pinned commit)
+                                             -> education distributions
+* ISO 3166 / ISO 4217 codes (datahub.io, pinned commit) -> currency names
+
+Raw responses are cached in data/raw/ (git-ignored).  Delete that folder, or
+pass --refresh, to download again.
 
 Usage:  pip install -r requirements-dev.txt && python scripts/build_data.py
 """
 
+import argparse
+import datetime
+import io
 import json
 import math
 import sys
+import time
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -32,43 +40,23 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = ROOT / "data" / "raw"
 OUT_DIR = ROOT / "data"
 
-# Pinned commits: bump these deliberately when refreshing the data.
-SOURCES = {
-    "pip": {
-        "url": "https://raw.githubusercontent.com/owid/poverty-data/"
-               "52ef469292cfe29b7d492813b5c97e631abd5427/datasets/pip_dataset.csv",
-        "file": "pip_dataset.csv",
-        "name": "World Bank Poverty and Inequality Platform (via Our World in Data, owid/poverty-data)",
-        "home": "https://github.com/owid/poverty-data",
-    },
-    "population": {
-        "url": "https://raw.githubusercontent.com/datasets/population/"
-               "d4b1a4a9a17e2123baf0ef119de05bceced1ab1b/data/population.csv",
-        "file": "population.csv",
-        "name": "World Bank WDI SP.POP.TOTL (via datahub.io datasets/population)",
-        "home": "https://github.com/datasets/population",
-    },
-    "gdp": {
-        "url": "https://raw.githubusercontent.com/datasets/gdp/"
-               "36d761dc5617982d3e50b213e02b9a1b47c4e958/data/gdp.csv",
-        "file": "gdp.csv",
-        "name": "World Bank WDI NY.GDP.MKTP.CD (via datahub.io datasets/gdp)",
-        "home": "https://github.com/datasets/gdp",
-    },
-    "ppp": {
-        "url": "https://raw.githubusercontent.com/datasets/ppp/"
-               "f997d4ce8272975292b555c437dbdbe98940f0cf/data/ppp-gdp.csv",
-        "file": "ppp-gdp.csv",
-        "name": "World Bank WDI PA.NUS.PPP (via datahub.io datasets/ppp)",
-        "home": "https://github.com/datasets/ppp",
-    },
-    "cpi": {
-        "url": "https://raw.githubusercontent.com/datasets/cpi/"
-               "3750e45064a99b0452deb1423a416e4d5473a58e/data/cpi.csv",
-        "file": "cpi.csv",
-        "name": "World Bank WDI FP.CPI.TOTL (via datahub.io datasets/cpi)",
-        "home": "https://github.com/datasets/cpi",
-    },
+PIP_API = "https://api.worldbank.org/pip/v1"
+PIP_VERSION = "20260922_2021_01_02_PROD"   # September 2026 release, 2021 PPPs
+WDI_API = "https://api.worldbank.org/v2"
+IMF_API = "https://www.imf.org/external/datamapper/api/v1"
+
+PPP_BASE_YEAR = 2021      # PIP incomes are in 2021 international dollars
+REFERENCE_YEAR = 2024     # latest year of PIP's lined-up (non-nowcast) estimates
+INFLATION_LAST_YEAR = 2026
+IMF_EDITION = "IMF World Economic Outlook, October 2026"
+
+# Population shares at which PIP reports each country's income threshold.
+POPSHARES = [0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98, 0.99]
+
+# Lines ($/day, 2021 PPP) at which we take PIP's official world headcounts.
+WORLD_LINES = [1, 2, 3, 4.2, 6, 8.3, 10, 15, 20, 30, 40, 60, 80, 100, 150]
+
+GITHUB_SOURCES = {
     "country_codes": {
         "url": "https://raw.githubusercontent.com/datasets/country-codes/"
                "2d84034a0cae19ea5444b78c2131304a5c7f4bb9/data/country-codes.csv",
@@ -85,59 +73,31 @@ SOURCES = {
     },
 }
 
-PPP_BASE_YEAR = 2017      # PIP data below are expressed in 2017 international $
-GLOBAL_REF_YEAR = 2019    # latest lined-up World estimate in the PIP release
-
-# World headcount ratios published by PIP are reported at these lines ($/day).
-WORLD_ANCHOR_COLUMNS = {
-    1.0: "headcount_ratio_100",
-    2.15: "headcount_ratio_international_povline",
-    3.65: "headcount_ratio_lower_mid_income_povline",
-    6.85: "headcount_ratio_upper_mid_income_povline",
-    10.0: "headcount_ratio_1000",
-    20.0: "headcount_ratio_2000",
-    30.0: "headcount_ratio_3000",
-    40.0: "headcount_ratio_4000",
+# PIP keeps PPPs in the currency of the survey; these countries have since
+# changed currency at a fixed rate (old units per new unit).
+CURRENCY_CHANGES = {
+    "HRV": {"rate": 7.53450, "note": "kuna to euro, 1 January 2023 (Council Decision (EU) 2022/1211)"},
+    "BGR": {"rate": 1.95583, "note": "lev to euro, 1 January 2026 (Council Decision (EU) 2025/1407)"},
+    "SLE": {"rate": 1000.0, "note": "old to new leone, 1 July 2022 (Bank of Sierra Leone)"},
+    "BLR": {"rate": 10000.0, "note": "old to new Belarusian ruble, 1 July 2016 (National Bank of Belarus)"},
+    "MRT": {"rate": 10.0, "note": "old to new ouguiya, 1 January 2018 (Central Bank of Mauritania)"},
 }
-
-# Names in the OWID PIP file that don't match a World Bank population name.
-PIP_NAME_TO_ISO3 = {
-    "Cape Verde": "CPV",
-    "Congo": "COG",
-    "Cote d'Ivoire": "CIV",
-    "Czechia": "CZE",
-    "Democratic Republic of Congo": "COD",
-    "Egypt": "EGY",
-    "Gambia": "GMB",
-    "Iran": "IRN",
-    "Kyrgyzstan": "KGZ",
-    "Laos": "LAO",
-    "Micronesia (country)": "FSM",
-    "Palestine": "PSE",
-    "Russia": "RUS",
-    "Saint Lucia": "LCA",
-    "Slovakia": "SVK",
-    "South Korea": "KOR",
-    "Syria": "SYR",
-    "Taiwan": "TWN",
-    "Timor": "TLS",
-    "Turkey": "TUR",
-    "Venezuela": "VEN",
-    "Vietnam": "VNM",
-    "Yemen": "YEM",
+# Where WDI and PIP use different currencies we keep PIP's, which matches the
+# currency in the ISO 4217 list: Liberia (LRD, WDI uses USD) and West Bank and
+# Gaza (ILS, WDI uses USD).
+# Currency replaced without a fixed conversion rate, or hyperinflation in the
+# current year: local-currency answers can't be converted reliably.
+NO_EXACT_INCOME = {
+    "ZWE": "Zimbabwe changed currency in 2019 and 2024 (ZWG) without a fixed conversion rate.",
+    "VEN": "Venezuela redenominated its currency in 2021 and inflation remains extreme.",
 }
+MAX_CURRENT_INFLATION = 1.0     # 100% a year
+IMF_CODE_FIXES = {"UVK": "XKX", "WBG": "PSE"}
 
 # Barro-Lee uses a few legacy World Bank codes.
 BARRO_LEE_CODE_FIXES = {"ROM": "ROU", "ZAR": "COD", "TMP": "TLS", "SER": "SRB"}
 
-# Economies that have no ISO 3166 entry or a different code in the WB files.
-EXTRA_ECONOMIES = {
-    "XKX": {"name": "Kosovo", "currency": "EUR", "currency_name": "Euro"},
-    "TWN": {"name": "Taiwan", "currency": "TWD", "currency_name": "New Taiwan Dollar"},
-    "CHI": {"name": "Channel Islands", "currency": "GBP", "currency_name": "Pound Sterling"},
-}
-
-# Friendlier display names where the CLDR short name is ambiguous or terse.
+# Friendlier display names than the World Bank's ("Korea, Rep." etc.).
 DISPLAY_NAMES = {
     "USA": "United States",
     "GBR": "United Kingdom",
@@ -145,9 +105,14 @@ DISPLAY_NAMES = {
     "COD": "Congo (Democratic Republic)",
     "FSM": "Micronesia (Federated States)",
     "BIH": "Bosnia and Herzegovina",
+    "TWN": "Taiwan",
+    "XKX": "Kosovo",
+    "CHI": "Channel Islands",
+    "HKG": "Hong Kong",
+    "MAC": "Macao",
+    "PSE": "West Bank and Gaza",
 }
 
-# Ordered education levels (Barro-Lee categories made mutually exclusive).
 EDUCATION_LEVELS = [
     ("none", "No formal schooling"),
     ("primary_incomplete", "Some primary school"),
@@ -159,195 +124,247 @@ EDUCATION_LEVELS = [
 ]
 
 
-def fetch(key):
-    """Download a source once into data/raw/ and return its path."""
+# ---------------------------------------------------------------------------
+# Downloading
+# ---------------------------------------------------------------------------
+
+REFRESH = False
+
+
+def fetch(url, name):
+    """Download url once into data/raw/name and return the bytes."""
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    path = RAW_DIR / SOURCES[key]["file"]
-    if not path.exists():
-        print(f"downloading {SOURCES[key]['url']}")
-        urllib.request.urlretrieve(SOURCES[key]["url"], path)
-    return path
+    path = RAW_DIR / name
+    if REFRESH or not path.exists():
+        print(f"downloading {url}")
+        for attempt in range(4):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; socialranking-data-build)", "Accept": "*/*"})
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    path.write_bytes(r.read())
+                break
+            except OSError:
+                if attempt == 3:
+                    raise
+                time.sleep(2 ** (attempt + 1))
+    return path.read_bytes()
 
 
-def latest(df, code_col, value_col, max_year=None):
-    """Latest non-null value per country -> {code: (year, value)}."""
-    df = df.dropna(subset=[value_col])
-    if max_year is not None:
-        df = df[df["Year"] <= max_year]
-    df = df.sort_values("Year").groupby(code_col).tail(1)
-    return {r[code_col]: (int(r["Year"]), float(r[value_col])) for _, r in df.iterrows()}
+def pip_csv(endpoint, name, **params):
+    params = {"version": PIP_VERSION, "format": "csv", **params}
+    url = f"{PIP_API}/{endpoint}?{urllib.parse.urlencode(params)}"
+    return pd.read_csv(io.BytesIO(fetch(url, name)))
 
 
-def price_change_since_base(cpi_df, iso3):
-    """Cumulative consumer-price change from PPP_BASE_YEAR to the latest year.
-
-    The datahub "cpi" mirror holds WDI FP.CPI.TOTL.ZG, i.e. *annual inflation
-    in percent* (despite its metadata describing an index), so we compound the
-    yearly rates.  Returns None if any year is missing.
-    """
-    rates = cpi_df[(cpi_df["Country Code"] == iso3) & (cpi_df["Year"] > PPP_BASE_YEAR)]
-    rates = rates.dropna(subset=["CPI"]).set_index("Year")["CPI"].sort_index()
-    if rates.empty:
-        return None
-    years = list(range(PPP_BASE_YEAR + 1, int(rates.index.max()) + 1))
-    if any(y not in rates.index for y in years):
-        return None
-    factor = float(np.prod([1 + rates[y] / 100 for y in years]))
-    recent = rates.loc[years[-3:]]
-    return {
-        "factor": round(factor, 6),
-        "latest_year": years[-1],
-        "recent_annual": round(float(np.prod(1 + recent / 100)) ** (1 / len(recent)) - 1, 5),
-    }
+def wdi(indicator, name, **params):
+    params = {"format": "json", "per_page": 20000, **params}
+    url = f"{WDI_API}/country/all/indicator/{indicator}?{urllib.parse.urlencode(params)}"
+    meta, rows = json.loads(fetch(url, name))
+    return [r for r in rows or [] if r["value"] is not None]
 
 
 # ---------------------------------------------------------------------------
 # Income distributions
 # ---------------------------------------------------------------------------
 
-def decile_average(row, k):
-    """Mean welfare in decile k; derived from its share of the total when the
-    average itself is missing (avg_k = share_k * mean * 10)."""
-    avg = row[f"decile{k}_avg"]
-    if pd.isna(avg):
-        share = row[f"decile{k}_share"]
-        if pd.isna(share) or pd.isna(row["mean"]):
-            return None
-        avg = share / 100 * row["mean"] * 10
-    return float(avg)
+def quantile_distribution(points):
+    """Describe a distribution by PIP's income thresholds at POPSHARES.
 
-
-def decile_distribution(row):
-    """Describe a survey distribution by its decile thresholds plus tails.
-
-    Returns a dict the app's ``ses.distributions`` module can evaluate:
-    log-linear interpolation between decile thresholds, a linear bottom decile
-    whose mean matches the published decile-1 average, and a Pareto top decile
-    whose mean matches the published decile-10 average.
+    Matches ses/distributions.py: linear from zero to the first point,
+    log-linear between points, Pareto above the last point with the slope of
+    the 95th-99th percentile segment.
     """
-    thr = [row[f"decile{k}_thr"] for k in (1, 2, 3, 4)] + [row["median"]] + \
-          [row[f"decile{k}_thr"] for k in (6, 7, 8, 9)]
-    if any(pd.isna(t) or t <= 0 for t in thr):
+    # Bottom percentiles can share a threshold (a mass point at the survey's
+    # floor); keep only the highest share for each repeated value.
+    dedup = {}
+    for p, x in points:
+        dedup[round(x, 9)] = max(p, dedup.get(round(x, 9), 0))
+    points = sorted((p, x) for x, p in dedup.items())
+    ps = [p for p, _ in points]
+    xs = [x for _, x in points]
+    if any(b <= a for a, b in zip(xs, xs[1:])) or xs[0] <= 0 or not {0.95, 0.99} <= set(ps):
         return None
-    thr = [float(t) for t in thr]
-    if any(b <= a for a, b in zip(thr, thr[1:])):
-        return None
-    avg1 = decile_average(row, 1)
-    avg10 = decile_average(row, 10)
-    if avg1 is None or avg10 is None:
-        return None
-    # Bottom decile uniform on [low, thr1] with mean avg1  ->  low = 2*avg1 - thr1
-    low = max(2 * avg1 - thr[0], thr[0] * 0.05)
-    # Pareto tail above thr9: E[x | x > thr9] = alpha/(alpha-1) * thr9
-    alpha = avg10 / (avg10 - thr[8]) if avg10 > thr[8] else 3.0
-    alpha = min(max(alpha, 1.05), 10.0)
-    return {
-        "low": round(low, 4),
-        "thresholds": [round(t, 4) for t in thr],
-        "pareto_alpha": round(alpha, 4),
-        "mean": round(float(row["mean"]), 4),
-        "median": round(float(row["median"]), 4),
-        "gini": None if pd.isna(row["gini"]) else round(float(row["gini"]), 4),
-    }
+    i95, i99 = ps.index(0.95), ps.index(0.99)
+    alpha = math.log((1 - ps[i95]) / (1 - ps[i99])) / math.log(xs[i99] / xs[i95])
+    return {"p": ps, "x": [round(x, 4) for x in xs], "pareto_alpha": round(min(max(alpha, 1.05), 10.0), 4)}
 
 
 def dist_cdf(dist, x):
-    """CDF of a decile_distribution at x (vectorised). Mirrors ses.distributions."""
+    """CDF of a quantile_distribution at x (vectorised). Mirrors ses.distributions."""
     x = np.asarray(x, dtype=float)
-    thr = np.array(dist["thresholds"])
-    low = dist["low"]
+    ps, xs = np.array(dist["p"]), np.array(dist["x"])
     out = np.empty_like(x)
-    bottom = x < thr[0]
-    out[bottom] = np.clip((x[bottom] - low) / (thr[0] - low), 0, 1) * 0.1
-    top = x > thr[-1]
-    out[top] = 1 - 0.1 * (thr[-1] / x[top]) ** dist["pareto_alpha"]
-    mid = ~bottom & ~top
-    out[mid] = np.interp(np.log(x[mid]), np.log(thr), np.arange(1, 10) / 10)
+    low = x < xs[0]
+    out[low] = np.clip(x[low] / xs[0], 0, 1) * ps[0]
+    high = x > xs[-1]
+    out[high] = 1 - (1 - ps[-1]) * (xs[-1] / x[high]) ** dist["pareto_alpha"]
+    mid = ~low & ~high
+    out[mid] = np.interp(np.log(x[mid]), np.log(xs), ps)
     return out
 
 
-def build_income(pip, iso_by_name, population):
-    pip = pip[pip["ppp_version"] == PPP_BASE_YEAR]
+def build_income():
+    frames = []
+    for share in POPSHARES:
+        df = pip_csv("pip", f"pip_popshare_{share}.csv", country="all", year=REFERENCE_YEAR,
+                     popshare=share, fill_gaps="true")
+        df["share"] = share
+        frames.append(df)
+    lineup = pd.concat(frames)
+
+    surveys = pip_csv("pip", "pip_surveys.csv", country="all", year="all", povline=3)
+    latest = surveys.sort_values("reporting_year").groupby(["country_code", "reporting_level"]).tail(1)
 
     countries = {}
-    for name, group in pip.groupby("country"):
-        iso3 = PIP_NAME_TO_ISO3.get(name) or iso_by_name.get(name)
-        if iso3 is None:
-            continue  # regional / income-group aggregates
-        # Prefer national coverage; fall back to urban-only surveys (e.g. Argentina).
-        for level in ("national", "urban"):
-            rows = group[group["reporting_level"] == level].dropna(subset=["decile1_thr"])
-            if len(rows):
-                row = rows.sort_values("year").iloc[-1]
-                dist = decile_distribution(row)
-                if dist:
-                    dist.update({
-                        "survey_year": int(row["year"]),
-                        "welfare_type": row["welfare_type"],
-                        "coverage": level,
-                    })
-                    countries[iso3] = dist
-                break
-
-    world = pip[pip["country"] == "World"].set_index("year").loc[GLOBAL_REF_YEAR]
-    anchors = sorted((line, float(world[col]) / 100) for line, col in WORLD_ANCHOR_COLUMNS.items())
-
-    # Population-weighted mixture of national distributions = shape of the
-    # global distribution; then calibrate it to PIP's official World headcounts.
-    grid = np.exp(np.linspace(math.log(0.2), math.log(1500), 241))
-    total = np.zeros_like(grid)
-    weight = 0.0
-    for iso3, dist in countries.items():
-        pop = population.get(iso3, {}).get(GLOBAL_REF_YEAR)
-        if not pop:
+    for code, group in lineup.groupby("country_code"):
+        levels = set(group["reporting_level"])
+        level = "national" if "national" in levels else "urban" if "urban" in levels else None
+        if level is None:
             continue
-        total += pop * dist_cdf(dist, grid)
-        weight += pop
+        rows = group[group["reporting_level"] == level].sort_values("share")
+        if len(rows) != len(POPSHARES):
+            continue
+        dist = quantile_distribution(list(zip(rows["share"], rows["poverty_line"])))
+        if dist is None:
+            continue
+        first = rows.iloc[0]
+        survey = latest[(latest["country_code"] == code) & (latest["reporting_level"] == level)]
+        dist.update({
+            "reference_year": REFERENCE_YEAR,
+            "mean": round(float(first["mean"]), 4),
+            "median": round(float(first["median"]), 4),
+            "population": int(first["reporting_pop"]),
+            "welfare_type": first["welfare_type"],
+            "coverage": level,
+            "estimation_type": first["estimation_type"],
+            "survey_year": int(survey["reporting_year"].iloc[0]) if len(survey) else None,
+            "survey_ppp": float(survey["ppp"].iloc[0]) if len(survey) and survey["ppp"].iloc[0] > 0 else None,
+        })
+        countries[code] = dist
+
+    # World headcounts at WORLD_LINES, from PIP's own global aggregation.
+    anchors = []
+    world_mean = None
+    for line in WORLD_LINES:
+        df = pip_csv("pip-grp", f"pip_world_{line}.csv", country="WLD", year=REFERENCE_YEAR,
+                     povline=line, group_by="wb")
+        row = df[df["region_code"] == "WLD"].iloc[0]
+        anchors.append((float(line), float(row["headcount"])))
+        world_mean = float(row["mean"])
+        world_pop = int(row["reporting_pop"])
+
+    # Population-weighted mixture of national lineups = shape of the global
+    # distribution; then calibrate it so it passes through PIP's world headcounts.
+    grid = np.exp(np.linspace(math.log(0.2), math.log(2000), 281))
+    total = np.zeros_like(grid)
+    weight = 0
+    for dist in countries.values():
+        total += dist["population"] * dist_cdf(dist, grid)
+        weight += dist["population"]
     mixture = total / weight
     mix_at = lambda v: float(np.interp(math.log(v), np.log(grid), mixture))
 
-    calibrated = np.empty_like(mixture)
     lines = [a[0] for a in anchors]
+    calibrated = np.empty_like(mixture)
     for i, x in enumerate(grid):
         m = mixture[i]
         if x <= lines[0]:
             calibrated[i] = anchors[0][1] * m / mix_at(lines[0])
         elif x >= lines[-1]:
-            m40, f40 = mix_at(lines[-1]), anchors[-1][1]
-            calibrated[i] = f40 + (1 - f40) * (m - m40) / (1 - m40)
+            m_top, f_top = mix_at(lines[-1]), anchors[-1][1]
+            calibrated[i] = f_top + (1 - f_top) * (m - m_top) / (1 - m_top)
         else:
             j = next(k for k in range(len(lines) - 1) if lines[k] <= x <= lines[k + 1])
             (a, fa), (b, fb) = anchors[j], anchors[j + 1]
             ma, mb = mix_at(a), mix_at(b)
             calibrated[i] = fa + (fb - fa) * (m - ma) / (mb - ma)
     calibrated = np.maximum.accumulate(np.clip(calibrated, 0, 1))
+    median = float(np.exp(np.interp(0.5, calibrated, np.log(grid))))
 
-    validation = [
-        {"line": line, "official": round(share * 100, 2), "mixture": round(mix_at(line) * 100, 2)}
-        for line, share in anchors
-    ]
-    covered = sum(population.get(c, {}).get(GLOBAL_REF_YEAR, 0) for c in countries)
-    world_pop = population["WLD"][GLOBAL_REF_YEAR]
-    global_income = {
+    return countries, {
         "ppp_year": PPP_BASE_YEAR,
-        "reference_year": GLOBAL_REF_YEAR,
+        "reference_year": REFERENCE_YEAR,
+        "pip_version": PIP_VERSION,
         "grid": [round(float(x), 4) for x in grid],
         "cdf": [round(float(f), 6) for f in calibrated],
         "anchors": [{"line": l, "share_below": round(s, 6)} for l, s in anchors],
-        "validation": validation,
+        "validation": [{"line": l, "official": round(s * 100, 2), "mixture": round(mix_at(l) * 100, 2)}
+                       for l, s in anchors],
         "countries_in_mixture": len(countries),
-        "population_coverage": round(covered / world_pop, 4),
-        "world_mean": round(float(world["mean"]), 4),
-        "world_median": round(float(world["median"]), 4),
+        "population_in_mixture": int(weight),
+        "world_population": world_pop,
+        "world_mean": round(world_mean, 4),
+        "world_median": round(median, 4),
     }
-    return countries, global_income
+
+
+# ---------------------------------------------------------------------------
+# Prices
+# ---------------------------------------------------------------------------
+
+def build_prices(codes, pip_income):
+    """Local currency today -> 2021 international dollars, per economy."""
+    ppp_wdi = {r["countryiso3code"]: float(r["value"])
+               for r in wdi("PA.NUS.PRVT.PP", "wdi_ppp_prvt_2021.json", date=PPP_BASE_YEAR)}
+    imf = json.loads(fetch(f"{IMF_API}/PCPIPCH?periods=" + ",".join(
+        str(y) for y in range(PPP_BASE_YEAR + 1, INFLATION_LAST_YEAR + 1)), "imf_pcpipch.json"))
+    inflation = {IMF_CODE_FIXES.get(k, k): v for k, v in imf["values"]["PCPIPCH"].items()}
+
+    prices, ppp_checks = {}, []
+    for code in codes:
+        survey_ppp = pip_income.get(code, {}).get("survey_ppp")
+        change = CURRENCY_CHANGES.get(code)
+        if survey_ppp:
+            # PIP's own PPP keeps the conversion consistent with its distributions.
+            ppp, ppp_source = survey_ppp / (change["rate"] if change else 1), "PIP"
+        elif code in ppp_wdi:
+            ppp, ppp_source = ppp_wdi[code], "WDI PA.NUS.PRVT.PP"
+        else:
+            continue
+        if survey_ppp and code in ppp_wdi:
+            ppp_checks.append((code, ppp / ppp_wdi[code]))
+
+        rates = inflation.get(code, {})
+        index, level, last_rate, estimated = {str(PPP_BASE_YEAR): 1.0}, 1.0, None, []
+        for year in range(PPP_BASE_YEAR + 1, INFLATION_LAST_YEAR + 1):
+            rate = rates.get(str(year))
+            if rate is None:
+                if last_rate is None or len(estimated) >= 2:
+                    break
+                rate = last_rate * 100          # carry the last known rate forward
+                estimated.append(year)
+            last_rate = rate / 100
+            level *= 1 + last_rate
+            index[str(year)] = round(level, 6)
+        if str(INFLATION_LAST_YEAR) not in index:
+            continue
+
+        entry = {
+            "ppp_2021": round(ppp, 6),
+            "ppp_source": ppp_source,
+            "price_index": index,                # consumer prices relative to 2021
+            "inflation_estimated_years": estimated,
+            "current_inflation": round(last_rate, 4),
+        }
+        if change:
+            entry["currency_change"] = change["note"]
+        reason = NO_EXACT_INCOME.get(code)
+        if not reason and last_rate > MAX_CURRENT_INFLATION:
+            reason = f"Inflation is expected to exceed {MAX_CURRENT_INFLATION:.0%} in {INFLATION_LAST_YEAR}."
+        entry["exact_income"] = reason is None
+        if reason:
+            entry["exact_income_reason"] = reason
+        prices[code] = entry
+
+    outliers = [(c, round(r, 3)) for c, r in ppp_checks if not 0.75 < r < 1.33 and c not in ("LBR", "PSE")]
+    return prices, outliers
 
 
 # ---------------------------------------------------------------------------
 # Education
 # ---------------------------------------------------------------------------
 
-def build_education(bl, known_iso3):
+def build_education(bl, known):
     bl = bl[bl["year"] == bl["year"].max()].copy()
     bl["iso3"] = bl["WBcode"].replace(BARRO_LEE_CODE_FIXES)
     countries = {}
@@ -361,7 +378,7 @@ def build_education(bl, known_iso3):
             r["lh"] - r["lhc"], r["lhc"],
         ], dtype=float).clip(min=0)
         shares = shares / shares.sum()
-        if r["iso3"] in known_iso3:
+        if r["iso3"] in known:
             countries[r["iso3"]] = {
                 "year": int(r["year"]),
                 "shares": [round(float(s), 5) for s in shares],
@@ -369,12 +386,11 @@ def build_education(bl, known_iso3):
             }
         totals += shares * r["pop"]
         weight += r["pop"]
-    world = totals / weight
     return countries, {
         "year": int(bl["year"].max()),
         "ages": "25-64",
         "levels": [{"key": k, "label": label} for k, label in EDUCATION_LEVELS],
-        "world_shares": [round(float(s), 5) for s in world],
+        "world_shares": [round(float(s), 5) for s in totals / weight],
         "countries_covered": int(len(bl)),
         "population_covered_thousands": round(float(weight)),
     }
@@ -385,82 +401,69 @@ def build_education(bl, known_iso3):
 # ---------------------------------------------------------------------------
 
 def main():
-    codes = pd.read_csv(fetch("country_codes"), keep_default_na=False)
-    pop_df = pd.read_csv(fetch("population"))
-    gdp_df = pd.read_csv(fetch("gdp"))
-    ppp_df = pd.read_csv(fetch("ppp"), keep_default_na=False, na_values=[""])
-    cpi_df = pd.read_csv(fetch("cpi"))
-    pip_df = pd.read_csv(fetch("pip"))
-    bl_df = pd.read_csv(fetch("barro_lee"))
+    global REFRESH
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--refresh", action="store_true", help="download every source again")
+    REFRESH = parser.parse_args().refresh
 
-    population = {}
-    for _, r in pop_df.iterrows():
-        population.setdefault(r["Country Code"], {})[int(r["Year"])] = int(r["Value"])
+    # Economies: World Bank list (217) plus any extra economies PIP covers (Taiwan).
+    meta = json.loads(fetch(f"{WDI_API}/country?format=json&per_page=400", "wdi_countries.json"))[1]
+    economies = {c["id"]: c for c in meta if c["region"]["id"] != "NA"}
 
-    iso_meta = {}
-    for _, r in codes.iterrows():
-        iso3 = r["ISO3166-1-Alpha-3"]
-        if not iso3:
-            continue
-        iso_meta[iso3] = {
-            "iso2": r["ISO3166-1-Alpha-2"],
-            "name": r["CLDR display name"] or r["official_name_en"],
-            "currency": r["ISO4217-currency_alphabetic_code"].split(",")[0],
-            "currency_name": r["ISO4217-currency_name"].split(",")[0],
-        }
-    for iso3, meta in EXTRA_ECONOMIES.items():
-        iso_meta.setdefault(iso3, {"iso2": "", **meta})
-    iso3_by_iso2 = {m["iso2"]: k for k, m in iso_meta.items() if m["iso2"]}
-    iso3_by_iso2["XK"] = "XKX"
+    income, global_income = build_income()
+    for code in income:
+        if code not in economies:
+            economies[code] = {"id": code, "name": code, "incomeLevel": {"value": ""}}
 
-    # World Bank economies = codes in the population file that are real countries.
-    wb_names = dict(zip(pop_df["Country Code"], pop_df["Country Name"]))
-    economies = [c for c in wb_names if c in iso_meta]
-    iso_by_name = {wb_names[c]: c for c in economies}
-    iso_by_name.update({iso_meta[c]["name"]: c for c in economies})
+    population = {r["countryiso3code"]: (int(r["date"]), int(r["value"]))
+                  for r in wdi("SP.POP.TOTL", "wdi_population.json", mrnev=1)}
+    gdp_pc = {r["countryiso3code"]: (int(r["date"]), float(r["value"]))
+              for r in wdi("NY.GDP.PCAP.CD", "wdi_gdp_pc.json", mrnev=1)}
+    world_pop_year, world_pop = population["WLD"]
 
-    ppp_df["iso3"] = ppp_df["Country ID"].map(iso3_by_iso2)
-    ppp_2017 = {r["iso3"]: float(r["PPP"]) for _, r in ppp_df[ppp_df["Year"] == PPP_BASE_YEAR].iterrows()
-                if isinstance(r["iso3"], str) and not pd.isna(r["PPP"])}
-    gdp_latest = latest(gdp_df, "Country Code", "Value")
+    codes_df = pd.read_csv(io.BytesIO(fetch(GITHUB_SOURCES["country_codes"]["url"], "country-codes.csv")),
+                           keep_default_na=False)
+    currency = {r["ISO3166-1-Alpha-3"]: (r["ISO4217-currency_alphabetic_code"].split(",")[0],
+                                         r["ISO4217-currency_name"].split(",")[0])
+                for _, r in codes_df.iterrows() if r["ISO3166-1-Alpha-3"]}
+    common_names = {r["ISO3166-1-Alpha-3"]: r["CLDR display name"]
+                    for _, r in codes_df.iterrows() if r["ISO3166-1-Alpha-3"] and r["CLDR display name"]}
+    currency["XKX"] = ("EUR", "Euro")
+    currency["CHI"] = ("GBP", "Pound Sterling")
+    currency["PSE"] = ("ILS", "New Israeli Sheqel")
 
-    income, global_income = build_income(pip_df, iso_by_name, population)
-    education, global_education = build_education(bl_df, set(economies))
+    prices, ppp_outliers = build_prices(economies, income)
+    bl = pd.read_csv(io.BytesIO(fetch(GITHUB_SOURCES["barro_lee"]["url"], "BL_v3_MF2564.csv")))
+    education, global_education = build_education(bl, set(economies))
 
     countries = []
-    for iso3 in economies:
-        pops = population[iso3]
-        pop_year = max(pops)
-        meta = iso_meta[iso3]
+    for code, m in economies.items():
+        pop = population.get(code) or ((REFERENCE_YEAR, income[code]["population"]) if code in income else None)
+        if pop is None:
+            continue
+        cur = currency.get(code, ("", ""))
         entry = {
-            "iso3": iso3,
-            "name": DISPLAY_NAMES.get(iso3) or (wb_names[iso3] if iso3 in ("XKX", "CHI") else meta["name"]),
-            "currency": meta["currency"] or None,
-            "currency_name": meta["currency_name"] or None,
-            "population": pops[pop_year],
-            "population_year": pop_year,
+            "iso3": code,
+            "name": DISPLAY_NAMES.get(code) or common_names.get(code) or m["name"],
+            "income_group": m["incomeLevel"]["value"] or None,
+            "currency": cur[0] or None,
+            "currency_name": cur[1] or None,
+            "population": pop[1],
+            "population_year": pop[0],
         }
-        if iso3 in gdp_latest:
-            year, gdp = gdp_latest[iso3]
-            if pops.get(year):
-                entry["gdp_per_capita_usd"] = round(gdp / pops[year], 1)
-                entry["gdp_year"] = year
-        change = price_change_since_base(cpi_df, iso3) if iso3 in ppp_2017 else None
-        if change:
-            entry["prices"] = {
-                "ppp_2017": round(ppp_2017[iso3], 6),
-                "inflation_factor_since_2017": change["factor"],
-                "inflation_latest_year": change["latest_year"],
-                "inflation_recent_annual": change["recent_annual"],
-            }
-        if iso3 in income:
-            entry["income"] = income[iso3]
-        if iso3 in education:
-            entry["education"] = education[iso3]
+        if code in gdp_pc:
+            entry["gdp_per_capita_usd"] = round(gdp_pc[code][1], 1)
+            entry["gdp_year"] = gdp_pc[code][0]
+        if code in prices:
+            entry["prices"] = prices[code]
+        if code in income:
+            entry["income"] = {k: v for k, v in income[code].items() if k not in ("population", "survey_ppp")}
+        if code in education:
+            entry["education"] = education[code]
         countries.append(entry)
-    countries.sort(key=lambda c: c["name"])
+    countries.sort(key=lambda c: c["name"].casefold())
 
-    # Location: share of world population in economies with lower GDP per capita.
+    # Location: share of the world's population in economies with lower GDP per capita.
     ranked = sorted((c for c in countries if "gdp_per_capita_usd" in c), key=lambda c: c["gdp_per_capita_usd"])
     ranked_pop = sum(c["population"] for c in ranked)
     below = 0
@@ -469,32 +472,40 @@ def main():
         c["gdp_pc_population_share_same"] = round(c["population"] / ranked_pop, 5)
         below += c["population"]
 
-    world_pop_year = max(population["WLD"])
-    meta = {
-        "sources": {k: {kk: v[kk] for kk in ("name", "url", "home")} for k, v in SOURCES.items()},
-        "world_population": population["WLD"][world_pop_year],
+    sources = {
+        "pip": {"name": f"World Bank Poverty and Inequality Platform API, release {PIP_VERSION}",
+                "url": f"{PIP_API}/pip?version={PIP_VERSION}", "home": "https://pip.worldbank.org"},
+        "wdi": {"name": "World Bank World Development Indicators API (SP.POP.TOTL, NY.GDP.PCAP.CD, "
+                        "PA.NUS.PRVT.PP, country classifications)",
+                "url": f"{WDI_API}/country/all/indicator/SP.POP.TOTL",
+                "home": "https://datatopics.worldbank.org/world-development-indicators/"},
+        "imf": {"name": f"{IMF_EDITION}: inflation, average consumer prices (PCPIPCH)",
+                "url": f"{IMF_API}/PCPIPCH", "home": "https://www.imf.org/external/datamapper/PCPIPCH@WEO"},
+        **{k: {kk: v[kk] for kk in ("name", "url", "home")} for k, v in GITHUB_SOURCES.items()},
+    }
+    out = {
+        "built": datetime.date.today().isoformat(),
+        "sources": sources,
+        "world_population": world_pop,
         "world_population_year": world_pop_year,
         "income": global_income,
         "education": global_education,
-        "location": {
-            "economies_ranked": len(ranked),
-            "population_ranked": ranked_pop,
-        },
+        "prices": {"base_year": PPP_BASE_YEAR, "last_year": INFLATION_LAST_YEAR, "source": IMF_EDITION,
+                   "max_current_inflation": MAX_CURRENT_INFLATION},
+        "location": {"economies_ranked": len(ranked), "population_ranked": ranked_pop},
     }
-
     (OUT_DIR / "countries.json").write_text(json.dumps(countries, ensure_ascii=False, indent=1))
-    (OUT_DIR / "global.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1))
+    (OUT_DIR / "global.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
 
-    n_income = sum("income" in c for c in countries)
-    n_prices = sum("prices" in c for c in countries)
-    n_edu = sum("education" in c for c in countries)
-    print(f"{len(countries)} economies: {n_income} with income distributions, "
-          f"{n_prices} with price data, {n_edu} with education data")
-    print(f"income mixture covers {global_income['population_coverage']:.1%} of world population")
+    exact = [c["iso3"] for c in countries if c.get("prices", {}).get("exact_income")]
+    print(f"{len(countries)} economies: {sum('income' in c for c in countries)} with income distributions, "
+          f"{len(exact)} accept exact income, {sum('education' in c for c in countries)} with education data")
+    print(f"income mixture: {global_income['countries_in_mixture']} economies, "
+          f"{global_income['population_in_mixture'] / global_income['world_population']:.1%} of world population")
     for v in global_income["validation"]:
         print(f"  ${v['line']:>5}/day  official {v['official']:6.2f}%  mixture {v['mixture']:6.2f}%")
-    unmatched = sorted(set(pip_df["country"]) - set(PIP_NAME_TO_ISO3) - set(iso_by_name))
-    print("PIP names without an economy (should be aggregates only):", unmatched)
+    print("no exact income:", sorted(c["iso3"] for c in countries if c["iso3"] not in exact))
+    print("PIP vs WDI PPP mismatches (ratio outside 0.8-1.25):", ppp_outliers)
     return 0
 
 

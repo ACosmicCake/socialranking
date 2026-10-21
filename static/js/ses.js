@@ -18,16 +18,15 @@
         const F = D.facts;
         const byIso3 = Object.fromEntries(D.countries.map(c => [c.iso3, c]));
 
-        // Above this average annual inflation (or after a currency redenomination) a
-        // CPI-based conversion of today's income to 2017 prices isn't trustworthy.
-        const MAX_RELIABLE_INFLATION = 1.0;
+        // Price data run to D.global.prices.last_year (IMF projections); later
+        // years are carried forward at the last rate for at most this many years.
         const MAX_EXTRAPOLATION_YEARS = 3;
         const MAX_HOUSEHOLD_SIZE = 50;
 
-        const POVERTY_LINES_2017 = [
-            [2.15, "International poverty line ($2.15)", "extreme poverty"],
-            [3.65, "Lower-middle-income line ($3.65)", "the poverty line typical of lower-middle-income countries"],
-            [6.85, "Upper-middle-income line ($6.85)", "the poverty line typical of upper-middle-income countries"],
+        const POVERTY_LINES = [
+            [3.0, "International poverty line ($3.00)", "extreme poverty"],
+            [4.2, "Lower-middle-income line ($4.20)", "the poverty line typical of lower-middle-income countries"],
+            [8.3, "Upper-middle-income line ($8.30)", "the poverty line typical of upper-middle-income countries"],
         ];
 
         const DIMENSION_LABELS = {
@@ -39,7 +38,7 @@
         };
 
         // ------------------------------------------------------------------
-        // Distributions (all incomes per person per day, 2017 international $)
+        // Distributions (all incomes per person per day, 2021 international $)
         // ------------------------------------------------------------------
 
         // Index of the last element <= x in a sorted array (bisect_right - 1).
@@ -52,31 +51,26 @@
             return lo - 1;
         }
 
-        // National distribution: nine decile thresholds, a uniform bottom decile
-        // on [low, thr1], log-linear in between, and a Pareto top decile.
+        // National distribution: PIP's income thresholds x at population shares p,
+        // linear from zero below the first point, log-linear between points and
+        // Pareto above the last one.
         function nationalCdf(dist, x) {
-            const thr = dist.thresholds;
+            const ps = dist.p, xs = dist.x, n = xs.length;
             if (x <= 0) return 0;
-            if (x < thr[0]) {
-                return Math.max(0, Math.min(1, (x - dist.low) / (thr[0] - dist.low))) * 0.1;
-            }
-            if (x > thr[thr.length - 1]) {
-                return 1 - 0.1 * Math.pow(thr[thr.length - 1] / x, dist.pareto_alpha);
-            }
-            const i = bisect(thr, x);
-            if (i >= thr.length - 1) return 0.9;
-            const frac = (Math.log(x) - Math.log(thr[i])) / (Math.log(thr[i + 1]) - Math.log(thr[i]));
-            return (i + 1 + frac) / 10;
+            if (x < xs[0]) return ps[0] * x / xs[0];
+            if (x >= xs[n - 1]) return 1 - (1 - ps[n - 1]) * Math.pow(xs[n - 1] / x, dist.pareto_alpha);
+            const i = bisect(xs, x);
+            const frac = (Math.log(x) - Math.log(xs[i])) / (Math.log(xs[i + 1]) - Math.log(xs[i]));
+            return ps[i] + frac * (ps[i + 1] - ps[i]);
         }
 
         function nationalQuantile(dist, p) {
-            const thr = dist.thresholds;
-            if (p <= 0.1) return dist.low + (thr[0] - dist.low) * p / 0.1;
-            if (p >= 0.9) return thr[8] * Math.pow(0.1 / Math.max(1 - p, 1e-9), 1 / dist.pareto_alpha);
-            const k = p * 10 - 1;
-            const i = Math.floor(k);
-            const frac = k - i;
-            return Math.exp(Math.log(thr[i]) + frac * (Math.log(thr[i + 1]) - Math.log(thr[i])));
+            const ps = dist.p, xs = dist.x, n = xs.length;
+            if (p <= ps[0]) return xs[0] * p / ps[0];
+            if (p >= ps[n - 1]) return xs[n - 1] * Math.pow((1 - ps[n - 1]) / Math.max(1 - p, 1e-9), 1 / dist.pareto_alpha);
+            const i = bisect(ps, p);
+            const frac = (p - ps[i]) / (ps[i + 1] - ps[i]);
+            return Math.exp(Math.log(xs[i]) + frac * (Math.log(xs[i + 1]) - Math.log(xs[i])));
         }
 
         // Global distribution: calibrated CDF on a log-spaced grid.
@@ -120,8 +114,7 @@
         }
 
         function exactIncomeAvailable(country) {
-            const prices = country.prices;
-            return Boolean(prices) && prices.inflation_recent_annual <= MAX_RELIABLE_INFLATION;
+            return Boolean(country.prices && country.prices.exact_income);
         }
 
         // Validate answers (plain object of strings) -> clean answers.
@@ -146,7 +139,8 @@
             const mode = answers.income_mode;
             if (mode === "exact") {
                 if (country && !exactIncomeAvailable(country)) {
-                    errors.income_mode = `We don't have reliable price data for ${country.name}, so please pick a range instead.`;
+                    const why = country.prices && country.prices.exact_income_reason;
+                    errors.income_mode = `We can't convert ${country.name}'s currency reliably${why ? ` (${why.replace(/\.$/, "")})` : ""}, so please pick a range instead.`;
                 }
                 const amount = toNumber(answers.income_amount);
                 const size = toNumber(answers.household_size);
@@ -180,19 +174,32 @@
         const sum = xs => xs.reduce((a, b) => a + b, 0);
         const midrank = (shares, index) => sum(shares.slice(0, index)) + shares[index] / 2;
 
+        // Consumer prices in `year` relative to 2021 for this country.
+        function priceLevel(prices, year) {
+            const years = Object.keys(prices.price_index).map(Number);
+            const last = Math.max(...years);
+            const y = Math.max(Math.min(...years), Math.min(year, last + MAX_EXTRAPOLATION_YEARS));
+            if (y <= last) return {level: prices.price_index[y], year: y, extrapolated: 0};
+            return {
+                level: prices.price_index[last] * Math.pow(1 + prices.current_inflation, y - last),
+                year: y, extrapolated: y - last,
+            };
+        }
+
         function toPppPerDay(amount, period, householdSize, country, today) {
             const prices = country.prices;
             const perDay = amount * (period === "month" ? 12 : 1) / 365 / householdSize;
-            const yearsAhead = Math.max(0, Math.min(today.getFullYear() - prices.inflation_latest_year, MAX_EXTRAPOLATION_YEARS));
-            const priceLevel = prices.inflation_factor_since_2017 * Math.pow(1 + prices.inflation_recent_annual, yearsAhead);
+            const pl = priceLevel(prices, today.getFullYear());
             return {
                 local_per_day: perDay,
-                price_level_vs_2017: priceLevel,
-                extrapolated_years: yearsAhead,
-                prices_through: prices.inflation_latest_year,
-                recent_inflation: prices.inflation_recent_annual,
-                ppp_2017: prices.ppp_2017,
-                ppp_per_day: perDay / priceLevel / prices.ppp_2017,
+                price_level_vs_2021: pl.level,
+                price_year: pl.year,
+                extrapolated_years: pl.extrapolated,
+                estimated_years: prices.inflation_estimated_years,
+                currency_change: prices.currency_change || null,
+                ppp_2021: prices.ppp_2021,
+                ppp_source: prices.ppp_source,
+                ppp_per_day: perDay / pl.level / prices.ppp_2021,
             };
         }
 
@@ -239,7 +246,7 @@
             result.people_below = people(share);
             result.person_of_100 = Math.min(100, Math.max(1, Math.ceil(share * 100)));
             if (result.national_share !== undefined) result.national_pct = pct(result.national_share);
-            result.lines = POVERTY_LINES_2017.map(([line, label, meaning]) => ({
+            result.lines = POVERTY_LINES.map(([line, label, meaning]) => ({
                 line, label, meaning, above: x >= line, share_below: pct(globalCdf(line)),
             }));
             result.world_median = D.global.income.world_median;
@@ -386,6 +393,7 @@
                 country: {
                     iso3: country.iso3, name: country.name, currency: country.currency,
                     currency_name: country.currency_name, population: country.population,
+                    income_group: country.income_group,
                 },
                 income: scoreIncome(answers, country, today),
                 education: scoreEducation(answers, country),
@@ -396,8 +404,8 @@
                 world_population: D.global.world_population,
             };
             if (country.income) {
-                const {survey_year, welfare_type, coverage} = country.income;
-                result.country.survey = {survey_year, welfare_type, coverage};
+                const {survey_year, welfare_type, coverage, estimation_type, reference_year} = country.income;
+                result.country.survey = {survey_year, welfare_type, coverage, estimation_type, reference_year};
                 result.country.median_ppp = country.income.median;
             }
             result.dimensions = ["income", "education", "living", "security", "wealth"]
