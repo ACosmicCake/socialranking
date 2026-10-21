@@ -55,6 +55,13 @@ class QuietHandler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *args):
         pass
 
+    def handle(self):
+        # The browser drops connections it no longer needs (e.g. on navigation); that's fine.
+        try:
+            super().handle()
+        except (BrokenPipeError, ConnectionResetError):
+            pass
+
 
 handler = functools.partial(QuietHandler, directory=str(site))
 server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), handler)
