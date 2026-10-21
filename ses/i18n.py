@@ -30,6 +30,8 @@ UI = {
     "income history, plus your parents' generation back to 1965": "lịch sử thu nhập, và thế hệ bố mẹ bạn từ năm 1965",
     "Step {n} of {total}": "Bước {n}/{total}",
     "{n} questions answered": "Đã trả lời {n} câu",
+    "about {n} min left": "còn khoảng {n} phút",
+    "almost done": "sắp xong",
     "Quiz sections": "Các phần của bài",
     "Next: {section}": "Tiếp theo: {section}",
     "Only questions marked Required are needed. The rest are optional, but each one adds detail to your results.":

@@ -17,6 +17,7 @@
     const chips = document.getElementById("step-chips");
     const stepLabel = document.getElementById("step-label");
     const answeredLabel = document.getElementById("answered-label");
+    const timeLeft = document.getElementById("time-left");
     const nextLabel = document.getElementById("next-label");
     const titles = steps.map(s => s.querySelector("legend").textContent.replace(/^\d+\.\s*/, ""));
     const fill = (el, values) => el.dataset.template.replace(/\{(\w+)\}/g, (_, k) => values[k]);
@@ -62,6 +63,11 @@
         const a = answers();
         const done = Object.values(a).filter(v => v !== "").length;
         answeredLabel.textContent = fill(answeredLabel, {n: done});
+        // Roughly 12 seconds per visible question still ahead.
+        const ahead = steps.slice(current + 1).reduce((n, s) =>
+            n + Array.from(s.querySelectorAll(".question")).filter(q => !q.hidden).length, 0);
+        const minutes = Math.round(ahead * 12 / 60);
+        timeLeft.textContent = " · " + (minutes >= 1 ? fill(timeLeft, {n: minutes}) : timeLeft.dataset.done);
     }
 
     function answers() {
