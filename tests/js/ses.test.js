@@ -469,3 +469,9 @@ test("air pollution and safety in the country overview", () => {
     const us = run({...FULL, country: "USA", income_mode: "band", income_band: "b5"}).location.glance;
     assert.ok(us.find(x => x.code === "VC.IHR.PSRC.P5").value > 0);
 });
+
+test("child stunting and schooling rates in the country overview", () => {
+    const g = Object.fromEntries(run(FULL).location.glance.map(x => [x.code, x]));
+    assert.ok(g["SH.STA.STNT.ZS"].value > 0 && g["SH.STA.STNT.ZS"].value < 100);
+    assert.ok(g["SE.PRM.CMPT.ZS"].world > 50 && g["SE.TER.ENRR"].world > 0);
+});

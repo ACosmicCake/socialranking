@@ -158,6 +158,9 @@ WDI_INDICATORS = {
     "EN.ATM.PM25.MC.M3": "PM2.5 air pollution, mean annual exposure (micrograms per cubic metre)",
     "VC.IHR.PSRC.P5": "Intentional homicides (per 100,000 people)",
     "IQ.SPI.OVRL": "Statistical Performance Indicators overall score (0-100)",
+    "SH.STA.STNT.ZS": "Prevalence of stunting, height for age (% of children under 5)",
+    "SE.PRM.CMPT.ZS": "Primary completion rate (% of relevant age group, gross)",
+    "SE.TER.ENRR": "School enrollment, tertiary (% gross)",
     # by sex
     "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
     "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
