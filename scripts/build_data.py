@@ -351,7 +351,7 @@ def build_income():
     hist = pip_csv("pip", "pip_national_history.csv", country="all", year="all", povline=3, fill_gaps="true")
     for code, dist in countries.items():
         rows = hist[(hist["country_code"] == code) & (hist["reporting_level"] == dist["coverage"])
-                    & (hist["reporting_year"] >= 1990)].sort_values("reporting_year")
+                    & (hist["reporting_year"] >= 1990) & (hist["reporting_year"] <= REFERENCE_YEAR)].sort_values("reporting_year")
         if len(rows):
             dist["history"] = {
                 "start": int(rows["reporting_year"].iloc[0]),

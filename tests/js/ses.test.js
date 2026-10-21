@@ -269,7 +269,7 @@ test("Vietnamese bundle gives the same numbers with translated labels", () => {
 });
 
 test("comparisons by sex", () => {
-    const r = run({...FULL, sex: "F", age: "25-34"});
+    const r = run({...FULL, sex: "F", age: "25-34", work_status: "employee", work_sector: "services"});
     assert.equal(r.education.sex, "F");
     assert.ok(r.education.world_sex_pct > 0 && r.education.national_sex_pct > 0);
     assert.equal(r.education.country_sex_shares.length, 9);
