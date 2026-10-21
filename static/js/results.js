@@ -173,6 +173,18 @@
         </div>
     </div></section>`);
 
+    // ---------------------------------------------------------------- compare with someone else
+    html.push(`<div class="card bg-transparent border-secondary mt-4" id="compare"><div class="card-body">
+        <h3 class="h5">${tr("Compare with someone else", "So sánh với người khác")}</h3>
+        <p class="small text-secondary">${tr("Paste another results link, a friend's or your own from another time, to see both profiles side by side. Nothing is sent anywhere: both are calculated in your browser.",
+                                             "Dán một đường dẫn kết quả khác, của bạn bè hoặc của chính bạn vào lúc khác, để xem hai hồ sơ cạnh nhau. Không có gì được gửi đi: cả hai đều được tính trong trình duyệt của bạn.")}</p>
+        <div class="input-group">
+            <input type="url" class="form-control" id="compare-url" placeholder="https://…/results.html#country=…" aria-label="${tr("Results link to compare", "Đường dẫn kết quả để so sánh")}">
+            <button class="btn btn-outline-light" type="button" id="compare-go">${tr("Compare", "So sánh")}</button>
+        </div>
+        <div id="compare-out" class="mt-3" aria-live="polite"></div>
+    </div></div>`);
+
     // ---------------------------------------------------------------- income
     const survey = r.country.survey;
     let surveyText = "";
@@ -772,6 +784,35 @@
     root.querySelectorAll("#edit-answers, .prefill-quiz").forEach(link => link.addEventListener("click", () => {
         try { localStorage.setItem("socialranking-quiz-v1", JSON.stringify({answers: form, step: 0, furthest: 99})); } catch (e) { /* no storage */ }
     }));
+
+    // Compare with another results link: score its answers here and show both side by side.
+    document.getElementById("compare-go").addEventListener("click", () => {
+        const out = document.getElementById("compare-out");
+        const text = document.getElementById("compare-url").value.trim();
+        const hash = text.includes("#") ? text.slice(text.indexOf("#") + 1) : text;
+        let other;
+        try {
+            other = SES.score(SES.parseAnswers(Object.fromEntries(new URLSearchParams(hash))));
+        } catch (e) {
+            out.innerHTML = `<p class="text-warning small">${tr("That doesn't look like a complete results link. Copy it from the results page's address bar or its \"Copy a link\" button.",
+                                                               "Đường dẫn này có vẻ không phải là một đường dẫn kết quả đầy đủ. Hãy sao chép từ thanh địa chỉ của trang kết quả hoặc nút \"Sao chép đường dẫn\".")}</p>`;
+            return;
+        }
+        const theirs = Object.fromEntries(other.dimensions.map(d => [d.key, d]));
+        const keys = [...new Set([...r.dimensions.map(d => d.key), ...other.dimensions.map(d => d.key)])];
+        const label = k => (r.dimensions.find(d => d.key === k) || theirs[k]).label;
+        const mine = Object.fromEntries(r.dimensions.map(d => [d.key, d]));
+        const diff = (a, b) => (a === undefined || b === undefined ? "" : `${a - b > 0 ? "+" : ""}${fixed(a - b, 1)}`);
+        const rows = [
+            [tr("Country", "Quốc gia"), cname, esc(other.country.name), ""],
+            [tr("Income per person per day (2021 int. $)", "Thu nhập mỗi người mỗi ngày (đô la quốc tế 2021)"), money(inc.ppp_per_day), money(other.income.ppp_per_day), ""],
+            ...keys.map(k => [esc(label(k)), mine[k] ? pct(mine[k].pct) : "-", theirs[k] ? pct(theirs[k].pct) : "-", diff(mine[k] && mine[k].pct, theirs[k] && theirs[k].pct)]),
+            [`<strong>${tr("SES index", "Chỉ số SES")}</strong>`, `<strong>${fixed(r.ses_index, 1)}</strong>`, `<strong>${fixed(other.ses_index, 1)}</strong>`, diff(r.ses_index, other.ses_index)],
+        ];
+        out.innerHTML = table(["", tr("You (this page)", "Bạn (trang này)"), tr("The other link", "Đường dẫn kia"), tr("Difference", "Chênh lệch")],
+            rows.map(row => `<tr>${row.map(c => `<td>${c}</td>`).join("")}</tr>`))
+            + `<p class="small text-secondary">${tr("World percentiles; dimensions only one of you answered show a dash.", "Bách phân vị thế giới; khía cạnh chỉ một người trả lời được hiển thị bằng dấu gạch.")}</p>`;
+    });
 
     // Highlight the section being read in the section bar, and offer a way back to the top.
     const navLinks = Array.from(root.querySelectorAll(".result-nav a"));
