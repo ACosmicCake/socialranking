@@ -520,3 +520,11 @@ test("health system capacity in the country overview", () => {
         assert.ok(g[code] && g[code].value > 0 && g[code].better_than_pct > 0, code);
     }
 });
+
+test("age against the world's and the country's population", () => {
+    const young = run({...FULL, age: "15-24"}).age, old = run({...FULL, age: "65plus", sex: "F"}).age;
+    assert.ok(young.world_pct > 20 && young.world_pct < 50, young.world_pct);
+    assert.ok(old.world_pct > 85 && old.national_pct > 80 && old.national_sex_pct > 0);
+    assert.deepEqual(run(FULL).age, {});  // no age given
+    close(SES.data.global.age_structure.shares.reduce((a, b) => a + b), 1, 1e-3);
+});

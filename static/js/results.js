@@ -138,6 +138,9 @@
                     <span><span class="small text-secondary me-1" title="${tr("Plausible range", "Khoảng hợp lý")}">${fixed(d.range[0], 0)}–${fixed(d.range[1], 0)}</span>${pct(d.pct)}${d.national_pct !== undefined ? ` <span class="text-warning small">/ ${pct(d.national_pct)}</span>` : ""}</span></div>
                 ${meter(d.pct, d.label)}
                 ${d.national_pct !== undefined ? meter(d.national_pct, `${d.label} ${r.country.name}`, "meter-country") : ""}</div>`).join("")}
+            ${r.age.world_pct !== undefined ? `<p class="small">${tr(
+                `<strong>Age:</strong> you're older than about ${pct(r.age.world_pct)} of people on Earth${r.age.national_pct !== undefined ? ` and ${pct(r.age.national_pct)} in ${cname}` : ""}; ${pct(r.age.band_share_world)} of the world's population is in your 10-year age band${r.age.band_share_country !== undefined ? ` (${pct(r.age.band_share_country)} in ${cname})` : ""}. Context only, from UN population estimates for ${r.age.year}.`,
+                `<strong>Tuổi:</strong> bạn lớn tuổi hơn khoảng ${pct(r.age.world_pct)} dân số Trái Đất${r.age.national_pct !== undefined ? ` và ${pct(r.age.national_pct)} ở ${cname}` : ""}; ${pct(r.age.band_share_world)} dân số thế giới ở cùng nhóm 10 tuổi với bạn${r.age.band_share_country !== undefined ? ` (${pct(r.age.band_share_country)} ở ${cname})` : ""}. Chỉ để tham khảo, theo ước tính dân số của Liên Hợp Quốc năm ${r.age.year}.`)}</p>` : ""}
             ${(() => {
                 if (r.dimensions.length < 2) return "";
                 const sorted = r.dimensions.slice().sort((a, b) => b.pct - a.pct);
