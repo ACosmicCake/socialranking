@@ -563,21 +563,24 @@ main:focus {
     white-space: nowrap;
 }
 
+/* Keep focused or scrolled-to questions clear of the fixed top bar and the sticky quiz bar. */
+html:has(#quiz) {
+    scroll-padding: 72px 0 88px;
+}
+
+/* Phones: one compact row (Back, See results now, Next) so the bar covers as little as possible. */
 @media (max-width: 575.98px) {
     .quiz-nav {
-        flex-wrap: wrap;
+        gap: 0.4rem !important;
+        padding: 0.5rem 0;
     }
 
-    .quiz-nav #results-now {
-        order: -1;
-        flex: 1 0 100%;
+    .quiz-nav .btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.875rem;
     }
 
     .quiz-nav #next-label {
         display: none;
-    }
-
-    .quiz-nav #next {
-        margin-left: auto;
     }
 }
