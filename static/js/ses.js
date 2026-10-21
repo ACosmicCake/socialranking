@@ -59,6 +59,8 @@
                 "SI.DST.FRST.20": "Share of income going to the poorest 20%",
                 "SI.POV.NAHC": "Poor by the country's own poverty line",
                 "GD_WBL_OVL_LAW": "Women's legal equality (Women, Business and the Law, 0-100)",
+                "EN.ATM.PM25.MC.M3": "Air pollution: PM2.5 exposure (µg/m³; WHO guideline 5)",
+                "VC.IHR.PSRC.P5": "Homicides per 100,000 people",
                 "SP.DYN.LE00.FE.IN": "Life expectancy at birth, women (years)",
                 "SP.DYN.LE00.MA.IN": "Life expectancy at birth, men (years)",
                 "HD.HCI.OVRL": "Human Capital Index (0-1)",
@@ -1039,7 +1041,8 @@
             ["SP.URB.TOTL.IN.ZS", "pct"], ["SE.ADT.LITR.ZS", "pct"], ["SN.ITK.DEFC.ZS", "pct"],
             ["SL.UEM.TOTL.ZS", "pct"], ["SL.EMP.VULN.ZS", "pct"], ["SH.XPD.OOPC.CH.ZS", "pct"],
             ["EN.POP.SLUM.UR.ZS", "pct"], ["SI.POV.GINI", "number"], ["SI.DST.10TH.10", "pct"], ["SI.DST.FRST.20", "pct"],
-            ["SI.POV.NAHC", "pct"], ["GD_WBL_OVL_LAW", "number"], ["HD.HCI.OVRL", "index"],
+            ["SI.POV.NAHC", "pct"], ["GD_WBL_OVL_LAW", "number"], ["EN.ATM.PM25.MC.M3", "number"],
+            ["VC.IHR.PSRC.P5", "number"], ["HD.HCI.OVRL", "index"],
             ["HD.HCI.EYRS", "number"], ["HD.HCI.LAYS", "number"],
             ["SE.LPV.PRIM", "pct"], ["IT.CEL.SETS.P2", "number"], ["SH.XPD.CHEX.PC.CD", "money"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);

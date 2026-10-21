@@ -461,3 +461,11 @@ test("literacy and internet use for your sex", () => {
     assert.ok(codes.includes("IT.NET.USER.MA.ZS") && codes.includes("SP.DYN.LE00.MA.IN") && codes.includes("HD.HCI.OVRL.MA"));
     assert.ok(run(FULL).location.glance.some(g => g.code === "SE.ADT.LITR.ZS"));
 });
+
+test("air pollution and safety in the country overview", () => {
+    const g = Object.fromEntries(run(FULL).location.glance.map(x => [x.code, x]));
+    assert.ok(g["EN.ATM.PM25.MC.M3"].value > 0 && g["EN.ATM.PM25.MC.M3"].world > 5);
+    assert.equal(g["VC.IHR.PSRC.P5"], undefined);  // Vietnam's latest figure (2011) is older than the cut-off
+    const us = run({...FULL, country: "USA", income_mode: "band", income_band: "b5"}).location.glance;
+    assert.ok(us.find(x => x.code === "VC.IHR.PSRC.P5").value > 0);
+});

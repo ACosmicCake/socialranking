@@ -363,6 +363,8 @@ LABELS = {
         "SI.DST.FRST.20": "Tỷ trọng thu nhập của 20% nghèo nhất",
         "SI.POV.NAHC": "Tỷ lệ nghèo theo chuẩn nghèo quốc gia",
         "GD_WBL_OVL_LAW": "Bình đẳng pháp lý cho phụ nữ (Phụ nữ, Kinh doanh và Pháp luật, 0-100)",
+        "EN.ATM.PM25.MC.M3": "Ô nhiễm không khí: phơi nhiễm bụi PM2.5 (µg/m³; khuyến nghị của WHO là 5)",
+        "VC.IHR.PSRC.P5": "Số vụ giết người trên 100.000 dân",
         "HD.HCI.OVRL": "Chỉ số Vốn nhân lực (0-1)",
         "HD.HCI.OVRL.FE": "Chỉ số Vốn nhân lực, trẻ em gái (0-1)",
         "SE.ADT.LITR.FE.ZS": "Phụ nữ biết đọc biết viết",
