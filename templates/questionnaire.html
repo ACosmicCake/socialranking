@@ -1,11 +1,12 @@
 {% extends "layout.html" %}
 {% from "macros.html" import cite with context %}
-{% block title %}Questionnaire{% endblock %}
+{% block title %}{{ _("Questionnaire") }}{% endblock %}
 {% block main %}
 <section class="container page-section prose">
-    <h1>The questionnaire</h1>
-    <p class="lead">Every question, its answer options, and the survey instrument it comes from. Questions marked
-        <span class="badge text-bg-light">required</span> are needed for a result. The rest can be skipped.</p>
+    <h1>{{ _("The questionnaire") }}</h1>
+    <p class="lead">{{ _("Every question, its answer options, and the survey instrument it comes from.") }} {{ _("Questions marked") }}
+        <span class="badge text-bg-light">{{ _("required") }}</span> {{ _("are needed for a result. The rest can be skipped.") }}</p>
+    {% if lang == "vi" %}<p class="small text-secondary">{{ _("Vietnamese wording is our own translation, not the official Vietnamese version of each survey instrument.") }}</p>{% endif %}
     {% for section in sections %}
     <h2 class="h4 mt-5">{{ loop.index }}. {{ section.title }}</h2>
     <p class="text-secondary">{{ section.intro }}</p>
@@ -14,13 +15,14 @@
         <li class="mb-3">
             {% if q.stem %}<div class="fst-italic">{{ q.stem }}</div>{% endif %}
             <strong>{{ q.text }}</strong>
-            {% if q.required %}<span class="badge text-bg-light">required</span>{% endif %}
-            {% if q.show_if %}<span class="badge text-bg-secondary">if {{ q.show_if[0] | replace('_', ' ') }} = {{ q.show_if[1] }}</span>{% endif %}
+            {% if q.required %}<span class="badge text-bg-light">{{ _("required") }}</span>{% endif %}
+            {% if q.show_if %}<span class="badge text-bg-secondary">{{ _("if") }} {{ q.show_if[0] | replace('_', ' ') }} = {{ q.show_if[1] | replace('|', ' ' ~ _('or') ~ ' ') | replace('_', ' ') }}</span>{% endif %}
+            {% if q.type == "checkbox" %}<span class="badge text-bg-secondary">{{ _("tick all that apply") }}</span>{% endif %}
             {% if q.help %}<div class="small text-secondary">{{ q.help }}</div>{% endif %}
             {% if q.options %}
             <ul class="small mb-1">{% for key, label in q.options %}<li>{{ label }}</li>{% endfor %}</ul>
-            {% elif q.type == "country" %}<div class="small">Drop-down list of 217 economies.</div>
-            {% else %}<div class="small">Free number.</div>{% endif %}
+            {% elif q.type == "country" %}<div class="small">{{ _("Drop-down list of 218 economies.") }}</div>
+            {% else %}<div class="small">{{ _("Free number.") }}</div>{% endif %}
             <div class="small text-info">{{ q.basis }} {{ cite(q.source) }}</div>
         </li>
         {% endfor %}

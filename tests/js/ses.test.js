@@ -8,13 +8,13 @@ const TODAY = new Date(2026, 9, 21);
 
 const FULL = {
     country: "VNM", income_mode: "exact", income_amount: "20,000,000", income_period: "month", household_size: "4",
-    education: "tertiary", electricity: "yes", cooking: "gas", water: "safely_managed", sanitation: "safely_managed",
+    education: "bachelor", electricity: "yes", cooking: "gas", water: "safely_managed", sanitation: "safely_managed",
     hygiene: "yes", internet: "yes", health_hardship: "no", food_money: "no", shelter_money: "no", count_on: "yes",
     fies_worried: "no", fies_healthy: "no", fies_few_kinds: "no", fies_skipped: "no", fies_ate_less: "no",
     fies_ran_out: "no", fies_hungry: "no", fies_whole_day: "no", account: "yes", saved: "yes", wealth: "10k_100k",
     ladder_country: "6", ladder_world: "5",
 };
-const MINIMAL = {country: "USA", income_mode: "band", income_band: "b5", education: "secondary"};
+const MINIMAL = {country: "USA", income_mode: "band", income_band: "b5", education: "upper_secondary"};
 const FIES = Object.keys(FULL).filter(k => k.startsWith("fies_"));
 
 const run = answers => SES.score(SES.parseAnswers(answers), TODAY);
@@ -74,21 +74,34 @@ test("zero income is the bottom", () => {
 });
 
 test("education mid-rank", () => {
-    assert.ok(run({...MINIMAL, education: "none"}).education.global_pct < 10);
-    const top = run({...MINIMAL, education: "tertiary"}).education;
-    assert.ok(top.global_pct > 90);
+    assert.ok(run({...MINIMAL, education: "below_primary"}).education.global_pct < 15);
+    const top = run({...MINIMAL, education: "doctoral"}).education;
+    assert.ok(top.global_pct > 99);
     assert.equal(top.higher_pct, 0);
+    const levels = SES.data.questionnaire.education_options.map(o => o[0]);
+    const pcts = levels.map(l => run({...MINIMAL, education: l}).education.global_pct);
+    assert.ok(pcts.every((v, i) => i === 0 || v > pcts[i - 1]), "education ranks must rise with level");
+});
+
+test("education by age and sex", () => {
+    const e = run({...FULL, age: "25-34", sex: "F"}).education;
+    assert.equal(e.group.age, "25-34");
+    assert.equal(e.group.sex, "F");
+    assert.ok(e.group.world_pct > 0 && e.group.country_pct > 0);
+    assert.equal(run({...FULL, age: "15-24"}).education.group, undefined);
 });
 
 test("living standards", () => {
     const all = run(FULL).living;
-    const s = Object.values(SES.data.facts.access).map(a => a.share_without);
-    close(all.global_pct, 100 * s.reduce((a, x) => a + (x + 1) / 2, 0) / s.length, 0.1);
+    const s = all.items.map(i => i.share_without_pct / 100);
+    close(all.global_pct, 100 * s.reduce((a, x) => a + (x + 1) / 2, 0) / s.length, 0.2);
     close(all.lower_bound_pct, 100 * Math.max(...s), 0.1);
     const none = run({...FULL, electricity: "no", cooking: "biomass", water: "surface", sanitation: "open",
         hygiene: "no", internet: "no", health_hardship: "yes"}).living;
     assert.ok(none.global_pct < all.global_pct);
     assert.equal(none.lacking.length, 7);
+    const vnm = run({...FULL, area: "rural"}).living.items.find(i => i.key === "electricity");
+    assert.ok(vnm.country_without_pct !== undefined && vnm.area_without_pct !== undefined && vnm.region_without_pct !== undefined);
     assert.equal(run({...FULL, cooking: "none"}).living.answered, 6);
 });
 
@@ -166,4 +179,91 @@ test("every country with reliable prices can be scored exactly", () => {
         const r = run({...FULL, country: c.iso3, income_amount: "1000"});
         assert.ok(Number.isFinite(r.income.ppp_per_day) && r.income.ppp_per_day > 0, c.iso3);
     }
+});
+
+test("work status", () => {
+    const emp = run({...FULL, work_status: "employee", work_sector: "services"}).work;
+    const own = run({...FULL, work_status: "own_account"}).work;
+    assert.ok(emp.global_pct > own.global_pct);
+    assert.equal(emp.sector, "services");
+    const shares = emp.world;
+    close(shares.employee + shares.employer + shares.own_account + shares.family_worker, 100, 3);
+    const student = run({...FULL, work_status: "student"});
+    assert.equal(student.work.global_pct, undefined);
+    assert.ok(!student.dimensions.some(d => d.key === "work"));
+});
+
+const MPI_ITEMS = {electricity: "yes", cooking: "gas", water: "safely_managed", sanitation: "safely_managed",
+    housing: "none", assets: "phone,tv", school_attendance: "no", nutrition: "no", child_death: "no"};
+
+test("MPI: not poor, poor and severe", () => {
+    const ok = run({...FULL, ...MPI_ITEMS}).mpi;
+    assert.equal(ok.status, "not_poor");
+    assert.equal(ok.score, 0);
+    const poor = run({...FULL, ...MPI_ITEMS, education: "below_primary", household_schooling: "no",
+        school_attendance: "yes"}).mpi;
+    close(poor.score, 33.3, 0.1);
+    assert.equal(poor.status, "poor");
+    const severe = run({...FULL, ...MPI_ITEMS, education: "below_primary", household_schooling: "no",
+        school_attendance: "yes", cooking: "biomass", water: "surface", sanitation: "open", electricity: "no",
+        housing: "floor,walls", assets: "radio", nutrition: "yes"}).mpi;
+    assert.equal(severe.status, "severe");
+    close(severe.score, 83.3, 0.1);  // every indicator except child mortality
+});
+
+test("MPI re-weights skipped indicators and needs living standards", () => {
+    const m = run({...FULL, ...MPI_ITEMS, nutrition: "skip", child_death: "skip"}).mpi;
+    assert.deepEqual(m.dimensions_used, ["education", "living"]);
+    close(m.indicators.reduce((a, i) => a + i.weight, 0), 1, 1e-9);
+    assert.equal(run(MINIMAL).mpi.available, false);
+});
+
+test("checkbox answers are validated", () => {
+    assert.deepEqual(SES.parseAnswers({...FULL, assets: "tv,phone,tv"}).assets, ["tv", "phone"]);
+    assert.throws(() => SES.parseAnswers({...FULL, assets: "tv,spaceship"}), e => "assets" in e.errors);
+    assert.throws(() => SES.parseAnswers({...FULL, housing: "none,floor"}), e => "housing" in e.errors);
+    assert.throws(() => SES.parseAnswers({...FULL, assets: "none,tv"}), e => "assets" in e.errors);
+    assert.equal(SES.parseAnswers({...FULL, assets: ""}).assets, null);
+    const nothing = run({...FULL, ...MPI_ITEMS, assets: "none"}).mpi.indicators.find(i => i.key === "assets");
+    assert.equal(nothing.deprived, true);
+});
+
+test("crowding uses household size", () => {
+    const c = run({...FULL, household_size: "7", sleeping_rooms: "2"}).crowding;
+    assert.equal(c.per_room, 3.5);
+    assert.equal(c.overcrowded, true);
+});
+
+test("food security uses FAO world and country shares", () => {
+    const sec = run(FULL).security;
+    assert.ok(sec.fies_pct > 50 && sec.fies_national_pct > 0);
+    const all = Object.fromEntries(FIES.map(k => [k, "yes"]));
+    assert.ok(run({...FULL, ...all}).security.fies_pct < 10);
+});
+
+test("income everywhere, regions and history", () => {
+    const inc = run(FULL).income;
+    assert.equal(inc.everywhere.countries.length, SES.data.countries.length);
+    assert.ok(inc.region && inc.region.code === "EAS");
+    assert.equal(inc.everywhere.groups.length, 4);
+    const years = inc.history.map(h => h.year);
+    assert.deepEqual(years, [...years].sort());
+    assert.ok(inc.history[0].pct > inc.history[inc.history.length - 1].pct, "same income ranks lower as the world grows");
+});
+
+test("China has urban and rural distributions", () => {
+    const urban = run({...MINIMAL, country: "CHN", area: "urban"}).income;
+    const rural = run({...MINIMAL, country: "CHN", area: "rural"}).income;
+    assert.ok(urban.area_pct < rural.area_pct);
+});
+
+test("Vietnamese bundle gives the same numbers with translated labels", () => {
+    const VI = load("data.vi.js");
+    const en = run(FULL);
+    const vi = VI.score(VI.parseAnswers(FULL), TODAY);
+    assert.equal(vi.ses_index, en.ses_index);
+    assert.deepEqual(vi.dimensions.map(d => d.pct), en.dimensions.map(d => d.pct));
+    assert.equal(vi.dimensions[0].label, "Thu nhập");
+    assert.equal(vi.country.name, "Việt Nam");
+    assert.throws(() => VI.parseAnswers({...FULL, education: ""}), e => /trình độ/.test(e.errors.education));
 });

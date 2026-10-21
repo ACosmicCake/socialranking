@@ -2,9 +2,10 @@
 
 **Where do you stand among the 8.2 billion people on Earth?**
 
-A static website, hosted on GitHub Pages, that asks about 30 questions, each taken from an established international survey, and
-compares your answers with real global data on income, education, living standards, financial security and wealth. All scoring
-runs in the browser, so answers never leave the visitor's device.
+A static website, hosted on GitHub Pages at https://acosmiccake.github.io/socialranking/ (English) and
+https://acosmiccake.github.io/socialranking/vi/ (Vietnamese). It asks about 40 questions, each taken from an established
+international survey, and compares your answers with real data for the world, your region, your income group, your country,
+urban or rural areas, and people of your age and sex. All scoring runs in the browser, so answers never leave the visitor's device.
 
 Originally a CS50 final project (2021). Rebuilt in 2026 so that every comparison rests on a published, reproducible dataset or
 a cited report.
@@ -15,26 +16,34 @@ a cited report.
 
 | Dimension | Question source (instrument) | Compared against | Data year |
 |---|---|---|---|
-| **Income** (headline) | Household income after tax ÷ household size, in local currency, converted to 2021 PPP $/day | World Bank PIP (September 2026 release) global and national income/consumption distributions | 2024 |
-| **Education** | Highest completed level (7 ISCED-based categories) | Barro-Lee Educational Attainment v3, adults 25-64, 146 countries | 2015 |
-| **Living standards** | SDG definitions for electricity (7.1.1), clean cooking (7.1.2), water and sanitation ladders (6.1.1, 6.2.1), hygiene, Internet use (ITU), health-cost hardship (3.8.2) | Tracking SDG7 2026, WHO/UNICEF JMP 2025, ITU 2025, WHO/World Bank UHC 2025 | 2022-2025 |
-| **Financial security** | Gallup World Poll basic-needs items; FAO Food Insecurity Experience Scale (8 items); Global Findex account and saving items | Gallup Basic Needs Vulnerability 2020; SOFI 2026; Findex 2025 | 2019-2025 |
+| **Income** (headline) | Household income after tax ÷ household size, in local currency, converted to 2021 PPP $/day with IMF inflation | World Bank PIP (September 2026 release): world, regions, income groups, all 218 economies, urban/rural (China), 1990-2026 | 2024 (+ history, 2026 nowcast) |
+| **Education** | Highest completed level, 9 ISCED 2011 levels; age and sex | UNESCO attainment of adults 25+ (World Bank WDI); Barro-Lee v3 for age/sex groups and missing countries | 2010-2025; 2015 |
+| **Work** | ILO status in employment (ICSE-93) and sector | ILO modelled estimates: employment by status and sector, vulnerable employment, unemployment (WDI) | 2025 |
+| **Living standards** | SDG definitions: electricity (7.1.1), clean cooking (7.1.2), JMP water/sanitation/hygiene ladders, Internet use (ITU), health-cost hardship (3.8.2) | WDI national, urban, rural and regional shares; Tracking SDG7 2026, JMP 2025, ITU 2025, UHC 2025 | 2022-2025 |
+| **Multidimensional poverty** (shown, not in the index) | Global MPI's 10 indicators: nutrition, child mortality, schooling, attendance, cooking fuel, sanitation, water, electricity, housing, assets | UNDP/OPHI Global MPI 2026; UN-Habitat overcrowding | 2026 |
+| **Financial security** | Gallup World Poll basic-needs items; FAO Food Insecurity Experience Scale (8 items); Global Findex | Gallup 2020; FAO food insecurity for the world and each country (WDI); SOFI 2026; Findex 2025 | 2019-2025 |
 | **Wealth** (optional) | Net worth per adult in US$ | UBS Global Wealth Report 2026 wealth pyramid | 2025 |
-| **Location** (context only) | Country | GDP per capita rank, population-weighted (WDI) | 2023 |
+| **Your country** (context only) | Country | Income group, GDP, poverty rates and 10 WDI indicators vs region and world | 2022-2025 |
 | **Self-placement** (not scored) | MacArthur Scale of Subjective Social Status, country and world ladders | Your measured rung | - |
 
 The results page shows:
 
-- your percentile within the world and within your country;
+- your percentile in the world, in your country, your region and (for China) your urban or rural area;
 - the steps that turn your income into 2021 international dollars;
-- an interactive chart of the world's and your country's income distribution;
-- a comparison for each service, with the number of people who lack it;
-- how your self-placement on the ladder compares with the data.
+- interactive charts: the world's and your country's income distribution, and your rank in each year from 1990 to 2026;
+- a world map and table of where your income would rank in each of the 218 economies, plus by region and income group;
+- a "what if?" slider for different incomes;
+- education compared with the world, your country and people of your age and sex;
+- work status and sector compared with the ILO's estimates;
+- every household service compared with the world, your region, your country and your urban/rural area;
+- your Multidimensional Poverty Index score and deprivations, and overcrowding;
+- food security against FAO's world and country figures;
+- your country at a glance;
+- how your self-placement on the ladder compares with the data;
+- a shareable link and a downloadable summary image.
 
-Every figure links to its source.
-
-The [`/methodology`](templates/methodology.html) page documents each calculation and its limitations. The
-[`/questionnaire`](templates/questionnaire.html) page lists every question with its source instrument.
+Every figure links to its source. The [`/methodology`](templates/methodology.html) page documents each calculation and its
+limitations. The [`/questionnaire`](templates/questionnaire.html) page lists every question with its source instrument.
 
 ## How the income comparison works
 
@@ -81,24 +90,42 @@ small territories).
 
 | Source | Used for |
 |---|---|
-| [World Bank Poverty and Inequality Platform API](https://pip.worldbank.org) | National percentiles for 2024, world headcounts, survey years, PPP factors |
-| [World Bank WDI API](https://datatopics.worldbank.org/world-development-indicators/) | Economies and income groups, population (world: 8,215,424,893 in 2025), GDP per capita, `PA.NUS.PRVT.PP` |
+| [World Bank Poverty and Inequality Platform API](https://pip.worldbank.org) | National percentiles for 2024 (all 218 economies), China's urban/rural distributions, world and regional headcounts for 1990-2024 and the 2026 nowcast, survey years, PPP factors |
+| [World Bank WDI API](https://datatopics.worldbank.org/world-development-indicators/) | Economies, regions and income groups; population and population 25+; GDP per capita; `PA.NUS.PRVT.PP`; UNESCO educational attainment (8 indicators); 39 indicators on services (national/urban/rural), food security (FAO), work (ILO), health and context, for every economy and aggregate |
 | [IMF World Economic Outlook, October 2026](https://www.imf.org/external/datamapper/PCPIPCH@WEO) | Consumer-price inflation, 2022-2026 |
-| [Barro-Lee v3](https://github.com/barrolee/BarroLeeDataSet) | Educational attainment (144 economies) |
-| [ISO 3166 / ISO 4217](https://github.com/datasets/country-codes) | Common country names and currencies |
+| [Barro-Lee v3](https://github.com/barrolee/BarroLeeDataSet) | Education by age and sex; education for countries without WDI data |
+| [ISO 3166 / ISO 4217](https://github.com/datasets/country-codes) | Common country names, currencies, map codes |
+| [Unicode CLDR via Babel](https://babel.pocoo.org/) | Vietnamese country names |
 
-The build cross-checks the PIP PPP factors against WDI for every country and flags any currency mismatch. A test also checks
-that the IMF-based price index agrees with PIP's own survey-year CPI.
+Validation:
 
-Global headline figures (JMP, SDG7, ITU, UHC, Findex, Gallup, SOFI, UBS, World Bank poverty) are curated in `ses/facts.py`,
-each with its citation. Update the number and the citation together when a new report is published.
+- The build cross-checks the PIP PPP factors against WDI for every country and flags currency mismatches.
+- Tests check that the IMF-based price index agrees with PIP's survey-year CPI, and that the global curve reproduces PIP's world headcounts.
+- Tests also check that the regional mixtures match PIP's regional headcounts to within 2 points.
+
+Global headline figures (JMP, SDG7, ITU, UHC, Findex, Gallup, SOFI, UBS, MPI, World Bank poverty) are curated in
+`ses/facts.py`, each with its citation.
 
 To rebuild the data (this needs access to `api.worldbank.org`, `www.imf.org` and `raw.githubusercontent.com`):
 
 ```bash
 pip install -r requirements-dev.txt
-python scripts/build_data.py --refresh      # caches downloads in data/raw/ (git-ignored), writes data/*.json
+python scripts/build_data.py --refresh      # pinned releases; caches downloads in data/raw/ (git-ignored)
+python scripts/build_data.py --latest       # newest PIP release, data year and IMF edition
 ```
+
+### Monthly refresh
+
+`.github/workflows/refresh-data.yml` runs `build_data.py --latest` on the 3rd of every month, runs the tests and, if the data
+changed, opens a pull request. Merging it redeploys the site. To let the workflow open pull requests, enable **Settings →
+Actions → General → Workflow permissions → Allow GitHub Actions to create and approve pull requests**. You can also run it by
+hand from the Actions tab.
+
+## Languages
+
+English pages are at the site root and Vietnamese pages under `vi/`. Translations live in `ses/i18n.py`: interface strings,
+questionnaire, labels and facts. The methodology and sources pages are English only. The Vietnamese survey wording is our own
+translation, not each instrument's official Vietnamese version.
 
 ## Publishing on GitHub Pages
 
@@ -115,7 +142,7 @@ The site is then published at `https://<user>.github.io/socialranking/`.
 ## Running locally
 
 ```bash
-pip install -r requirements.txt          # only Jinja2 is needed to build the site
+pip install -r requirements.txt          # Jinja2 and Babel are all that's needed to build the site
 python scripts/build_site.py             # writes _site/ with relative links
 python -m http.server -d _site           # http://localhost:8000
 ```
@@ -143,17 +170,18 @@ Field names and options are listed on the questionnaire page and in `ses/questio
 
 ```
 ses/questionnaire.py      Every question, its options and its source instrument
+ses/i18n.py               Vietnamese translations
 ses/facts.py              Cited global statistics
 ses/data.py               Loads data/*.json
 ses/distributions.py      Income distribution maths (reference implementation, used at build time)
-static/js/ses.js          In-browser validation and scoring
+static/js/ses.js          In-browser validation and scoring (all dimensions, MPI, regions, history)
 static/js/quiz.js         Multi-step quiz form
-static/js/results.js      Results page and chart
-scripts/build_data.py     Reproducible data pipeline -> data/*.json
-scripts/build_site.py     Renders templates/ into the static site _site/ (plus static/js/data.js)
-templates/, static/       Pages (Jinja2, Bootstrap 5, Chart.js)
+static/js/results.js      Results page, charts, world map, what-if slider, share image
+scripts/build_data.py     Data pipeline (World Bank, IMF, Barro-Lee) -> data/*.json
+scripts/build_site.py     Renders templates/ into the static site _site/ (English + vi/) and the data bundles
+templates/, static/       Pages (Jinja2, Bootstrap 5, Chart.js, d3 + world-atlas)
 tests/                    pytest suite; tests/js/ holds the Node tests for the scorer
-.github/workflows/        Build, test and deploy to GitHub Pages
+.github/workflows/        Deploy to GitHub Pages; monthly data refresh
 ```
 
 ## Tests
@@ -168,7 +196,8 @@ The tests cover:
 
 - **Data:** integrity, calibration against official headcounts, and that every distribution is monotone and invertible.
 - **Site build:** every page renders, every internal link resolves, and absolute links work under a base path.
-- **Scoring (JavaScript):** the conversions and all dimensions, edge cases, validation, and every country.
+- **Scoring (JavaScript):** the conversions and all dimensions (education by age/sex, work, MPI, food security, regions,
+  history), edge cases, validation, every country, and identical numbers in the Vietnamese bundle.
 - **Parity:** the JavaScript distribution maths matches the Python implementation to 1e-12.
 
 ## Limitations

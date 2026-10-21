@@ -112,6 +112,42 @@ CITATIONS = {
         "year": 2026,
         "url": "https://www.ubs.com/global/en/media/display-page-ndp/en-20260630-gwr-2026.html",
     },
+    "uis_attainment": {
+        "title": "Educational attainment of the population aged 25+ (ISCED 2011), World Development Indicators",
+        "publisher": "UNESCO Institute for Statistics, via the World Bank",
+        "year": 2026,
+        "url": "https://data.worldbank.org/indicator/SE.SEC.CUAT.UP.ZS",
+    },
+    "ilo_wdi": {
+        "title": "ILO modelled estimates: employment by status and sector, unemployment (World Development Indicators)",
+        "publisher": "International Labour Organization, via the World Bank",
+        "year": 2026,
+        "url": "https://data.worldbank.org/indicator/SL.EMP.VULN.ZS",
+    },
+    "fao_wdi": {
+        "title": "Prevalence of moderate or severe and of severe food insecurity (FIES), World Development Indicators",
+        "publisher": "FAO, via the World Bank",
+        "year": 2026,
+        "url": "https://data.worldbank.org/indicator/SN.ITK.MSFI.ZS",
+    },
+    "ophi_mpi": {
+        "title": "Global Multidimensional Poverty Index: dimensions, indicators, deprivation cutoffs and weights",
+        "publisher": "Oxford Poverty and Human Development Initiative (OPHI) and UNDP",
+        "year": 2025,
+        "url": "https://ophi.org.uk/global-mpi",
+    },
+    "mpi_2026": {
+        "title": "Global multidimensional poverty rises for first time since 2010 (2026 Global MPI)",
+        "publisher": "UNDP and OPHI",
+        "year": 2026,
+        "url": "https://www.undp.org/press-releases/global-multidimensional-poverty-rises-first-time-2010",
+    },
+    "un_habitat": {
+        "title": "SDG indicator 11.1.1 metadata: sufficient living area (no more than three people per habitable room)",
+        "publisher": "UN-Habitat / UN Statistics Division",
+        "year": 2021,
+        "url": "https://unstats.un.org/sdgs/metadata/files/Metadata-11-01-01.pdf",
+    },
     "macarthur": {
         "title": "MacArthur Scale of Subjective Social Status (Adler, Epel, Castellazzo & Ickovics, 2000)",
         "publisher": "Health Psychology 19(6): 586-592",
@@ -254,4 +290,15 @@ EXTREME_POVERTY = {
     "people": 824e6,
     "year": 2024,
     "cite": "wb_poverty_2026",
+}
+
+# 2026 Global MPI (UNDP/OPHI): people in acute multidimensional poverty.
+MPI = {
+    "people": 1.2e9,
+    "countries": 108,
+    "population_share_covered": 0.78,
+    "children": 617e6,
+    "rural_share": 0.83,
+    "year": 2026,
+    "cite": "mpi_2026",
 }

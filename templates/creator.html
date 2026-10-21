@@ -1,11 +1,18 @@
 {% extends "layout.html" %}
-{% block title %}Creator{% endblock %}
+{% block title %}{{ _("Creator") }}{% endblock %}
 {% block main %}
 <section class="container page-section prose">
     <h1>Nguyễn Phan Anh</h1>
+    {% if lang == "vi" %}
+    <p>Tôi là sinh viên Việt Nam đang học đại học ở Mỹ, theo học song song hai ngành Điện ảnh và Xã hội học. Từ lớp nhập môn xã
+        hội học đầu tiên, tôi đã quan tâm đến bất bình đẳng trên thế giới và cách giải quyết nó. Mong rằng ai đọc đến đây cũng học
+        được điều gì đó mới.</p>
+    <p>Liên hệ: <a href="mailto:nguyenphananh912@gmail.com">nguyenphananh912@gmail.com</a></p>
+    {% else %}
     <p>I am a college student from Việt Nam studying in the US, double majoring in Film and Sociology. Since my first
         intro to sociology class I have been interested in the inequalities of the world and how to tackle them. I hope anyone
         reading this has learned something new.</p>
     <p>Contact: <a href="mailto:nguyenphananh912@gmail.com">nguyenphananh912@gmail.com</a></p>
+    {% endif %}
 </section>
 {% endblock %}

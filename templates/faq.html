@@ -1,20 +1,63 @@
 {% extends "layout.html" %}
 {% from "macros.html" import cite with context %}
-{% block title %}FAQ{% endblock %}
+{% block title %}{{ _("FAQ") }}{% endblock %}
 {% block main %}
 <section class="container page-section prose">
+{% if lang == "vi" %}
+    <h1>Câu hỏi thường gặp</h1>
+
+    <h2 class="h5 mt-4">Có tin được bài trắc nghiệm này không?</h2>
+    <p>Hãy coi đây là một ước tính có nguồn rõ ràng, không phải phép đo chính xác. Mọi phép so sánh đều dùng số liệu công bố của
+        Ngân hàng Thế giới, các tổ chức Liên Hợp Quốc, IMF, ILO, Gallup hoặc UBS, và trang
+        <a href="{{ asset_base }}methodology.html">phương pháp</a> (tiếng Anh) trình bày từng bước và giới hạn. Điểm yếu nhất là câu
+        trả lời tự khai, năm số liệu khác nhau (từ 2015 đến 2026), và việc khảo sát hộ gia đình thường bỏ sót người rất giàu.</p>
+
+    <h2 class="h5 mt-4">Địa vị kinh tế - xã hội thường được đo thế nào?</h2>
+    <p>Các nhà nghiên cứu thường kết hợp học vấn, thu nhập và nghề nghiệp, có khi thêm quy mô hộ, khả năng tiếp cận nguồn lực
+        hoặc địa vị xã hội tự đánh giá {{ cite("apa_ses") }}. Bài này dùng cả ba trụ cột đó (nghề nghiệp theo phân loại việc làm
+        của ILO), cộng thêm mức sống, an ninh tài chính và (không bắt buộc) tài sản.</p>
+
+    <h2 class="h5 mt-4">Vì sao quốc gia của tôi lại quan trọng?</h2>
+    <p>Cùng một số tiền mua được những thứ rất khác nhau ở các nước khác nhau. Thu nhập của bạn được quy đổi sang "đô la quốc tế"
+        bằng hệ số ngang giá sức mua (PPP), nên 10 đô la nghĩa là lượng hàng hóa 10 đô la mua được ở Hoa Kỳ năm 2021. Quốc gia
+        cũng quyết định bạn được so với phân phối thu nhập nào cho kết quả "trong nước".</p>
+
+    <h2 class="h5 mt-4">Vì sao tính theo đầu người và theo ngày?</h2>
+    <p>Đó là cách Ngân hàng Thế giới đo nghèo đói và bất bình đẳng: thu nhập (hoặc chi tiêu) của hộ chia cho số người, tính theo
+        ngày {{ cite("pip") }}. Một hộ bốn người có 3.000 đô la mỗi tháng sống bằng khoảng 25 đô la mỗi người mỗi ngày.</p>
+
+    <h2 class="h5 mt-4">Vì sao kết quả "thế giới" cao hơn nhiều so với kết quả trong nước?</h2>
+    <p>Với phần lớn người ở các nước thu nhập trung bình và cao, chênh lệch giữa các nước lớn hơn nhiều so với chênh lệch trong
+        một nước. Một người ở mức trung vị của nước thu nhập cao thường thuộc nhóm một phần năm giàu nhất thế giới. Bản đồ
+        "thu nhập của bạn trên khắp thế giới" trong trang kết quả cho thấy rõ điều này.</p>
+
+    <h2 class="h5 mt-4">Vì sao nước tôi không nhận thu nhập chính xác?</h2>
+    <p>Quy đổi thu nhập hôm nay về giá năm 2021 cần chuỗi chỉ số giá tiêu dùng và hệ số PPP. Một số nền kinh tế thiếu dữ liệu này
+        (ví dụ Cuba, Triều Tiên, Syria và vài vùng lãnh thổ nhỏ). Ở Venezuela và Zimbabwe, đồng tiền đã bị thay thế mà không có
+        tỷ giá chuyển đổi cố định. Trong các trường hợp đó, bài sẽ hỏi theo khoảng.</p>
+
+    <h2 class="h5 mt-4">Chỉ số nghèo đa chiều (MPI) là gì?</h2>
+    <p>MPI của UNDP và OPHI đếm cùng lúc các thiếu hụt về sức khỏe, giáo dục và mức sống. Một người được coi là nghèo đa chiều nếu
+        thiếu hụt ở ít nhất một phần ba các chỉ số có trọng số {{ cite("ophi_mpi") }}. Bài trắc nghiệm hỏi đủ mười chỉ số; câu về
+        trẻ em tử vong là không bắt buộc.</p>
+
+    <h2 class="h5 mt-4">Các bạn có lưu câu trả lời của tôi không?</h2>
+    <p>Không. Bài trắc nghiệm chạy hoàn toàn trong trình duyệt: dữ liệu tải về cùng trang và phép tính diễn ra trên thiết bị của
+        bạn. Câu trả lời nằm trong địa chỉ trang kết quả (sau dấu <code>#</code>), phần mà trình duyệt không bao giờ gửi lên máy
+        chủ. Nhưng nếu bạn chia sẻ đường dẫn, người mở sẽ thấy câu trả lời của bạn.</p>
+{% else %}
     <h1>Frequently asked questions</h1>
 
     <h2 class="h5 mt-4">Can I trust this quiz?</h2>
     <p>Treat it as a well-sourced estimate, not a measurement. Every comparison uses published data from the World Bank, the UN
-        system, Gallup or UBS, and the <a href="{{ base }}methodology.html">methodology</a> sets out each step and its limits. The weakest
-        links are self-reported answers, data years that range from 2015 (education) to 2026, and the fact that household
-        surveys under-count the very rich.</p>
+        system, the IMF, the ILO, Gallup or UBS, and the <a href="{{ asset_base }}methodology.html">methodology</a> sets out each step
+        and its limits. The weakest links are self-reported answers, data years that range from 2015 to 2026, and the fact that
+        household surveys under-count the very rich.</p>
 
     <h2 class="h5 mt-4">How is socioeconomic status (SES) usually measured?</h2>
     <p>Researchers typically combine education, income and occupation. Some also use household size, access to resources or
-        subjective social status {{ cite("apa_ses") }}. Occupation has no comparable worldwide data, so this quiz uses
-        income, education, living standards, financial security and (optionally) wealth.</p>
+        subjective social status {{ cite("apa_ses") }}. This quiz covers all three classic pillars (occupation through the ILO's
+        status-in-employment categories) and adds living standards, financial security and, optionally, wealth.</p>
 
     <h2 class="h5 mt-4">Why does my country matter?</h2>
     <p>The same amount of money buys very different things in different countries. Your income is converted into
@@ -28,12 +71,18 @@
 
     <h2 class="h5 mt-4">Why is my "world" result so much higher than my result within my country?</h2>
     <p>For most people in middle- and high-income countries, global inequality between countries is much larger than inequality
-        within them. Someone at the median in a high-income country is typically among the richest fifth of the world.</p>
+        within them. Someone at the median in a high-income country is typically among the richest fifth of the world. The
+        "your income around the world" map on the results page shows this directly.</p>
 
     <h2 class="h5 mt-4">My country isn't accepting an exact income. Why?</h2>
     <p>Converting today's income into 2021 prices needs a consumer price series and a PPP factor. These are missing for a few
         economies (for example Cuba, North Korea, Syria and some small territories). In Venezuela and Zimbabwe the currency was replaced
         without a fixed conversion rate, so the conversion isn't reliable. In those cases we ask for a range instead.</p>
+
+    <h2 class="h5 mt-4">What is the Multidimensional Poverty Index?</h2>
+    <p>The UNDP/OPHI Global MPI counts deprivations in health, education and living standards at the same time. A person is
+        multidimensionally poor when deprived in at least a third of the weighted indicators {{ cite("ophi_mpi") }}. The quiz asks
+        about all ten indicators; the child-mortality question is optional.</p>
 
     <h2 class="h5 mt-4">Do you store my answers?</h2>
     <p>No. The quiz runs entirely in your browser: all the data are downloaded with the page and the calculation happens on
@@ -43,6 +92,7 @@
     <h2 class="h5 mt-4">Can I use the scorer in my own code?</h2>
     <p><code>static/js/ses.js</code> works in the browser and in Node.js. Call <code>SES.score(SES.parseAnswers(answers))</code> with
         an object whose field names match the <a href="{{ base }}questionnaire.html">questionnaire</a>, for example
-        <code>{"country": "VNM", "income_mode": "band", "income_band": "b4", "education": "secondary"}</code>.</p>
+        <code>{"country": "VNM", "income_mode": "band", "income_band": "b4", "education": "upper_secondary"}</code>.</p>
+{% endif %}
 </section>
 {% endblock %}

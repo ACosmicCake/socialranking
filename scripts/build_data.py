@@ -71,6 +71,16 @@ GITHUB_SOURCES = {
         "name": "Barro-Lee Educational Attainment Dataset v3, ages 25-64",
         "home": "https://github.com/barrolee/BarroLeeDataSet",
     },
+    **{
+        f"barro_lee_{sex}": {
+            "url": "https://raw.githubusercontent.com/barrolee/BarroLeeDataSet/"
+                   f"ee575b42f659bad7445dfc26d19816ede8000e47/BLData/BL_v3_{sex}.csv",
+            "file": f"BL_v3_{sex}.csv",
+            "name": f"Barro-Lee Educational Attainment Dataset v3, 10-year age groups ({label})",
+            "home": "https://github.com/barrolee/BarroLeeDataSet",
+        }
+        for sex, label in (("MF", "both sexes"), ("F", "women"), ("M", "men"))
+    },
 }
 
 # PIP keeps PPPs in the currency of the survey; these countries have since
@@ -94,6 +104,68 @@ NO_EXACT_INCOME = {
 MAX_CURRENT_INFLATION = 1.0     # 100% a year
 IMF_CODE_FIXES = {"UVK": "XKX", "WBG": "PSE"}
 
+# Country-level World Development Indicators (latest value since WDI_SINCE).
+WDI_SINCE = 2014
+WDI_INDICATORS = {
+    # household services: total, urban, rural (% of population)
+    "EG.ELC.ACCS.ZS": "Access to electricity",
+    "EG.ELC.ACCS.UR.ZS": "Access to electricity, urban",
+    "EG.ELC.ACCS.RU.ZS": "Access to electricity, rural",
+    "EG.CFT.ACCS.ZS": "Access to clean fuels and technologies for cooking",
+    "EG.CFT.ACCS.UR.ZS": "Access to clean cooking, urban",
+    "EG.CFT.ACCS.RU.ZS": "Access to clean cooking, rural",
+    "SH.H2O.SMDW.ZS": "Safely managed drinking water",
+    "SH.H2O.SMDW.UR.ZS": "Safely managed drinking water, urban",
+    "SH.H2O.SMDW.RU.ZS": "Safely managed drinking water, rural",
+    "SH.H2O.BASW.ZS": "At least basic drinking water",
+    "SH.STA.SMSS.ZS": "Safely managed sanitation",
+    "SH.STA.SMSS.UR.ZS": "Safely managed sanitation, urban",
+    "SH.STA.SMSS.RU.ZS": "Safely managed sanitation, rural",
+    "SH.STA.BASS.ZS": "At least basic sanitation",
+    "SH.STA.ODFC.ZS": "Open defecation",
+    "SH.STA.HYGN.ZS": "Basic handwashing facilities at home",
+    "SH.STA.HYGN.UR.ZS": "Basic handwashing facilities, urban",
+    "SH.STA.HYGN.RU.ZS": "Basic handwashing facilities, rural",
+    "IT.NET.USER.ZS": "Individuals using the Internet",
+    "FX.OWN.TOTL.ZS": "Account ownership (% of age 15+)",
+    # food security (FAO)
+    "SN.ITK.MSFI.ZS": "Moderate or severe food insecurity",
+    "SN.ITK.SVFI.ZS": "Severe food insecurity",
+    "SN.ITK.DEFC.ZS": "Prevalence of undernourishment",
+    # work (ILO modelled estimates, % of total employment unless noted)
+    "SL.EMP.WORK.ZS": "Wage and salaried workers",
+    "SL.EMP.MPYR.ZS": "Employers",
+    "SL.FAM.WORK.ZS": "Contributing family workers",
+    "SL.EMP.VULN.ZS": "Vulnerable employment (own-account + contributing family)",
+    "SL.AGR.EMPL.ZS": "Employment in agriculture",
+    "SL.IND.EMPL.ZS": "Employment in industry",
+    "SL.SRV.EMPL.ZS": "Employment in services",
+    "SL.UEM.TOTL.ZS": "Unemployment (% of labour force)",
+    "SL.TLF.CACT.ZS": "Labour force participation (% of population 15+)",
+    # context
+    "SP.URB.TOTL.IN.ZS": "Urban population",
+    "SP.DYN.LE00.IN": "Life expectancy at birth (years)",
+    "SH.DYN.MORT": "Under-5 mortality (per 1,000 live births)",
+    "NY.GDP.PCAP.PP.KD": "GDP per capita, PPP (constant 2021 international $)",
+    "SH.XPD.OOPC.CH.ZS": "Out-of-pocket spending (% of health spending)",
+    "SE.ADT.LITR.ZS": "Adult literacy rate (15+)",
+    "EN.POP.SLUM.UR.ZS": "Urban population living in slums",
+}
+# Educational attainment, population 25+, cumulative (% with at least this level).
+WDI_EDUCATION = ["SE.PRM.CUAT.ZS", "SE.SEC.CUAT.LO.ZS", "SE.SEC.CUAT.UP.ZS", "SE.SEC.CUAT.PO.ZS",
+                 "SE.TER.CUAT.ST.ZS", "SE.TER.CUAT.BA.ZS", "SE.TER.CUAT.MS.ZS", "SE.TER.CUAT.DO.ZS"]
+EDUCATION_SINCE = 2010
+POP_25_PLUS_PARTS = ["SP.POP.0014.TO", "SP.POP.1519.FE", "SP.POP.1519.MA", "SP.POP.2024.FE", "SP.POP.2024.MA"]
+WDI_AGGREGATES = ["WLD", "EAS", "ECS", "LCN", "MEA", "NAC", "SAS", "SSF", "LIC", "LMC", "UMC", "HIC"]
+
+# Separate urban and rural distributions, where PIP publishes them (only China in
+# the September 2026 release; India and Indonesia are now national only).
+URBAN_RURAL_COUNTRIES = ["CHN", "IND", "IDN"]
+URBAN_RURAL_LINES = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4.2, 5, 6, 7, 8.3, 10, 12.5, 15, 20, 25, 30, 40, 50, 60, 80,
+                     100, 150, 200]
+HISTORY_YEARS = [1990, 2000, 2010, 2019]   # plus REFERENCE_YEAR and NOWCAST_YEAR
+NOWCAST_YEAR = 2026
+
 # Barro-Lee uses a few legacy World Bank codes.
 BARRO_LEE_CODE_FIXES = {"ROM": "ROU", "ZAR": "COD", "TMP": "TLS", "SER": "SRB"}
 
@@ -113,15 +185,23 @@ DISPLAY_NAMES = {
     "PSE": "West Bank and Gaza",
 }
 
+# ISCED 2011 attainment levels, matching WDI's cumulative indicators.
 EDUCATION_LEVELS = [
-    ("none", "No formal schooling"),
-    ("primary_incomplete", "Some primary school"),
-    ("primary", "Completed primary school"),
-    ("secondary_incomplete", "Some secondary school"),
-    ("secondary", "Completed secondary school"),
-    ("tertiary_incomplete", "Some post-secondary / university"),
-    ("tertiary", "Completed post-secondary / university degree"),
+    ("below_primary", "Less than primary (no schooling or primary not completed)"),
+    ("primary", "Primary"),
+    ("lower_secondary", "Lower secondary"),
+    ("upper_secondary", "Upper secondary"),
+    ("post_secondary", "Post-secondary non-tertiary"),
+    ("short_tertiary", "Short-cycle tertiary"),
+    ("bachelor", "Bachelor's or equivalent"),
+    ("master", "Master's or equivalent"),
+    ("doctoral", "Doctoral or equivalent"),
 ]
+# Barro-Lee's broad groups, for comparisons within an age and sex group.
+BROAD_EDUCATION = ["No schooling or primary not completed", "Primary", "Secondary (some or completed)",
+                   "Tertiary (some or completed)"]
+BROAD_FROM_LEVEL = [0, 1, 2, 2, 2, 3, 3, 3, 3]
+BL_AGE_GROUPS = [(25, 34), (35, 44), (45, 54), (55, 64)]
 
 
 # ---------------------------------------------------------------------------
@@ -180,12 +260,17 @@ def quantile_distribution(points):
     for p, x in points:
         dedup[round(x, 9)] = max(p, dedup.get(round(x, 9), 0))
     points = sorted((p, x) for x, p in dedup.items())
+    # Likewise a flat stretch of the CDF: keep the lowest income for each share.
+    points = [pt for i, pt in enumerate(points) if i == 0 or pt[0] > points[i - 1][0]]
+    points = [(p, x) for p, x in points if 0 < p < 0.9995]
     ps = [p for p, _ in points]
     xs = [x for _, x in points]
-    if any(b <= a for a, b in zip(xs, xs[1:])) or xs[0] <= 0 or not {0.95, 0.99} <= set(ps):
+    if len(points) < 5 or any(b <= a for a, b in zip(xs, xs[1:])) or any(b <= a for a, b in zip(ps, ps[1:])) \
+            or xs[0] <= 0 or ps[-1] < 0.9:
         return None
-    i95, i99 = ps.index(0.95), ps.index(0.99)
-    alpha = math.log((1 - ps[i95]) / (1 - ps[i99])) / math.log(xs[i99] / xs[i95])
+    # Pareto tail from the 95th-percentile point (or the nearest below) to the last point.
+    i_low = max(i for i, p in enumerate(ps) if p <= max(0.95, ps[-2]) and i < len(ps) - 1)
+    alpha = math.log((1 - ps[i_low]) / (1 - ps[-1])) / math.log(xs[-1] / xs[i_low])
     return {"p": ps, "x": [round(x, 4) for x in xs], "pareto_alpha": round(min(max(alpha, 1.05), 10.0), 4)}
 
 
@@ -242,16 +327,30 @@ def build_income():
         })
         countries[code] = dist
 
-    # World headcounts at WORLD_LINES, from PIP's own global aggregation.
-    anchors = []
-    world_mean = None
+    # Urban and rural distributions, where PIP publishes them separately.
+    for code, levels in build_urban_rural().items():
+        if code in countries:
+            countries[code]["by_area"] = levels
+
+    # Headcounts at WORLD_LINES for every year, world and regions, from PIP's
+    # own aggregation (actual estimates plus the nowcast years).
+    frames = []
     for line in WORLD_LINES:
-        df = pip_csv("pip-grp", f"pip_world_{line}.csv", country="WLD", year=REFERENCE_YEAR,
-                     povline=line, group_by="wb")
-        row = df[df["region_code"] == "WLD"].iloc[0]
-        anchors.append((float(line), float(row["headcount"])))
-        world_mean = float(row["mean"])
-        world_pop = int(row["reporting_pop"])
+        for nowcast in ("false", "true"):
+            df = pip_csv("pip-grp", f"pip_grp_{line}_{nowcast}.csv", country="all", year="all",
+                         povline=line, group_by="wb", nowcast=nowcast)
+            df["line"] = float(line)
+            frames.append(df)
+    grp = pd.concat(frames).drop_duplicates(subset=["region_code", "reporting_year", "line"])
+    world = grp[grp["region_code"] == "WLD"]
+
+    def anchors_for(year):
+        rows = world[world["reporting_year"] == year].sort_values("line")
+        return [(float(r["line"]), float(r["headcount"])) for _, r in rows.iterrows()]
+
+    anchors = anchors_for(REFERENCE_YEAR)
+    ref = world[(world["reporting_year"] == REFERENCE_YEAR) & (world["line"] == 3)].iloc[0]
+    world_mean, world_pop = float(ref["mean"]), int(ref["reporting_pop"])
 
     # Population-weighted mixture of national lineups = shape of the global
     # distribution; then calibrate it so it passes through PIP's world headcounts.
@@ -263,23 +362,30 @@ def build_income():
         weight += dist["population"]
     mixture = total / weight
     mix_at = lambda v: float(np.interp(math.log(v), np.log(grid), mixture))
-
-    lines = [a[0] for a in anchors]
-    calibrated = np.empty_like(mixture)
-    for i, x in enumerate(grid):
-        m = mixture[i]
-        if x <= lines[0]:
-            calibrated[i] = anchors[0][1] * m / mix_at(lines[0])
-        elif x >= lines[-1]:
-            m_top, f_top = mix_at(lines[-1]), anchors[-1][1]
-            calibrated[i] = f_top + (1 - f_top) * (m - m_top) / (1 - m_top)
-        else:
-            j = next(k for k in range(len(lines) - 1) if lines[k] <= x <= lines[k + 1])
-            (a, fa), (b, fb) = anchors[j], anchors[j + 1]
-            ma, mb = mix_at(a), mix_at(b)
-            calibrated[i] = fa + (fb - fa) * (m - ma) / (mb - ma)
-    calibrated = np.maximum.accumulate(np.clip(calibrated, 0, 1))
+    calibrated = calibrate(grid, mixture, anchors)
     median = float(np.exp(np.interp(0.5, calibrated, np.log(grid))))
+
+    # Other years: the same shape calibrated to that year's world headcounts.
+    history = {}
+    for year in HISTORY_YEARS + [REFERENCE_YEAR, NOWCAST_YEAR]:
+        a = anchors_for(year)
+        if len(a) != len(WORLD_LINES):
+            continue
+        cdf = calibrate(grid, mixture, a)
+        estimate = world[world["reporting_year"] == year]["estimate_type"].iloc[0]
+        history[str(year)] = {
+            "cdf": [round(float(f), 6) for f in cdf],
+            "estimate_type": estimate,
+            "share_below_3": round(dict(a)[3.0], 6),
+            "population": int(world[(world["reporting_year"] == year) & (world["line"] == 3)]["reporting_pop"].iloc[0]),
+        }
+
+    # Regional check: our mixtures against PIP's regional headcounts at $3.00.
+    regions = {}
+    for _, r in grp[(grp["reporting_year"] == REFERENCE_YEAR) & (grp["line"] == 3)].iterrows():
+        if r["region_code"] != "WLD":
+            regions[r["region_code"]] = {"name": r["region_name"], "share_below_3": round(float(r["headcount"]), 6),
+                                         "population": int(r["reporting_pop"])}
 
     return countries, {
         "ppp_year": PPP_BASE_YEAR,
@@ -295,7 +401,54 @@ def build_income():
         "world_population": world_pop,
         "world_mean": round(world_mean, 4),
         "world_median": round(median, 4),
+        "history": history,
+        "pip_regions": regions,
     }
+
+
+def calibrate(grid, mixture, anchors):
+    """Rescale the mixture CDF piecewise so it passes through the anchors."""
+    mix_at = lambda v: float(np.interp(math.log(v), np.log(grid), mixture))
+    lines = [a[0] for a in anchors]
+    out = np.empty_like(mixture)
+    for i, x in enumerate(grid):
+        m = mixture[i]
+        if x <= lines[0]:
+            out[i] = anchors[0][1] * m / mix_at(lines[0])
+        elif x >= lines[-1]:
+            m_top, f_top = mix_at(lines[-1]), anchors[-1][1]
+            out[i] = f_top + (1 - f_top) * (m - m_top) / (1 - m_top)
+        else:
+            j = next(k for k in range(len(lines) - 1) if lines[k] <= x <= lines[k + 1])
+            (a, fa), (b, fb) = anchors[j], anchors[j + 1]
+            ma, mb = mix_at(a), mix_at(b)
+            out[i] = fa + (fb - fa) * (m - ma) / (mb - ma)
+    return np.maximum.accumulate(np.clip(out, 0, 1))
+
+
+def build_urban_rural():
+    """Urban and rural distributions for the countries PIP splits by area.
+
+    PIP's population-share queries return the national line for these
+    countries, so instead we read each area's headcount at a grid of lines."""
+    frames = []
+    for line in URBAN_RURAL_LINES:
+        df = pip_csv("pip", f"pip_area_{line}.csv", country=",".join(URBAN_RURAL_COUNTRIES),
+                     year=REFERENCE_YEAR, povline=line, fill_gaps="true")
+        frames.append(df)
+    df = pd.concat(frames)
+    out = {}
+    for (code, level), rows in df.groupby(["country_code", "reporting_level"]):
+        if level not in ("urban", "rural"):
+            continue
+        rows = rows.sort_values("poverty_line")
+        dist = quantile_distribution(list(zip(rows["headcount"], rows["poverty_line"])))
+        if dist:
+            median = math.exp(float(np.interp(0.5, dist["p"], np.log(dist["x"]))))
+            dist.update({"population": int(rows["reporting_pop"].iloc[0]), "median": round(median, 4),
+                         "mean": round(float(rows["mean"].iloc[0]), 4)})
+            out.setdefault(code, {})[level] = dist
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -364,35 +517,124 @@ def build_prices(codes, pip_income):
 # Education
 # ---------------------------------------------------------------------------
 
-def build_education(bl, known):
+def wdi_latest(indicator, since, name=None):
+    """Latest non-null value per economy/aggregate since `since` -> {code: (year, value)}."""
+    rows = wdi(indicator, name or f"wdi_{indicator}.json", date=f"{since}:{INFLATION_LAST_YEAR}")
+    out = {}
+    for r in rows:
+        code, year = r["countryiso3code"] or r["country"]["id"], int(r["date"])
+        if code and (code not in out or year > out[code][0]):
+            out[code] = (year, float(r["value"]))
+    return out
+
+
+def wdi_by_year(indicator, since):
+    rows = wdi(indicator, f"wdi_{indicator}_years.json", date=f"{since}:{INFLATION_LAST_YEAR}")
+    out = {}
+    for r in rows:
+        out.setdefault(r["countryiso3code"], {})[int(r["date"])] = float(r["value"])
+    return out
+
+
+def build_education(bl, bl_groups, known, pop25):
+    """Attainment of adults 25+ in nine ISCED levels.
+
+    WDI's cumulative attainment indicators are used where a country reports
+    primary, lower secondary, upper secondary and bachelor's for the same year
+    (latest since EDUCATION_SINCE). Missing finer levels are filled as noted
+    below. Countries without WDI data use Barro-Lee 2015, crosswalked.
+    """
+    series = {ind: wdi_by_year(ind, EDUCATION_SINCE) for ind in WDI_EDUCATION}
+    prm, lo, up, po, st, ba, ms, do = (series[i] for i in WDI_EDUCATION)
+
+    # Pooled ratios used to fill missing master's / doctoral shares.
+    def pooled_ratio(num, den):
+        pairs = [(num[c][y], den[c][y]) for c in num for y in num[c] if c in den and y in den[c] and den[c][y] > 0]
+        return sum(a for a, _ in pairs) / sum(b for _, b in pairs)
+    ms_over_ba, do_over_ms = pooled_ratio(ms, ba), pooled_ratio(do, ms)
+
+    countries = {}
+    for code in known:
+        years = [y for y in prm.get(code, {}) if all(y in d.get(code, {}) for d in (lo, up, ba))]
+        if not years:
+            continue
+        y = max(years)
+        cum = [100.0, prm[code][y], lo[code][y], up[code][y]]
+        b = ba[code][y]
+        s_ = st.get(code, {}).get(y, b)
+        p_ = po.get(code, {}).get(y, s_)
+        m = ms.get(code, {}).get(y, b * ms_over_ba)
+        d = do.get(code, {}).get(y, m * do_over_ms)
+        filled = [k for k, src in (("post-secondary", po), ("short-cycle", st), ("master's", ms), ("doctoral", do))
+                  if y not in src.get(code, {})]
+        cum += [p_, s_, b, m, d]
+        for i in range(1, len(cum)):
+            cum[i] = max(0.0, min(cum[i], cum[i - 1]))
+        shares = [(cum[i] - (cum[i + 1] if i + 1 < len(cum) else 0)) / 100 for i in range(len(cum))]
+        countries[code] = {"source": "WDI", "year": y, "shares": [round(x, 5) for x in shares],
+                           "filled": filled}
+
+    # Barro-Lee crosswalk for the rest (and age/sex groups for everyone).
     bl = bl[bl["year"] == bl["year"].max()].copy()
     bl["iso3"] = bl["WBcode"].replace(BARRO_LEE_CODE_FIXES)
-    countries = {}
-    totals = np.zeros(len(EDUCATION_LEVELS))
-    weight = 0.0
+    tertiary_split = None
     for _, r in bl.iterrows():
-        shares = np.array([
-            r["lu"],
-            r["lp"] - r["lpc"], r["lpc"],
-            r["ls"] - r["lsc"], r["lsc"],
-            r["lh"] - r["lhc"], r["lhc"],
-        ], dtype=float).clip(min=0)
-        shares = shares / shares.sum()
-        if r["iso3"] in known:
-            countries[r["iso3"]] = {
-                "year": int(r["year"]),
-                "shares": [round(float(s), 5) for s in shares],
-                "mean_years": round(float(r["yr_sch"]), 2),
-            }
-        totals += shares * r["pop"]
-        weight += r["pop"]
+        code = r["iso3"]
+        if code not in known:
+            continue
+        mean_years = round(float(r["yr_sch"]), 2)
+        if code in countries:
+            countries[code]["mean_years"] = mean_years
+            continue
+        if tertiary_split is None:
+            # Split Barro-Lee's completed tertiary by WDI's pooled bachelor/master/doctoral ratios.
+            tertiary_split = [1 - ms_over_ba, ms_over_ba * (1 - do_over_ms), ms_over_ba * do_over_ms]
+        lhc = r["lhc"]
+        shares = [r["lu"] + r["lp"] - r["lpc"], r["lpc"], r["ls"] - r["lsc"], r["lsc"], 0.0, r["lh"] - lhc,
+                  lhc * tertiary_split[0], lhc * tertiary_split[1], lhc * tertiary_split[2]]
+        total = sum(shares)
+        countries[code] = {"source": "Barro-Lee", "year": int(r["year"]),
+                           "shares": [round(max(x, 0) / total, 5) for x in shares], "mean_years": mean_years}
+
+    # Age and sex groups (Barro-Lee, broad levels).
+    world_groups = {}
+    for sex, df in bl_groups.items():
+        df = df[df["year"] == df["year"].max()].copy()
+        df["iso3"] = df["WBcode"].replace(BARRO_LEE_CODE_FIXES)
+        for lo_age, hi_age in BL_AGE_GROUPS:
+            g = df[(df["agefrom"] == lo_age) & (df["ageto"] == hi_age)]
+            key = f"{lo_age}-{hi_age}"
+            totals, weight = np.zeros(4), 0.0
+            for _, r in g.iterrows():
+                broad = np.array([r["lu"] + r["lp"] - r["lpc"], r["lpc"], r["ls"], r["lh"]]).clip(min=0)
+                broad = broad / broad.sum()
+                if r["iso3"] in countries:
+                    countries[r["iso3"]].setdefault("groups", {}).setdefault(key, {})[sex] = \
+                        [round(float(x), 4) for x in broad]
+                totals += broad * r["pop"]
+                weight += r["pop"]
+            world_groups.setdefault(key, {})[sex] = [round(float(x), 4) for x in totals / weight]
+
+    # World shares weighted by population aged 25+.
+    totals, weight = np.zeros(len(EDUCATION_LEVELS)), 0.0
+    for code, e in countries.items():
+        w = pop25.get(code)
+        if w:
+            totals += np.array(e["shares"]) * w
+            weight += w
     return countries, {
-        "year": int(bl["year"].max()),
-        "ages": "25-64",
+        "ages": "25+",
         "levels": [{"key": k, "label": label} for k, label in EDUCATION_LEVELS],
-        "world_shares": [round(float(s), 5) for s in totals / weight],
-        "countries_covered": int(len(bl)),
-        "population_covered_thousands": round(float(weight)),
+        "world_shares": [round(float(x), 5) for x in totals / weight],
+        "population_25_plus_covered": int(weight),
+        "population_25_plus_world": int(pop25.get("WLD", 0)),
+        "countries_wdi": sum(e["source"] == "WDI" for e in countries.values()),
+        "countries_barro_lee": sum(e["source"] == "Barro-Lee" for e in countries.values()),
+        "fill_ratios": {"master_over_bachelor": round(ms_over_ba, 4), "doctoral_over_master": round(do_over_ms, 4)},
+        "broad_levels": BROAD_EDUCATION,
+        "broad_from_level": BROAD_FROM_LEVEL,
+        "groups_year": int(bl["year"].max()),
+        "groups": world_groups,
     }
 
 
@@ -400,11 +642,35 @@ def build_education(bl, known):
 # Main
 # ---------------------------------------------------------------------------
 
+def use_latest_releases():
+    """Switch from the pinned releases to the newest ones (used by the monthly refresh)."""
+    global PIP_VERSION, REFERENCE_YEAR, NOWCAST_YEAR, INFLATION_LAST_YEAR, IMF_EDITION
+    versions = json.loads(fetch(f"{PIP_API}/versions", "pip_versions.json"))
+    PIP_VERSION = next(v["version"] for v in versions
+                       if str(v["ppp_version"]) == str(PPP_BASE_YEAR) and v["identity"] == "PROD")
+    world = pip_csv("pip-grp", "pip_world_years.csv", country="WLD", year="all", povline=3, group_by="wb",
+                    nowcast="true")
+    world = world[world["region_code"] == "WLD"]
+    REFERENCE_YEAR = int(world[world["estimate_type"] == "actual"]["reporting_year"].max())
+    NOWCAST_YEAR = int(world["reporting_year"].max())
+    INFLATION_LAST_YEAR = datetime.date.today().year
+    indicators = json.loads(fetch(f"{IMF_API}/indicators", "imf_indicators.json"))["indicators"]
+    IMF_EDITION = "IMF " + indicators["PCPIPCH"]["source"]
+    print(f"latest releases: PIP {PIP_VERSION}, reference year {REFERENCE_YEAR}, nowcast {NOWCAST_YEAR}, "
+          f"{IMF_EDITION}, prices to {INFLATION_LAST_YEAR}")
+
+
 def main():
     global REFRESH
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--refresh", action="store_true", help="download every source again")
-    REFRESH = parser.parse_args().refresh
+    parser.add_argument("--latest", action="store_true",
+                        help="use the newest PIP release, data years and IMF edition instead of the pinned ones "
+                             "(implies --refresh)")
+    args = parser.parse_args()
+    REFRESH = args.refresh or args.latest
+    if args.latest:
+        use_latest_releases()
 
     # Economies: World Bank list (217) plus any extra economies PIP covers (Taiwan).
     meta = json.loads(fetch(f"{WDI_API}/country?format=json&per_page=400", "wdi_countries.json"))[1]
@@ -428,13 +694,28 @@ def main():
                 for _, r in codes_df.iterrows() if r["ISO3166-1-Alpha-3"]}
     common_names = {r["ISO3166-1-Alpha-3"]: r["CLDR display name"]
                     for _, r in codes_df.iterrows() if r["ISO3166-1-Alpha-3"] and r["CLDR display name"]}
+    # ISO 3166 numeric codes, which the world map (world-atlas) uses as ids.
+    iso2 = {r["ISO3166-1-Alpha-3"]: r["ISO3166-1-Alpha-2"] for _, r in codes_df.iterrows() if r["ISO3166-1-Alpha-3"]}
+    iso2["XKX"] = "XK"
+    m49 = {r["ISO3166-1-Alpha-3"]: str(r["ISO3166-1-numeric"]).zfill(3)
+           for _, r in codes_df.iterrows() if r["ISO3166-1-Alpha-3"] and str(r["ISO3166-1-numeric"]).strip()}
     currency["XKX"] = ("EUR", "Euro")
     currency["CHI"] = ("GBP", "Pound Sterling")
     currency["PSE"] = ("ILS", "New Israeli Sheqel")
 
     prices, ppp_outliers = build_prices(economies, income)
+
+    pop_parts = {ind: wdi_latest(ind, WDI_SINCE) for ind in POP_25_PLUS_PARTS}
+    pop25 = {}
+    for code, (year, total) in population.items():
+        if all(code in pop_parts[ind] for ind in POP_25_PLUS_PARTS):
+            pop25[code] = total - sum(pop_parts[ind][code][1] for ind in POP_25_PLUS_PARTS)
     bl = pd.read_csv(io.BytesIO(fetch(GITHUB_SOURCES["barro_lee"]["url"], "BL_v3_MF2564.csv")))
-    education, global_education = build_education(bl, set(economies))
+    bl_groups = {sex: pd.read_csv(io.BytesIO(fetch(GITHUB_SOURCES[f"barro_lee_{sex}"]["url"], f"BL_v3_{sex}.csv")))
+                 for sex in ("MF", "F", "M")}
+    education, global_education = build_education(bl, bl_groups, set(economies), pop25)
+
+    indicators = {ind: wdi_latest(ind, WDI_SINCE) for ind in WDI_INDICATORS}
 
     countries = []
     for code, m in economies.items():
@@ -460,6 +741,11 @@ def main():
             entry["income"] = {k: v for k, v in income[code].items() if k not in ("population", "survey_ppp")}
         if code in education:
             entry["education"] = education[code]
+        entry["region"] = m.get("region", {}).get("id") or None
+        entry["m49"] = m49.get(code)
+        entry["iso2"] = iso2.get(code) or None
+        entry["wdi"] = {ind: [vals[code][0], round(vals[code][1], 2)] for ind, vals in indicators.items()
+                        if code in vals}
         countries.append(entry)
     countries.sort(key=lambda c: c["name"].casefold())
 
@@ -475,8 +761,9 @@ def main():
     sources = {
         "pip": {"name": f"World Bank Poverty and Inequality Platform API, release {PIP_VERSION}",
                 "url": f"{PIP_API}/pip?version={PIP_VERSION}", "home": "https://pip.worldbank.org"},
-        "wdi": {"name": "World Bank World Development Indicators API (SP.POP.TOTL, NY.GDP.PCAP.CD, "
-                        "PA.NUS.PRVT.PP, country classifications)",
+        "wdi": {"name": f"World Bank World Development Indicators API ({len(WDI_INDICATORS) + len(WDI_EDUCATION) + 3} "
+                        "indicators: population, GDP, PPP, education, services, food security, work, health; "
+                        "country classifications)",
                 "url": f"{WDI_API}/country/all/indicator/SP.POP.TOTL",
                 "home": "https://datatopics.worldbank.org/world-development-indicators/"},
         "imf": {"name": f"{IMF_EDITION}: inflation, average consumer prices (PCPIPCH)",
@@ -493,6 +780,17 @@ def main():
         "prices": {"base_year": PPP_BASE_YEAR, "last_year": INFLATION_LAST_YEAR, "source": IMF_EDITION,
                    "max_current_inflation": MAX_CURRENT_INFLATION},
         "location": {"economies_ranked": len(ranked), "population_ranked": ranked_pop},
+        "wdi_indicators": WDI_INDICATORS,
+        "wdi_since": WDI_SINCE,
+        "aggregates": {
+            code: {
+                "name": next((m["name"] for m in meta if m["id"] == code), code),
+                "wdi": {ind: [vals[code][0], round(vals[code][1], 2)] for ind, vals in indicators.items()
+                        if code in vals},
+            }
+            for code in WDI_AGGREGATES
+        },
+        "regions": {m["region"]["id"]: m["region"]["value"].strip() for m in meta if m["region"]["id"] != "NA"},
     }
     (OUT_DIR / "countries.json").write_text(json.dumps(countries, ensure_ascii=False, indent=1))
     (OUT_DIR / "global.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
@@ -506,6 +804,12 @@ def main():
         print(f"  ${v['line']:>5}/day  official {v['official']:6.2f}%  mixture {v['mixture']:6.2f}%")
     print("no exact income:", sorted(c["iso3"] for c in countries if c["iso3"] not in exact))
     print("PIP vs WDI PPP mismatches (ratio outside 0.8-1.25):", ppp_outliers)
+    e = global_education
+    print(f"education: {e['countries_wdi']} WDI + {e['countries_barro_lee']} Barro-Lee, "
+          f"{e['population_25_plus_covered'] / e['population_25_plus_world']:.1%} of adults 25+; world shares",
+          e["world_shares"])
+    print("history:", {y: h["share_below_3"] for y, h in global_income["history"].items()})
+    print("urban/rural:", {c["iso3"]: list(c["income"]["by_area"]) for c in countries if "by_area" in c.get("income", {})})
     return 0
 
 

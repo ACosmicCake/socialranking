@@ -65,15 +65,68 @@ SANITATION_OPTIONS = [
     ("open", "No facility - bush, field or open ground", "Open defecation"),
 ]
 
+# ISCED 2011 levels, in the order of WDI's attainment indicators.
 EDUCATION_OPTIONS = [
-    ("none", "No formal schooling"),
-    ("primary_incomplete", "Some primary school"),
-    ("primary", "Completed primary school"),
-    ("secondary_incomplete", "Some secondary school (e.g. finished middle school / lower secondary)"),
-    ("secondary", "Completed secondary school (high school diploma or equivalent)"),
-    ("tertiary_incomplete", "Some post-secondary education or university, without a degree"),
-    ("tertiary", "Completed a post-secondary qualification or university degree"),
+    ("below_primary", "No schooling, or didn't finish primary school"),
+    ("primary", "Primary school (about 5-6 years of school)"),
+    ("lower_secondary", "Lower secondary (middle school / junior high, about 8-9 years)"),
+    ("upper_secondary", "Upper secondary (high school diploma, A-levels, baccalaureate or a vocational upper-secondary certificate)"),
+    ("post_secondary", "Post-secondary non-tertiary (a vocational certificate after high school, under 2 years)"),
+    ("short_tertiary", "Short-cycle tertiary (associate degree, college diploma, about 2-3 years)"),
+    ("bachelor", "Bachelor's degree or equivalent"),
+    ("master", "Master's degree or equivalent (including long first degrees such as medicine or law in many countries)"),
+    ("doctoral", "Doctorate (PhD or equivalent)"),
 ]
+
+AGE_OPTIONS = [("15-24", "15-24"), ("25-34", "25-34"), ("35-44", "35-44"), ("45-54", "45-54"),
+               ("55-64", "55-64"), ("65plus", "65 or older")]
+
+# ILO status in employment (ICSE-93), main job.
+WORK_OPTIONS = [
+    ("employee", "Employee: I work for wages or a salary"),
+    ("employer", "Employer: I run a business or farm and employ paid workers"),
+    ("own_account", "Own-account worker: I work for myself (business, farm, gig work) without employees"),
+    ("family_worker", "Contributing family worker: I help in a family business or farm without regular pay"),
+    ("unemployed", "Not working, and looking for work"),
+    ("student", "Student"),
+    ("retired", "Retired"),
+    ("home", "Looking after home or family"),
+    ("other", "Other, or unable to work"),
+]
+EMPLOYED = ("employee", "employer", "own_account", "family_worker")
+VULNERABLE = ("own_account", "family_worker")
+
+SECTOR_OPTIONS = [
+    ("agriculture", "Agriculture, forestry or fishing"),
+    ("industry", "Industry: manufacturing, construction, mining, electricity, gas or water"),
+    ("services", "Services: trade, transport, hotels, finance, public administration, education, health, other services"),
+]
+
+# Global MPI: housing is deprived if any of floor, roof or walls is made of natural
+# or rudimentary materials.
+HOUSING_OPTIONS = [
+    ("floor", "The floor is earth, sand, dung or rough wood planks"),
+    ("roof", "The roof is thatch, palm leaf, sod, plastic sheeting or rough wood"),
+    ("walls", "The walls are mud, cane, palm, bamboo, stone with mud, cardboard or unfinished wood"),
+    ("none", "None of these: floor, roof and walls are finished materials (concrete, tiles, brick, metal sheet, etc.)"),
+]
+
+# Global MPI assets: deprived if the household owns at most one SMALL asset and no car or truck.
+ASSET_OPTIONS = [
+    ("radio", "Radio"),
+    ("tv", "Television"),
+    ("phone", "Telephone (mobile or landline)"),
+    ("computer", "Computer, laptop or tablet"),
+    ("animal_cart", "Animal cart"),
+    ("bicycle", "Bicycle"),
+    ("motorbike", "Motorbike or scooter"),
+    ("fridge", "Refrigerator"),
+    ("car", "Car or truck"),
+    ("none", "None of these"),
+]
+SMALL_ASSETS = ("radio", "tv", "phone", "computer", "animal_cart", "bicycle", "motorbike", "fridge")
+
+OPTIONAL_YES_NO = [("yes", "Yes"), ("no", "No"), ("skip", "Prefer not to say")]
 
 WEALTH_OPTIONS = [
     ("under_10k", "Less than US$10,000"),
@@ -101,6 +154,39 @@ SECTIONS = [
                 "source": "wdi",
                 "basis": "World Bank list of economies (217). Used to convert your income with "
                          "your country's consumer price index and purchasing-power-parity factor.",
+            },
+        ],
+    },
+    {
+        "key": "about",
+        "title": "About you",
+        "intro": "Optional, but they make the comparisons fairer: younger people are usually more "
+                 "educated, and services differ a lot between cities and the countryside.",
+        "questions": [
+            {
+                "id": "area",
+                "type": "radio",
+                "text": "Do you live in a city or town, or in a rural area?",
+                "options": [("urban", "City or town"), ("rural", "Rural area or village")],
+                "source": "wdi",
+                "basis": "Urban/rural split used by the World Bank and WHO/UNICEF JMP for service access "
+                         "(national definitions of urban areas).",
+            },
+            {
+                "id": "age",
+                "type": "radio",
+                "text": "How old are you?",
+                "options": AGE_OPTIONS,
+                "source": "barro_lee",
+                "basis": "Barro-Lee 10-year age groups, used to compare your education with people your age.",
+            },
+            {
+                "id": "sex",
+                "type": "radio",
+                "text": "What is your sex?",
+                "options": [("F", "Female"), ("M", "Male"), ("skip", "Prefer not to say")],
+                "source": "barro_lee",
+                "basis": "Barro-Lee reports attainment separately for women and men.",
             },
         ],
     },
@@ -177,9 +263,35 @@ SECTIONS = [
                 "text": "What is the highest level of education you have completed?",
                 "options": EDUCATION_OPTIONS,
                 "required": True,
-                "source": "barro_lee",
-                "basis": "The seven attainment categories of the Barro-Lee dataset (ISCED-based), "
-                         "for adults aged 25-64.",
+                "source": "uis_attainment",
+                "basis": "The nine ISCED 2011 attainment levels that UNESCO reports for adults 25+ "
+                         "(World Bank indicators SE.PRM.CUAT.ZS to SE.TER.CUAT.DO.ZS).",
+            },
+        ],
+    },
+    {
+        "key": "work",
+        "title": "Work",
+        "intro": "Occupation is the third classic pillar of socioeconomic status. These questions use "
+                 "the International Labour Organization's categories.",
+        "questions": [
+            {
+                "id": "work_status",
+                "type": "radio",
+                "text": "Which best describes your main activity now?",
+                "options": WORK_OPTIONS,
+                "source": "ilo_wdi",
+                "basis": "ILO International Classification of Status in Employment (ICSE-93), as used in "
+                         "the ILO modelled estimates of employment by status.",
+            },
+            {
+                "id": "work_sector",
+                "type": "radio",
+                "text": "In which sector is your main job?",
+                "options": SECTOR_OPTIONS,
+                "show_if": ("work_status", "|".join(EMPLOYED)),
+                "source": "ilo_wdi",
+                "basis": "ILO broad economic sectors (ISIC Rev.4 aggregates).",
             },
         ],
     },
@@ -251,6 +363,80 @@ SECTIONS = [
                 "source": "uhc_2025",
                 "basis": "Simplified version of SDG 3.8.2, financial hardship due to out-of-pocket "
                          "health spending.",
+            },
+        ],
+    },
+    {
+        "key": "household",
+        "title": "Household conditions",
+        "intro": "These follow the indicators of the UN's Global Multidimensional Poverty Index, "
+                 "which counts deprivations in health, education and living standards together.",
+        "questions": [
+            {
+                "id": "housing",
+                "type": "checkbox",
+                "text": "Which of these describe your home? Tick all that apply.",
+                "options": HOUSING_OPTIONS,
+                "source": "ophi_mpi",
+                "basis": "Global MPI housing indicator: deprived if the floor, roof or walls are made of "
+                         "natural or rudimentary materials.",
+            },
+            {
+                "id": "assets",
+                "type": "checkbox",
+                "text": "Which of these does your household own? Tick all that apply.",
+                "options": ASSET_OPTIONS,
+                "source": "ophi_mpi",
+                "basis": "Global MPI assets indicator: deprived if the household owns no more than one of "
+                         "radio, TV, telephone, computer, animal cart, bicycle, motorbike or refrigerator, "
+                         "and no car or truck.",
+            },
+            {
+                "id": "sleeping_rooms",
+                "type": "number",
+                "text": "How many rooms in your home are used for sleeping?",
+                "source": "un_habitat",
+                "basis": "UN-Habitat (SDG 11.1.1): a home is overcrowded when more than three people share "
+                         "a habitable room. Shown as context; uses your household size.",
+            },
+            {
+                "id": "household_schooling",
+                "type": "radio",
+                "text": "Has anyone in your household aged 10 or older completed six years of school?",
+                "options": YES_NO,
+                "show_if": ("education", "below_primary"),
+                "source": "ophi_mpi",
+                "basis": "Global MPI years-of-schooling indicator. (If you completed primary school, this "
+                         "is already true.)",
+            },
+            {
+                "id": "school_attendance",
+                "type": "radio",
+                "text": "Is any child of school age (roughly 6 to 14) in your household not attending school?",
+                "options": [("yes", "Yes"), ("no", "No"), ("na", "No school-age children in the household")],
+                "source": "ophi_mpi",
+                "basis": "Global MPI school-attendance indicator (any child not attending up to the age "
+                         "of completing class 8).",
+            },
+            {
+                "id": "nutrition",
+                "type": "radio",
+                "text": "Has a doctor, nurse or health worker said that anyone in your household is "
+                        "undernourished - for example a child who is underweight or too short for their age?",
+                "options": OPTIONAL_YES_NO,
+                "source": "ophi_mpi",
+                "basis": "Self-reported stand-in for the Global MPI nutrition indicator, which surveys "
+                         "measure with height and weight.",
+            },
+            {
+                "id": "child_death",
+                "type": "radio",
+                "text": "Optional, and we're sorry to ask: in the last five years, has a child under 18 in "
+                        "your household died?",
+                "options": OPTIONAL_YES_NO,
+                "source": "ophi_mpi",
+                "basis": "Global MPI child-mortality indicator. Skip it if you prefer: the index is then "
+                         "re-weighted over the other indicators, as the MPI does for missing data.",
             },
         ],
     },

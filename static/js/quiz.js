@@ -11,13 +11,17 @@
     const progress = document.getElementById("progress");
     const country = document.getElementById("country");
     const currencyLabel = document.getElementById("currency-label");
+    const localCurrency = currencyLabel.textContent;
     const unavailable = document.getElementById("exact-unavailable");
     const summary = document.getElementById("error-summary");
     let current = 0;
 
     function answers() {
         const out = {};
-        for (const [k, v] of new FormData(form).entries()) out[k] = v;
+        for (const [k, v] of new FormData(form).entries()) {
+            // Checkbox groups are sent as one comma-separated value.
+            out[k] = k in out ? `${out[k]},${v}` : v;
+        }
         // Drop answers to questions hidden by a show_if condition.
         form.querySelectorAll("[data-show-if]").forEach(el => {
             if (el.hidden) el.querySelectorAll("[name]").forEach(i => delete out[i.name]);
@@ -33,7 +37,7 @@
         form.querySelectorAll("[data-show-if]").forEach(el => {
             const [name, expected] = el.dataset.showIf.split("=");
             const checked = form.querySelector(`input[name="${name}"]:checked`);
-            el.hidden = !checked || checked.value !== expected;
+            el.hidden = !checked || !expected.split("|").includes(checked.value);
         });
     }
 
@@ -41,7 +45,7 @@
         const opt = country.selectedOptions[0];
         if (!opt || !opt.value) return;
         currencyLabel.textContent = opt.dataset.currency
-            ? `${opt.dataset.currency} (${opt.dataset.currencyName})` : "local currency";
+            ? `${opt.dataset.currency} (${opt.dataset.currencyName})` : localCurrency;
         const exact = form.querySelector('input[name="income_mode"][value="exact"]');
         const band = form.querySelector('input[name="income_mode"][value="band"]');
         const allowed = opt.dataset.exact === "yes";
@@ -88,7 +92,16 @@
         if (!showErrors(validationErrors(), steps[current])) show(current + 1);
     });
     back.addEventListener("click", () => show(current - 1));
-    form.addEventListener("change", updateConditional);
+    form.addEventListener("change", e => {
+        // "None of these" excludes the other boxes in its group, and vice versa.
+        const t = e.target;
+        if (t.type === "checkbox" && t.checked) {
+            form.querySelectorAll(`input[name="${t.name}"]`).forEach(other => {
+                if (other !== t && (t.value === "none" || other.value === "none")) other.checked = false;
+            });
+        }
+        updateConditional();
+    });
     country.addEventListener("change", updateCountry);
     form.addEventListener("keydown", e => {
         if (e.key === "Enter" && e.target.tagName === "INPUT" && current < steps.length - 1) {

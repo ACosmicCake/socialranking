@@ -56,10 +56,42 @@ def test_national_distributions_are_consistent():
 
 def test_education_shares_sum_to_one():
     edu = data.global_data()["education"]
+    assert len(edu["world_shares"]) == 9
     assert math.isclose(sum(edu["world_shares"]), 1, abs_tol=1e-3)
+    assert edu["population_25_plus_covered"] / edu["population_25_plus_world"] > 0.95
     for c in data.countries():
         if "education" in c:
             assert math.isclose(sum(c["education"]["shares"]), 1, abs_tol=1e-3), c["iso3"]
+            assert min(c["education"]["shares"]) >= 0, c["iso3"]
+    for group in edu["groups"].values():
+        for shares in group.values():
+            assert math.isclose(sum(shares), 1, abs_tol=2e-3)
+
+
+def test_regional_mixtures_match_pip_regions():
+    """Our population-weighted regional mixtures should reproduce PIP's regional
+    headcounts at $3.00 (where WDI and PIP use the same region codes)."""
+    regions = data.global_data()["income"]["pip_regions"]
+    by_region = {}
+    for c in data.countries():
+        if c.get("income") and c.get("region"):
+            by_region.setdefault(c["region"], []).append(c)
+    checked = 0
+    for code, official in regions.items():
+        if code not in by_region:
+            continue
+        members = by_region[code]
+        share = sum(c["population"] * national_cdf(c["income"], 3.0) for c in members) / \
+            sum(c["population"] for c in members)
+        assert abs(share - official["share_below_3"]) < 0.02, (code, share, official["share_below_3"])
+        checked += 1
+    assert checked >= 6
+
+
+def test_history_and_nowcast():
+    history = data.global_data()["income"]["history"]
+    assert {"1990", "2024", "2026"} <= set(history)
+    assert history["1990"]["share_below_3"] > history["2024"]["share_below_3"]
 
 
 def test_price_data_is_sane():

@@ -173,3 +173,96 @@ main {
     white-space: pre-wrap;
 }
 
+
+/* Results: section navigation and comparisons */
+.result-nav {
+    background: rgba(11, 11, 13, 0.92);
+    backdrop-filter: blur(6px);
+    top: 56px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1010;
+}
+
+.result-section {
+    scroll-margin-top: 120px;
+}
+
+.meter-country {
+    height: 0.35rem;
+    margin-top: 0.2rem;
+}
+
+.meter-country .meter-fill {
+    background: #fbbf24;
+}
+
+.legend-world {
+    color: #7dd3fc;
+}
+
+.legend-country {
+    color: #fbbf24;
+}
+
+.chart-small {
+    height: 240px;
+}
+
+.table tr.you td {
+    background: rgba(125, 211, 252, 0.12);
+}
+
+.table .bar,
+.country-table .bar {
+    display: inline-block;
+    height: 0.55rem;
+    background: var(--accent);
+    vertical-align: middle;
+    margin-right: 0.4rem;
+    max-width: 90%;
+}
+
+.map-box {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.map-box svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.map-box path.country:hover {
+    opacity: 0.8;
+}
+
+.map-legend {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.4rem;
+}
+
+.map-scale {
+    display: inline-block;
+    width: 200px;
+    height: 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.map-tip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+details > summary {
+    cursor: pointer;
+    color: #8ecae6;
+}
