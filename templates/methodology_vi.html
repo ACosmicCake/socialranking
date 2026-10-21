@@ -1,0 +1,71 @@
+{# Vietnamese summary of the methodology; the full English version follows the same order. #}
+{% set inc = g.income %}
+<section class="container page-section prose">
+    <h1>Phương pháp</h1>
+    <p class="lead">Tóm tắt cách tính từng con số trên trang kết quả, số liệu lấy từ đâu và còn giới hạn gì. Mọi chi tiết, công
+        thức và kiểm định nằm trong <a href="{{ asset_base }}methodology.html">bản đầy đủ (tiếng Anh)</a>.</p>
+
+    <h2 id="principles">Nguyên tắc</h2>
+    <ul>
+        <li>Mọi so sánh đều dùng số liệu công bố chính thức (Ngân hàng Thế giới, các tổ chức Liên Hợp Quốc, IMF, ILO, Gallup, UBS),
+            và mọi con số đều dẫn tới nguồn.</li>
+        <li>Mỗi khía cạnh là một <strong>bách phân vị</strong>: tỷ lệ người kém hơn bạn, người cùng nhóm với bạn được tính một nửa.</li>
+        <li>Mọi phép tính chạy trong trình duyệt của bạn; câu trả lời không được gửi đi đâu.</li>
+    </ul>
+
+    <h2 id="income">1. Thu nhập</h2>
+    <p>Thu nhập (hoặc chi tiêu) của hộ được chia cho số người trong hộ và tính theo ngày, rồi quy về giá năm 2021 bằng lạm phát của
+        nước bạn (IMF) và quy sang đô la quốc tế bằng hệ số sức mua tương đương (PPP) năm 2021 {{ cite("imf_weo") }} {{ cite("pip") }}.
+        Kết quả được đặt vào phân phối thu nhập của nước bạn và của thế giới năm {{ inc.reference_year }} từ Nền tảng Nghèo đói và
+        Bất bình đẳng (PIP) của Ngân hàng Thế giới. Phân phối thế giới ghép {{ coverage.income }} phân phối quốc gia và được hiệu
+        chỉnh để khớp số liệu chính thức. Bạn cũng thấy thứ hạng nếu thu nhập thấp hơn hoặc cao hơn 20%, mức thu nhập cần để đạt
+        trung vị, nhóm 10% và 1% cao nhất, và chi phí một chế độ ăn lành mạnh ở nước bạn {{ cite("fpn") }} (không vừa khả năng
+        nếu vượt {{ (g.healthy_diet.income_share * 100) | pct(0) }} thu nhập).</p>
+    <p class="small text-secondary">Giới hạn: khảo sát hộ gia đình bỏ sót người rất giàu; nhiều nước (kể cả Việt Nam) đo chi tiêu
+        chứ không phải thu nhập.</p>
+
+    <h2 id="education">2. Học vấn</h2>
+    <p>Chín bậc học theo ISCED 2011 được so với trình độ của người từ 25 tuổi trên thế giới và ở nước bạn (UNESCO, qua Ngân hàng
+        Thế giới) {{ cite("uis_attainment") }}, và với người cùng tuổi, cùng giới (Barro-Lee) {{ cite("barro_lee") }}. Học vấn của
+        bố mẹ được so với thế hệ của họ ở tuổi 35-44, để đo mức dịch chuyển xã hội của bạn (không tính điểm).</p>
+
+    <h2 id="work">3. Công việc</h2>
+    <p>Vị thế việc làm theo ILO (người làm công, chủ, tự làm, lao động gia đình) được xếp theo việc làm dễ tổn thương
+        {{ cite("ilo_wdi") }}. Nếu bạn chọn nhóm nghề ISCO-08, thứ hạng theo trình độ kỹ năng của nghề (so với khảo sát của
+        {{ g.occupation.economies }} nền kinh tế) {{ cite("join") }} được lấy trung bình với vị thế việc làm.</p>
+
+    <h2 id="living">4. Mức sống</h2>
+    <p>Điện, nhiên liệu nấu sạch, nước, vệ sinh, rửa tay, Internet và chi phí y tế theo định nghĩa của các mục tiêu phát triển bền
+        vững (SDG), so với tỷ lệ của thế giới, khu vực, nước bạn, thành thị hoặc nông thôn. Các câu về nhà ở và tài sản tính
+        <strong>chỉ số nghèo đa chiều</strong> (MPI) theo trọng số của OPHI và UNDP {{ cite("ophi_mpi") }}.</p>
+
+    <h2 id="security">5. An ninh tài chính</h2>
+    <p>Ba phần được lấy trung bình: nhóm dễ tổn thương về nhu cầu cơ bản của Gallup {{ cite("gallup_2020") }}, thang đo mất an
+        ninh lương thực FIES của FAO {{ cite("fies") }}, và khả năng xoay tiền khẩn cấp trong 30 ngày của Global Findex
+        {{ cite("findex_2025") }}. Tài khoản, tiết kiệm, nguồn tiền khẩn cấp, nỗi lo tài chính và các chương trình an sinh xã hội
+        {{ cite("aspire") }} chỉ để tham khảo.</p>
+
+    <h2 id="wealth">6. Tài sản (không bắt buộc)</h2>
+    <p>Tài sản ròng được đặt vào kim tự tháp tài sản toàn cầu của UBS {{ cite("ubs_2026") }}. Chỉ có bốn nhóm, nên kết quả là
+        một khoảng rộng.</p>
+
+    <h2 id="index">7. Chỉ số SES</h2>
+    <p>Chỉ số SES là trung bình cộng các bách phân vị thế giới bạn đã trả lời: thu nhập, học vấn, công việc, mức sống, an ninh
+        tài chính và (nếu có) tài sản. Trung bình các bách phân vị <em>không</em> phải là một bách phân vị, vì không có bộ số liệu
+        nào đo tất cả các khía cạnh này cho cùng một người. Hãy đọc nó như một bản tóm tắt; bách phân vị thu nhập là con số được
+        đo tốt nhất.</p>
+
+    <h2 id="ladder">8. Tự đánh giá</h2>
+    <p>Chiếc thang MacArthur {{ cite("macarthur") }} không được tính điểm; nó được đặt cạnh bậc đo được để cho thấy khoảng cách
+        giữa cách bạn tự nhìn nhận và số liệu.</p>
+
+    <h2 id="coverage">Phạm vi số liệu</h2>
+    <ul>
+        <li>{{ coverage.economies }} nền kinh tế; {{ coverage.income }} có phân phối thu nhập quốc gia; {{ coverage.exact }} nhận
+            thu nhập chính xác bằng nội tệ.</li>
+        <li>{{ coverage.education }} có số liệu học vấn; {{ coverage.findex }} có số liệu Global Findex; {{ coverage.healthy_diet }}
+            có chi phí chế độ ăn lành mạnh; {{ coverage.occupation }} có khảo sát nghề nghiệp dùng được.</li>
+        <li>{{ coverage.wdi_indicators }} chỉ số của Ngân hàng Thế giới cho mỗi nước. Số liệu được xây dựng ngày {{ g.built }}.</li>
+    </ul>
+    <p>Các công thức, kiểm định và cách tái tạo số liệu: <a href="{{ asset_base }}methodology.html">bản đầy đủ (tiếng Anh)</a>.</p>
+</section>

@@ -141,7 +141,7 @@
                 <h3 class="h5">${tr("SES index", "Chỉ số SES")}: ${fixed(r.ses_index, 1)} / 100</h3>
                 <p class="mb-0 small text-secondary">${tr(
                     `The average of the ${r.dimensions.length} world scores above, weighted equally. It summarises your position but isn't itself a percentile: no dataset records all of these dimensions for the same people. See the <a href="${assetBase}methodology.html#index">methodology</a>.`,
-                    `Trung bình của ${r.dimensions.length} điểm thế giới ở trên, trọng số bằng nhau. Nó tóm tắt vị trí của bạn nhưng bản thân không phải là một bách phân vị: không có bộ dữ liệu nào ghi nhận tất cả các khía cạnh này cho cùng một người. Xem <a href="${assetBase}methodology.html#index">phương pháp</a> (tiếng Anh).`)}</p>
+                    `Trung bình của ${r.dimensions.length} điểm thế giới ở trên, trọng số bằng nhau. Nó tóm tắt vị trí của bạn nhưng bản thân không phải là một bách phân vị: không có bộ dữ liệu nào ghi nhận tất cả các khía cạnh này cho cùng một người. Xem <a href="${base}methodology.html#index">phương pháp</a>.`)}</p>
             </div></div>
         </div>
         <div class="col-lg-5">
@@ -675,7 +675,7 @@
 
     html.push(`<hr class="my-5"><div class="text-center d-flex flex-wrap gap-2 justify-content-center">
         <a class="btn btn-light" href="${base}quiz.html" id="edit-answers">${tr("Change my answers", "Sửa câu trả lời")}</a>
-        <a class="btn btn-outline-light" href="${assetBase}methodology.html">${tr("How this was calculated", "Cách tính (tiếng Anh)")}</a>
+        <a class="btn btn-outline-light" href="${base}methodology.html">${tr("How this was calculated", "Cách tính")}</a>
     </div></div>`);
     root.innerHTML = html.join("\n");
     html.length = 0;

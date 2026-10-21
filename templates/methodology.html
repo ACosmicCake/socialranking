@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 {% from "macros.html" import cite with context %}
-{% block title %}Methodology{% endblock %}
+{% block title %}{{ _("Methodology") }}{% endblock %}
 {% block main %}
+{% if lang == "vi" %}{% include "methodology_vi.html" %}{% else %}
 {% set inc = g.income %}
 <section class="container page-section prose">
     <h1>Methodology</h1>
@@ -394,9 +395,10 @@
         <code>ses/facts.py</code>. <code>scripts/build_site.py</code> renders this static site, and the scoring runs in your browser
         (<code>static/js/ses.js</code>), so your answers never leave your device.</p>
 </section>
+{% endif %}
 {% endblock %}
 
-{% block scripts %}
+{% block scripts %}{% if lang != "vi" %}
 <script src="{{ asset_base }}static/js/data.js"></script>
 <script src="{{ asset_base }}static/js/ses.js"></script>
 <script>
@@ -417,4 +419,4 @@
     });
 })();
 </script>
-{% endblock %}
+{% endif %}{% endblock %}
