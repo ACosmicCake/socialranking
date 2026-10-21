@@ -443,3 +443,9 @@ test("the same living standard in another currency", () => {
     assert.ok(us.amount > 1000 && us.amount < 20000 && us.national_pct < inc.national_pct);
     assert.equal(SES.equivalentIncome("ZWE", inc.ppp_per_day, 4, "month", TODAY), null);  // no reliable prices
 });
+
+test("inequality and national poverty in the country overview", () => {
+    const g = Object.fromEntries(run(FULL).location.glance.map(x => [x.code, x.value]));
+    assert.ok(g["SI.DST.10TH.10"] > g["SI.DST.FRST.20"]);
+    assert.ok(g["SI.POV.NAHC"] >= 0 && g["SI.POV.NAHC"] <= 100);
+});
