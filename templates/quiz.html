@@ -69,7 +69,8 @@
     <div class="quiz-header">
         <div class="d-flex justify-content-between small text-secondary mb-1">
             <span id="step-label" data-template="{{ _('Step {n} of {total}') }}"></span>
-            <span id="answered-label" data-template="{{ _('{n} questions answered') }}"></span>
+            <span><span id="answered-label" data-template="{{ _('{n} questions answered') }}"></span>
+                <span id="time-left" data-template="{{ _('about {n} min left') }}" data-done="{{ _('almost done') }}"></span></span>
         </div>
         <div class="progress mb-2" role="progressbar" aria-label="{{ _('Quiz progress') }}">
             <div class="progress-bar" id="progress" style="width: 0%"></div>
