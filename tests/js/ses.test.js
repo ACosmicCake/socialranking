@@ -500,3 +500,16 @@ test("plausible ranges for each dimension and the SES index", () => {
     // Exact incomes use the +/-20% sensitivity.
     assert.deepEqual(r.dimensions.find(d => d.key === "income").range, r.income.sensitivity.global);
 });
+
+test("the slim quiz bundle validates exactly like the full one", () => {
+    const QUIZ = load("data.quiz.js");
+    for (const answers of [FULL, MINIMAL, {...FULL, income_amount: ""}, {...FULL, country: "ZWE"}, {...FULL, education: ""},
+                           {...FULL, social_protection: "none,in_kind"}, {...FULL, sleeping_rooms: "0"}]) {
+        const outcome = S => { try { return S.parseAnswers(answers); } catch (e) { return e.errors; } };
+        assert.deepEqual(outcome(QUIZ), outcome(SES));
+    }
+    assert.deepEqual(QUIZ.emergencyAmount("VNM", TODAY), SES.emergencyAmount("VNM", TODAY));
+    assert.equal(QUIZ.exactIncomeAvailable(QUIZ.country("ZWE")), SES.exactIncomeAvailable(SES.country("ZWE")));
+    const VIQ = load("data.quiz.vi.js");
+    assert.throws(() => VIQ.parseAnswers({...FULL, education: ""}), e => /trình độ/.test(e.errors.education));
+});

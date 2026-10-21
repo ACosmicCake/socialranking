@@ -183,6 +183,10 @@ const SES = require("./static/js/ses.js")(data);   // data = the SES_DATA object
 SES.score(SES.parseAnswers({country: "VNM", income_mode: "band", income_band: "b4", education: "secondary"}));
 ```
 
+The build writes two bundles per language: `data.js` (everything, about 300 KB compressed) for the results page, and
+`data.quiz.js` (questions, labels, and each country's currency, prices and Findex emergency amount, about 16 KB) for the
+quiz, which only validates answers.
+
 Field names and options are listed on the questionnaire page and in `ses/questionnaire.py`.
 
 ## Project layout

@@ -261,15 +261,40 @@ def page_context(lang="en"):
     }
 
 
+def quiz_data(full):
+    """The slice of the browser bundle the quiz needs: questions, labels, and per country the
+    name, currency, prices and Findex emergency amount (for validation and the live amount)."""
+    keep = ("iso3", "name", "currency", "currency_name", "prices")
+    countries = []
+    for c in full["countries"]:
+        entry = {k: c[k] for k in keep if k in c}
+        amount = c.get("findex", {}).get("emergency_amount")
+        if amount:
+            entry["findex"] = {"emergency_amount": amount}
+        countries.append(entry)
+    slim = {
+        "lang": full["lang"],
+        "countries": countries,
+        "global": {"aggregates": {"WLD": {"wdi": {}}}, "prices": full["global"]["prices"]},
+        "facts": {},
+        "questionnaire": full["questionnaire"],
+    }
+    if "labels" in full:
+        slim["labels"] = full["labels"]
+    return slim
+
+
 def build(out_dir, base_path=""):
     out_dir = Path(out_dir)
     if out_dir.exists():
         shutil.rmtree(out_dir)
     shutil.copytree(ROOT / "static", out_dir / "static")
-    for lang, name in (("en", "data.js"), ("vi", "data.vi.js")):
-        (out_dir / "static" / "js" / name).write_text(
-            "window.SES_DATA = " + json.dumps(browser_data(lang), ensure_ascii=False, separators=(",", ":")) + ";\n",
-            encoding="utf-8")
+    for lang, suffix in (("en", ""), ("vi", ".vi")):
+        full = browser_data(lang)
+        for name, bundle in ((f"data{suffix}.js", full), (f"data.quiz{suffix}.js", quiz_data(full))):
+            (out_dir / "static" / "js" / name).write_text(
+                "window.SES_DATA = " + json.dumps(bundle, ensure_ascii=False, separators=(",", ":")) + ";\n",
+                encoding="utf-8")
 
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True)
     env.filters.update(pct=pct, people=people, money=money, num=num)
