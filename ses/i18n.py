@@ -221,6 +221,19 @@ QUESTIONS = {
     "account": {"text": "Bạn (tự mình hoặc cùng người khác) có tài khoản ở ngân hàng hoặc tổ chức tài chính khác, hoặc "
                         "dùng dịch vụ tiền di động không?"},
     "saved": {"text": "Trong 12 tháng qua, bạn có tự để dành được khoản tiền nào không, bằng bất kỳ cách nào?"},
+    "social_protection": {
+        "text": "Trong 12 tháng qua, bạn hoặc ai trong hộ có nhận khoản nào sau đây không? Chọn tất cả phù hợp.",
+        "help": "Chỉ tính các chương trình của nhà nước, không tính bảo hiểm tư nhân hay giúp đỡ từ gia đình.",
+        "options": {
+            "contributory_pension": "Lương hưu tuổi già, tử tuất hoặc mất sức lao động từ quỹ có đóng góp",
+            "insurance_benefit": "Trợ cấp thất nghiệp, ốm đau, thai sản hoặc tai nạn lao động",
+            "cash_transfer": "Trợ cấp tiền mặt của nhà nước, trợ cấp trẻ em hoặc gia đình, hoặc trợ cấp hưu trí xã hội "
+                             "không cần đóng góp",
+            "in_kind": "Hỗ trợ lương thực, bữa ăn ở trường, miễn giảm học phí, viện phí hoặc hỗ trợ hiện vật khác",
+            "labour_market": "Việc làm công ích, đào tạo nghề hoặc hỗ trợ tìm việc",
+            "none": "Không có khoản nào",
+        },
+    },
     "wealth": {"text": "Tài sản ròng của cá nhân bạn khoảng bao nhiêu, tính bằng đô la Mỹ?",
                "help": "Tiền tiết kiệm, đầu tư, lương hưu, bất động sản và xe cộ, trừ đi mọi khoản nợ (thế chấp, vay, "
                        "thẻ tín dụng). Nếu bạn chung tài chính với vợ/chồng, dùng một nửa tài sản ròng chung. Quy đổi "
@@ -260,6 +273,10 @@ LABELS = {
         "SH.XPD.OOPC.CH.ZS": "Chi y tế tự chi trả",
         "EN.POP.SLUM.UR.ZS": "Cư dân đô thị sống ở khu ổ chuột",
         "SI.POV.GINI": "Bất bình đẳng (hệ số Gini, 0-100)",
+        "HD.HCI.OVRL": "Chỉ số Vốn nhân lực (0-1)",
+        "SE.LPV.PRIM": "Trẻ 10 tuổi chưa đọc hiểu được đoạn văn đơn giản",
+        "IT.CEL.SETS.P2": "Thuê bao di động trên 100 dân",
+        "SH.XPD.CHEX.PC.CD": "Chi tiêu y tế bình quân đầu người (đô la Mỹ)",
         "SP.DYN.LE00.FE.IN": "Tuổi thọ trung bình của nữ (năm)",
         "SP.DYN.LE00.MA.IN": "Tuổi thọ trung bình của nam (năm)",
     },

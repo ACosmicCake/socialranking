@@ -132,6 +132,7 @@ def browser_data(lang="en"):
         "employed": list(qn.EMPLOYED),
         "vulnerable": list(qn.VULNERABLE),
         "small_assets": list(qn.SMALL_ASSETS),
+        "social_protection_types": qn.SOCIAL_PROTECTION_TYPES,
     }
     labels = None
     if lang == "vi":
@@ -189,6 +190,7 @@ def browser_data(lang="en"):
             "citations": facts.CITATIONS,
             "mpi": facts.MPI,
             "extreme_poverty": facts.EXTREME_POVERTY,
+            "social_protection": facts.SOCIAL_PROTECTION,
         },
         "questionnaire": q,
     }
@@ -224,6 +226,8 @@ def page_context(lang="en"):
             "education": sum("education" in c for c in countries),
             "gdp": sum("gdp_per_capita_usd" in c for c in countries),
             "wdi_indicators": len(g["wdi_indicators"]),
+            "social_protection": sum("per_allsp.cov_pop_tot" in c.get("wdi", {}) or "per_sa_allsa.cov_pop_tot" in c.get("wdi", {})
+                                     for c in countries),
         },
         "quantiles": [{"p": p, "world": global_quantile(p / 100)} for p in (10, 25, 50, 75, 90, 99)],
         "band_rows": [
@@ -239,6 +243,7 @@ def page_context(lang="en"):
         "findex": facts.FINDEX,
         "poverty": facts.EXTREME_POVERTY,
         "mpi": facts.MPI,
+        "social_protection": facts.SOCIAL_PROTECTION,
         "citations": facts.CITATIONS,
         "work_options": qn.WORK_OPTIONS,
     }
