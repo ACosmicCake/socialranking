@@ -151,6 +151,9 @@ WDI_INDICATORS = {
     "SE.ADT.LITR.ZS": "Adult literacy rate (15+)",
     "EN.POP.SLUM.UR.ZS": "Urban population living in slums",
     "SI.POV.GINI": "Gini index (latest survey)",
+    "SI.DST.10TH.10": "Income share held by highest 10%",
+    "SI.DST.FRST.20": "Income share held by lowest 20%",
+    "SI.POV.NAHC": "Poverty headcount ratio at national poverty lines (% of population)",
     # by sex
     "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
     "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
