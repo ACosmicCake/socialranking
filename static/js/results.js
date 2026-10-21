@@ -258,6 +258,17 @@
         <input type="range" class="form-range" id="whatif" min="-4" max="4" step="0.25" value="0" aria-label="${tr("Income multiplier", "Hệ số thu nhập")}">
         <div class="d-flex flex-wrap justify-content-between small" id="whatif-out" aria-live="polite"></div>
     </div></div>
+    <h3 class="h5 mt-4">${tr("The same living standard elsewhere", "Cùng mức sống ở nơi khác")}</h3>
+    <p class="small text-secondary">${tr(
+        `Pick a country to see the ${inc.mode === "exact" ? `${answers.income_period === "year" ? "yearly" : "monthly"} income a household of ${answers.household_size}` : "monthly income per person"} would need there, in its own currency at today's prices, to live as you do, and where that would rank.`,
+        `Chọn một nước để xem ${inc.mode === "exact" ? `một hộ ${answers.household_size} người cần thu nhập ${answers.income_period === "year" ? "mỗi năm" : "mỗi tháng"}` : "mỗi người cần thu nhập mỗi tháng"} bao nhiêu ở đó, bằng nội tệ theo giá hiện nay, để sống như bạn, và mức đó xếp hạng ra sao.`)}</p>
+    <div class="d-flex flex-wrap gap-2 align-items-center">
+        <select class="form-select w-auto mw-100" id="elsewhere" aria-label="${tr("Country to compare", "Nước để so sánh")}">
+            ${D.countries.filter(c => SES.exactIncomeAvailable(c) && c.iso3 !== r.country.iso3)
+                .map(c => `<option value="${c.iso3}"${c.iso3 === (r.country.iso3 === "USA" ? "DEU" : "USA") ? " selected" : ""}>${esc(c.name)}</option>`).join("")}
+        </select>
+        <span id="elsewhere-out" aria-live="polite"></span>
+    </div>
     ${inc.mode === "exact" ? `<p class="small text-secondary mt-3">${tr("Prices", "Giá cả")}: ${tr(`${cname}'s consumer-price inflation since 2021`, `lạm phát giá tiêu dùng của ${cname} từ 2021`)}
         ${cite("imf_weo")}${inc.estimated_years.length || inc.extrapolated_years
             ? tr(` (the IMF has no figure for ${[...inc.estimated_years].join(", ") || "recent years"}, so we carried the latest rate forward)`,
@@ -722,6 +733,17 @@
             ${rank.national_pct !== null ? `<span>${cname}: <strong>${pct(rank.national_pct)}</strong></span>` : ""}`;
     }
     slider.addEventListener("input", updateWhatif);
+    const elsewhere = document.getElementById("elsewhere");
+    const updateElsewhere = () => {
+        const size = inc.mode === "exact" ? answers.household_size : 1;
+        const period = inc.mode === "exact" ? answers.income_period : "month";
+        const e = SES.equivalentIncome(elsewhere.value, inc.ppp_per_day, size, period);
+        document.getElementById("elsewhere-out").innerHTML = e ? tr(
+            `<strong>${fixed(e.amount, 0)} ${esc(e.currency || "")}</strong> ${period === "year" ? "a year" : "a month"}${e.national_pct !== null ? `, richer than <strong>${pct(e.national_pct)}</strong> of people in ${esc(e.name)}` : ""}.`,
+            `<strong>${fixed(e.amount, 0)} ${esc(e.currency || "")}</strong> ${period === "year" ? "mỗi năm" : "mỗi tháng"}${e.national_pct !== null ? `, khá giả hơn <strong>${pct(e.national_pct)}</strong> dân số ${esc(e.name)}` : ""}.`) : "";
+    };
+    elsewhere.addEventListener("change", updateElsewhere);
+    updateElsewhere();
     updateWhatif();
 
     // ---------------------------------------------------------------- copy link / image
