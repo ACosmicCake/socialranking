@@ -24,7 +24,7 @@ a cited report.
 | **Financial security** | Gallup World Poll basic-needs items; FAO Food Insecurity Experience Scale (8 items); Global Findex account, saving, emergency funds, months of expenses covered, source of emergency money, biggest worry | Gallup 2020; FAO food insecurity for the world and each country (WDI); SOFI 2026; Findex 2025 for 142 economies (World Bank API) | 2019-2025 |
 | **Social protection** (shown, not in the index) | Public programmes received, by ASPIRE type: social insurance, social assistance, labour market | World Bank ASPIRE coverage by country and income fifth (WDI); ILO World Social Protection Report 2024-26 | 2008-2023 |
 | **Wealth** (optional) | Net worth per adult in US$ | UBS Global Wealth Report 2026 wealth pyramid | 2025 |
-| **Your country** (context only) | Country | Income group, GDP, poverty rates and 20 WDI indicators (incl. Gini and income shares of the richest 10% and poorest 20%, national poverty rate, Human Capital Index by sex and its schooling components, learning poverty, mobile subscriptions, health spending) vs region and world | 2019-2025 |
+| **Your country** (context only) | Country | Income group, GDP, poverty rates and about 25 WDI indicators grouped by theme (Gini and income shares of the richest 10% and poorest 20%, national poverty rate, women's legal equality, life expectancy, literacy and internet use for your sex, Human Capital Index and its schooling components, learning poverty, health spending, PM2.5 air pollution, homicide rate) vs region and world | 2019-2025 |
 | **Social mobility** (not scored) | Mother's and father's education (4 broad levels) | Barro-Lee v3: each parent's birth cohort at ages 35-44 (1965-2015), by sex, world and 140+ countries | 1965-2015 |
 | **Self-placement** (not scored) | MacArthur Scale of Subjective Social Status, country and world ladders | Your measured rung | - |
 
@@ -48,14 +48,17 @@ The results page shows:
 - your country at a glance;
 - how your self-placement on the ladder compares with the data;
 - highlight cards at the top, a section bar that follows your scrolling, and a back-to-top button;
+- the dimensions still missing from your SES index, with a link to add them;
 - a shareable link (the native share sheet on phones), a downloadable summary image, your numbers as CSV or everything as
   JSON, and a print or save-as-PDF layout;
 - "Change my answers", which reopens the quiz pre-filled.
 
-The quiz shows your step and progress, lets you jump between visited sections, marks required questions, and saves your
+The quiz shows your step, progress and roughly how many minutes are left, lets you jump between visited sections, marks
+required questions, and saves your
 answers in your browser only (localStorage), so a reload or a closed tab resumes where you left off. The country question has
 an accent-insensitive search and suggests the country of your browser's locale. Every page has a skip link and visible
-keyboard focus, and fits a 360px phone screen in both languages.
+keyboard focus, and fits a 360px phone screen in both languages. The site can be added to a phone's home screen
+(web app manifest), and shared links show a preview card.
 
 Every figure links to its source. The [`/methodology`](templates/methodology.html) page documents each calculation and its
 limitations. The [`/questionnaire`](templates/questionnaire.html) page lists every question with its source instrument.
