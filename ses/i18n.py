@@ -16,6 +16,7 @@ UI = {
     "We restored your answers from your last visit. They're saved only in this browser.":
         "Chúng tôi đã khôi phục câu trả lời từ lần trước. Chúng chỉ được lưu trong trình duyệt này.",
     "Start over": "Làm lại từ đầu",
+    "Skip to content": "Bỏ qua đến nội dung",
     "Type to search the list": "Gõ để tìm trong danh sách",
     "Search countries": "Tìm quốc gia",
     "Use {country}?": "Chọn {country}?",

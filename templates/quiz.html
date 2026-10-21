@@ -54,7 +54,7 @@
     {% if q.id == "income_basis" %}<div class="small text-info mt-1" id="welfare-hint" hidden
         data-income="{{ _("This country's survey measures income.") }}"
         data-consumption="{{ _("This country's survey measures spending (consumption).") }}"></div>{% endif %}
-    <div class="invalid-feedback d-block" data-error-for="{{ q.id }}" hidden></div>
+    <div class="invalid-feedback d-block" data-error-for="{{ q.id }}" role="alert" hidden></div>
     <div class="source-note">{{ _("Based on:") }} {{ cite(q.source) }}</div>
 </div>
 {% endmacro %}

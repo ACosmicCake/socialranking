@@ -12,6 +12,7 @@
     <title>SES: {% block title %}{% endblock %}</title>
 </head>
 <body>
+<a class="skip-link" href="#main">{{ _("Skip to content") }}</a>
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="{{ base }}index.html">SES</a>
@@ -36,7 +37,7 @@
     </div>
 </nav>
 
-<main>
+<main id="main" tabindex="-1">
     {% block main %}{% endblock %}
 </main>
 
@@ -54,6 +55,13 @@
     const a = document.getElementById("lang-switch");
     if (a && window.location.hash) a.href = a.getAttribute("href") + window.location.hash;
 })();
+// The results page keeps answers in the URL fragment, so the skip link moves focus without changing it.
+document.querySelector(".skip-link").addEventListener("click", e => {
+    e.preventDefault();
+    const main = document.getElementById("main");
+    main.focus();
+    main.scrollIntoView();
+});
 </script>
 {% block scripts %}{% endblock %}
 </body>
