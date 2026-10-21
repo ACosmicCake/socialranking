@@ -87,6 +87,7 @@
                             somewhat_difficult: "Possible, but somewhat difficult", not_difficult: "Possible and not difficult at all"},
                 cover_expenses: {under_2_weeks: "Less than two weeks", one_month: "About one month",
                                  two_months: "About two months", over_2_months: "More than two months"},
+                phone: {none: "No mobile phone", basic: "Basic phone", smartphone: "Smartphone"},
                 emergency_source: {savings: "Savings", family: "Family or friends", work: "Work", borrowing: "Borrowing",
                                    sale_of_assets: "Selling something", other: "Other"},
                 worry: {old_age: "Money for old age", business: "Money for a business", medical: "Medical costs",
@@ -833,6 +834,7 @@
             const answered = items.filter(i => i.has !== null && i.has !== undefined);
             const result = {items, answered: answered.length, area: answers.area || null,
                             region_name: region ? region.name : null};
+            if (answers.phone && G.findex.phone) result.phone = findexRank("phone", answers.phone, country);
             if (!answered.length) return result;
             const have = answered.filter(i => i.has);
             return Object.assign(result, {
@@ -987,22 +989,26 @@
 
         // Global Findex 2025 resilience: emergency funds (scored), how long expenses could be covered,
         // the main source of emergency money and the biggest financial worry (context).
+        // Rank on an ordered Findex answer (worst first) among adults worldwide and in the country.
+        function findexRank(group, answer, country) {
+            const w = G.findex[group];
+            const fx = (country.findex || {})[group];
+            const idx = w.keys.indexOf(answer);
+            const r = {key: answer, label: L.findex[group][answer], world_shares: w.shares.map(pct),
+                       world_pct: pct(midrank(w.shares, idx)), share_below: midrank(w.shares, idx),
+                       band: band(w.shares, idx),
+                       world_economies: w.economies, labels: w.keys.map(k => L.findex[group][k])};
+            if (fx) {
+                Object.assign(r, {country_shares: fx.shares.map(pct), year: fx.year,
+                                  national_pct: pct(midrank(fx.shares, idx))});
+            }
+            return r;
+        }
+
         function scoreResilience(answers, country) {
             const out = {};
             const fx = country.findex || {};
-            const ordered = (group, answer) => {
-                const w = G.findex[group];
-                const idx = w.keys.indexOf(answer);
-                const r = {key: answer, label: L.findex[group][answer], world_shares: w.shares.map(pct),
-                           world_pct: pct(midrank(w.shares, idx)), share_below: midrank(w.shares, idx),
-                           band: band(w.shares, idx),
-                           world_economies: w.economies, labels: w.keys.map(k => L.findex[group][k])};
-                if (fx[group]) {
-                    Object.assign(r, {country_shares: fx[group].shares.map(pct), year: fx[group].year,
-                                      national_pct: pct(midrank(fx[group].shares, idx))});
-                }
-                return r;
-            };
+            const ordered = (group, answer) => findexRank(group, answer, country);
             const choice = (group, answer) => {
                 const w = G.findex[group];
                 const idx = w.keys.indexOf(answer);

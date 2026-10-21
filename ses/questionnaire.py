@@ -8,6 +8,9 @@ The quiz form, the /questionnaire page and the scorer all read from here.
 
 YES_NO = [("yes", "Yes"), ("no", "No")]
 
+PHONE_OPTIONS = [("smartphone", "Yes, a smartphone"), ("basic", "Yes, a basic phone (calls and text messages only)"),
+                 ("none", "No")]
+
 FIES_STEM = ("During the last 12 months, was there a time when, because of lack of "
              "money or other resources:")
 FIES_ITEMS = [
@@ -470,6 +473,15 @@ SECTIONS = [
                 "options": YES_NO,
                 "source": "itu_2025",
                 "basis": "ITU definition of an Internet user (SDG 17.8.1).",
+            },
+            {
+                "id": "phone",
+                "type": "radio",
+                "text": "Do you own a mobile phone? If you have more than one, think of the one you use most.",
+                "options": PHONE_OPTIONS,
+                "source": "findex_2025",
+                "basis": "Global Findex 2025 connectivity questions: owns a mobile phone, and whether the main "
+                         "phone is a smartphone. Shown as context; not scored.",
             },
             {
                 "id": "health_hardship",

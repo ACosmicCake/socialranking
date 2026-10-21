@@ -299,6 +299,11 @@ QUESTIONS = {
                     "borrowing": "Vay ngân hàng, chủ lao động hoặc người cho vay tư nhân",
                     "sale_of_assets": "Bán thứ gì đó tôi sở hữu", "other": "Nguồn khác"},
     },
+    "phone": {
+        "text": "Bạn có điện thoại di động không? Nếu có nhiều chiếc, hãy nghĩ đến chiếc bạn dùng nhiều nhất.",
+        "options": {"smartphone": "Có, điện thoại thông minh", "basic": "Có, điện thoại phổ thông (chỉ nghe gọi và nhắn tin)",
+                    "none": "Không"},
+    },
     "cover_expenses": {
         "text": "Nếu hộ bạn mất nguồn thu nhập chính, bạn có thể trang trải chi phí sinh hoạt trong bao lâu, bằng tiền "
                 "tiết kiệm, vay mượn, bán đồ, nhờ gia đình hoặc bạn bè giúp, hoặc bất kỳ cách nào khác?",
@@ -395,6 +400,7 @@ LABELS = {
                       "somewhat_difficult": "Có thể, nhưng hơi khó", "not_difficult": "Có thể và không khó"},
         "cover_expenses": {"under_2_weeks": "Dưới hai tuần", "one_month": "Khoảng một tháng",
                            "two_months": "Khoảng hai tháng", "over_2_months": "Hơn hai tháng"},
+        "phone": {"none": "Không có điện thoại", "basic": "Điện thoại phổ thông", "smartphone": "Điện thoại thông minh"},
         "emergency_source": {"savings": "Tiết kiệm", "family": "Gia đình hoặc bạn bè", "work": "Làm việc",
                              "borrowing": "Đi vay", "sale_of_assets": "Bán đồ", "other": "Khác"},
         "worry": {"old_age": "Tiền khi về già", "business": "Tiền cho kinh doanh", "medical": "Chi phí y tế",

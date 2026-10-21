@@ -144,6 +144,9 @@ def test_findex_resilience_shares():
     # Emergency funds cover nearly all adults; the coverage question is asked in developing economies only.
     assert findex["emergency"]["adults_covered"] / findex["emergency"]["adults_world"] > 0.9
     assert findex["cover_expenses"]["economies"] > 80
+    # Phone ownership: about 85% of adults own a phone and two-thirds use a smartphone (Findex 2025).
+    assert findex["phone"]["economies"] > 120
+    assert 0.08 < findex["phone"]["shares"][0] < 0.25 and 0.55 < findex["phone"]["shares"][2] < 0.8
     for c in data.countries():
         for group, v in c.get("findex", {}).items():
             if group != "emergency_amount":

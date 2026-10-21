@@ -528,3 +528,15 @@ test("age against the world's and the country's population", () => {
     assert.deepEqual(run(FULL).age, {});  // no age given
     close(SES.data.global.age_structure.shares.reduce((a, b) => a + b), 1, 1e-3);
 });
+
+test("Mobile phone is ranked as context only", () => {
+    const smart = run({...FULL, phone: "smartphone"}).living;
+    const basic = run({...FULL, phone: "basic"}).living;
+    const none = run({...FULL, phone: "none"}).living;
+    assert.ok(smart.phone.world_pct > basic.phone.world_pct && basic.phone.world_pct > none.phone.world_pct);
+    assert.ok(smart.phone.national_pct > 0 && smart.phone.year >= 2021);
+    close(smart.phone.world_shares.reduce((a, b) => a + b), 100, 0.2);
+    // Not part of the living-standards score.
+    assert.equal(smart.global_pct, run(FULL).living.global_pct);
+    assert.equal(run(FULL).living.phone, undefined);
+});
