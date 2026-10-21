@@ -16,6 +16,10 @@ UI = {
     "We restored your answers from your last visit. They're saved only in this browser.":
         "Chúng tôi đã khôi phục câu trả lời từ lần trước. Chúng chỉ được lưu trong trình duyệt này.",
     "Start over": "Làm lại từ đầu",
+    "Type to search the list": "Gõ để tìm trong danh sách",
+    "Search countries": "Tìm quốc gia",
+    "Use {country}?": "Chọn {country}?",
+    "Print or save as PDF": "In hoặc lưu PDF",
     "Continue where you left off": "Tiếp tục bài đang làm",
     "economies, each with its own national comparison": "nền kinh tế, mỗi nơi có so sánh trong nước riêng",
     "World Bank indicators per country": "chỉ số của Ngân hàng Thế giới cho mỗi nước",

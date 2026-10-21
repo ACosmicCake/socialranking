@@ -75,6 +75,7 @@
             <button class="btn btn-outline-light btn-sm" id="save-image" type="button">${tr("Save a summary image", "Lưu ảnh tóm tắt")}</button>
             <button class="btn btn-outline-light btn-sm" id="save-csv" type="button">${tr("Download the numbers (CSV)", "Tải số liệu (CSV)")}</button>
             <button class="btn btn-outline-light btn-sm" id="save-json" type="button">${tr("Download everything (JSON)", "Tải toàn bộ (JSON)")}</button>
+            <button class="btn btn-outline-light btn-sm" id="print-page" type="button">${tr("Print or save as PDF", "In hoặc lưu PDF")}</button>
         </div>
         <span class="small text-white-50 mt-1" id="copy-status" aria-live="polite"></span>
     </div>`);
@@ -810,6 +811,11 @@
     document.getElementById("save-csv").addEventListener("click", () => {
         download(tr("where-i-stand.csv", "vi-tri-cua-toi.csv"), "text/csv;charset=utf-8",
                  "\ufeff" + summaryRows().map(row => row.map(csvCell).join(",")).join("\r\n"));
+    });
+    document.getElementById("print-page").addEventListener("click", () => {
+        // Open collapsed details so they print too.
+        root.querySelectorAll("details").forEach(d => { d.open = true; });
+        window.print();
     });
     document.getElementById("save-json").addEventListener("click", () => {
         const payload = {generated: new Date().toISOString(), data_built: D.global.built, answers, results: r};

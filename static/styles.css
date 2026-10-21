@@ -465,3 +465,39 @@ details > summary {
         transition: none !important;
     }
 }
+
+/* Print: results on white paper, without navigation or controls */
+@media print {
+    body, .hero, .result-nav, .table, .table-dark {
+        background: #fff !important;
+        color: #000 !important;
+    }
+    .navbar, .result-nav, .to-top, footer, .hero .btn, .whatif, #copy-status, .quiz-nav {
+        display: none !important;
+    }
+    .hero {
+        min-height: 0 !important;
+        background-image: none !important;
+        padding: 0 !important;
+    }
+    .hero .text-white-50, .text-secondary, .stat-text {
+        color: #333 !important;
+    }
+    .highlight, .stat-value, .cite, a {
+        color: #034 !important;
+    }
+    .text-white, .link-light, .text-light, h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+    }
+    .table-dark {
+        --bs-table-bg: #fff;
+        --bs-table-color: #000;
+        --bs-table-border-color: #bbb;
+    }
+    .result-section, .chart-box, .stat-card, table {
+        break-inside: avoid;
+    }
+    .stat-card {
+        border-color: #bbb !important;
+    }
+}
