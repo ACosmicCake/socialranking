@@ -134,7 +134,7 @@
                 `Với mỗi khía cạnh, tỷ lệ người kém hơn bạn (người cùng nhóm với bạn được tính một nửa): <span class="legend-world">trên thế giới</span> và, khi có số liệu quốc gia, <span class="legend-country">ở ${cname}</span>.`)}</p>
             ${r.dimensions.map(d => `<div class="mb-3">
                 <div class="d-flex justify-content-between"><a href="#${d.key}" class="link-light">${d.label}</a>
-                    <span>${pct(d.pct)}${d.national_pct !== undefined ? ` <span class="text-warning small">/ ${pct(d.national_pct)}</span>` : ""}</span></div>
+                    <span><span class="small text-secondary me-1" title="${tr("Plausible range", "Khoảng hợp lý")}">${fixed(d.range[0], 0)}–${fixed(d.range[1], 0)}</span>${pct(d.pct)}${d.national_pct !== undefined ? ` <span class="text-warning small">/ ${pct(d.national_pct)}</span>` : ""}</span></div>
                 ${meter(d.pct, d.label)}
                 ${d.national_pct !== undefined ? meter(d.national_pct, `${d.label} ${r.country.name}`, "meter-country") : ""}</div>`).join("")}
             ${(() => {
@@ -148,6 +148,8 @@
             })()}
             <div class="card bg-transparent border-light mt-4"><div class="card-body">
                 <h3 class="h5">${tr("SES index", "Chỉ số SES")}: ${fixed(r.ses_index, 1)} / 100</h3>
+                <p class="small mb-2">${tr(`Plausible range: <strong>${fixed(r.ses_index_range[0], 1)} to ${fixed(r.ses_index_range[1], 1)}</strong>. Each answer puts you in a group of people who gave the same one, and you could be anywhere within it${inc.mode === "exact" ? "; for income we allow 20% either way" : ""}. The index uses the middle of each group.`,
+                    `Khoảng hợp lý: <strong>${fixed(r.ses_index_range[0], 1)} đến ${fixed(r.ses_index_range[1], 1)}</strong>. Mỗi câu trả lời đặt bạn vào nhóm những người trả lời giống bạn, và bạn có thể ở bất kỳ đâu trong nhóm đó${inc.mode === "exact" ? "; với thu nhập, chúng tôi tính chênh lệch 20% mỗi chiều" : ""}. Chỉ số dùng điểm giữa của mỗi nhóm.`)}</p>
                 <p class="mb-0 small text-secondary">${tr(
                     `The average of the ${r.dimensions.length} world scores above, weighted equally. It summarises your position but isn't itself a percentile: no dataset records all of these dimensions for the same people. See the <a href="${assetBase}methodology.html#index">methodology</a>.`,
                     `Trung bình của ${r.dimensions.length} điểm thế giới ở trên, trọng số bằng nhau. Nó tóm tắt vị trí của bạn nhưng bản thân không phải là một bách phân vị: không có bộ dữ liệu nào ghi nhận tất cả các khía cạnh này cho cùng một người. Xem <a href="${base}methodology.html#index">phương pháp</a>.`)}</p>
