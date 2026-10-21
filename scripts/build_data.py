@@ -685,6 +685,21 @@ def build_findex(adults, economies):
     return out, world
 
 
+def market_rate(code, rates, prices):
+    """Official exchange rate (local currency per US$) if its units match our PPPs.
+
+    The ratio of the PPP factor (moved to the rate's year) to the exchange rate is the price
+    level relative to the US; anything outside 0.1-2 means mismatched currency units.
+    """
+    r = rates.get(code)
+    if not (r and prices and str(r[0]) in prices["price_index"]):
+        return None
+    level = prices["ppp_2021"] * prices["price_index"][str(r[0])] / r[1]
+    if not 0.1 <= level <= 2:
+        return None
+    return {"lcu_per_usd": round(r[1], 6), "year": r[0]}
+
+
 def emergency_amount(code, indicators, prices):
     """Findex's emergency amount, 1/20 of GNI per capita in local currency, if its units check out.
 
@@ -1046,6 +1061,7 @@ def main():
     adults = {code: total - pop_parts["SP.POP.0014.TO"][code][1] for code, (_, total) in population.items()
               if code in pop_parts["SP.POP.0014.TO"]}
     findex, global_findex = build_findex(adults, economies)
+    exchange_rates = wdi_latest("PA.NUS.FCRF", WDI_SINCE)
     healthy_diet, global_healthy_diet = build_healthy_diet(prices)
     occupation, global_occupation = build_occupation(adults, wdi_latest("SL.EMP.TOTL.SP.ZS", WDI_SINCE), education,
                                                      indicators["SL.AGR.EMPL.ZS"])
@@ -1076,6 +1092,9 @@ def main():
             entry["education"] = education[code]
         if code in findex:
             entry["findex"] = findex[code]
+        rate = market_rate(code, exchange_rates, prices.get(code))
+        if rate:
+            entry["exchange_rate"] = rate
         amount = emergency_amount(code, indicators, prices.get(code))
         if amount:
             entry.setdefault("findex", {})["emergency_amount"] = amount

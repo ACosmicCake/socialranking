@@ -198,7 +198,9 @@
             <dl class="row small">
                 ${inc.mode === "exact" ? dl(tr("Household income per person per day", "Thu nhập hộ mỗi người mỗi ngày"), `${fixed(inc.local_per_day, 2)} ${esc(r.country.currency || "")}`)
                     + dl(tr(`Prices in ${inc.price_year} vs 2021 (${cname})`, `Giá năm ${inc.price_year} so với 2021 (${cname})`), `&times;${fixed(inc.price_level_vs_2021, 3)}`)
-                    + dl(tr(`PPP factor, 2021 (${esc(r.country.currency || "local currency")} per int. $)`, `Hệ số PPP 2021 (${esc(r.country.currency || "nội tệ")} mỗi đô la quốc tế)`), fixed(inc.ppp_2021, 3)) : ""}
+                    + dl(tr(`PPP factor, 2021 (${esc(r.country.currency || "local currency")} per int. $)`, `Hệ số PPP 2021 (${esc(r.country.currency || "nội tệ")} mỗi đô la quốc tế)`), fixed(inc.ppp_2021, 3))
+                    + (country.exchange_rate ? dl(tr(`At market exchange rates (${country.exchange_rate.year}), per person per day`, `Theo tỷ giá thị trường (${country.exchange_rate.year}), mỗi người mỗi ngày`),
+                        `US$${fixed(inc.local_per_day / country.exchange_rate.lcu_per_usd, 2)}`) : "") : ""}
                 ${dl(tr("Your income, 2021 int. $ per day", "Thu nhập của bạn, đô la quốc tế 2021 mỗi ngày"), money(inc.ppp_per_day), true)}
                 ${dl(tr("&nbsp;&nbsp;per month", "&nbsp;&nbsp;mỗi tháng"), money(inc.ppp_per_day * 365 / 12, 0))}
                 ${dl(tr(`World median (${refYear})`, `Trung vị thế giới (${refYear})`), money(inc.world_median))}
