@@ -549,3 +549,12 @@ main:focus {
     white-space: normal;
     text-align: left;
 }
+
+.table tr.glance-group th {
+    padding-top: 0.9rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    background: transparent;
+}

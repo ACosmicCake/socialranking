@@ -677,9 +677,26 @@
         ${loc.median ? tr(`Half of ${cname}'s people live on less than ${money(loc.median)} a day.`, `Một nửa dân số ${cname} sống bằng dưới ${money(loc.median)} mỗi ngày.`) : ""}</p>
     ${loc.poverty ? table([tr("Poverty line", "Chuẩn nghèo"), `${cname}, ${refYear}`, tr("World", "Thế giới")], loc.poverty.map((pv, i) =>
         `<tr><td>${money(pv.line)} ${tr("a day", "mỗi ngày")}</td><td>${pct(pv.pct)}</td><td>${pct(inc.lines[i].share_below)}</td></tr>`)) : ""}
-    ${table([tr("Indicator", "Chỉ số"), cname, loc.region_name ? esc(loc.region_name) : null, tr("World", "Thế giới")].filter(x => x !== null), loc.glance.map(g =>
-        `<tr><td>${esc(g.label)} <span class="small text-secondary">(${g.year})</span></td><td>${fmtGlance(g.value, g.fmt)}</td>
-            ${loc.region_name ? `<td>${fmtGlance(g.region, g.fmt)}</td>` : ""}<td>${fmtGlance(g.world, g.fmt)}</td></tr>`))}
+    ${table([tr("Indicator", "Chỉ số"), cname, loc.region_name ? esc(loc.region_name) : null, tr("World", "Thế giới")].filter(x => x !== null), (() => {
+        // Group the indicators so the long table scans easily.
+        const groups = [
+            [tr("Economy and inequality", "Kinh tế và bất bình đẳng"), /^(NY\.|SI\.|GD_WBL)/],
+            [tr("Work", "Việc làm"), /^SL\./],
+            [tr("Health", "Sức khỏe"), /^(SP\.DYN|SH\.|SN\.)/],
+            [tr("Education and skills", "Giáo dục và kỹ năng"), /^(SE\.|HD\.)/],
+            [tr("Living conditions and safety", "Điều kiện sống và an toàn"), /./],
+        ];
+        const cols = loc.region_name ? 4 : 3;
+        const used = new Set();
+        return groups.flatMap(([title, re]) => {
+            const rows = loc.glance.filter(g => !used.has(g.code) && re.test(g.code));
+            rows.forEach(g => used.add(g.code));
+            if (!rows.length) return [];
+            return [`<tr class="glance-group"><th colspan="${cols}">${title}</th></tr>`].concat(rows.map(g =>
+                `<tr><td>${esc(g.label)} <span class="small text-secondary">(${g.year})</span></td><td>${fmtGlance(g.value, g.fmt)}</td>
+                ${loc.region_name ? `<td>${fmtGlance(g.region, g.fmt)}</td>` : ""}<td>${fmtGlance(g.world, g.fmt)}</td></tr>`));
+        });
+    })())}
     <p class="small text-secondary">${tr("World Development Indicators", "Bộ chỉ số Phát triển Thế giới")} ${cite("wdi")}. ${tr(
         `GDP per person isn't part of your SES index: your income is already adjusted for prices in ${cname} and compared globally, so counting the country again would double-count it.`,
         `GDP bình quân đầu người không nằm trong chỉ số SES: thu nhập của bạn đã được điều chỉnh theo giá cả ở ${cname} và so sánh toàn cầu, nên tính thêm quốc gia sẽ là tính trùng.`)}</p>`));
