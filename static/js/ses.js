@@ -834,7 +834,15 @@
             const answered = items.filter(i => i.has !== null && i.has !== undefined);
             const result = {items, answered: answered.length, area: answers.area || null,
                             region_name: region ? region.name : null};
-            if (answers.phone && G.findex.phone) result.phone = findexRank("phone", answers.phone, country);
+            if (answers.phone && G.findex.phone) {
+                // Also among adults of your sex and in your kind of area, where Findex reports them.
+                const ph = result.phone = findexRank("phone", answers.phone, country);
+                const fx = (country.findex || {}).phone || {};
+                const idx = G.findex.phone.keys.indexOf(answers.phone);
+                ph.groups = [["by_sex", answers.sex], ["by_area", answers.area]]
+                    .filter(([by, key]) => key && fx[by] && fx[by][key])
+                    .map(([by, key]) => ({by, key, shares: fx[by][key].map(pct), pct: pct(midrank(fx[by][key], idx))}));
+            }
             if (!answered.length) return result;
             const have = answered.filter(i => i.has);
             return Object.assign(result, {

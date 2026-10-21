@@ -234,6 +234,9 @@ FINDEX_DERIVED = {
     "phone": (["con1", "con9a"], ["none", "basic", "smartphone"],
               lambda own, smart: [100 - own, max(own - smart, 0.0), smart]),
 }
+# Findex breakdowns of the derived groups (indicator suffixes): women, men, rural, urban.
+FINDEX_GROUP_SUFFIXES = {".1": ("by_sex", "F"), ".2": ("by_sex", "M"), ".9": ("by_area", "rural"),
+                         ".10": ("by_area", "urban")}
 # Occupations: ISCO-08 major groups from the World Bank's Global Jobs Indicators
 # Database (JOIN, API source 86), harmonised household and labour-force surveys,
 # as shares of employed people aged 15-64; also by sex and urban/rural. Skill
@@ -694,10 +697,32 @@ def build_findex(adults, economies):
                 acc += shares * adults[code]
                 weight += adults[code]
                 n += 1
+        if group in FINDEX_DERIVED:
+            findex_breakdowns(group, out)
         world[group] = {"keys": keys, "indicators": inds,
                         "shares": [round(float(v), 4) for v in acc / weight], "economies": n,
                         "adults_covered": int(weight), "adults_world": int(adults.get("WLD", 0))}
     return out, world
+
+
+def findex_breakdowns(group, out):
+    """Add a derived group's shares for women, men, rural and urban adults, in the economy's year."""
+    inds, _, split = FINDEX_DERIVED[group]
+    for suffix, (by, key) in FINDEX_GROUP_SUFFIXES.items():
+        raw = {}
+        for ind in inds:
+            for r in wdi(ind + suffix, f"findex_{ind}{suffix}.json", source=FINDEX_SOURCE,
+                         date=f"{FINDEX_SINCE}:{INFLATION_LAST_YEAR}"):
+                raw.setdefault(ind, {})[(r["countryiso3code"] or r["country"]["id"], int(r["date"]))] = float(r["value"])
+        for code, groups in out.items():
+            if group not in groups:
+                continue
+            k = (code, groups[group]["year"])
+            if all(k in raw.get(ind, {}) for ind in inds):
+                vals = np.array(split(*(raw[ind][k] for ind in inds)))
+                if vals.sum() > 50:
+                    shares = vals / vals.sum()
+                    groups[group].setdefault(by, {})[key] = [round(float(v), 4) for v in shares]
 
 
 def market_rate(code, rates, prices):
