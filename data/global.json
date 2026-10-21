@@ -7,7 +7,7 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (112 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
+   "name": "World Bank World Development Indicators API (113 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
   },
@@ -3155,6 +3155,7 @@
   "GD_WBL_OVL_LAW": "Women, Business and the Law: legal framework index (0-100)",
   "EN.ATM.PM25.MC.M3": "PM2.5 air pollution, mean annual exposure (micrograms per cubic metre)",
   "VC.IHR.PSRC.P5": "Intentional homicides (per 100,000 people)",
+  "IQ.SPI.OVRL": "Statistical Performance Indicators overall score (0-100)",
   "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
   "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
   "SE.ADT.LITR.FE.ZS": "Adult literacy rate, female (15+)",

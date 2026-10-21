@@ -700,8 +700,15 @@
         ${table(["", tr("You", "Bạn"), tr(`Typical in ${cname}`, `Điển hình ở ${cname}`), ""], typicalRows.map(row => `<tr>${row.map(c => `<td>${c}</td>`).join("")}</tr>`))}
         <p class="small text-secondary">${tr("Typical means the median for income and education, and the most common category for work.",
                                              "Điển hình là trung vị đối với thu nhập và học vấn, và nhóm phổ biến nhất đối với việc làm.")}</p>` : "";
+    // How reliable the national numbers are: the World Bank's statistical performance score.
+    const spi = country.wdi && country.wdi["IQ.SPI.OVRL"];
+    const spiAll = D.countries.map(c => c.wdi && c.wdi["IQ.SPI.OVRL"] && c.wdi["IQ.SPI.OVRL"][1]).filter(Boolean).sort((a, b) => a - b);
+    const spiHtml = spi ? `<p class="small">${tr(
+        `<strong>How reliable are ${cname}'s numbers?</strong> Its statistical system scores ${fixed(spi[1], 0)} out of 100 on the World Bank's Statistical Performance Indicators (${spi[0]}), against a median of ${fixed(spiAll[Math.floor(spiAll.length / 2)], 0)} across ${spiAll.length} economies. Lower scores generally mean a weaker statistical system, with fewer or older surveys, so treat national comparisons with more caution.`,
+        `<strong>Số liệu của ${cname} đáng tin đến đâu?</strong> Hệ thống thống kê của nước này đạt ${fixed(spi[1], 0)}/100 theo Chỉ số Hiệu quả Thống kê của Ngân hàng Thế giới (${spi[0]}), so với trung vị ${fixed(spiAll[Math.floor(spiAll.length / 2)], 0)} của ${spiAll.length} nền kinh tế. Điểm thấp hơn thường nghĩa là hệ thống thống kê yếu hơn, với ít khảo sát hơn hoặc khảo sát cũ hơn, nên hãy thận trọng hơn với các so sánh trong nước.`)} ${cite("wdi")}</p>` : "";
     html.push(section("country", tr(`${cname} at a glance`, `Tổng quan về ${cname}`), `
     ${typicalHtml}
+    ${spiHtml}
     <p>${loc.income_group ? tr(`The World Bank classifies ${cname} as <strong>${esc(lower(loc.income_group))}</strong>. `,
                                `Ngân hàng Thế giới xếp ${cname} vào nhóm <strong>${esc(loc.income_group.toLowerCase())}</strong>. `) : ""}
         ${loc.gdp_per_capita_usd !== undefined ? tr(`GDP per person was ${money(loc.gdp_per_capita_usd, 0)} in ${loc.gdp_year} (market exchange rates); ${pct(loc.share_in_poorer_countries_pct)} of the world lives in countries with a lower GDP per person.`,
