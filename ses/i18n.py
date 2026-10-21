@@ -31,6 +31,8 @@ UI = {
     "Open about how it works": "Minh bạch về cách tính",
     # quiz
     "Quiz": "Bài trắc nghiệm",
+    "This country's survey measures income.": "Khảo sát của nước này đo thu nhập.",
+    "This country's survey measures spending (consumption).": "Khảo sát của nước này đo chi tiêu (tiêu dùng).",
     "Back": "Quay lại",
     "Next": "Tiếp",
     "Finish": "Hoàn tất",
@@ -112,9 +114,16 @@ QUESTIONS = {
     "income_mode": {"text": "Bạn muốn trả lời theo cách nào?",
                     "options": {"exact": "Tôi biết khoảng thu nhập của hộ (chính xác nhất)",
                                 "band": "Tôi muốn chọn một khoảng theo người mỗi ngày"}},
-    "income_amount": {"text": "Tổng thu nhập sau thuế của hộ bạn là bao nhiêu?",
-                      "help": "Cộng thu nhập của mọi người trong hộ dùng chung tiền: lương, lãi kinh doanh hoặc "
-                              "nông nghiệp, lương hưu, trợ cấp, tiền gửi về và tiền cho thuê. Tính bằng nội tệ."},
+    "income_basis": {"text": "Bạn sẽ cho biết thu nhập hay chi tiêu của hộ?",
+                     "help": "Nhiều nước đo mức sống bằng chi tiêu (tiêu dùng) của hộ chứ không phải thu nhập. Nếu bạn "
+                             "biết cả hai, hãy dùng cái mà khảo sát của nước bạn dùng - chúng tôi sẽ cho biết khi bạn "
+                             "chọn quốc gia.",
+                     "options": {"income": "Thu nhập sau thuế",
+                                 "consumption": "Chi tiêu: mọi khoản hộ chi tiêu hoặc tiêu dùng, kể cả lương thực tự sản xuất"}},
+    "income_amount": {"text": "Tổng thu nhập sau thuế (hoặc tổng chi tiêu) của hộ bạn là bao nhiêu?",
+                      "help": "Thu nhập: cộng thu nhập của mọi người trong hộ dùng chung tiền - lương, lãi kinh doanh "
+                              "hoặc nông nghiệp, lương hưu, trợ cấp, tiền gửi về và tiền cho thuê. Chi tiêu: mọi khoản "
+                              "hộ chi tiêu, cộng giá trị lương thực tự sản xuất. Tính bằng nội tệ."},
     "income_period": {"text": "Số tiền đó là theo tháng hay theo năm?",
                       "options": {"month": "Theo tháng", "year": "Theo năm"}},
     "household_size": {"text": "Có bao nhiêu người, kể cả bạn và trẻ em, sống trong hộ và dùng chung khoản thu nhập này?"},
@@ -250,6 +259,15 @@ LABELS = {
         "SL.EMP.VULN.ZS": "Lao động có việc làm dễ tổn thương",
         "SH.XPD.OOPC.CH.ZS": "Chi y tế tự chi trả",
         "EN.POP.SLUM.UR.ZS": "Cư dân đô thị sống ở khu ổ chuột",
+        "SI.POV.GINI": "Bất bình đẳng (hệ số Gini, 0-100)",
+        "SP.DYN.LE00.FE.IN": "Tuổi thọ trung bình của nữ (năm)",
+        "SP.DYN.LE00.MA.IN": "Tuổi thọ trung bình của nam (năm)",
+    },
+    "account_groups": {
+        "sex": {"F": "Phụ nữ", "M": "Nam giới"},
+        "income": {"poor": "40% hộ nghèo nhất", "rich": "60% hộ khá giả nhất"},
+        "age": {"young": "Thanh niên (15-24 tuổi)", "older": "Người từ 25 tuổi"},
+        "education": {"low": "Học vấn tiểu học trở xuống", "high": "Học vấn trung học trở lên"},
     },
     "no_cooking": "Không nấu ăn ở nhà",
     "errors": {

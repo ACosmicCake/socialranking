@@ -7,7 +7,7 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (50 indicators: population, GDP, PPP, education, services, food security, work, health; country classifications)",
+   "name": "World Bank World Development Indicators API (79 indicators: population, GDP, PPP, education, services, food security, work, health; country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
   },
@@ -2595,6 +2595,30 @@
    "master_over_bachelor": 0.3752,
    "doctoral_over_master": 0.0812
   },
+  "world_by_sex": {
+   "F": [
+    0.22874,
+    0.16276,
+    0.17847,
+    0.21223,
+    0.02382,
+    0.04503,
+    0.10641,
+    0.03928,
+    0.00326
+   ],
+   "M": [
+    0.14829,
+    0.15253,
+    0.20324,
+    0.25838,
+    0.02513,
+    0.04495,
+    0.12037,
+    0.04219,
+    0.00492
+   ]
+  },
   "broad_levels": [
    "No schooling or primary not completed",
    "Primary",
@@ -2745,7 +2769,36 @@
   "NY.GDP.PCAP.PP.KD": "GDP per capita, PPP (constant 2021 international $)",
   "SH.XPD.OOPC.CH.ZS": "Out-of-pocket spending (% of health spending)",
   "SE.ADT.LITR.ZS": "Adult literacy rate (15+)",
-  "EN.POP.SLUM.UR.ZS": "Urban population living in slums"
+  "EN.POP.SLUM.UR.ZS": "Urban population living in slums",
+  "SI.POV.GINI": "Gini index (latest survey)",
+  "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
+  "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
+  "FX.OWN.TOTL.FE.ZS": "Account ownership, female (% of age 15+)",
+  "FX.OWN.TOTL.MA.ZS": "Account ownership, male (% of age 15+)",
+  "SL.EMP.WORK.FE.ZS": "Wage and salaried workers, female",
+  "SL.EMP.WORK.MA.ZS": "Wage and salaried workers, male",
+  "SL.EMP.MPYR.FE.ZS": "Employers, female",
+  "SL.EMP.MPYR.MA.ZS": "Employers, male",
+  "SL.FAM.WORK.FE.ZS": "Contributing family workers, female",
+  "SL.FAM.WORK.MA.ZS": "Contributing family workers, male",
+  "SL.EMP.VULN.FE.ZS": "Vulnerable employment, female",
+  "SL.EMP.VULN.MA.ZS": "Vulnerable employment, male",
+  "SL.AGR.EMPL.FE.ZS": "Employment in agriculture, female",
+  "SL.AGR.EMPL.MA.ZS": "Employment in agriculture, male",
+  "SL.IND.EMPL.FE.ZS": "Employment in industry, female",
+  "SL.IND.EMPL.MA.ZS": "Employment in industry, male",
+  "SL.SRV.EMPL.FE.ZS": "Employment in services, female",
+  "SL.SRV.EMPL.MA.ZS": "Employment in services, male",
+  "SL.UEM.TOTL.FE.ZS": "Unemployment, female",
+  "SL.UEM.TOTL.MA.ZS": "Unemployment, male",
+  "SL.TLF.CACT.FE.ZS": "Labour force participation, female",
+  "SL.TLF.CACT.MA.ZS": "Labour force participation, male",
+  "FX.OWN.TOTL.40.ZS": "Account ownership, poorest 40% of households",
+  "FX.OWN.TOTL.60.ZS": "Account ownership, richest 60% of households",
+  "FX.OWN.TOTL.YG.ZS": "Account ownership, young adults (15-24)",
+  "FX.OWN.TOTL.OL.ZS": "Account ownership, older adults (25+)",
+  "FX.OWN.TOTL.PL.ZS": "Account ownership, primary education or less",
+  "FX.OWN.TOTL.SO.ZS": "Account ownership, secondary education or more"
  },
  "wdi_since": 2014,
  "aggregates": {
@@ -2907,6 +2960,118 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      23.23
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     75.97
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     71.12
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2024,
+     76.63
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2024,
+     80.86
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     54.6
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     52.96
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     2.28
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     5.16
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     14.43
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     6.08
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     43.12
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     41.88
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     26.13
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     25.51
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     15.67
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     29.02
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     58.19
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     45.47
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     4.94
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     4.69
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     48.94
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     73.06
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2024,
+     72.36
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2024,
+     82.99
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2024,
+     69.1
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2024,
+     81.19
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2024,
+     69.63
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2024,
+     85.61
     ]
    }
   },
@@ -3068,6 +3233,118 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      23.33
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     79.7
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     73.92
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2021,
+     81.38
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2021,
+     84.24
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     61.64
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     60.4
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     2.38
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     4.94
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     13.34
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     5.04
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     35.99
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     34.66
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     18.97
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     23.83
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     21.68
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     33.96
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     59.35
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     42.22
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     3.42
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     4.12
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     58.07
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     72.26
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2021,
+     77.41
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2021,
+     86.48
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2021,
+     78.35
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2021,
+     83.75
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2021,
+     75.43
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2021,
+     90.42
     ]
    }
   },
@@ -3217,6 +3494,118 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      2.8
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     81.79
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     75.57
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2021,
+     88.02
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2021,
+     91.23
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     86.81
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     80.45
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     2.21
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     5.11
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     2.42
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     1.31
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     10.98
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     14.44
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     5.69
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     7.49
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     12.68
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     32.78
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     81.63
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     59.73
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     5.66
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     5.11
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     51.08
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     65.94
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2021,
+     86.31
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2021,
+     91.74
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2021,
+     83.83
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2021,
+     90.5
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2021,
+     78.09
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2021,
+     91.99
     ]
    }
   },
@@ -3362,6 +3751,118 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      18.92
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     78.69
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     72.95
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2021,
+     70.14
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2021,
+     76.97
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     66.01
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     63.23
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     2.68
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     5.17
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     5.39
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     2.49
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     31.31
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     31.6
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     7.12
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     16.7
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     11.91
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     26.54
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     80.96
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     56.76
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     6.55
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     4.67
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     51.39
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     74.65
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2021,
+     67.93
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2021,
+     77.28
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2021,
+     66.97
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2021,
+     75.62
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2021,
+     64.34
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2021,
+     78.09
     ]
    }
   },
@@ -3523,6 +4024,118 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      31.91
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     74.34
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     70.42
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2021,
+     45.55
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2021,
+     59.58
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     57.22
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     61.87
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     1.17
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     3.39
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     26.18
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     5.49
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     41.61
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     34.75
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     33.9
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     18.8
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     13.5
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     29.78
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     52.6
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     51.42
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     12.07
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     6.7
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     19.73
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     73.33
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2021,
+     46.13
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2021,
+     57.31
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2021,
+     39.42
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2021,
+     57.45
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2021,
+     38.83
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2021,
+     61.57
     ]
    }
   },
@@ -3664,6 +4277,118 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      0.2
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     81.72
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     76.88
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2021,
+     97.08
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2021,
+     93.79
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     95.44
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     91.22
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     1.26
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     3.34
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     0.12
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     0.08
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     3.3
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     5.44
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     0.93
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     1.94
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     8.29
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     27.87
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     90.78
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     70.19
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     4.46
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     4.55
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     56.78
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     67.26
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2021,
+     92.11
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2021,
+     97.68
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2021,
+     94.38
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2021,
+     95.6
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2021,
+     60.19
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2021,
+     96.75
     ]
    }
   },
@@ -3825,6 +4550,118 @@
     "EN.POP.SLUM.UR.ZS": [
      2019,
      5.41
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     74.22
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     71.01
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2024,
+     75.06
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2024,
+     80.05
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     23.18
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     28.47
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     0.62
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     4.45
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     29.33
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     8.8
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     76.2
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     67.08
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     60.87
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     33.56
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     15.37
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     29.02
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     23.76
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     37.42
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     4.23
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     4.25
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     32.98
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     77.38
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2024,
+     73.25
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2024,
+     80.43
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2024,
+     71.66
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2024,
+     79.8
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2024,
+     75.51
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2024,
+     81.39
     ]
    }
   },
@@ -3978,6 +4815,118 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      53.71
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     64.96
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     60.68
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2021,
+     49.04
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2021,
+     61.36
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     16.92
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     27.05
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     3.91
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     9.07
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     21.82
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     12.94
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     79.17
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     63.88
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     48.19
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     50.34
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     9.24
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     14.73
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     42.57
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     34.93
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     6.25
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     5.14
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     65.16
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     75.6
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2021,
+     43.56
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2021,
+     62.71
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2021,
+     48.35
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2021,
+     58.5
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2021,
+     39.01
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2021,
+     74.21
     ]
    }
   },

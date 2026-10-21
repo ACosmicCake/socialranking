@@ -99,6 +99,16 @@
         <tbody>{% for b in band_rows %}<tr><td>{{ b.label }}</td><td>{{ b.low | pct }} to {{ b.high | pct }}</td></tr>{% endfor %}</tbody>
     </table></div>
 
+    <h3 class="h5">Income or spending</h3>
+    <p>PIP measures <em>income</em> in some countries and <em>consumption</em> (spending, including food a household grows) in
+        others; your results say which. You can enter either. If yours doesn't match your country's survey, the results say so:
+        better-off households spend less than they earn, so entering income in a consumption country overstates your national
+        rank, and vice versa. No adjustment is applied, because there is no reliable cross-country factor.</p>
+
+    <h3 class="h5">Your country over time</h3>
+    <p>For each economy we also keep PIP's lined-up median and share below $3.00 a day for every year since 1990, and show them next
+        to your income, along with the first year the national median reached your income.</p>
+
     <h3 class="h5">Urban and rural distributions</h3>
     <p>Where PIP publishes separate urban and rural distributions (China in the current release), we also rank you within your
         area. Other countries are national only.</p>
@@ -154,6 +164,8 @@
         <thead><tr><th>Level</th><th>Share of adults 25+</th></tr></thead>
         <tbody>{% for l in g.education.levels %}<tr><td>{{ l.label }}</td><td>{{ (g.education.world_shares[loop.index0] * 100) | pct }}</td></tr>{% endfor %}</tbody>
     </table></div>
+    <p><strong>Women and men.</strong> If you give your sex, you are also ranked among women or men aged 25+, using the same
+        attainment indicators reported separately by sex, for the world (weighted by population 25+) and your country.</p>
     <p><strong>People of your age and sex.</strong> If you give your age (25-64), you are also compared with your 10-year age group,
         and with your sex if you give it, using Barro-Lee's {{ g.education.groups_year }} estimates. These have only four broad levels
         (no schooling or incomplete primary; primary; secondary; tertiary). We map post-secondary non-tertiary to secondary, which
@@ -164,7 +176,7 @@
         modelled estimates give the share of the world's (and each country's) workers who are employees, employers,
         own-account workers or contributing family workers. Own-account work is derived as vulnerable employment minus
         contributing family work. We also show sector shares (agriculture, industry, services), unemployment and labour force
-        participation.</p>
+        participation. If you give your sex, the same shares are shown for women or for men, worldwide and in your country.</p>
     <p>The score uses the ILO's job-quality split: own-account and contributing family work count as <em>vulnerable
         employment</em> ({{ g.aggregates.WLD.wdi["SL.EMP.VULN.ZS"][1] | pct }} of the world's workers in
         {{ g.aggregates.WLD.wdi["SL.EMP.VULN.ZS"][0] }}). Your mid-rank among workers is the score. This is a coarse two-level
@@ -229,8 +241,10 @@
         {{ g.aggregates.WLD.wdi["SN.ITK.SVFI.ZS"][1] | pct }} severe; SOFI's latest headline is {{ (food.moderate_or_severe_share * 100) | pct }}
         for {{ food.year }} {{ cite(food.cite) }}). Your financial-security score is the average of your Gallup and FIES mid-ranks
         (whichever you answered).</p>
-    <p>We also show <strong>account ownership</strong> for the world and your country (Global Findex via WDI) and, as context only,
-        saving: {{ (findex.saved_in_account_share_lmic * 100) | pct(0) }} of adults in low- and middle-income economies saved in a
+    <p>We also show <strong>account ownership</strong> for the world and your country (Global Findex via WDI), including among
+        people like you: your sex, your age group (15-24 or 25+), your education (primary or less, or secondary or more), and your
+        household's income group (poorest 40% or richest 60%, from your national income rank). As context only, we also show
+        saving. {{ (findex.saved_in_account_share_lmic * 100) | pct(0) }} of adults in low- and middle-income economies saved in a
         financial account {{ cite(findex.cite) }}.</p>
     <p class="small text-secondary">Limitations: the Gallup data date from 2019, before the pandemic. The FIES raw-score bands only approximate
         FAO's probabilistic classification.</p>
@@ -247,8 +261,8 @@
 
     <h2 id="location">10. Your country (context only)</h2>
     <p>The results end with your country at a glance: its World Bank income group, GDP per person (and the share of the world
-        living in poorer economies), the share of people below each poverty line, and {{ coverage.wdi_indicators }} World Development
-        Indicators compared with your region and the world {{ cite("wdi") }}. None of this is part of your SES index: your income is
+        living in poorer economies), the share of people below each poverty line, and key World Development Indicators, including
+        inequality (Gini) and life expectancy for your sex, compared with your region and the world {{ cite("wdi") }}. None of this is part of your SES index: your income is
         already adjusted to your country's prices and compared globally, so counting the country again would double-count it.</p>
 
     <h2 id="index">11. The SES index</h2>

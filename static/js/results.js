@@ -171,6 +171,21 @@
             </dl>
         </div>
     </div>
+    ${inc.basis_mismatch ? `<div class="alert alert-secondary small">${inc.basis === "income"
+        ? tr(`${cname}'s survey measures <strong>spending</strong>, and you gave <strong>income</strong>. Better-off households spend less than they earn, so your rank in ${cname} is probably somewhat overstated.`,
+             `Khảo sát của ${cname} đo <strong>chi tiêu</strong>, còn bạn nhập <strong>thu nhập</strong>. Hộ khá giả thường chi ít hơn thu nhập, nên thứ hạng của bạn ở ${cname} có lẽ hơi cao hơn thực tế.`)
+        : tr(`${cname}'s survey measures <strong>income</strong>, and you gave <strong>spending</strong>. Households usually spend less than they earn, so your rank in ${cname} is probably somewhat understated.`,
+             `Khảo sát của ${cname} đo <strong>thu nhập</strong>, còn bạn nhập <strong>chi tiêu</strong>. Hộ gia đình thường chi ít hơn thu nhập, nên thứ hạng của bạn ở ${cname} có lẽ hơi thấp hơn thực tế.`)}</div>` : ""}
+    ${inc.national_history ? `<h3 class="h5 mt-3">${tr(`${cname} over time`, `${cname} qua các năm`)}</h3>
+    <p class="small">${inc.national_history.reached
+        ? tr(`Half of ${cname}'s people lived on less than your income until ${inc.national_history.reached}; the median reached ${money(inc.ppp_per_day)} a day that year.`,
+             `Một nửa dân số ${cname} sống bằng mức thấp hơn thu nhập của bạn cho đến năm ${inc.national_history.reached}; năm đó trung vị đạt ${money(inc.ppp_per_day)} mỗi ngày.`)
+        : tr(`${cname}'s median has never reached your income (${money(inc.ppp_per_day)} a day): it was ${money(inc.national_history.median[inc.national_history.median.length - 1])} in ${inc.national_history.years[inc.national_history.years.length - 1]}.`,
+             `Trung vị của ${cname} chưa bao giờ đạt mức thu nhập của bạn (${money(inc.ppp_per_day)} mỗi ngày): năm ${inc.national_history.years[inc.national_history.years.length - 1]} là ${money(inc.national_history.median[inc.national_history.median.length - 1])}.`)}
+        ${tr(`The share living below $3.00 a day went from ${pct(inc.national_history.below_3[0])} in ${inc.national_history.years[0]} to ${pct(inc.national_history.below_3[inc.national_history.below_3.length - 1])}.`,
+             `Tỷ lệ sống dưới 3,00 đô la mỗi ngày giảm từ ${pct(inc.national_history.below_3[0])} năm ${inc.national_history.years[0]} xuống ${pct(inc.national_history.below_3[inc.national_history.below_3.length - 1])}.`)}</p>
+    <div class="chart-box chart-small"><canvas id="countryHistoryChart" aria-label="${tr(`${cname}'s median income and poverty rate over time`, `Trung vị thu nhập và tỷ lệ nghèo của ${cname} theo thời gian`)}"></canvas></div>
+    <p class="small text-secondary">${tr("World Bank lined-up estimates for each year", "Ước tính theo năm của Ngân hàng Thế giới")} ${cite("pip")}.</p>` : ""}
     <h3 class="h5 mt-3">${tr("Poverty lines", "Chuẩn nghèo")}</h3>
     ${table([tr("Line ($ per person per day, 2021 prices)", "Chuẩn (đô la mỗi người mỗi ngày, giá 2021)"), tr("You", "Bạn"),
              tr("World below the line", "Thế giới dưới chuẩn"), tr(`${cname} below the line`, `${cname} dưới chuẩn`)],
@@ -237,7 +252,8 @@
     const eduRows = edu.levels.map((label, i) => `<tr class="${i === edu.level ? "you" : ""}">
         <td>${esc(label)}${i === edu.level ? ` <span class="badge text-bg-light">${tr("you", "bạn")}</span>` : ""}</td>
         <td><div class="bar" style="width: ${edu.world_shares[i] * 2}%"></div> ${pct(edu.world_shares[i])}</td>
-        ${edu.country_shares ? `<td>${pct(edu.country_shares[i])}</td>` : ""}</tr>`);
+        ${edu.country_shares ? `<td>${pct(edu.country_shares[i])}</td>` : ""}
+        ${edu.country_sex_shares ? `<td>${pct(edu.country_sex_shares[i])}</td>` : ""}</tr>`);
     let groupHtml = "";
     if (edu.group) {
         const g = edu.group;
@@ -260,9 +276,13 @@
         `Your highest level is <strong>${esc(lower(edu.label))}</strong>. That's more education than about <strong>${pct(edu.global_pct)}</strong> of the world's adults aged 25 and over.`,
         `Trình độ cao nhất của bạn là <strong>${esc(edu.label)}</strong>, cao hơn khoảng <strong>${pct(edu.global_pct)}</strong> người trưởng thành từ 25 tuổi trở lên trên thế giới.`)}
         ${edu.national_pct !== undefined ? tr(`In ${cname} the figure is ${pct(edu.national_pct)}.`, `Ở ${cname}, con số này là ${pct(edu.national_pct)}.`) : ""}
+        ${edu.sex && (edu.world_sex_pct !== undefined || edu.national_sex_pct !== undefined) ? tr(
+            `Among ${edu.sex === "F" ? "women" : "men"} aged 25+, the figures are ${pct(edu.world_sex_pct)} worldwide${edu.national_sex_pct !== undefined ? ` and ${pct(edu.national_sex_pct)} in ${cname}` : ""}.`,
+            `Trong số ${edu.sex === "F" ? "phụ nữ" : "nam giới"} từ 25 tuổi, các con số là ${pct(edu.world_sex_pct)} trên thế giới${edu.national_sex_pct !== undefined ? ` và ${pct(edu.national_sex_pct)} ở ${cname}` : ""}.`) : ""}
         ${tr(`${pct(edu.same_level_pct)} of adults worldwide share your level and ${pct(edu.higher_pct)} have gone further.`,
              `${pct(edu.same_level_pct)} người trưởng thành trên thế giới có cùng trình độ với bạn và ${pct(edu.higher_pct)} học cao hơn.`)}</p>
-    ${table([tr("Level (ISCED 2011)", "Trình độ (ISCED 2011)"), tr("World", "Thế giới"), edu.country_shares ? `${cname}${edu.country_year ? ` (${edu.country_year})` : ""}` : ""].filter(Boolean), eduRows, "edu-table")}
+    ${table([tr("Level (ISCED 2011)", "Trình độ (ISCED 2011)"), tr("World", "Thế giới"), edu.country_shares ? `${cname}${edu.country_year ? ` (${edu.country_year})` : ""}` : "",
+             edu.country_sex_shares ? tr(`${edu.sex === "F" ? "Women" : "Men"} in ${cname}`, `${edu.sex === "F" ? "Phụ nữ" : "Nam giới"} ở ${cname}`) : ""].filter(Boolean), eduRows, "edu-table")}
     <p class="small text-secondary">${tr("World and national attainment of adults 25+", "Trình độ học vấn của người từ 25 tuổi, thế giới và quốc gia")} ${cite("uis_attainment")}${edu.country_source === "Barro-Lee" ? `; ${cname}: ${tr("Barro-Lee 2015, mapped to these levels", "Barro-Lee 2015, quy đổi sang các trình độ này")} ${cite("barro_lee")}` : ""}.
         ${edu.country_mean_years ? tr(`Average years of schooling in ${cname} (ages 25-64, 2015): ${edu.country_mean_years}.`, `Số năm đi học trung bình ở ${cname} (25-64 tuổi, 2015): ${fixed(edu.country_mean_years, 2)}.`) : ""}</p>
     ${groupHtml}`));
@@ -272,10 +292,14 @@
         const statusRows = [["employee", tr("Employees (wage and salary)", "Người làm công hưởng lương")], ["employer", tr("Employers", "Chủ sử dụng lao động")],
             ["own_account", tr("Own-account workers", "Lao động tự làm")], ["family_worker", tr("Contributing family workers", "Lao động gia đình")]].map(([k, label]) =>
             `<tr class="${k === work.status ? "you" : ""}"><td>${label}${k === work.status ? ` <span class="badge text-bg-light">${tr("you", "bạn")}</span>` : ""}</td>
-                <td>${work.world ? pct(work.world[k]) : "-"}</td><td>${work.country ? pct(work.country[k]) : "-"}</td></tr>`);
+                <td>${work.world ? pct(work.world[k]) : "-"}</td><td>${work.country ? pct(work.country[k]) : "-"}</td>
+                ${work.sex ? `<td>${work.sex_world ? pct(work.sex_world[k]) : "-"}</td><td>${work.sex_country ? pct(work.sex_country[k]) : "-"}</td>` : ""}</tr>`);
+        const sexHead = work.sex ? [tr(`${work.sex === "F" ? "Women" : "Men"}, world`, `${work.sex === "F" ? "Nữ" : "Nam"}, thế giới`),
+                                    tr(`${work.sex === "F" ? "Women" : "Men"}, ${cname}`, `${work.sex === "F" ? "Nữ" : "Nam"}, ${cname}`)] : [];
         const sectorRows = [["agriculture", tr("Agriculture", "Nông nghiệp")], ["industry", tr("Industry", "Công nghiệp")], ["services", tr("Services", "Dịch vụ")]].map(([k, label]) =>
             `<tr class="${k === work.sector ? "you" : ""}"><td>${label}${k === work.sector ? ` <span class="badge text-bg-light">${tr("you", "bạn")}</span>` : ""}</td>
-                <td>${work.world_sectors ? pct(work.world_sectors[k]) : "-"}</td><td>${work.country_sectors ? pct(work.country_sectors[k]) : "-"}</td></tr>`);
+                <td>${work.world_sectors ? pct(work.world_sectors[k]) : "-"}</td><td>${work.country_sectors ? pct(work.country_sectors[k]) : "-"}</td>
+                ${work.sex ? `<td>${work.sex_world_sectors ? pct(work.sex_world_sectors[k]) : "-"}</td><td>${work.sex_country_sectors ? pct(work.sex_country_sectors[k]) : "-"}</td>` : ""}</tr>`);
         let workText;
         if (work.employed) {
             workText = (work.vulnerable
@@ -293,10 +317,13 @@
                           ` ${pct(work.participation.world)} người từ 15 tuổi trên thế giới tham gia lực lượng lao động${work.participation.country !== null ? ` (${pct(work.participation.country)} ở ${cname})` : ""}. Khía cạnh này không chấm điểm cho người ngoài lực lượng lao động.`);
         }
         html.push(section("work", tr("Work", "Công việc"), `
-        <p>${tr("You described yourself as:", "Bạn mô tả mình là:")} <strong>${esc(lower(work.label))}</strong>.${workText}</p>
+        <p>${tr("You described yourself as:", "Bạn mô tả mình là:")} <strong>${esc(lower(work.label))}</strong>.${workText}
+            ${work.sex && work.sex_participation && work.sex_participation.country !== null ? tr(
+                ` ${pct(work.sex_participation.country)} of ${work.sex === "F" ? "women" : "men"} aged 15+ in ${cname} are in the labour force (${pct(work.sex_participation.world)} worldwide), and ${pct(work.sex_unemployment.country)} of those are unemployed.`,
+                ` ${pct(work.sex_participation.country)} ${work.sex === "F" ? "phụ nữ" : "nam giới"} từ 15 tuổi ở ${cname} tham gia lực lượng lao động (${pct(work.sex_participation.world)} trên thế giới), và ${pct(work.sex_unemployment.country)} trong số đó thất nghiệp.`) : ""}</p>
         <div class="row g-4">
-            <div class="col-md-7"><h3 class="h6">${tr("Workers by status in employment", "Lao động theo vị thế việc làm")}</h3>${table([tr("Status", "Vị thế"), tr("World", "Thế giới"), cname], statusRows)}</div>
-            <div class="col-md-5"><h3 class="h6">${tr("Workers by sector", "Lao động theo ngành")}</h3>${table([tr("Sector", "Ngành"), tr("World", "Thế giới"), cname], sectorRows)}</div>
+            <div class="col-lg-6"><h3 class="h6">${tr("Workers by status in employment", "Lao động theo vị thế việc làm")}</h3>${table([tr("Status", "Vị thế"), tr("World", "Thế giới"), cname, ...sexHead], statusRows)}</div>
+            <div class="col-lg-6"><h3 class="h6">${tr("Workers by sector", "Lao động theo ngành")}</h3>${table([tr("Sector", "Ngành"), tr("World", "Thế giới"), cname, ...sexHead], sectorRows)}</div>
         </div>
         <p class="small text-secondary">${tr(`ILO modelled estimates, ${work.world ? work.world.year : ""}`, `Ước tính mô hình của ILO, ${work.world ? work.world.year : ""}`)} ${cite("ilo_wdi")}. ${tr(
             "Only two categories are ranked (vulnerable or not), so this score is coarse.", "Chỉ xếp hạng hai nhóm (dễ tổn thương hay không), nên điểm này còn thô.")}</p>`));
@@ -401,6 +428,9 @@
                 ${cite("gallup_2020")} ${cite("upi_gallup_2020")}</p>` : `<p class="text-secondary">${tr("Not answered.", "Chưa trả lời.")}</p>`}
             <h3 class="h5 mt-4">${tr("Banking and saving", "Tài khoản và tiết kiệm")}</h3>
             ${bank.length ? `<ul class="small">${bank.map(b => `<li>${b}</li>`).join("")}</ul>` : `<p class="text-secondary">${tr("Not answered.", "Chưa trả lời.")}</p>`}
+            ${sec.account_groups && sec.account_groups.length ? `<h4 class="h6 mt-3">${tr("Account ownership among people like you", "Tỷ lệ có tài khoản ở những người giống bạn")}</h4>
+                ${table([tr("Group", "Nhóm"), tr("World", "Thế giới"), cname], sec.account_groups.map(g =>
+                    `<tr><td>${esc(g.label)}</td><td>${pct(g.world, 0)}</td><td>${pct(g.country, 0)}</td></tr>`))}` : ""}
             <p class="small">${cite(findex.cite)}</p>
         </div>
         <div class="col-lg-6"><h3 class="h5">${tr("Food security", "An ninh lương thực")}</h3>${foodHtml}</div>
@@ -536,6 +566,31 @@
                 },
             },
         });
+        const nh = inc.national_history;
+        if (nh) {
+            new Chart(document.getElementById("countryHistoryChart"), {
+                data: {
+                    labels: nh.years,
+                    datasets: [
+                        {type: "line", label: tr(`${r.country.name} median ($/day)`, `Trung vị ${r.country.name} ($/ngày)`), data: nh.median,
+                         borderColor: "#fbbf24", pointRadius: 0, yAxisID: "y"},
+                        {type: "line", label: tr("You ($/day)", "Bạn ($/ngày)"), data: nh.years.map(() => Math.round(inc.ppp_per_day * 100) / 100),
+                         borderColor: "#ffffff", borderDash: [4, 4], pointRadius: 0, yAxisID: "y"},
+                        {type: "bar", label: tr("Below $3.00 a day (%)", "Dưới 3,00 đô la/ngày (%)"), data: nh.below_3,
+                         backgroundColor: "rgba(248, 113, 113, 0.35)", yAxisID: "y2"},
+                    ],
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        y: {type: "logarithmic", position: "left", grid, ticks: {color: "#ccc", callback: v => [1, 2, 5, 10, 20, 50, 100].includes(v) ? `$${v}` : ""}},
+                        y2: {min: 0, max: 100, position: "right", grid: {display: false}, ticks: {color: "#f87171", callback: v => `${v}%`}},
+                        x: {ticks: {color: "#ccc", maxTicksLimit: 12}, grid},
+                    },
+                    plugins: {legend: {labels: {color: "#eee"}}},
+                },
+            });
+        }
         new Chart(document.getElementById("historyChart"), {
             type: "bar",
             data: {

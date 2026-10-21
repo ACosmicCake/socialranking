@@ -150,6 +150,26 @@ WDI_INDICATORS = {
     "SH.XPD.OOPC.CH.ZS": "Out-of-pocket spending (% of health spending)",
     "SE.ADT.LITR.ZS": "Adult literacy rate (15+)",
     "EN.POP.SLUM.UR.ZS": "Urban population living in slums",
+    "SI.POV.GINI": "Gini index (latest survey)",
+    # by sex
+    "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
+    "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
+    "FX.OWN.TOTL.FE.ZS": "Account ownership, female (% of age 15+)",
+    "FX.OWN.TOTL.MA.ZS": "Account ownership, male (% of age 15+)",
+    **{f"{base}.{sex}.ZS": f"{label}, {'female' if sex == 'FE' else 'male'}"
+       for base, label in (("SL.EMP.WORK", "Wage and salaried workers"), ("SL.EMP.MPYR", "Employers"),
+                           ("SL.FAM.WORK", "Contributing family workers"), ("SL.EMP.VULN", "Vulnerable employment"),
+                           ("SL.AGR.EMPL", "Employment in agriculture"), ("SL.IND.EMPL", "Employment in industry"),
+                           ("SL.SRV.EMPL", "Employment in services"), ("SL.UEM.TOTL", "Unemployment"),
+                           ("SL.TLF.CACT", "Labour force participation"))
+       for sex in ("FE", "MA")},
+    # account ownership by household income, age and education (Global Findex)
+    "FX.OWN.TOTL.40.ZS": "Account ownership, poorest 40% of households",
+    "FX.OWN.TOTL.60.ZS": "Account ownership, richest 60% of households",
+    "FX.OWN.TOTL.YG.ZS": "Account ownership, young adults (15-24)",
+    "FX.OWN.TOTL.OL.ZS": "Account ownership, older adults (25+)",
+    "FX.OWN.TOTL.PL.ZS": "Account ownership, primary education or less",
+    "FX.OWN.TOTL.SO.ZS": "Account ownership, secondary education or more",
 }
 # Educational attainment, population 25+, cumulative (% with at least this level).
 WDI_EDUCATION = ["SE.PRM.CUAT.ZS", "SE.SEC.CUAT.LO.ZS", "SE.SEC.CUAT.UP.ZS", "SE.SEC.CUAT.PO.ZS",
@@ -326,6 +346,18 @@ def build_income():
             "survey_ppp": float(survey["ppp"].iloc[0]) if len(survey) and survey["ppp"].iloc[0] > 0 else None,
         })
         countries[code] = dist
+
+    # Each economy's median and $3.00 poverty rate for every year since 1990.
+    hist = pip_csv("pip", "pip_national_history.csv", country="all", year="all", povline=3, fill_gaps="true")
+    for code, dist in countries.items():
+        rows = hist[(hist["country_code"] == code) & (hist["reporting_level"] == dist["coverage"])
+                    & (hist["reporting_year"] >= 1990) & (hist["reporting_year"] <= REFERENCE_YEAR)].sort_values("reporting_year")
+        if len(rows):
+            dist["history"] = {
+                "start": int(rows["reporting_year"].iloc[0]),
+                "median": [round(float(v), 2) for v in rows["median"]],
+                "below_3": [round(float(v), 4) for v in rows["headcount"]],
+            }
 
     # Urban and rural distributions, where PIP publishes them separately.
     for code, levels in build_urban_rural().items():
@@ -536,6 +568,27 @@ def wdi_by_year(indicator, since):
     return out
 
 
+def attainment_shares(series, code, ms_over_ba, do_over_ms):
+    """Nine exclusive ISCED shares from WDI's cumulative indicators (see build_education)."""
+    prm, lo, up, po, st, ba, ms, do = series
+    years = [y for y in prm.get(code, {}) if all(y in d.get(code, {}) for d in (lo, up, ba))]
+    if not years:
+        return None
+    y = max(years)
+    b = ba[code][y]
+    s_ = st.get(code, {}).get(y, b)
+    p_ = po.get(code, {}).get(y, s_)
+    m = ms.get(code, {}).get(y, b * ms_over_ba)
+    d = do.get(code, {}).get(y, m * do_over_ms)
+    filled = [k for k, src in (("post-secondary", po), ("short-cycle", st), ("master's", ms), ("doctoral", do))
+              if y not in src.get(code, {})]
+    cum = [100.0, prm[code][y], lo[code][y], up[code][y], p_, s_, b, m, d]
+    for i in range(1, len(cum)):
+        cum[i] = max(0.0, min(cum[i], cum[i - 1]))
+    shares = [(cum[i] - (cum[i + 1] if i + 1 < len(cum) else 0)) / 100 for i in range(len(cum))]
+    return y, [round(x, 5) for x in shares], filled
+
+
 def build_education(bl, bl_groups, known, pop25):
     """Attainment of adults 25+ in nine ISCED levels.
 
@@ -553,26 +606,24 @@ def build_education(bl, bl_groups, known, pop25):
         return sum(a for a, _ in pairs) / sum(b for _, b in pairs)
     ms_over_ba, do_over_ms = pooled_ratio(ms, ba), pooled_ratio(do, ms)
 
+    by_sex = {sex: [wdi_by_year(ind.replace(".ZS", f".{sex}.ZS"), EDUCATION_SINCE) for ind in WDI_EDUCATION]
+              for sex in ("FE", "MA")}
     countries = {}
+    world_sex = {"F": np.zeros(len(EDUCATION_LEVELS)), "M": np.zeros(len(EDUCATION_LEVELS))}
+    sex_weight = {"F": 0.0, "M": 0.0}
     for code in known:
-        years = [y for y in prm.get(code, {}) if all(y in d.get(code, {}) for d in (lo, up, ba))]
-        if not years:
+        total = attainment_shares([prm, lo, up, po, st, ba, ms, do], code, ms_over_ba, do_over_ms)
+        if not total:
             continue
-        y = max(years)
-        cum = [100.0, prm[code][y], lo[code][y], up[code][y]]
-        b = ba[code][y]
-        s_ = st.get(code, {}).get(y, b)
-        p_ = po.get(code, {}).get(y, s_)
-        m = ms.get(code, {}).get(y, b * ms_over_ba)
-        d = do.get(code, {}).get(y, m * do_over_ms)
-        filled = [k for k, src in (("post-secondary", po), ("short-cycle", st), ("master's", ms), ("doctoral", do))
-                  if y not in src.get(code, {})]
-        cum += [p_, s_, b, m, d]
-        for i in range(1, len(cum)):
-            cum[i] = max(0.0, min(cum[i], cum[i - 1]))
-        shares = [(cum[i] - (cum[i + 1] if i + 1 < len(cum) else 0)) / 100 for i in range(len(cum))]
-        countries[code] = {"source": "WDI", "year": y, "shares": [round(x, 5) for x in shares],
-                           "filled": filled}
+        y, shares, filled = total
+        countries[code] = {"source": "WDI", "year": y, "shares": shares, "filled": filled}
+        for sex, wdi_sex in (("F", "FE"), ("M", "MA")):
+            res = attainment_shares(by_sex[wdi_sex], code, ms_over_ba, do_over_ms)
+            if res:
+                countries[code].setdefault("by_sex", {})[sex] = res[1]
+                if pop25.get(code):
+                    world_sex[sex] += np.array(res[1]) * pop25[code] / 2
+                    sex_weight[sex] += pop25[code] / 2
 
     # Barro-Lee crosswalk for the rest (and age/sex groups for everyone).
     bl = bl[bl["year"] == bl["year"].max()].copy()
@@ -631,6 +682,7 @@ def build_education(bl, bl_groups, known, pop25):
         "countries_wdi": sum(e["source"] == "WDI" for e in countries.values()),
         "countries_barro_lee": sum(e["source"] == "Barro-Lee" for e in countries.values()),
         "fill_ratios": {"master_over_bachelor": round(ms_over_ba, 4), "doctoral_over_master": round(do_over_ms, 4)},
+        "world_by_sex": {sex: [round(float(x), 5) for x in world_sex[sex] / sex_weight[sex]] for sex in ("F", "M")},
         "broad_levels": BROAD_EDUCATION,
         "broad_from_level": BROAD_FROM_LEVEL,
         "groups_year": int(bl["year"].max()),

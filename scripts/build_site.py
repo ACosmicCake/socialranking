@@ -203,7 +203,8 @@ def page_context(lang="en"):
     names = country_names_vi() if lang == "vi" else {c["iso3"]: c["name"] for c in countries}
     options = [
         {"iso3": c["iso3"], "name": names[c["iso3"]], "currency": c.get("currency") or "",
-         "currency_name": c.get("currency_name") or "", "exact": exact_income_available(c)}
+         "currency_name": c.get("currency_name") or "", "exact": exact_income_available(c),
+         "welfare": c.get("income", {}).get("welfare_type", "")}
         for c in countries
     ]
     options.sort(key=lambda c: c["name"].casefold())

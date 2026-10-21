@@ -12,7 +12,7 @@
             <option value="" disabled selected>{{ _("Choose your country...") }}</option>
             {% for c in country_options %}
             <option value="{{ c.iso3 }}" data-currency="{{ c.currency }}" data-currency-name="{{ c.currency_name }}"
-                    data-exact="{{ 'yes' if c.exact else 'no' }}">{{ c.name }}</option>
+                    data-exact="{{ 'yes' if c.exact else 'no' }}" data-welfare="{{ c.welfare }}">{{ c.name }}</option>
             {% endfor %}
         </select>
     {% elif q.type == "number" %}
@@ -45,6 +45,9 @@
         </div>
     {% endif %}
     {% if q.help %}<div class="form-text">{{ q.help }}</div>{% endif %}
+    {% if q.id == "income_basis" %}<div class="small text-info mt-1" id="welfare-hint" hidden
+        data-income="{{ _("This country's survey measures income.") }}"
+        data-consumption="{{ _("This country's survey measures spending (consumption).") }}"></div>{% endif %}
     <div class="invalid-feedback d-block" data-error-for="{{ q.id }}" hidden></div>
     <div class="source-note">{{ _("Based on:") }} {{ cite(q.source) }}</div>
 </div>
