@@ -154,6 +154,7 @@ WDI_INDICATORS = {
     "SI.DST.10TH.10": "Income share held by highest 10%",
     "SI.DST.FRST.20": "Income share held by lowest 20%",
     "SI.POV.NAHC": "Poverty headcount ratio at national poverty lines (% of population)",
+    "GD_WBL_OVL_LAW": "Women, Business and the Law: legal framework index (0-100)",
     # by sex
     "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
     "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
