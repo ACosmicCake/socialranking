@@ -46,7 +46,12 @@ The results page shows:
 - the public programmes your household receives, against coverage in your country and in your income fifth;
 - your country at a glance;
 - how your self-placement on the ladder compares with the data;
-- a shareable link and a downloadable summary image.
+- highlight cards at the top, a section bar that follows your scrolling, and a back-to-top button;
+- a shareable link, a downloadable summary image, and your numbers as CSV or everything as JSON;
+- "Change my answers", which reopens the quiz pre-filled.
+
+The quiz shows your step and progress, lets you jump between visited sections, marks required questions, and saves your
+answers in your browser only (localStorage), so a reload or a closed tab resumes where you left off.
 
 Every figure links to its source. The [`/methodology`](templates/methodology.html) page documents each calculation and its
 limitations. The [`/questionnaire`](templates/questionnaire.html) page lists every question with its source instrument.
