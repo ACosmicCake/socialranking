@@ -4,6 +4,8 @@
 # For the pull request step, allow it once under Settings -> Actions -> General ->
 # Workflow permissions -> "Allow GitHub Actions to create and approve pull requests".
 # Without that, the updated data are still pushed to a branch named data-refresh-*.
+# Pull requests opened with the workflow token don't start other workflows, so the
+# browser walkthrough is dispatched on the branch here; its result shows on the PR.
 name: Refresh data
 
 on:
@@ -14,6 +16,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write
 
 jobs:
   refresh:
@@ -53,6 +56,7 @@ jobs:
           git add data/
           git commit -m "Refresh data ($(date -u +%Y-%m-%d))"
           git push -u origin "$branch"
+          gh workflow run e2e.yml --ref "$branch" || echo "::warning::Could not start the browser walkthrough on $branch."
           {
             echo "Automatic monthly data refresh."
             echo
