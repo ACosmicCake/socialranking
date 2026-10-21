@@ -16,6 +16,11 @@ UI = {
     "We restored your answers from your last visit. They're saved only in this browser.":
         "Chúng tôi đã khôi phục câu trả lời từ lần trước. Chúng chỉ được lưu trong trình duyệt này.",
     "Start over": "Làm lại từ đầu",
+    "Continue where you left off": "Tiếp tục bài đang làm",
+    "economies, each with its own national comparison": "nền kinh tế, mỗi nơi có so sánh trong nước riêng",
+    "World Bank indicators per country": "chỉ số của Ngân hàng Thế giới cho mỗi nước",
+    "questions from international surveys, most of them optional": "câu hỏi từ các khảo sát quốc tế, phần lớn không bắt buộc",
+    "income history, plus your parents' generation back to 1965": "lịch sử thu nhập, và thế hệ bố mẹ bạn từ năm 1965",
     "Step {n} of {total}": "Bước {n}/{total}",
     "{n} questions answered": "Đã trả lời {n} câu",
     "Quiz sections": "Các phần của bài",

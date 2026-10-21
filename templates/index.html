@@ -14,9 +14,21 @@
         compare with the world, your region and your own country, measure by measure, using real data.
         {% endif %}
     </p>
-    <a class="btn btn-light btn-lg mt-2" href="{{ base }}quiz.html">{{ _("Start the quiz") }}</a>
+    <div class="d-flex flex-wrap gap-2 justify-content-center mt-2">
+        <a class="btn btn-light btn-lg" href="{{ base }}quiz.html" id="start-quiz">{{ _("Start the quiz") }}</a>
+        <a class="btn btn-outline-light btn-lg" href="{{ base }}quiz.html" id="resume-quiz" hidden>{{ _("Continue where you left off") }}</a>
+    </div>
     <p class="small mt-3 text-white-50">{{ _("Takes about 10 minutes. Your answers never leave your browser.") }}</p>
 </div>
+
+<section class="container pt-5">
+    <div class="stat-grid text-center">
+        <div class="stat-card"><span class="stat-value">{{ coverage.economies }}</span><span class="stat-text">{{ _("economies, each with its own national comparison") }}</span></div>
+        <div class="stat-card"><span class="stat-value">{{ coverage.wdi_indicators }}</span><span class="stat-text">{{ _("World Bank indicators per country") }}</span></div>
+        <div class="stat-card"><span class="stat-value">{{ question_count }}</span><span class="stat-text">{{ _("questions from international surveys, most of them optional") }}</span></div>
+        <div class="stat-card"><span class="stat-value">1990-2026</span><span class="stat-text">{{ _("income history, plus your parents' generation back to 1965") }}</span></div>
+    </div>
+</section>
 
 <section class="container page-section">
     <div class="row g-4 text-start">
@@ -47,4 +59,20 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Offer to resume a quiz saved in this browser (see quiz.js).
+try {
+    const saved = JSON.parse(localStorage.getItem("socialranking-quiz-v1") || "null");
+    if (saved && saved.answers && Object.keys(saved.answers).length) {
+        document.getElementById("resume-quiz").hidden = false;
+        const start = document.getElementById("start-quiz");
+        start.classList.replace("btn-light", "btn-outline-light");
+        document.getElementById("resume-quiz").classList.replace("btn-outline-light", "btn-light");
+        start.addEventListener("click", () => localStorage.removeItem("socialranking-quiz-v1"));
+    }
+} catch (e) { /* storage unavailable */ }
+</script>
 {% endblock %}

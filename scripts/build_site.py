@@ -223,6 +223,7 @@ def page_context(lang="en"):
         "country_options": options,
         "g": g,
         "data_sources": g["sources"],
+        "question_count": sum(1 for _ in qn.all_questions()),
         "coverage": {
             "economies": len(countries),
             "income": sum("income" in c for c in countries),
