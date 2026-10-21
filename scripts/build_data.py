@@ -279,6 +279,11 @@ BROAD_EDUCATION = ["No schooling or primary not completed", "Primary", "Secondar
                    "Tertiary (some or completed)"]
 BROAD_FROM_LEVEL = [0, 1, 2, 2, 2, 3, 3, 3, 3]
 BL_AGE_GROUPS = [(25, 34), (35, 44), (45, 54), (55, 64)]
+# Parents' generations: each sex's attainment at ages 35-44 in every Barro-Lee year from
+# 1965 (parents of today's 65+) to 2015 (parents of today's 15-24), so a parent is compared
+# with their own birth cohort at prime age rather than with the survivors of it today.
+BL_COHORT_AGES = (35, 44)
+BL_COHORT_YEARS = range(1965, 2016, 5)
 
 
 # ---------------------------------------------------------------------------
@@ -896,6 +901,25 @@ def build_education(bl, bl_groups, known, pop25):
                 weight += r["pop"]
             world_groups.setdefault(key, {})[sex] = [round(float(x), 4) for x in totals / weight]
 
+    # Parents' generations (see BL_COHORT_YEARS), women and men separately.
+    world_cohorts = {}
+    for sex in ("F", "M"):
+        df = bl_groups[sex]
+        df = df[(df["agefrom"] == BL_COHORT_AGES[0]) & (df["ageto"] == BL_COHORT_AGES[1])
+                & df["year"].isin(BL_COHORT_YEARS)].copy()
+        df["iso3"] = df["WBcode"].replace(BARRO_LEE_CODE_FIXES)
+        for year, g in df.groupby("year"):
+            totals, weight = np.zeros(4), 0.0
+            for _, r in g.iterrows():
+                broad = np.array([r["lu"] + r["lp"] - r["lpc"], r["lpc"], r["ls"], r["lh"]]).clip(min=0)
+                broad = broad / broad.sum()
+                if r["iso3"] in countries:
+                    countries[r["iso3"]].setdefault("cohorts", {}).setdefault(str(int(year)), {})[sex] = \
+                        [round(float(x), 4) for x in broad]
+                totals += broad * r["pop"]
+                weight += r["pop"]
+            world_cohorts.setdefault(str(int(year)), {})[sex] = [round(float(x), 4) for x in totals / weight]
+
     # World shares weighted by population aged 25+.
     totals, weight = np.zeros(len(EDUCATION_LEVELS)), 0.0
     for code, e in countries.items():
@@ -917,6 +941,8 @@ def build_education(bl, bl_groups, known, pop25):
         "broad_from_level": BROAD_FROM_LEVEL,
         "groups_year": int(bl["year"].max()),
         "groups": world_groups,
+        "cohorts": world_cohorts,
+        "cohort_ages": f"{BL_COHORT_AGES[0]}-{BL_COHORT_AGES[1]}",
     }
 
 

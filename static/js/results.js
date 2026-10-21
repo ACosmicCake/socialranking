@@ -325,7 +325,36 @@
              edu.country_sex_shares ? tr(`${edu.sex === "F" ? "Women" : "Men"} in ${cname}`, `${edu.sex === "F" ? "Phụ nữ" : "Nam giới"} ở ${cname}`) : ""].filter(Boolean), eduRows, "edu-table")}
     <p class="small text-secondary">${tr("World and national attainment of adults 25+", "Trình độ học vấn của người từ 25 tuổi, thế giới và quốc gia")} ${cite("uis_attainment")}${edu.country_source === "Barro-Lee" ? `; ${cname}: ${tr("Barro-Lee 2015, mapped to these levels", "Barro-Lee 2015, quy đổi sang các trình độ này")} ${cite("barro_lee")}` : ""}.
         ${edu.country_mean_years ? tr(`Average years of schooling in ${cname} (ages 25-64, 2015): ${edu.country_mean_years}.`, `Số năm đi học trung bình ở ${cname} (25-64 tuổi, 2015): ${fixed(edu.country_mean_years, 2)}.`) : ""}</p>
-    ${groupHtml}`));
+    ${groupHtml}
+    ${mobilityHtml(r.mobility)}`));
+
+    // ---------------------------------------------------------------- social mobility (within education)
+    function mobilityHtml(m) {
+        if (!m || (!m.parents && !m.needs_age)) return "";
+        const title = `<h3 class="h5 mt-4">${tr("Compared with your parents", "So với bố mẹ bạn")}</h3>`;
+        if (m.needs_age) return `${title}<p class="text-secondary">${tr("Give your age group to compare with your parents' generation.", "Hãy cho biết nhóm tuổi để so sánh với thế hệ của bố mẹ bạn.")}</p>`;
+        const who = p => (p.parent === "mother" ? tr("Your mother", "Mẹ bạn") : tr("Your father", "Bố bạn"));
+        const peers = p => (p.sex === "F" ? tr("women", "phụ nữ") : tr("men", "nam giới"));
+        const lines = m.parents.map(p => `<li>${tr(
+            `${who(p)} (${esc(lower(p.label))}) was better educated than about <strong>${pct(p.national_pct !== undefined ? p.national_pct : p.world_pct)}</strong> of ${peers(p)} of the same generation ${p.national_pct !== undefined ? `in ${cname}` : "worldwide"}${p.national_pct !== undefined ? ` (${pct(p.world_pct)} worldwide)` : ""}.`,
+            `${who(p)} (${esc(p.label.toLowerCase())}) có học vấn cao hơn khoảng <strong>${pct(p.national_pct !== undefined ? p.national_pct : p.world_pct)}</strong> ${peers(p)} cùng thế hệ ${p.national_pct !== undefined ? `ở ${cname}` : "trên thế giới"}${p.national_pct !== undefined ? ` (${pct(p.world_pct)} trên thế giới)` : ""}.`)}</li>`);
+        const dir = {up: tr("went further in education than", "học cao hơn"), same: tr("reached the same broad level as", "đạt cùng bậc học với"), down: tr("didn't go as far in education as", "chưa học cao bằng")}[m.direction];
+        const parentName = m.parents.length > 1 ? tr("your better-educated parent", "người có học vấn cao hơn trong bố mẹ bạn") : (m.best === "mother" ? tr("your mother", "mẹ bạn") : tr("your father", "bố bạn"));
+        let rankText = "";
+        if (m.rank_change !== undefined) {
+            const own = m.basis === "country" ? m.own_national_pct : m.own_world_pct;
+            const where = m.basis === "country" ? tr(`in ${cname}`, `ở ${cname}`) : tr("worldwide", "trên thế giới");
+            rankText = tr(` Among people your age ${where}, you rank above about <strong>${pct(own)}</strong>, so relative to your generation you ${m.rank_change > 0 ? `<strong>moved up ${fixed(m.rank_change, 1)} points</strong>` : m.rank_change < 0 ? `<strong>moved down ${fixed(-m.rank_change, 1)} points</strong>` : "held the same position"} compared with ${parentName}.`,
+                          ` Trong số những người cùng tuổi ${where}, bạn xếp trên khoảng <strong>${pct(own)}</strong>, nên so với thế hệ của mình bạn ${m.rank_change > 0 ? `<strong>tăng ${fixed(m.rank_change, 1)} điểm</strong>` : m.rank_change < 0 ? `<strong>giảm ${fixed(-m.rank_change, 1)} điểm</strong>` : "giữ nguyên vị trí"} so với ${parentName}.`);
+        } else {
+            rankText = tr(" You're probably still in education, so we don't rank you against your own generation yet.", " Có lẽ bạn vẫn đang đi học, nên chúng tôi chưa xếp hạng bạn trong thế hệ của mình.");
+        }
+        return `${title}<ul class="small">${lines.join("")}</ul>
+            <p>${tr(`You (${esc(lower(m.own_label))}) ${dir} ${parentName}.`, `Bạn (${esc(m.own_label.toLowerCase())}) ${dir} ${parentName}.`)}${rankText}</p>
+            <p class="small text-secondary">${tr(
+                `Parents are compared with people of their sex born around ${m.cohort_born}, assuming they were about ${m.parent_gap} when you were born, using Barro-Lee attainment at ages 35-44 in ${m.cohort_year}. Comparing ranks rather than levels allows for the fact that schooling expanded everywhere: going further than your parents is common, moving up relative to your generation is not. Not scored.`,
+                `Bố mẹ được so với những người cùng giới sinh khoảng năm ${m.cohort_born}, giả định họ khoảng ${m.parent_gap} tuổi khi bạn ra đời, dựa trên trình độ học vấn ở tuổi 35-44 năm ${m.cohort_year} của Barro-Lee. So sánh thứ hạng thay vì bậc học tính đến việc giáo dục đã mở rộng ở khắp nơi: học cao hơn bố mẹ là phổ biến, còn tăng hạng so với thế hệ mình thì không. Không tính điểm.`)} ${cite("barro_lee")}</p>`;
+    }
 
     // ---------------------------------------------------------------- occupation (within work)
     function occupationHtml(o) {

@@ -130,6 +130,7 @@ def browser_data(lang="en"):
         "work_options": qn.WORK_OPTIONS,
         "sector_options": qn.SECTOR_OPTIONS,
         "occupation_options": qn.OCCUPATION_OPTIONS,
+        "parent_education_options": qn.PARENT_EDUCATION_OPTIONS,
         "employed": list(qn.EMPLOYED),
         "vulnerable": list(qn.VULNERABLE),
         "small_assets": list(qn.SMALL_ASSETS),
@@ -164,7 +165,8 @@ def browser_data(lang="en"):
             gallup[k]["label"], gallup[k]["definition"] = label, definition
         pyramid = [{**b, "label": i18n.WEALTH[b["key"]]} for b in pyramid]
         opts = {qid: option_map(qid, sections) for qid in ("income_band", "education", "cooking", "water",
-                                                          "sanitation", "work_status", "work_sector", "occupation")}
+                                                          "sanitation", "work_status", "work_sector", "occupation",
+                                                          "mother_education")}
         q.update({
             "income_bands": [(k, lo, hi, opts["income_band"][k]) for k, lo, hi, _ in qn.INCOME_BANDS],
             "education_options": [(k, opts["education"][k]) for k, _ in qn.EDUCATION_OPTIONS],
@@ -175,6 +177,7 @@ def browser_data(lang="en"):
             "work_options": [(k, opts["work_status"][k]) for k, _ in qn.WORK_OPTIONS],
             "sector_options": [(k, opts["work_sector"][k]) for k, _ in qn.SECTOR_OPTIONS],
             "occupation_options": [(k, opts["occupation"][k]) for k, _ in qn.OCCUPATION_OPTIONS],
+            "parent_education_options": [(k, opts["mother_education"][k]) for k, _ in qn.PARENT_EDUCATION_OPTIONS],
         })
         labels = i18n.LABELS
     out = {

@@ -405,3 +405,20 @@ test("occupation by ISCO-08 skill level joins the work score", () => {
     assert.equal(vn.country_shares, undefined);
     assert.ok(vn.world_pct > 0);
 });
+
+test("social mobility against parents' generation", () => {
+    const base = {...FULL, age: "25-34", sex: "F", mother_education: "primary", father_education: "secondary"};
+    const m = run(base).mobility;
+    assert.equal(m.cohort_year, 2005);  // parents born about 1966, aged 35-44 in 2005
+    assert.equal(m.parents.length, 2);
+    assert.equal(m.best, "father");
+    assert.equal(m.direction, "up");  // bachelor's is tertiary
+    assert.ok(m.own_national_pct > m.parents[1].national_pct);
+    close(m.rank_change, m.own_national_pct - m.parents[1].national_pct, 0.11);
+    // Older users are matched to earlier generations.
+    assert.equal(run({...base, age: "65plus"}).mobility.cohort_year, 1965);
+    assert.equal(run({...base, age: "15-24"}).mobility.rank_change, undefined);
+    assert.equal(run({...base, education: "primary"}).mobility.direction, "down");
+    assert.deepEqual(run({...FULL, mother_education: "dont_know"}).mobility, {});
+    assert.equal(run({...FULL, mother_education: "tertiary"}).mobility.needs_age, true);
+});

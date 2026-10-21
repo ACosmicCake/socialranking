@@ -25,6 +25,7 @@ a cited report.
 | **Social protection** (shown, not in the index) | Public programmes received, by ASPIRE type: social insurance, social assistance, labour market | World Bank ASPIRE coverage by country and income fifth (WDI); ILO World Social Protection Report 2024-26 | 2008-2023 |
 | **Wealth** (optional) | Net worth per adult in US$ | UBS Global Wealth Report 2026 wealth pyramid | 2025 |
 | **Your country** (context only) | Country | Income group, GDP, poverty rates and 15 WDI indicators (incl. Human Capital Index, learning poverty, mobile subscriptions, health spending) vs region and world | 2019-2025 |
+| **Social mobility** (not scored) | Mother's and father's education (4 broad levels) | Barro-Lee v3: each parent's birth cohort at ages 35-44 (1965-2015), by sex, world and 140+ countries | 1965-2015 |
 | **Self-placement** (not scored) | MacArthur Scale of Subjective Social Status, country and world ladders | Your measured rung | - |
 
 The results page shows:
@@ -37,7 +38,7 @@ The results page shows:
 - whether your income covers a healthy diet at your country's food prices (World Bank Food Prices for Nutrition);
 - the income your household would need, in your own currency, to reach the median, top 10% and top 1% of your country and the world;
 - a "what if?" slider for different incomes;
-- education compared with the world, your country and people of your age and sex;
+- education compared with the world, your country and people of your age and sex, and your parents' education against their own generation (social mobility);
 - work status and sector compared with the ILO's estimates, and your occupation's skill level compared with surveys in 115 economies;
 - every household service compared with the world, your region, your country and your urban/rural area;
 - your Multidimensional Poverty Index score and deprivations, and overcrowding;

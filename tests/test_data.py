@@ -170,3 +170,15 @@ def test_occupation_shares():
         if o:
             assert o["year"] >= occ["since"]
             assert math.isclose(sum(o["shares"]), 1, abs_tol=1e-3), c["iso3"]
+
+
+def test_parent_cohorts():
+    cohorts = data.global_data()["education"]["cohorts"]
+    assert list(cohorts) == [str(y) for y in range(1965, 2016, 5)]
+    for year, by_sex in cohorts.items():
+        for sex, shares in by_sex.items():
+            assert math.isclose(sum(shares), 1, abs_tol=1e-3)
+    # Schooling expanded: fewer women without primary in each later generation, worldwide.
+    no_school = [cohorts[y]["F"][0] for y in cohorts]
+    assert all(b < a for a, b in zip(no_school, no_school[1:]))
+    assert sum("cohorts" in c.get("education", {}) for c in data.countries()) > 130
