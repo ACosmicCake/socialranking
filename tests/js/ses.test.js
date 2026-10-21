@@ -539,4 +539,9 @@ test("Mobile phone is ranked as context only", () => {
     // Not part of the living-standards score.
     assert.equal(smart.global_pct, run(FULL).living.global_pct);
     assert.equal(run(FULL).living.phone, undefined);
+    // Women and rural adults in Viet Nam, where Findex reports the breakdowns.
+    const groups = run({...FULL, phone: "basic", sex: "F", area: "rural"}).living.phone.groups;
+    assert.deepEqual(groups.map(g => g.key), ["F", "rural"]);
+    for (const g of groups) assert.ok(g.pct > 0 && g.pct < 50);
+    assert.deepEqual(smart.phone.groups, []);
 });

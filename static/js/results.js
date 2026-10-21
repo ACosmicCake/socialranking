@@ -524,14 +524,22 @@
     function phoneHtml() {
         const ph = liv.phone;
         if (!ph) return "";
+        const groupName = {F: tr(`Women, ${cname}`, `Phụ nữ, ${cname}`), M: tr(`Men, ${cname}`, `Nam giới, ${cname}`),
+                           urban: tr(`Urban ${cname}`, `${cname}, thành thị`), rural: tr(`Rural ${cname}`, `${cname}, nông thôn`)};
         const rows = ph.labels.map((label, i) => `<tr class="${label === ph.label ? "table-active" : ""}"><td>${esc(label)}${label === ph.label ? ` &larr; ${tr("you", "bạn")}` : ""}</td>
-            <td>${pct(ph.world_shares[i])}</td><td>${ph.country_shares ? pct(ph.country_shares[i]) : "-"}</td></tr>`);
-        const better = ph.key === "none" ? "" : tr(`You're better connected than about <strong>${pct(ph.world_pct)}</strong> of adults worldwide${ph.national_pct !== undefined ? ` and ${pct(ph.national_pct)} in ${cname}` : ""} (counting half of those with the same kind of phone).`,
-            `Bạn được kết nối tốt hơn khoảng <strong>${pct(ph.world_pct)}</strong> người trưởng thành trên thế giới${ph.national_pct !== undefined ? ` và ${pct(ph.national_pct)} ở ${cname}` : ""} (tính một nửa số người có cùng loại điện thoại).`);
+            <td>${pct(ph.world_shares[i])}</td><td>${ph.country_shares ? pct(ph.country_shares[i]) : "-"}</td>
+            ${ph.groups.map(g => `<td>${pct(g.shares[i])}</td>`).join("")}</tr>`);
+        const groupPhrase = {F: tr(`women in ${cname}`, `phụ nữ ở ${cname}`), M: tr(`men in ${cname}`, `nam giới ở ${cname}`),
+                             urban: tr(`urban adults in ${cname}`, `người ở thành thị ${cname}`),
+                             rural: tr(`rural adults in ${cname}`, `người ở nông thôn ${cname}`)};
+        const groupText = ph.key === "none" || !ph.groups.length ? "" : " " + tr("Compared with", "So với") + " " +
+            ph.groups.map(g => `${esc(groupPhrase[g.key])}: ${pct(g.pct)}`).join("; ") + ".";
+        const better = ph.key === "none" ? "" : tr(`You're better connected than about <strong>${pct(ph.world_pct)}</strong> of adults worldwide${ph.national_pct !== undefined ? ` and ${pct(ph.national_pct)} in ${cname}` : ""} (counting half of those with the same kind of phone).${groupText}`,
+            `Bạn được kết nối tốt hơn khoảng <strong>${pct(ph.world_pct)}</strong> người trưởng thành trên thế giới${ph.national_pct !== undefined ? ` và ${pct(ph.national_pct)} ở ${cname}` : ""} (tính một nửa số người có cùng loại điện thoại).${groupText}`);
         return `<h3 class="h5 mt-4">${tr("Mobile phone", "Điện thoại di động")}</h3>
-            <div class="row g-4"><div class="col-lg-6">
+            <div class="row g-4"><div class="col-lg-${ph.groups.length ? 9 : 6}">
             <p class="small">${tr("Your main phone", "Điện thoại chính của bạn")}: <strong>${esc(ph.label.toLowerCase())}</strong>. ${better}</p>
-            ${table([tr("Main phone", "Điện thoại chính"), tr("World", "Thế giới"), cname], rows)}
+            ${table([tr("Main phone", "Điện thoại chính"), tr("World", "Thế giới"), cname, ...ph.groups.map(g => esc(groupName[g.key]))], rows)}
             <p class="small text-secondary">${tr(`Adults 15 and over in the ${ph.world_economies} economies in the Global Findex 2025 connectivity module${ph.year ? ` (${cname}: ${ph.year})` : ""}, weighted by adult population. Context only; not scored.`,
                 `Người từ 15 tuổi ở ${ph.world_economies} nền kinh tế trong phần kết nối của Global Findex 2025${ph.year ? ` (${cname}: ${ph.year})` : ""}, gia quyền theo dân số trưởng thành. Chỉ để tham khảo; không tính điểm.`)} ${cite("findex_2025")}</p>
             </div></div>`;
