@@ -27,7 +27,7 @@
    "home": "https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition"
   },
   "imf": {
-   "name": "IMF World Economic Outlook, October 2026: inflation, average consumer prices (PCPIPCH)",
+   "name": "IMF World Economic Outlook (October 2026): inflation, average consumer prices (PCPIPCH)",
    "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH",
    "home": "https://www.imf.org/external/datamapper/PCPIPCH@WEO"
   },
@@ -3182,7 +3182,7 @@
  "prices": {
   "base_year": 2021,
   "last_year": 2026,
-  "source": "IMF World Economic Outlook, October 2026",
+  "source": "IMF World Economic Outlook (October 2026)",
   "max_current_inflation": 1.0
  },
  "location": {
