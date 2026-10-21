@@ -1051,6 +1051,28 @@
             ["SE.LPV.PRIM", "pct"], ["IT.CEL.SETS.P2", "number"], ["SH.XPD.CHEX.PC.CD", "money"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);
 
+        // Which way is better, for ranking countries: 1 higher, -1 lower. Indicators that aren't
+        // better or worse (urbanisation, health spending) or aren't comparable across countries
+        // (national poverty lines) get no rank.
+        const LOWER_BETTER = /^(SH\.DYN\.MORT|SN\.ITK\.DEFC|SL\.UEM|SL\.EMP\.VULN|SH\.XPD\.OOPC|EN\.POP\.SLUM|SI\.POV\.GINI|SI\.DST\.10TH|EN\.ATM\.PM25|VC\.IHR|SH\.STA\.STNT|SE\.LPV)/;
+        const UNRANKED = /^(SP\.URB|SH\.XPD\.CHEX|SI\.POV\.NAHC)/;
+
+        // Share of the world's population living in economies that do worse on this indicator
+        // (economies with the same value count half), among economies with data.
+        function populationRank(code, v) {
+            if (UNRANKED.test(code)) return null;
+            const sign = LOWER_BETTER.test(code) ? -1 : 1;
+            let worse = 0, total = 0;
+            for (const c of D.countries) {
+                const x = value(c.wdi, code);
+                if (x === null || !c.population) continue;
+                total += c.population;
+                if (sign * (x - v) < 0) worse += c.population;
+                else if (x === v) worse += c.population / 2;
+            }
+            return total ? pct(worse / total) : null;
+        }
+
         // Total indicator and its female and male versions.
         const SEX_GLANCE = [
             ["SP.DYN.LE00.IN", "SP.DYN.LE00.FE.IN", "SP.DYN.LE00.MA.IN"],
@@ -1077,7 +1099,8 @@
                 const v = value(country.wdi, code);
                 if (v === null) continue;
                 result.glance.push({code, label, fmt, value: v, year: year(country.wdi, code),
-                                    world: value(world, code), region: region ? value(region.wdi, code) : null});
+                                    world: value(world, code), region: region ? value(region.wdi, code) : null,
+                                    better_than_pct: populationRank(code, v)});
             }
             result.region_name = region ? region.name : null;
             result.income_group = groupLabel(country.income_group);
