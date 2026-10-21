@@ -12,6 +12,16 @@ LANGUAGES = {"en": "English", "vi": "Tiếng Việt"}
 UI = {
     # navigation and layout
     "Take the quiz": "Làm bài",
+    "Required": "Bắt buộc",
+    "We restored your answers from your last visit. They're saved only in this browser.":
+        "Chúng tôi đã khôi phục câu trả lời từ lần trước. Chúng chỉ được lưu trong trình duyệt này.",
+    "Start over": "Làm lại từ đầu",
+    "Step {n} of {total}": "Bước {n}/{total}",
+    "{n} questions answered": "Đã trả lời {n} câu",
+    "Quiz sections": "Các phần của bài",
+    "Next: {section}": "Tiếp theo: {section}",
+    "Only questions marked Required are needed. The rest are optional, but each one adds detail to your results.":
+        "Chỉ những câu có nhãn Bắt buộc là cần trả lời. Các câu khác không bắt buộc, nhưng mỗi câu giúp kết quả chi tiết hơn.",
     "Methodology": "Phương pháp",
     "Questionnaire": "Bảng hỏi",
     "Sources": "Nguồn",

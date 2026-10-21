@@ -88,7 +88,7 @@
         ["country", tr("Your country", "Nước bạn")]]
         .filter(([id]) => !(id === "work" && !work.status) && !(id === "wealth" && !r.wealth.band) && !(id === "mpi" && !r.mpi.available)
             && !(id === "protection" && !r.social_protection.received && !r.social_protection.country));
-    html.push(`<nav class="result-nav sticky-top" aria-label="${tr("Result sections", "Các phần kết quả")}"><div class="container d-flex flex-wrap gap-1 py-2">
+    html.push(`<nav class="result-nav sticky-top" aria-label="${tr("Result sections", "Các phần kết quả")}"><div class="container d-flex gap-1 py-2">
         ${navItems.map(([id, label]) => `<a class="btn btn-sm btn-outline-secondary" href="#${id}">${label}</a>`).join("")}</div></nav>
         <div class="container pb-5">`);
 
@@ -108,6 +108,22 @@
     else if (p.gap > 1) gapText = tr(`You placed yourself <strong>${p.gap} rungs higher</strong> than the data suggests.`,
         `Bạn tự đặt mình <strong>cao hơn ${p.gap} bậc</strong> so với số liệu.`);
     else gapText = tr("Your self-placement is close to what the data suggests.", "Cách bạn tự đánh giá khá sát với số liệu.");
+
+    // Highlights: the most telling numbers from each section, linking to the details.
+    const highlights = [];
+    const hl = (id, value, text) => highlights.push(`<a class="stat-card" href="#${id}"><span class="stat-value">${value}</span><span class="stat-text">${text}</span></a>`);
+    hl("income", tr(`Top ${pct(inc.top_pct)}`, `${pct(inc.top_pct)} cao nhất`), tr("of the world by income per person", "thế giới theo thu nhập bình quân đầu người"));
+    if (inc.national_pct !== undefined) hl("income", pct(inc.national_pct), tr(`of people in ${cname} have less income`, `dân số ${cname} có thu nhập thấp hơn`));
+    hl("education", pct(edu.global_pct), tr("of adults worldwide have less education", "người trưởng thành trên thế giới học vấn thấp hơn"));
+    if (inc.healthy_diet.share_of_income !== undefined) hl("income", pct(inc.healthy_diet.share_of_income * 100, 0),
+        tr(`of your income: what a healthy diet costs in ${cname}`, `thu nhập của bạn: chi phí một chế độ ăn lành mạnh ở ${cname}`));
+    if (sec.emergency) hl("security", pct(sec.emergency.world_pct), tr("of adults are less able to raise emergency money", "người trưởng thành khó xoay tiền khẩn cấp hơn bạn"));
+    if (r.mobility.rank_change !== undefined) hl("education", `${r.mobility.rank_change > 0 ? "+" : ""}${fixed(r.mobility.rank_change, 1)}`,
+        tr("rank points in education compared with your parents", "điểm thứ hạng học vấn so với bố mẹ"));
+    if (r.mpi.available) hl("mpi", `${fixed(r.mpi.score, 0)}%`, tr("multidimensional poverty score (33% or more counts as poor)", "điểm nghèo đa chiều (từ 33% là nghèo)"));
+    if (work.occupation && work.occupation.world_pct !== undefined) hl("work", pct(work.occupation.world_pct), tr("of workers are in less-skilled occupations", "lao động làm nghề có trình độ kỹ năng thấp hơn"));
+    html.push(`<section class="result-section pt-4" aria-label="${tr("Highlights", "Điểm nổi bật")}">
+        <div class="stat-grid">${highlights.slice(0, 8).join("")}</div></section>`);
 
     html.push(`<section id="profile" class="result-section pt-4"><div class="row g-4">
         <div class="col-lg-7">
@@ -645,11 +661,43 @@
         `GDP per person isn't part of your SES index: your income is already adjusted for prices in ${cname} and compared globally, so counting the country again would double-count it.`,
         `GDP bình quân đầu người không nằm trong chỉ số SES: thu nhập của bạn đã được điều chỉnh theo giá cả ở ${cname} và so sánh toàn cầu, nên tính thêm quốc gia sẽ là tính trùng.`)}</p>`));
 
-    html.push(`<hr class="my-5"><div class="text-center">
-        <a class="btn btn-light" href="${base}quiz.html">${tr("Take it again", "Làm lại")}</a>
+    html.push(`<hr class="my-5"><div class="text-center d-flex flex-wrap gap-2 justify-content-center">
+        <a class="btn btn-light" href="${base}quiz.html" id="edit-answers">${tr("Change my answers", "Sửa câu trả lời")}</a>
         <a class="btn btn-outline-light" href="${assetBase}methodology.html">${tr("How this was calculated", "Cách tính (tiếng Anh)")}</a>
     </div></div>`);
     root.innerHTML = html.join("\n");
+    html.length = 0;
+
+    // "Change my answers" opens the quiz with these answers filled in (saved only in this browser).
+    document.getElementById("edit-answers").addEventListener("click", () => {
+        try { localStorage.setItem("socialranking-quiz-v1", JSON.stringify({answers: form, step: 0, furthest: 99})); } catch (e) { /* no storage */ }
+    });
+
+    // Highlight the section being read in the section bar, and offer a way back to the top.
+    const navLinks = Array.from(root.querySelectorAll(".result-nav a"));
+    const navBar = root.querySelector(".result-nav .container");
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(entries => {
+            for (const entry of entries) {
+                if (!entry.isIntersecting) continue;
+                navLinks.forEach(a => {
+                    const on = a.getAttribute("href") === `#${entry.target.id}`;
+                    a.classList.toggle("active", on);
+                    if (on && navBar) navBar.scrollTo({left: a.offsetLeft - navBar.clientWidth / 2 + a.clientWidth / 2, behavior: "smooth"});
+                });
+            }
+        }, {rootMargin: "-130px 0px -65% 0px"});
+        navLinks.forEach(a => { const t = document.getElementById(a.getAttribute("href").slice(1)); if (t) observer.observe(t); });
+    }
+    const toTop = document.createElement("button");
+    toTop.type = "button";
+    toTop.className = "btn btn-light to-top";
+    toTop.hidden = true;
+    toTop.setAttribute("aria-label", tr("Back to top", "Lên đầu trang"));
+    toTop.innerHTML = "&uarr;";
+    toTop.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
+    document.body.appendChild(toTop);
+    window.addEventListener("scroll", () => { toTop.hidden = window.scrollY < 900; }, {passive: true});
 
     root.addEventListener("click", e => {
         const link = e.target.closest('a[href^="#"]');

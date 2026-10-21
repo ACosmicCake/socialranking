@@ -14,7 +14,55 @@
     const localCurrency = currencyLabel.textContent;
     const unavailable = document.getElementById("exact-unavailable");
     const summary = document.getElementById("error-summary");
-    let current = 0;
+    const chips = document.getElementById("step-chips");
+    const stepLabel = document.getElementById("step-label");
+    const answeredLabel = document.getElementById("answered-label");
+    const nextLabel = document.getElementById("next-label");
+    const titles = steps.map(s => s.querySelector("legend").textContent.replace(/^\d+\.\s*/, ""));
+    const fill = (el, values) => el.dataset.template.replace(/\{(\w+)\}/g, (_, k) => values[k]);
+    // Answers are kept in this browser only, so a reload or a closed tab doesn't lose them.
+    const STORE = "socialranking-quiz-v1";
+    let current = 0, furthest = 0;
+
+    function store(value) {
+        try {
+            if (value === null) localStorage.removeItem(STORE);
+            else localStorage.setItem(STORE, JSON.stringify(value));
+        } catch (e) { /* storage unavailable: carry on without saving */ }
+    }
+
+    function restore() {
+        let saved;
+        try { saved = JSON.parse(localStorage.getItem(STORE) || "null"); } catch (e) { saved = null; }
+        if (!saved || !saved.answers || !Object.keys(saved.answers).length) return false;
+        for (const [name, value] of Object.entries(saved.answers)) {
+            const inputs = form.querySelectorAll(`[name="${CSS.escape(name)}"]`);
+            const values = String(value).split(",");
+            inputs.forEach(input => {
+                if (input.type === "radio" || input.type === "checkbox") input.checked = values.includes(input.value);
+                else input.value = value;
+            });
+        }
+        furthest = Math.min(saved.furthest || 0, steps.length - 1);
+        return saved.step || 0;
+    }
+
+    function save() {
+        store({answers: answers(), step: current, furthest});
+    }
+
+    function renderChips() {
+        chips.innerHTML = titles.map((t, i) => `<button type="button" class="step-chip${i === current ? " current" : ""}${i < current || i <= furthest ? " done" : ""}"
+            data-step="${i}" ${i > furthest ? "disabled" : ""} ${i === current ? 'aria-current="step"' : ""}>${i + 1}. ${t}</button>`).join("");
+        const active = chips.querySelector(".current");
+        if (active) chips.scrollLeft = active.offsetLeft - chips.clientWidth / 2 + active.clientWidth / 2;
+    }
+
+    function updateCounts() {
+        const a = answers();
+        const done = Object.values(a).filter(v => v !== "").length;
+        answeredLabel.textContent = fill(answeredLabel, {n: done});
+    }
 
     function answers() {
         const out = {};
@@ -96,12 +144,38 @@
 
     function show(i) {
         current = Math.max(0, Math.min(i, steps.length - 1));
+        furthest = Math.max(furthest, current);
         steps.forEach((s, k) => s.hidden = k !== current);
         back.disabled = current === 0;
         next.hidden = current === steps.length - 1;
         progress.style.width = `${Math.round(100 * current / (steps.length - 1))}%`;
+        stepLabel.textContent = fill(stepLabel, {n: current + 1, total: steps.length});
+        nextLabel.textContent = current < steps.length - 1 ? fill(nextLabel, {section: titles[current + 1]}) : "";
+        renderChips();
+        updateCounts();
+        save();
         window.scrollTo({top: 0, behavior: "smooth"});
     }
+
+    chips.addEventListener("click", e => {
+        const chip = e.target.closest(".step-chip");
+        if (!chip || chip.disabled) return;
+        const target = Number(chip.dataset.step);
+        // Moving forward still checks the steps in between.
+        for (let k = current; k < target; k++) {
+            if (showErrors(validationErrors(), steps[k])) { show(k); showErrors(validationErrors(), steps[k]); return; }
+        }
+        show(target);
+    });
+    document.getElementById("start-over").addEventListener("click", () => {
+        store(null);
+        form.reset();
+        furthest = 0;
+        document.getElementById("restored").hidden = true;
+        updateCountry();
+        updateConditional();
+        show(0);
+    });
 
     next.addEventListener("click", () => {
         summary.hidden = true;
@@ -117,7 +191,10 @@
             });
         }
         updateConditional();
+        updateCounts();
+        save();
     });
+    form.addEventListener("input", () => { updateCounts(); save(); });
     country.addEventListener("change", updateCountry);
     form.addEventListener("keydown", e => {
         if (e.key === "Enter" && e.target.tagName === "INPUT" && current < steps.length - 1) {
@@ -139,7 +216,9 @@
         window.location.href = `${form.getAttribute("action")}#${params.toString()}`;
     });
 
+    const resumeAt = restore();
+    if (resumeAt !== false) document.getElementById("restored").hidden = false;
     updateCountry();
     updateConditional();
-    show(0);
+    show(resumeAt || 0);
 })();
