@@ -678,7 +678,30 @@
 
     // ---------------------------------------------------------------- country at a glance
     const loc = r.location;
+    // You and the typical person in your country: median income, median education, most common work status.
+    const typicalRows = [];
+    if (r.country.median_ppp) typicalRows.push([tr("Income per person per day", "Thu nhập mỗi người mỗi ngày"), money(inc.ppp_per_day), money(r.country.median_ppp),
+        inc.ppp_per_day >= r.country.median_ppp ? tr(`${fixed(inc.ppp_per_day / r.country.median_ppp, 1)}&times; the median`, `gấp ${fixed(inc.ppp_per_day / r.country.median_ppp, 1)} lần trung vị`)
+                                                 : tr(`${pct(100 * inc.ppp_per_day / r.country.median_ppp, 0)} of the median`, `bằng ${pct(100 * inc.ppp_per_day / r.country.median_ppp, 0)} trung vị`)]);
+    if (edu.country_shares) {
+        let cum = 0;
+        const median = edu.country_shares.findIndex(x => (cum += x) >= 50);
+        typicalRows.push([tr("Highest education (adults 25+)", "Học vấn cao nhất (từ 25 tuổi)"), esc(edu.label), esc(edu.levels[median]),
+            edu.level > median ? tr("higher", "cao hơn") : edu.level === median ? tr("the same", "như nhau") : tr("lower", "thấp hơn")]);
+    }
+    if (work.status && work.country) {
+        const names = {employee: tr("Employee", "Người làm công"), employer: tr("Employer", "Chủ sử dụng lao động"),
+                       own_account: tr("Own-account worker", "Lao động tự làm"), family_worker: tr("Contributing family worker", "Lao động gia đình")};
+        const common = Object.keys(names).reduce((a, b) => (work.country[b] > work.country[a] ? b : a));
+        typicalRows.push([tr("Most common work status", "Vị thế việc làm phổ biến nhất"), esc(work.label.split(":")[0]),
+            `${names[common]} (${pct(work.country[common], 0)})`, work.status === common ? tr("the same", "như nhau") : tr("different", "khác")]);
+    }
+    const typicalHtml = typicalRows.length ? `<h3 class="h5">${tr(`You and the typical person in ${cname}`, `Bạn và người điển hình ở ${cname}`)}</h3>
+        ${table(["", tr("You", "Bạn"), tr(`Typical in ${cname}`, `Điển hình ở ${cname}`), ""], typicalRows.map(row => `<tr>${row.map(c => `<td>${c}</td>`).join("")}</tr>`))}
+        <p class="small text-secondary">${tr("Typical means the median for income and education, and the most common category for work.",
+                                             "Điển hình là trung vị đối với thu nhập và học vấn, và nhóm phổ biến nhất đối với việc làm.")}</p>` : "";
     html.push(section("country", tr(`${cname} at a glance`, `Tổng quan về ${cname}`), `
+    ${typicalHtml}
     <p>${loc.income_group ? tr(`The World Bank classifies ${cname} as <strong>${esc(lower(loc.income_group))}</strong>. `,
                                `Ngân hàng Thế giới xếp ${cname} vào nhóm <strong>${esc(loc.income_group.toLowerCase())}</strong>. `) : ""}
         ${loc.gdp_per_capita_usd !== undefined ? tr(`GDP per person was ${money(loc.gdp_per_capita_usd, 0)} in ${loc.gdp_year} (market exchange rates); ${pct(loc.share_in_poorer_countries_pct)} of the world lives in countries with a lower GDP per person.`,
