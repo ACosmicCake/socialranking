@@ -159,6 +159,9 @@ WDI_INDICATORS = {
     "VC.IHR.PSRC.P5": "Intentional homicides (per 100,000 people)",
     "IQ.SPI.OVRL": "Statistical Performance Indicators overall score (0-100)",
     "SH.STA.STNT.ZS": "Prevalence of stunting, height for age (% of children under 5)",
+    "SH.MED.PHYS.ZS": "Physicians (per 1,000 people)",
+    "SH.MED.NUMW.P3": "Nurses and midwives (per 1,000 people)",
+    "SH.MED.BEDS.ZS": "Hospital beds (per 1,000 people)",
     "SE.PRM.CMPT.ZS": "Primary completion rate (% of relevant age group, gross)",
     "SE.TER.ENRR": "School enrollment, tertiary (% gross)",
     # by sex
