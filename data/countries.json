@@ -1,0 +1,8974 @@
+[
+ {
+  "iso3": "AFG",
+  "name": "Afghanistan",
+  "currency": "AFN",
+  "currency_name": "Afghani",
+  "population": 43844111,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 357.4,
+  "gdp_year": 2022,
+  "prices": {
+   "ppp_2017": 15.420207,
+   "inflation_factor_since_2017": 1.157447,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.00422
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.608,
+    0.0738,
+    0.0845,
+    0.0549,
+    0.0835,
+    0.0332,
+    0.0621
+   ],
+   "mean_years": 3.87
+  },
+  "gdp_pc_population_share_below": 0.00176,
+  "gdp_pc_population_share_same": 0.00537
+ },
+ {
+  "iso3": "ALB",
+  "name": "Albania",
+  "currency": "ALL",
+  "currency_name": "Lek",
+  "population": 2349580,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 9527.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 42.255643,
+   "inflation_factor_since_2017": 1.226136,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.0455
+  },
+  "income": {
+   "low": 3.9296,
+   "thresholds": [
+    6.65,
+    8.46,
+    9.86,
+    11.44,
+    13.0774,
+    15.12,
+    17.68,
+    21.24,
+    27.58
+   ],
+   "pareto_alpha": 3.9222,
+   "mean": 15.5814,
+   "median": 13.0774,
+   "gini": 0.3077,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0298,
+    0.0052,
+    0.0376,
+    0.4323,
+    0.3281,
+    0.0594,
+    0.1076
+   ],
+   "mean_years": 11.05
+  },
+  "gdp_pc_population_share_below": 0.58325,
+  "gdp_pc_population_share_same": 0.00029
+ },
+ {
+  "iso3": "DZA",
+  "name": "Algeria",
+  "currency": "DZD",
+  "currency_name": "Algerian Dinar",
+  "population": 47435312,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 5196.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 37.458252,
+   "inflation_factor_since_2017": 1.450894,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.07516
+  },
+  "income": {
+   "low": 2.9753,
+   "thresholds": [
+    4.49,
+    5.45,
+    6.3,
+    7.14,
+    8.0436,
+    9.05,
+    10.26,
+    11.9,
+    15.06
+   ],
+   "pareto_alpha": 3.4968,
+   "mean": 9.2255,
+   "median": 8.0436,
+   "gini": 0.2762,
+   "survey_year": 2011,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.16878,
+    0.17824,
+    0.29172,
+    0.04454,
+    0.17346,
+    0.05151,
+    0.09176
+   ],
+   "mean_years": 7.17
+  },
+  "gdp_pc_population_share_below": 0.52997,
+  "gdp_pc_population_share_same": 0.00581
+ },
+ {
+  "iso3": "ASM",
+  "name": "American Samoa",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 46029,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 18017.5,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.84995,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "AND",
+  "name": "Andorra",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 82904,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 46102.6,
+  "gdp_year": 2023,
+  "gdp_pc_population_share_below": 0.91529,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "AGO",
+  "name": "Angola",
+  "currency": "AOA",
+  "currency_name": "Kwanza",
+  "population": 39040039,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2305.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 95.837242,
+   "inflation_factor_since_2017": 3.808917,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.20933
+  },
+  "income": {
+   "low": 0.3877,
+   "thresholds": [
+    1.07,
+    1.59,
+    2.09,
+    2.69,
+    3.4206,
+    4.27,
+    5.5,
+    7.32,
+    10.72
+   ],
+   "pareto_alpha": 1.9743,
+   "mean": 5.4822,
+   "median": 3.4206,
+   "gini": 0.5127,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.20503,
+  "gdp_pc_population_share_same": 0.00478
+ },
+ {
+  "iso3": "ATG",
+  "name": "Antigua & Barbuda",
+  "currency": "XCD",
+  "currency_name": "East Caribbean Dollar",
+  "population": 94209,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 21787.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2.138337,
+   "inflation_factor_since_2017": 1.19114,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.04863
+  },
+  "gdp_pc_population_share_below": 0.85433,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "ARG",
+  "name": "Argentina",
+  "currency": "ARS",
+  "currency_name": "Argentine Peso",
+  "population": 45851378,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 14067.1,
+  "gdp_year": 2023,
+  "income": {
+   "low": 2.3031,
+   "thresholds": [
+    5.68,
+    8.3,
+    10.86,
+    13.68,
+    17.2334,
+    21.16,
+    26.04,
+    33.45,
+    46.15
+   ],
+   "pareto_alpha": 3.0002,
+   "mean": 22.8435,
+   "median": 17.2334,
+   "gini": 0.4234,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "urban"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0082,
+    0.0434,
+    0.3711,
+    0.1127,
+    0.2702,
+    0.166,
+    0.0284
+   ],
+   "mean_years": 9.9
+  },
+  "gdp_pc_population_share_below": 0.83698,
+  "gdp_pc_population_share_same": 0.00562
+ },
+ {
+  "iso3": "ARM",
+  "name": "Armenia",
+  "currency": "AMD",
+  "currency_name": "Armenian Dram",
+  "population": 3086700,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 8167.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 154.786591,
+   "inflation_factor_since_2017": 1.253359,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03568
+  },
+  "income": {
+   "low": 2.5121,
+   "thresholds": [
+    4.01,
+    4.71,
+    5.32,
+    5.97,
+    6.6248,
+    7.36,
+    8.19,
+    9.51,
+    11.74
+   ],
+   "pareto_alpha": 3.7304,
+   "mean": 7.4696,
+   "median": 6.6248,
+   "gini": 0.2517,
+   "survey_year": 2020,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0016,
+    0.0002,
+    0.0116,
+    0.0435,
+    0.4211,
+    0.2245,
+    0.2975
+   ],
+   "mean_years": 12.11
+  },
+  "gdp_pc_population_share_below": 0.58169,
+  "gdp_pc_population_share_same": 0.00038
+ },
+ {
+  "iso3": "ABW",
+  "name": "Aruba",
+  "currency": "AWG",
+  "currency_name": "Aruban Florin",
+  "population": 108785,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 33032.4,
+  "gdp_year": 2022,
+  "prices": {
+   "ppp_2017": 1.356637,
+   "inflation_factor_since_2017": 1.080379,
+   "inflation_latest_year": 2019,
+   "inflation_recent_annual": 0.03941
+  },
+  "gdp_pc_population_share_below": 0.87702,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "AUS",
+  "name": "Australia",
+  "currency": "AUD",
+  "currency_name": "Australian Dollar",
+  "population": 27614411,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 64659.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.477553,
+   "inflation_factor_since_2017": 1.247358,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05108
+  },
+  "income": {
+   "low": 9.6165,
+   "thresholds": [
+    25.06,
+    33.45,
+    39.5,
+    45.0,
+    53.0505,
+    61.35,
+    71.8,
+    86.0,
+    113.4
+   ],
+   "pareto_alpha": 2.9369,
+   "mean": 64.6096,
+   "median": 53.0505,
+   "gini": 0.3433,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.003,
+    0.01629,
+    0.03278,
+    0.1604,
+    0.35878,
+    0.14221,
+    0.28653
+   ],
+   "mean_years": 12.35
+  },
+  "gdp_pc_population_share_below": 0.95016,
+  "gdp_pc_population_share_same": 0.00338
+ },
+ {
+  "iso3": "AUT",
+  "name": "Austria",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 9208163,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 56509.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.775009,
+   "inflation_factor_since_2017": 1.299788,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06404
+  },
+  "income": {
+   "low": 9.8266,
+   "thresholds": [
+    28.36,
+    36.95,
+    44.0,
+    50.4,
+    57.6429,
+    66.1,
+    76.25,
+    89.0,
+    111.4
+   ],
+   "pareto_alpha": 3.6398,
+   "mean": 66.1682,
+   "median": 57.6429,
+   "gini": 0.3021,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.01668,
+    0.02737,
+    0.10039,
+    0.11957,
+    0.43113,
+    0.10109,
+    0.20378
+   ],
+   "mean_years": 11.28
+  },
+  "gdp_pc_population_share_below": 0.94681,
+  "gdp_pc_population_share_same": 0.00113
+ },
+ {
+  "iso3": "AZE",
+  "name": "Azerbaijan",
+  "currency": "AZN",
+  "currency_name": "Azerbaijan Manat",
+  "population": 10246996,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 7125.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.498603,
+   "inflation_factor_since_2017": 1.45591,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.08178
+  },
+  "income": {
+   "low": 4.0709,
+   "thresholds": [
+    5.35,
+    6.12,
+    6.77,
+    7.4,
+    8.0593,
+    8.94,
+    10.02,
+    11.76,
+    15.26
+   ],
+   "pareto_alpha": 2.851,
+   "mean": 9.7188,
+   "median": 8.0593,
+   "gini": 0.2655,
+   "survey_year": 2005,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.56479,
+  "gdp_pc_population_share_same": 0.00125
+ },
+ {
+  "iso3": "BHS",
+  "name": "Bahamas",
+  "currency": "BSD",
+  "currency_name": "Bahamian Dollar",
+  "population": 403033,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 35896.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.929798,
+   "inflation_factor_since_2017": 1.174268,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.03847
+  },
+  "gdp_pc_population_share_below": 0.89911,
+  "gdp_pc_population_share_same": 5e-05
+ },
+ {
+  "iso3": "BHR",
+  "name": "Bahrain",
+  "currency": "BHD",
+  "currency_name": "Bahraini Dinar",
+  "population": 1600366,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 27395.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.185696,
+   "inflation_factor_since_2017": 1.047759,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.01529
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0168,
+    0.2017,
+    0.0754,
+    0.1548,
+    0.3063,
+    0.0998,
+    0.1452
+   ],
+   "mean_years": 9.7
+  },
+  "gdp_pc_population_share_below": 0.86443,
+  "gdp_pc_population_share_same": 0.0002
+ },
+ {
+  "iso3": "BGD",
+  "name": "Bangladesh",
+  "currency": "BDT",
+  "currency_name": "Taka",
+  "population": 175686899,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2551.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 29.351345,
+   "inflation_factor_since_2017": 1.625194,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.09342
+  },
+  "income": {
+   "low": 1.3104,
+   "thresholds": [
+    2.0,
+    2.41,
+    2.78,
+    3.16,
+    3.5797,
+    4.08,
+    4.76,
+    5.72,
+    7.62
+   ],
+   "pareto_alpha": 2.7366,
+   "mean": 4.4747,
+   "median": 3.5797,
+   "gini": 0.3239,
+   "survey_year": 2016,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.3134,
+    0.1289,
+    0.1329,
+    0.1265,
+    0.2075,
+    0.0026,
+    0.0882
+   ],
+   "mean_years": 5.95
+  },
+  "gdp_pc_population_share_below": 0.39843,
+  "gdp_pc_population_share_same": 0.02152
+ },
+ {
+  "iso3": "BRB",
+  "name": "Barbados",
+  "currency": "BBD",
+  "currency_name": "Barbados Dollar",
+  "population": 282623,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 22645.2,
+  "gdp_year": 2023,
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0005,
+    0.0394,
+    0.0358,
+    0.6332,
+    0.2274,
+    0.0242,
+    0.0395
+   ],
+   "mean_years": 9.73
+  },
+  "gdp_pc_population_share_below": 0.85997,
+  "gdp_pc_population_share_same": 3e-05
+ },
+ {
+  "iso3": "BLR",
+  "name": "Belarus",
+  "currency": "BYN",
+  "currency_name": "Belarusian Ruble",
+  "population": 9085991,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 7829.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.607136,
+   "inflation_factor_since_2017": 1.637308,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.08568
+  },
+  "income": {
+   "low": 6.8871,
+   "thresholds": [
+    10.24,
+    12.3,
+    14.06,
+    15.58,
+    17.2381,
+    19.22,
+    21.38,
+    24.74,
+    29.78
+   ],
+   "pareto_alpha": 3.933,
+   "mean": 19.265,
+   "median": 17.2381,
+   "gini": 0.2438,
+   "survey_year": 2020,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.57513,
+  "gdp_pc_population_share_same": 0.00111
+ },
+ {
+  "iso3": "BEL",
+  "name": "Belgium",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 11941781,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 53668.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.775634,
+   "inflation_factor_since_2017": 1.256546,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05559
+  },
+  "income": {
+   "low": 14.6487,
+   "thresholds": [
+    27.7,
+    35.8,
+    42.35,
+    47.65,
+    52.6285,
+    58.3,
+    65.25,
+    75.75,
+    93.15
+   ],
+   "pareto_alpha": 3.4196,
+   "mean": 58.9865,
+   "median": 52.6285,
+   "gini": 0.2722,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.03628,
+    0.01829,
+    0.02879,
+    0.1987,
+    0.34923,
+    0.11704,
+    0.25167
+   ],
+   "mean_years": 11.88
+  },
+  "gdp_pc_population_share_below": 0.94335,
+  "gdp_pc_population_share_same": 0.00146
+ },
+ {
+  "iso3": "BLZ",
+  "name": "Belize",
+  "currency": "BZD",
+  "currency_name": "Belize Dollar",
+  "population": 422924,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 7982.1,
+  "gdp_year": 2023,
+  "income": {
+   "low": 0.1008,
+   "thresholds": [
+    1.44,
+    2.38,
+    3.23,
+    4.0,
+    4.9221,
+    6.17,
+    7.99,
+    10.36,
+    15.88
+   ],
+   "pareto_alpha": 1.8228,
+   "mean": 8.29,
+   "median": 4.9221,
+   "gini": 0.5326,
+   "survey_year": 1999,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0009,
+    0.0009,
+    0.13851,
+    0.44144,
+    0.35634,
+    0.0212,
+    0.0407
+   ],
+   "mean_years": 11.47
+  },
+  "gdp_pc_population_share_below": 0.58048,
+  "gdp_pc_population_share_same": 5e-05
+ },
+ {
+  "iso3": "BEN",
+  "name": "Benin",
+  "currency": "XOF",
+  "currency_name": "CFA Franc BCEAO",
+  "population": 14814460,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1394.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 212.266235,
+   "inflation_factor_since_2017": 1.109355,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.01937
+  },
+  "income": {
+   "low": 0.9829,
+   "thresholds": [
+    1.71,
+    2.15,
+    2.57,
+    2.99,
+    3.4832,
+    4.11,
+    4.91,
+    6.2,
+    8.58
+   ],
+   "pareto_alpha": 2.6131,
+   "mean": 4.652,
+   "median": 3.4832,
+   "gini": 0.3781,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.5918,
+    0.0681,
+    0.1071,
+    0.0153,
+    0.1663,
+    0.019,
+    0.0324
+   ],
+   "mean_years": 4.0
+  },
+  "gdp_pc_population_share_below": 0.14,
+  "gdp_pc_population_share_same": 0.00181
+ },
+ {
+  "iso3": "BMU",
+  "name": "Bermuda",
+  "currency": "BMD",
+  "currency_name": "Bermudian Dollar",
+  "population": 64555,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 120897.3,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.9999,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "BTN",
+  "name": "Bhutan",
+  "currency": "INR",
+  "currency_name": "Indian Rupee",
+  "population": 796682,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3711.3,
+  "gdp_year": 2022,
+  "prices": {
+   "ppp_2017": 19.15761,
+   "inflation_factor_since_2017": 1.353856,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04203
+  },
+  "income": {
+   "low": 2.1717,
+   "thresholds": [
+    3.72,
+    4.74,
+    5.82,
+    6.92,
+    8.2556,
+    9.94,
+    12.06,
+    15.16,
+    20.92
+   ],
+   "pareto_alpha": 3.2884,
+   "mean": 10.7627,
+   "median": 8.2556,
+   "gini": 0.3744,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.43956,
+  "gdp_pc_population_share_same": 0.0001
+ },
+ {
+  "iso3": "BOL",
+  "name": "Bolivia",
+  "currency": "BOB",
+  "currency_name": "Boliviano",
+  "population": 12581843,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3744.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2.684587,
+   "inflation_factor_since_2017": 1.161718,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03131
+  },
+  "income": {
+   "low": 1.1343,
+   "thresholds": [
+    4.86,
+    7.51,
+    9.58,
+    11.8,
+    14.0188,
+    17.24,
+    21.24,
+    27.16,
+    39.3
+   ],
+   "pareto_alpha": 2.5919,
+   "mean": 19.6433,
+   "median": 14.0188,
+   "gini": 0.4362,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.06251,
+    0.15182,
+    0.14791,
+    0.17962,
+    0.20132,
+    0.0422,
+    0.21462
+   ],
+   "mean_years": 9.92
+  },
+  "gdp_pc_population_share_below": 0.44452,
+  "gdp_pc_population_share_same": 0.00154
+ },
+ {
+  "iso3": "BIH",
+  "name": "Bosnia and Herzegovina",
+  "currency": "BAM",
+  "currency_name": "Convertible Mark",
+  "population": 3140095,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 8494.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.680666,
+   "inflation_factor_since_2017": 1.266169,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.07153
+  },
+  "income": {
+   "low": 4.1975,
+   "thresholds": [
+    8.24,
+    10.8,
+    13.08,
+    15.2,
+    17.6012,
+    20.48,
+    24.0,
+    29.06,
+    37.9
+   ],
+   "pareto_alpha": 3.4667,
+   "mean": 21.1846,
+   "median": 17.6012,
+   "gini": 0.3303,
+   "survey_year": 2011,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.58287,
+  "gdp_pc_population_share_same": 0.00038
+ },
+ {
+  "iso3": "BWA",
+  "name": "Botswana",
+  "currency": "BWP",
+  "currency_name": "Pula",
+  "population": 2562122,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 7820.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 4.682478,
+   "inflation_factor_since_2017": 1.398527,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06452
+  },
+  "income": {
+   "low": 0.8926,
+   "thresholds": [
+    1.81,
+    2.44,
+    3.07,
+    3.8,
+    4.843,
+    6.28,
+    8.31,
+    12.0,
+    19.16
+   ],
+   "pareto_alpha": 2.0995,
+   "mean": 8.8211,
+   "median": 4.843,
+   "gini": 0.5333,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.07629,
+    0.0164,
+    0.0335,
+    0.46425,
+    0.32977,
+    0.0288,
+    0.05099
+   ],
+   "mean_years": 10.11
+  },
+  "gdp_pc_population_share_below": 0.57482,
+  "gdp_pc_population_share_same": 0.00031
+ },
+ {
+  "iso3": "BRA",
+  "name": "Brazil",
+  "currency": "BRL",
+  "currency_name": "Brazilian Real",
+  "population": 212812405,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 10294.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2.209679,
+   "inflation_factor_since_2017": 1.433917,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06056
+  },
+  "income": {
+   "low": 1.6487,
+   "thresholds": [
+    4.99,
+    7.09,
+    9.1,
+    11.2,
+    13.4885,
+    16.2,
+    19.9,
+    26.06,
+    40.55
+   ],
+   "pareto_alpha": 1.9556,
+   "mean": 21.0372,
+   "median": 13.4885,
+   "gini": 0.4888,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.08371,
+    0.09451,
+    0.20092,
+    0.13811,
+    0.33923,
+    0.0433,
+    0.10021
+   ],
+   "mean_years": 8.76
+  },
+  "gdp_pc_population_share_below": 0.58489,
+  "gdp_pc_population_share_same": 0.02606
+ },
+ {
+  "iso3": "VGB",
+  "name": "British Virgin Islands",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 39732,
+  "population_year": 2025
+ },
+ {
+  "iso3": "BRN",
+  "name": "Brunei",
+  "currency": "BND",
+  "currency_name": "Brunei Dollar",
+  "population": 466330,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 32962.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.627637,
+   "inflation_factor_since_2017": 1.081684,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.01202
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.20662,
+    0.0067,
+    0.09221,
+    0.24002,
+    0.33923,
+    0.0403,
+    0.07491
+   ],
+   "mean_years": 9.02
+  },
+  "gdp_pc_population_share_below": 0.87697,
+  "gdp_pc_population_share_same": 6e-05
+ },
+ {
+  "iso3": "BGR",
+  "name": "Bulgaria",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 6433302,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 15757.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.676281,
+   "inflation_factor_since_2017": 1.439567,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.08944
+  },
+  "income": {
+   "low": 1.8725,
+   "thresholds": [
+    8.45,
+    12.32,
+    15.1,
+    17.76,
+    20.8623,
+    24.12,
+    28.84,
+    36.25,
+    49.2
+   ],
+   "pareto_alpha": 2.3319,
+   "mean": 27.4294,
+   "median": 20.8623,
+   "gini": 0.4027,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0188,
+    0.0036,
+    0.0272,
+    0.16908,
+    0.50615,
+    0.08849,
+    0.18668
+   ],
+   "mean_years": 11.52
+  },
+  "gdp_pc_population_share_below": 0.84259,
+  "gdp_pc_population_share_same": 0.00079
+ },
+ {
+  "iso3": "BFA",
+  "name": "Burkina Faso",
+  "currency": "XOF",
+  "currency_name": "CFA Franc BCEAO",
+  "population": 24074580,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 882.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 201.595276,
+   "inflation_factor_since_2017": 1.249926,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06256
+  },
+  "income": {
+   "low": 0.8641,
+   "thresholds": [
+    1.38,
+    1.78,
+    2.12,
+    2.53,
+    2.997,
+    3.68,
+    4.7,
+    6.56,
+    10.76
+   ],
+   "pareto_alpha": 2.3569,
+   "mean": 4.9808,
+   "median": 2.997,
+   "gini": 0.4735,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.05503,
+  "gdp_pc_population_share_same": 0.00295
+ },
+ {
+  "iso3": "BDI",
+  "name": "Burundi",
+  "currency": "BIF",
+  "currency_name": "Burundi Franc",
+  "population": 14390003,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 193.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 626.167603,
+   "inflation_factor_since_2017": 2.035697,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.21934
+  },
+  "income": {
+   "low": 0.4455,
+   "thresholds": [
+    0.82,
+    1.05,
+    1.26,
+    1.47,
+    1.7008,
+    1.97,
+    2.35,
+    2.94,
+    4.23
+   ],
+   "pareto_alpha": 2.4711,
+   "mean": 2.2903,
+   "median": 1.7008,
+   "gini": 0.3862,
+   "survey_year": 2013,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.5937,
+    0.2978,
+    0.0473,
+    0.027,
+    0.0201,
+    0.0057,
+    0.0084
+   ],
+   "mean_years": 1.98
+  },
+  "gdp_pc_population_share_below": 0.0,
+  "gdp_pc_population_share_same": 0.00176
+ },
+ {
+  "iso3": "KHM",
+  "name": "Cambodia",
+  "currency": "KHR",
+  "currency_name": "Riel",
+  "population": 17847982,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1823.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1464.890991,
+   "inflation_factor_since_2017": 1.190544,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.03455
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.2657,
+    0.5101,
+    0.098,
+    0.0268,
+    0.0401,
+    0.0222,
+    0.0371
+   ],
+   "mean_years": 3.87
+  },
+  "gdp_pc_population_share_below": 0.18255,
+  "gdp_pc_population_share_same": 0.00219
+ },
+ {
+  "iso3": "CMR",
+  "name": "Cameroon",
+  "currency": "XAF",
+  "currency_name": "CFA Franc BEAC",
+  "population": 29879337,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1689.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 230.585388,
+   "inflation_factor_since_2017": 1.237687,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.05278
+  },
+  "income": {
+   "low": 0.6407,
+   "thresholds": [
+    1.34,
+    1.86,
+    2.41,
+    3.12,
+    3.8892,
+    4.88,
+    6.09,
+    7.95,
+    11.78
+   ],
+   "pareto_alpha": 2.4057,
+   "mean": 5.7529,
+   "median": 3.8892,
+   "gini": 0.4664,
+   "survey_year": 2014,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1234,
+    0.2117,
+    0.3363,
+    0.1152,
+    0.1669,
+    0.0172,
+    0.0293
+   ],
+   "mean_years": 6.73
+  },
+  "gdp_pc_population_share_below": 0.17511,
+  "gdp_pc_population_share_same": 0.00366
+ },
+ {
+  "iso3": "CAN",
+  "name": "Canada",
+  "currency": "CAD",
+  "currency_name": "Canadian Dollar",
+  "population": 41651653,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 53436.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.212304,
+   "inflation_factor_since_2017": 1.233276,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04338
+  },
+  "income": {
+   "low": 10.629,
+   "thresholds": [
+    24.82,
+    33.05,
+    40.5,
+    47.8,
+    55.4222,
+    64.3,
+    74.2,
+    88.35,
+    114.5
+   ],
+   "pareto_alpha": 3.2312,
+   "mean": 65.495,
+   "median": 55.4222,
+   "gini": 0.3331,
+   "survey_year": 2017,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0046,
+    0.01,
+    0.0075,
+    0.1079,
+    0.3281,
+    0.2205,
+    0.3214
+   ],
+   "mean_years": 13.21
+  },
+  "gdp_pc_population_share_below": 0.92803,
+  "gdp_pc_population_share_same": 0.0051
+ },
+ {
+  "iso3": "CPV",
+  "name": "Cape Verde",
+  "currency": "CVE",
+  "currency_name": "Cabo Verde Escudo",
+  "population": 527326,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4953.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 47.981754,
+   "inflation_factor_since_2017": 1.174539,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.04475
+  },
+  "income": {
+   "low": 1.4747,
+   "thresholds": [
+    2.74,
+    3.73,
+    4.6,
+    5.62,
+    6.7278,
+    8.26,
+    10.02,
+    13.02,
+    19.38
+   ],
+   "pareto_alpha": 2.7123,
+   "mean": 9.5033,
+   "median": 6.7278,
+   "gini": 0.4238,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.52991,
+  "gdp_pc_population_share_same": 6e-05
+ },
+ {
+  "iso3": "CYM",
+  "name": "Cayman Islands",
+  "currency": "KYD",
+  "currency_name": "Cayman Islands Dollar",
+  "population": 75844,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 92202.1,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.99809,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "CAF",
+  "name": "Central African Republic",
+  "currency": "XAF",
+  "currency_name": "CFA Franc BEAC",
+  "population": 5513282,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 496.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 284.033508,
+   "inflation_factor_since_2017": 1.203033,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.04268
+  },
+  "income": {
+   "low": 0.2044,
+   "thresholds": [
+    0.53,
+    0.77,
+    1.06,
+    1.36,
+    1.675,
+    2.06,
+    2.65,
+    3.55,
+    5.72
+   ],
+   "pareto_alpha": 1.6872,
+   "mean": 3.0385,
+   "median": 1.675,
+   "gini": 0.5624,
+   "survey_year": 2008,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.4701,
+    0.12,
+    0.1947,
+    0.0793,
+    0.1154,
+    0.0071,
+    0.0134
+   ],
+   "mean_years": 4.16
+  },
+  "gdp_pc_population_share_below": 0.01135,
+  "gdp_pc_population_share_same": 0.00068
+ },
+ {
+  "iso3": "TCD",
+  "name": "Chad",
+  "currency": "XAF",
+  "currency_name": "CFA Franc BEAC",
+  "population": 21003705,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 680.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 236.582993,
+   "inflation_factor_since_2017": 1.366719,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.08488
+  },
+  "income": {
+   "low": 0.8244,
+   "thresholds": [
+    1.4,
+    1.76,
+    2.12,
+    2.47,
+    2.8794,
+    3.37,
+    4.04,
+    5.02,
+    7.0
+   ],
+   "pareto_alpha": 2.6184,
+   "mean": 3.813,
+   "median": 2.8794,
+   "gini": 0.375,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.04788,
+  "gdp_pc_population_share_same": 0.00257
+ },
+ {
+  "iso3": "CHI",
+  "name": "Channel Islands",
+  "currency": "GBP",
+  "currency_name": "Pound Sterling",
+  "population": 168466,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 67149.0,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.95355,
+  "gdp_pc_population_share_same": 2e-05
+ },
+ {
+  "iso3": "CHL",
+  "name": "Chile",
+  "currency": "CLP",
+  "currency_name": "Chilean Peso",
+  "population": 19859921,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 17067.8,
+  "gdp_year": 2023,
+  "income": {
+   "low": 3.0619,
+   "thresholds": [
+    7.45,
+    9.88,
+    12.14,
+    14.34,
+    17.0127,
+    20.3,
+    24.92,
+    32.8,
+    51.15
+   ],
+   "pareto_alpha": 2.2759,
+   "mean": 25.4875,
+   "median": 17.0127,
+   "gini": 0.4492,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0734,
+    0.0284,
+    0.0274,
+    0.2132,
+    0.4292,
+    0.0799,
+    0.1485
+   ],
+   "mean_years": 10.7
+  },
+  "gdp_pc_population_share_below": 0.84751,
+  "gdp_pc_population_share_same": 0.00243
+ },
+ {
+  "iso3": "CHN",
+  "name": "China",
+  "currency": "CNY",
+  "currency_name": "Yuan Renminbi",
+  "population": 1406585000,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 12614.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 4.040052,
+   "inflation_factor_since_2017": 1.11277,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.00805
+  },
+  "income": {
+   "low": 3.1684,
+   "thresholds": [
+    4.84,
+    6.19,
+    7.57,
+    9.06,
+    10.72,
+    12.74,
+    15.38,
+    19.26,
+    26.72
+   ],
+   "pareto_alpha": 2.7708,
+   "mean": 14.1744,
+   "median": 10.72,
+   "gini": 0.3817,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0241,
+    0.0769,
+    0.1275,
+    0.4845,
+    0.2339,
+    0.0189,
+    0.0342
+   ],
+   "mean_years": 8.14
+  },
+  "gdp_pc_population_share_below": 0.61789,
+  "gdp_pc_population_share_same": 0.17226
+ },
+ {
+  "iso3": "COL",
+  "name": "Colombia",
+  "currency": "COP",
+  "currency_name": "Colombian Peso",
+  "population": 53425635,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6948.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1328.016627,
+   "inflation_factor_since_2017": 1.48841,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.09486
+  },
+  "income": {
+   "low": 0.101,
+   "thresholds": [
+    2.02,
+    3.5,
+    4.84,
+    6.22,
+    7.7959,
+    9.81,
+    12.6,
+    17.16,
+    26.88
+   ],
+   "pareto_alpha": 1.9382,
+   "mean": 13.1724,
+   "median": 7.7959,
+   "gini": 0.5417,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0553,
+    0.0002,
+    0.286,
+    0.255,
+    0.1872,
+    0.0299,
+    0.1864
+   ],
+   "mean_years": 8.97
+  },
+  "gdp_pc_population_share_below": 0.55825,
+  "gdp_pc_population_share_same": 0.00654
+ },
+ {
+  "iso3": "COM",
+  "name": "Comoros",
+  "currency": "KMF",
+  "currency_name": "Comorian Franc ",
+  "population": 882847,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1590.3,
+  "gdp_year": 2023,
+  "income": {
+   "low": 0.588,
+   "thresholds": [
+    1.48,
+    2.22,
+    2.92,
+    3.7,
+    4.3893,
+    5.5,
+    6.99,
+    9.05,
+    13.08
+   ],
+   "pareto_alpha": 2.5303,
+   "mean": 6.4239,
+   "median": 4.3893,
+   "gini": 0.4533,
+   "survey_year": 2014,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.14181,
+  "gdp_pc_population_share_same": 0.00011
+ },
+ {
+  "iso3": "COD",
+  "name": "Congo (Democratic Republic)",
+  "currency": "CDF",
+  "currency_name": "Congolese Franc",
+  "population": 112832473,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 627.5,
+  "gdp_year": 2023,
+  "income": {
+   "low": 0.2688,
+   "thresholds": [
+    0.58,
+    0.81,
+    1.01,
+    1.23,
+    1.4633,
+    1.76,
+    2.16,
+    2.78,
+    4.03
+   ],
+   "pareto_alpha": 2.633,
+   "mean": 2.0309,
+   "median": 1.4633,
+   "gini": 0.421,
+   "survey_year": 2012,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.13169,
+    0.19228,
+    0.12709,
+    0.18048,
+    0.26917,
+    0.0346,
+    0.06469
+   ],
+   "mean_years": 7.53
+  },
+  "gdp_pc_population_share_below": 0.0204,
+  "gdp_pc_population_share_same": 0.01382
+ },
+ {
+  "iso3": "COG",
+  "name": "Congo (Republic)",
+  "currency": "XAF",
+  "currency_name": "CFA Franc BEAC",
+  "population": 6484437,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2478.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 288.932281,
+   "inflation_factor_since_2017": 1.150488,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.03015
+  },
+  "income": {
+   "low": 0.4429,
+   "thresholds": [
+    0.99,
+    1.43,
+    1.88,
+    2.4,
+    2.9804,
+    3.71,
+    4.65,
+    6.15,
+    8.62
+   ],
+   "pareto_alpha": 1.9801,
+   "mean": 4.5915,
+   "median": 2.9804,
+   "gini": 0.4894,
+   "survey_year": 2011,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.27327,
+    0.18558,
+    0.05819,
+    0.36956,
+    0.08249,
+    0.0175,
+    0.0134
+   ],
+   "mean_years": 6.16
+  },
+  "gdp_pc_population_share_below": 0.38909,
+  "gdp_pc_population_share_same": 0.00079
+ },
+ {
+  "iso3": "CRI",
+  "name": "Costa Rica",
+  "currency": "CRC",
+  "currency_name": "Costa Rican Colon",
+  "population": 5152950,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 16942.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 340.991882,
+   "inflation_factor_since_2017": 1.159106,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.02723
+  },
+  "income": {
+   "low": 1.4864,
+   "thresholds": [
+    4.68,
+    6.9,
+    8.93,
+    11.1,
+    13.9162,
+    17.22,
+    22.46,
+    31.6,
+    47.95
+   ],
+   "pareto_alpha": 2.4022,
+   "mean": 22.2079,
+   "median": 13.9162,
+   "gini": 0.4925,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.12999,
+    0.07669,
+    0.21748,
+    0.18138,
+    0.16258,
+    0.06359,
+    0.16828
+   ],
+   "mean_years": 8.31
+  },
+  "gdp_pc_population_share_below": 0.84687,
+  "gdp_pc_population_share_same": 0.00063
+ },
+ {
+  "iso3": "HRV",
+  "name": "Croatia",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 3876200,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 21423.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.441259,
+   "inflation_factor_since_2017": 1.256271,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.07037
+  },
+  "income": {
+   "low": 5.0897,
+   "thresholds": [
+    12.24,
+    16.84,
+    19.9,
+    23.12,
+    26.1209,
+    29.5,
+    33.6,
+    38.85,
+    47.65
+   ],
+   "pareto_alpha": 3.8007,
+   "mean": 29.0816,
+   "median": 26.1209,
+   "gini": 0.2891,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0049,
+    0.0007,
+    0.0009,
+    0.1673,
+    0.5991,
+    0.0765,
+    0.1506
+   ],
+   "mean_years": 12.28
+  },
+  "gdp_pc_population_share_below": 0.85318,
+  "gdp_pc_population_share_same": 0.00047
+ },
+ {
+  "iso3": "CUB",
+  "name": "Cuba",
+  "currency": "CUP",
+  "currency_name": "Cuban Peso",
+  "population": 10937203,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 9605.3,
+  "gdp_year": 2020,
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.009,
+    0.08209,
+    0.09549,
+    0.18778,
+    0.47015,
+    0.0016,
+    0.15388
+   ],
+   "mean_years": 11.21
+  },
+  "gdp_pc_population_share_below": 0.58354,
+  "gdp_pc_population_share_same": 0.00134
+ },
+ {
+  "iso3": "CUW",
+  "name": "Curaçao",
+  "currency": "XCG",
+  "currency_name": "Caribbean Guilder",
+  "population": 156263,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 20048.4,
+  "gdp_year": 2022,
+  "prices": {
+   "ppp_2017": 1.393792,
+   "inflation_factor_since_2017": 1.052736,
+   "inflation_latest_year": 2019,
+   "inflation_recent_annual": 0.02603
+  },
+  "gdp_pc_population_share_below": 0.85285,
+  "gdp_pc_population_share_same": 2e-05
+ },
+ {
+  "iso3": "CYP",
+  "name": "Cyprus",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 1370754,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 23963.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.615186,
+   "inflation_factor_since_2017": 1.18267,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04542
+  },
+  "income": {
+   "low": 13.0627,
+   "thresholds": [
+    23.0,
+    28.58,
+    32.9,
+    38.05,
+    43.2033,
+    48.15,
+    55.4,
+    66.75,
+    86.65
+   ],
+   "pareto_alpha": 2.9338,
+   "mean": 51.5746,
+   "median": 43.2033,
+   "gini": 0.3122,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0052,
+    0.0088,
+    0.09211,
+    0.16902,
+    0.31433,
+    0.08651,
+    0.32403
+   ],
+   "mean_years": 12.27
+  },
+  "gdp_pc_population_share_below": 0.86192,
+  "gdp_pc_population_share_same": 0.00017
+ },
+ {
+  "iso3": "CZE",
+  "name": "Czechia",
+  "currency": "CZK",
+  "currency_name": "Czech Koruna",
+  "population": 10886878,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 30454.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 12.424986,
+   "inflation_factor_since_2017": 1.468364,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.09272
+  },
+  "income": {
+   "low": 11.6771,
+   "thresholds": [
+    21.08,
+    25.36,
+    28.5,
+    31.4,
+    34.5649,
+    38.35,
+    42.9,
+    50.35,
+    62.45
+   ],
+   "pareto_alpha": 3.8187,
+   "mean": 39.3665,
+   "median": 34.5649,
+   "gini": 0.2526,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0019,
+    0.0001,
+    0.0005,
+    0.0665,
+    0.7089,
+    0.1106,
+    0.1115
+   ],
+   "mean_years": 13.27
+  },
+  "gdp_pc_population_share_below": 0.8648,
+  "gdp_pc_population_share_same": 0.00133
+ },
+ {
+  "iso3": "CIV",
+  "name": "Côte d’Ivoire",
+  "currency": "XOF",
+  "currency_name": "CFA Franc BCEAO",
+  "population": 32711547,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2528.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 243.185577,
+   "inflation_factor_since_2017": 1.203161,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04374
+  },
+  "income": {
+   "low": 1.2161,
+   "thresholds": [
+    2.07,
+    2.62,
+    3.11,
+    3.68,
+    4.3527,
+    5.12,
+    6.15,
+    7.66,
+    10.72
+   ],
+   "pareto_alpha": 2.8721,
+   "mean": 5.6719,
+   "median": 4.3527,
+   "gini": 0.3718,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.40316,
+    0.14049,
+    0.23538,
+    0.08509,
+    0.08039,
+    0.0227,
+    0.0328
+   ],
+   "mean_years": 4.63
+  },
+  "gdp_pc_population_share_below": 0.38988,
+  "gdp_pc_population_share_same": 0.00401
+ },
+ {
+  "iso3": "DNK",
+  "name": "Denmark",
+  "currency": "DKK",
+  "currency_name": "Danish Krone",
+  "population": 6009169,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 67967.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 6.871679,
+   "inflation_factor_since_2017": 1.171762,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04091
+  },
+  "income": {
+   "low": 16.1419,
+   "thresholds": [
+    31.5,
+    38.85,
+    43.75,
+    48.6,
+    54.0801,
+    60.4,
+    68.4,
+    78.95,
+    96.2
+   ],
+   "pareto_alpha": 2.8737,
+   "mean": 62.7364,
+   "median": 54.0801,
+   "gini": 0.2772,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.01629,
+    0.0004,
+    0.0016,
+    0.1708,
+    0.36508,
+    0.14811,
+    0.29772
+   ],
+   "mean_years": 13.28
+  },
+  "gdp_pc_population_share_below": 0.95357,
+  "gdp_pc_population_share_same": 0.00074
+ },
+ {
+  "iso3": "DJI",
+  "name": "Djibouti",
+  "currency": "DJF",
+  "currency_name": "Djibouti Franc",
+  "population": 1184076,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3554.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 99.523598,
+   "inflation_factor_since_2017": 1.137509,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.02603
+  },
+  "income": {
+   "low": 0.5638,
+   "thresholds": [
+    1.55,
+    2.24,
+    2.83,
+    3.42,
+    4.0851,
+    4.83,
+    5.83,
+    7.09,
+    10.16
+   ],
+   "pareto_alpha": 2.3676,
+   "mean": 5.4438,
+   "median": 4.0851,
+   "gini": 0.4159,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.4387,
+  "gdp_pc_population_share_same": 0.00015
+ },
+ {
+  "iso3": "DMA",
+  "name": "Dominica",
+  "currency": "XCD",
+  "currency_name": "East Caribbean Dollar",
+  "population": 65871,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 9833.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.749071,
+   "inflation_factor_since_2017": 1.160137,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.04465
+  },
+  "gdp_pc_population_share_below": 0.58488,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "DOM",
+  "name": "Dominican Republic",
+  "currency": "DOP",
+  "currency_name": "Dominican Peso",
+  "population": 11520487,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 10717.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 20.916203,
+   "inflation_factor_since_2017": 1.395102,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05608
+  },
+  "income": {
+   "low": 2.1268,
+   "thresholds": [
+    4.67,
+    6.33,
+    7.65,
+    9.08,
+    10.6314,
+    12.66,
+    15.32,
+    19.6,
+    27.52
+   ],
+   "pareto_alpha": 2.6935,
+   "mean": 14.3733,
+   "median": 10.6314,
+   "gini": 0.3964,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.05419,
+    0.18848,
+    0.0335,
+    0.19318,
+    0.29027,
+    0.038,
+    0.20238
+   ],
+   "mean_years": 9.78
+  },
+  "gdp_pc_population_share_below": 0.61096,
+  "gdp_pc_population_share_same": 0.00141
+ },
+ {
+  "iso3": "ECU",
+  "name": "Ecuador",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 18289896,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6609.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.52854,
+   "inflation_factor_since_2017": 1.072181,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.02407
+  },
+  "income": {
+   "low": 0.7828,
+   "thresholds": [
+    2.87,
+    4.56,
+    6.14,
+    7.63,
+    9.1634,
+    11.3,
+    14.34,
+    18.52,
+    27.5
+   ],
+   "pareto_alpha": 2.2613,
+   "mean": 13.677,
+   "median": 9.1634,
+   "gini": 0.4731,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0239,
+    0.0978,
+    0.3068,
+    0.1086,
+    0.3134,
+    0.016,
+    0.1335
+   ],
+   "mean_years": 9.23
+  },
+  "gdp_pc_population_share_below": 0.55446,
+  "gdp_pc_population_share_same": 0.00224
+ },
+ {
+  "iso3": "EGY",
+  "name": "Egypt",
+  "currency": "EGP",
+  "currency_name": "Egyptian Pound",
+  "population": 118365995,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3456.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 3.169147,
+   "inflation_factor_since_2017": 2.104523,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.17068
+  },
+  "income": {
+   "low": 1.8867,
+   "thresholds": [
+    2.92,
+    3.54,
+    4.04,
+    4.53,
+    5.0656,
+    5.72,
+    6.57,
+    7.78,
+    10.3
+   ],
+   "pareto_alpha": 2.5467,
+   "mean": 6.3006,
+   "median": 5.0656,
+   "gini": 0.3153,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.37792,
+    0.01289,
+    0.01988,
+    0.03556,
+    0.38082,
+    0.06064,
+    0.11229
+   ],
+   "mean_years": 7.54
+  },
+  "gdp_pc_population_share_below": 0.42416,
+  "gdp_pc_population_share_same": 0.0145
+ },
+ {
+  "iso3": "SLV",
+  "name": "El Salvador",
+  "currency": "SVC",
+  "currency_name": "El Salvador Colon",
+  "population": 6365503,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 5391.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.448414,
+   "inflation_factor_since_2017": 1.173076,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04
+  },
+  "income": {
+   "low": 2.0571,
+   "thresholds": [
+    4.26,
+    5.7,
+    7.02,
+    8.38,
+    9.8868,
+    11.76,
+    14.04,
+    17.34,
+    24.64
+   ],
+   "pareto_alpha": 2.7658,
+   "mean": 12.9517,
+   "median": 9.8868,
+   "gini": 0.3878,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1839,
+    0.2002,
+    0.1472,
+    0.1352,
+    0.2419,
+    0.0136,
+    0.078
+   ],
+   "mean_years": 7.8
+  },
+  "gdp_pc_population_share_below": 0.53578,
+  "gdp_pc_population_share_same": 0.00078
+ },
+ {
+  "iso3": "GNQ",
+  "name": "Equatorial Guinea",
+  "currency": "XAF",
+  "currency_name": "CFA Franc BEAC",
+  "population": 1938431,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6558.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 245.970474,
+   "inflation_factor_since_2017": 1.125337,
+   "inflation_latest_year": 2022,
+   "inflation_recent_annual": 0.03126
+  },
+  "gdp_pc_population_share_below": 0.55422,
+  "gdp_pc_population_share_same": 0.00024
+ },
+ {
+  "iso3": "ERI",
+  "name": "Eritrea",
+  "currency": "ERN",
+  "currency_name": "Nakfa",
+  "population": 3607003,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 688.7,
+  "gdp_year": 2011,
+  "gdp_pc_population_share_below": 0.05045,
+  "gdp_pc_population_share_same": 0.00044
+ },
+ {
+  "iso3": "EST",
+  "name": "Estonia",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 1366475,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 29734.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.534908,
+   "inflation_factor_since_2017": 1.48715,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.105
+  },
+  "income": {
+   "low": 6.595,
+   "thresholds": [
+    17.86,
+    23.32,
+    26.32,
+    29.76,
+    34.645,
+    39.95,
+    47.2,
+    56.9,
+    73.75
+   ],
+   "pareto_alpha": 4.3778,
+   "mean": 41.0067,
+   "median": 34.645,
+   "gini": 0.3077,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0026,
+    0.0008,
+    0.0131,
+    0.1084,
+    0.4942,
+    0.1272,
+    0.2537
+   ],
+   "mean_years": 12.83
+  },
+  "gdp_pc_population_share_below": 0.86463,
+  "gdp_pc_population_share_same": 0.00017
+ },
+ {
+  "iso3": "SWZ",
+  "name": "Eswatini",
+  "currency": "SZL",
+  "currency_name": "Lilangeni",
+  "population": 1256174,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3736.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 5.98295,
+   "inflation_factor_since_2017": 1.075382,
+   "inflation_latest_year": 2019,
+   "inflation_recent_annual": 0.03701
+  },
+  "income": {
+   "low": 0.5145,
+   "thresholds": [
+    1.07,
+    1.49,
+    1.9,
+    2.37,
+    2.9537,
+    3.82,
+    5.11,
+    7.51,
+    12.88
+   ],
+   "pareto_alpha": 2.1513,
+   "mean": 5.6323,
+   "median": 2.9537,
+   "gini": 0.5458,
+   "survey_year": 2016,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.3379,
+    0.2353,
+    0.1368,
+    0.2126,
+    0.059,
+    0.0035,
+    0.0149
+   ],
+   "mean_years": 4.91
+  },
+  "gdp_pc_population_share_below": 0.43966,
+  "gdp_pc_population_share_same": 0.00015
+ },
+ {
+  "iso3": "ETH",
+  "name": "Ethiopia",
+  "currency": "ETB",
+  "currency_name": "Ethiopian Birr",
+  "population": 135472051,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1272.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 8.336392,
+   "inflation_factor_since_2017": 3.508796,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.30284
+  },
+  "income": {
+   "low": 0.7703,
+   "thresholds": [
+    1.39,
+    1.91,
+    2.25,
+    2.64,
+    3.0617,
+    3.45,
+    3.91,
+    4.7,
+    6.56
+   ],
+   "pareto_alpha": 2.6069,
+   "mean": 3.7388,
+   "median": 3.0617,
+   "gini": 0.3499,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.08584,
+  "gdp_pc_population_share_same": 0.01659
+ },
+ {
+  "iso3": "FRO",
+  "name": "Faroe Islands",
+  "currency": "DKK",
+  "currency_name": "Danish Krone",
+  "population": 54900,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 65969.1,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.95354,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "FJI",
+  "name": "Fiji",
+  "currency": "FJD",
+  "currency_name": "Fiji Dollar",
+  "population": 933154,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 5945.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.939452,
+   "inflation_factor_since_2017": 1.1033,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.02259
+  },
+  "income": {
+   "low": 2.123,
+   "thresholds": [
+    3.36,
+    4.33,
+    5.14,
+    5.83,
+    6.6434,
+    7.56,
+    8.85,
+    10.58,
+    13.88
+   ],
+   "pareto_alpha": 3.6272,
+   "mean": 7.9071,
+   "median": 6.6434,
+   "gini": 0.3071,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0994,
+    0.0225,
+    0.0371,
+    0.4141,
+    0.382,
+    0.015,
+    0.0299
+   ],
+   "mean_years": 9.55
+  },
+  "gdp_pc_population_share_below": 0.54504,
+  "gdp_pc_population_share_same": 0.00011
+ },
+ {
+  "iso3": "FIN",
+  "name": "Finland",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 5646436,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 53759.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.863657,
+   "inflation_factor_since_2017": 1.209923,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04951
+  },
+  "income": {
+   "low": 16.0586,
+   "thresholds": [
+    28.38,
+    35.55,
+    40.75,
+    45.9,
+    51.2622,
+    57.15,
+    65.3,
+    75.75,
+    93.0
+   ],
+   "pareto_alpha": 3.2062,
+   "mean": 58.8479,
+   "median": 51.2622,
+   "gini": 0.2774,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0021,
+    0.0305,
+    0.1131,
+    0.0889,
+    0.3384,
+    0.259,
+    0.168
+   ],
+   "mean_years": 11.95
+  },
+  "gdp_pc_population_share_below": 0.94482,
+  "gdp_pc_population_share_same": 0.00069
+ },
+ {
+  "iso3": "FRA",
+  "name": "France",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 68720337,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 44329.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.770109,
+   "inflation_factor_since_2017": 1.183805,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04023
+  },
+  "income": {
+   "low": 13.2201,
+   "thresholds": [
+    24.74,
+    32.55,
+    38.55,
+    43.7,
+    49.5898,
+    56.2,
+    63.5,
+    74.55,
+    96.2
+   ],
+   "pareto_alpha": 2.5303,
+   "mean": 59.5823,
+   "median": 49.5898,
+   "gini": 0.3238,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0169,
+    0.0234,
+    0.1699,
+    0.2602,
+    0.1798,
+    0.1862,
+    0.1636
+   ],
+   "mean_years": 10.63
+  },
+  "gdp_pc_population_share_below": 0.90687,
+  "gdp_pc_population_share_same": 0.00842
+ },
+ {
+  "iso3": "PYF",
+  "name": "French Polynesia",
+  "currency": "XPF",
+  "currency_name": "CFP Franc",
+  "population": 282465,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 20738.6,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.85314,
+  "gdp_pc_population_share_same": 3e-05
+ },
+ {
+  "iso3": "GAB",
+  "name": "Gabon",
+  "currency": "XAF",
+  "currency_name": "CFA Franc BEAC",
+  "population": 2593130,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 8256.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 271.62616,
+   "inflation_factor_since_2017": 1.201708,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03003
+  },
+  "income": {
+   "low": 1.6182,
+   "thresholds": [
+    3.91,
+    5.36,
+    6.66,
+    8.14,
+    9.6732,
+    11.48,
+    14.08,
+    17.72,
+    23.82
+   ],
+   "pareto_alpha": 3.2936,
+   "mean": 12.3369,
+   "median": 9.6732,
+   "gini": 0.3802,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.089,
+    0.132,
+    0.2081,
+    0.1699,
+    0.2507,
+    0.0521,
+    0.0982
+   ],
+   "mean_years": 9.05
+  },
+  "gdp_pc_population_share_below": 0.58255,
+  "gdp_pc_population_share_same": 0.00032
+ },
+ {
+  "iso3": "GMB",
+  "name": "Gambia",
+  "currency": "GMD",
+  "currency_name": "Dalasi",
+  "population": 2822093,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 867.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 14.687568,
+   "inflation_factor_since_2017": 1.692828,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.11884
+  },
+  "income": {
+   "low": 1.1168,
+   "thresholds": [
+    1.95,
+    2.5,
+    2.94,
+    3.41,
+    3.9524,
+    4.67,
+    5.43,
+    6.71,
+    8.75
+   ],
+   "pareto_alpha": 2.4822,
+   "mean": 5.0999,
+   "median": 3.9524,
+   "gini": 0.3592,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.593,
+    0.0042,
+    0.0766,
+    0.0998,
+    0.147,
+    0.0498,
+    0.0296
+   ],
+   "mean_years": 4.47
+  },
+  "gdp_pc_population_share_below": 0.0516,
+  "gdp_pc_population_share_same": 0.00035
+ },
+ {
+  "iso3": "GEO",
+  "name": "Georgia",
+  "currency": "GEL",
+  "currency_name": "Lari",
+  "population": 3935766,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 8218.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.808302,
+   "inflation_factor_since_2017": 1.438088,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05058
+  },
+  "income": {
+   "low": 1.245,
+   "thresholds": [
+    2.64,
+    3.57,
+    4.35,
+    5.16,
+    6.031,
+    7.05,
+    8.26,
+    9.82,
+    12.82
+   ],
+   "pareto_alpha": 3.0686,
+   "mean": 7.2557,
+   "median": 6.031,
+   "gini": 0.3447,
+   "survey_year": 2020,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.58207,
+  "gdp_pc_population_share_same": 0.00048
+ },
+ {
+  "iso3": "DEU",
+  "name": "Germany",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 83491249,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 53502.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.744783,
+   "inflation_factor_since_2017": 1.233338,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05006
+  },
+  "income": {
+   "low": 12.7283,
+   "thresholds": [
+    27.06,
+    35.3,
+    41.95,
+    48.4,
+    54.8246,
+    62.15,
+    71.45,
+    84.75,
+    107.7
+   ],
+   "pareto_alpha": 2.9602,
+   "mean": 64.6846,
+   "median": 54.8246,
+   "gini": 0.317,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0246,
+    0.007,
+    0.0297,
+    0.1141,
+    0.5879,
+    0.0773,
+    0.1594
+   ],
+   "mean_years": 12.79
+  },
+  "gdp_pc_population_share_below": 0.93313,
+  "gdp_pc_population_share_same": 0.01022
+ },
+ {
+  "iso3": "GHA",
+  "name": "Ghana",
+  "currency": "GHS",
+  "currency_name": "Ghana Cedi",
+  "population": 35064272,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2260.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.693591,
+   "inflation_factor_since_2017": 3.108495,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.30587
+  },
+  "income": {
+   "low": 0.3817,
+   "thresholds": [
+    1.25,
+    1.83,
+    2.44,
+    3.08,
+    3.7328,
+    4.51,
+    5.62,
+    7.13,
+    9.98
+   ],
+   "pareto_alpha": 2.5617,
+   "mean": 5.0822,
+   "median": 3.7328,
+   "gini": 0.4352,
+   "survey_year": 2016,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.282,
+    0.0411,
+    0.0653,
+    0.3538,
+    0.2216,
+    0.0127,
+    0.0235
+   ],
+   "mean_years": 7.63
+  },
+  "gdp_pc_population_share_below": 0.20074,
+  "gdp_pc_population_share_same": 0.00429
+ },
+ {
+  "iso3": "GIB",
+  "name": "Gibraltar",
+  "currency": "GIP",
+  "currency_name": "Gibraltar Pound",
+  "population": 40126,
+  "population_year": 2025
+ },
+ {
+  "iso3": "GRC",
+  "name": "Greece",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 10413962,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 22888.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.575041,
+   "inflation_factor_since_2017": 1.175339,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05239
+  },
+  "income": {
+   "low": 3.6315,
+   "thresholds": [
+    10.6,
+    14.44,
+    17.98,
+    20.98,
+    24.613,
+    28.26,
+    32.65,
+    38.85,
+    49.15
+   ],
+   "pareto_alpha": 3.2562,
+   "mean": 28.48,
+   "median": 24.613,
+   "gini": 0.331,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0087,
+    0.0053,
+    0.1924,
+    0.1939,
+    0.3085,
+    0.0176,
+    0.2736
+   ],
+   "mean_years": 11.24
+  },
+  "gdp_pc_population_share_below": 0.86042,
+  "gdp_pc_population_share_same": 0.00128
+ },
+ {
+  "iso3": "GRL",
+  "name": "Greenland",
+  "currency": "DKK",
+  "currency_name": "Danish Krone",
+  "population": 56831,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 57116.3,
+  "gdp_year": 2021,
+  "gdp_pc_population_share_below": 0.94794,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "GRD",
+  "name": "Grenada",
+  "currency": "XCD",
+  "currency_name": "East Caribbean Dollar",
+  "population": 117303,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 11277.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.750419,
+   "inflation_factor_since_2017": 1.073303,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.02163
+  },
+  "gdp_pc_population_share_below": 0.61237,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "GUM",
+  "name": "Guam",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 168999,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 41833.2,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.90684,
+  "gdp_pc_population_share_same": 2e-05
+ },
+ {
+  "iso3": "GTM",
+  "name": "Guatemala",
+  "currency": "GTQ",
+  "currency_name": "Quetzal",
+  "population": 18687881,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 5630.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 3.324187,
+   "inflation_factor_since_2017": 1.352045,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05306
+  },
+  "income": {
+   "low": 0.9304,
+   "thresholds": [
+    2.21,
+    3.13,
+    4.04,
+    5.03,
+    6.1696,
+    7.48,
+    9.27,
+    12.08,
+    18.2
+   ],
+   "pareto_alpha": 2.0359,
+   "mean": 9.4003,
+   "median": 6.1696,
+   "gini": 0.4828,
+   "survey_year": 2014,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.28453,
+    0.24372,
+    0.20182,
+    0.06251,
+    0.17582,
+    0.0054,
+    0.0262
+   ],
+   "mean_years": 5.11
+  },
+  "gdp_pc_population_share_below": 0.54232,
+  "gdp_pc_population_share_same": 0.00229
+ },
+ {
+  "iso3": "GIN",
+  "name": "Guinea",
+  "currency": "GNF",
+  "currency_name": "Guinean Franc",
+  "population": 15099727,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1639.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2819.405518,
+   "inflation_factor_since_2017": 1.928362,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.088
+  },
+  "income": {
+   "low": 1.1381,
+   "thresholds": [
+    1.92,
+    2.46,
+    2.86,
+    3.32,
+    3.8038,
+    4.33,
+    5.0,
+    5.94,
+    7.55
+   ],
+   "pareto_alpha": 3.9001,
+   "mean": 4.3982,
+   "median": 3.8038,
+   "gini": 0.2959,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.17326,
+  "gdp_pc_population_share_same": 0.00185
+ },
+ {
+  "iso3": "GNB",
+  "name": "Guinea-Bissau",
+  "currency": "XOF",
+  "currency_name": "CFA Franc BCEAO",
+  "population": 2249515,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 913.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 218.42778,
+   "inflation_factor_since_2017": 1.138334,
+   "inflation_latest_year": 2022,
+   "inflation_recent_annual": 0.04196
+  },
+  "income": {
+   "low": 1.0812,
+   "thresholds": [
+    1.7,
+    2.09,
+    2.45,
+    2.81,
+    3.3136,
+    3.83,
+    4.54,
+    5.61,
+    7.63
+   ],
+   "pareto_alpha": 2.9174,
+   "mean": 4.2063,
+   "median": 3.3136,
+   "gini": 0.3477,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.05826,
+  "gdp_pc_population_share_same": 0.00028
+ },
+ {
+  "iso3": "GUY",
+  "name": "Guyana",
+  "currency": "GYD",
+  "currency_name": "Guyana Dollar",
+  "population": 835986,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 20313.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 104.212296,
+   "inflation_factor_since_2017": 1.231449,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03935
+  },
+  "income": {
+   "low": 0.0965,
+   "thresholds": [
+    1.93,
+    3.17,
+    4.14,
+    4.97,
+    6.0427,
+    7.29,
+    8.83,
+    11.14,
+    16.26
+   ],
+   "pareto_alpha": 2.2951,
+   "mean": 8.3653,
+   "median": 6.0427,
+   "gini": 0.4512,
+   "survey_year": 1998,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0479,
+    0.1457,
+    0.1996,
+    0.2477,
+    0.3519,
+    0.0027,
+    0.0045
+   ],
+   "mean_years": 9.01
+  },
+  "gdp_pc_population_share_below": 0.85287,
+  "gdp_pc_population_share_same": 0.0001
+ },
+ {
+  "iso3": "HTI",
+  "name": "Haiti",
+  "currency": "HTG",
+  "currency_name": "Gourde",
+  "population": 11906095,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1705.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 27.424803,
+   "inflation_factor_since_2017": 3.511637,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.28902
+  },
+  "income": {
+   "low": 0.0237,
+   "thresholds": [
+    0.36,
+    0.64,
+    0.95,
+    1.3,
+    1.7052,
+    2.28,
+    3.07,
+    4.47,
+    7.43
+   ],
+   "pareto_alpha": 1.791,
+   "mean": 3.4893,
+   "median": 1.7052,
+   "gini": 0.6079,
+   "survey_year": 2012,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.27003,
+    0.35614,
+    0.04515,
+    0.09271,
+    0.22517,
+    0.0021,
+    0.00869
+   ],
+   "mean_years": 5.29
+  },
+  "gdp_pc_population_share_below": 0.17877,
+  "gdp_pc_population_share_same": 0.00146
+ },
+ {
+  "iso3": "HND",
+  "name": "Honduras",
+  "currency": "HNL",
+  "currency_name": "Lempira",
+  "population": 11005850,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3231.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 10.083259,
+   "inflation_factor_since_2017": 1.432981,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06771
+  },
+  "income": {
+   "low": 0.5964,
+   "thresholds": [
+    1.91,
+    2.88,
+    4.03,
+    5.34,
+    6.9277,
+    8.86,
+    11.14,
+    14.78,
+    21.34
+   ],
+   "pareto_alpha": 2.5536,
+   "mean": 10.1239,
+   "median": 6.9277,
+   "gini": 0.4817,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1283,
+    0.2504,
+    0.2798,
+    0.1023,
+    0.137,
+    0.0028,
+    0.0994
+   ],
+   "mean_years": 6.44
+  },
+  "gdp_pc_population_share_below": 0.42215,
+  "gdp_pc_population_share_same": 0.00135
+ },
+ {
+  "iso3": "HKG",
+  "name": "Hong Kong",
+  "currency": "HKD",
+  "currency_name": "Hong Kong Dollar",
+  "population": 7498900,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 50696.6,
+  "gdp_year": 2023,
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0153,
+    0.02661,
+    0.17323,
+    0.11452,
+    0.32867,
+    0.05141,
+    0.29026
+   ],
+   "mean_years": 12.35
+  },
+  "gdp_pc_population_share_below": 0.92587,
+  "gdp_pc_population_share_same": 0.00092
+ },
+ {
+  "iso3": "HUN",
+  "name": "Hungary",
+  "currency": "HUF",
+  "currency_name": "Forint",
+  "population": 9514251,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 22141.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 136.036522,
+   "inflation_factor_since_2017": 1.606896,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.11657
+  },
+  "income": {
+   "low": 4.1513,
+   "thresholds": [
+    13.26,
+    15.28,
+    19.66,
+    22.16,
+    24.7641,
+    28.62,
+    32.5,
+    37.3,
+    43.85
+   ],
+   "pareto_alpha": 2.9841,
+   "mean": 28.2687,
+   "median": 24.7641,
+   "gini": 0.2995,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.003,
+    0.003,
+    0.0203,
+    0.15992,
+    0.57116,
+    0.0262,
+    0.21642
+   ],
+   "mean_years": 12.46
+  },
+  "gdp_pc_population_share_below": 0.8588,
+  "gdp_pc_population_share_same": 0.00117
+ },
+ {
+  "iso3": "ISL",
+  "name": "Iceland",
+  "currency": "ISK",
+  "currency_name": "Iceland Krona",
+  "population": 392404,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 80433.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 138.277175,
+   "inflation_factor_since_2017": 1.416548,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.07626
+  },
+  "income": {
+   "low": 18.944,
+   "thresholds": [
+    31.85,
+    38.8,
+    44.6,
+    50.95,
+    56.5217,
+    61.9,
+    69.85,
+    79.25,
+    98.1
+   ],
+   "pareto_alpha": 3.4018,
+   "mean": 62.9752,
+   "median": 56.5217,
+   "gini": 0.2613,
+   "survey_year": 2017,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.02199,
+    0.07257,
+    0.32767,
+    0.11575,
+    0.17203,
+    0.09386,
+    0.19612
+   ],
+   "mean_years": 10.21
+  },
+  "gdp_pc_population_share_below": 0.95439,
+  "gdp_pc_population_share_same": 5e-05
+ },
+ {
+  "iso3": "IND",
+  "name": "India",
+  "currency": "INR",
+  "currency_name": "Indian Rupee",
+  "population": 1463865525,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2468.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 20.455578,
+   "inflation_factor_since_2017": 1.429838,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05765
+  },
+  "income": {
+   "low": 1.3578,
+   "thresholds": [
+    2.15,
+    2.63,
+    3.04,
+    3.44,
+    3.89,
+    4.41,
+    5.09,
+    6.18,
+    8.77
+   ],
+   "pareto_alpha": 2.2651,
+   "mean": 5.1274,
+   "median": 3.89,
+   "gini": 0.3573,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.32397,
+    0.0108,
+    0.16398,
+    0.13669,
+    0.25267,
+    0.0389,
+    0.07299
+   ],
+   "mean_years": 6.55
+  },
+  "gdp_pc_population_share_below": 0.20981,
+  "gdp_pc_population_share_same": 0.17928
+ },
+ {
+  "iso3": "IDN",
+  "name": "Indonesia",
+  "currency": "IDR",
+  "currency_name": "Rupiah",
+  "population": 285721236,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4876.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 4756.168945,
+   "inflation_factor_since_2017": 1.189013,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.0314
+  },
+  "income": {
+   "low": 1.7484,
+   "thresholds": [
+    2.75,
+    3.49,
+    4.15,
+    4.89,
+    5.74,
+    6.77,
+    8.1,
+    10.06,
+    13.94
+   ],
+   "pareto_alpha": 2.5412,
+   "mean": 7.632,
+   "median": 5.74,
+   "gini": 0.3792,
+   "survey_year": 2021,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.05209,
+    0.13629,
+    0.29237,
+    0.17518,
+    0.24538,
+    0.0074,
+    0.09129
+   ],
+   "mean_years": 8.25
+  },
+  "gdp_pc_population_share_below": 0.49491,
+  "gdp_pc_population_share_same": 0.03499
+ },
+ {
+  "iso3": "IRN",
+  "name": "Iran",
+  "currency": "IRR",
+  "currency_name": "Iranian Rial",
+  "population": 92417681,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4431.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 13061.294922,
+   "inflation_factor_since_2017": 6.414116,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.43818
+  },
+  "income": {
+   "low": 2.1442,
+   "thresholds": [
+    4.37,
+    5.87,
+    7.2,
+    8.7,
+    10.3095,
+    12.28,
+    14.88,
+    19.0,
+    26.8
+   ],
+   "pareto_alpha": 2.5059,
+   "mean": 14.0721,
+   "median": 10.3095,
+   "gini": 0.4094,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.13779,
+    0.08519,
+    0.11039,
+    0.27497,
+    0.11159,
+    0.0487,
+    0.23138
+   ],
+   "mean_years": 8.75
+  },
+  "gdp_pc_population_share_below": 0.4774,
+  "gdp_pc_population_share_same": 0.01132
+ },
+ {
+  "iso3": "IRQ",
+  "name": "Iraq",
+  "currency": "IQD",
+  "currency_name": "Iraqi Dinar",
+  "population": 47020774,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 5565.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 552.902283,
+   "inflation_factor_since_2017": 1.170541,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.05129
+  },
+  "income": {
+   "low": 3.1661,
+   "thresholds": [
+    5.15,
+    6.36,
+    7.4,
+    8.46,
+    9.6143,
+    10.92,
+    12.6,
+    15.0,
+    19.08
+   ],
+   "pareto_alpha": 3.4752,
+   "mean": 11.3009,
+   "median": 9.6143,
+   "gini": 0.2954,
+   "survey_year": 2012,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1597,
+    0.1427,
+    0.2311,
+    0.1512,
+    0.2022,
+    0.0389,
+    0.0742
+   ],
+   "mean_years": 7.33
+  },
+  "gdp_pc_population_share_below": 0.53656,
+  "gdp_pc_population_share_same": 0.00576
+ },
+ {
+  "iso3": "IRL",
+  "name": "Ireland",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 5484367,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 102725.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.794405,
+   "inflation_factor_since_2017": 1.210806,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05386
+  },
+  "income": {
+   "low": 14.5597,
+   "thresholds": [
+    24.76,
+    30.35,
+    35.8,
+    39.75,
+    44.7276,
+    50.85,
+    58.1,
+    70.2,
+    91.1
+   ],
+   "pareto_alpha": 3.0452,
+   "mean": 54.0526,
+   "median": 44.7276,
+   "gini": 0.306,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0042,
+    0.0172,
+    0.06269,
+    0.15258,
+    0.31657,
+    0.13929,
+    0.30747
+   ],
+   "mean_years": 12.56
+  },
+  "gdp_pc_population_share_below": 0.99923,
+  "gdp_pc_population_share_same": 0.00067
+ },
+ {
+  "iso3": "IMN",
+  "name": "Isle of Man",
+  "currency": "GBP",
+  "currency_name": "Pound Sterling",
+  "population": 84118,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 94300.0,
+  "gdp_year": 2021,
+  "gdp_pc_population_share_below": 0.9981,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "ISR",
+  "name": "Israel",
+  "currency": "ILS",
+  "currency_name": "New Israeli Sheqel",
+  "population": 10122800,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 51771.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 3.751633,
+   "inflation_factor_since_2017": 1.150071,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03895
+  },
+  "income": {
+   "low": 4.5112,
+   "thresholds": [
+    10.78,
+    16.56,
+    22.16,
+    27.88,
+    33.6455,
+    40.6,
+    48.0,
+    57.95,
+    76.5
+   ],
+   "pareto_alpha": 3.0873,
+   "mean": 40.9595,
+   "median": 33.6455,
+   "gini": 0.3858,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0247,
+    0.0071,
+    0.0369,
+    0.07499,
+    0.36826,
+    0.16148,
+    0.32657
+   ],
+   "mean_years": 13.37
+  },
+  "gdp_pc_population_share_below": 0.92679,
+  "gdp_pc_population_share_same": 0.00124
+ },
+ {
+  "iso3": "ITA",
+  "name": "Italy",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 58915656,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 38228.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.689895,
+   "inflation_factor_since_2017": 1.194692,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04892
+  },
+  "income": {
+   "low": 2.3856,
+   "thresholds": [
+    15.98,
+    23.3,
+    29.36,
+    34.95,
+    40.6749,
+    47.5,
+    55.45,
+    66.15,
+    85.45
+   ],
+   "pareto_alpha": 3.1847,
+   "mean": 48.0495,
+   "median": 40.6749,
+   "gini": 0.3522,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0116,
+    0.0017,
+    0.0671,
+    0.3524,
+    0.3917,
+    0.058,
+    0.1175
+   ],
+   "mean_years": 11.12
+  },
+  "gdp_pc_population_share_below": 0.89962,
+  "gdp_pc_population_share_same": 0.00722
+ },
+ {
+  "iso3": "JAM",
+  "name": "Jamaica",
+  "currency": "JMD",
+  "currency_name": "Jamaican Dollar",
+  "population": 2837077,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6839.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 68.53273,
+   "inflation_factor_since_2017": 1.48711,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.07391
+  },
+  "income": {
+   "low": 2.118,
+   "thresholds": [
+    4.16,
+    5.57,
+    6.97,
+    8.37,
+    9.9535,
+    12.08,
+    15.74,
+    19.86,
+    29.12
+   ],
+   "pareto_alpha": 2.1531,
+   "mean": 15.2058,
+   "median": 9.9535,
+   "gini": 0.4546,
+   "survey_year": 2004,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0413,
+    0.05171,
+    0.06351,
+    0.27383,
+    0.38964,
+    0.06211,
+    0.11791
+   ],
+   "mean_years": 10.81
+  },
+  "gdp_pc_population_share_below": 0.55698,
+  "gdp_pc_population_share_same": 0.00035
+ },
+ {
+  "iso3": "JPN",
+  "name": "Japan",
+  "currency": "JPY",
+  "currency_name": "Yen",
+  "population": 123366734,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 33834.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 105.101901,
+   "inflation_factor_since_2017": 1.100516,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.02834
+  },
+  "income": {
+   "low": 7.8026,
+   "thresholds": [
+    21.1,
+    27.22,
+    31.8,
+    36.3,
+    41.4921,
+    46.5,
+    53.1,
+    64.1,
+    85.25
+   ],
+   "pareto_alpha": 2.8469,
+   "mean": 49.7594,
+   "median": 41.4921,
+   "gini": 0.3285,
+   "survey_year": 2013,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0007,
+    0.013,
+    0.0484,
+    0.06,
+    0.3821,
+    0.2061,
+    0.2897
+   ],
+   "mean_years": 12.97
+  },
+  "gdp_pc_population_share_below": 0.884,
+  "gdp_pc_population_share_same": 0.01511
+ },
+ {
+  "iso3": "JOR",
+  "name": "Jordan",
+  "currency": "JOD",
+  "currency_name": "Jordanian Dinar",
+  "population": 11520684,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4442.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.311541,
+   "inflation_factor_since_2017": 1.138825,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.02546
+  },
+  "income": {
+   "low": 4.4914,
+   "thresholds": [
+    7.2,
+    8.82,
+    10.26,
+    11.72,
+    13.392,
+    15.3,
+    17.92,
+    21.88,
+    30.0
+   ],
+   "pareto_alpha": 2.8226,
+   "mean": 16.9244,
+   "median": 13.392,
+   "gini": 0.3366,
+   "survey_year": 2010,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0468,
+    0.0309,
+    0.09401,
+    0.35804,
+    0.30603,
+    0.12001,
+    0.0442
+   ],
+   "mean_years": 10.09
+  },
+  "gdp_pc_population_share_below": 0.48872,
+  "gdp_pc_population_share_same": 0.00141
+ },
+ {
+  "iso3": "KAZ",
+  "name": "Kazakhstan",
+  "currency": "KZT",
+  "currency_name": "Tenge",
+  "population": 20843754,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 12858.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 121.613785,
+   "inflation_factor_since_2017": 1.784137,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.11434
+  },
+  "income": {
+   "low": 4.2955,
+   "thresholds": [
+    6.34,
+    7.45,
+    8.4,
+    9.34,
+    10.4177,
+    11.74,
+    13.48,
+    16.0,
+    20.56
+   ],
+   "pareto_alpha": 3.3976,
+   "mean": 12.4264,
+   "median": 10.4177,
+   "gini": 0.2779,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.001,
+    0.0009,
+    0.0013,
+    0.08223,
+    0.67127,
+    0.08283,
+    0.16046
+   ],
+   "mean_years": 11.61
+  },
+  "gdp_pc_population_share_below": 0.79015,
+  "gdp_pc_population_share_same": 0.00255
+ },
+ {
+  "iso3": "KEN",
+  "name": "Kenya",
+  "currency": "KES",
+  "currency_name": "Kenyan Shilling",
+  "population": 57532493,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1941.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 41.279449,
+   "inflation_factor_since_2017": 1.492525,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06596
+  },
+  "income": {
+   "low": 0.6791,
+   "thresholds": [
+    1.37,
+    1.79,
+    2.17,
+    2.57,
+    3.0986,
+    3.68,
+    4.46,
+    5.78,
+    8.13
+   ],
+   "pareto_alpha": 2.5423,
+   "mean": 4.2461,
+   "median": 3.0986,
+   "gini": 0.4078,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.14949,
+    0.25087,
+    0.25667,
+    0.08569,
+    0.17138,
+    0.0297,
+    0.05619
+   ],
+   "mean_years": 7.19
+  },
+  "gdp_pc_population_share_below": 0.18473,
+  "gdp_pc_population_share_same": 0.00705
+ },
+ {
+  "iso3": "KIR",
+  "name": "Kiribati",
+  "currency": "AUD",
+  "currency_name": "Australian Dollar",
+  "population": 136488,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2105.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.943685,
+   "inflation_factor_since_2017": 1.18972,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.0552
+  },
+  "income": {
+   "low": 2.0089,
+   "thresholds": [
+    3.05,
+    3.7,
+    4.23,
+    4.78,
+    5.3402,
+    6.11,
+    6.98,
+    8.26,
+    10.16
+   ],
+   "pareto_alpha": 3.4439,
+   "mean": 6.2653,
+   "median": 5.3402,
+   "gini": 0.2783,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.19439,
+  "gdp_pc_population_share_same": 2e-05
+ },
+ {
+  "iso3": "XKX",
+  "name": "Kosovo",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 1576876,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6203.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.378328,
+   "inflation_factor_since_2017": 1.278591,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05968
+  },
+  "income": {
+   "low": 2.6228,
+   "thresholds": [
+    4.6,
+    5.57,
+    6.51,
+    7.29,
+    8.1088,
+    9.03,
+    10.22,
+    11.94,
+    15.48
+   ],
+   "pareto_alpha": 2.9507,
+   "mean": 9.5342,
+   "median": 8.1088,
+   "gini": 0.2901,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.55317,
+  "gdp_pc_population_share_same": 0.00019
+ },
+ {
+  "iso3": "KWT",
+  "name": "Kuwait",
+  "currency": "KWD",
+  "currency_name": "Kuwaiti Dinar",
+  "population": 4865298,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 33331.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.18923,
+   "inflation_factor_since_2017": 1.190199,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03506
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0464,
+    0.3353,
+    0.0557,
+    0.2796,
+    0.1352,
+    0.0642,
+    0.0836
+   ],
+   "mean_years": 6.99
+  },
+  "gdp_pc_population_share_below": 0.88337,
+  "gdp_pc_population_share_same": 0.0006
+ },
+ {
+  "iso3": "KGZ",
+  "name": "Kyrgyzstan",
+  "currency": "KGS",
+  "currency_name": "Som",
+  "population": 7343064,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1970.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 16.979792,
+   "inflation_factor_since_2017": 1.541695,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.12186
+  },
+  "income": {
+   "low": 2.1097,
+   "thresholds": [
+    3.11,
+    3.72,
+    4.22,
+    4.83,
+    5.4331,
+    6.16,
+    7.1,
+    8.33,
+    10.6
+   ],
+   "pareto_alpha": 3.1597,
+   "mean": 6.4536,
+   "median": 5.4331,
+   "gini": 0.2899,
+   "survey_year": 2020,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0025,
+    0.0018,
+    0.0083,
+    0.0607,
+    0.7346,
+    0.0664,
+    0.1257
+   ],
+   "mean_years": 11.41
+  },
+  "gdp_pc_population_share_below": 0.19178,
+  "gdp_pc_population_share_same": 0.0009
+ },
+ {
+  "iso3": "LAO",
+  "name": "Laos",
+  "currency": "LAK",
+  "currency_name": "Lao Kip",
+  "population": 7873046,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2066.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2808.074951,
+   "inflation_factor_since_2017": 2.284275,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.25714
+  },
+  "income": {
+   "low": 1.4936,
+   "thresholds": [
+    2.36,
+    2.94,
+    3.5,
+    4.13,
+    4.7574,
+    5.64,
+    6.78,
+    8.44,
+    11.7
+   ],
+   "pareto_alpha": 2.3484,
+   "mean": 6.5213,
+   "median": 4.7574,
+   "gini": 0.388,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.171,
+    0.1656,
+    0.2535,
+    0.1072,
+    0.1842,
+    0.0417,
+    0.0768
+   ],
+   "mean_years": 6.47
+  },
+  "gdp_pc_population_share_below": 0.19278,
+  "gdp_pc_population_share_same": 0.00096
+ },
+ {
+  "iso3": "LVA",
+  "name": "Latvia",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 1847785,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 23160.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.519926,
+   "inflation_factor_since_2017": 1.412013,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.08975
+  },
+  "income": {
+   "low": 4.5952,
+   "thresholds": [
+    12.52,
+    16.94,
+    20.08,
+    23.34,
+    26.9371,
+    31.05,
+    36.25,
+    44.25,
+    59.15
+   ],
+   "pareto_alpha": 3.0715,
+   "mean": 32.9305,
+   "median": 26.9371,
+   "gini": 0.3449,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0017,
+    0.0012,
+    0.0075,
+    0.09561,
+    0.57766,
+    0.10661,
+    0.20972
+   ],
+   "mean_years": 12.01
+  },
+  "gdp_pc_population_share_below": 0.8617,
+  "gdp_pc_population_share_same": 0.00023
+ },
+ {
+  "iso3": "LBN",
+  "name": "Lebanon",
+  "currency": "LBP",
+  "currency_name": "Lebanese Pound",
+  "population": 5849421,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3654.4,
+  "gdp_year": 2022,
+  "prices": {
+   "ppp_2017": 619.01289,
+   "inflation_factor_since_2017": 44.846064,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 1.81058
+  },
+  "income": {
+   "low": 6.4138,
+   "thresholds": [
+    12.62,
+    16.52,
+    19.48,
+    22.64,
+    26.1167,
+    29.94,
+    34.1,
+    41.5,
+    53.55
+   ],
+   "pareto_alpha": 3.3522,
+   "mean": 30.7861,
+   "median": 26.1167,
+   "gini": 0.3183,
+   "survey_year": 2011,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.43884,
+  "gdp_pc_population_share_same": 0.00072
+ },
+ {
+  "iso3": "LSO",
+  "name": "Lesotho",
+  "currency": "LSL",
+  "currency_name": "Loti",
+  "population": 2363325,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 885.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 5.440633,
+   "inflation_factor_since_2017": 1.49859,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06902
+  },
+  "income": {
+   "low": 0.4572,
+   "thresholds": [
+    1.14,
+    1.57,
+    2.03,
+    2.59,
+    3.2376,
+    4.17,
+    5.15,
+    6.67,
+    9.39
+   ],
+   "pareto_alpha": 2.5953,
+   "mean": 4.6434,
+   "median": 3.2376,
+   "gini": 0.4488,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1107,
+    0.3756,
+    0.2423,
+    0.0887,
+    0.1645,
+    0.0061,
+    0.0121
+   ],
+   "mean_years": 6.28
+  },
+  "gdp_pc_population_share_below": 0.05798,
+  "gdp_pc_population_share_same": 0.00029
+ },
+ {
+  "iso3": "LBR",
+  "name": "Liberia",
+  "currency": "LRD",
+  "currency_name": "Liberian Dollar",
+  "population": 5731206,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 788.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.419995,
+   "inflation_factor_since_2017": 2.343317,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.08495
+  },
+  "income": {
+   "low": 0.8334,
+   "thresholds": [
+    1.45,
+    1.85,
+    2.24,
+    2.66,
+    3.095,
+    3.61,
+    4.29,
+    5.28,
+    7.12
+   ],
+   "pareto_alpha": 3.093,
+   "mean": 3.8831,
+   "median": 3.095,
+   "gini": 0.3527,
+   "survey_year": 2016,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.4876,
+    0.0642,
+    0.1601,
+    0.0789,
+    0.1588,
+    0.0216,
+    0.0288
+   ],
+   "mean_years": 4.53
+  },
+  "gdp_pc_population_share_below": 0.05089,
+  "gdp_pc_population_share_same": 0.0007
+ },
+ {
+  "iso3": "LBY",
+  "name": "Libya",
+  "currency": "LYD",
+  "currency_name": "Libyan Dinar",
+  "population": 7458555,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6911.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.770585,
+   "inflation_factor_since_2017": 1.262531,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.02998
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.19038,
+    0.0325,
+    0.20048,
+    0.11889,
+    0.16808,
+    0.10599,
+    0.18368
+   ],
+   "mean_years": 8.81
+  },
+  "gdp_pc_population_share_below": 0.55733,
+  "gdp_pc_population_share_same": 0.00091
+ },
+ {
+  "iso3": "LIE",
+  "name": "Liechtenstein",
+  "currency": "CHF",
+  "currency_name": "Swiss Franc",
+  "population": 41024,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 186480.0,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.99999,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "LTU",
+  "name": "Lithuania",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 2888774,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 27105.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.475054,
+   "inflation_factor_since_2017": 1.46469,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.09572
+  },
+  "income": {
+   "low": 5.9484,
+   "thresholds": [
+    14.22,
+    19.02,
+    23.24,
+    26.7,
+    30.7126,
+    35.6,
+    42.1,
+    51.5,
+    68.55
+   ],
+   "pareto_alpha": 2.8592,
+   "mean": 38.3872,
+   "median": 30.7126,
+   "gini": 0.3525,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0,
+    0.0026,
+    0.0036,
+    0.0642,
+    0.5426,
+    0.1308,
+    0.2562
+   ],
+   "mean_years": 12.14
+  },
+  "gdp_pc_population_share_below": 0.86275,
+  "gdp_pc_population_share_same": 0.00035
+ },
+ {
+  "iso3": "LUX",
+  "name": "Luxembourg",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 686970,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 128678.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.84831,
+   "inflation_factor_since_2017": 1.202063,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04028
+  },
+  "income": {
+   "low": 16.8978,
+   "thresholds": [
+    31.2,
+    41.1,
+    49.95,
+    59.7,
+    69.4836,
+    80.9,
+    96.85,
+    117.1,
+    149.6
+   ],
+   "pareto_alpha": 3.1824,
+   "mean": 84.4537,
+   "median": 69.4836,
+   "gini": 0.3424,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0033,
+    0.0283,
+    0.1039,
+    0.1956,
+    0.3063,
+    0.1185,
+    0.2441
+   ],
+   "mean_years": 12.38
+  },
+  "gdp_pc_population_share_below": 0.99991,
+  "gdp_pc_population_share_same": 8e-05
+ },
+ {
+  "iso3": "MAC",
+  "name": "Macao",
+  "currency": "MOP",
+  "currency_name": "Pataca",
+  "population": 685900,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 69330.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 5.154916,
+   "inflation_factor_since_2017": 1.083551,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.00515
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0158,
+    0.05251,
+    0.14761,
+    0.22262,
+    0.27463,
+    0.10161,
+    0.18522
+   ],
+   "mean_years": 9.3
+  },
+  "gdp_pc_population_share_below": 0.9543,
+  "gdp_pc_population_share_same": 8e-05
+ },
+ {
+  "iso3": "MDG",
+  "name": "Madagascar",
+  "currency": "MGA",
+  "currency_name": "Malagasy Ariary",
+  "population": 32740678,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 513.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 990.840393,
+   "inflation_factor_since_2017": 1.502762,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.07936
+  },
+  "income": {
+   "low": 0.206,
+   "thresholds": [
+    0.48,
+    0.65,
+    0.8,
+    0.95,
+    1.1187,
+    1.32,
+    1.62,
+    2.1,
+    3.13
+   ],
+   "pareto_alpha": 2.4249,
+   "mean": 1.5907,
+   "median": 1.1187,
+   "gini": 0.4265,
+   "survey_year": 2012,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.01202,
+  "gdp_pc_population_share_same": 0.00401
+ },
+ {
+  "iso3": "MWI",
+  "name": "Malawi",
+  "currency": "MWK",
+  "currency_name": "Malawi Kwacha",
+  "population": 22216120,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 667.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 262.308655,
+   "inflation_factor_since_2017": 3.006655,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.2722
+  },
+  "income": {
+   "low": 0.4397,
+   "thresholds": [
+    0.74,
+    0.95,
+    1.13,
+    1.32,
+    1.5339,
+    1.79,
+    2.15,
+    2.69,
+    3.81
+   ],
+   "pareto_alpha": 2.4653,
+   "mean": 2.0694,
+   "median": 1.5339,
+   "gini": 0.3854,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1945,
+    0.4475,
+    0.1554,
+    0.0965,
+    0.1024,
+    0.0008,
+    0.0029
+   ],
+   "mean_years": 5.27
+  },
+  "gdp_pc_population_share_below": 0.04516,
+  "gdp_pc_population_share_same": 0.00272
+ },
+ {
+  "iso3": "MYS",
+  "name": "Malaysia",
+  "currency": "MYR",
+  "currency_name": "Malaysian Ringgit",
+  "population": 35977838,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 11377.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.605616,
+   "inflation_factor_since_2017": 1.110066,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.02565
+  },
+  "income": {
+   "low": 4.5583,
+   "thresholds": [
+    8.82,
+    11.9,
+    14.82,
+    17.92,
+    21.625,
+    26.1,
+    31.95,
+    40.2,
+    56.05
+   ],
+   "pareto_alpha": 2.5665,
+   "mean": 29.3637,
+   "median": 21.625,
+   "gini": 0.4107,
+   "survey_year": 2015,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0357,
+    0.0589,
+    0.1125,
+    0.1644,
+    0.4246,
+    0.0805,
+    0.1234
+   ],
+   "mean_years": 11.16
+  },
+  "gdp_pc_population_share_below": 0.61319,
+  "gdp_pc_population_share_same": 0.00441
+ },
+ {
+  "iso3": "MDV",
+  "name": "Maldives",
+  "currency": "MVR",
+  "currency_name": "Rufiyaa",
+  "population": 529676,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 12547.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 8.180506,
+   "inflation_factor_since_2017": 1.06004,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.02218
+  },
+  "income": {
+   "low": 5.6324,
+   "thresholds": [
+    8.48,
+    10.54,
+    12.38,
+    13.9,
+    15.8306,
+    17.92,
+    20.58,
+    25.22,
+    32.4
+   ],
+   "pareto_alpha": 3.9117,
+   "mean": 18.6905,
+   "median": 15.8306,
+   "gini": 0.2929,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.15922,
+    0.18962,
+    0.17542,
+    0.34653,
+    0.08941,
+    0.0352,
+    0.0046
+   ],
+   "mean_years": 6.37
+  },
+  "gdp_pc_population_share_below": 0.61782,
+  "gdp_pc_population_share_same": 6e-05
+ },
+ {
+  "iso3": "MLI",
+  "name": "Mali",
+  "currency": "XOF",
+  "currency_name": "CFA Franc BCEAO",
+  "population": 25198821,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 879.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 205.839203,
+   "inflation_factor_since_2017": 1.188805,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.0491
+  },
+  "income": {
+   "low": 1.1877,
+   "thresholds": [
+    1.94,
+    2.35,
+    2.79,
+    3.23,
+    3.7792,
+    4.47,
+    5.45,
+    6.73,
+    9.26
+   ],
+   "pareto_alpha": 2.9406,
+   "mean": 4.9774,
+   "median": 3.7792,
+   "gini": 0.3614,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.74887,
+    0.09621,
+    0.05101,
+    0.0246,
+    0.0482,
+    0.006,
+    0.0251
+   ],
+   "mean_years": 1.88
+  },
+  "gdp_pc_population_share_below": 0.05194,
+  "gdp_pc_population_share_same": 0.00309
+ },
+ {
+  "iso3": "MLT",
+  "name": "Malta",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 579704,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 37914.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.586425,
+   "inflation_factor_since_2017": 1.171676,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.04229
+  },
+  "income": {
+   "low": 10.89,
+   "thresholds": [
+    23.44,
+    30.5,
+    35.55,
+    40.7,
+    45.7108,
+    52.75,
+    60.95,
+    70.9,
+    91.2
+   ],
+   "pareto_alpha": 3.062,
+   "mean": 54.5495,
+   "median": 45.7108,
+   "gini": 0.3104,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.02767,
+    0.01308,
+    0.0843,
+    0.45286,
+    0.21534,
+    0.02557,
+    0.18118
+   ],
+   "mean_years": 11.8
+  },
+  "gdp_pc_population_share_below": 0.89955,
+  "gdp_pc_population_share_same": 7e-05
+ },
+ {
+  "iso3": "MHL",
+  "name": "Marshall Islands",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 36282,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 7314.5,
+  "gdp_year": 2023,
+  "income": {
+   "low": 2.2102,
+   "thresholds": [
+    4.37,
+    5.71,
+    6.67,
+    7.83,
+    9.2094,
+    10.5,
+    12.64,
+    15.52,
+    21.82
+   ],
+   "pareto_alpha": 3.1653,
+   "mean": 11.5887,
+   "median": 9.2094,
+   "gini": 0.3548,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.57481,
+  "gdp_pc_population_share_same": 0.0
+ },
+ {
+  "iso3": "MRT",
+  "name": "Mauritania",
+  "currency": "MRU",
+  "currency_name": "Ouguiya",
+  "population": 5315065,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2081.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 10.799068,
+   "inflation_factor_since_2017": 1.285167,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.05984
+  },
+  "income": {
+   "low": 1.2715,
+   "thresholds": [
+    2.49,
+    3.23,
+    3.89,
+    4.59,
+    5.3004,
+    6.16,
+    7.22,
+    8.56,
+    10.98
+   ],
+   "pareto_alpha": 3.3156,
+   "mean": 6.3065,
+   "median": 5.3004,
+   "gini": 0.3262,
+   "survey_year": 2014,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.3456,
+    0.1752,
+    0.2966,
+    0.0636,
+    0.0945,
+    0.0085,
+    0.016
+   ],
+   "mean_years": 4.49
+  },
+  "gdp_pc_population_share_below": 0.19374,
+  "gdp_pc_population_share_same": 0.00065
+ },
+ {
+  "iso3": "MUS",
+  "name": "Mauritius",
+  "currency": "MUR",
+  "currency_name": "Mauritius Rupee",
+  "population": 1243741,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 11530.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 16.544567,
+   "inflation_factor_since_2017": 1.365279,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.07275
+  },
+  "income": {
+   "low": 3.4203,
+   "thresholds": [
+    6.2,
+    7.96,
+    9.61,
+    11.08,
+    12.7312,
+    14.72,
+    17.16,
+    21.02,
+    28.84
+   ],
+   "pareto_alpha": 2.4089,
+   "mean": 16.5093,
+   "median": 12.7312,
+   "gini": 0.3676,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0214,
+    0.253,
+    0.0823,
+    0.1256,
+    0.4585,
+    0.032,
+    0.0272
+   ],
+   "mean_years": 9.29
+  },
+  "gdp_pc_population_share_below": 0.61759,
+  "gdp_pc_population_share_same": 0.00015
+ },
+ {
+  "iso3": "MEX",
+  "name": "Mexico",
+  "currency": "MXN",
+  "currency_name": "Mexican Peso",
+  "population": 131946900,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 13788.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 8.913552,
+   "inflation_factor_since_2017": 1.416557,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.0604
+  },
+  "income": {
+   "low": 1.365,
+   "thresholds": [
+    3.66,
+    5.19,
+    6.49,
+    7.93,
+    9.5515,
+    11.52,
+    14.22,
+    18.42,
+    27.06
+   ],
+   "pareto_alpha": 2.2035,
+   "mean": 13.9727,
+   "median": 9.5515,
+   "gini": 0.454,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1447,
+    0.0723,
+    0.1087,
+    0.3155,
+    0.1941,
+    0.005,
+    0.1597
+   ],
+   "mean_years": 8.66
+  },
+  "gdp_pc_population_share_below": 0.80322,
+  "gdp_pc_population_share_same": 0.01616
+ },
+ {
+  "iso3": "FSM",
+  "name": "Micronesia (Federated States)",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 113683,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4084.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.947345,
+   "inflation_factor_since_2017": 1.131505,
+   "inflation_latest_year": 2022,
+   "inflation_recent_annual": 0.03032
+  },
+  "income": {
+   "low": 0.426,
+   "thresholds": [
+    1.65,
+    2.38,
+    2.96,
+    3.59,
+    4.2265,
+    5.05,
+    6.16,
+    7.88,
+    10.62
+   ],
+   "pareto_alpha": 2.801,
+   "mean": 5.5571,
+   "median": 4.2265,
+   "gini": 0.4006,
+   "survey_year": 2013,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.46454,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "MDA",
+  "name": "Moldova",
+  "currency": "MDL",
+  "currency_name": "Moldovan Leu",
+  "population": 2360527,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6729.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 5.677343,
+   "inflation_factor_since_2017": 1.800802,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.15189
+  },
+  "income": {
+   "low": 4.2025,
+   "thresholds": [
+    6.21,
+    7.44,
+    8.55,
+    9.56,
+    10.5156,
+    11.8,
+    13.42,
+    15.56,
+    19.66
+   ],
+   "pareto_alpha": 3.8164,
+   "mean": 12.1181,
+   "median": 10.5156,
+   "gini": 0.2602,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.5567,
+  "gdp_pc_population_share_same": 0.00029
+ },
+ {
+  "iso3": "MCO",
+  "name": "Monaco",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 38341,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 225630.0,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 1.0,
+  "gdp_pc_population_share_same": 0.0
+ },
+ {
+  "iso3": "MNG",
+  "name": "Mongolia",
+  "currency": "MNT",
+  "currency_name": "Tugrik",
+  "population": 3568978,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 5708.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 801.668823,
+   "inflation_factor_since_2017": 1.733285,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.10714
+  },
+  "income": {
+   "low": 2.3833,
+   "thresholds": [
+    4.07,
+    5.12,
+    6.03,
+    7.02,
+    8.1001,
+    9.37,
+    10.98,
+    13.22,
+    17.24
+   ],
+   "pareto_alpha": 3.134,
+   "mean": 9.8629,
+   "median": 8.1001,
+   "gini": 0.3274,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.037,
+    0.0305,
+    0.0468,
+    0.16132,
+    0.47905,
+    0.012,
+    0.23332
+   ],
+   "mean_years": 9.65
+  },
+  "gdp_pc_population_share_below": 0.54461,
+  "gdp_pc_population_share_same": 0.00044
+ },
+ {
+  "iso3": "MNE",
+  "name": "Montenegro",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 623129,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 11875.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.350955,
+   "inflation_factor_since_2017": 1.3343,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.08248
+  },
+  "income": {
+   "low": 1.2253,
+   "thresholds": [
+    4.74,
+    7.32,
+    9.87,
+    12.18,
+    14.6183,
+    16.96,
+    19.96,
+    24.28,
+    31.9
+   ],
+   "pareto_alpha": 3.6257,
+   "mean": 16.9713,
+   "median": 14.6183,
+   "gini": 0.3681,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.61775,
+  "gdp_pc_population_share_same": 8e-05
+ },
+ {
+  "iso3": "MAR",
+  "name": "Morocco",
+  "currency": "MAD",
+  "currency_name": "Moroccan Dirham",
+  "population": 38430770,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3741.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 3.937086,
+   "inflation_factor_since_2017": 1.191539,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04546
+  },
+  "income": {
+   "low": 2.0255,
+   "thresholds": [
+    3.68,
+    4.76,
+    5.68,
+    6.63,
+    7.7121,
+    9.07,
+    10.88,
+    13.58,
+    19.36
+   ],
+   "pareto_alpha": 2.3513,
+   "mean": 10.5652,
+   "median": 7.7121,
+   "gini": 0.3955,
+   "survey_year": 2013,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.424,
+    0.0222,
+    0.2508,
+    0.0754,
+    0.1098,
+    0.0406,
+    0.0772
+   ],
+   "mean_years": 5.11
+  },
+  "gdp_pc_population_share_below": 0.43981,
+  "gdp_pc_population_share_same": 0.00471
+ },
+ {
+  "iso3": "MOZ",
+  "name": "Mozambique",
+  "currency": "MZN",
+  "currency_name": "Mozambique Metical",
+  "population": 35631653,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 613.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 23.343845,
+   "inflation_factor_since_2017": 1.389664,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.07925
+  },
+  "income": {
+   "low": 0.2789,
+   "thresholds": [
+    0.63,
+    0.87,
+    1.1,
+    1.33,
+    1.6048,
+    1.93,
+    2.44,
+    3.26,
+    5.15
+   ],
+   "pareto_alpha": 1.652,
+   "mean": 2.8694,
+   "median": 1.6048,
+   "gini": 0.54,
+   "survey_year": 2014,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.4818,
+    0.0185,
+    0.3379,
+    0.0679,
+    0.0726,
+    0.0016,
+    0.0197
+   ],
+   "mean_years": 3.39
+  },
+  "gdp_pc_population_share_below": 0.01603,
+  "gdp_pc_population_share_same": 0.00436
+ },
+ {
+  "iso3": "MMR",
+  "name": "Myanmar",
+  "currency": "MMK",
+  "currency_name": "Kyat",
+  "population": 54850648,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1197.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 366.639313,
+   "inflation_factor_since_2017": 1.163039,
+   "inflation_latest_year": 2019,
+   "inflation_recent_annual": 0.07844
+  },
+  "income": {
+   "low": 1.9526,
+   "thresholds": [
+    3.0,
+    3.67,
+    4.28,
+    4.85,
+    5.4714,
+    6.16,
+    7.03,
+    8.38,
+    10.88
+   ],
+   "pareto_alpha": 2.8409,
+   "mean": 6.5798,
+   "median": 5.4714,
+   "gini": 0.307,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.14878,
+    0.34363,
+    0.26419,
+    0.03817,
+    0.1248,
+    0.02808,
+    0.05236
+   ],
+   "mean_years": 4.84
+  },
+  "gdp_pc_population_share_below": 0.07912,
+  "gdp_pc_population_share_same": 0.00672
+ },
+ {
+  "iso3": "NAM",
+  "name": "Namibia",
+  "currency": "NAD",
+  "currency_name": "Namibia Dollar",
+  "population": 3092816,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4168.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 6.921604,
+   "inflation_factor_since_2017": 1.3413,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05397
+  },
+  "income": {
+   "low": 0.6273,
+   "thresholds": [
+    1.62,
+    2.49,
+    3.36,
+    4.39,
+    5.6842,
+    7.39,
+    10.18,
+    14.78,
+    25.24
+   ],
+   "pareto_alpha": 1.8462,
+   "mean": 11.6544,
+   "median": 5.6842,
+   "gini": 0.5907,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1707,
+    0.202,
+    0.2316,
+    0.1714,
+    0.2008,
+    0.008,
+    0.0155
+   ],
+   "mean_years": 6.81
+  },
+  "gdp_pc_population_share_below": 0.46455,
+  "gdp_pc_population_share_same": 0.00038
+ },
+ {
+  "iso3": "NRU",
+  "name": "Nauru",
+  "currency": "AUD",
+  "currency_name": "Australian Dollar",
+  "population": 12025,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 12979.2,
+  "gdp_year": 2023,
+  "income": {
+   "low": 1.9529,
+   "thresholds": [
+    3.14,
+    4.22,
+    4.99,
+    5.72,
+    6.6843,
+    7.62,
+    9.15,
+    11.12,
+    15.04
+   ],
+   "pareto_alpha": 2.9042,
+   "mean": 8.3926,
+   "median": 6.6843,
+   "gini": 0.3477,
+   "survey_year": 2012,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.7927,
+  "gdp_pc_population_share_same": 0.0
+ },
+ {
+  "iso3": "NPL",
+  "name": "Nepal",
+  "currency": "NPR",
+  "currency_name": "Nepalese Rupee",
+  "population": 29618118,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1377.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 30.475105,
+   "inflation_factor_since_2017": 1.385971,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.06294
+  },
+  "income": {
+   "low": 1.368,
+   "thresholds": [
+    2.27,
+    2.7,
+    3.14,
+    3.65,
+    4.2002,
+    4.81,
+    5.6,
+    6.8,
+    9.15
+   ],
+   "pareto_alpha": 3.0039,
+   "mean": 5.1935,
+   "median": 4.2002,
+   "gini": 0.3284,
+   "survey_year": 2010,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.3963,
+    0.1278,
+    0.1511,
+    0.1486,
+    0.1245,
+    0.0181,
+    0.0336
+   ],
+   "mean_years": 4.08
+  },
+  "gdp_pc_population_share_below": 0.13637,
+  "gdp_pc_population_share_same": 0.00363
+ },
+ {
+  "iso3": "NLD",
+  "name": "Netherlands",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 18087633,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 62545.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.78215,
+   "inflation_factor_since_2017": 1.28127,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05686
+  },
+  "income": {
+   "low": 13.5323,
+   "thresholds": [
+    28.58,
+    36.9,
+    43.15,
+    48.65,
+    54.417,
+    61.45,
+    69.2,
+    80.15,
+    99.3
+   ],
+   "pareto_alpha": 2.9578,
+   "mean": 62.7148,
+   "median": 54.417,
+   "gini": 0.2925,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0,
+    0.0102,
+    0.05179,
+    0.21148,
+    0.37316,
+    0.11709,
+    0.23628
+   ],
+   "mean_years": 12.14
+  },
+  "gdp_pc_population_share_below": 0.94794,
+  "gdp_pc_population_share_same": 0.00222
+ },
+ {
+  "iso3": "NCL",
+  "name": "New Caledonia",
+  "currency": "XPF",
+  "currency_name": "CFP Franc",
+  "population": 295333,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 33516.4,
+  "gdp_year": 2022,
+  "gdp_pc_population_share_below": 0.88396,
+  "gdp_pc_population_share_same": 4e-05
+ },
+ {
+  "iso3": "NZL",
+  "name": "New Zealand",
+  "currency": "NZD",
+  "currency_name": "New Zealand Dollar",
+  "population": 5324700,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 48743.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.430959,
+   "inflation_factor_since_2017": 1.273033,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05261
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.001,
+    0.0811,
+    0.3133,
+    0.1224,
+    0.1767,
+    0.1528,
+    0.1527
+   ],
+   "mean_years": 11.02
+  },
+  "gdp_pc_population_share_below": 0.92522,
+  "gdp_pc_population_share_same": 0.00065
+ },
+ {
+  "iso3": "NIC",
+  "name": "Nicaragua",
+  "currency": "NIO",
+  "currency_name": "Cordoba Oro",
+  "population": 7007502,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2612.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 10.535894,
+   "inflation_factor_since_2017": 1.507155,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.07799
+  },
+  "income": {
+   "low": 1.4304,
+   "thresholds": [
+    3.2,
+    4.26,
+    5.33,
+    6.54,
+    8.0742,
+    9.46,
+    11.32,
+    14.72,
+    21.26
+   ],
+   "pareto_alpha": 1.9518,
+   "mean": 11.7152,
+   "median": 8.0742,
+   "gini": 0.4616,
+   "survey_year": 2014,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.168,
+    0.1441,
+    0.2217,
+    0.1662,
+    0.1752,
+    0.0023,
+    0.1225
+   ],
+   "mean_years": 7.16
+  },
+  "gdp_pc_population_share_below": 0.41994,
+  "gdp_pc_population_share_same": 0.00086
+ },
+ {
+  "iso3": "NER",
+  "name": "Niger",
+  "currency": "XOF",
+  "currency_name": "CFA Franc BCEAO",
+  "population": 27917831,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 642.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 250.788452,
+   "inflation_factor_since_2017": 1.264694,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05639
+  },
+  "income": {
+   "low": 0.7032,
+   "thresholds": [
+    1.12,
+    1.4,
+    1.63,
+    1.85,
+    2.1295,
+    2.43,
+    2.87,
+    3.55,
+    5.04
+   ],
+   "pareto_alpha": 2.3128,
+   "mean": 2.8516,
+   "median": 2.1295,
+   "gini": 0.3728,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.74077,
+    0.11221,
+    0.05661,
+    0.05521,
+    0.0169,
+    0.0073,
+    0.011
+   ],
+   "mean_years": 1.75
+  },
+  "gdp_pc_population_share_below": 0.04174,
+  "gdp_pc_population_share_same": 0.00342
+ },
+ {
+  "iso3": "NGA",
+  "name": "Nigeria",
+  "currency": "NGN",
+  "currency_name": "Naira",
+  "population": 237527782,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1592.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 114.824493,
+   "inflation_factor_since_2017": 2.450226,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.20109
+  },
+  "income": {
+   "low": 0.769,
+   "thresholds": [
+    1.34,
+    1.73,
+    2.11,
+    2.52,
+    2.9533,
+    3.46,
+    4.11,
+    5.04,
+    6.64
+   ],
+   "pareto_alpha": 3.1166,
+   "mean": 3.6559,
+   "median": 2.9533,
+   "gini": 0.3513,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.14192,
+  "gdp_pc_population_share_same": 0.02909
+ },
+ {
+  "iso3": "PRK",
+  "name": "North Korea",
+  "currency": "KPW",
+  "currency_name": "North Korean Won",
+  "population": 26571036,
+  "population_year": 2025
+ },
+ {
+  "iso3": "MKD",
+  "name": "North Macedonia",
+  "currency": "MKD",
+  "currency_name": "Denar",
+  "population": 1820909,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 8075.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 18.970231,
+   "inflation_factor_since_2017": 1.380514,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.0893
+  },
+  "income": {
+   "low": 1.1523,
+   "thresholds": [
+    4.36,
+    6.77,
+    8.46,
+    10.34,
+    12.4012,
+    14.44,
+    16.76,
+    19.54,
+    24.22
+   ],
+   "pareto_alpha": 4.3681,
+   "mean": 13.6853,
+   "median": 12.4012,
+   "gini": 0.3296,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.58053,
+  "gdp_pc_population_share_same": 0.00022
+ },
+ {
+  "iso3": "MNP",
+  "name": "Northern Mariana Islands",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 43541,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 18052.5,
+  "gdp_year": 2020,
+  "gdp_pc_population_share_below": 0.84996,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "NOR",
+  "name": "Norway",
+  "currency": "NOK",
+  "currency_name": "Norwegian Krone",
+  "population": 5610870,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 87961.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 9.74983,
+   "inflation_factor_since_2017": 1.266767,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04802
+  },
+  "income": {
+   "low": 15.3023,
+   "thresholds": [
+    34.5,
+    45.4,
+    52.45,
+    58.55,
+    65.2998,
+    73.1,
+    83.15,
+    97.3,
+    117.9
+   ],
+   "pareto_alpha": 3.471,
+   "mean": 74.0588,
+   "median": 65.2998,
+   "gini": 0.2774,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0018,
+    0.0001,
+    0.0028,
+    0.16998,
+    0.39326,
+    0.19668,
+    0.23538
+   ],
+   "mean_years": 13.13
+  },
+  "gdp_pc_population_share_below": 0.99704,
+  "gdp_pc_population_share_same": 0.00069
+ },
+ {
+  "iso3": "OMN",
+  "name": "Oman",
+  "currency": "OMR",
+  "currency_name": "Rial Omani",
+  "population": 5494691,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 21427.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.203805,
+   "inflation_factor_since_2017": 1.062448,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.01711
+  },
+  "gdp_pc_population_share_below": 0.85365,
+  "gdp_pc_population_share_same": 0.00067
+ },
+ {
+  "iso3": "PAK",
+  "name": "Pakistan",
+  "currency": "PKR",
+  "currency_name": "Pakistan Rupee",
+  "population": 255219554,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1367.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 33.246235,
+   "inflation_factor_since_2017": 2.465111,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.20864
+  },
+  "income": {
+   "low": 1.7411,
+   "thresholds": [
+    2.46,
+    2.89,
+    3.27,
+    3.66,
+    4.0732,
+    4.59,
+    5.23,
+    6.21,
+    8.07
+   ],
+   "pareto_alpha": 2.7409,
+   "mean": 4.9755,
+   "median": 4.0732,
+   "gini": 0.2959,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.4613,
+    0.016,
+    0.128,
+    0.101,
+    0.2008,
+    0.0199,
+    0.073
+   ],
+   "mean_years": 5.34
+  },
+  "gdp_pc_population_share_below": 0.10512,
+  "gdp_pc_population_share_same": 0.03126
+ },
+ {
+  "iso3": "PLW",
+  "name": "Palau",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 17663,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 14837.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.911661,
+   "inflation_factor_since_2017": 1.364358,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.09023
+  },
+  "gdp_pc_population_share_below": 0.84259,
+  "gdp_pc_population_share_same": 0.0
+ },
+ {
+  "iso3": "PSE",
+  "name": "Palestine",
+  "currency": null,
+  "currency_name": "No universal currency",
+  "population": 5413596,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3367.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.592856,
+   "inflation_factor_since_2017": 1.118989,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.03599
+  },
+  "income": {
+   "low": 2.7137,
+   "thresholds": [
+    5.3,
+    6.79,
+    8.21,
+    9.77,
+    11.421,
+    13.38,
+    15.86,
+    19.38,
+    25.36
+   ],
+   "pareto_alpha": 3.6774,
+   "mean": 13.8257,
+   "median": 11.421,
+   "gini": 0.3369,
+   "survey_year": 2016,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.4235,
+  "gdp_pc_population_share_same": 0.00066
+ },
+ {
+  "iso3": "PAN",
+  "name": "Panama",
+  "currency": "PAB",
+  "currency_name": "Balboa",
+  "population": 4571189,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 18700.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.468031,
+   "inflation_factor_since_2017": 1.055864,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.01673
+  },
+  "income": {
+   "low": 2.0107,
+   "thresholds": [
+    5.98,
+    10.0,
+    13.54,
+    17.38,
+    21.8541,
+    27.3,
+    34.15,
+    45.0,
+    68.5
+   ],
+   "pareto_alpha": 2.1632,
+   "mean": 33.496,
+   "median": 21.8541,
+   "gini": 0.4984,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0509,
+    0.0746,
+    0.2104,
+    0.1065,
+    0.2937,
+    0.0809,
+    0.183
+   ],
+   "mean_years": 10.03
+  },
+  "gdp_pc_population_share_below": 0.85229,
+  "gdp_pc_population_share_same": 0.00056
+ },
+ {
+  "iso3": "PNG",
+  "name": "Papua New Guinea",
+  "currency": "PGK",
+  "currency_name": "Kina",
+  "population": 10762817,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2977.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2.013949,
+   "inflation_factor_since_2017": 1.287508,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.027
+  },
+  "income": {
+   "low": 0.4077,
+   "thresholds": [
+    0.89,
+    1.34,
+    1.72,
+    2.17,
+    2.618,
+    3.17,
+    3.86,
+    4.87,
+    6.75
+   ],
+   "pareto_alpha": 2.6836,
+   "mean": 3.4708,
+   "median": 2.618,
+   "gini": 0.4185,
+   "survey_year": 2009,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.3449,
+    0.0317,
+    0.5018,
+    0.0439,
+    0.0633,
+    0.007,
+    0.0074
+   ],
+   "mean_years": 4.52
+  },
+  "gdp_pc_population_share_below": 0.42083,
+  "gdp_pc_population_share_same": 0.00132
+ },
+ {
+  "iso3": "PRY",
+  "name": "Paraguay",
+  "currency": "PYG",
+  "currency_name": "Guarani",
+  "population": 7013078,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6276.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2473.229736,
+   "inflation_factor_since_2017": 1.358752,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06045
+  },
+  "income": {
+   "low": 2.2553,
+   "thresholds": [
+    4.73,
+    6.39,
+    8.21,
+    10.1,
+    12.3149,
+    14.92,
+    18.12,
+    23.46,
+    32.95
+   ],
+   "pareto_alpha": 2.3533,
+   "mean": 17.2041,
+   "median": 12.3149,
+   "gini": 0.4348,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0264,
+    0.18422,
+    0.27433,
+    0.10471,
+    0.25793,
+    0.017,
+    0.13541
+   ],
+   "mean_years": 8.64
+  },
+  "gdp_pc_population_share_below": 0.55336,
+  "gdp_pc_population_share_same": 0.00086
+ },
+ {
+  "iso3": "PER",
+  "name": "Peru",
+  "currency": "PEN",
+  "currency_name": "Sol",
+  "population": 34576665,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 7906.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.744238,
+   "inflation_factor_since_2017": 1.298732,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05565
+  },
+  "income": {
+   "low": 1.0664,
+   "thresholds": [
+    2.71,
+    4.0,
+    5.25,
+    6.45,
+    7.9287,
+    9.62,
+    11.82,
+    15.08,
+    21.26
+   ],
+   "pareto_alpha": 2.4484,
+   "mean": 10.9241,
+   "median": 7.9287,
+   "gini": 0.4379,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0522,
+    0.0881,
+    0.1369,
+    0.056,
+    0.4544,
+    0.0498,
+    0.1626
+   ],
+   "mean_years": 9.66
+  },
+  "gdp_pc_population_share_below": 0.57625,
+  "gdp_pc_population_share_same": 0.00423
+ },
+ {
+  "iso3": "PHL",
+  "name": "Philippines",
+  "currency": "PHP",
+  "currency_name": "Philippine Peso",
+  "population": 116786962,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3804.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 19.698557,
+   "inflation_factor_since_2017": 1.328172,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04996
+  },
+  "income": {
+   "low": 1.7378,
+   "thresholds": [
+    2.97,
+    3.78,
+    4.58,
+    5.45,
+    6.4507,
+    7.72,
+    9.46,
+    12.22,
+    17.76
+   ],
+   "pareto_alpha": 2.3274,
+   "mean": 9.2858,
+   "median": 6.4507,
+   "gini": 0.4227,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0181,
+    0.09579,
+    0.15708,
+    0.19808,
+    0.23768,
+    0.21078,
+    0.08249
+   ],
+   "mean_years": 8.88
+  },
+  "gdp_pc_population_share_below": 0.44606,
+  "gdp_pc_population_share_same": 0.0143
+ },
+ {
+  "iso3": "POL",
+  "name": "Poland",
+  "currency": "PLN",
+  "currency_name": "Zloty",
+  "population": 36435861,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 22112.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.742879,
+   "inflation_factor_since_2017": 1.497123,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.09821
+  },
+  "income": {
+   "low": 5.8655,
+   "thresholds": [
+    9.25,
+    11.44,
+    13.28,
+    15.16,
+    17.2411,
+    19.64,
+    22.62,
+    26.76,
+    34.3
+   ],
+   "pareto_alpha": 3.1462,
+   "mean": 20.4993,
+   "median": 17.2411,
+   "gini": 0.3024,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0029,
+    0.0007,
+    0.0818,
+    0.0777,
+    0.5562,
+    0.0937,
+    0.187
+   ],
+   "mean_years": 12.16
+  },
+  "gdp_pc_population_share_below": 0.85434,
+  "gdp_pc_population_share_same": 0.00446
+ },
+ {
+  "iso3": "PRT",
+  "name": "Portugal",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 10804871,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 27138.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.575688,
+   "inflation_factor_since_2017": 1.182004,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04829
+  },
+  "income": {
+   "low": 6.0758,
+   "thresholds": [
+    13.9,
+    19.0,
+    22.5,
+    25.78,
+    29.4276,
+    33.35,
+    38.45,
+    46.1,
+    61.0
+   ],
+   "pareto_alpha": 2.9924,
+   "mean": 35.2619,
+   "median": 29.4276,
+   "gini": 0.3276,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.026,
+    0.0067,
+    0.365,
+    0.2427,
+    0.1305,
+    0.1705,
+    0.0586
+   ],
+   "mean_years": 9.41
+  },
+  "gdp_pc_population_share_below": 0.86311,
+  "gdp_pc_population_share_same": 0.00132
+ },
+ {
+  "iso3": "PRI",
+  "name": "Puerto Rico",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 3184835,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 36800.8,
+  "gdp_year": 2023,
+  "gdp_pc_population_share_below": 0.89916,
+  "gdp_pc_population_share_same": 0.00039
+ },
+ {
+  "iso3": "QAT",
+  "name": "Qatar",
+  "currency": "QAR",
+  "currency_name": "Qatari Rial",
+  "population": 2972215,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 88724.4,
+  "gdp_year": 2022,
+  "prices": {
+   "ppp_2017": 2.318262,
+   "inflation_factor_since_2017": 1.08772,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03086
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0136,
+    0.1128,
+    0.1958,
+    0.2672,
+    0.2217,
+    0.0635,
+    0.1254
+   ],
+   "mean_years": 9.47
+  },
+  "gdp_pc_population_share_below": 0.99773,
+  "gdp_pc_population_share_same": 0.00036
+ },
+ {
+  "iso3": "ROU",
+  "name": "Romania",
+  "currency": "RON",
+  "currency_name": "Romanian Leu",
+  "population": 19020271,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 18414.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.613575,
+   "inflation_factor_since_2017": 1.404868,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06251
+  },
+  "income": {
+   "low": 1.1066,
+   "thresholds": [
+    6.34,
+    10.06,
+    13.1,
+    15.92,
+    19.0276,
+    21.96,
+    25.76,
+    30.45,
+    39.1
+   ],
+   "pareto_alpha": 3.9116,
+   "mean": 21.4669,
+   "median": 19.0276,
+   "gini": 0.348,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.00521,
+    0.00993,
+    0.01424,
+    0.25576,
+    0.33557,
+    0.12803,
+    0.25125
+   ],
+   "mean_years": 11.47
+  },
+  "gdp_pc_population_share_below": 0.84996,
+  "gdp_pc_population_share_same": 0.00233
+ },
+ {
+  "iso3": "RUS",
+  "name": "Russia",
+  "currency": "RUB",
+  "currency_name": "Russian Ruble",
+  "population": 143513328,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 14054.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 24.124181,
+   "inflation_factor_since_2017": 1.185502,
+   "inflation_latest_year": 2021,
+   "inflation_recent_annual": 0.0484
+  },
+  "income": {
+   "low": 5.0869,
+   "thresholds": [
+    8.77,
+    11.0,
+    13.02,
+    15.1,
+    17.4071,
+    20.12,
+    23.84,
+    29.3,
+    39.75
+   ],
+   "pareto_alpha": 2.5502,
+   "mean": 22.5302,
+   "median": 17.4071,
+   "gini": 0.3603,
+   "survey_year": 2020,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0045,
+    0.0042,
+    0.0059,
+    0.0637,
+    0.2432,
+    0.3916,
+    0.2869
+   ],
+   "mean_years": 12.38
+  },
+  "gdp_pc_population_share_below": 0.81938,
+  "gdp_pc_population_share_same": 0.01758
+ },
+ {
+  "iso3": "RWA",
+  "name": "Rwanda",
+  "currency": "RWF",
+  "currency_name": "Rwanda Franc",
+  "population": 14569341,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1010.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 320.420105,
+   "inflation_factor_since_2017": 1.617421,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.12787
+  },
+  "income": {
+   "low": 0.5438,
+   "thresholds": [
+    0.96,
+    1.25,
+    1.51,
+    1.78,
+    2.0738,
+    2.45,
+    3.0,
+    3.87,
+    5.91
+   ],
+   "pareto_alpha": 2.1612,
+   "mean": 3.0868,
+   "median": 2.0738,
+   "gini": 0.4371,
+   "survey_year": 2016,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.2037,
+    0.4605,
+    0.2098,
+    0.0388,
+    0.0519,
+    0.0119,
+    0.0234
+   ],
+   "mean_years": 4.92
+  },
+  "gdp_pc_population_share_below": 0.05854,
+  "gdp_pc_population_share_same": 0.00178
+ },
+ {
+  "iso3": "WSM",
+  "name": "Samoa",
+  "currency": "WST",
+  "currency_name": "Tala",
+  "population": 219306,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4311.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.739171,
+   "inflation_factor_since_2017": 1.306922,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06956
+  },
+  "income": {
+   "low": 2.0548,
+   "thresholds": [
+    3.53,
+    4.72,
+    5.6,
+    6.59,
+    7.577,
+    8.81,
+    10.52,
+    13.06,
+    18.68
+   ],
+   "pareto_alpha": 2.4104,
+   "mean": 10.2047,
+   "median": 7.577,
+   "gini": 0.3873,
+   "survey_year": 2013,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.47737,
+  "gdp_pc_population_share_same": 3e-05
+ },
+ {
+  "iso3": "SMR",
+  "name": "San Marino",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 34109,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 54168.6,
+  "gdp_year": 2021,
+  "prices": {
+   "ppp_2017": 0.762517,
+   "inflation_factor_since_2017": 1.165126,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04146
+  },
+  "gdp_pc_population_share_below": 0.94551,
+  "gdp_pc_population_share_same": 0.0
+ },
+ {
+  "iso3": "SAU",
+  "name": "Saudi Arabia",
+  "currency": "SAR",
+  "currency_name": "Saudi Riyal",
+  "population": 36973555,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 31676.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.689271,
+   "inflation_factor_since_2017": 1.140376,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.02162
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0417,
+    0.12069,
+    0.15138,
+    0.18368,
+    0.24498,
+    0.05259,
+    0.20498
+   ],
+   "mean_years": 9.88
+  },
+  "gdp_pc_population_share_below": 0.86613,
+  "gdp_pc_population_share_same": 0.00453
+ },
+ {
+  "iso3": "SEN",
+  "name": "Senegal",
+  "currency": "XOF",
+  "currency_name": "CFA Franc BCEAO",
+  "population": 18931966,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1715.6,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 243.583801,
+   "inflation_factor_since_2017": 1.244803,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.05894
+  },
+  "income": {
+   "low": 1.3521,
+   "thresholds": [
+    2.19,
+    2.71,
+    3.24,
+    3.8,
+    4.4363,
+    5.25,
+    6.3,
+    7.67,
+    10.96
+   ],
+   "pareto_alpha": 2.5137,
+   "mean": 5.9645,
+   "median": 4.4363,
+   "gini": 0.3812,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.666,
+    0.1053,
+    0.0399,
+    0.0733,
+    0.073,
+    0.0139,
+    0.0286
+   ],
+   "mean_years": 2.93
+  },
+  "gdp_pc_population_share_below": 0.18023,
+  "gdp_pc_population_share_same": 0.00232
+ },
+ {
+  "iso3": "SRB",
+  "name": "Serbia",
+  "currency": "RSD",
+  "currency_name": "Serbian Dinar",
+  "population": 6549143,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 11352.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 40.821027,
+   "inflation_factor_since_2017": 1.446083,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.09617
+  },
+  "income": {
+   "low": 1.3287,
+   "thresholds": [
+    6.21,
+    8.87,
+    11.02,
+    13.22,
+    15.2458,
+    17.48,
+    20.18,
+    24.02,
+    30.75
+   ],
+   "pareto_alpha": 2.9763,
+   "mean": 17.8081,
+   "median": 15.2458,
+   "gini": 0.3454,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0111,
+    0.0012,
+    0.0172,
+    0.1825,
+    0.5704,
+    0.0736,
+    0.144
+   ],
+   "mean_years": 12.01
+  },
+  "gdp_pc_population_share_below": 0.61239,
+  "gdp_pc_population_share_same": 0.0008
+ },
+ {
+  "iso3": "SYC",
+  "name": "Seychelles",
+  "currency": "SCR",
+  "currency_name": "Seychelles Rupee",
+  "population": 122730,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 17879.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 7.777408,
+   "inflation_factor_since_2017": 1.194897,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.00623
+  },
+  "income": {
+   "low": 3.179,
+   "thresholds": [
+    8.29,
+    11.44,
+    14.2,
+    16.42,
+    19.5021,
+    22.72,
+    26.32,
+    29.86,
+    38.55
+   ],
+   "pareto_alpha": 3.6134,
+   "mean": 22.2563,
+   "median": 19.5021,
+   "gini": 0.3213,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.84994,
+  "gdp_pc_population_share_same": 2e-05
+ },
+ {
+  "iso3": "SLE",
+  "name": "Sierra Leone",
+  "currency": "SLE",
+  "currency_name": "Leone",
+  "population": 8819794,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 450.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2.300201,
+   "inflation_factor_since_2017": 4.084452,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.34182
+  },
+  "income": {
+   "low": 1.0153,
+   "thresholds": [
+    1.59,
+    1.94,
+    2.27,
+    2.59,
+    2.9593,
+    3.4,
+    4.03,
+    4.94,
+    6.87
+   ],
+   "pareto_alpha": 2.5086,
+   "mean": 3.8859,
+   "median": 2.9593,
+   "gini": 0.3569,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.58761,
+    0.10969,
+    0.0981,
+    0.12997,
+    0.06044,
+    0.004,
+    0.01019
+   ],
+   "mean_years": 3.73
+  },
+  "gdp_pc_population_share_below": 0.01027,
+  "gdp_pc_population_share_same": 0.00108
+ },
+ {
+  "iso3": "SGP",
+  "name": "Singapore",
+  "currency": "SGD",
+  "currency_name": "Singapore Dollar",
+  "population": 6111175,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 84734.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.883215,
+   "inflation_factor_since_2017": 1.174529,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04425
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.01,
+    0.0292,
+    0.0338,
+    0.1633,
+    0.2568,
+    0.0803,
+    0.4266
+   ],
+   "mean_years": 12.96
+  },
+  "gdp_pc_population_share_below": 0.99629,
+  "gdp_pc_population_share_same": 0.00075
+ },
+ {
+  "iso3": "SXM",
+  "name": "Sint Maarten",
+  "currency": "XCG",
+  "currency_name": "Caribbean Guilder",
+  "population": 43923,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 37969.7,
+  "gdp_year": 2023,
+  "gdp_pc_population_share_below": 0.89962,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "SVK",
+  "name": "Slovakia",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 5413813,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 24470.2,
+  "gdp_year": 2023,
+  "income": {
+   "low": 5.3304,
+   "thresholds": [
+    13.2,
+    17.24,
+    20.16,
+    22.34,
+    24.7624,
+    27.18,
+    30.0,
+    33.9,
+    39.5
+   ],
+   "pareto_alpha": 5.1561,
+   "mean": 26.0436,
+   "median": 24.7624,
+   "gini": 0.2323,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.002,
+    0.0182,
+    0.0707,
+    0.0735,
+    0.6244,
+    0.1056,
+    0.1056
+   ],
+   "mean_years": 12.71
+  },
+  "gdp_pc_population_share_below": 0.86209,
+  "gdp_pc_population_share_same": 0.00066
+ },
+ {
+  "iso3": "SVN",
+  "name": "Slovenia",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 2130986,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 32170.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.570149,
+   "inflation_factor_since_2017": 1.255826,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.0604
+  },
+  "income": {
+   "low": 13.5419,
+   "thresholds": [
+    23.16,
+    27.92,
+    31.9,
+    35.45,
+    39.5008,
+    43.5,
+    48.35,
+    55.2,
+    66.45
+   ],
+   "pareto_alpha": 3.806,
+   "mean": 43.4498,
+   "median": 39.5008,
+   "gini": 0.2438,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.002,
+    0.0029,
+    0.01191,
+    0.15301,
+    0.56369,
+    0.08956,
+    0.17692
+   ],
+   "mean_years": 12.38
+  },
+  "gdp_pc_population_share_below": 0.87066,
+  "gdp_pc_population_share_same": 0.00026
+ },
+ {
+  "iso3": "SLB",
+  "name": "Solomon Islands",
+  "currency": "SBD",
+  "currency_name": "Solomon Islands Dollar",
+  "population": 838645,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2039.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 6.889529,
+   "inflation_factor_since_2017": 1.208282,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.03726
+  },
+  "income": {
+   "low": 0.7493,
+   "thresholds": [
+    1.47,
+    1.89,
+    2.3,
+    2.7,
+    3.1034,
+    3.59,
+    4.29,
+    5.3,
+    7.3
+   ],
+   "pareto_alpha": 2.6334,
+   "mean": 4.0241,
+   "median": 3.1034,
+   "gini": 0.3705,
+   "survey_year": 2012,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.19268,
+  "gdp_pc_population_share_same": 0.0001
+ },
+ {
+  "iso3": "SOM",
+  "name": "Somalia",
+  "currency": "SOS",
+  "currency_name": "Somali Shilling",
+  "population": 19654739,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 636.2,
+  "gdp_year": 2023,
+  "gdp_pc_population_share_below": 0.03933,
+  "gdp_pc_population_share_same": 0.00241
+ },
+ {
+  "iso3": "ZAF",
+  "name": "South Africa",
+  "currency": "ZAR",
+  "currency_name": "Rand",
+  "population": 64747319,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 5976.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 6.413337,
+   "inflation_factor_since_2017": 1.392336,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.0582
+  },
+  "income": {
+   "low": 0.5782,
+   "thresholds": [
+    1.47,
+    2.12,
+    2.84,
+    3.66,
+    4.7552,
+    6.46,
+    9.38,
+    15.06,
+    30.05
+   ],
+   "pareto_alpha": 1.9923,
+   "mean": 11.9475,
+   "median": 4.7552,
+   "gini": 0.6303,
+   "survey_year": 2014,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0435,
+    0.1069,
+    0.0493,
+    0.1346,
+    0.5857,
+    0.0152,
+    0.0648
+   ],
+   "mean_years": 10.29
+  },
+  "gdp_pc_population_share_below": 0.54516,
+  "gdp_pc_population_share_same": 0.00793
+ },
+ {
+  "iso3": "KOR",
+  "name": "South Korea",
+  "currency": "KRW",
+  "currency_name": "Won",
+  "population": 51684564,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 33121.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 872.624771,
+   "inflation_factor_since_2017": 1.169346,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03663
+  },
+  "income": {
+   "low": 7.0198,
+   "thresholds": [
+    17.26,
+    23.2,
+    28.04,
+    32.7,
+    37.6204,
+    43.05,
+    49.15,
+    58.1,
+    74.25
+   ],
+   "pareto_alpha": 3.5116,
+   "mean": 43.209,
+   "median": 37.6204,
+   "gini": 0.314,
+   "survey_year": 2016,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.013,
+    0.0032,
+    0.0541,
+    0.0717,
+    0.404,
+    0.1305,
+    0.3235
+   ],
+   "mean_years": 12.83
+  },
+  "gdp_pc_population_share_below": 0.87704,
+  "gdp_pc_population_share_same": 0.00633
+ },
+ {
+  "iso3": "SSD",
+  "name": "South Sudan",
+  "currency": "SSP",
+  "currency_name": "South Sudanese Pound",
+  "population": 12188788,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1080.1,
+  "gdp_year": 2015,
+  "prices": {
+   "ppp_2017": 37.190758,
+   "inflation_factor_since_2017": 4.704313,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.01828
+  },
+  "gdp_pc_population_share_below": 0.06662,
+  "gdp_pc_population_share_same": 0.00149
+ },
+ {
+  "iso3": "ESP",
+  "name": "Spain",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 49355143,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 32691.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.630839,
+   "inflation_factor_since_2017": 1.213442,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.0487
+  },
+  "income": {
+   "low": 3.5233,
+   "thresholds": [
+    15.54,
+    22.72,
+    28.92,
+    34.7,
+    40.2914,
+    47.25,
+    55.0,
+    65.7,
+    83.75
+   ],
+   "pareto_alpha": 3.5489,
+   "mean": 46.8661,
+   "median": 40.2914,
+   "gini": 0.3431,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0326,
+    0.0263,
+    0.1106,
+    0.3007,
+    0.1783,
+    0.1156,
+    0.2359
+   ],
+   "mean_years": 10.98
+  },
+  "gdp_pc_population_share_below": 0.87092,
+  "gdp_pc_population_share_same": 0.00604
+ },
+ {
+  "iso3": "LKA",
+  "name": "Sri Lanka",
+  "currency": "LKR",
+  "currency_name": "Sri Lanka Rupee",
+  "population": 21756000,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3828.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 49.274094,
+   "inflation_factor_since_2017": 2.08693,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.20217
+  },
+  "income": {
+   "low": 2.0943,
+   "thresholds": [
+    3.32,
+    4.15,
+    4.91,
+    5.68,
+    6.5878,
+    7.67,
+    9.1,
+    11.28,
+    16.06
+   ],
+   "pareto_alpha": 2.1917,
+   "mean": 9.0705,
+   "median": 6.5878,
+   "gini": 0.3935,
+   "survey_year": 2016,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0223,
+    0.05281,
+    0.10071,
+    0.16072,
+    0.62976,
+    0.0109,
+    0.0228
+   ],
+   "mean_years": 11.14
+  },
+  "gdp_pc_population_share_below": 0.46036,
+  "gdp_pc_population_share_same": 0.00266
+ },
+ {
+  "iso3": "KNA",
+  "name": "St. Kitts & Nevis",
+  "currency": "XCD",
+  "currency_name": "East Caribbean Dollar",
+  "population": 46922,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 23034.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2.050652,
+   "inflation_factor_since_2017": 1.04886,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.02469
+  },
+  "gdp_pc_population_share_below": 0.86169,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "LCA",
+  "name": "St. Lucia",
+  "currency": "XCD",
+  "currency_name": "East Caribbean Dollar",
+  "population": 180149,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 14055.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.896935,
+   "inflation_factor_since_2017": 1.141547,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.04274
+  },
+  "income": {
+   "low": 0.3264,
+   "thresholds": [
+    3.3,
+    5.81,
+    7.95,
+    10.16,
+    13.046,
+    15.76,
+    20.14,
+    27.4,
+    41.45
+   ],
+   "pareto_alpha": 2.1513,
+   "mean": 20.0533,
+   "median": 13.046,
+   "gini": 0.5123,
+   "survey_year": 2016,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.83695,
+  "gdp_pc_population_share_same": 2e-05
+ },
+ {
+  "iso3": "MAF",
+  "name": "St. Martin",
+  "currency": "EUR",
+  "currency_name": "Euro",
+  "population": 24941,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 21668.4,
+  "gdp_year": 2021,
+  "gdp_pc_population_share_below": 0.85432,
+  "gdp_pc_population_share_same": 0.0
+ },
+ {
+  "iso3": "VCT",
+  "name": "St. Vincent & Grenadines",
+  "currency": "XCD",
+  "currency_name": "East Caribbean Dollar",
+  "population": 99924,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 10520.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.588732,
+   "inflation_factor_since_2017": 1.193267,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.04614
+  },
+  "gdp_pc_population_share_below": 0.61095,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "SDN",
+  "name": "Sudan",
+  "currency": "SDG",
+  "currency_name": "Sudanese Pound",
+  "population": 51662147,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2184.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 4.772955,
+   "inflation_factor_since_2017": 71.163571,
+   "inflation_latest_year": 2022,
+   "inflation_recent_annual": 2.06745
+  },
+  "income": {
+   "low": 1.0471,
+   "thresholds": [
+    1.85,
+    2.35,
+    2.75,
+    3.16,
+    3.6616,
+    4.23,
+    4.89,
+    5.86,
+    7.79
+   ],
+   "pareto_alpha": 2.5941,
+   "mean": 4.5637,
+   "median": 3.6616,
+   "gini": 0.3424,
+   "survey_year": 2014,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.5014,
+    0.0061,
+    0.3271,
+    0.0725,
+    0.0299,
+    0.0235,
+    0.0395
+   ],
+   "mean_years": 3.9
+  },
+  "gdp_pc_population_share_below": 0.19441,
+  "gdp_pc_population_share_same": 0.00633
+ },
+ {
+  "iso3": "SUR",
+  "name": "Suriname",
+  "currency": "SRD",
+  "currency_name": "Surinam Dollar",
+  "population": 639850,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6014.5,
+  "gdp_year": 2023,
+  "income": {
+   "low": 0.0005,
+   "thresholds": [
+    0.01,
+    2.64,
+    3.82,
+    5.94,
+    8.138,
+    9.79,
+    12.3,
+    19.14,
+    28.92
+   ],
+   "pareto_alpha": 2.1051,
+   "mean": 13.0814,
+   "median": 8.138,
+   "gini": 0.5785,
+   "survey_year": 1999,
+   "welfare_type": "income",
+   "coverage": "urban"
+  },
+  "gdp_pc_population_share_below": 0.55309,
+  "gdp_pc_population_share_same": 8e-05
+ },
+ {
+  "iso3": "SWE",
+  "name": "Sweden",
+  "currency": "SEK",
+  "currency_name": "Swedish Krona",
+  "population": 10596620,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 56305.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 8.852247,
+   "inflation_factor_since_2017": 1.288862,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06551
+  },
+  "income": {
+   "low": 8.9534,
+   "thresholds": [
+    24.94,
+    33.8,
+    40.2,
+    44.95,
+    50.5687,
+    57.25,
+    66.0,
+    77.6,
+    95.2
+   ],
+   "pareto_alpha": 3.6445,
+   "mean": 57.7012,
+   "median": 50.5687,
+   "gini": 0.2931,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.017,
+    0.0057,
+    0.0209,
+    0.1448,
+    0.4134,
+    0.1319,
+    0.2663
+   ],
+   "mean_years": 12.51
+  },
+  "gdp_pc_population_share_below": 0.94551,
+  "gdp_pc_population_share_same": 0.0013
+ },
+ {
+  "iso3": "CHE",
+  "name": "Switzerland",
+  "currency": "CHF",
+  "currency_name": "Swiss Franc",
+  "population": 9092436,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 99556.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.187726,
+   "inflation_factor_since_2017": 1.0737,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.02008
+  },
+  "income": {
+   "low": 14.4224,
+   "thresholds": [
+    31.05,
+    39.3,
+    47.7,
+    55.85,
+    64.3456,
+    73.7,
+    86.25,
+    103.3,
+    131.3
+   ],
+   "pareto_alpha": 2.9444,
+   "mean": 77.1029,
+   "median": 64.3456,
+   "gini": 0.3314,
+   "survey_year": 2018,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0031,
+    0.0279,
+    0.1102,
+    0.0949,
+    0.3655,
+    0.1319,
+    0.2665
+   ],
+   "mean_years": 12.86
+  },
+  "gdp_pc_population_share_below": 0.99811,
+  "gdp_pc_population_share_same": 0.00111
+ },
+ {
+  "iso3": "SYR",
+  "name": "Syria",
+  "currency": "SYP",
+  "currency_name": "Syrian Pound",
+  "population": 25620427,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 415.2,
+  "gdp_year": 2021,
+  "prices": {
+   "ppp_2017": 132.995911,
+   "inflation_factor_since_2017": 1.144848,
+   "inflation_latest_year": 2019,
+   "inflation_recent_annual": 0.06998
+  },
+  "income": {
+   "low": 2.1296,
+   "thresholds": [
+    3.47,
+    4.34,
+    5.17,
+    5.99,
+    6.9549,
+    8.17,
+    9.78,
+    12.3,
+    16.98
+   ],
+   "pareto_alpha": 2.5607,
+   "mean": 9.3031,
+   "median": 6.9549,
+   "gini": 0.3751,
+   "survey_year": 2003,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.136,
+    0.0969,
+    0.3631,
+    0.1382,
+    0.2115,
+    0.0181,
+    0.0362
+   ],
+   "mean_years": 7.08
+  },
+  "gdp_pc_population_share_below": 0.00713,
+  "gdp_pc_population_share_same": 0.00314
+ },
+ {
+  "iso3": "STP",
+  "name": "São Tomé & Príncipe",
+  "currency": "STN",
+  "currency_name": "Dobra",
+  "population": 240254,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2612.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 9.921541,
+   "inflation_factor_since_2017": 1.974536,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.15664
+  },
+  "income": {
+   "low": 0.9523,
+   "thresholds": [
+    1.85,
+    2.37,
+    2.8,
+    3.35,
+    4.0025,
+    4.7,
+    5.59,
+    6.9,
+    9.96
+   ],
+   "pareto_alpha": 2.2464,
+   "mean": 5.4619,
+   "median": 4.0025,
+   "gini": 0.4075,
+   "survey_year": 2017,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.4208,
+  "gdp_pc_population_share_same": 3e-05
+ },
+ {
+  "iso3": "TJK",
+  "name": "Tajikistan",
+  "currency": "TJS",
+  "currency_name": "Somoni",
+  "population": 10786734,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1160.8,
+  "gdp_year": 2023,
+  "income": {
+   "low": 1.2975,
+   "thresholds": [
+    2.55,
+    3.28,
+    3.94,
+    4.58,
+    5.3348,
+    6.15,
+    7.21,
+    8.78,
+    11.48
+   ],
+   "pareto_alpha": 3.0055,
+   "mean": 6.5185,
+   "median": 5.3348,
+   "gini": 0.34,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0085,
+    0.0053,
+    0.034,
+    0.14449,
+    0.57284,
+    0.09409,
+    0.14079
+   ],
+   "mean_years": 11.34
+  },
+  "gdp_pc_population_share_below": 0.06916,
+  "gdp_pc_population_share_same": 0.00132
+ },
+ {
+  "iso3": "TZA",
+  "name": "Tanzania",
+  "currency": "TZS",
+  "currency_name": "Tanzanian Shilling",
+  "population": 70545865,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1188.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 889.44873,
+   "inflation_factor_since_2017": 1.280185,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03734
+  },
+  "income": {
+   "low": 0.7246,
+   "thresholds": [
+    1.17,
+    1.46,
+    1.72,
+    1.99,
+    2.3308,
+    2.73,
+    3.31,
+    4.21,
+    5.99
+   ],
+   "pareto_alpha": 2.2169,
+   "mean": 3.2947,
+   "median": 2.3308,
+   "gini": 0.4049,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.2378,
+    0.0813,
+    0.5651,
+    0.0801,
+    0.0154,
+    0.0074,
+    0.0129
+   ],
+   "mean_years": 5.71
+  },
+  "gdp_pc_population_share_below": 0.07048,
+  "gdp_pc_population_share_same": 0.00864
+ },
+ {
+  "iso3": "THA",
+  "name": "Thailand",
+  "currency": "THB",
+  "currency_name": "Baht",
+  "population": 71619863,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 7181.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 12.385757,
+   "inflation_factor_since_2017": 1.096982,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.0282
+  },
+  "income": {
+   "low": 4.0015,
+   "thresholds": [
+    6.35,
+    7.91,
+    9.41,
+    11.02,
+    12.8892,
+    15.22,
+    18.14,
+    22.46,
+    29.98
+   ],
+   "pareto_alpha": 3.0981,
+   "mean": 16.3886,
+   "median": 12.8892,
+   "gini": 0.3499,
+   "survey_year": 2020,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0463,
+    0.28267,
+    0.20878,
+    0.13649,
+    0.13539,
+    0.0431,
+    0.14729
+   ],
+   "mean_years": 8.29
+  },
+  "gdp_pc_population_share_below": 0.56604,
+  "gdp_pc_population_share_same": 0.00877
+ },
+ {
+  "iso3": "TLS",
+  "name": "Timor-Leste",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 1418517,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1620.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.365618,
+   "inflation_factor_since_2017": 1.278634,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05794
+  },
+  "income": {
+   "low": 1.5134,
+   "thresholds": [
+    2.25,
+    2.72,
+    3.12,
+    3.52,
+    3.9351,
+    4.37,
+    5.02,
+    6.01,
+    7.64
+   ],
+   "pareto_alpha": 3.1693,
+   "mean": 4.6536,
+   "median": 3.9351,
+   "gini": 0.2865,
+   "survey_year": 2014,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.17101,
+  "gdp_pc_population_share_same": 0.00017
+ },
+ {
+  "iso3": "TGO",
+  "name": "Togo",
+  "currency": "XOF",
+  "currency_name": "CFA Franc BCEAO",
+  "population": 8591626,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1115.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 231.840179,
+   "inflation_factor_since_2017": 1.226198,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.05869
+  },
+  "income": {
+   "low": 0.7279,
+   "thresholds": [
+    1.36,
+    1.8,
+    2.24,
+    2.7,
+    3.2138,
+    3.86,
+    4.72,
+    6.0,
+    8.86
+   ],
+   "pareto_alpha": 2.4668,
+   "mean": 4.5316,
+   "median": 3.2138,
+   "gini": 0.4235,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.38754,
+    0.016,
+    0.22342,
+    0.23322,
+    0.10111,
+    0.014,
+    0.0247
+   ],
+   "mean_years": 5.67
+  },
+  "gdp_pc_population_share_below": 0.06811,
+  "gdp_pc_population_share_same": 0.00105
+ },
+ {
+  "iso3": "TON",
+  "name": "Tonga",
+  "currency": "TOP",
+  "currency_name": "Pa’anga",
+  "population": 103742,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4762.6,
+  "gdp_year": 2022,
+  "prices": {
+   "ppp_2017": 1.549346,
+   "inflation_factor_since_2017": 1.362347,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06788
+  },
+  "income": {
+   "low": 2.1979,
+   "thresholds": [
+    3.85,
+    5.07,
+    6.26,
+    7.33,
+    8.3063,
+    9.67,
+    11.48,
+    14.32,
+    21.14
+   ],
+   "pareto_alpha": 2.8375,
+   "mean": 10.9785,
+   "median": 8.3063,
+   "gini": 0.3759,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0008,
+    0.0116,
+    0.037,
+    0.35594,
+    0.59236,
+    0.0007,
+    0.0016
+   ],
+   "mean_years": 11.14
+  },
+  "gdp_pc_population_share_below": 0.4949,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "TTO",
+  "name": "Trinidad & Tobago",
+  "currency": "TTD",
+  "currency_name": "Trinidad and Tobago Dollar",
+  "population": 1367764,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 20577.5,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 4.1809,
+   "inflation_factor_since_2017": 1.166027,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03636
+  },
+  "income": {
+   "low": 1.7167,
+   "thresholds": [
+    3.74,
+    5.27,
+    6.82,
+    8.41,
+    10.1744,
+    12.12,
+    14.62,
+    18.34,
+    25.44
+   ],
+   "pareto_alpha": 2.8302,
+   "mean": 13.1632,
+   "median": 10.1744,
+   "gini": 0.4027,
+   "survey_year": 1992,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0057,
+    0.0186,
+    0.2515,
+    0.0327,
+    0.5815,
+    0.0238,
+    0.0862
+   ],
+   "mean_years": 11.07
+  },
+  "gdp_pc_population_share_below": 0.85297,
+  "gdp_pc_population_share_same": 0.00017
+ },
+ {
+  "iso3": "TUN",
+  "name": "Tunisia",
+  "currency": "TND",
+  "currency_name": "Tunisian Dinar",
+  "population": 12348573,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3977.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.775635,
+   "inflation_factor_since_2017": 1.62328,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.08277
+  },
+  "income": {
+   "low": 3.1076,
+   "thresholds": [
+    5.59,
+    7.14,
+    8.53,
+    9.81,
+    11.3756,
+    13.06,
+    15.34,
+    18.56,
+    24.3
+   ],
+   "pareto_alpha": 3.2238,
+   "mean": 13.7758,
+   "median": 11.3756,
+   "gini": 0.3282,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1614,
+    0.1389,
+    0.1984,
+    0.1851,
+    0.1554,
+    0.0567,
+    0.1041
+   ],
+   "mean_years": 7.91
+  },
+  "gdp_pc_population_share_below": 0.46302,
+  "gdp_pc_population_share_same": 0.00151
+ },
+ {
+  "iso3": "TKM",
+  "name": "Turkmenistan",
+  "currency": "TMT",
+  "currency_name": "Turkmenistan New Manat",
+  "population": 7618847,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 8132.0,
+  "gdp_year": 2023,
+  "income": {
+   "low": 0.5528,
+   "thresholds": [
+    1.05,
+    1.4,
+    1.69,
+    2.03,
+    2.3988,
+    2.88,
+    3.55,
+    4.53,
+    6.42
+   ],
+   "pareto_alpha": 2.5694,
+   "mean": 3.3344,
+   "median": 2.3988,
+   "gini": 0.4081,
+   "survey_year": 1998,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.58075,
+  "gdp_pc_population_share_same": 0.00093
+ },
+ {
+  "iso3": "TCA",
+  "name": "Turks & Caicos Islands",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 46855,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 30348.8,
+  "gdp_year": 2023,
+  "gdp_pc_population_share_below": 0.86479,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "TUV",
+  "name": "Tuvalu",
+  "currency": "AUD",
+  "currency_name": "Australian Dollar",
+  "population": 9492,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 6344.8,
+  "gdp_year": 2023,
+  "income": {
+   "low": 1.6705,
+   "thresholds": [
+    2.82,
+    3.69,
+    4.57,
+    5.35,
+    6.2685,
+    7.25,
+    8.72,
+    11.18,
+    15.38
+   ],
+   "pareto_alpha": 2.4821,
+   "mean": 8.3686,
+   "median": 6.2685,
+   "gini": 0.3914,
+   "survey_year": 2010,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.55422,
+  "gdp_pc_population_share_same": 0.0
+ },
+ {
+  "iso3": "TUR",
+  "name": "Türkiye",
+  "currency": "TRY",
+  "currency_name": "Turkish Lira",
+  "population": 85878556,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 12985.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.38398,
+   "inflation_factor_since_2017": 7.560689,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.61371
+  },
+  "income": {
+   "low": 2.935,
+   "thresholds": [
+    6.14,
+    8.75,
+    11.24,
+    13.6,
+    16.1848,
+    19.4,
+    23.72,
+    30.75,
+    43.75
+   ],
+   "pareto_alpha": 2.6541,
+   "mean": 22.2029,
+   "median": 16.1848,
+   "gini": 0.4191,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0484,
+    0.0451,
+    0.4054,
+    0.2483,
+    0.0856,
+    0.0563,
+    0.1109
+   ],
+   "mean_years": 7.46
+  },
+  "gdp_pc_population_share_below": 0.7927,
+  "gdp_pc_population_share_same": 0.01052
+ },
+ {
+  "iso3": "VIR",
+  "name": "U.S. Virgin Islands",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 103792,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 41976.0,
+  "gdp_year": 2021,
+  "gdp_pc_population_share_below": 0.90686,
+  "gdp_pc_population_share_same": 1e-05
+ },
+ {
+  "iso3": "UGA",
+  "name": "Uganda",
+  "currency": "UGX",
+  "currency_name": "Uganda Shilling",
+  "population": 51384894,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1012.7,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1251.634033,
+   "inflation_factor_since_2017": 1.300574,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05278
+  },
+  "income": {
+   "low": 0.5957,
+   "thresholds": [
+    1.11,
+    1.45,
+    1.76,
+    2.07,
+    2.4676,
+    2.91,
+    3.49,
+    4.43,
+    6.42
+   ],
+   "pareto_alpha": 2.1241,
+   "mean": 3.5151,
+   "median": 2.4676,
+   "gini": 0.4271,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.23528,
+    0.43336,
+    0.08529,
+    0.14609,
+    0.0148,
+    0.06829,
+    0.0169
+   ],
+   "mean_years": 5.17
+  },
+  "gdp_pc_population_share_below": 0.06032,
+  "gdp_pc_population_share_same": 0.00629
+ },
+ {
+  "iso3": "UKR",
+  "name": "Ukraine",
+  "currency": "UAH",
+  "currency_name": "Hryvnia",
+  "population": 38980376,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4737.4,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 6.004223,
+   "inflation_factor_since_2017": 1.942595,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.1304
+  },
+  "income": {
+   "low": 4.7514,
+   "thresholds": [
+    7.42,
+    9.11,
+    10.24,
+    11.36,
+    12.5992,
+    13.94,
+    15.74,
+    18.22,
+    22.88
+   ],
+   "pareto_alpha": 3.7628,
+   "mean": 14.316,
+   "median": 12.5992,
+   "gini": 0.2563,
+   "survey_year": 2020,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0024,
+    0.003,
+    0.0407,
+    0.08431,
+    0.42244,
+    0.15022,
+    0.29693
+   ],
+   "mean_years": 11.86
+  },
+  "gdp_pc_population_share_below": 0.49013,
+  "gdp_pc_population_share_same": 0.00477
+ },
+ {
+  "iso3": "ARE",
+  "name": "United Arab Emirates",
+  "currency": "AED",
+  "currency_name": "UAE Dirham",
+  "population": 11513149,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 48090.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 2.28525,
+   "inflation_factor_since_2017": 1.060994,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.02343
+  },
+  "income": {
+   "low": 11.4081,
+   "thresholds": [
+    22.64,
+    33.25,
+    43.6,
+    54.1,
+    65.144,
+    77.35,
+    91.7,
+    109.7,
+    135.4
+   ],
+   "pareto_alpha": 7.8037,
+   "mean": 72.451,
+   "median": 65.144,
+   "gini": 0.3251,
+   "survey_year": 2013,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0431,
+    0.06901,
+    0.09461,
+    0.11921,
+    0.16412,
+    0.041,
+    0.46895
+   ],
+   "mean_years": 11.89
+  },
+  "gdp_pc_population_share_below": 0.9153,
+  "gdp_pc_population_share_same": 0.00141
+ },
+ {
+  "iso3": "GBR",
+  "name": "United Kingdom",
+  "currency": "GBP",
+  "currency_name": "Pound Sterling",
+  "population": 69487000,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 48741.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.684601,
+   "inflation_factor_since_2017": 1.282462,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05977
+  },
+  "income": {
+   "low": 8.1809,
+   "thresholds": [
+    20.04,
+    26.28,
+    32.5,
+    38.3,
+    45.0,
+    52.25,
+    61.8,
+    74.9,
+    96.8
+   ],
+   "pareto_alpha": 2.9665,
+   "mean": 54.7562,
+   "median": 45.0,
+   "gini": 0.3515,
+   "survey_year": 2017,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0013,
+    0.0197,
+    0.0737,
+    0.1688,
+    0.3201,
+    0.1379,
+    0.2785
+   ],
+   "mean_years": 12.98
+  },
+  "gdp_pc_population_share_below": 0.91671,
+  "gdp_pc_population_share_same": 0.00851
+ },
+ {
+  "iso3": "USA",
+  "name": "United States",
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "population": 341784857,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 81248.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1.0,
+   "inflation_factor_since_2017": 1.279738,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.05001
+  },
+  "income": {
+   "low": 6.4558,
+   "thresholds": [
+    23.84,
+    34.15,
+    43.6,
+    53.55,
+    65.0428,
+    78.0,
+    95.25,
+    120.1,
+    164.7
+   ],
+   "pareto_alpha": 2.6544,
+   "mean": 85.8747,
+   "median": 65.0428,
+   "gini": 0.4154,
+   "survey_year": 2019,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0035,
+    0.0063,
+    0.01529,
+    0.02969,
+    0.33073,
+    0.27336,
+    0.34113
+   ],
+   "mean_years": 13.64
+  },
+  "gdp_pc_population_share_below": 0.95444,
+  "gdp_pc_population_share_same": 0.04186
+ },
+ {
+  "iso3": "URY",
+  "name": "Uruguay",
+  "currency": "UYU",
+  "currency_name": "Peso Uruguayo",
+  "population": 3384688,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 22797.8,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 23.304756,
+   "inflation_factor_since_2017": 1.662657,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.06592
+  },
+  "income": {
+   "low": 3.8719,
+   "thresholds": [
+    7.78,
+    10.74,
+    13.66,
+    16.84,
+    20.3757,
+    24.44,
+    29.64,
+    37.2,
+    51.65
+   ],
+   "pareto_alpha": 2.8451,
+   "mean": 26.6537,
+   "median": 20.3757,
+   "gini": 0.4015,
+   "survey_year": 2020,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0039,
+    0.0578,
+    0.3474,
+    0.2778,
+    0.1769,
+    0.0165,
+    0.1197
+   ],
+   "mean_years": 9.03
+  },
+  "gdp_pc_population_share_below": 0.86,
+  "gdp_pc_population_share_same": 0.00041
+ },
+ {
+  "iso3": "UZB",
+  "name": "Uzbekistan",
+  "currency": "UZS",
+  "currency_name": "Uzbekistan Sum",
+  "population": 37053428,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 2549.3,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 1432.907178,
+   "inflation_factor_since_2017": 2.262266,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.10341
+  },
+  "income": {
+   "low": 0.2926,
+   "thresholds": [
+    0.61,
+    0.8,
+    0.94,
+    1.08,
+    1.2327,
+    1.41,
+    1.66,
+    2.03,
+    2.8
+   ],
+   "pareto_alpha": 2.7108,
+   "mean": 1.5659,
+   "median": 1.2327,
+   "gini": 0.3527,
+   "survey_year": 2003,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.39389,
+  "gdp_pc_population_share_same": 0.00454
+ },
+ {
+  "iso3": "VUT",
+  "name": "Vanuatu",
+  "currency": "VUV",
+  "currency_name": "Vatu",
+  "population": 335169,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 3515.2,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 108.298368,
+   "inflation_factor_since_2017": 1.34452,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.06674
+  },
+  "income": {
+   "low": 1.1518,
+   "thresholds": [
+    2.15,
+    2.74,
+    3.33,
+    4.0,
+    4.6709,
+    5.39,
+    6.17,
+    7.31,
+    9.36
+   ],
+   "pareto_alpha": 3.3043,
+   "mean": 5.4277,
+   "median": 4.6709,
+   "gini": 0.3232,
+   "survey_year": 2019,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "gdp_pc_population_share_below": 0.43866,
+  "gdp_pc_population_share_same": 4e-05
+ },
+ {
+  "iso3": "VEN",
+  "name": "Venezuela",
+  "currency": "VES",
+  "currency_name": "Bolívar Soberano",
+  "population": 28516896,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 15943.6,
+  "gdp_year": 2014,
+  "income": {
+   "low": 0.138,
+   "thresholds": [
+    2.76,
+    4.24,
+    5.65,
+    7.01,
+    8.4904,
+    10.36,
+    12.82,
+    16.3,
+    23.08
+   ],
+   "pareto_alpha": 2.442,
+   "mean": 11.7775,
+   "median": 8.4904,
+   "gini": 0.4477,
+   "survey_year": 2006,
+   "welfare_type": "income",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.0286,
+    0.07339,
+    0.15188,
+    0.16418,
+    0.25817,
+    0.08629,
+    0.23748
+   ],
+   "mean_years": 10.28
+  },
+  "gdp_pc_population_share_below": 0.84338,
+  "gdp_pc_population_share_same": 0.00349
+ },
+ {
+  "iso3": "VNM",
+  "name": "Vietnam",
+  "currency": "VND",
+  "currency_name": "Dong",
+  "population": 101598527,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 4282.1,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 7211.599609,
+   "inflation_factor_since_2017": 1.234789,
+   "inflation_latest_year": 2024,
+   "inflation_recent_annual": 0.03343
+  },
+  "income": {
+   "low": 2.0727,
+   "thresholds": [
+    4.72,
+    6.48,
+    7.99,
+    9.45,
+    10.922,
+    12.62,
+    14.84,
+    18.1,
+    24.3
+   ],
+   "pareto_alpha": 2.9187,
+   "mean": 13.4604,
+   "median": 10.922,
+   "gini": 0.3572,
+   "survey_year": 2018,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.08569,
+    0.09519,
+    0.13179,
+    0.40176,
+    0.21718,
+    0.0233,
+    0.0451
+   ],
+   "mean_years": 7.83
+  },
+  "gdp_pc_population_share_below": 0.46493,
+  "gdp_pc_population_share_same": 0.01244
+ },
+ {
+  "iso3": "YEM",
+  "name": "Yemen",
+  "currency": "YER",
+  "currency_name": "Yemeni Rial",
+  "population": 41773878,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 633.9,
+  "gdp_year": 2018,
+  "income": {
+   "low": 1.0169,
+   "thresholds": [
+    1.68,
+    2.16,
+    2.57,
+    2.96,
+    3.4357,
+    3.95,
+    4.7,
+    5.83,
+    8.23
+   ],
+   "pareto_alpha": 2.6518,
+   "mean": 4.4885,
+   "median": 3.4357,
+   "gini": 0.3671,
+   "survey_year": 2014,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.6005,
+    0.0506,
+    0.0856,
+    0.0973,
+    0.0996,
+    0.0242,
+    0.0422
+   ],
+   "mean_years": 3.75
+  },
+  "gdp_pc_population_share_below": 0.03422,
+  "gdp_pc_population_share_same": 0.00512
+ },
+ {
+  "iso3": "ZMB",
+  "name": "Zambia",
+  "currency": "ZMW",
+  "currency_name": "Zambian Kwacha",
+  "population": 21913874,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1358.9,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 4.162864,
+   "inflation_factor_since_2017": 2.039248,
+   "inflation_latest_year": 2023,
+   "inflation_recent_annual": 0.14516
+  },
+  "income": {
+   "low": 0.1537,
+   "thresholds": [
+    0.46,
+    0.67,
+    0.9,
+    1.19,
+    1.571,
+    2.07,
+    2.86,
+    4.02,
+    6.43
+   ],
+   "pareto_alpha": 1.9267,
+   "mean": 3.0123,
+   "median": 1.571,
+   "gini": 0.5714,
+   "survey_year": 2015,
+   "welfare_type": "consumption",
+   "coverage": "national"
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.1463,
+    0.1164,
+    0.3215,
+    0.2485,
+    0.1457,
+    0.0076,
+    0.014
+   ],
+   "mean_years": 7.12
+  },
+  "gdp_pc_population_share_below": 0.10243,
+  "gdp_pc_population_share_same": 0.00268
+ },
+ {
+  "iso3": "ZWE",
+  "name": "Zimbabwe",
+  "currency": "ZWG",
+  "currency_name": "Zimbabwe Gold",
+  "population": 16950795,
+  "population_year": 2025,
+  "gdp_per_capita_usd": 1624.0,
+  "gdp_year": 2023,
+  "prices": {
+   "ppp_2017": 0.000246,
+   "inflation_factor_since_2017": 104.983114,
+   "inflation_latest_year": 2022,
+   "inflation_recent_annual": 1.98926
+  },
+  "education": {
+   "year": 2015,
+   "shares": [
+    0.05569,
+    0.16848,
+    0.16618,
+    0.47175,
+    0.0184,
+    0.07479,
+    0.0447
+   ],
+   "mean_years": 8.14
+  },
+  "gdp_pc_population_share_below": 0.17118,
+  "gdp_pc_population_share_same": 0.00208
+ }
+]

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}Sources{% endblock %}
+{% block main %}
+<section class="container page-section prose">
+    <h1>Sources</h1>
+
+    <h2 class="h4">Datasets (processed by <code>scripts/build_data.py</code>)</h2>
+    <p class="text-secondary">Downloaded from pinned commits of public mirrors, so the data can be reproduced exactly.</p>
+    <ul>
+        {% for key, s in data_sources.items() %}
+        <li><strong>{{ s.name }}</strong><br>
+            <a href="{{ s.home }}" target="_blank" rel="noopener">{{ s.home }}</a>
+            <div class="small text-secondary text-break">Pinned file: {{ s.url }}</div></li>
+        {% endfor %}
+    </ul>
+
+    <h2 class="h4 mt-5">Reports and instruments</h2>
+    <p class="text-secondary">Global headline figures and question wording. Checked October 2026.</p>
+    <ul>
+        {% for key, c in citations.items() %}
+        <li id="{{ key }}"><strong>{{ c.title }}</strong>. {{ c.publisher }}, {{ c.year }}.<br>
+            <a href="{{ c.url }}" target="_blank" rel="noopener" class="text-break">{{ c.url }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2 class="h4 mt-5">Original research notes</h2>
+    <p><a href="https://docs.google.com/document/d/11DqI4WlXMei2MNtpUIWWyo_NJFgkAvd2fpDA0dJwBlo/edit?usp=sharing" target="_blank" rel="noopener">The creator's 2021 source notes (Google Docs)</a></p>
+</section>
+{% endblock %}

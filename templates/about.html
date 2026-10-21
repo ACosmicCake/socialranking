@@ -1,29 +1,34 @@
-
 {% extends "layout.html" %}
-{% block title %}
-    Quiz
-{% endblock %}
-
+{% block title %}About{% endblock %}
 {% block main %}
-<div class="justify-content-center align-items-center " id= "outer">
-       <div class="" >
-          <h1 class="text-white" >About</h1>
+<section class="container page-section prose">
+    <h1>About</h1>
+    <p class="lead">"If I were to rank everyone in the world socioeconomically, where would I rank in the leaderboard?"</p>
+    <p>When I first set out to create this quiz, I wanted a definitive answer: something concrete, a number I could rely on
+        if I did enough research and pieced everything together. I wanted to avoid questions that can only be answered
+        subjectively, like "Do you feel happy?", and ask only questions that can be answered objectively, so the result
+        would be as accurate as possible.</p>
+    <p>I soon realized this is nearly impossible. The data are uneven across social classes: everything I found online covered
+        the lower classes in far more detail than the higher ones.</p>
+    <p>Then I found another problem. One country's data can't be compared directly with another's, because economies and
+        prices differ, so purchasing power parity (PPP) varies from country to country. Not every country has the same amount
+        of data, either. The US, for example, has far more than Viet Nam, my country.</p>
+    <p>These are the built-in limits of comparing data on a global scale. I still wanted some kind of answer, because there is
+        data covering every country to work with, even if it is richer for the lower classes.</p>
 
-        <p class="text-white container p-5">
-          “If I were to rank everyone in the world socioeconomically, where would I rank in the leaderboard?”
-
-
-          <br>When I first set out to create this quiz, I wanted a definitive answer, something concrete, a number that I could rely upon if I could do enough research and piece everything together. I wanted to ask questions that cannot be answered subjectively like “Do you feel happy?”. Instead I wanted the result to be as accurate as possible by asking questions that can only be answered objectively.
-
-
-          I soon realized that this is nearly impossible as there was a disproportionate amount of data within the social classes. In all the research that I scoured on the internet, there was significantly more data on the lower social classes and very little on the higher classes.
-
-
-          After some more research, I discovered another problem. Different countries' data cannot be directly compared to others, since economies are different, thus the Purchasing Power Parity (PPP) varies from country to country. Additionally, not all countries have the same amount of data to work with. Ex: The US has significantly more data than Viet Nam (my country).
-
-I suppose these are the inherent limitations of trying to compare data on a global scale, but I still wanted some type of answer since there is still some data I could work with that included all countries, albeit more on the lower classes.
-    </p>
-        </div>
-        </div>
-
+    <h2 class="h4 mt-5">The 2026 rebuild</h2>
+    <p>The quiz has been rebuilt to take those problems head on:</p>
+    <ul>
+        <li><strong>Purchasing power:</strong> your income is converted with your own country's inflation history and PPP
+            factor, then compared with the World Bank's global income distribution, which pools national household surveys
+            covering about 97% of the world's population.</li>
+        <li><strong>Uneven data:</strong> the global curve is calibrated to the World Bank's official headcounts, and the top
+            tail is modelled from each country's richest decile instead of being guessed.</li>
+        <li><strong>Objective questions:</strong> every question is taken from an established international survey (Gallup,
+            FAO, Global Findex, the WHO/UNICEF and SDG7 monitoring definitions, Barro-Lee, UBS). The one subjective question,
+            the MacArthur ladder, is kept apart and used to show the gap between how people see themselves and what the data
+            say.</li>
+    </ul>
+    <p>See the <a href="{{ base }}methodology.html">methodology</a> for the details and the limitations that remain.</p>
+</section>
 {% endblock %}

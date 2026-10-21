@@ -1,32 +1,47 @@
-
 {% extends "layout.html" %}
-{% block title %}
-    Quiz
-{% endblock %}
-
+{% from "macros.html" import cite with context %}
+{% block title %}FAQ{% endblock %}
 {% block main %}
-<div class="justify-content-center align-items-center " id= "outer">
-       <div class="" >
-          <h1 class="text-white container p-2" >Frequently asked Questions</h1>
+<section class="container page-section prose">
+    <h1>Frequently asked questions</h1>
 
-        <h3 class= "text-white" > Is this quiz to be trusted? </h3>
-        <p class="text-white container p-1">
-          As much as I want it to be, it is not a yes. Take it as a reference only. There is still some truth to it, as all the statistics are used by real world data. But, I am not a PHD Sociology researcher and cannot claim the validity of the quiz. Additionally, this quiz only works with the amount of data available, and doesn’t take into account many things that comprise a person’s SES.
+    <h2 class="h5 mt-4">Can I trust this quiz?</h2>
+    <p>Treat it as a well-sourced estimate, not a measurement. Every comparison uses published data from the World Bank, the UN
+        system, Gallup or UBS, and the <a href="{{ base }}methodology.html">methodology</a> sets out each step and its limits. The weakest
+        links are self-reported answers, data years that range from 2015 (education) to 2025, and the fact that household
+        surveys under-count the very rich.</p>
 
-        <h3 class= "text-white" > How do you determine a person’s socioeconomic status(SES)? </h3>
-        <p class="text-white container p-1">
-          There have been many ways in the past researches have been used in surveys to determine a person’s SES, one of the common ways are through: Education, Income, and Occupation, some research branching out to even family sizes, accessibility to resources, subjective view of social status,...
+    <h2 class="h5 mt-4">How is socioeconomic status (SES) usually measured?</h2>
+    <p>Researchers typically combine education, income and occupation. Some also use household size, access to resources or
+        subjective social status {{ cite("apa_ses") }}. Occupation has no comparable worldwide data, so this quiz uses
+        income, education, living standards, financial security and (optionally) wealth.</p>
 
+    <h2 class="h5 mt-4">Why does my country matter?</h2>
+    <p>The same amount of money buys very different things in different countries. Your income is converted into
+        "international dollars" with a purchasing-power-parity factor, so $10 means what $10 bought in the United States in 2017.
+        Your country also determines which national distribution you're compared with for the "within your country" result.</p>
 
-These are all amazing foundations to work on, but in my opinion these don't account for regional differences. Therefore, in this quiz I built upon the foundations (while working with the amount of data I have) and deemed the following elements to contribute to a person’s SES: Education, Country, Accessibility, and Wealth.
+    <h2 class="h5 mt-4">Why per person, and why per day?</h2>
+    <p>That's how the World Bank measures poverty and inequality: household income (or spending) divided by the number of people
+        in the household, expressed per day {{ cite("pip") }}. A household of four on $3,000 a month lives on about $25 per person
+        per day.</p>
 
-<br> https://www.apa.org/pi/ses/resources/class/measuring-status
-                <h3 class= "text-white" > Why does my country matter?  </h3>
-        <p class="text-white container p-1">
-          In order to rank everyone on a global scale, there was also a need to rank where a person had come from. Ex: A person from Laos, and a person from England might look at the same amount of wealth the same way. Fortunately, researchers already divided the countries into 4 categories based on its GNI per capita.
-        </p>
+    <h2 class="h5 mt-4">Why is my "world" result so much higher than my result within my country?</h2>
+    <p>For most people in middle- and high-income countries, global inequality between countries is much larger than inequality
+        within them. Someone at the median in a high-income country is typically among the richest fifth of the world.</p>
 
-        </div>
-        </div>
+    <h2 class="h5 mt-4">My country isn't accepting an exact income. Why?</h2>
+    <p>Converting today's income into 2017 prices needs a consumer price series and a PPP factor. Where these are missing, or
+        inflation has been above 100% a year, the conversion isn't reliable, so we ask for a range instead.</p>
 
+    <h2 class="h5 mt-4">Do you store my answers?</h2>
+    <p>No. The quiz runs entirely in your browser: all the data are downloaded with the page and the calculation happens on
+        your device. Your answers go into the results page's address (after the <code>#</code>), which browsers never send to
+        the server. If you share that link, though, whoever opens it will see your answers.</p>
+
+    <h2 class="h5 mt-4">Can I use the scorer in my own code?</h2>
+    <p><code>static/js/ses.js</code> works in the browser and in Node.js. Call <code>SES.score(SES.parseAnswers(answers))</code> with
+        an object whose field names match the <a href="{{ base }}questionnaire.html">questionnaire</a>, for example
+        <code>{"country": "VNM", "income_mode": "band", "income_band": "b4", "education": "secondary"}</code>.</p>
+</section>
 {% endblock %}

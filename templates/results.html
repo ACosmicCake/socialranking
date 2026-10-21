@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Your results{% endblock %}
+{% block main %}
+<div id="results">
+    <section class="container page-section text-center">
+        <noscript><div class="alert alert-warning">Your results are calculated in your browser, which needs JavaScript.</div></noscript>
+        <p class="text-secondary" id="results-loading">Calculating...</p>
+    </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"
+        integrity="sha384-dug+JxfBvklEQdJ4AYuBBAIScUz0bVN73xpy273gcAwHjb3qI0fXmuYNaNfdyYJG" crossorigin="anonymous"></script>
+<script src="{{ base }}static/js/data.js"></script>
+<script src="{{ base }}static/js/ses.js"></script>
+<script>window.SES_BASE = "{{ base }}";</script>
+<script src="{{ base }}static/js/results.js"></script>
+{% endblock %}

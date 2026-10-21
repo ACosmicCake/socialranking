@@ -1,28 +1,85 @@
-
 {% extends "layout.html" %}
-{% block title %}
-    Quiz
-{% endblock %}
+{% from "macros.html" import cite with context %}
+{% block title %}Quiz{% endblock %}
+
+{% macro field(q) %}
+<div class="question mb-4" id="q-{{ q.id }}"
+     {% if q.show_if %}data-show-if="{{ q.show_if[0] }}={{ q.show_if[1] }}"{% endif %}>
+    {% if q.stem %}<p class="fw-semibold mb-2">{{ q.stem }}</p>{% endif %}
+    {% if q.type == "country" %}
+        <label class="form-label fs-5" for="country">{{ q.text }}</label>
+        <select name="country" id="country" class="form-select form-select-lg" required>
+            <option value="" disabled selected>Choose your country...</option>
+            {% for c in country_options %}
+            <option value="{{ c.iso3 }}" data-currency="{{ c.currency }}" data-currency-name="{{ c.currency_name }}"
+                    data-exact="{{ 'yes' if c.exact else 'no' }}">{{ c.name }}</option>
+            {% endfor %}
+        </select>
+    {% elif q.type == "number" %}
+        <label class="form-label fs-5" for="{{ q.id }}">{{ q.text }}</label>
+        {% if q.id == "income_amount" %}
+        <div class="input-group input-group-lg">
+            <input type="text" inputmode="decimal" name="{{ q.id }}" id="{{ q.id }}"
+                   class="form-control" autocomplete="off" placeholder="e.g. 2,500">
+            <span class="input-group-text" id="currency-label">local currency</span>
+        </div>
+        {% else %}
+        <input type="number" min="1" max="50" step="1" name="{{ q.id }}" id="{{ q.id }}"
+               class="form-control form-control-lg w-auto">
+        {% endif %}
+    {% else %}
+        <p class="fs-5 mb-2">{{ q.text }}</p>
+        <div class="{{ 'ladder' if q.type == 'ladder' else 'options' }}" role="radiogroup" aria-label="{{ q.text }}">
+            {% for key, label in q.options %}
+            <input class="btn-check" type="radio" name="{{ q.id }}" id="{{ q.id }}-{{ key }}" value="{{ key }}">
+            <label class="btn btn-outline-light {{ 'rung' if q.type == 'ladder' else 'option' }}" for="{{ q.id }}-{{ key }}">{{ label }}</label>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if q.help %}<div class="form-text">{{ q.help }}</div>{% endif %}
+    <div class="invalid-feedback d-block" data-error-for="{{ q.id }}" hidden></div>
+    <div class="source-note">Based on: {{ cite(q.source) }}</div>
+</div>
+{% endmacro %}
 
 {% block main %}
-<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
-    <div class="" id="inner">
-        <h1 class="text-white" >{{ questions[count].question}}</h1>
-          
-    <form action="/quiz" method="post">      
-    <div class=" btn-group-toggle p-5" data-toggle="buttons" name="answer">
-    {% for key,value in answer[count].items() %}
-        <div class="btn btn-outline-light">
-            <input type="radio" class="form-check-input" name="radio-stacked"  value= {{key}} required>{{value}}
+<section class="container page-section quiz-container">
+    <noscript><div class="alert alert-warning">This quiz runs in your browser and needs JavaScript.</div></noscript>
+    <div class="progress mb-4" role="progressbar" aria-label="Quiz progress">
+        <div class="progress-bar bg-light" id="progress" style="width: 0%"></div>
+    </div>
+    <div class="alert alert-warning" role="alert" id="error-summary" hidden>Some answers need attention. They're highlighted below.</div>
+    <form action="{{ base }}results.html" id="quiz" novalidate>
+        {% for section in sections %}
+        <fieldset class="step" data-step="{{ loop.index0 }}">
+            <legend class="h3">{{ loop.index }}. {{ section.title }}</legend>
+            <p class="text-secondary">{{ section.intro }}</p>
+            {% for q in section.questions %}{{ field(q) }}{% endfor %}
+            {% if section.key == "income" %}
+            <p class="small text-secondary" id="exact-unavailable" hidden>
+                We don't have reliable price data for this country (missing price indices, a currency
+                redenomination or very high inflation), so please choose a range.
+            </p>
+            {% endif %}
+        </fieldset>
+        {% endfor %}
+        <fieldset class="step" data-step="{{ sections | length }}">
+            <legend class="h3">{{ sections | length + 1 }}. Finish</legend>
+            <p>Your answers never leave your device. Everything is calculated in your browser, and nothing is sent to a server.</p>
+            <p class="small text-secondary">The results page address contains your answers, so you can bookmark it or share it.
+                Anyone you share it with will see your answers.</p>
+            <button class="btn btn-light btn-lg" type="submit">See my results</button>
+        </fieldset>
+        <div class="d-flex justify-content-between mt-4">
+            <button type="button" class="btn btn-outline-light" id="back">Back</button>
+            <button type="button" class="btn btn-light" id="next">Next</button>
         </div>
-    {% endfor %}
-            </div>
-                <br><button class="btn btn-secondary" type="submit">Next</button>
-            </form>
-            </div>
+    </form>
+</section>
+{% endblock %}
 
-                <img src="/static/giphy.gif" alt="Paris" class="walking" height="20%">
-            </div>
-
-        
+{% block scripts %}
+<script src="{{ base }}static/js/data.js"></script>
+<script src="{{ base }}static/js/ses.js"></script>
+<script src="{{ base }}static/js/quiz.js"></script>
 {% endblock %}
