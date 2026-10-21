@@ -158,6 +158,10 @@ WDI_INDICATORS = {
     # by sex
     "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
     "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
+    "SE.ADT.LITR.FE.ZS": "Adult literacy rate, female (15+)",
+    "SE.ADT.LITR.MA.ZS": "Adult literacy rate, male (15+)",
+    "IT.NET.USER.FE.ZS": "Individuals using the Internet, female",
+    "IT.NET.USER.MA.ZS": "Individuals using the Internet, male",
     "FX.OWN.TOTL.FE.ZS": "Account ownership, female (% of age 15+)",
     "FX.OWN.TOTL.MA.ZS": "Account ownership, male (% of age 15+)",
     **{f"{base}.{sex}.ZS": f"{label}, {'female' if sex == 'FE' else 'male'}"

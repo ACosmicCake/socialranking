@@ -7,7 +7,7 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (106 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
+   "name": "World Bank World Development Indicators API (110 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
   },
@@ -3155,6 +3155,10 @@
   "GD_WBL_OVL_LAW": "Women, Business and the Law: legal framework index (0-100)",
   "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
   "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
+  "SE.ADT.LITR.FE.ZS": "Adult literacy rate, female (15+)",
+  "SE.ADT.LITR.MA.ZS": "Adult literacy rate, male (15+)",
+  "IT.NET.USER.FE.ZS": "Individuals using the Internet, female",
+  "IT.NET.USER.MA.ZS": "Individuals using the Internet, male",
   "FX.OWN.TOTL.FE.ZS": "Account ownership, female (% of age 15+)",
   "FX.OWN.TOTL.MA.ZS": "Account ownership, male (% of age 15+)",
   "SL.EMP.WORK.FE.ZS": "Wage and salaried workers, female",
@@ -3378,6 +3382,22 @@
     "SP.DYN.LE00.MA.IN": [
      2024,
      71.12
+    ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     84.59
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     90.91
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2024,
+     68.2
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2025,
+     76.6
     ],
     "FX.OWN.TOTL.FE.ZS": [
      2024,
@@ -3668,6 +3688,22 @@
      2024,
      73.92
     ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     95.32
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     97.91
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2024,
+     85.5
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2024,
+     87.6
+    ],
     "FX.OWN.TOTL.FE.ZS": [
      2021,
      81.38
@@ -3945,6 +3981,22 @@
      2024,
      75.57
     ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     98.47
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2023,
+     99.13
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2024,
+     90.0
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2024,
+     91.8
+    ],
     "FX.OWN.TOTL.FE.ZS": [
      2021,
      88.02
@@ -4217,6 +4269,22 @@
     "SP.DYN.LE00.MA.IN": [
      2024,
      72.95
+    ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     94.69
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     95.23
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2024,
+     81.3
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2024,
+     82.0
     ],
     "FX.OWN.TOTL.FE.ZS": [
      2021,
@@ -4507,6 +4575,22 @@
      2024,
      70.42
     ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     67.44
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     83.23
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2024,
+     55.0
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2024,
+     67.6
+    ],
     "FX.OWN.TOTL.FE.ZS": [
      2021,
      45.55
@@ -4775,6 +4859,22 @@
     "SP.DYN.LE00.MA.IN": [
      2024,
      76.88
+    ],
+    "SE.ADT.LITR.FE.ZS": [
+     2022,
+     98.76
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2022,
+     98.83
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2024,
+     94.1
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2024,
+     94.7
     ],
     "FX.OWN.TOTL.FE.ZS": [
      2021,
@@ -5065,6 +5165,22 @@
      2024,
      71.01
     ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     71.61
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     84.6
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2024,
+     56.3
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2024,
+     69.1
+    ],
     "FX.OWN.TOTL.FE.ZS": [
      2024,
      75.06
@@ -5345,6 +5461,22 @@
     "SP.DYN.LE00.MA.IN": [
      2024,
      60.68
+    ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     62.66
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     74.88
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2024,
+     29.4
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2024,
+     37.9
     ],
     "FX.OWN.TOTL.FE.ZS": [
      2021,
