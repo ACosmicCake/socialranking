@@ -73,6 +73,8 @@
         <div class="d-flex flex-wrap gap-2 justify-content-center mt-2">
             <button class="btn btn-outline-light btn-sm" id="copy-link" type="button">${tr("Copy a link to these results", "Sao chép đường dẫn kết quả")}</button>
             <button class="btn btn-outline-light btn-sm" id="save-image" type="button">${tr("Save a summary image", "Lưu ảnh tóm tắt")}</button>
+            <button class="btn btn-outline-light btn-sm" id="save-csv" type="button">${tr("Download the numbers (CSV)", "Tải số liệu (CSV)")}</button>
+            <button class="btn btn-outline-light btn-sm" id="save-json" type="button">${tr("Download everything (JSON)", "Tải toàn bộ (JSON)")}</button>
         </div>
         <span class="small text-white-50 mt-1" id="copy-status" aria-live="polite"></span>
     </div>`);
@@ -86,7 +88,7 @@
         ["country", tr("Your country", "Nước bạn")]]
         .filter(([id]) => !(id === "work" && !work.status) && !(id === "wealth" && !r.wealth.band) && !(id === "mpi" && !r.mpi.available)
             && !(id === "protection" && !r.social_protection.received && !r.social_protection.country));
-    html.push(`<nav class="result-nav sticky-top" aria-label="${tr("Result sections", "Các phần kết quả")}"><div class="container d-flex flex-wrap gap-1 py-2">
+    html.push(`<nav class="result-nav sticky-top" aria-label="${tr("Result sections", "Các phần kết quả")}"><div class="container d-flex gap-1 py-2">
         ${navItems.map(([id, label]) => `<a class="btn btn-sm btn-outline-secondary" href="#${id}">${label}</a>`).join("")}</div></nav>
         <div class="container pb-5">`);
 
@@ -106,6 +108,22 @@
     else if (p.gap > 1) gapText = tr(`You placed yourself <strong>${p.gap} rungs higher</strong> than the data suggests.`,
         `Bạn tự đặt mình <strong>cao hơn ${p.gap} bậc</strong> so với số liệu.`);
     else gapText = tr("Your self-placement is close to what the data suggests.", "Cách bạn tự đánh giá khá sát với số liệu.");
+
+    // Highlights: the most telling numbers from each section, linking to the details.
+    const highlights = [];
+    const hl = (id, value, text) => highlights.push(`<a class="stat-card" href="#${id}"><span class="stat-value">${value}</span><span class="stat-text">${text}</span></a>`);
+    hl("income", tr(`Top ${pct(inc.top_pct)}`, `${pct(inc.top_pct)} cao nhất`), tr("of the world by income per person", "thế giới theo thu nhập bình quân đầu người"));
+    if (inc.national_pct !== undefined) hl("income", pct(inc.national_pct), tr(`of people in ${cname} have less income`, `dân số ${cname} có thu nhập thấp hơn`));
+    hl("education", pct(edu.global_pct), tr("of adults worldwide have less education", "người trưởng thành trên thế giới học vấn thấp hơn"));
+    if (inc.healthy_diet.share_of_income !== undefined) hl("income", pct(inc.healthy_diet.share_of_income * 100, 0),
+        tr(`of your income: what a healthy diet costs in ${cname}`, `thu nhập của bạn: chi phí một chế độ ăn lành mạnh ở ${cname}`));
+    if (sec.emergency) hl("security", pct(sec.emergency.world_pct), tr("of adults are less able to raise emergency money", "người trưởng thành khó xoay tiền khẩn cấp hơn bạn"));
+    if (r.mobility.rank_change !== undefined) hl("education", `${r.mobility.rank_change > 0 ? "+" : ""}${fixed(r.mobility.rank_change, 1)}`,
+        tr("rank points in education compared with your parents", "điểm thứ hạng học vấn so với bố mẹ"));
+    if (r.mpi.available) hl("mpi", `${fixed(r.mpi.score, 0)}%`, tr("multidimensional poverty score (33% or more counts as poor)", "điểm nghèo đa chiều (từ 33% là nghèo)"));
+    if (work.occupation && work.occupation.world_pct !== undefined) hl("work", pct(work.occupation.world_pct), tr("of workers are in less-skilled occupations", "lao động làm nghề có trình độ kỹ năng thấp hơn"));
+    html.push(`<section class="result-section pt-4" aria-label="${tr("Highlights", "Điểm nổi bật")}">
+        <div class="stat-grid">${highlights.slice(0, 8).join("")}</div></section>`);
 
     html.push(`<section id="profile" class="result-section pt-4"><div class="row g-4">
         <div class="col-lg-7">
@@ -643,11 +661,43 @@
         `GDP per person isn't part of your SES index: your income is already adjusted for prices in ${cname} and compared globally, so counting the country again would double-count it.`,
         `GDP bình quân đầu người không nằm trong chỉ số SES: thu nhập của bạn đã được điều chỉnh theo giá cả ở ${cname} và so sánh toàn cầu, nên tính thêm quốc gia sẽ là tính trùng.`)}</p>`));
 
-    html.push(`<hr class="my-5"><div class="text-center">
-        <a class="btn btn-light" href="${base}quiz.html">${tr("Take it again", "Làm lại")}</a>
+    html.push(`<hr class="my-5"><div class="text-center d-flex flex-wrap gap-2 justify-content-center">
+        <a class="btn btn-light" href="${base}quiz.html" id="edit-answers">${tr("Change my answers", "Sửa câu trả lời")}</a>
         <a class="btn btn-outline-light" href="${assetBase}methodology.html">${tr("How this was calculated", "Cách tính (tiếng Anh)")}</a>
     </div></div>`);
     root.innerHTML = html.join("\n");
+    html.length = 0;
+
+    // "Change my answers" opens the quiz with these answers filled in (saved only in this browser).
+    document.getElementById("edit-answers").addEventListener("click", () => {
+        try { localStorage.setItem("socialranking-quiz-v1", JSON.stringify({answers: form, step: 0, furthest: 99})); } catch (e) { /* no storage */ }
+    });
+
+    // Highlight the section being read in the section bar, and offer a way back to the top.
+    const navLinks = Array.from(root.querySelectorAll(".result-nav a"));
+    const navBar = root.querySelector(".result-nav .container");
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(entries => {
+            for (const entry of entries) {
+                if (!entry.isIntersecting) continue;
+                navLinks.forEach(a => {
+                    const on = a.getAttribute("href") === `#${entry.target.id}`;
+                    a.classList.toggle("active", on);
+                    if (on && navBar) navBar.scrollTo({left: a.offsetLeft - navBar.clientWidth / 2 + a.clientWidth / 2, behavior: "smooth"});
+                });
+            }
+        }, {rootMargin: "-130px 0px -65% 0px"});
+        navLinks.forEach(a => { const t = document.getElementById(a.getAttribute("href").slice(1)); if (t) observer.observe(t); });
+    }
+    const toTop = document.createElement("button");
+    toTop.type = "button";
+    toTop.className = "btn btn-light to-top";
+    toTop.hidden = true;
+    toTop.setAttribute("aria-label", tr("Back to top", "Lên đầu trang"));
+    toTop.innerHTML = "&uarr;";
+    toTop.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
+    document.body.appendChild(toTop);
+    window.addEventListener("scroll", () => { toTop.hidden = window.scrollY < 900; }, {passive: true});
 
     root.addEventListener("click", e => {
         const link = e.target.closest('a[href^="#"]');
@@ -709,6 +759,61 @@
         a.download = tr("where-i-stand.png", "vi-tri-cua-toi.png");
         a.href = c.toDataURL("image/png");
         a.click();
+    });
+
+    // ---------------------------------------------------------------- data downloads
+    function download(name, type, text) {
+        const a = document.createElement("a");
+        a.download = name;
+        a.href = URL.createObjectURL(new Blob([text], {type}));
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }
+    // One row per measure: section, measure, your value, world, your country. Percentiles are the
+    // share of people below you (people level with you count as half).
+    function summaryRows() {
+        const rows = [["section", "measure", "you", "world", "country"]];
+        const add = (section, measure, you, world = "", country = "") => {
+            if (you !== undefined && you !== null) rows.push([section, measure, you, world ?? "", country ?? ""]);
+        };
+        add("summary", "SES index (0-100)", r.ses_index);
+        for (const d of r.dimensions) add("summary", `${d.key} percentile`, "", d.pct, d.national_pct);
+        add("income", "income per person per day (2021 int. $)", inc.ppp_per_day.toFixed(2), inc.world_median, r.country.median_ppp);
+        add("income", "percentile", "", inc.global_pct, inc.national_pct);
+        if (inc.sensitivity) {
+            add("income", "percentile at -20% income", "", inc.sensitivity.global[0], inc.sensitivity.national && inc.sensitivity.national[0]);
+            add("income", "percentile at +20% income", "", inc.sensitivity.global[1], inc.sensitivity.national && inc.sensitivity.national[1]);
+        }
+        for (const t of inc.thresholds) add("income", `${t.scope} ${t.pct}th percentile (2021 int. $/day)`, t.ppp_per_day.toFixed(2));
+        for (const l of inc.lines) add("income", `share below $${l.line.toFixed(2)}/day`, l.above ? "above" : "below", l.share_below, l.country_share_below);
+        if (inc.healthy_diet.cost_2021ppp !== undefined) {
+            add("income", "healthy diet cost (2021 int. $/day)", inc.healthy_diet.cost_2021ppp.toFixed(2));
+            add("income", "healthy diet affordable (world, country: % who can't afford)", inc.healthy_diet.affordable ? "yes" : "no",
+                inc.healthy_diet.world && Math.round(inc.healthy_diet.world.unaffordable_share * 1000) / 10, inc.healthy_diet.unaffordable_pct);
+        }
+        add("education", edu.label, "", edu.global_pct, edu.national_pct);
+        if (r.mobility.rank_change !== undefined) add("education", "rank change vs better-ranked parent (points)", r.mobility.rank_change);
+        if (work.status) add("work", `status: ${work.status}`, "", work.status_pct ?? work.global_pct, work.status_national_pct ?? work.national_pct);
+        if (work.occupation) add("work", `occupation: ${work.occupation.key} (skill level ${work.occupation.skill_level ?? "-"})`, "", work.occupation.world_pct, work.occupation.national_pct);
+        if (liv.global_pct !== undefined) add("living", "living standards", "", liv.global_pct, liv.national_pct);
+        if (r.mpi.available) add("living", "MPI deprivation score (%)", r.mpi.score);
+        if (sec.gallup_group) add("security", `Gallup vulnerability: ${sec.gallup_group}`, "", sec.gallup_pct);
+        if (sec.fies_level) add("security", `FIES: ${sec.fies_level} (${sec.fies_raw}/8)`, "", sec.fies_pct, sec.fies_national_pct);
+        if (sec.emergency) add("security", `emergency money: ${sec.emergency.key}`, "", sec.emergency.world_pct, sec.emergency.national_pct);
+        if (sec.cover_expenses) add("security", `cover expenses: ${sec.cover_expenses.key}`, "", sec.cover_expenses.world_pct, sec.cover_expenses.national_pct);
+        if (r.wealth.band) add("wealth", r.wealth.band, "", r.wealth.global_pct);
+        const sp = r.social_protection;
+        if (sp.received) add("social protection", "programme types received", sp.types.join(" + ") || "none", sp.world_any, sp.country && sp.country.any);
+        return rows;
+    }
+    const csvCell = v => { const t = String(v); return /[",\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t; };
+    document.getElementById("save-csv").addEventListener("click", () => {
+        download(tr("where-i-stand.csv", "vi-tri-cua-toi.csv"), "text/csv;charset=utf-8",
+                 "\ufeff" + summaryRows().map(row => row.map(csvCell).join(",")).join("\r\n"));
+    });
+    document.getElementById("save-json").addEventListener("click", () => {
+        const payload = {generated: new Date().toISOString(), data_built: D.global.built, answers, results: r};
+        download(tr("where-i-stand.json", "vi-tri-cua-toi.json"), "application/json", JSON.stringify(payload, null, 1));
     });
 
     // ---------------------------------------------------------------- charts

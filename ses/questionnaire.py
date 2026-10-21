@@ -299,6 +299,7 @@ SECTIONS = [
             },
             {
                 "id": "income_amount",
+                "required": True,
                 "type": "number",
                 "text": "What is your household's total income after taxes (or total spending)?",
                 "help": "Income: add up everyone in your household who shares money - wages, business or farm "
@@ -311,6 +312,7 @@ SECTIONS = [
             },
             {
                 "id": "income_period",
+                "required": True,
                 "type": "radio",
                 "text": "Is that amount per month or per year?",
                 "options": [("month", "Per month"), ("year", "Per year")],
@@ -320,6 +322,7 @@ SECTIONS = [
             },
             {
                 "id": "household_size",
+                "required": True,
                 "type": "number",
                 "text": "How many people, including you and any children, live in your household and share this income?",
                 "show_if": ("income_mode", "exact"),
@@ -329,6 +332,7 @@ SECTIONS = [
             },
             {
                 "id": "income_band",
+                "required": True,
                 "type": "radio",
                 "text": "Roughly how much does each person in your household live on per day?",
                 "help": "In what the money would buy in the United States in 2021. "

@@ -7,7 +7,7 @@
      {% if q.show_if %}data-show-if="{{ q.show_if[0] }}={{ q.show_if[1] }}"{% endif %}>
     {% if q.stem %}<p class="fw-semibold mb-2">{{ q.stem }}</p>{% endif %}
     {% if q.type == "country" %}
-        <label class="form-label fs-5" for="country">{{ q.text }}</label>
+        <label class="form-label fs-5" for="country">{{ q.text }}{% if q.required %} <span class="badge req-badge align-middle">{{ _("Required") }}</span>{% endif %}</label>
         <select name="country" id="country" class="form-select form-select-lg" required>
             <option value="" disabled selected>{{ _("Choose your country...") }}</option>
             {% for c in country_options %}
@@ -16,7 +16,7 @@
             {% endfor %}
         </select>
     {% elif q.type == "number" %}
-        <label class="form-label fs-5" for="{{ q.id }}">{{ q.text }}</label>
+        <label class="form-label fs-5" for="{{ q.id }}">{{ q.text }}{% if q.required %} <span class="badge req-badge align-middle">{{ _("Required") }}</span>{% endif %}</label>
         {% if q.id == "income_amount" %}
         <div class="input-group input-group-lg">
             <input type="text" inputmode="decimal" name="{{ q.id }}" id="{{ q.id }}"
@@ -28,7 +28,7 @@
                class="form-control form-control-lg w-auto">
         {% endif %}
     {% elif q.type == "checkbox" %}
-        <p class="fs-5 mb-2">{{ q.text }}</p>
+        <p class="fs-5 mb-2">{{ q.text }}{% if q.required %} <span class="badge req-badge align-middle">{{ _("Required") }}</span>{% endif %}</p>
         <div class="options" role="group" aria-label="{{ q.text }}">
             {% for key, label in q.options %}
             <input class="btn-check" type="checkbox" name="{{ q.id }}" id="{{ q.id }}-{{ key }}" value="{{ key }}">
@@ -36,7 +36,7 @@
             {% endfor %}
         </div>
     {% else %}
-        <p class="fs-5 mb-2">{{ q.text }}</p>
+        <p class="fs-5 mb-2">{{ q.text }}{% if q.required %} <span class="badge req-badge align-middle">{{ _("Required") }}</span>{% endif %}</p>
         <div class="{{ 'ladder' if q.type == 'ladder' else 'options' }}" role="radiogroup" aria-label="{{ q.text }}">
             {% for key, label in q.options %}
             <input class="btn-check" type="radio" name="{{ q.id }}" id="{{ q.id }}-{{ key }}" value="{{ key }}">
@@ -58,8 +58,19 @@
 {% block main %}
 <section class="container page-section quiz-container">
     <noscript><div class="alert alert-warning">{{ _("This quiz runs in your browser and needs JavaScript.") }}</div></noscript>
-    <div class="progress mb-4" role="progressbar" aria-label="{{ _('Quiz progress') }}">
-        <div class="progress-bar bg-light" id="progress" style="width: 0%"></div>
+    <div class="alert alert-info d-flex flex-wrap align-items-center justify-content-between gap-2" id="restored" hidden>
+        <span>{{ _("We restored your answers from your last visit. They're saved only in this browser.") }}</span>
+        <button type="button" class="btn btn-sm btn-outline-dark" id="start-over">{{ _("Start over") }}</button>
+    </div>
+    <div class="quiz-header">
+        <div class="d-flex justify-content-between small text-secondary mb-1">
+            <span id="step-label" data-template="{{ _('Step {n} of {total}') }}"></span>
+            <span id="answered-label" data-template="{{ _('{n} questions answered') }}"></span>
+        </div>
+        <div class="progress mb-2" role="progressbar" aria-label="{{ _('Quiz progress') }}">
+            <div class="progress-bar" id="progress" style="width: 0%"></div>
+        </div>
+        <nav class="step-chips mb-4" id="step-chips" aria-label="{{ _('Quiz sections') }}"></nav>
     </div>
     <div class="alert alert-warning" role="alert" id="error-summary" hidden>{{ _("Some answers need attention. They're highlighted below.") }}</div>
     <form action="{{ base }}results.html" id="quiz" novalidate>
@@ -67,6 +78,7 @@
         <fieldset class="step" data-step="{{ loop.index0 }}">
             <legend class="h3">{{ loop.index }}. {{ section.title }}</legend>
             <p class="text-secondary">{{ section.intro }}</p>
+            {% if loop.first %}<p class="small text-info">{{ _("Only questions marked Required are needed. The rest are optional, but each one adds detail to your results.") }}</p>{% endif %}
             {% for q in section.questions %}{{ field(q) }}{% endfor %}
             {% if section.key == "income" %}
             <p class="small text-secondary" id="exact-unavailable" hidden>
@@ -81,9 +93,10 @@
             <p class="small text-secondary">{{ _("The results page address contains your answers, so you can bookmark it or share it. Anyone you share it with will see your answers.") }}</p>
             <button class="btn btn-light btn-lg" type="submit">{{ _("See my results") }}</button>
         </fieldset>
-        <div class="d-flex justify-content-between mt-4">
-            <button type="button" class="btn btn-outline-light" id="back">{{ _("Back") }}</button>
-            <button type="button" class="btn btn-light" id="next">{{ _("Next") }}</button>
+        <div class="quiz-nav d-flex justify-content-between align-items-center gap-2 mt-4">
+            <button type="button" class="btn btn-outline-light" id="back">&larr; {{ _("Back") }}</button>
+            <span class="small text-secondary text-truncate" id="next-label" data-template="{{ _('Next: {section}') }}"></span>
+            <button type="button" class="btn btn-light" id="next">{{ _("Next") }} &rarr;</button>
         </div>
     </form>
 </section>

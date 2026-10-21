@@ -266,3 +266,202 @@ details > summary {
     cursor: pointer;
     color: #8ecae6;
 }
+
+/* Quiz: step header, section chips, option markers, sticky navigation */
+.progress {
+    background: rgba(255, 255, 255, 0.1);
+    height: 0.45rem;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    transition: width 0.3s ease;
+}
+
+.step-chips {
+    display: flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding-bottom: 0.25rem;
+}
+
+.step-chip {
+    flex: 0 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: transparent;
+    color: #8a8f98;
+    border-radius: 1rem;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.step-chip.done {
+    color: #cbd5e1;
+    border-color: rgba(125, 211, 252, 0.45);
+}
+
+.step-chip.current {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0b0b0d;
+    font-weight: 600;
+}
+
+.step-chip:disabled {
+    opacity: 0.45;
+    cursor: default;
+}
+
+.req-badge {
+    background: rgba(251, 191, 36, 0.18);
+    color: #fbbf24;
+    font-size: 0.65em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.options .option {
+    position: relative;
+    padding-left: 2.4rem;
+    transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+.options .option::before {
+    content: "";
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    width: 1rem;
+    height: 1rem;
+    margin-top: -0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+}
+
+.options input[type="checkbox"] + .option::before {
+    border-radius: 0.25rem;
+}
+
+.options .btn-check:checked + .option {
+    background: rgba(125, 211, 252, 0.16);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.options .btn-check:checked + .option::before {
+    border-color: var(--accent);
+    background: var(--accent);
+    box-shadow: inset 0 0 0 3px #0b0b0d;
+}
+
+.options input[type="checkbox"]:checked + .option::before {
+    box-shadow: none;
+    background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%230b0b0d' stroke-width='2.5' d='M3 8.5l3 3 7-7'/%3E%3C/svg%3E") center / 80% no-repeat;
+}
+
+.ladder .btn-check:checked + .rung {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0b0b0d;
+    font-weight: 600;
+}
+
+.btn-check:focus-visible + .btn {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.quiz-nav {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    padding: 0.75rem 0;
+    background: linear-gradient(rgba(11, 11, 13, 0), rgba(11, 11, 13, 0.92) 30%);
+    backdrop-filter: blur(4px);
+}
+
+.quiz-nav #next-label {
+    min-width: 0;
+}
+
+.question {
+    scroll-margin-top: 90px;
+}
+
+/* Results: highlights, section bar, back to top */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 0.75rem;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.6rem;
+    background: rgba(255, 255, 255, 0.03);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.stat-card:hover,
+.stat-card:focus-visible {
+    border-color: var(--accent);
+    background: rgba(125, 211, 252, 0.08);
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.1;
+}
+
+.stat-text {
+    font-size: 0.85rem;
+    color: #aab2bd;
+}
+
+.result-nav .container {
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.result-nav .container::-webkit-scrollbar {
+    display: none;
+}
+
+.result-nav .btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.result-nav .btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0b0b0d;
+}
+
+.to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1020;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
