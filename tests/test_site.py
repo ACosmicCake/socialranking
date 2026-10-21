@@ -32,7 +32,7 @@ def test_all_pages_built(site):
 def test_vietnamese_pages_are_translated(site):
     quiz = (site / "vi" / "quiz.html").read_text(encoding="utf-8")
     assert "Bạn sống ở quốc gia nào?" in quiz
-    assert "Việt Nam" in quiz and "data.vi.js" in quiz
+    assert "Việt Nam" in quiz and "data.quiz.vi.js" in quiz
     assert "Which country do you live in?" not in quiz
 
 
