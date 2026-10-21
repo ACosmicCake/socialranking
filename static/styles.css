@@ -534,3 +534,18 @@ summary:focus-visible,
 main:focus {
     outline: none;
 }
+
+/* Long words, URLs and option badges wrap on narrow screens */
+.prose {
+    overflow-wrap: break-word;
+}
+
+.prose a,
+.prose code {
+    overflow-wrap: anywhere;
+}
+
+.badge {
+    white-space: normal;
+    text-align: left;
+}
