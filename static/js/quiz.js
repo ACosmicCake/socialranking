@@ -18,6 +18,7 @@
     const stepLabel = document.getElementById("step-label");
     const answeredLabel = document.getElementById("answered-label");
     const timeLeft = document.getElementById("time-left");
+    const resultsNow = document.getElementById("results-now");
     const nextLabel = document.getElementById("next-label");
     const titles = steps.map(s => s.querySelector("legend").textContent.replace(/^\d+\.\s*/, ""));
     const fill = (el, values) => el.dataset.template.replace(/\{(\w+)\}/g, (_, k) => values[k]);
@@ -68,6 +69,8 @@
             n + Array.from(s.querySelectorAll(".question")).filter(q => !q.hidden).length, 0);
         const minutes = Math.round(ahead * 12 / 60);
         timeLeft.textContent = " · " + (minutes >= 1 ? fill(timeLeft, {n: minutes}) : timeLeft.dataset.done);
+        // Once everything required is answered, results are one click away.
+        resultsNow.hidden = current === steps.length - 1 || Object.keys(validationErrors()).length > 0;
     }
 
     function answers() {

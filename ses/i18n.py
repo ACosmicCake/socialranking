@@ -16,6 +16,8 @@ UI = {
     "We restored your answers from your last visit. They're saved only in this browser.":
         "Chúng tôi đã khôi phục câu trả lời từ lần trước. Chúng chỉ được lưu trong trình duyệt này.",
     "Start over": "Làm lại từ đầu",
+    "See results now": "Xem kết quả ngay",
+    "You've answered everything required. You can add the rest later.": "Bạn đã trả lời mọi câu bắt buộc. Bạn có thể bổ sung phần còn lại sau.",
     "Skip to content": "Bỏ qua đến nội dung",
     "Compare your income, education, work, living standards and financial security with the whole world and your own country, using World Bank, UN, ILO and IMF data.":
         "So sánh thu nhập, học vấn, công việc, mức sống và an ninh tài chính của bạn với cả thế giới và với đất nước bạn, bằng số liệu của Ngân hàng Thế giới, Liên Hợp Quốc, ILO và IMF.",

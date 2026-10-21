@@ -558,3 +558,26 @@ main:focus {
     color: var(--accent);
     background: transparent;
 }
+
+.quiz-nav .btn {
+    white-space: nowrap;
+}
+
+@media (max-width: 575.98px) {
+    .quiz-nav {
+        flex-wrap: wrap;
+    }
+
+    .quiz-nav #results-now {
+        order: -1;
+        flex: 1 0 100%;
+    }
+
+    .quiz-nav #next-label {
+        display: none;
+    }
+
+    .quiz-nav #next {
+        margin-left: auto;
+    }
+}

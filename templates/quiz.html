@@ -101,6 +101,8 @@
         <div class="quiz-nav d-flex justify-content-between align-items-center gap-2 mt-4">
             <button type="button" class="btn btn-outline-light" id="back">&larr; {{ _("Back") }}</button>
             <span class="small text-secondary text-truncate" id="next-label" data-template="{{ _('Next: {section}') }}"></span>
+            <button type="submit" class="btn btn-outline-info ms-auto" id="results-now" hidden
+                    title="{{ _("You've answered everything required. You can add the rest later.") }}">{{ _("See results now") }}</button>
             <button type="button" class="btn btn-light" id="next">{{ _("Next") }} &rarr;</button>
         </div>
     </form>
