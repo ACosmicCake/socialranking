@@ -29,7 +29,7 @@ from ses.distributions import global_cdf, global_quantile  # noqa: E402
 
 PAGES = ["index", "quiz", "results", "methodology", "questionnaire", "sources", "faq", "about", "creator", "404"]
 # Pages also published in Vietnamese; the rest link to the English version.
-VI_PAGES = ["index", "quiz", "results", "questionnaire", "faq", "about", "creator", "404"]
+VI_PAGES = ["index", "quiz", "results", "methodology", "questionnaire", "faq", "about", "creator", "404"]
 
 WATER_STATUS_VI = {"safely_managed": "Được quản lý an toàn (ước tính)", "basic": "Cơ bản", "limited": "Hạn chế",
                    "unimproved": "Chưa cải thiện", "surface": "Nước mặt"}

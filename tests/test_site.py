@@ -60,7 +60,8 @@ def test_base_path_build(tmp_path):
     vi = (out / "vi" / "404.html").read_text(encoding="utf-8")
     assert 'href="/socialranking/static/styles.css"' in vi
     assert 'href="/socialranking/vi/quiz.html"' in vi
-    assert 'href="/socialranking/methodology.html"' in vi  # English-only page
+    assert 'href="/socialranking/vi/methodology.html"' in vi
+    assert 'href="/socialranking/sources.html"' in vi  # English-only page
 
 
 def test_data_bundle(site):
