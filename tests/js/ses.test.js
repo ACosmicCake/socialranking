@@ -267,3 +267,31 @@ test("Vietnamese bundle gives the same numbers with translated labels", () => {
     assert.equal(vi.country.name, "Việt Nam");
     assert.throws(() => VI.parseAnswers({...FULL, education: ""}), e => /trình độ/.test(e.errors.education));
 });
+
+test("comparisons by sex", () => {
+    const r = run({...FULL, sex: "F", age: "25-34"});
+    assert.equal(r.education.sex, "F");
+    assert.ok(r.education.world_sex_pct > 0 && r.education.national_sex_pct > 0);
+    assert.equal(r.education.country_sex_shares.length, 9);
+    assert.ok(r.work.sex_world && r.work.sex_country);
+    assert.ok(r.work.sex_participation.country > 0);
+    assert.ok(r.location.glance.some(g => g.code === "SP.DYN.LE00.FE.IN"));
+    assert.equal(run(FULL).education.sex, undefined);
+});
+
+test("account ownership among people like you", () => {
+    const groups = run({...FULL, sex: "M", age: "15-24"}).security.account_groups;
+    assert.ok(groups.length >= 3);
+    assert.ok(groups.every(g => g.world > 0 && g.world <= 100));
+});
+
+test("national history and survey basis", () => {
+    const inc = run(FULL).income;
+    assert.ok(inc.national_history.years[0] <= 1990);
+    assert.equal(inc.national_history.years.length, inc.national_history.median.length);
+    assert.equal(inc.basis_mismatch, false);  // no basis given
+    assert.equal(run({...FULL, income_basis: "income"}).income.basis_mismatch, true);  // Vietnam surveys consumption
+    assert.equal(run({...FULL, income_basis: "consumption"}).income.basis_mismatch, false);
+    const rich = run({...FULL, income_amount: "1000000000"}).income;
+    assert.equal(rich.national_history.reached, null);
+});

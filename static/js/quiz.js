@@ -48,6 +48,15 @@
             ? `${opt.dataset.currency} (${opt.dataset.currencyName})` : localCurrency;
         const exact = form.querySelector('input[name="income_mode"][value="exact"]');
         const band = form.querySelector('input[name="income_mode"][value="band"]');
+        const hint = document.getElementById("welfare-hint");
+        if (hint) {
+            const welfare = opt.dataset.welfare;
+            hint.hidden = !welfare;
+            hint.textContent = welfare === "consumption" ? hint.dataset.consumption : hint.dataset.income;
+            // Suggest the basis the country's survey uses, unless the user already chose.
+            const basis = form.querySelector(`input[name="income_basis"][value="${welfare}"]`);
+            if (basis && !form.querySelector('input[name="income_basis"]:checked')) basis.checked = true;
+        }
         const allowed = opt.dataset.exact === "yes";
         exact.disabled = !allowed;
         unavailable.hidden = allowed;

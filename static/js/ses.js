@@ -48,6 +48,15 @@
                 "SL.EMP.VULN.ZS": "Workers in vulnerable employment",
                 "SH.XPD.OOPC.CH.ZS": "Health spending paid out of pocket",
                 "EN.POP.SLUM.UR.ZS": "City dwellers living in slums",
+                "SI.POV.GINI": "Inequality (Gini index, 0-100)",
+                "SP.DYN.LE00.FE.IN": "Life expectancy at birth, women (years)",
+                "SP.DYN.LE00.MA.IN": "Life expectancy at birth, men (years)",
+            },
+            account_groups: {
+                sex: {F: "Women", M: "Men"},
+                income: {poor: "Poorest 40% of households", rich: "Richest 60% of households"},
+                age: {young: "Young adults (15-24)", older: "Adults 25 and over"},
+                education: {low: "Primary education or less", high: "Secondary education or more"},
             },
             no_cooking: "No cooking at home",
             errors: {
@@ -381,6 +390,19 @@
             result.multiple_of_world_median = x / result.world_median;
             if (dist) result.multiple_of_country_median = x / dist.median;
             result.chart = incomeChart(country, x);
+            if (answers.income_mode === "exact") {
+                result.basis = answers.income_basis || null;
+                result.basis_mismatch = Boolean(dist && result.basis && result.basis !== dist.welfare_type);
+            }
+            if (dist && dist.history) {
+                const h = dist.history;
+                result.national_history = {
+                    years: h.median.map((_, i) => h.start + i), median: h.median,
+                    below_3: h.below_3.map(v => pct(v)),
+                    // The first year the country's median reached your income, if it has.
+                    reached: (() => { const i = h.median.findIndex(m => m >= x); return i < 0 ? null : h.start + i; })(),
+                };
+            }
             result.everywhere = incomeEverywhere(x);
             result.history = incomeHistory(x);
             const region = result.everywhere.regions.find(r => r.code === country.region);
@@ -414,8 +436,18 @@
                 result.country_year = ce.year;
                 result.country_mean_years = ce.mean_years;
             }
-            // People of your age and sex (Barro-Lee broad levels).
+            // Women or men in your country and the world (WDI attainment by sex).
             const sex = answers.sex === "F" || answers.sex === "M" ? answers.sex : "MF";
+            if (sex !== "MF") {
+                const ws = edu.world_by_sex && edu.world_by_sex[sex];
+                result.sex = sex;
+                if (ws) result.world_sex_pct = pct(midrank(ws, idx));
+                if (ce && ce.by_sex && ce.by_sex[sex]) {
+                    result.national_sex_pct = pct(midrank(ce.by_sex[sex], idx));
+                    result.country_sex_shares = ce.by_sex[sex].map(pct);
+                }
+            }
+            // People of your age and sex (Barro-Lee broad levels).
             const group = answers.age && edu.groups[answers.age];
             if (group) {
                 const broad = edu.broad_from_level[idx];
@@ -441,17 +473,21 @@
         // ------------------------------------------------------------------
 
         // Employment status shares (% of employment) from ILO modelled estimates.
-        function statusShares(wdi) {
-            const work = value(wdi, "SL.EMP.WORK.ZS"), emp = value(wdi, "SL.EMP.MPYR.ZS");
-            const fam = value(wdi, "SL.FAM.WORK.ZS"), vuln = value(wdi, "SL.EMP.VULN.ZS");
+        // sfx: "" for everyone, ".FE"/".MA" for women/men.
+        const sexCode = (code, sfx) => sfx ? code.replace(/\.ZS$/, `${sfx}.ZS`) : code;
+
+        function statusShares(wdi, sfx = "") {
+            const v = code => value(wdi, sexCode(code, sfx));
+            const work = v("SL.EMP.WORK.ZS"), emp = v("SL.EMP.MPYR.ZS");
+            const fam = v("SL.FAM.WORK.ZS"), vuln = v("SL.EMP.VULN.ZS");
             if ([work, emp, fam, vuln].some(v => v === null)) return null;
             return {employee: work, employer: emp, own_account: Math.max(vuln - fam, 0), family_worker: fam,
                     vulnerable: vuln, year: year(wdi, "SL.EMP.VULN.ZS")};
         }
 
-        function sectorShares(wdi) {
-            const s = {agriculture: value(wdi, "SL.AGR.EMPL.ZS"), industry: value(wdi, "SL.IND.EMPL.ZS"),
-                       services: value(wdi, "SL.SRV.EMPL.ZS")};
+        function sectorShares(wdi, sfx = "") {
+            const v = code => value(wdi, sexCode(code, sfx));
+            const s = {agriculture: v("SL.AGR.EMPL.ZS"), industry: v("SL.IND.EMPL.ZS"), services: v("SL.SRV.EMPL.ZS")};
             return Object.values(s).some(v => v === null) ? null : s;
         }
 
@@ -467,6 +503,18 @@
                 unemployment: {world: value(world, "SL.UEM.TOTL.ZS"), country: value(country.wdi, "SL.UEM.TOTL.ZS")},
                 participation: {world: value(world, "SL.TLF.CACT.ZS"), country: value(country.wdi, "SL.TLF.CACT.ZS")},
             };
+            const sfx = answers.sex === "F" ? ".FE" : answers.sex === "M" ? ".MA" : "";
+            if (sfx) {
+                result.sex = answers.sex;
+                result.sex_world = statusShares(world, sfx);
+                result.sex_country = statusShares(country.wdi, sfx);
+                result.sex_world_sectors = sectorShares(world, sfx);
+                result.sex_country_sectors = sectorShares(country.wdi, sfx);
+                result.sex_unemployment = {world: value(world, sexCode("SL.UEM.TOTL.ZS", sfx)),
+                                           country: value(country.wdi, sexCode("SL.UEM.TOTL.ZS", sfx))};
+                result.sex_participation = {world: value(world, sexCode("SL.TLF.CACT.ZS", sfx)),
+                                            country: value(country.wdi, sexCode("SL.TLF.CACT.ZS", sfx))};
+            }
             if (answers.work_sector) {
                 result.sector = answers.work_sector;
                 result.sector_label = Q.sector_options.find(o => o[0] === answers.work_sector)[1];
@@ -640,7 +688,26 @@
             return midrank(order, idx);
         }
 
-        function scoreSecurity(answers, country) {
+        // Account ownership among people like you (Global Findex breakdowns).
+        function accountGroups(answers, country, nationalPct) {
+            const G_ = L.account_groups;
+            const rows = [];
+            const add = (label, code) => {
+                const w = value(world, code), c = value(country.wdi, code);
+                if (w !== null || c !== null) rows.push({label, world: w, country: c});
+            };
+            if (answers.sex === "F" || answers.sex === "M") add(G_.sex[answers.sex], `FX.OWN.TOTL.${answers.sex === "F" ? "FE" : "MA"}.ZS`);
+            if (nationalPct !== undefined) add(nationalPct < 40 ? G_.income.poor : G_.income.rich,
+                                               nationalPct < 40 ? "FX.OWN.TOTL.40.ZS" : "FX.OWN.TOTL.60.ZS");
+            if (answers.age) add(answers.age === "15-24" ? G_.age.young : G_.age.older,
+                                 answers.age === "15-24" ? "FX.OWN.TOTL.YG.ZS" : "FX.OWN.TOTL.OL.ZS");
+            const level = Q.education_options.map(o => o[0]).indexOf(answers.education);
+            if (level >= 0) add(level <= 1 ? G_.education.low : G_.education.high,
+                                level <= 1 ? "FX.OWN.TOTL.PL.ZS" : "FX.OWN.TOTL.SO.ZS");
+            return rows;
+        }
+
+        function scoreSecurity(answers, country, incomeNationalPct) {
             const result = {};
             const ranks = [];
             const {food_money: food, shelter_money: shelter, count_on: countOn} = answers;
@@ -679,6 +746,7 @@
             }
             result.account_world = value(world, "FX.OWN.TOTL.ZS");
             result.account_country = value(country.wdi, "FX.OWN.TOTL.ZS");
+            result.account_groups = accountGroups(answers, country, incomeNationalPct);
             if (ranks.length) result.global_pct = pct(sum(ranks) / ranks.length);
             return result;
         }
@@ -706,13 +774,18 @@
             ["NY.GDP.PCAP.PP.KD", "money"], ["SP.DYN.LE00.IN", "number"], ["SH.DYN.MORT", "number"],
             ["SP.URB.TOTL.IN.ZS", "pct"], ["SE.ADT.LITR.ZS", "pct"], ["SN.ITK.DEFC.ZS", "pct"],
             ["SL.UEM.TOTL.ZS", "pct"], ["SL.EMP.VULN.ZS", "pct"], ["SH.XPD.OOPC.CH.ZS", "pct"],
-            ["EN.POP.SLUM.UR.ZS", "pct"],
+            ["EN.POP.SLUM.UR.ZS", "pct"], ["SI.POV.GINI", "number"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);
 
-        function scoreLocation(country) {
+        function scoreLocation(country, answers) {
             const result = {glance: []};
             const region = regionAggregate(country), group = incomeAggregate(country);
-            for (const [code, label, fmt] of GLANCE) {
+            const glance = GLANCE.slice();
+            if (answers.sex === "F" || answers.sex === "M") {
+                const code = answers.sex === "F" ? "SP.DYN.LE00.FE.IN" : "SP.DYN.LE00.MA.IN";
+                glance.splice(1, 1, [code, L.glance[code], "number"]);
+            }
+            for (const [code, label, fmt] of glance) {
                 const v = value(country.wdi, code);
                 if (v === null) continue;
                 result.glance.push({code, label, fmt, value: v, year: year(country.wdi, code),
@@ -756,11 +829,12 @@
                 living: scoreLiving(answers, country),
                 mpi: scoreMpi(answers),
                 crowding: scoreCrowding(answers),
-                security: scoreSecurity(answers, country),
+                security: null,
                 wealth: scoreWealth(answers),
-                location: scoreLocation(country),
+                location: scoreLocation(country, answers),
                 world_population: G.world_population,
             };
+            result.security = scoreSecurity(answers, country, result.income.national_pct);
             if (country.income) {
                 const {survey_year, welfare_type, coverage, estimation_type, reference_year} = country.income;
                 result.country.survey = {survey_year, welfare_type, coverage, estimation_type, reference_year};

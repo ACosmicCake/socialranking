@@ -208,12 +208,26 @@ SECTIONS = [
                          "income or consumption.",
             },
             {
+                "id": "income_basis",
+                "type": "radio",
+                "text": "Will you give your household's income or its spending?",
+                "help": "Many countries measure living standards by what households spend (consumption), not "
+                        "what they earn. If you know both, use the one your country's survey uses - we show "
+                        "which once you pick your country.",
+                "options": [("income", "Income after taxes"),
+                            ("consumption", "Spending: everything the household spends or consumes, including food it grows")],
+                "show_if": ("income_mode", "exact"),
+                "source": "pip",
+                "basis": "PIP compares income in income-survey countries and consumption in consumption-survey "
+                         "countries; the two aren't the same for better-off households.",
+            },
+            {
                 "id": "income_amount",
                 "type": "number",
-                "text": "What is your household's total income after taxes?",
-                "help": "Add up everyone in your household who shares money: wages, business or farm "
-                        "profits, pensions, benefits, remittances and rent received. "
-                        "Use your local currency.",
+                "text": "What is your household's total income after taxes (or total spending)?",
+                "help": "Income: add up everyone in your household who shares money - wages, business or farm "
+                        "profits, pensions, benefits, remittances and rent received. Spending: everything the "
+                        "household spends, plus the value of food it grows. Use your local currency.",
                 "show_if": ("income_mode", "exact"),
                 "source": "pip",
                 "basis": "PIP surveys measure disposable household income (or consumption) from all "
