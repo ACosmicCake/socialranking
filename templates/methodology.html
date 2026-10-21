@@ -19,7 +19,7 @@
     <h2 id="principles">Principles</h2>
     <ul>
         <li><strong>Objective questions only, from real surveys.</strong> Each question is the item (or a close adaptation)
-            that produced the statistic we compare you with. The <a href="/questionnaire">questionnaire page</a> lists the
+            that produced the statistic we compare you with. The <a href="{{ base }}questionnaire.html">questionnaire page</a> lists the
             source for every item.</li>
         <li><strong>One comparison per dimension.</strong> Socioeconomic status is usually measured through income,
             education and occupation {{ cite("apa_ses") }}. We add living standards, financial security and wealth, which
@@ -65,19 +65,18 @@
     </table></div>
 
     <h3 class="h5">Income at selected percentiles</h3>
-    <form class="row g-2 align-items-center mb-2" method="get" action="/methodology#income">
+    <div class="row g-2 align-items-center mb-2">
         <div class="col-auto"><label class="col-form-label small" for="mcountry">Compare with a country:</label></div>
         <div class="col-auto">
-            <select class="form-select form-select-sm" name="country" id="mcountry" onchange="this.form.submit()">
+            <select class="form-select form-select-sm" id="mcountry">
                 <option value="">(world only)</option>
-                {% for c in countries if c.income %}<option value="{{ c.iso3 }}" {% if selected and selected.iso3 == c.iso3 %}selected{% endif %}>{{ c.name }}</option>{% endfor %}
+                {% for c in countries if c.income %}<option value="{{ c.iso3 }}">{{ c.name }}</option>{% endfor %}
             </select>
         </div>
-        <noscript><div class="col-auto"><button class="btn btn-sm btn-outline-light">Show</button></div></noscript>
-    </form>
-    <div class="table-responsive"><table class="table table-dark table-sm w-auto">
-        <thead><tr><th>Percentile</th><th>World ({{ inc.reference_year }})</th>{% if selected %}<th>{{ selected.name }} ({{ selected.income.survey_year }}, {{ selected.income.welfare_type }})</th>{% endif %}</tr></thead>
-        <tbody>{% for q in quantiles %}<tr><td>{{ q.p }}th</td><td>{{ q.world | money }}</td>{% if selected %}<td>{{ q.country | money }}</td>{% endif %}</tr>{% endfor %}</tbody>
+    </div>
+    <div class="table-responsive"><table class="table table-dark table-sm w-auto" id="quantiles">
+        <thead><tr><th>Percentile</th><th>World ({{ inc.reference_year }})</th><th class="country-col" hidden></th></tr></thead>
+        <tbody>{% for q in quantiles %}<tr data-p="{{ q.p }}"><td>{{ q.p }}th</td><td>{{ q.world | money }}</td><td class="country-col" hidden></td></tr>{% endfor %}</tbody>
     </table></div>
     <p>The world median is {{ inc.world_median | money }} a day and the mean is {{ inc.world_mean | money }}.</p>
 
@@ -199,7 +198,31 @@
 
     <h2 id="reproduce">Reproducing the data</h2>
     <p>All country-level data are built by <code>scripts/build_data.py</code> from pinned commits of public mirrors
-        (see <a href="/sources">sources</a>). Running it again gives identical files. The cited global figures live in
-        <code>ses/facts.py</code>.</p>
+        (see <a href="{{ base }}sources.html">sources</a>). Running it again gives identical files. The cited global figures live in
+        <code>ses/facts.py</code>. <code>scripts/build_site.py</code> renders this static site, and the scoring runs in your browser
+        (<code>static/js/ses.js</code>), so your answers never leave your device.</p>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ base }}static/js/data.js"></script>
+<script src="{{ base }}static/js/ses.js"></script>
+<script>
+// Fills the country column of the percentile table.
+(function () {
+    const select = document.getElementById("mcountry");
+    const table = document.getElementById("quantiles");
+    select.addEventListener("change", () => {
+        const c = SES.country(select.value);
+        table.querySelectorAll(".country-col").forEach(el => el.hidden = !c);
+        if (!c) return;
+        const d = c.income;
+        table.querySelector("th.country-col").textContent = `${c.name} (${d.survey_year}, ${d.welfare_type})`;
+        table.querySelectorAll("tbody tr").forEach(row => {
+            const v = SES.nationalQuantile(d, Number(row.dataset.p) / 100);
+            row.querySelector(".country-col").textContent = "$" + v.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        });
+    });
+})();
+</script>
 {% endblock %}

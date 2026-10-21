@@ -27,7 +27,7 @@ main {
 
 .hero {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75)), url("/static/world.gif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75)), url("world.gif");
     background-size: cover;
     background-position: center;
     padding-top: 4rem;
@@ -42,10 +42,6 @@ main {
 }
 
 /* Quiz */
-html:not(.js) .js-only {
-    display: none !important;
-}
-
 .quiz-container {
     max-width: 48rem;
 }
@@ -110,8 +106,9 @@ html:not(.js) .js-only {
     background: linear-gradient(90deg, #38bdf8, #a78bfa);
 }
 
-#incomeChart {
-    max-height: 320px;
+.chart-box {
+    position: relative;
+    height: 320px;
 }
 
 .ladder-compare .rung-row {
@@ -176,20 +173,3 @@ html:not(.js) .js-only {
     white-space: pre-wrap;
 }
 
-/* Stats */
-.deciles {
-    display: flex;
-    align-items: flex-end;
-    gap: 0.4rem;
-    min-height: 320px;
-}
-
-.decile {
-    flex: 1;
-    text-align: center;
-}
-
-.decile-bar {
-    background: var(--accent);
-    border-radius: 0.2rem 0.2rem 0 0;
-}

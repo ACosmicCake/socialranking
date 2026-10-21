@@ -5,3 +5,4 @@ data/raw/
 instance/
 flask_session/
 .env
+_site/

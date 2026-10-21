@@ -1,8 +1,9 @@
-// Multi-step quiz. Without JavaScript every section is shown on one page.
+// Multi-step quiz. Validates with the same rules as the scorer (SES.parseAnswers),
+// then opens the results page with the answers in the URL fragment, which
+// browsers never send to the server.
 (function () {
     const form = document.getElementById("quiz");
     if (!form) return;
-    document.documentElement.classList.add("js");
 
     const steps = Array.from(form.querySelectorAll(".step"));
     const back = document.getElementById("back");
@@ -11,19 +12,28 @@
     const country = document.getElementById("country");
     const currencyLabel = document.getElementById("currency-label");
     const unavailable = document.getElementById("exact-unavailable");
+    const summary = document.getElementById("error-summary");
     let current = 0;
 
+    function answers() {
+        const out = {};
+        for (const [k, v] of new FormData(form).entries()) out[k] = v;
+        // Drop answers to questions hidden by a show_if condition.
+        form.querySelectorAll("[data-show-if]").forEach(el => {
+            if (el.hidden) el.querySelectorAll("[name]").forEach(i => delete out[i.name]);
+        });
+        return out;
+    }
+
     function value(name) {
-        const checked = form.querySelector(`input[name="${name}"]:checked`);
-        if (checked) return checked.value;
-        const field = form.elements[name];
-        return field && field.value !== undefined ? field.value : "";
+        return answers()[name] || "";
     }
 
     function updateConditional() {
         form.querySelectorAll("[data-show-if]").forEach(el => {
             const [name, expected] = el.dataset.showIf.split("=");
-            el.hidden = value(name) !== expected;
+            const checked = form.querySelector(`input[name="${name}"]:checked`);
+            el.hidden = !checked || checked.value !== expected;
         });
     }
 
@@ -41,26 +51,27 @@
         updateConditional();
     }
 
-    // Only the essentials are required; everything else can be skipped.
-    function stepErrors(step) {
-        const missing = [];
-        const need = (name, ok) => { if (!ok) missing.push(name); };
-        if (step.querySelector("#country")) need("country", value("country"));
-        if (step.querySelector('[name="income_mode"]')) {
-            const mode = value("income_mode");
-            need("income_mode", mode);
-            if (mode === "exact") {
-                const amount = Number(value("income_amount").replace(/[,\s_]/g, ""));
-                need("income_amount", value("income_amount").trim() !== "" && amount >= 0);
-                need("income_period", value("income_period"));
-                const size = Number(value("household_size"));
-                need("household_size", Number.isInteger(size) && size >= 1 && size <= 50);
-            } else if (mode === "band") {
-                need("income_band", value("income_band"));
-            }
+    function validationErrors() {
+        try {
+            SES.parseAnswers(answers());
+            return {};
+        } catch (e) {
+            if (e instanceof SES.ValidationError) return e.errors;
+            throw e;
         }
-        if (step.querySelector('[name="education"]')) need("education", value("education"));
-        return missing;
+    }
+
+    function showErrors(errors, onlyStep) {
+        form.querySelectorAll("[data-error-for]").forEach(el => {
+            const step = el.closest(".step");
+            const msg = (!onlyStep || step === onlyStep) ? errors[el.dataset.errorFor] : undefined;
+            el.textContent = msg || "";
+            el.hidden = !msg;
+            el.closest(".question").classList.toggle("needs-answer", Boolean(msg));
+        });
+        const first = form.querySelector(".needs-answer");
+        if (first) first.scrollIntoView({behavior: "smooth", block: "center"});
+        return Boolean(first);
     }
 
     function show(i) {
@@ -73,18 +84,8 @@
     }
 
     next.addEventListener("click", () => {
-        const missing = stepErrors(steps[current]);
-        form.querySelectorAll(".needs-answer").forEach(el => el.classList.remove("needs-answer"));
-        if (missing.length) {
-            missing.forEach(name => {
-                const q = document.getElementById(`q-${name}`);
-                if (q) q.classList.add("needs-answer");
-            });
-            const first = document.getElementById(`q-${missing[0]}`);
-            if (first) first.scrollIntoView({behavior: "smooth", block: "center"});
-            return;
-        }
-        show(current + 1);
+        summary.hidden = true;
+        if (!showErrors(validationErrors(), steps[current])) show(current + 1);
     });
     back.addEventListener("click", () => show(current - 1));
     form.addEventListener("change", updateConditional);
@@ -95,10 +96,21 @@
             next.click();
         }
     });
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        const errors = validationErrors();
+        if (Object.keys(errors).length) {
+            const firstStep = steps.find(s => Object.keys(errors).some(id => s.querySelector(`[data-error-for="${id}"]`)));
+            show(steps.indexOf(firstStep));
+            summary.hidden = false;
+            showErrors(errors, firstStep);
+            return;
+        }
+        const params = new URLSearchParams(answers());
+        window.location.href = `${form.getAttribute("action")}#${params.toString()}`;
+    });
 
     updateCountry();
     updateConditional();
-    // After a server-side validation error, open the first step with a problem.
-    const firstError = form.querySelector(".is-invalid, .invalid-feedback");
-    show(firstError ? steps.indexOf(firstError.closest(".step")) : 0);
+    show(0);
 })();

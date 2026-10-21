@@ -2,8 +2,9 @@
 
 **Where do you stand among the 8.2 billion people on Earth?**
 
-A Flask web app that asks about 30 questions, each taken from an established international survey, and compares your answers with
-real global data on income, education, living standards, financial security and wealth.
+A static website, hosted on GitHub Pages, that asks about 30 questions, each taken from an established international survey, and
+compares your answers with real global data on income, education, living standards, financial security and wealth. All scoring
+runs in the browser, so answers never leave the visitor's device.
 
 Originally a CS50 final project (2021). Rebuilt in 2026 so that every comparison rests on a published, reproducible dataset or
 a cited report.
@@ -90,73 +91,76 @@ pip install -r requirements-dev.txt
 python scripts/build_data.py      # downloads to data/raw/ (git-ignored), writes data/*.json
 ```
 
-## Running
+## Publishing on GitHub Pages
+
+The workflow in `.github/workflows/pages.yml` tests the code, builds the site and deploys it on every push to `main`.
+
+One-time setup:
+
+1. On GitHub, open **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+3. Push to `main`, or run the workflow by hand from the **Actions** tab.
+
+The site is then published at `https://<user>.github.io/socialranking/`.
+
+## Running locally
 
 ```bash
-pip install -r requirements.txt
-flask --app application run        # http://127.0.0.1:5000
-# or, as on Heroku:
-gunicorn application:app
+pip install -r requirements.txt          # only Jinja2 is needed to build the site
+python scripts/build_site.py             # writes _site/ with relative links
+python -m http.server -d _site           # http://localhost:8000
 ```
 
-| Environment variable | Purpose |
-|---|---|
-| `SECRET_KEY` | Flask secret key (random per process if unset) |
-| `RESPONSES_DB` | Path of the SQLite file for opt-in anonymous responses (default `instance/responses.db`) |
-| `STATS_TOKEN` | Enables `GET /stats.csv?token=...`, an export of the anonymous responses |
+`python scripts/build_site.py --base-path /socialranking` builds with absolute links, as on GitHub Pages; the workflow does this
+for you. Any static host (Netlify, Cloudflare Pages, S3) can serve `_site/`.
 
-Heroku's filesystem is ephemeral, so for long-term response collection point `RESPONSES_DB` at persistent storage.
+### Privacy
 
-### Collecting questionnaire data
+The results page reads the answers from the URL fragment (`results.html#country=...`). Browsers never send the fragment to the
+server, so nothing is collected. The same link reopens or shares a result, and anyone who opens it can see the answers.
 
-Respondents can opt in at the end of the quiz. Only coarse, derived values are stored:
+### Using the scorer in code
 
-- country;
-- income as a power-of-two band in PPP dollars;
-- education level, number of services lacking, Gallup group and FIES raw score;
-- whether they have an account and whether they saved;
-- wealth band, ladder answers and percentiles.
+`static/js/ses.js` runs in the browser and in Node.js:
 
-No name, no exact income, no IP address, and dates are kept to the day only. `/stats` shows aggregates, and only for groups of
-5 or more.
-
-### API
-
-```bash
-curl -X POST localhost:5000/api/score -H 'Content-Type: application/json' \
-     -d '{"country":"VNM","income_mode":"band","income_band":"b4","education":"secondary"}'
+```js
+const SES = require("./static/js/ses.js")(data);   // data = the SES_DATA object from _site/static/js/data.js
+SES.score(SES.parseAnswers({country: "VNM", income_mode: "band", income_band: "b4", education: "secondary"}));
 ```
 
-Field names and options are listed on `/questionnaire` and in `ses/questionnaire.py`.
+Field names and options are listed on the questionnaire page and in `ses/questionnaire.py`.
 
 ## Project layout
 
 ```
-application.py          Flask routes
-ses/questionnaire.py    Every question, its options and its source instrument
-ses/scoring.py          Validation and scoring (pure functions)
-ses/distributions.py    Income distribution maths (CDFs and quantiles)
-ses/facts.py            Cited global statistics
-ses/data.py             Loads data/*.json
-ses/storage.py          Opt-in anonymous response storage (SQLite)
-scripts/build_data.py   Reproducible data pipeline
-data/                   Generated datasets (countries.json, global.json)
-templates/, static/     UI (Bootstrap 5, Chart.js)
-tests/                  pytest suite
+ses/questionnaire.py      Every question, its options and its source instrument
+ses/facts.py              Cited global statistics
+ses/data.py               Loads data/*.json
+ses/distributions.py      Income distribution maths (reference implementation, used at build time)
+static/js/ses.js          In-browser validation and scoring
+static/js/quiz.js         Multi-step quiz form
+static/js/results.js      Results page and chart
+scripts/build_data.py     Reproducible data pipeline -> data/*.json
+scripts/build_site.py     Renders templates/ into the static site _site/ (plus static/js/data.js)
+templates/, static/       Pages (Jinja2, Bootstrap 5, Chart.js)
+tests/                    pytest suite; tests/js/ holds the Node tests for the scorer
+.github/workflows/        Build, test and deploy to GitHub Pages
 ```
 
 ## Tests
 
 ```bash
-pip install -r requirements-dev.txt
-python -m pytest
+pip install -r requirements.txt pytest
+python -m pytest                          # also runs the Node tests if Node.js is installed
+node --test tests/js/ses.test.js          # Node tests on their own (build the site first)
 ```
 
 The tests cover:
 
 - **Data:** integrity, calibration against official headcounts, and that every distribution is monotone and invertible.
-- **Scoring:** the conversions and all dimensions, including edge cases and validation.
-- **Routes:** every page, the API, the opt-in storage and the CSV export guard.
+- **Site build:** every page renders, every internal link resolves, and absolute links work under a base path.
+- **Scoring (JavaScript):** the conversions and all dimensions, edge cases, validation, and every country.
+- **Parity:** the JavaScript distribution maths matches the Python implementation to 1e-12.
 
 ## Limitations
 

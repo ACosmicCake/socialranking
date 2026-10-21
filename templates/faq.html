@@ -7,7 +7,7 @@
 
     <h2 class="h5 mt-4">Can I trust this quiz?</h2>
     <p>Treat it as a well-sourced estimate, not a measurement. Every comparison uses published data from the World Bank, the UN
-        system, Gallup or UBS, and the <a href="/methodology">methodology</a> sets out each step and its limits. The weakest
+        system, Gallup or UBS, and the <a href="{{ base }}methodology.html">methodology</a> sets out each step and its limits. The weakest
         links are self-reported answers, data years that range from 2015 (education) to 2025, and the fact that household
         surveys under-count the very rich.</p>
 
@@ -35,13 +35,13 @@
         inflation has been above 100% a year, the conversion isn't reliable, so we ask for a range instead.</p>
 
     <h2 class="h5 mt-4">Do you store my answers?</h2>
-    <p>Only if you tick the box at the end. Even then we store coarse, derived values only (for example your income rounded to a
-        power-of-two band in international dollars, never the amount you typed), with no name, IP address or exact time.
-        Aggregates appear on the <a href="/stats">responses page</a> for groups of at least 5 people.</p>
+    <p>No. The quiz runs entirely in your browser: all the data are downloaded with the page and the calculation happens on
+        your device. Your answers go into the results page's address (after the <code>#</code>), which browsers never send to
+        the server. If you share that link, though, whoever opens it will see your answers.</p>
 
-    <h2 class="h5 mt-4">Is there an API?</h2>
-    <p>Yes. <code>POST /api/score</code> with a JSON object using the same field names as the form (see the
-        <a href="/questionnaire">questionnaire</a>), for example
+    <h2 class="h5 mt-4">Can I use the scorer in my own code?</h2>
+    <p><code>static/js/ses.js</code> works in the browser and in Node.js. Call <code>SES.score(SES.parseAnswers(answers))</code> with
+        an object whose field names match the <a href="{{ base }}questionnaire.html">questionnaire</a>, for example
         <code>{"country": "VNM", "income_mode": "band", "income_band": "b4", "education": "secondary"}</code>.</p>
 </section>
 {% endblock %}
