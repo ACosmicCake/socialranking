@@ -299,6 +299,11 @@
         const people = share => share * G.world_population;
         const sum = xs => xs.reduce((a, b) => a + b, 0);
         const midrank = (shares, index) => sum(shares.slice(0, index)) + shares[index] / 2;
+        // The edges of a category: everyone below it, and everyone up to its top. The mid-rank is
+        // the middle of this band, and the band is how far the true rank could be from it.
+        const band = (shares, index) => [sum(shares.slice(0, index)), sum(shares.slice(0, index + 1))];
+        const meanBand = bands => [sum(bands.map(b => b[0])) / bands.length, sum(bands.map(b => b[1])) / bands.length];
+        const pctBand = b => [pct(b[0]), pct(b[1])];
         const value = (wdi, code) => (wdi && wdi[code] ? wdi[code][1] : null);
         const year = (wdi, code) => (wdi && wdi[code] ? wdi[code][0] : null);
         // Display name of an income group (translated bundles add income_group_label).
@@ -485,6 +490,7 @@
                 result.basis = answers.income_basis || null;
                 result.basis_mismatch = Boolean(dist && result.basis && result.basis !== dist.welfare_type);
                 const lo = x * (1 - INCOME_ERROR), hi = x * (1 + INCOME_ERROR);
+                result.global_range = [pct(globalCdf(lo)), pct(globalCdf(hi))];
                 result.sensitivity = {
                     error: INCOME_ERROR,
                     global: [pct(globalCdf(lo)), pct(globalCdf(hi))],
@@ -522,6 +528,7 @@
                 level: idx,
                 label: Q.education_options[idx][1],
                 global_pct: pct(midrank(shares, idx)),
+                global_range: pctBand(band(shares, idx)),
                 world_shares: shares.map(pct),
                 same_level_pct: pct(shares[idx]),
                 higher_pct: pct(sum(shares.slice(idx + 1))),
@@ -683,6 +690,8 @@
                 if (occ) result.occupation = occ;
                 const combine = (a, b) => (b === null || b === undefined ? a : (a + b) / 2);
                 result.global_pct = pct(combine(statusRank, occ && occ.world_rank));
+                const statusBand = vulnerable ? [0, v] : [v, 1];
+                result.global_range = pctBand(occ && occ.world_band ? meanBand([statusBand, occ.world_band]) : statusBand);
                 if (nationalRank !== null) result.national_pct = pct(combine(nationalRank, occ && occ.national_rank));
             }
             return result;
@@ -690,6 +699,13 @@
 
         // Occupation: share of workers in each ISCO-08 major group, and the user's mid-rank by
         // skill level (armed forces span several levels and get no rank).
+        function skillBand(shares, level) {
+            const levels = G.occupation.skill_levels;
+            const byLevel = [1, 2, 3, 4].map(l => sum(shares.filter((_, i) => levels[i] === l)));
+            const total = sum(byLevel);
+            return band(byLevel.map(x => x / total), level - 1);
+        }
+
         function skillRank(shares, level) {
             const levels = G.occupation.skill_levels;
             const byLevel = [1, 2, 3, 4].map(l => sum(shares.filter((_, i) => levels[i] === l)));
@@ -707,6 +723,7 @@
                             economies: occ.economies, employed_covered_pct: pct(occ.employed_covered / occ.employed_world)};
             if (level) {
                 result.world_rank = skillRank(occ.shares, level);
+                result.world_band = skillBand(occ.shares, level);
                 result.world_pct = pct(result.world_rank);
             }
             const co = country.occupation;
@@ -760,6 +777,7 @@
         function scoreLiving(answers, country) {
             const items = [];
             const ranks = [];
+            const bands = [];
             const region = regionAggregate(country);
             const suffix = answers.area === "urban" ? ".UR.ZS" : answers.area === "rural" ? ".RU.ZS" : null;
             for (const [key, [has, status]] of Object.entries(accessItems(answers))) {
@@ -785,7 +803,10 @@
                     }
                 }
                 items.push(item);
-                if (has !== null && has !== undefined) ranks.push(has ? (s + 1) / 2 : s / 2);
+                if (has !== null && has !== undefined) {
+                    ranks.push(has ? (s + 1) / 2 : s / 2);
+                    bands.push(has ? [s, 1] : [0, s]);
+                }
             }
             const answered = items.filter(i => i.has !== null && i.has !== undefined);
             const result = {items, answered: answered.length, area: answers.area || null,
@@ -794,6 +815,7 @@
             const have = answered.filter(i => i.has);
             return Object.assign(result, {
                 global_pct: pct(sum(ranks) / ranks.length),
+                global_range: pctBand(meanBand(bands)),
                 lower_bound_pct: have.length ? Math.max(...have.map(i => i.share_without_pct)) : 0,
                 lacking: answered.filter(i => !i.has).map(i => i.label),
                 account: answers.account ? {has: answers.account === "yes", world: value(world, "FX.OWN.TOTL.ZS"),
@@ -873,6 +895,11 @@
             return {severe: sv / 100, moderate: (ms - sv) / 100, secure: 1 - ms / 100, year: year(wdi, "SN.ITK.MSFI.ZS")};
         }
 
+        function foodBand(shares, level) {
+            const order = [shares.severe, shares.moderate, shares.secure];
+            return band(order, level === "severe" ? 0 : level === "moderate" ? 1 : 2);
+        }
+
         function foodRank(shares, level) {
             if (!shares) return null;
             const order = [shares.severe, shares.moderate, shares.secure];
@@ -946,6 +973,7 @@
                 const idx = w.keys.indexOf(answer);
                 const r = {key: answer, label: L.findex[group][answer], world_shares: w.shares.map(pct),
                            world_pct: pct(midrank(w.shares, idx)), share_below: midrank(w.shares, idx),
+                           band: band(w.shares, idx),
                            world_economies: w.economies, labels: w.keys.map(k => L.findex[group][k])};
                 if (fx[group]) {
                     Object.assign(r, {country_shares: fx[group].shares.map(pct), year: fx[group].year,
@@ -977,6 +1005,7 @@
         function scoreSecurity(answers, country, incomeNationalPct) {
             const result = {};
             const ranks = [];
+            const bands = [];
             const {food_money: food, shelter_money: shelter, count_on: countOn} = answers;
             if (food && shelter && (countOn || (food === "no" && shelter === "no"))) {
                 const struggled = food === "yes" || shelter === "yes";
@@ -992,6 +1021,7 @@
                     gallup_pct: pct(midrank(shares, idx)),
                 });
                 ranks.push(midrank(shares, idx));
+                bands.push(band(shares, idx));
             }
             const fies = Q.fies_items.map(([k]) => answers[k]);
             if (fies.every(Boolean)) {
@@ -1004,19 +1034,26 @@
                 if (ws) {
                     result.fies_pct = pct(foodRank(ws, level));
                     ranks.push(foodRank(ws, level));
+                    bands.push(foodBand(ws, level));
                 }
                 if (cs) result.fies_national_pct = pct(foodRank(cs, level));
             }
             result.fies_answered = fies.filter(a => a !== null && a !== undefined).length;
             Object.assign(result, scoreResilience(answers, country));
-            if (result.emergency) ranks.push(result.emergency.share_below);
+            if (result.emergency) {
+                ranks.push(result.emergency.share_below);
+                bands.push(result.emergency.band);
+            }
             for (const key of ["account", "saved"]) {
                 if (answers[key]) result[key] = answers[key] === "yes";
             }
             result.account_world = value(world, "FX.OWN.TOTL.ZS");
             result.account_country = value(country.wdi, "FX.OWN.TOTL.ZS");
             result.account_groups = accountGroups(answers, country, incomeNationalPct);
-            if (ranks.length) result.global_pct = pct(sum(ranks) / ranks.length);
+            if (ranks.length) {
+                result.global_pct = pct(sum(ranks) / ranks.length);
+                result.global_range = pctBand(meanBand(bands));
+            }
             return result;
         }
 
@@ -1030,6 +1067,7 @@
             return {
                 band: pyramid[idx].label,
                 range: [pct(below), pct(below + shares[idx])],
+                global_range: [pct(below), pct(below + shares[idx])],
                 global_pct: pct(midrank(shares, idx)),
                 pyramid: pyramid.map((b, i) => ({label: b.label, pct: pct(b.share), you: i === idx})),
             };
@@ -1156,8 +1194,13 @@
             result.dimensions = ["income", "education", "work", "living", "security", "wealth"]
                 .filter(k => result[k].global_pct !== undefined)
                 .map(k => ({key: k, label: DIMENSION_LABELS[k], pct: result[k].global_pct,
-                            national_pct: result[k].national_pct}));
+                            national_pct: result[k].national_pct,
+                            range: result[k].global_range || [result[k].global_pct, result[k].global_pct]}));
             result.ses_index = Math.round(10 * sum(result.dimensions.map(d => d.pct)) / result.dimensions.length) / 10;
+            // Plausible range: every dimension at the bottom, or the top, of its answer group
+            // (for exact incomes, 20% less or more income).
+            const n = result.dimensions.length;
+            result.ses_index_range = [0, 1].map(i => Math.round(10 * sum(result.dimensions.map(d => d.range[i])) / n) / 10);
 
             const perception = {measured_rung: ladderRung(result.ses_index)};
             for (const key of ["ladder_country", "ladder_world"]) {

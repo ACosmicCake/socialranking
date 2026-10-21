@@ -487,3 +487,16 @@ test("population rank of the country on each indicator", () => {
     const cleanest = run({...FULL, country: pm[0].iso3, income_mode: "band", income_band: "b4"}).location.glance.find(x => x.code === "EN.ATM.PM25.MC.M3");
     assert.ok(cleanest.better_than_pct > 95);
 });
+
+test("plausible ranges for each dimension and the SES index", () => {
+    const r = run({...FULL, work_status: "employee", work_sector: "services", occupation: "professionals", emergency_funds: "somewhat_difficult"});
+    for (const d of r.dimensions) {
+        assert.ok(d.range[0] <= d.pct && d.pct <= d.range[1], `${d.key} ${d.range} ${d.pct}`);
+    }
+    assert.ok(r.ses_index_range[0] <= r.ses_index && r.ses_index <= r.ses_index_range[1]);
+    // A category's range is its band: education "bachelor" spans the share of adults at that level.
+    const edu = r.dimensions.find(d => d.key === "education");
+    close(edu.range[1] - edu.range[0], r.education.same_level_pct, 0.2);
+    // Exact incomes use the +/-20% sensitivity.
+    assert.deepEqual(r.dimensions.find(d => d.key === "income").range, r.income.sensitivity.global);
+});
