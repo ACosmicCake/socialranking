@@ -211,6 +211,14 @@ python -m pytest                          # also runs the Node tests if Node.js 
 node --test tests/js/ses.test.js          # Node tests on their own (build the site first)
 ```
 
+An optional browser walkthrough builds the site with the Pages base path and drives the quiz and results in Chromium
+(desktop, phone and Vietnamese), failing on JavaScript errors, missing sections, horizontal scrolling or broken downloads:
+
+```bash
+pip install playwright && python -m playwright install chromium
+python tests/e2e/walkthrough.py [screenshot-dir]
+```
+
 The tests cover:
 
 - **Data:** integrity, calibration against official headcounts, and that every distribution is monotone and invertible.
