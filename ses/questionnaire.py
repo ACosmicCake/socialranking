@@ -21,17 +21,17 @@ FIES_ITEMS = [
     ("fies_whole_day", "You went without eating for a whole day?"),
 ]
 
-# Income bands in 2017 international dollars per person per day.  The cut
-# points are the World Bank's 2017-PPP poverty lines and PIP reporting lines.
+# Income bands in 2021 international dollars per person per day.  The first
+# cut points are the World Bank's poverty lines ($3.00, $4.20, $8.30).
 INCOME_BANDS = [
-    ("b0", 0.0, 2.15, "Less than $2.15 a day (below the extreme poverty line)"),
-    ("b1", 2.15, 3.65, "$2.15 to $3.65 a day"),
-    ("b2", 3.65, 6.85, "$3.65 to $6.85 a day"),
-    ("b3", 6.85, 10.0, "$6.85 to $10 a day"),
-    ("b4", 10.0, 20.0, "$10 to $20 a day"),
-    ("b5", 20.0, 40.0, "$20 to $40 a day"),
-    ("b6", 40.0, 100.0, "$40 to $100 a day"),
-    ("b7", 100.0, 300.0, "More than $100 a day"),
+    ("b0", 0.0, 3.0, "Less than $3 a day (below the extreme poverty line)"),
+    ("b1", 3.0, 4.2, "$3 to $4.20 a day"),
+    ("b2", 4.2, 8.3, "$4.20 to $8.30 a day"),
+    ("b3", 8.3, 15.0, "$8.30 to $15 a day"),
+    ("b4", 15.0, 30.0, "$15 to $30 a day"),
+    ("b5", 30.0, 60.0, "$30 to $60 a day"),
+    ("b6", 60.0, 150.0, "$60 to $150 a day"),
+    ("b7", 150.0, 450.0, "More than $150 a day"),
 ]
 
 COOKING_OPTIONS = [
@@ -155,13 +155,13 @@ SECTIONS = [
                 "id": "income_band",
                 "type": "radio",
                 "text": "Roughly how much does each person in your household live on per day?",
-                "help": "In what the money would buy in the United States in 2017. "
+                "help": "In what the money would buy in the United States in 2021. "
                         "For example, $10 a day is about $300 a month per person.",
                 "options": [(key, label) for key, _, _, label in INCOME_BANDS],
                 "show_if": ("income_mode", "band"),
                 "source": "pip",
-                "basis": "Bands follow the World Bank's 2017-PPP poverty lines ($2.15, $3.65, $6.85) "
-                         "and PIP reporting lines ($10, $20, $40).",
+                "basis": "Bands start at the World Bank's poverty lines in 2021 prices ($3.00, $4.20, "
+                         "$8.30), then double roughly every band.",
             },
         ],
     },

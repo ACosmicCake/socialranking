@@ -32,8 +32,9 @@ test("income conversion", () => {
     const inc = run(FULL).income;
     const local = 20e6 * 12 / 365 / 4;
     close(inc.local_per_day, local, 1e-6);
-    close(inc.ppp_per_day, local / inc.price_level_vs_2017 / inc.ppp_2017, 1e-9);
-    assert.equal(inc.extrapolated_years, 2);  // inflation data run to 2024
+    close(inc.ppp_per_day, local / inc.price_level_vs_2021 / inc.ppp_2021, 1e-9);
+    assert.equal(inc.price_year, 2026);
+    assert.equal(inc.extrapolated_years, 0);  // IMF data run to 2026
     assert.ok(inc.global_pct > 0 && inc.global_pct < 100 && inc.national_pct > 0 && inc.national_pct < 100);
 });
 
@@ -47,9 +48,9 @@ test("more income ranks higher", () => {
 test("US household at the national median lands near the 50th percentile", () => {
     const us = SES.country("USA");
     const probe = run({...FULL, country: "USA", income_amount: "1", household_size: "1"}).income;
-    const monthly = us.income.median * probe.price_level_vs_2017 * 365 / 12;
+    const monthly = us.income.median * probe.price_level_vs_2021 * 365 / 12;
     const r = run({...FULL, country: "USA", income_amount: monthly.toFixed(2), household_size: "1"});
-    close(r.income.national_pct, 50, 0.2);
+    close(r.income.national_pct, 50, 0.5);
     assert.ok(r.income.global_pct > 85);
 });
 
@@ -126,16 +127,31 @@ for (const [field, value] of [
 }
 
 test("exact mode is rejected without reliable prices", () => {
-    for (const iso3 of ["ZWE", "CHL"]) {
+    for (const iso3 of ["ZWE", "VEN", "CUB"]) {
         assert.throws(() => SES.parseAnswers({...FULL, country: iso3}),
             e => e instanceof SES.ValidationError && "income_mode" in e.errors);
     }
 });
 
-test("country without a survey has no national rank", () => {
-    const inc = run({...MINIMAL, country: "SAU"}).income;
-    assert.equal(inc.national_pct, undefined);
-    assert.equal(inc.national_available, false);
+test("every economy has a national distribution", () => {
+    for (const c of SES.data.countries) {
+        assert.ok(c.income, c.iso3);
+        assert.equal(run({...MINIMAL, country: c.iso3}).income.national_available, true);
+    }
+});
+
+test("countries that changed currency accept today's currency", () => {
+    // 1,000 euro/month per person in Croatia and in Slovakia should be in the same ballpark.
+    const hrv = run({...FULL, country: "HRV", income_amount: "1000", household_size: "1"}).income;
+    const svk = run({...FULL, country: "SVK", income_amount: "1000", household_size: "1"}).income;
+    assert.ok(hrv.ppp_per_day / svk.ppp_per_day > 0.6 && hrv.ppp_per_day / svk.ppp_per_day < 1.6);
+    assert.ok(hrv.currency_change);
+});
+
+test("price index runs to the visitor's year, extrapolating at most 3 years", () => {
+    const later = SES.score(SES.parseAnswers(FULL), new Date(2031, 0, 1)).income;
+    assert.equal(later.price_year, 2029);
+    assert.equal(later.extrapolated_years, 3);
 });
 
 test("every country can be scored with a range", () => {

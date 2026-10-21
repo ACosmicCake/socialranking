@@ -27,13 +27,9 @@ from ses.distributions import global_cdf, global_quantile  # noqa: E402
 
 PAGES = ["index", "quiz", "results", "methodology", "questionnaire", "sources", "faq", "about", "creator", "404"]
 
-# Mirrors MAX_RELIABLE_INFLATION in static/js/ses.js.
-MAX_RELIABLE_INFLATION = 1.0
-
-
 def exact_income_available(country):
-    prices = country.get("prices")
-    return bool(prices) and prices["inflation_recent_annual"] <= MAX_RELIABLE_INFLATION
+    """Mirrors exactIncomeAvailable in static/js/ses.js."""
+    return bool(country.get("prices", {}).get("exact_income"))
 
 
 # ---------------------------------------------------------------------------

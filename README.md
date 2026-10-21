@@ -15,7 +15,7 @@ a cited report.
 
 | Dimension | Question source (instrument) | Compared against | Data year |
 |---|---|---|---|
-| **Income** (headline) | Household income after tax ÷ household size, in local currency, converted to 2017 PPP $/day | World Bank PIP global and national income/consumption distributions | World 2019; national surveys up to 2021 |
+| **Income** (headline) | Household income after tax ÷ household size, in local currency, converted to 2021 PPP $/day | World Bank PIP (September 2026 release) global and national income/consumption distributions | 2024 |
 | **Education** | Highest completed level (7 ISCED-based categories) | Barro-Lee Educational Attainment v3, adults 25-64, 146 countries | 2015 |
 | **Living standards** | SDG definitions for electricity (7.1.1), clean cooking (7.1.2), water and sanitation ladders (6.1.1, 6.2.1), hygiene, Internet use (ITU), health-cost hardship (3.8.2) | Tracking SDG7 2026, WHO/UNICEF JMP 2025, ITU 2025, WHO/World Bank UHC 2025 | 2022-2025 |
 | **Financial security** | Gallup World Poll basic-needs items; FAO Food Insecurity Experience Scale (8 items); Global Findex account and saving items | Gallup Basic Needs Vulnerability 2020; SOFI 2026; Findex 2025 | 2019-2025 |
@@ -26,7 +26,7 @@ a cited report.
 The results page shows:
 
 - your percentile within the world and within your country;
-- the steps that turn your income into 2017 international dollars;
+- the steps that turn your income into 2021 international dollars;
 - an interactive chart of the world's and your country's income distribution;
 - a comparison for each service, with the number of people who lack it;
 - how your self-placement on the ladder compares with the data.
@@ -39,56 +39,65 @@ The [`/methodology`](templates/methodology.html) page documents each calculation
 ## How the income comparison works
 
 1. `daily income per person = household income × 12 / 365 / household size` (for monthly amounts).
-2. Convert to 2017 prices by compounding the country's annual CPI inflation (WDI `FP.CPI.TOTL.ZG`) from 2018 to the latest
-   year. Carry it forward up to 3 years at the country's recent average inflation.
-3. Divide by the 2017 PPP conversion factor (WDI `PA.NUS.PPP`) to get 2017 international dollars per day.
-4. Look this up on:
-   - **the global distribution:** a population-weighted mixture of 166 national survey distributions (each modelled from
-     its 9 decile thresholds, a linear bottom decile and a Pareto top decile, matched to published decile means). The mixture
-     covers 96.9% of the world's population and is calibrated to pass exactly through PIP's official 2019 world headcounts.
-     Before calibration it is already within 1.4 percentage points of every official figure:
+2. Convert to 2021 prices by compounding the country's annual average consumer-price inflation from 2022 to 2026, using the
+   IMF World Economic Outlook (October 2026).
+3. Divide by the 2021 PPP conversion factor to get 2021 international dollars per day. Where the country has a survey, this
+   is PIP's own factor; otherwise it's WDI `PA.NUS.PRVT.PP`. Currencies replaced at a fixed rate since the survey (Croatia,
+   Bulgaria, Sierra Leone, Belarus, Mauritania) are converted to today's currency.
+4. Look this up on two distributions:
+   - **Your country's distribution:** PIP's 2024 lined-up distribution, given as the income at the 1st, 2nd, 5th, 10th ... 90th,
+     95th, 98th and 99th percentiles, with a Pareto tail above.
+   - **The global distribution:** the population-weighted mixture of all 218 national distributions
+     (100.0% of the world's population). It is calibrated to pass exactly
+     through PIP's official 2024 world headcounts at 15 lines. Before calibration it is already within a few
+     tenths of a point of every official figure:
 
-     | $/day (2017 PPP) | Official world headcount | Uncalibrated mixture |
+     | $/day (2021 PPP) | Official world headcount (2024) | Uncalibrated mixture |
      |---|---|---|
-     | 1.00 | 1.50% | 1.59% |
-     | 2.15 | 8.44% | 8.84% |
-     | 3.65 | 23.46% | 24.33% |
-     | 6.85 | 46.73% | 47.73% |
-     | 10 | 58.80% | 60.14% |
-     | 20 | 76.75% | 77.99% |
-     | 30 | 83.94% | 85.08% |
-     | 40 | 88.24% | 89.15% |
+     | 1 | 1.16% | 1.38% |
+     | 2 | 4.80% | 5.10% |
+     | 3 | 10.12% | 10.34% |
+     | 4.2 | 18.21% | 18.55% |
+     | 6 | 32.49% | 32.52% |
+     | 8.3 | 46.16% | 46.16% |
+     | 10 | 52.87% | 52.83% |
+     | 15 | 65.16% | 65.13% |
+     | 20 | 72.39% | 72.36% |
+     | 30 | 80.67% | 80.55% |
+     | 40 | 85.50% | 85.40% |
+     | 60 | 91.42% | 91.34% |
+     | 80 | 94.76% | 94.70% |
+     | 100 | 96.68% | 96.61% |
+     | 150 | 98.76% | 98.69% |
 
-   - **your country's distribution:** its latest PIP survey.
-
-Countries without price data, or with more than 100% average inflation or a currency redenomination (e.g. Zimbabwe, Sudan,
-Lebanon), use a range question instead.
+Exact local-currency income works for 192 of 218 economies. The rest use a range question: Venezuela and Zimbabwe
+(currency replaced without a fixed rate), and economies with no price data (for example Cuba, North Korea, Syria and some
+small territories).
 
 ## Data
 
-Country-level data are generated by `scripts/build_data.py` from **pinned commits** of public mirrors, so the build is
-reproducible:
+`scripts/build_data.py` builds the country-level data from the official APIs, pinning the PIP release
+(`20260922_2021_01_02_PROD`), plus pinned GitHub commits for the files that have no API:
 
-| Source | Mirror | Used for |
-|---|---|---|
-| World Bank Poverty and Inequality Platform (2017 PPP) | [owid/poverty-data](https://github.com/owid/poverty-data) | Global and national income distributions |
-| WDI `SP.POP.TOTL` | [datasets/population](https://github.com/datasets/population) | Population weights (world: 8,215,424,893 in 2025) |
-| WDI `NY.GDP.MKTP.CD` | [datasets/gdp](https://github.com/datasets/gdp) | GDP per capita (location context) |
-| WDI `PA.NUS.PPP` | [datasets/ppp](https://github.com/datasets/ppp) | 2017 PPP conversion factors |
-| WDI `FP.CPI.TOTL.ZG` | [datasets/cpi](https://github.com/datasets/cpi) | Inflation since 2017 (note: this mirror holds annual inflation **rates**, even though its metadata calls them an index) |
-| ISO 3166 / ISO 4217 | [datasets/country-codes](https://github.com/datasets/country-codes) | Country names and currencies |
-| Barro-Lee v3 | [barrolee/BarroLeeDataSet](https://github.com/barrolee/BarroLeeDataSet) | Educational attainment |
+| Source | Used for |
+|---|---|
+| [World Bank Poverty and Inequality Platform API](https://pip.worldbank.org) | National percentiles for 2024, world headcounts, survey years, PPP factors |
+| [World Bank WDI API](https://datatopics.worldbank.org/world-development-indicators/) | Economies and income groups, population (world: 8,215,424,893 in 2025), GDP per capita, `PA.NUS.PRVT.PP` |
+| [IMF World Economic Outlook, October 2026](https://www.imf.org/external/datamapper/PCPIPCH@WEO) | Consumer-price inflation, 2022-2026 |
+| [Barro-Lee v3](https://github.com/barrolee/BarroLeeDataSet) | Educational attainment (144 economies) |
+| [ISO 3166 / ISO 4217](https://github.com/datasets/country-codes) | Common country names and currencies |
 
-Coverage: 217 economies; 165 with a national income distribution; 176 with price data; 143 with national education data.
+The build cross-checks the PIP PPP factors against WDI for every country and flags any currency mismatch. A test also checks
+that the IMF-based price index agrees with PIP's own survey-year CPI.
 
 Global headline figures (JMP, SDG7, ITU, UHC, Findex, Gallup, SOFI, UBS, World Bank poverty) are curated in `ses/facts.py`,
 each with its citation. Update the number and the citation together when a new report is published.
 
-To rebuild the data:
+To rebuild the data (this needs access to `api.worldbank.org`, `www.imf.org` and `raw.githubusercontent.com`):
 
 ```bash
 pip install -r requirements-dev.txt
-python scripts/build_data.py      # downloads to data/raw/ (git-ignored), writes data/*.json
+python scripts/build_data.py --refresh      # caches downloads in data/raw/ (git-ignored), writes data/*.json
 ```
 
 ## Publishing on GitHub Pages
@@ -172,7 +181,7 @@ Other known limits:
 - Household surveys under-capture the very rich.
 - Many countries survey consumption rather than income.
 - Survey and report years range from 2015 to 2025.
-- In June 2025 the World Bank moved to 2021 PPPs ($3.00 line). This app uses the complete, openly mirrored 2017-PPP release.
+- The distributions describe 2024. Incomes are measured in today's prices and deflated to 2021, so real growth since 2024 makes results slightly flattering.
 
 The [methodology page](templates/methodology.html) covers all of these.
 

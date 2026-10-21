@@ -5,12 +5,12 @@
     <h1>Sources</h1>
 
     <h2 class="h4">Datasets (processed by <code>scripts/build_data.py</code>)</h2>
-    <p class="text-secondary">Downloaded from pinned commits of public mirrors, so the data can be reproduced exactly.</p>
+    <p class="text-secondary">Downloaded from the official APIs (with the PIP release pinned) and from pinned commits on GitHub. Data built on {{ g.built }}.</p>
     <ul>
         {% for key, s in data_sources.items() %}
         <li><strong>{{ s.name }}</strong><br>
             <a href="{{ s.home }}" target="_blank" rel="noopener">{{ s.home }}</a>
-            <div class="small text-secondary text-break">Pinned file: {{ s.url }}</div></li>
+            <div class="small text-secondary text-break">Endpoint: {{ s.url }}</div></li>
         {% endfor %}
     </ul>
 

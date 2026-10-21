@@ -11,10 +11,16 @@ When a report is updated, change the number *and* the citation together.
 
 CITATIONS = {
     "pip": {
-        "title": "Poverty and Inequality Platform (2017 PPP release, as compiled by Our World in Data)",
-        "publisher": "World Bank; Our World in Data (J. Hasell & P. Arriagada)",
-        "year": 2024,
-        "url": "https://github.com/owid/poverty-data",
+        "title": "Poverty and Inequality Platform, September 2026 release (2021 PPPs)",
+        "publisher": "World Bank",
+        "year": 2026,
+        "url": "https://pip.worldbank.org",
+    },
+    "imf_weo": {
+        "title": "World Economic Outlook, October 2026: inflation, average consumer prices",
+        "publisher": "International Monetary Fund",
+        "year": 2026,
+        "url": "https://www.imf.org/external/datamapper/PCPIPCH@WEO",
     },
     "wb_poverty_2026": {
         "title": "September 2026 global poverty update from the World Bank",
@@ -29,8 +35,8 @@ CITATIONS = {
         "url": "https://www.worldbank.org/en/news/factsheet/2025/06/05/june-2025-update-to-global-poverty-lines",
     },
     "wdi": {
-        "title": "World Development Indicators: population, GDP, PPP conversion factors, CPI",
-        "publisher": "World Bank (mirrored by datahub.io core datasets)",
+        "title": "World Development Indicators: population, GDP per capita, PPP conversion factors, income groups",
+        "publisher": "World Bank",
         "year": 2026,
         "url": "https://datatopics.worldbank.org/world-development-indicators/",
     },

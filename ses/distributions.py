@@ -1,14 +1,14 @@
-"""Income distribution helpers.
+"""Income distribution helpers (reference implementation of static/js/ses.js).
 
-A national distribution is stored as nine decile thresholds plus two tails
-(see ``decile_distribution`` in scripts/build_data.py):
+A national distribution is stored as PIP's income thresholds ``x`` at
+population shares ``p`` (1st to 99th percentile, see scripts/build_data.py):
 
-* below the first threshold: uniform on [low, thr1] (holds the bottom 10%)
+* below the first threshold: linear from zero
 * between thresholds: linear in log income
-* above the ninth threshold: Pareto with the stored alpha (holds the top 10%)
+* above the last threshold: Pareto with the stored alpha
 
 The global distribution is a calibrated CDF on a log-spaced grid.
-All incomes are per person per day in 2017 international dollars (PPP).
+All incomes are per person per day in 2021 international dollars (PPP).
 """
 
 import bisect
@@ -19,33 +19,28 @@ from . import data
 
 def national_cdf(dist, x):
     """Share of the national population with income/consumption below x."""
-    thr = dist["thresholds"]
+    ps, xs = dist["p"], dist["x"]
     if x <= 0:
         return 0.0
-    if x < thr[0]:
-        low = dist["low"]
-        return max(0.0, min(1.0, (x - low) / (thr[0] - low))) * 0.1
-    if x > thr[-1]:
-        return 1 - 0.1 * (thr[-1] / x) ** dist["pareto_alpha"]
-    i = bisect.bisect_right(thr, x) - 1
-    if i >= len(thr) - 1:
-        return 0.9
-    frac = (math.log(x) - math.log(thr[i])) / (math.log(thr[i + 1]) - math.log(thr[i]))
-    return (i + 1 + frac) / 10
+    if x < xs[0]:
+        return ps[0] * x / xs[0]
+    if x >= xs[-1]:
+        return 1 - (1 - ps[-1]) * (xs[-1] / x) ** dist["pareto_alpha"]
+    i = bisect.bisect_right(xs, x) - 1
+    frac = (math.log(x) - math.log(xs[i])) / (math.log(xs[i + 1]) - math.log(xs[i]))
+    return ps[i] + frac * (ps[i + 1] - ps[i])
 
 
 def national_quantile(dist, p):
     """Inverse of national_cdf: income at population share p (0-1)."""
-    thr = dist["thresholds"]
-    if p <= 0.1:
-        low = dist["low"]
-        return low + (thr[0] - low) * p / 0.1
-    if p >= 0.9:
-        return thr[-1] * (0.1 / max(1 - p, 1e-9)) ** (1 / dist["pareto_alpha"])
-    k = p * 10 - 1
-    i = int(k)
-    frac = k - i
-    return math.exp(math.log(thr[i]) + frac * (math.log(thr[i + 1]) - math.log(thr[i])))
+    ps, xs = dist["p"], dist["x"]
+    if p <= ps[0]:
+        return xs[0] * p / ps[0]
+    if p >= ps[-1]:
+        return xs[-1] * ((1 - ps[-1]) / max(1 - p, 1e-9)) ** (1 / dist["pareto_alpha"])
+    i = bisect.bisect_right(ps, p) - 1
+    frac = (p - ps[i]) / (ps[i + 1] - ps[i])
+    return math.exp(math.log(xs[i]) + frac * (math.log(xs[i + 1]) - math.log(xs[i])))
 
 
 def global_cdf(x):
@@ -64,7 +59,7 @@ def global_cdf(x):
 
 
 def global_quantile(p):
-    """Income ($/day, 2017 PPP) below which share p of the world lives."""
+    """Income ($/day, 2021 PPP) below which share p of the world lives."""
     income = data.global_data()["income"]
     grid, cdf = income["grid"], income["cdf"]
     if p <= cdf[0]:
