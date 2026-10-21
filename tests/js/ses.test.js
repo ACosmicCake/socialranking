@@ -475,3 +475,15 @@ test("child stunting and schooling rates in the country overview", () => {
     assert.ok(g["SH.STA.STNT.ZS"].value > 0 && g["SH.STA.STNT.ZS"].value < 100);
     assert.ok(g["SE.PRM.CMPT.ZS"].world > 50 && g["SE.TER.ENRR"].world > 0);
 });
+
+test("population rank of the country on each indicator", () => {
+    const g = Object.fromEntries(run(FULL).location.glance.map(x => [x.code, x]));
+    assert.equal(g["SP.URB.TOTL.IN.ZS"].better_than_pct, null);
+    for (const code of ["SP.DYN.LE00.IN", "EN.ATM.PM25.MC.M3", "NY.GDP.PCAP.PP.KD"]) {
+        assert.ok(g[code].better_than_pct > 0 && g[code].better_than_pct < 100, code);
+    }
+    // Lower is better for pollution: the country with the cleanest air beats almost everyone.
+    const pm = SES.data.countries.filter(c => c.wdi && c.wdi["EN.ATM.PM25.MC.M3"]).sort((a, b) => a.wdi["EN.ATM.PM25.MC.M3"][1] - b.wdi["EN.ATM.PM25.MC.M3"][1]);
+    const cleanest = run({...FULL, country: pm[0].iso3, income_mode: "band", income_band: "b4"}).location.glance.find(x => x.code === "EN.ATM.PM25.MC.M3");
+    assert.ok(cleanest.better_than_pct > 95);
+});

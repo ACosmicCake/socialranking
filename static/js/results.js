@@ -703,6 +703,8 @@
     // How reliable the national numbers are: the World Bank's statistical performance score.
     const spi = country.wdi && country.wdi["IQ.SPI.OVRL"];
     const spiAll = D.countries.map(c => c.wdi && c.wdi["IQ.SPI.OVRL"] && c.wdi["IQ.SPI.OVRL"][1]).filter(Boolean).sort((a, b) => a - b);
+    const rankNote = `<p class="small text-secondary">${tr(`"Better than" is the share of the world's population living in economies that do worse on that indicator, where lower is better for mortality, pollution, inequality and similar measures. Indicators that aren't better or worse in themselves are not ranked.`,
+        `"Hơn" là tỷ lệ dân số thế giới sống ở các nền kinh tế kém hơn về chỉ số đó; với tử vong, ô nhiễm, bất bình đẳng và các chỉ số tương tự thì thấp hơn là tốt hơn. Các chỉ số không mang nghĩa tốt hay xấu thì không được xếp hạng.`)}</p>`;
     const spiHtml = spi ? `<p class="small">${tr(
         `<strong>How reliable are ${cname}'s numbers?</strong> Its statistical system scores ${fixed(spi[1], 0)} out of 100 on the World Bank's Statistical Performance Indicators (${spi[0]}), against a median of ${fixed(spiAll[Math.floor(spiAll.length / 2)], 0)} across ${spiAll.length} economies. Lower scores generally mean a weaker statistical system, with fewer or older surveys, so treat national comparisons with more caution.`,
         `<strong>Số liệu của ${cname} đáng tin đến đâu?</strong> Hệ thống thống kê của nước này đạt ${fixed(spi[1], 0)}/100 theo Chỉ số Hiệu quả Thống kê của Ngân hàng Thế giới (${spi[0]}), so với trung vị ${fixed(spiAll[Math.floor(spiAll.length / 2)], 0)} của ${spiAll.length} nền kinh tế. Điểm thấp hơn thường nghĩa là hệ thống thống kê yếu hơn, với ít khảo sát hơn hoặc khảo sát cũ hơn, nên hãy thận trọng hơn với các so sánh trong nước.`)} ${cite("wdi")}</p>` : "";
@@ -716,7 +718,8 @@
         ${loc.median ? tr(`Half of ${cname}'s people live on less than ${money(loc.median)} a day.`, `Một nửa dân số ${cname} sống bằng dưới ${money(loc.median)} mỗi ngày.`) : ""}</p>
     ${loc.poverty ? table([tr("Poverty line", "Chuẩn nghèo"), `${cname}, ${refYear}`, tr("World", "Thế giới")], loc.poverty.map((pv, i) =>
         `<tr><td>${money(pv.line)} ${tr("a day", "mỗi ngày")}</td><td>${pct(pv.pct)}</td><td>${pct(inc.lines[i].share_below)}</td></tr>`)) : ""}
-    ${table([tr("Indicator", "Chỉ số"), cname, loc.region_name ? esc(loc.region_name) : null, tr("World", "Thế giới")].filter(x => x !== null), (() => {
+    ${table([tr("Indicator", "Chỉ số"), cname, loc.region_name ? esc(loc.region_name) : null, tr("World", "Thế giới"),
+             `<abbr title="${tr("Share of the world's population living in economies that do worse on this indicator", "Tỷ lệ dân số thế giới sống ở các nền kinh tế kém hơn về chỉ số này")}">${tr("Better than", "Hơn")}</abbr>`].filter(x => x !== null), (() => {
         // Group the indicators so the long table scans easily.
         const groups = [
             [tr("Economy and inequality", "Kinh tế và bất bình đẳng"), /^(NY\.|SI\.|GD_WBL)/],
@@ -725,7 +728,7 @@
             [tr("Education and skills", "Giáo dục và kỹ năng"), /^(SE\.|HD\.)/],
             [tr("Living conditions and safety", "Điều kiện sống và an toàn"), /./],
         ];
-        const cols = loc.region_name ? 4 : 3;
+        const cols = loc.region_name ? 5 : 4;
         const used = new Set();
         return groups.flatMap(([title, re]) => {
             const rows = loc.glance.filter(g => !used.has(g.code) && re.test(g.code));
@@ -733,9 +736,11 @@
             if (!rows.length) return [];
             return [`<tr class="glance-group"><th colspan="${cols}">${title}</th></tr>`].concat(rows.map(g =>
                 `<tr><td>${esc(g.label)} <span class="small text-secondary">(${g.year})</span></td><td>${fmtGlance(g.value, g.fmt)}</td>
-                ${loc.region_name ? `<td>${fmtGlance(g.region, g.fmt)}</td>` : ""}<td>${fmtGlance(g.world, g.fmt)}</td></tr>`));
+                ${loc.region_name ? `<td>${fmtGlance(g.region, g.fmt)}</td>` : ""}<td>${fmtGlance(g.world, g.fmt)}</td>
+                <td>${g.better_than_pct === null ? "" : pct(g.better_than_pct, 0)}</td></tr>`));
         });
     })())}
+    ${rankNote}
     <p class="small text-secondary">${tr("World Development Indicators", "Bộ chỉ số Phát triển Thế giới")} ${cite("wdi")}. ${tr(
         `GDP per person isn't part of your SES index: your income is already adjusted for prices in ${cname} and compared globally, so counting the country again would double-count it.`,
         `GDP bình quân đầu người không nằm trong chỉ số SES: thu nhập của bạn đã được điều chỉnh theo giá cả ở ${cname} và so sánh toàn cầu, nên tính thêm quốc gia sẽ là tính trùng.`)}</p>`));
