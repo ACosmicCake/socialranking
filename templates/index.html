@@ -1,22 +1,35 @@
 {% extends "layout.html" %}
-{% block title %}
-    Quiz
-{% endblock %}
-    {% block main %}
-
-<div class="bg-image d-flex flex-column justify-content-center align-items-center " style="
-      background-image: url('/static/world.gif');
-      background-size: cover;
-      height: 100vh;
-    ">
-          <h1 class="text-white">Welcome</h1>
-        <p class="text-white container">
-            What percentage of the world in terms of socioeconomic status do you belong to?
-        </p>
-    <br><a class="btn btn-secondary btn-lg" href="/quiz" role="button">Start Quiz</a>
-
+{% block title %}Where do you stand in the world?{% endblock %}
+{% block main %}
+<div class="hero d-flex flex-column justify-content-center align-items-center text-center px-3">
+    <h1 class="display-4 fw-bold">Where do you stand in the world?</h1>
+    <p class="lead col-lg-7">
+        If all {{ world_population | people }} people on Earth were lined up by living standards,
+        where would you be? Answer about 30 questions taken from the surveys used by the World Bank, the UN and Gallup,
+        and see how you compare, measure by measure, using real data.
+    </p>
+    <a class="btn btn-light btn-lg mt-2" href="/quiz">Start the quiz</a>
+    <p class="small mt-3 text-white-50">Takes about 5 minutes. Nothing is stored unless you opt in.</p>
 </div>
-    {% endblock %}
 
-</html>
-
+<section class="container page-section">
+    <div class="row g-4 text-start">
+        <div class="col-md-4">
+            <h3 class="h5">Income, adjusted for prices</h3>
+            <p class="text-secondary">Your household income is converted into international dollars using your country's
+                inflation and purchasing-power data, then placed on the World Bank's global income distribution.</p>
+        </div>
+        <div class="col-md-4">
+            <h3 class="h5">More than money</h3>
+            <p class="text-secondary">Education, clean water, sanitation, electricity, cooking fuel, internet, health costs,
+                food security, savings and wealth, each compared with the latest international monitoring data.</p>
+        </div>
+        <div class="col-md-4">
+            <h3 class="h5">Open about how it works</h3>
+            <p class="text-secondary">Every number links to its source. The <a href="/methodology">methodology</a>
+                page shows each calculation and its limits, and the <a href="/questionnaire">questionnaire</a>
+                page names the survey behind every question.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

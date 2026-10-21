@@ -1,5 +1,2 @@
-cs50
-Flask
-Flask-Session
-requests
-gunicorn
+Flask>=3.0,<4
+gunicorn>=22

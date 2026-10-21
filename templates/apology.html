@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
-
-{% block title %}
-    Apology
-{% endblock %}
-
+{% block title %}{{ code }} {{ name }}{% endblock %}
 {% block main %}
-    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png" title="{{ top }}">
+<section class="page-section text-center">
+    <h1 class="display-4">{{ code }}</h1>
+    <h2>{{ name }}</h2>
+    <p class="lead text-secondary">{{ description }}</p>
+    <a class="btn btn-outline-light" href="/">Home</a>
+</section>
 {% endblock %}

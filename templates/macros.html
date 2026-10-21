@@ -1,0 +1,10 @@
+{% macro cite(key) -%}
+{%- set c = citations[key] -%}
+<a class="cite" href="{{ c.url }}" target="_blank" rel="noopener" title="{{ c.title }}, {{ c.publisher }}">[{{ c.publisher.split(',')[0].split(' (')[0] }} {{ c.year }}]</a>
+{%- endmacro %}
+
+{% macro meter(value, label=None) -%}
+<div class="meter" role="img" aria-label="{{ label or '' }} {{ value | pct }}">
+    <div class="meter-fill" style="width: {{ [value, 100] | min }}%"></div>
+</div>
+{%- endmacro %}

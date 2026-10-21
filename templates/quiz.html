@@ -1,28 +1,101 @@
-
 {% extends "layout.html" %}
-{% block title %}
-    Quiz
-{% endblock %}
+{% from "macros.html" import cite with context %}
+{% block title %}Quiz{% endblock %}
+
+{% macro field(q) %}
+{% set err = errors.get(q.id) %}
+{% set val = values.get(q.id) %}
+<div class="question mb-4" id="q-{{ q.id }}"
+     {% if q.show_if %}data-show-if="{{ q.show_if[0] }}={{ q.show_if[1] }}"{% endif %}>
+    {% if q.stem %}<p class="fw-semibold mb-2">{{ q.stem }}</p>{% endif %}
+    {% if q.type == "country" %}
+        <label class="form-label fs-5" for="country">{{ q.text }}</label>
+        <select name="country" id="country" class="form-select form-select-lg {% if err %}is-invalid{% endif %}" required>
+            <option value="" disabled {% if not val %}selected{% endif %}>Choose your country...</option>
+            {% for c in countries %}
+            <option value="{{ c.iso3 }}" data-currency="{{ c.currency }}" data-currency-name="{{ c.currency_name }}"
+                    data-exact="{{ 'yes' if c.exact else 'no' }}" {% if val == c.iso3 %}selected{% endif %}>{{ c.name }}</option>
+            {% endfor %}
+        </select>
+    {% elif q.type == "number" %}
+        <label class="form-label fs-5" for="{{ q.id }}">{{ q.text }}</label>
+        {% if q.id == "income_amount" %}
+        <div class="input-group input-group-lg">
+            <input type="text" inputmode="decimal" name="{{ q.id }}" id="{{ q.id }}" value="{{ val or '' }}"
+                   class="form-control {% if err %}is-invalid{% endif %}" autocomplete="off" placeholder="e.g. 2,500">
+            <span class="input-group-text" id="currency-label">local currency</span>
+        </div>
+        {% else %}
+        <input type="number" min="1" max="50" step="1" name="{{ q.id }}" id="{{ q.id }}" value="{{ val or '' }}"
+               class="form-control form-control-lg w-auto {% if err %}is-invalid{% endif %}">
+        {% endif %}
+    {% elif q.type == "ladder" %}
+        <p class="fs-5 mb-2">{{ q.text }}</p>
+        <div class="ladder" role="radiogroup" aria-label="{{ q.text }}">
+            {% for key, label in q.options %}
+            <input class="btn-check" type="radio" name="{{ q.id }}" id="{{ q.id }}-{{ key }}" value="{{ key }}"
+                   {% if val == key %}checked{% endif %}>
+            <label class="btn btn-outline-light rung" for="{{ q.id }}-{{ key }}">{{ label }}</label>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="fs-5 mb-2">{{ q.text }}</p>
+        <div class="options" role="radiogroup" aria-label="{{ q.text }}">
+            {% for key, label in q.options %}
+            <input class="btn-check" type="radio" name="{{ q.id }}" id="{{ q.id }}-{{ key }}" value="{{ key }}"
+                   {% if val == key %}checked{% endif %}>
+            <label class="btn btn-outline-light option" for="{{ q.id }}-{{ key }}">{{ label }}</label>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if q.help %}<div class="form-text">{{ q.help }}</div>{% endif %}
+    {% if err %}<div class="invalid-feedback d-block">{{ err }}</div>{% endif %}
+    <div class="source-note">Based on: {{ cite(q.source) }}</div>
+</div>
+{% endmacro %}
 
 {% block main %}
-<div class="bg-image d-flex flex-column justify-content-center align-items-center" id= "outer">
-    <div class="" id="inner">
-        <h1 class="text-white" >{{ questions[count].question}}</h1>
-          
-    <form action="/quiz" method="post">      
-    <div class=" btn-group-toggle p-5" data-toggle="buttons" name="answer">
-    {% for key,value in answer[count].items() %}
-        <div class="btn btn-outline-light">
-            <input type="radio" class="form-check-input" name="radio-stacked"  value= {{key}} required>{{value}}
+<section class="container page-section quiz-container">
+    <div class="progress mb-4 js-only" role="progressbar" aria-label="Quiz progress">
+        <div class="progress-bar bg-light" id="progress" style="width: 0%"></div>
+    </div>
+    {% if errors %}
+    <div class="alert alert-warning" role="alert">Some answers need attention. They're highlighted below.</div>
+    {% endif %}
+    <form action="/quiz" method="post" id="quiz" novalidate>
+        {% for section in sections %}
+        <fieldset class="step" data-step="{{ loop.index0 }}">
+            <legend class="h3">{{ loop.index }}. {{ section.title }}</legend>
+            <p class="text-secondary">{{ section.intro }}</p>
+            {% for q in section.questions %}{{ field(q) }}{% endfor %}
+            {% if section.key == "income" %}
+            <p class="small text-secondary" id="exact-unavailable" hidden>
+                We don't have reliable price data for this country (missing price indices, a currency
+                redenomination or very high inflation), so please choose a range.
+            </p>
+            {% endif %}
+        </fieldset>
+        {% endfor %}
+        <fieldset class="step" data-step="{{ sections | length }}">
+            <legend class="h3">{{ sections | length + 1 }}. Finish</legend>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" name="research_consent" id="research_consent"
+                       {% if values.get('research_consent') %}checked{% endif %}>
+                <label class="form-check-label" for="research_consent">
+                    Add my answers, anonymously, to the <a href="/stats" target="_blank">public response statistics</a>.
+                    Only coarse, derived values are kept: no exact income, no IP address, no name.
+                </label>
+            </div>
+            <button class="btn btn-light btn-lg" type="submit">See my results</button>
+        </fieldset>
+        <div class="d-flex justify-content-between mt-4 js-only">
+            <button type="button" class="btn btn-outline-light" id="back">Back</button>
+            <button type="button" class="btn btn-light" id="next">Next</button>
         </div>
-    {% endfor %}
-            </div>
-                <br><button class="btn btn-secondary" type="submit">Next</button>
-            </form>
-            </div>
+    </form>
+</section>
+{% endblock %}
 
-                <img src="/static/giphy.gif" alt="Paris" class="walking" height="20%">
-            </div>
-
-        
+{% block scripts %}
+<script src="/static/js/quiz.js"></script>
 {% endblock %}
