@@ -126,6 +126,36 @@ ASSET_OPTIONS = [
 ]
 SMALL_ASSETS = ("radio", "tv", "phone", "computer", "animal_cart", "bicycle", "motorbike", "fridge")
 
+# Global Findex 2025 financial-resilience items, worst to best where ordered.
+EMERGENCY_OPTIONS = [
+    ("not_possible", "Not possible"),
+    ("very_difficult", "Possible, but very difficult"),
+    ("somewhat_difficult", "Possible, but somewhat difficult"),
+    ("not_difficult", "Possible, and not difficult at all"),
+]
+EMERGENCY_SOURCE_OPTIONS = [
+    ("savings", "Savings"),
+    ("family", "Family, relatives or friends"),
+    ("work", "Money from working, including extra hours or a second job"),
+    ("borrowing", "A loan from a bank, an employer or a private lender"),
+    ("sale_of_assets", "Selling something I own"),
+    ("other", "Some other source"),
+]
+COVER_EXPENSES_OPTIONS = [
+    ("under_2_weeks", "Less than two weeks"),
+    ("one_month", "About one month"),
+    ("two_months", "About two months"),
+    ("over_2_months", "More than two months"),
+]
+WORRY_OPTIONS = [
+    ("medical", "Paying medical costs if there's a serious illness or accident"),
+    ("bills", "Paying monthly expenses or bills"),
+    ("old_age", "Having enough money for old age"),
+    ("school", "Paying school or education fees"),
+    ("business", "Having enough money for a business"),
+    ("none", "None of these worries me"),
+]
+
 # Social protection programmes, grouped as in the World Bank's ASPIRE database.
 SOCIAL_PROTECTION_OPTIONS = [
     ("contributory_pension", "An old-age, survivor or disability pension from a scheme that was paid into"),
@@ -535,6 +565,47 @@ SECTIONS = [
                 "options": YES_NO,
                 "source": "findex_2025",
                 "basis": "Global Findex saving question.",
+            },
+            {
+                "id": "emergency_funds",
+                "type": "radio",
+                "text": "Imagine that you have an emergency and need to pay one-twentieth of your country's yearly "
+                        "income per person. Could you come up with that money within the next 30 days, and how "
+                        "difficult would it be?",
+                "help": "Count every way you could get it: savings, family or friends, work, borrowing or selling "
+                        "something.",
+                "options": EMERGENCY_OPTIONS,
+                "source": "findex_2025",
+                "basis": "Global Findex financial-resilience question. As in Findex, the amount is 1/20 of gross "
+                         "national income per person in local currency.",
+            },
+            {
+                "id": "emergency_source",
+                "type": "radio",
+                "show_if": ("emergency_funds", "very_difficult|somewhat_difficult|not_difficult"),
+                "text": "What would be your main source of that money?",
+                "options": EMERGENCY_SOURCE_OPTIONS,
+                "source": "findex_2025",
+                "basis": "Global Findex main source of emergency funds.",
+            },
+            {
+                "id": "cover_expenses",
+                "type": "radio",
+                "text": "If your household lost its main source of income, for how long could you cover your living "
+                        "expenses, using savings, borrowing, selling something, help from family or friends, or "
+                        "any other way?",
+                "options": COVER_EXPENSES_OPTIONS,
+                "source": "findex_2025",
+                "basis": "Global Findex question on how long expenses could be covered after losing the main "
+                         "source of income (asked in low- and middle-income economies).",
+            },
+            {
+                "id": "worry",
+                "type": "radio",
+                "text": "Which one of these financial issues worries you the most?",
+                "options": WORRY_OPTIONS,
+                "source": "findex_2025",
+                "basis": "Global Findex most worrying financial issue. Shown as context; not scored.",
             },
             {
                 "id": "social_protection",

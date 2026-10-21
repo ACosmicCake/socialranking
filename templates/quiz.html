@@ -45,6 +45,8 @@
         </div>
     {% endif %}
     {% if q.help %}<div class="form-text">{{ q.help }}</div>{% endif %}
+    {% if q.id == "emergency_funds" %}<div class="small text-info mt-1" id="emergency-amount" hidden
+        data-template="{{ _("In your country that is about {amount}.") }}"></div>{% endif %}
     {% if q.id == "income_basis" %}<div class="small text-info mt-1" id="welfare-hint" hidden
         data-income="{{ _("This country's survey measures income.") }}"
         data-consumption="{{ _("This country's survey measures spending (consumption).") }}"></div>{% endif %}

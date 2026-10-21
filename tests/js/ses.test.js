@@ -337,3 +337,48 @@ test("human capital, learning poverty and connectivity in the country glance", (
     const hci = run(FULL).location.glance.find(g => g.code === "HD.HCI.OVRL");
     assert.ok(hci.value > 0 && hci.value < 1);
 });
+
+test("healthy diet affordability uses the same prices as income", () => {
+    const hd = run(FULL).income.healthy_diet;
+    assert.equal(hd.income_share_rule, 0.52);
+    assert.ok(hd.cost_2021ppp > 1 && hd.cost_2021ppp < 10);
+    close(hd.share_of_income, hd.cost_2021ppp / run(FULL).income.ppp_per_day, 1e-9);
+    assert.equal(hd.affordable, true);
+    // At about 1.6 times the cost, the diet takes more than 52% of income.
+    const poor = run({...FULL, income_amount: String(hd.cost_local_today * 30 * 4 / 0.6)}).income.healthy_diet;
+    assert.equal(poor.affordable, false);
+    assert.ok(hd.world.unaffordable_share > 0.2 && hd.world.unaffordable_share < 0.5);
+    assert.ok(hd.unaffordable_pct >= 0 && hd.unaffordable_pct <= 100);
+});
+
+test("Findex emergency money joins the financial-security score", () => {
+    const base = run(FULL).security;
+    const weak = run({...FULL, emergency_funds: "not_possible"}).security;
+    const strong = run({...FULL, emergency_funds: "not_difficult"}).security;
+    assert.ok(weak.global_pct < base.global_pct && base.global_pct < strong.global_pct);
+    assert.ok(weak.emergency.world_pct < 10 && strong.emergency.world_pct > 80);
+    assert.equal(strong.emergency.country_shares.length, 4);
+    close(strong.emergency.world_shares.reduce((a, b) => a + b), 100, 0.2);
+    assert.ok(strong.emergency.national_pct > 0);
+});
+
+test("Findex context items", () => {
+    const sec = run({...FULL, emergency_funds: "very_difficult", emergency_source: "family",
+                     cover_expenses: "one_month", worry: "medical"}).security;
+    assert.ok(sec.emergency_source.world_same > 10 && sec.emergency_source.country_same > 10);
+    assert.ok(sec.cover_expenses.world_pct > 0 && sec.cover_expenses.national_pct > 0);
+    assert.ok(sec.worry.world_same > 0);
+    assert.equal(run({...FULL, worry: "none"}).security.worry.world_same, undefined);
+    // The source is only asked of people who could raise the money.
+    assert.equal(run({...FULL, emergency_funds: "not_possible", emergency_source: "family"}).security.emergency_source, undefined);
+});
+
+test("emergency amount is 1/20 of GNI per person at today's prices", () => {
+    const a = SES.emergencyAmount("VNM", TODAY);
+    const c = SES.country("VNM");
+    const expected = c.findex.emergency_amount.lcu * c.prices.price_index[TODAY.getFullYear()]
+        / c.prices.price_index[c.findex.emergency_amount.year];
+    close(a.amount, expected, expected * 0.05);
+    assert.equal(a.currency, "VND");
+    assert.equal(SES.emergencyAmount("LBR", TODAY), null);  // currency units don't match
+});

@@ -196,6 +196,23 @@
              tr("World below the line", "Thế giới dưới chuẩn"), tr(`${cname} below the line`, `${cname} dưới chuẩn`)],
         inc.lines.map(l => `<tr><td>${esc(l.label)}: ${esc(l.meaning)}</td><td>${l.above ? tr("&#10003; above", "&#10003; trên") : tr("&#10007; below", "&#10007; dưới")}</td>
             <td>${pct(l.share_below)}</td><td>${pct(l.country_share_below)}</td></tr>`))}
+    ${(() => {
+        const hd = inc.healthy_diet;
+        const rule = pct(hd.income_share_rule * 100, 0);
+        const worldLine = hd.world ? tr(`Worldwide, ${pct(hd.world.unaffordable_share * 100)} of people (${people(hd.world.unaffordable_people)}) couldn't afford one in ${hd.world.year}.`,
+                                        `Trên thế giới, ${pct(hd.world.unaffordable_share * 100)} dân số (${people(hd.world.unaffordable_people)} người) không đủ khả năng chi trả năm ${hd.world.year}.`) : "";
+        if (hd.cost_2021ppp === undefined) {
+            return `<h3 class="h5 mt-4">${tr("Can you afford a healthy diet?", "Bạn có đủ tiền cho một chế độ ăn lành mạnh?")}</h3>
+                <p class="small">${hd.unaffordable_pct !== undefined ? tr(`${pct(hd.unaffordable_pct)} of people in ${cname} can't afford a healthy diet (${hd.year}).`, `${pct(hd.unaffordable_pct)} dân số ${cname} không đủ khả năng chi trả cho chế độ ăn lành mạnh (${hd.year}).`) : ""} ${worldLine} ${cite("fpn")}</p>`;
+        }
+        return `<h3 class="h5 mt-4">${tr("Can you afford a healthy diet?", "Bạn có đủ tiền cho một chế độ ăn lành mạnh?")}</h3>
+        <p>${tr(`The cheapest diet that meets dietary guidelines cost <strong>${money(hd.cost_2021ppp)}</strong> per person a day in ${cname} in ${hd.cost_year} (2021 int. $)${hd.cost_local_today !== undefined ? `, about ${fixed(hd.cost_local_today, 0)} ${esc(r.country.currency || "")} today` : ""}.
+                 That's <strong>${pct(hd.share_of_income * 100, 0)}</strong> of your income per person. The FAO and World Bank count a healthy diet as unaffordable when it costs more than ${rule} of income, so for you it is <strong>${hd.affordable ? "affordable" : "not affordable"}</strong>.`,
+                `Chế độ ăn rẻ nhất đáp ứng khuyến nghị dinh dưỡng có giá <strong>${money(hd.cost_2021ppp)}</strong> mỗi người mỗi ngày ở ${cname} năm ${hd.cost_year} (đô la quốc tế 2021)${hd.cost_local_today !== undefined ? `, khoảng ${fixed(hd.cost_local_today, 0)} ${esc(r.country.currency || "")} hiện nay` : ""}.
+                 Tức là <strong>${pct(hd.share_of_income * 100, 0)}</strong> thu nhập bình quân đầu người của bạn. FAO và Ngân hàng Thế giới coi chế độ ăn lành mạnh là không vừa khả năng khi chi phí vượt ${rule} thu nhập, nên với bạn nó <strong>${hd.affordable ? "vừa khả năng" : "không vừa khả năng"}</strong>.`)}</p>
+        <p class="small text-secondary">${tr(`${pct(hd.unaffordable_pct)} of people in ${cname}${hd.unaffordable_people ? ` (${people(hd.unaffordable_people)})` : ""} can't afford it (${hd.year}).`,
+                                             `${pct(hd.unaffordable_pct)} dân số ${cname}${hd.unaffordable_people ? ` (${people(hd.unaffordable_people)} người)` : ""} không đủ khả năng (${hd.year}).`)} ${worldLine} ${cite("fpn")} ${cite("sofi_2026")}</p>`;
+    })()}
     <h3 class="h5 mt-4">${tr("What it takes to move up", "Cần bao nhiêu để lên hạng")}</h3>
     ${(() => {
         const period = answers.income_period === "year" ? tr("a year", "mỗi năm") : tr("a month", "mỗi tháng");
@@ -439,8 +456,8 @@
         ${tr(`For comparison, ${pct(findex.saved_in_account_share_lmic * 100, 0)} of adults in low- and middle-income economies saved in a financial account in 2024.`,
              `Để so sánh, ${pct(findex.saved_in_account_share_lmic * 100, 0)} người trưởng thành ở các nền kinh tế thu nhập thấp và trung bình đã tiết kiệm qua tài khoản năm 2024.`)}`);
     html.push(section("security", tr("Financial security", "An ninh tài chính"), `
-    ${sec.global_pct !== undefined ? `<p>${tr(`Combining basic needs and food security, you're more financially secure than about <strong>${pct(sec.global_pct)}</strong> of people worldwide.`,
-                                              `Gộp nhu cầu cơ bản và an ninh lương thực, bạn an toàn về tài chính hơn khoảng <strong>${pct(sec.global_pct)}</strong> người trên thế giới.`)}</p>` : ""}
+    ${sec.global_pct !== undefined ? `<p>${tr(`Combining basic needs, food security and emergency money, you're more financially secure than about <strong>${pct(sec.global_pct)}</strong> of people worldwide.`,
+                                              `Gộp nhu cầu cơ bản, an ninh lương thực và khả năng xoay tiền khẩn cấp, bạn an toàn về tài chính hơn khoảng <strong>${pct(sec.global_pct)}</strong> người trên thế giới.`)}</p>` : ""}
     <div class="row g-4">
         <div class="col-lg-6"><h3 class="h5">${tr("Basic needs", "Nhu cầu cơ bản")}</h3>
             ${sec.gallup_group ? `<p>${tr(`You're in Gallup's <strong>${esc(lower(sec.gallup_label))}</strong> group:`, `Bạn thuộc nhóm <strong>${esc(sec.gallup_label)}</strong> của Gallup:`)} ${esc(lower(sec.gallup_definition))}
@@ -457,7 +474,43 @@
             <p class="small">${cite(findex.cite)}</p>
         </div>
         <div class="col-lg-6"><h3 class="h5">${tr("Food security", "An ninh lương thực")}</h3>${foodHtml}</div>
-    </div>`));
+    </div>
+    ${resilienceHtml()}`));
+
+    // ---------------------------------------------------------------- financial resilience (Findex)
+    function resilienceHtml() {
+        const em = sec.emergency, cv = sec.cover_expenses, src = sec.emergency_source, wr = sec.worry;
+        if (!em && !cv && !src && !wr) return "";
+        const amount = SES.emergencyAmount(r.country.iso3);
+        const dist = (x, title) => table([title, tr("World", "Thế giới"), cname], x.labels.map((label, i) =>
+            `<tr class="${label === x.label ? "table-active" : ""}"><td>${esc(label)}${label === x.label ? ` &larr; ${tr("you", "bạn")}` : ""}</td>
+                <td>${pct(x.world_shares[i])}</td><td>${x.country_shares ? pct(x.country_shares[i]) : "-"}</td></tr>`));
+        const parts = [];
+        if (em) parts.push(`<div class="col-lg-6"><h4 class="h6">${tr("Emergency money within 30 days", "Xoay tiền khẩn cấp trong 30 ngày")}</h4>
+            <p class="small">${tr(`Findex asks whether people could raise one-twentieth of their country's yearly income per person${amount ? ` (about ${fixed(amount.amount, 0)} ${esc(amount.currency)} in ${cname})` : ""} within a month.
+                You answered <strong>${esc(lower(em.label))}</strong>: more resilient than about <strong>${pct(em.world_pct)}</strong> of adults worldwide${em.national_pct !== undefined ? ` and ${pct(em.national_pct)} in ${cname}` : ""}.`,
+                `Findex hỏi liệu mọi người có thể xoay được một phần hai mươi thu nhập bình quân đầu người một năm của nước mình${amount ? ` (khoảng ${fixed(amount.amount, 0)} ${esc(amount.currency)} ở ${cname})` : ""} trong một tháng không.
+                Bạn trả lời <strong>${esc(em.label.toLowerCase())}</strong>: vững vàng hơn khoảng <strong>${pct(em.world_pct)}</strong> người trưởng thành trên thế giới${em.national_pct !== undefined ? ` và ${pct(em.national_pct)} ở ${cname}` : ""}.`)}</p>
+            ${dist(em, tr("Answer", "Câu trả lời"))}</div>`);
+        if (cv) parts.push(`<div class="col-lg-6"><h4 class="h6">${tr("Covering expenses after losing your main income", "Trang trải khi mất nguồn thu nhập chính")}</h4>
+            <p class="small">${tr(`You could cover expenses for <strong>${esc(lower(cv.label))}</strong>: longer than about ${pct(cv.world_pct)} of adults in the ${cv.world_economies} economies where Findex asks this (mostly low- and middle-income)${cv.national_pct !== undefined ? `, and ${pct(cv.national_pct)} in ${cname}` : ""}.`,
+                `Bạn có thể trang trải trong <strong>${esc(cv.label.toLowerCase())}</strong>: lâu hơn khoảng ${pct(cv.world_pct)} người trưởng thành ở ${cv.world_economies} nền kinh tế được Findex hỏi câu này (chủ yếu thu nhập thấp và trung bình)${cv.national_pct !== undefined ? `, và ${pct(cv.national_pct)} ở ${cname}` : ""}.`)}</p>
+            ${dist(cv, tr("How long", "Bao lâu"))}</div>`);
+        if (src) parts.push(`<div class="col-lg-6"><h4 class="h6">${tr("Main source of emergency money", "Nguồn tiền khẩn cấp chính")}</h4>
+            <p class="small">${tr(`Among adults who could raise the money, ${src.world_same !== undefined ? pct(src.world_same) : "-"} worldwide would mostly rely on ${esc(lower(src.label))}${src.country_same !== undefined ? `, and ${pct(src.country_same)} in ${cname}` : ""}.`,
+                `Trong số người trưởng thành có thể xoay được tiền, ${src.world_same !== undefined ? pct(src.world_same) : "-"} trên thế giới chủ yếu dựa vào ${esc(src.label.toLowerCase())}${src.country_same !== undefined ? `, và ${pct(src.country_same)} ở ${cname}` : ""}.`)}</p>
+            ${dist(src, tr("Source", "Nguồn"))}</div>`);
+        if (wr) parts.push(`<div class="col-lg-6"><h4 class="h6">${tr("Biggest financial worry", "Nỗi lo tài chính lớn nhất")}</h4>
+            <p class="small">${wr.world_same !== undefined ? tr(`${pct(wr.world_same)} of adults in the surveyed economies who name a worry share yours${wr.country_same !== undefined ? `, and ${pct(wr.country_same)} in ${cname}` : ""}.`,
+                `${pct(wr.world_same)} người trưởng thành ở các nền kinh tế được khảo sát có cùng nỗi lo với bạn${wr.country_same !== undefined ? `, và ${pct(wr.country_same)} ở ${cname}` : ""}.`)
+                : tr("None of these worries you most.", "Không vấn đề nào trong số này khiến bạn lo nhất.")}</p>
+            ${dist(wr, tr("Worry", "Nỗi lo"))}</div>`);
+        const year = (em && em.year) || (cv && cv.year);
+        return `<h3 class="h5 mt-4">${tr("Financial resilience", "Khả năng chống chịu tài chính")}</h3>
+            <div class="row g-4">${parts.join("")}</div>
+            <p class="small text-secondary">${tr(`Global Findex${year ? ` (${cname}: ${year})` : ""}; world shares are weighted by each economy's adult population. Emergency money counts toward your financial-security score; the other three are context.`,
+                `Global Findex${year ? ` (${cname}: ${year})` : ""}; tỷ lệ thế giới được gia quyền theo dân số trưởng thành của từng nền kinh tế. Khả năng xoay tiền khẩn cấp được tính vào điểm an ninh tài chính; ba mục còn lại chỉ để tham khảo.`)} ${cite("findex_2025")}</p>`;
+    }
 
     // ---------------------------------------------------------------- social protection
     const sp = r.social_protection;

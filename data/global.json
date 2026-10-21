@@ -7,9 +7,19 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (97 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
+   "name": "World Bank World Development Indicators API (98 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
+  },
+  "findex": {
+   "name": "World Bank Global Findex database via the World Bank API (source 28): financial resilience",
+   "url": "https://api.worldbank.org/v2/country/all/indicator/fin24aN?source=28",
+   "home": "https://www.worldbank.org/en/publication/globalfindex"
+  },
+  "fpn": {
+   "name": "World Bank Food Prices for Nutrition (API source 88): cost and affordability of a healthy diet",
+   "url": "https://api.worldbank.org/v2/sources/88/country/all/series/CoHD_headcount/classification/all/time/all",
+   "home": "https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition"
   },
   "imf": {
    "name": "IMF World Economic Outlook, October 2026: inflation, average consumer prices (PCPIPCH)",
@@ -2720,6 +2730,134 @@
    }
   }
  },
+ "findex": {
+  "emergency": {
+   "keys": [
+    "not_possible",
+    "very_difficult",
+    "somewhat_difficult",
+    "not_difficult"
+   ],
+   "indicators": [
+    "fin24aN",
+    "fin24aVD",
+    "fin24aSD",
+    "fin24aND"
+   ],
+   "shares": [
+    0.076,
+    0.3375,
+    0.2998,
+    0.2867
+   ],
+   "economies": 142,
+   "adults_covered": 6001300782,
+   "adults_world": 6210117111
+  },
+  "emergency_source": {
+   "keys": [
+    "savings",
+    "family",
+    "work",
+    "borrowing",
+    "sale_of_assets",
+    "other"
+   ],
+   "indicators": [
+    "fin24sav",
+    "fin24fam",
+    "fin24work",
+    "fin24bor",
+    "fin24sell",
+    "fin24other"
+   ],
+   "shares": [
+    0.2623,
+    0.3254,
+    0.2125,
+    0.0837,
+    0.0931,
+    0.023
+   ],
+   "economies": 142,
+   "adults_covered": 6001300782,
+   "adults_world": 6210117111
+  },
+  "cover_expenses": {
+   "keys": [
+    "under_2_weeks",
+    "one_month",
+    "two_months",
+    "over_2_months"
+   ],
+   "indicators": [
+    "fin24ba",
+    "fin24bb",
+    "fin24bc",
+    "fin24bd"
+   ],
+   "shares": [
+    0.2004,
+    0.2767,
+    0.1766,
+    0.3464
+   ],
+   "economies": 98,
+   "adults_covered": 4829734193,
+   "adults_world": 6210117111
+  },
+  "worry": {
+   "keys": [
+    "old_age",
+    "business",
+    "medical",
+    "bills",
+    "school"
+   ],
+   "indicators": [
+    "fin45a",
+    "fin45b",
+    "fin45c",
+    "fin45d",
+    "fin45e"
+   ],
+   "shares": [
+    0.147,
+    0.0916,
+    0.2721,
+    0.3326,
+    0.1566
+   ],
+   "economies": 98,
+   "adults_covered": 4829734193,
+   "adults_world": 6210117111
+  }
+ },
+ "healthy_diet": {
+  "world": {
+   "year": 2025,
+   "unaffordable_share": 0.327,
+   "unaffordable_people": 2692100000,
+   "cost_ppp_current": 4.7,
+   "cost_ppp_year": 2025
+  },
+  "income_share": 0.52,
+  "checked": 146,
+  "outliers": [
+   [
+    "BGR",
+    1.86
+   ],
+   [
+    "SLE",
+    1000.09
+   ],
+   [
+    "SSD",
+    0.71
+   ]
+  ]
+ },
  "prices": {
   "base_year": 2021,
   "last_year": 2026,
@@ -2803,6 +2941,7 @@
   "SE.LPV.PRIM": "Learning poverty (% of 10-year-olds unable to read a simple text)",
   "IT.CEL.SETS.P2": "Mobile cellular subscriptions (per 100 people)",
   "SH.XPD.CHEX.PC.CD": "Current health expenditure per person (current US$)",
+  "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
   "per_allsp.cov_pop_tot": "Coverage of social protection and labour programmes (% of population)",
   "per_sa_allsa.cov_pop_tot": "Coverage of social assistance (% of population)",
   "per_si_allsi.cov_pop_tot": "Coverage of social insurance (% of population)",

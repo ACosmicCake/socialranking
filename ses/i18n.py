@@ -32,6 +32,7 @@ UI = {
     # quiz
     "Quiz": "Bài trắc nghiệm",
     "This country's survey measures income.": "Khảo sát của nước này đo thu nhập.",
+    "In your country that is about {amount}.": "Ở nước bạn, số tiền đó vào khoảng {amount}.",
     "This country's survey measures spending (consumption).": "Khảo sát của nước này đo chi tiêu (tiêu dùng).",
     "Back": "Quay lại",
     "Next": "Tiếp",
@@ -221,6 +222,32 @@ QUESTIONS = {
     "account": {"text": "Bạn (tự mình hoặc cùng người khác) có tài khoản ở ngân hàng hoặc tổ chức tài chính khác, hoặc "
                         "dùng dịch vụ tiền di động không?"},
     "saved": {"text": "Trong 12 tháng qua, bạn có tự để dành được khoản tiền nào không, bằng bất kỳ cách nào?"},
+    "emergency_funds": {
+        "text": "Hãy hình dung bạn gặp việc khẩn cấp và cần trả một khoản bằng một phần hai mươi thu nhập bình quân "
+                "đầu người một năm của nước bạn. Bạn có thể xoay được số tiền đó trong 30 ngày tới không, và khó đến mức nào?",
+        "help": "Tính mọi cách bạn có thể có tiền: tiết kiệm, gia đình hoặc bạn bè, làm việc, vay hoặc bán đồ.",
+        "options": {"not_possible": "Không thể", "very_difficult": "Có thể, nhưng rất khó",
+                    "somewhat_difficult": "Có thể, nhưng hơi khó", "not_difficult": "Có thể, và hoàn toàn không khó"},
+    },
+    "emergency_source": {
+        "text": "Nguồn tiền chính để có số tiền đó là gì?",
+        "options": {"savings": "Tiền tiết kiệm", "family": "Gia đình, họ hàng hoặc bạn bè",
+                    "work": "Tiền từ làm việc, kể cả làm thêm giờ hoặc làm thêm việc thứ hai",
+                    "borrowing": "Vay ngân hàng, chủ lao động hoặc người cho vay tư nhân",
+                    "sale_of_assets": "Bán thứ gì đó tôi sở hữu", "other": "Nguồn khác"},
+    },
+    "cover_expenses": {
+        "text": "Nếu hộ bạn mất nguồn thu nhập chính, bạn có thể trang trải chi phí sinh hoạt trong bao lâu, bằng tiền "
+                "tiết kiệm, vay mượn, bán đồ, nhờ gia đình hoặc bạn bè giúp, hoặc bất kỳ cách nào khác?",
+        "options": {"under_2_weeks": "Dưới hai tuần", "one_month": "Khoảng một tháng", "two_months": "Khoảng hai tháng",
+                    "over_2_months": "Hơn hai tháng"},
+    },
+    "worry": {
+        "text": "Vấn đề tài chính nào sau đây khiến bạn lo lắng nhất?",
+        "options": {"medical": "Chi phí chữa bệnh nếu ốm nặng hoặc tai nạn", "bills": "Chi tiêu hằng tháng hoặc hóa đơn",
+                    "old_age": "Có đủ tiền khi về già", "school": "Học phí", "business": "Có đủ tiền cho việc kinh doanh",
+                    "none": "Không có vấn đề nào khiến tôi lo"},
+    },
     "social_protection": {
         "text": "Trong 12 tháng qua, bạn hoặc ai trong hộ có nhận khoản nào sau đây không? Chọn tất cả phù hợp.",
         "help": "Chỉ tính các chương trình của nhà nước, không tính bảo hiểm tư nhân hay giúp đỡ từ gia đình.",
@@ -279,6 +306,16 @@ LABELS = {
         "SH.XPD.CHEX.PC.CD": "Chi tiêu y tế bình quân đầu người (đô la Mỹ)",
         "SP.DYN.LE00.FE.IN": "Tuổi thọ trung bình của nữ (năm)",
         "SP.DYN.LE00.MA.IN": "Tuổi thọ trung bình của nam (năm)",
+    },
+    "findex": {
+        "emergency": {"not_possible": "Không thể", "very_difficult": "Có thể, nhưng rất khó",
+                      "somewhat_difficult": "Có thể, nhưng hơi khó", "not_difficult": "Có thể và không khó"},
+        "cover_expenses": {"under_2_weeks": "Dưới hai tuần", "one_month": "Khoảng một tháng",
+                           "two_months": "Khoảng hai tháng", "over_2_months": "Hơn hai tháng"},
+        "emergency_source": {"savings": "Tiết kiệm", "family": "Gia đình hoặc bạn bè", "work": "Làm việc",
+                             "borrowing": "Đi vay", "sale_of_assets": "Bán đồ", "other": "Khác"},
+        "worry": {"old_age": "Tiền khi về già", "business": "Tiền cho kinh doanh", "medical": "Chi phí y tế",
+                  "bills": "Chi tiêu hằng tháng, hóa đơn", "school": "Học phí", "none": "Không có"},
     },
     "account_groups": {
         "sex": {"F": "Phụ nữ", "M": "Nam giới"},

@@ -57,6 +57,13 @@
             const basis = form.querySelector(`input[name="income_basis"][value="${welfare}"]`);
             if (basis && !form.querySelector('input[name="income_basis"]:checked')) basis.checked = true;
         }
+        const amount = document.getElementById("emergency-amount");
+        if (amount) {
+            const a = SES.emergencyAmount(opt.value);
+            amount.hidden = !a;
+            if (a) amount.textContent = amount.dataset.template.replace("{amount}",
+                `${a.amount.toLocaleString(document.documentElement.lang === "vi" ? "vi-VN" : "en-US")} ${a.currency}`);
+        }
         const allowed = opt.dataset.exact === "yes";
         exact.disabled = !allowed;
         unavailable.hidden = allowed;

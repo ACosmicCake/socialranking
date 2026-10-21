@@ -275,6 +275,32 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1195,
+     0.4573,
+     0.3773,
+     0.0458
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.0135,
+     0.774,
+     0.0849,
+     0.0092,
+     0.1116,
+     0.0068
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1485.82,
+    "year": 2024
+   }
+  },
   "region": "MEA",
   "m49": "004",
   "iso2": "AF",
@@ -558,6 +584,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     59.07
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    29716.42
    ],
    "per_allsp.cov_pop_tot": [
     2011,
@@ -862,6 +892,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1077,
+     0.285,
+     0.3953,
+     0.2119
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2354,
+     0.5409,
+     0.1509,
+     0.0352,
+     0.0346,
+     0.003
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3211,
+     0.262,
+     0.1763,
+     0.2406
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1799,
+     0.0385,
+     0.4512,
+     0.2418,
+     0.0886
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 56306.57,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.119,
+   "unaffordable_people": 300000,
+   "cost_year": 2025,
+   "cost_lcu": 235.21,
+   "cost_2021ppp": 3.9664,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "008",
   "iso2": "AL",
@@ -1129,6 +1213,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     590.63
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1126131.36
    ],
    "per_allsp.cov_pop_tot": [
     2018,
@@ -1464,6 +1552,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1244,
+     0.1631,
+     0.5361,
+     0.1764
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.181,
+     0.5557,
+     0.1557,
+     0.0572,
+     0.0472,
+     0.0032
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3009,
+     0.2629,
+     0.2119,
+     0.2243
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0997,
+     0.1496,
+     0.3897,
+     0.2844,
+     0.0767
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 39065.01,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.388,
+   "unaffordable_people": 18400000,
+   "cost_year": 2025,
+   "cost_lcu": 227.24,
+   "cost_2021ppp": 4.582,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "012",
   "iso2": "DZ",
@@ -1743,6 +1885,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     233.38
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    781300.25
    ]
   },
   "gdp_pc_population_share_below": 0.53999,
@@ -2109,6 +2255,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 2444.03,
+    "year": 2025
+   }
+  },
   "region": "ECS",
   "m49": "020",
   "iso2": "AD",
@@ -2208,6 +2360,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     3605.2
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    48880.63
    ]
   },
   "gdp_pc_population_share_below": 0.91735,
@@ -2403,6 +2559,21 @@
      0.0027
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 158872.23,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.729,
+   "unaffordable_people": 28400000,
+   "cost_year": 2025,
+   "cost_lcu": 1886.33,
+   "cost_2021ppp": 4.3577,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "024",
@@ -2668,6 +2839,10 @@
     2023,
     76.07
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    3177444.68
+   ],
    "per_allsp.cov_pop_tot": [
     2018,
     10.33
@@ -2918,6 +3093,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 3242.25,
+    "year": 2025
+   }
+  },
   "region": "LCN",
   "m49": "028",
   "iso2": "AG",
@@ -3013,6 +3194,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     841.25
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    64845.08
    ]
   },
   "gdp_pc_population_share_below": 0.85375,
@@ -3260,6 +3445,51 @@
       0.1266
      ]
     }
+   }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0828,
+     0.4268,
+     0.3232,
+     0.1672
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1675,
+     0.4289,
+     0.1743,
+     0.1039,
+     0.1097,
+     0.0157
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2122,
+     0.2867,
+     0.1798,
+     0.3213
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1395,
+     0.0215,
+     0.3008,
+     0.4896,
+     0.0486
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 905506.55,
+    "year": 2025
    }
   },
   "region": "LCN",
@@ -3525,6 +3755,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1456.99
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    18110131.0
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -3858,6 +4092,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0784,
+     0.1539,
+     0.4424,
+     0.3253
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1276,
+     0.4946,
+     0.1574,
+     0.1079,
+     0.1065,
+     0.006
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2637,
+     0.3243,
+     0.143,
+     0.2689
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0612,
+     0.062,
+     0.2919,
+     0.4964,
+     0.0884
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 177868.35,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.44,
+   "unaffordable_people": 1300000,
+   "cost_year": 2025,
+   "cost_lcu": 722.36,
+   "cost_2021ppp": 3.8325,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "051",
   "iso2": "AM",
@@ -4138,6 +4426,10 @@
     2023,
     766.96
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    3557367.06
+   ],
    "per_allsp.cov_pop_tot": [
     2022,
     75.29
@@ -4389,6 +4681,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 3266.29,
+    "year": 2024
+   }
+  },
   "region": "LCN",
   "m49": "533",
   "iso2": "AW",
@@ -4452,6 +4750,10 @@
    "IT.CEL.SETS.P2": [
     2022,
     130.65
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    65325.83
    ]
   },
   "gdp_pc_population_share_below": 0.89288,
@@ -4726,6 +5028,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0327,
+     0.1202,
+     0.1909,
+     0.6562
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6743,
+     0.0789,
+     0.0899,
+     0.0644,
+     0.0434,
+     0.0492
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4891.55,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.032,
+   "unaffordable_people": 900000,
+   "cost_year": 2025,
+   "cost_lcu": 4.76,
+   "cost_2021ppp": 2.6398,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "036",
   "iso2": "AU",
@@ -4985,6 +5322,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     6980.39
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    97831.02
    ]
   },
   "gdp_pc_population_share_below": 0.94794,
@@ -5259,6 +5600,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0645,
+     0.0796,
+     0.2027,
+     0.6532
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6229,
+     0.1509,
+     0.0947,
+     0.0777,
+     0.0181,
+     0.0357
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2792.85,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.029,
+   "unaffordable_people": 300000,
+   "cost_year": 2025,
+   "cost_lcu": 2.38,
+   "cost_2021ppp": 2.5321,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "040",
   "iso2": "AT",
@@ -5526,6 +5902,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     6739.31
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    55856.98
    ]
   },
   "gdp_pc_population_share_below": 0.94552,
@@ -5716,6 +6096,60 @@
      0.00416
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.2069,
+     0.2955,
+     0.3922,
+     0.1055
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0835,
+     0.4892,
+     0.2168,
+     0.0749,
+     0.1321,
+     0.0035
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3169,
+     0.3326,
+     0.1951,
+     0.1554
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1551,
+     0.04,
+     0.4314,
+     0.2528,
+     0.1207
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 613.43,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.007,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 2.38,
+   "cost_2021ppp": 3.6862,
+   "cost_method": "local"
   },
   "region": "ECS",
   "m49": "031",
@@ -6001,6 +6435,10 @@
     2023,
     299.81
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    12268.67
+   ],
    "per_allsp.cov_pop_tot": [
     2015,
     64.64
@@ -6247,6 +6685,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1894.06,
+    "year": 2024
+   }
+  },
   "region": "LCN",
   "m49": "044",
   "iso2": "BS",
@@ -6442,6 +6886,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     2262.33
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    37881.25
    ]
   },
   "gdp_pc_population_share_below": 0.89894,
@@ -6716,6 +7164,12 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 530.69,
+    "year": 2025
+   }
+  },
   "region": "MEA",
   "m49": "048",
   "iso2": "BH",
@@ -6967,6 +7421,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1175.82
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    10613.82
    ]
   },
   "gdp_pc_population_share_below": 0.86252,
@@ -7240,6 +7698,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0435,
+     0.5984,
+     0.2874,
+     0.0707
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0589,
+     0.5032,
+     0.2681,
+     0.0968,
+     0.0663,
+     0.0068
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.285,
+     0.3001,
+     0.201,
+     0.2138
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1015,
+     0.031,
+     0.1038,
+     0.6459,
+     0.1177
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 16557.4,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.386,
+   "unaffordable_people": 67800000,
+   "cost_year": 2025,
+   "cost_lcu": 160.36,
+   "cost_2021ppp": 3.9332,
+   "cost_method": "local"
   },
   "region": "SAS",
   "m49": "050",
@@ -7528,6 +8040,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     53.46
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    331147.93
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -7833,6 +8349,12 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 2720.85,
+    "year": 2025
+   }
+  },
   "region": "LCN",
   "m49": "052",
   "iso2": "BB",
@@ -8040,6 +8562,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1286.48
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    54417.01
    ]
   },
   "gdp_pc_population_share_below": 0.85732,
@@ -8231,6 +8757,21 @@
      0.0035
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1558.78,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.006,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 3.41,
+   "cost_2021ppp": 3.3829,
+   "cost_method": "local"
   },
   "region": "ECS",
   "m49": "112",
@@ -8499,6 +9040,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     558.23
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    31175.68
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -8825,6 +9370,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0383,
+     0.1361,
+     0.2343,
+     0.5913
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5656,
+     0.1535,
+     0.146,
+     0.0754,
+     0.0108,
+     0.0487
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2722.05,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.009,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 2.34,
+   "cost_2021ppp": 2.4794,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "056",
   "iso2": "BE",
@@ -9084,6 +9664,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     5931.01
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    54440.95
    ]
   },
   "gdp_pc_population_share_below": 0.94406,
@@ -9360,6 +9944,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0329,
+     0.3159,
+     0.2834,
+     0.3678
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2714,
+     0.3215,
+     0.1632,
+     0.0831,
+     0.1567,
+     0.0042
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2013,
+     0.3216,
+     0.2036,
+     0.2735
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1676,
+     0.018,
+     0.3926,
+     0.2981,
+     0.1237
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 747.64,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.178,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 5.1,
+   "cost_2021ppp": 3.941,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "084",
   "iso2": "BZ",
@@ -9619,6 +10257,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     309.41
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    14952.81
    ],
    "per_allsp.cov_pop_tot": [
     2009,
@@ -9951,6 +10593,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0344,
+     0.4221,
+     0.3976,
+     0.146
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1581,
+     0.3093,
+     0.266,
+     0.0965,
+     0.1682,
+     0.002
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.211,
+     0.3491,
+     0.2037,
+     0.2362
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0665,
+     0.2035,
+     0.3107,
+     0.2052,
+     0.2141
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 47699.74,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.535,
+   "unaffordable_people": 7900000,
+   "cost_year": 2025,
+   "cost_lcu": 701.37,
+   "cost_2021ppp": 3.0057,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "204",
   "iso2": "BJ",
@@ -10243,6 +10939,10 @@
     2023,
     46.53
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    953994.81
+   ],
    "per_allsp.cov_pop_tot": [
     2021,
     8.66
@@ -10493,6 +11193,10 @@
    "IT.CEL.SETS.P2": [
     2024,
     96.68
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    146810.63
    ]
   },
   "gdp_pc_population_share_below": 0.9999,
@@ -10685,6 +11389,21 @@
      0.00177
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 18508.21,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.037,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 131.6,
+   "cost_2021ppp": 5.2022,
+   "cost_method": "local"
   },
   "region": "SAS",
   "m49": "064",
@@ -10961,6 +11680,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     162.2
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    370164.21
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -11292,6 +12015,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1059,
+     0.2375,
+     0.4671,
+     0.1896
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2775,
+     0.3134,
+     0.2539,
+     0.0436,
+     0.1002,
+     0.0113
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1328,
+     0.3285,
+     0.1834,
+     0.3553
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1541,
+     0.0631,
+     0.3871,
+     0.2726,
+     0.123
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1731.73,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.105,
+   "unaffordable_people": 1300000,
+   "cost_year": 2025,
+   "cost_lcu": 14.54,
+   "cost_2021ppp": 4.5326,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "068",
   "iso2": "BO",
@@ -11552,6 +12329,10 @@
     2023,
     255.04
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    34634.66
+   ],
    "per_allsp.cov_pop_tot": [
     2021,
     96.94
@@ -11797,6 +12578,60 @@
      0.00252
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0568,
+     0.1233,
+     0.3289,
+     0.491
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2613,
+     0.3891,
+     0.2289,
+     0.0501,
+     0.04,
+     0.0305
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3397,
+     0.2939,
+     0.302,
+     0.0644
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2833,
+     0.0424,
+     0.2989,
+     0.2923,
+     0.0831
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 900.47,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.127,
+   "unaffordable_people": 400000,
+   "cost_year": 2025,
+   "cost_lcu": 5.13,
+   "cost_2021ppp": 5.3509,
+   "cost_method": "local"
   },
   "region": "ECS",
   "m49": "070",
@@ -12069,6 +12904,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     772.89
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    18009.35
    ],
    "per_allsp.cov_pop_tot": [
     2015,
@@ -12397,6 +13236,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.2135,
+     0.4706,
+     0.2009,
+     0.1151
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0943,
+     0.4193,
+     0.0936,
+     0.1512,
+     0.2367,
+     0.0049
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1241,
+     0.2223,
+     0.1839,
+     0.4698
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0409,
+     0.1205,
+     0.1374,
+     0.5874,
+     0.1138
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 5063.62,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.599,
+   "unaffordable_people": 1500000,
+   "cost_year": 2025,
+   "cost_lcu": 23.58,
+   "cost_2021ppp": 3.7113,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "072",
   "iso2": "BW",
@@ -12652,6 +13545,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     489.6
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    101272.31
    ],
    "per_allsp.cov_pop_tot": [
     2015,
@@ -12984,6 +13881,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.08,
+     0.3373,
+     0.3695,
+     0.2132
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1709,
+     0.2843,
+     0.3424,
+     0.1212,
+     0.0769,
+     0.0043
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1195,
+     0.2589,
+     0.1692,
+     0.4524
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2077,
+     0.042,
+     0.3333,
+     0.3883,
+     0.0287
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2895.54,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.211,
+   "unaffordable_people": 44800000,
+   "cost_year": 2025,
+   "cost_lcu": 12.61,
+   "cost_2021ppp": 4.1071,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "076",
   "iso2": "BR",
@@ -13259,6 +14210,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1009.84
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    57910.71
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -13780,6 +14735,12 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 2175.7,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "096",
   "iso2": "BN",
@@ -13975,6 +14936,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     733.01
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    43514.04
    ]
   },
   "gdp_pc_population_share_below": 0.86404,
@@ -14250,6 +15215,59 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1239,
+     0.131,
+     0.338,
+     0.4071
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.372,
+     0.3795,
+     0.1434,
+     0.0706,
+     0.0228,
+     0.0117
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1721,
+     0.2539,
+     0.2174,
+     0.3566
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1983,
+     0.037,
+     0.5054,
+     0.2083,
+     0.051
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 855.5,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.207,
+   "unaffordable_people": 1400000,
+   "cost_year": 2025,
+   "cost_2021ppp": 4.8349,
+   "cost_method": "ppp"
+  },
   "region": "ECS",
   "m49": "100",
   "iso2": "BG",
@@ -14517,6 +15535,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1257.88
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    17109.92
    ]
   },
   "gdp_pc_population_share_below": 0.85057,
@@ -14709,6 +15731,60 @@
      0.00098
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0168,
+     0.365,
+     0.4605,
+     0.1577
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1663,
+     0.3739,
+     0.2265,
+     0.0775,
+     0.152,
+     0.0038
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2796,
+     0.2626,
+     0.1763,
+     0.2815
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0886,
+     0.0563,
+     0.4078,
+     0.3089,
+     0.1385
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 31427.88,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.655,
+   "unaffordable_people": 15800000,
+   "cost_year": 2025,
+   "cost_lcu": 757.05,
+   "cost_2021ppp": 3.3034,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "854",
@@ -14989,6 +16065,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     71.73
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    628557.66
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -15319,6 +16399,21 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 62229.41,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.909,
+   "unaffordable_people": 13100000,
+   "cost_year": 2025,
+   "cost_lcu": 6256.22,
+   "cost_2021ppp": 3.9062,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "108",
   "iso2": "BI",
@@ -15550,6 +16645,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     28.14
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1244588.1
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -15878,6 +16977,51 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0713,
+     0.3352,
+     0.4279,
+     0.1656
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1472,
+     0.4273,
+     0.1658,
+     0.0849,
+     0.1632,
+     0.0116
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3041,
+     0.3564,
+     0.1223,
+     0.2171
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1261,
+     0.0649,
+     0.3881,
+     0.2912,
+     0.1298
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 566255.37,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "116",
   "iso2": "KH",
@@ -16165,6 +17309,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     114.56
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    11325107.37
    ],
    "per_allsp.cov_pop_tot": [
     2013,
@@ -16472,6 +17620,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0523,
+     0.4225,
+     0.3553,
+     0.17
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1607,
+     0.3719,
+     0.2152,
+     0.0676,
+     0.1682,
+     0.0164
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1962,
+     0.2442,
+     0.1779,
+     0.3817
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0641,
+     0.1217,
+     0.3679,
+     0.2232,
+     0.223
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 56492.31,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.553,
+   "unaffordable_people": 16500000,
+   "cost_year": 2025,
+   "cost_lcu": 957.26,
+   "cost_2021ppp": 3.8475,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "120",
   "iso2": "CM",
@@ -16739,6 +17941,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     79.1
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1129846.2
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -17073,6 +18279,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0533,
+     0.1279,
+     0.2216,
+     0.5972
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5105,
+     0.1083,
+     0.1587,
+     0.1139,
+     0.0286,
+     0.0802
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 3897.83,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.03,
+   "unaffordable_people": 1200000,
+   "cost_year": 2025,
+   "cost_lcu": 5.5,
+   "cost_2021ppp": 3.798,
+   "cost_method": "local"
+  },
   "region": "NAC",
   "m49": "124",
   "iso2": "CA",
@@ -17340,6 +18581,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     6377.97
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    77956.69
    ]
   },
   "gdp_pc_population_share_below": 0.91736,
@@ -17532,6 +18777,21 @@
      0.00028
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 27995.57,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.493,
+   "unaffordable_people": 300000,
+   "cost_year": 2025,
+   "cost_lcu": 205.51,
+   "cost_2021ppp": 3.2642,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "132",
@@ -17756,6 +19016,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     290.13
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    559911.3
    ]
   },
   "gdp_pc_population_share_below": 0.53512,
@@ -17995,6 +19259,10 @@
    "IT.CEL.SETS.P2": [
     2022,
     139.31
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    70198.18
    ]
   },
   "gdp_pc_population_share_below": 0.9981,
@@ -18273,6 +19541,21 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 17111.79,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.876,
+   "unaffordable_people": 4800000,
+   "cost_year": 2025,
+   "cost_lcu": 1133.92,
+   "cost_2021ppp": 3.6802,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "140",
@@ -18561,6 +19844,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     53.81
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    342235.8
    ]
   },
   "gdp_pc_population_share_below": 0.00713,
@@ -18756,6 +20043,60 @@
      0.00095
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0776,
+     0.4975,
+     0.3483,
+     0.0766
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1127,
+     0.2776,
+     0.1947,
+     0.0424,
+     0.351,
+     0.0216
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2598,
+     0.2568,
+     0.1951,
+     0.2883
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0647,
+     0.1192,
+     0.3076,
+     0.2753,
+     0.2332
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 28398.99,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.666,
+   "unaffordable_people": 14000000,
+   "cost_year": 2025,
+   "cost_lcu": 906.44,
+   "cost_2021ppp": 3.7034,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "148",
@@ -19048,6 +20389,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     47.44
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    567979.75
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -19649,6 +20994,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1484,
+     0.2751,
+     0.3276,
+     0.2489
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.3337,
+     0.3923,
+     0.1394,
+     0.0881,
+     0.0174,
+     0.0291
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 809621.71,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.368,
+   "unaffordable_people": 7300000,
+   "cost_year": 2025,
+   "cost_lcu": 2665.92,
+   "cost_2021ppp": 4.3231,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "152",
   "iso2": "CL",
@@ -19920,6 +21300,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     1759.71
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    16192434.15
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -20330,6 +21714,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0491,
+     0.1122,
+     0.2859,
+     0.5528
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.4138,
+     0.1881,
+     0.2928,
+     0.0407,
+     0.0408,
+     0.0239
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1396,
+     0.2277,
+     0.174,
+     0.4587
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1891,
+     0.0996,
+     0.3855,
+     0.2245,
+     0.1014
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4954.2,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.113,
+   "unaffordable_people": 160400000,
+   "cost_year": 2025,
+   "cost_lcu": 12.6,
+   "cost_2021ppp": 3.0661,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "156",
   "iso2": "CN",
@@ -20605,6 +22043,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     763.38
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    99083.95
    ],
    "per_allsp.cov_pop_tot": [
     2013,
@@ -20931,6 +22373,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1283,
+     0.3726,
+     0.3556,
+     0.1435
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1339,
+     0.517,
+     0.1742,
+     0.1046,
+     0.0591,
+     0.0112
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1352,
+     0.3437,
+     0.1874,
+     0.3337
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2101,
+     0.0479,
+     0.2286,
+     0.4399,
+     0.0735
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1704982.07,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.359,
+   "unaffordable_people": 19200000,
+   "cost_year": 2025,
+   "cost_lcu": 7952.04,
+   "cost_2021ppp": 3.8274,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "170",
   "iso2": "CO",
@@ -21219,6 +22715,10 @@
     2024,
     644.31
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    34099641.49
+   ],
    "per_allsp.cov_pop_tot": [
     2022,
     40.98
@@ -21469,6 +22969,60 @@
      0.00551
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1275,
+     0.3618,
+     0.3111,
+     0.1996
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2543,
+     0.2295,
+     0.2135,
+     0.0847,
+     0.1481,
+     0.07
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.068,
+     0.2045,
+     0.2113,
+     0.5161
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.08,
+     0.0734,
+     0.2528,
+     0.1666,
+     0.4272
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 45090.51,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.486,
+   "unaffordable_people": 400000,
+   "cost_year": 2025,
+   "cost_lcu": 1388.58,
+   "cost_2021ppp": 4.6077,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "174",
@@ -21745,6 +23299,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     102.23
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    901810.24
    ],
    "per_allsp.cov_pop_tot": [
     2020,
@@ -22076,6 +23634,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.091,
+     0.3884,
+     0.2784,
+     0.2422
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2004,
+     0.2605,
+     0.2356,
+     0.0578,
+     0.2289,
+     0.0169
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2306,
+     0.246,
+     0.1846,
+     0.3387
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1025,
+     0.1483,
+     0.2525,
+     0.2319,
+     0.2647
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 103980.02,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.901,
+   "unaffordable_people": 101700000,
+   "cost_year": 2025,
+   "cost_lcu": 3056.33,
+   "cost_2021ppp": 1.9868,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "180",
   "iso2": "CD",
@@ -22367,6 +23979,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     23.43
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    2079600.47
    ],
    "per_allsp.cov_pop_tot": [
     2012,
@@ -22698,6 +24314,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0772,
+     0.4985,
+     0.3034,
+     0.1209
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1291,
+     0.306,
+     0.23,
+     0.1266,
+     0.2064,
+     0.002
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1947,
+     0.2574,
+     0.171,
+     0.3769
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0967,
+     0.1007,
+     0.3787,
+     0.1914,
+     0.2325
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 65516.74,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.773,
+   "unaffordable_people": 5000000,
+   "cost_year": 2025,
+   "cost_lcu": 1017.06,
+   "cost_2021ppp": 3.6932,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "178",
   "iso2": "CG",
@@ -22961,6 +24631,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     75.55
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1310334.84
    ]
   },
   "gdp_pc_population_share_below": 0.1941,
@@ -23238,6 +24912,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1434,
+     0.3282,
+     0.3303,
+     0.1981
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2508,
+     0.4317,
+     0.1374,
+     0.0837,
+     0.0865,
+     0.0099
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1406,
+     0.321,
+     0.1618,
+     0.3766
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1994,
+     0.0201,
+     0.2272,
+     0.4808,
+     0.0724
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 457387.88,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.418,
+   "unaffordable_people": 2200000,
+   "cost_year": 2025,
+   "cost_lcu": 1607.64,
+   "cost_2021ppp": 4.0821,
+   "cost_method": "local"
   },
   "region": "LCN",
   "m49": "188",
@@ -23526,6 +25254,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1163.3
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    9147757.67
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -23857,6 +25589,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1491,
+     0.1339,
+     0.3998,
+     0.3171
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.3556,
+     0.2665,
+     0.1367,
+     0.1605,
+     0.0773,
+     0.0034
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.0652,
+     0.3516,
+     0.2373,
+     0.3458
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.3472,
+     0.0384,
+     0.3083,
+     0.2186,
+     0.0875
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1186.66,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.12,
+   "unaffordable_people": 500000,
+   "cost_year": 2025,
+   "cost_lcu": 2.54,
+   "cost_2021ppp": 4.0397,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "191",
   "iso2": "HR",
@@ -24128,6 +25914,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1548.34
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    23733.19
    ],
    "per_allsp.cov_pop_tot": [
     2014,
@@ -24667,6 +26457,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2020,
     1199.35
+   ],
+   "NY.GNP.PCAP.CN": [
+    2019,
+    9093.55
    ]
   },
   "gdp_pc_population_share_below": 0.58031,
@@ -24902,6 +26696,10 @@
    "IT.CEL.SETS.P2": [
     2023,
     93.8
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    41607.05
    ]
   },
   "gdp_pc_population_share_below": 0.85373,
@@ -25176,6 +26974,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0778,
+     0.266,
+     0.3133,
+     0.3429
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.3172,
+     0.3812,
+     0.14,
+     0.085,
+     0.0314,
+     0.0452
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1643.12,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.015,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 2.4,
+   "cost_2021ppp": 3.3268,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "196",
   "iso2": "CY",
@@ -25439,6 +27272,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     2899.36
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    32862.39
    ]
   },
   "gdp_pc_population_share_below": 0.89938,
@@ -25715,6 +27552,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0358,
+     0.1161,
+     0.2259,
+     0.6222
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6181,
+     0.2633,
+     0.042,
+     0.0546,
+     0.0111,
+     0.0109
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 37598.95,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.058,
+   "unaffordable_people": 600000,
+   "cost_year": 2025,
+   "cost_lcu": 56.97,
+   "cost_2021ppp": 3.1375,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "203",
   "iso2": "CZ",
@@ -25990,6 +27862,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     2692.76
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    751978.94
    ]
   },
   "gdp_pc_population_share_below": 0.86984,
@@ -26263,6 +28139,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1188,
+     0.4112,
+     0.3276,
+     0.1425
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1939,
+     0.4312,
+     0.255,
+     0.035,
+     0.0779,
+     0.0069
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1965,
+     0.2456,
+     0.1924,
+     0.3656
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0593,
+     0.0988,
+     0.3269,
+     0.3097,
+     0.2054
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 83821.32,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.466,
+   "unaffordable_people": 15200000,
+   "cost_year": 2025,
+   "cost_lcu": 829.95,
+   "cost_2021ppp": 3.0607,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "384",
@@ -26555,6 +28485,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     87.68
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1676426.48
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -26885,6 +28819,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.01,
+     0.0931,
+     0.1176,
+     0.7794
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6178,
+     0.1812,
+     0.0386,
+     0.1054,
+     0.0234,
+     0.0335
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 26169.27,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.013,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 23.28,
+   "cost_2021ppp": 2.7767,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "208",
   "iso2": "DK",
@@ -27144,6 +29113,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     6745.06
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    523385.45
    ]
   },
   "gdp_pc_population_share_below": 0.95402,
@@ -27337,6 +29310,21 @@
      0.00311
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 35554.04,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.498,
+   "unaffordable_people": 600000,
+   "cost_year": 2025,
+   "cost_lcu": 377.69,
+   "cost_2021ppp": 3.5884,
+   "cost_method": "local"
   },
   "region": "MEA",
   "m49": "262",
@@ -27569,6 +29557,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     77.57
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    711080.73
    ],
    "per_allsp.cov_pop_tot": [
     2012,
@@ -27821,6 +29813,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1445.59,
+    "year": 2025
+   }
+  },
   "region": "LCN",
   "m49": "212",
   "iso2": "DM",
@@ -27916,6 +29914,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     492.45
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    28911.81
    ]
   },
   "gdp_pc_population_share_below": 0.61414,
@@ -28194,6 +30196,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0891,
+     0.3234,
+     0.2845,
+     0.303
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1568,
+     0.3395,
+     0.1285,
+     0.2899,
+     0.0798,
+     0.0055
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1421,
+     0.3147,
+     0.1814,
+     0.3617
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1683,
+     0.0445,
+     0.3587,
+     0.3301,
+     0.0983
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 32193.19,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.162,
+   "unaffordable_people": 1900000,
+   "cost_year": 2025,
+   "cost_lcu": 133.32,
+   "cost_2021ppp": 4.7087,
+   "cost_method": "local"
   },
   "region": "LCN",
   "m49": "214",
@@ -28486,6 +30542,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     488.87
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    643863.75
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -28816,6 +30876,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0724,
+     0.4209,
+     0.3921,
+     0.1146
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.208,
+     0.4634,
+     0.1206,
+     0.0808,
+     0.1023,
+     0.0249
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1155,
+     0.3532,
+     0.1897,
+     0.3416
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2233,
+     0.0352,
+     0.3173,
+     0.3087,
+     0.1155
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 346.41,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.257,
+   "unaffordable_people": 4700000,
+   "cost_year": 2025,
+   "cost_lcu": 1.62,
+   "cost_2021ppp": 3.0875,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "218",
   "iso2": "EC",
@@ -29107,6 +31221,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     509.49
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    6928.17
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -29439,6 +31557,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.2422,
+     0.3432,
+     0.3259,
+     0.0887
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0622,
+     0.7279,
+     0.0298,
+     0.0891,
+     0.0831,
+     0.0079
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3478,
+     0.2566,
+     0.12,
+     0.2756
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0512,
+     0.013,
+     0.4026,
+     0.4453,
+     0.0879
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 7328.71,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.385,
+   "unaffordable_people": 45500000,
+   "cost_year": 2025,
+   "cost_lcu": 46.77,
+   "cost_2021ppp": 4.2817,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "818",
   "iso2": "EG",
@@ -29722,6 +31894,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     141.41
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    146574.23
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -30056,6 +32232,51 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1111,
+     0.3637,
+     0.3541,
+     0.1711
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1982,
+     0.4199,
+     0.1222,
+     0.1259,
+     0.1053,
+     0.0286
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1403,
+     0.345,
+     0.2053,
+     0.3094
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1497,
+     0.0204,
+     0.2898,
+     0.4513,
+     0.0887
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 268.73,
+    "year": 2025
+   }
+  },
   "region": "LCN",
   "m49": "222",
   "iso2": "SV",
@@ -30340,6 +32561,10 @@
     2023,
     500.69
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    5374.5
+   ],
    "per_allsp.cov_pop_tot": [
     2022,
     88.75
@@ -30545,6 +32770,21 @@
      0.095
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 174280.37,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.632,
+   "unaffordable_people": 1200000,
+   "cost_year": 2025,
+   "cost_lcu": 1336.14,
+   "cost_2021ppp": 4.0875,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "226",
@@ -30753,6 +32993,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     233.68
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    3485607.49
    ]
   },
   "gdp_pc_population_share_below": 0.55788,
@@ -31350,6 +33594,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0525,
+     0.0698,
+     0.2376,
+     0.64
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.4971,
+     0.2674,
+     0.1357,
+     0.0496,
+     0.0231,
+     0.0271
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1501.54,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.102,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 3.23,
+   "cost_2021ppp": 3.72,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "233",
   "iso2": "EE",
@@ -31609,6 +33888,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     2437.84
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    30030.72
    ]
   },
   "gdp_pc_population_share_below": 0.86515,
@@ -31887,6 +34170,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.291,
+     0.463,
+     0.1756,
+     0.0705
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1355,
+     0.4125,
+     0.1112,
+     0.146,
+     0.1547,
+     0.0401
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1623,
+     0.1856,
+     0.1492,
+     0.5029
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0734,
+     0.1704,
+     0.113,
+     0.3387,
+     0.3046
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 3340.76,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.681,
+   "unaffordable_people": 900000,
+   "cost_year": 2025,
+   "cost_lcu": 29.24,
+   "cost_2021ppp": 4.008,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "748",
@@ -32176,6 +34513,10 @@
     2023,
     296.05
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    66815.19
+   ],
    "per_allsp.cov_pop_tot": [
     2016,
     81.2
@@ -32426,6 +34767,60 @@
      0.00162
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1408,
+     0.5054,
+     0.2784,
+     0.0753
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0862,
+     0.3816,
+     0.1973,
+     0.0229,
+     0.3009,
+     0.011
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2055,
+     0.3075,
+     0.169,
+     0.3179
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.064,
+     0.1449,
+     0.482,
+     0.2553,
+     0.0537
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 5561.54,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.679,
+   "unaffordable_people": 92000000,
+   "cost_year": 2025,
+   "cost_lcu": 128.23,
+   "cost_2021ppp": 3.6627,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "231",
@@ -32719,6 +35114,10 @@
     2023,
     34.8
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    111230.87
+   ],
    "per_allsp.cov_pop_tot": [
     2018,
     22.17
@@ -32961,6 +35360,10 @@
    "IT.CEL.SETS.P2": [
     2022,
     105.8
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    520045.75
    ]
   },
   "gdp_pc_population_share_below": 0.9539,
@@ -33210,6 +35613,21 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 717.87,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.58,
+   "unaffordable_people": 500000,
+   "cost_year": 2025,
+   "cost_lcu": 4.23,
+   "cost_2021ppp": 3.9987,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "242",
   "iso2": "FJ",
@@ -33457,6 +35875,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     212.89
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    14357.37
    ],
    "per_allsp.cov_pop_tot": [
     2013,
@@ -33783,6 +36205,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0232,
+     0.0835,
+     0.1589,
+     0.7343
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6101,
+     0.1427,
+     0.1086,
+     0.0779,
+     0.0286,
+     0.032
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2500.03,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.02,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 3.08,
+   "cost_2021ppp": 3.0886,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "246",
   "iso2": "FI",
@@ -34042,6 +36499,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     5515.4
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    50000.57
    ]
   },
   "gdp_pc_population_share_below": 0.92246,
@@ -34316,6 +36777,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0796,
+     0.1348,
+     0.2384,
+     0.5473
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5832,
+     0.1346,
+     0.1052,
+     0.1248,
+     0.0189,
+     0.0333
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2205.95,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.035,
+   "unaffordable_people": 2400000,
+   "cost_year": 2025,
+   "cost_lcu": 2.9,
+   "cost_2021ppp": 3.2747,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "250",
   "iso2": "FR",
@@ -34583,6 +37079,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     5327.43
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    44118.91
    ]
   },
   "gdp_pc_population_share_below": 0.90687,
@@ -34890,6 +37390,10 @@
    "IT.CEL.SETS.P2": [
     2023,
     118.78
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    2745403.77
    ]
   },
   "gdp_pc_population_share_below": 0.85136,
@@ -35138,6 +37642,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0862,
+     0.4862,
+     0.2872,
+     0.1404
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1502,
+     0.4226,
+     0.2747,
+     0.0842,
+     0.0627,
+     0.0056
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.15,
+     0.2529,
+     0.1511,
+     0.446
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1152,
+     0.0933,
+     0.4259,
+     0.125,
+     0.2407
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 234416.23,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.393,
+   "unaffordable_people": 1000000,
+   "cost_year": 2025,
+   "cost_lcu": 1342.68,
+   "cost_2021ppp": 4.0173,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "266",
@@ -35398,6 +37956,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     252.98
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    4688324.62
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -35707,6 +38269,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1296,
+     0.3714,
+     0.3519,
+     0.1472
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1982,
+     0.5972,
+     0.1444,
+     0.0209,
+     0.0359,
+     0.0034
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2797,
+     0.2859,
+     0.1581,
+     0.2763
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.099,
+     0.0594,
+     0.2145,
+     0.4676,
+     0.1595
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 3253.7,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.437,
+   "unaffordable_people": 1200000,
+   "cost_year": 2025,
+   "cost_lcu": 91.9,
+   "cost_2021ppp": 3.7929,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "270",
   "iso2": "GM",
@@ -35995,6 +38611,10 @@
     2023,
     25.74
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    65073.97
+   ],
    "per_allsp.cov_pop_tot": [
     2015,
     2.95
@@ -36235,6 +38855,51 @@
      0.234,
      0.00485
     ]
+   }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1302,
+     0.1919,
+     0.4495,
+     0.2284
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1305,
+     0.5011,
+     0.1361,
+     0.1412,
+     0.0783,
+     0.0129
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2638,
+     0.3344,
+     0.1648,
+     0.2369
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0965,
+     0.0683,
+     0.3548,
+     0.417,
+     0.0635
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1245.44,
+    "year": 2025
    }
   },
   "region": "ECS",
@@ -36528,6 +39193,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     554.32
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    24908.81
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -36832,6 +39501,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1212,
+     0.086,
+     0.207,
+     0.5858
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6466,
+     0.1371,
+     0.0405,
+     0.1266,
+     0.0099,
+     0.0393
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2773.78,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.053,
+   "unaffordable_people": 4500000,
+   "cost_year": 2025,
+   "cost_lcu": 3.04,
+   "cost_2021ppp": 3.3978,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "276",
   "iso2": "DE",
@@ -37107,6 +39811,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     6849.26
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    55475.55
    ]
   },
   "gdp_pc_population_share_below": 0.93383,
@@ -37385,6 +40093,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1087,
+     0.3301,
+     0.3419,
+     0.2194
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2609,
+     0.4888,
+     0.0915,
+     0.0558,
+     0.0645,
+     0.0385
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2485,
+     0.2833,
+     0.158,
+     0.3102
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1313,
+     0.165,
+     0.1997,
+     0.2987,
+     0.2054
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1919.91,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.658,
+   "unaffordable_people": 23100000,
+   "cost_year": 2025,
+   "cost_lcu": 24.81,
+   "cost_2021ppp": 3.923,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "288",
@@ -37673,6 +40435,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     70.26
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    38398.19
    ],
    "per_allsp.cov_pop_tot": [
     2016,
@@ -38194,6 +40960,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0453,
+     0.2499,
+     0.3491,
+     0.3556
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.3202,
+     0.3518,
+     0.2176,
+     0.0707,
+     0.0081,
+     0.0317
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1167.35,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.227,
+   "unaffordable_people": 2300000,
+   "cost_year": 2025,
+   "cost_lcu": 2.59,
+   "cost_2021ppp": 3.5726,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "300",
   "iso2": "GR",
@@ -38449,6 +41250,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1962.6
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    23347.0
    ]
   },
   "gdp_pc_population_share_below": 0.85557,
@@ -38837,6 +41642,21 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1544.2,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.229,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 10.05,
+   "cost_2021ppp": 5.0667,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "308",
   "iso2": "GD",
@@ -38928,6 +41748,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     526.39
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    30884.02
    ]
   },
   "gdp_pc_population_share_below": 0.61556,
@@ -39506,6 +42330,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.154,
+     0.4533,
+     0.2661,
+     0.1266
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1915,
+     0.4041,
+     0.1548,
+     0.1115,
+     0.1139,
+     0.0243
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.124,
+     0.3321,
+     0.1773,
+     0.3665
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1368,
+     0.0489,
+     0.2548,
+     0.4171,
+     0.1424
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2503.47,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.473,
+   "unaffordable_people": 8800000,
+   "cost_year": 2025,
+   "cost_lcu": 17.76,
+   "cost_2021ppp": 4.346,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "320",
   "iso2": "GT",
@@ -39786,6 +42664,10 @@
     2023,
     392.01
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    50069.4
+   ],
    "per_allsp.cov_pop_tot": [
     2014,
     63.27
@@ -40033,6 +42915,60 @@
      0.00156
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0864,
+     0.572,
+     0.2431,
+     0.0985
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.132,
+     0.3503,
+     0.3275,
+     0.0575,
+     0.1232,
+     0.0096
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2578,
+     0.2342,
+     0.1705,
+     0.3375
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.142,
+     0.0866,
+     0.2564,
+     0.3802,
+     0.1348
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 776359.14,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.503,
+   "unaffordable_people": 7600000,
+   "cost_year": 2025,
+   "cost_lcu": 19733.88,
+   "cost_2021ppp": 4.5298,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "324",
@@ -40294,6 +43230,10 @@
     2023,
     59.33
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    15527182.83
+   ],
    "per_allsp.cov_pop_tot": [
     2018,
     10.47
@@ -40537,6 +43477,21 @@
      0.00044
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 32971.02,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.664,
+   "unaffordable_people": 1500000,
+   "cost_year": 2025,
+   "cost_lcu": 983.77,
+   "cost_2021ppp": 3.7289,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "624",
@@ -40785,6 +43740,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     82.14
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    659420.45
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -41114,6 +44073,21 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 277165.08,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.093,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 678.8,
+   "cost_2021ppp": 5.8426,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "328",
   "iso2": "GY",
@@ -41361,6 +44335,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     505.03
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    5543301.57
    ]
   },
   "gdp_pc_population_share_below": 0.86469,
@@ -41640,6 +44618,21 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 17608.8,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.889,
+   "unaffordable_people": 10600000,
+   "cost_year": 2025,
+   "cost_lcu": 869.79,
+   "cost_2021ppp": 5.5266,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "332",
   "iso2": "HT",
@@ -41899,6 +44892,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     54.41
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    352176.05
    ],
    "per_allsp.cov_pop_tot": [
     2012,
@@ -42203,6 +45200,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1039,
+     0.3487,
+     0.348,
+     0.1993
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1667,
+     0.4331,
+     0.1623,
+     0.1072,
+     0.1176,
+     0.0131
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1815,
+     0.3357,
+     0.1592,
+     0.3237
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1163,
+     0.0242,
+     0.3245,
+     0.4074,
+     0.1276
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4310.43,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.342,
+   "unaffordable_people": 3800000,
+   "cost_year": 2025,
+   "cost_lcu": 61.21,
+   "cost_2021ppp": 4.0789,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "340",
   "iso2": "HN",
@@ -42486,6 +45537,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     249.15
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    86208.63
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -42791,6 +45846,32 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.039,
+     0.0842,
+     0.1966,
+     0.6801
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6915,
+     0.1685,
+     0.0731,
+     0.0288,
+     0.0056,
+     0.0325
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 24445.07,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "344",
   "iso2": "HK",
@@ -43014,6 +46095,10 @@
    "IT.CEL.SETS.P2": [
     2024,
     364.85
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    488901.44
    ]
   },
   "gdp_pc_population_share_below": 0.92315,
@@ -43287,6 +46372,41 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0853,
+     0.1596,
+     0.3151,
+     0.44
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.3651,
+     0.269,
+     0.267,
+     0.0618,
+     0.0275,
+     0.0096
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 446407.93,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.298,
+   "unaffordable_people": 2900000,
+   "cost_year": 2025,
+   "cost_lcu": 1031.79,
+   "cost_2021ppp": 4.2828,
+   "cost_method": "local"
   },
   "region": "ECS",
   "m49": "348",
@@ -43563,6 +46683,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1419.87
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    8928158.59
    ]
   },
   "gdp_pc_population_share_below": 0.85418,
@@ -43837,6 +46961,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0331,
+     0.0781,
+     0.1936,
+     0.6952
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.4744,
+     0.187,
+     0.1141,
+     0.1778,
+     0.0191,
+     0.0276
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 630050.53,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.018,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 576.42,
+   "cost_2021ppp": 2.8405,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "352",
   "iso2": "IS",
@@ -44088,6 +47247,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     7641.57
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    12601010.69
    ]
   },
   "gdp_pc_population_share_below": 0.99731,
@@ -44363,6 +47526,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0482,
+     0.6506,
+     0.2272,
+     0.074
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1298,
+     0.3704,
+     0.2388,
+     0.1418,
+     0.1093,
+     0.0098
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2875,
+     0.3275,
+     0.1622,
+     0.2227
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1264,
+     0.1027,
+     0.1805,
+     0.351,
+     0.2394
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 11652.76,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.355,
+   "unaffordable_people": 520100000,
+   "cost_year": 2025,
+   "cost_lcu": 81.4,
+   "cost_2021ppp": 3.4878,
+   "cost_method": "local"
   },
   "region": "SAS",
   "m49": "356",
@@ -44647,6 +47864,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     84.69
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    233055.23
    ],
    "per_allsp.cov_pop_tot": [
     2011,
@@ -44977,6 +48198,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0467,
+     0.3474,
+     0.4796,
+     0.1263
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.131,
+     0.2916,
+     0.2919,
+     0.0354,
+     0.2475,
+     0.0026
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1209,
+     0.2865,
+     0.1654,
+     0.4272
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2016,
+     0.0813,
+     0.1314,
+     0.2565,
+     0.3292
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4057728.86,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.686,
+   "unaffordable_people": 195900000,
+   "cost_year": 2025,
+   "cost_lcu": 25800.17,
+   "cost_2021ppp": 4.2825,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "360",
   "iso2": "ID",
@@ -45256,6 +48531,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     131.78
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    81154577.21
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -45586,6 +48865,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.033,
+     0.2057,
+     0.4552,
+     0.3061
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1724,
+     0.5153,
+     0.139,
+     0.0708,
+     0.0685,
+     0.034
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.0599,
+     0.2035,
+     0.2952,
+     0.4415
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2614,
+     0.1467,
+     0.2904,
+     0.2467,
+     0.0549
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 145394377.37,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.374,
+   "unaffordable_people": 34500000,
+   "cost_year": 2025,
+   "cost_lcu": 757948.6,
+   "cost_2021ppp": 3.8558,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "364",
   "iso2": "IR",
@@ -45857,6 +49190,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     267.06
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    2907887547.35
    ],
    "per_allsp.cov_pop_tot": [
     2020,
@@ -46164,6 +49501,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0406,
+     0.2631,
+     0.3661,
+     0.3303
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1464,
+     0.6334,
+     0.1148,
+     0.0121,
+     0.0884,
+     0.0049
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1926,
+     0.4131,
+     0.208,
+     0.1863
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1248,
+     0.0464,
+     0.3056,
+     0.4154,
+     0.1077
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 352225.37,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.28,
+   "unaffordable_people": 13200000,
+   "cost_year": 2025,
+   "cost_lcu": 2274.76,
+   "cost_2021ppp": 3.5033,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "368",
   "iso2": "IQ",
@@ -46443,6 +49834,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     333.29
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    7044507.36
    ],
    "per_allsp.cov_pop_tot": [
     2012,
@@ -46773,6 +50168,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0532,
+     0.1484,
+     0.2619,
+     0.5365
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6065,
+     0.1028,
+     0.1054,
+     0.1517,
+     0.0169,
+     0.0166
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 3991.37,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.009,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 2.75,
+   "cost_2021ppp": 2.3844,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "372",
   "iso2": "IE",
@@ -47048,6 +50478,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     7394.85
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    79827.44
    ]
   },
   "gdp_pc_population_share_below": 0.99923,
@@ -47235,6 +50669,10 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     79.04
+   ],
+   "NY.GNP.PCAP.CN": [
+    2023,
+    69738.34
    ]
   },
   "gdp_pc_population_share_below": 0.95475,
@@ -47509,6 +50947,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1062,
+     0.1036,
+     0.3317,
+     0.4586
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.4455,
+     0.2633,
+     0.1506,
+     0.13,
+     0.0059,
+     0.0048
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 10266.84,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.225,
+   "unaffordable_people": 2100000,
+   "cost_year": 2025,
+   "cost_lcu": 13.2,
+   "cost_2021ppp": 2.8479,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "376",
   "iso2": "IL",
@@ -47780,6 +51253,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     3927.7
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    205336.73
    ]
   },
   "gdp_pc_population_share_below": 0.93259,
@@ -48054,6 +51531,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1137,
+     0.1043,
+     0.2676,
+     0.5144
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5062,
+     0.1678,
+     0.1498,
+     0.1074,
+     0.0086,
+     0.0603
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1918.53,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.084,
+   "unaffordable_people": 4900000,
+   "cost_year": 2025,
+   "cost_lcu": 2.81,
+   "cost_2021ppp": 3.428,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "380",
   "iso2": "IT",
@@ -48325,6 +51837,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     3397.69
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    38370.7
    ]
   },
   "gdp_pc_population_share_below": 0.89957,
@@ -48603,6 +52119,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.2151,
+     0.2519,
+     0.2367,
+     0.2962
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.3223,
+     0.302,
+     0.103,
+     0.1072,
+     0.0926,
+     0.073
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 62686.65,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.264,
+   "unaffordable_people": 700000,
+   "cost_year": 2025,
+   "cost_lcu": 610.36,
+   "cost_2021ppp": 5.2277,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "388",
   "iso2": "JM",
@@ -48874,6 +52425,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     520.16
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1253733.02
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -49207,6 +52762,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0395,
+     0.1584,
+     0.2981,
+     0.5041
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.7392,
+     0.1225,
+     0.0531,
+     0.051,
+     0.0153,
+     0.0189
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 285999.29,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.132,
+   "unaffordable_people": 16200000,
+   "cost_year": 2025,
+   "cost_lcu": 825.63,
+   "cost_2021ppp": 6.7362,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "392",
   "iso2": "JP",
@@ -49466,6 +53056,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     3638.19
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    5719985.83
    ]
   },
   "gdp_pc_population_share_below": 0.87118,
@@ -49740,6 +53334,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1043,
+     0.3176,
+     0.3517,
+     0.2264
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0962,
+     0.6354,
+     0.1384,
+     0.0471,
+     0.0744,
+     0.0085
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2926,
+     0.2665,
+     0.1309,
+     0.31
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0663,
+     0.0424,
+     0.217,
+     0.4613,
+     0.2131
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 186.91,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.022,
+   "unaffordable_people": 300000,
+   "cost_year": 2025,
+   "cost_lcu": 1.1,
+   "cost_2021ppp": 2.9051,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "400",
   "iso2": "JO",
@@ -49999,6 +53647,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     342.1
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    3738.24
    ],
    "per_allsp.cov_pop_tot": [
     2010,
@@ -50327,6 +53979,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1843,
+     0.2962,
+     0.3951,
+     0.1243
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1719,
+     0.3788,
+     0.2014,
+     0.1631,
+     0.0619,
+     0.0229
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1655,
+     0.3917,
+     0.2632,
+     0.1795
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1795,
+     0.0438,
+     0.189,
+     0.4659,
+     0.1218
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 355091.06,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.034,
+   "unaffordable_people": 700000,
+   "cost_year": 2025,
+   "cost_lcu": 586.84,
+   "cost_2021ppp": 2.5853,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "398",
   "iso2": "KZ",
@@ -50598,6 +54304,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     489.71
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    7101821.15
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -50933,6 +54643,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.034,
+     0.4683,
+     0.3627,
+     0.1351
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1015,
+     0.3412,
+     0.137,
+     0.1447,
+     0.2619,
+     0.0136
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1059,
+     0.251,
+     0.1744,
+     0.4687
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0754,
+     0.0921,
+     0.2023,
+     0.3034,
+     0.3268
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 15036.33,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.763,
+   "unaffordable_people": 43900000,
+   "cost_year": 2025,
+   "cost_lcu": 202.55,
+   "cost_2021ppp": 3.7869,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "404",
   "iso2": "KE",
@@ -51209,6 +54973,10 @@
     2023,
     84.96
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    300726.57
+   ],
    "per_allsp.cov_pop_tot": [
     2015,
     27.4
@@ -51456,6 +55224,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 306.67,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "296",
   "iso2": "KI",
@@ -51599,6 +55373,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     238.13
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    6133.46
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -51800,6 +55578,51 @@
     ]
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0074,
+     0.1802,
+     0.5038,
+     0.3086
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1213,
+     0.7376,
+     0.1025,
+     0.0209,
+     0.0141,
+     0.0036
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1587,
+     0.3805,
+     0.2578,
+     0.203
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1513,
+     0.0239,
+     0.447,
+     0.2514,
+     0.1263
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 356.61,
+    "year": 2025
+   }
+  },
   "region": "ECS",
   "m49": null,
   "iso2": "XK",
@@ -51879,6 +55702,10 @@
    "IT.CEL.SETS.P2": [
     2022,
     34.54
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    7132.12
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -52208,6 +56035,12 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 607.42,
+    "year": 2024
+   }
+  },
   "region": "MEA",
   "m49": "414",
   "iso2": "KW",
@@ -52475,6 +56308,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1679.12
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    12148.41
    ]
   },
   "gdp_pc_population_share_below": 0.8641,
@@ -52723,6 +56560,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1147,
+     0.1397,
+     0.4852,
+     0.2603
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1882,
+     0.4416,
+     0.3228,
+     0.0059,
+     0.0232,
+     0.0183
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.105,
+     0.4276,
+     0.2173,
+     0.2501
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1011,
+     0.0522,
+     0.3648,
+     0.335,
+     0.147
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 13306.44,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.221,
+   "unaffordable_people": 1600000,
+   "cost_year": 2025,
+   "cost_lcu": 114.65,
+   "cost_2021ppp": 3.2885,
+   "cost_method": "local"
   },
   "region": "ECS",
   "m49": "417",
@@ -53011,6 +56902,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     96.65
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    266128.72
    ],
    "per_allsp.cov_pop_tot": [
     2020,
@@ -53346,6 +57241,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0672,
+     0.4646,
+     0.2046,
+     0.2637
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.143,
+     0.3729,
+     0.2258,
+     0.0327,
+     0.2181,
+     0.0075
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1935,
+     0.3368,
+     0.1878,
+     0.282
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1654,
+     0.0636,
+     0.408,
+     0.2832,
+     0.0798
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2243317.46,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.497,
+   "unaffordable_people": 3900000,
+   "cost_year": 2025,
+   "cost_lcu": 30681.77,
+   "cost_2021ppp": 4.3986,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "418",
   "iso2": "LA",
@@ -53637,6 +57586,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     27.42
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    44866349.14
    ],
    "per_allsp.cov_pop_tot": [
     2018,
@@ -53939,6 +57892,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0894,
+     0.1095,
+     0.2966,
+     0.5045
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.313,
+     0.3907,
+     0.1363,
+     0.1134,
+     0.0307,
+     0.016
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1154.24,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.169,
+   "unaffordable_people": 300000,
+   "cost_year": 2025,
+   "cost_lcu": 2.78,
+   "cost_2021ppp": 3.7718,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "428",
   "iso2": "LV",
@@ -54199,6 +58187,10 @@
     2023,
     1645.42
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    23084.75
+   ],
    "per_allsp.cov_pop_tot": [
     2009,
     80.3
@@ -54448,6 +58440,60 @@
      0.00777
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1713,
+     0.2022,
+     0.4166,
+     0.2099
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1148,
+     0.5312,
+     0.1959,
+     0.0514,
+     0.0898,
+     0.017
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3183,
+     0.2934,
+     0.1893,
+     0.1991
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1039,
+     0.0437,
+     0.4134,
+     0.2761,
+     0.1629
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 19811503.01,
+    "year": 2024
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.464,
+   "unaffordable_people": 2700000,
+   "cost_year": 2025,
+   "cost_lcu": 407250.16,
+   "cost_2021ppp": 5.861,
+   "cost_method": "local"
   },
   "region": "MEA",
   "m49": "422",
@@ -54708,6 +58754,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     260.81
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    396230060.24
    ]
   },
   "gdp_pc_population_share_below": 0.46812,
@@ -54986,6 +59036,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.2299,
+     0.3221,
+     0.3009,
+     0.147
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1666,
+     0.4727,
+     0.064,
+     0.1079,
+     0.1467,
+     0.0421
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1537,
+     0.2527,
+     0.1879,
+     0.4057
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0542,
+     0.045,
+     0.1321,
+     0.4935,
+     0.2752
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1192.81,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.774,
+   "unaffordable_people": 1800000,
+   "cost_year": 2025,
+   "cost_lcu": 34.09,
+   "cost_2021ppp": 4.6482,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "426",
@@ -55274,6 +59378,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     122.64
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    23856.11
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -55605,6 +59713,56 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0425,
+     0.4675,
+     0.2533,
+     0.2368
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2061,
+     0.4278,
+     0.133,
+     0.0815,
+     0.1421,
+     0.0096
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1781,
+     0.2666,
+     0.1628,
+     0.3926
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0825,
+     0.1749,
+     0.0655,
+     0.1291,
+     0.548
+    ]
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.596,
+   "unaffordable_people": 3400000,
+   "cost_year": 2025,
+   "cost_lcu": 362.61,
+   "cost_2021ppp": 3.4415,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "430",
   "iso2": "LR",
@@ -55864,6 +60022,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     103.94
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    851.82
    ],
    "per_allsp.cov_pop_tot": [
     2016,
@@ -56145,6 +60307,51 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.006,
+     0.1847,
+     0.4109,
+     0.3985
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2155,
+     0.414,
+     0.1296,
+     0.0633,
+     0.1742,
+     0.0034
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1926,
+     0.3369,
+     0.1812,
+     0.2893
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2483,
+     0.0969,
+     0.2613,
+     0.266,
+     0.1275
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1775.21,
+    "year": 2025
+   }
+  },
   "region": "MEA",
   "m49": "434",
   "iso2": "LY",
@@ -56388,6 +60595,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     470.4
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    35504.2
    ]
   },
   "gdp_pc_population_share_below": 0.5458,
@@ -56591,6 +60802,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     11494.96
+   ],
+   "NY.GNP.PCAP.CN": [
+    2023,
+    174971.14
    ]
   },
   "gdp_pc_population_share_below": 0.99999,
@@ -56865,6 +61080,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.2378,
+     0.124,
+     0.2595,
+     0.3787
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.4303,
+     0.3185,
+     0.2082,
+     0.0338,
+     0.002,
+     0.0072
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1411.59,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.123,
+   "unaffordable_people": 300000,
+   "cost_year": 2025,
+   "cost_lcu": 2.33,
+   "cost_2021ppp": 3.5438,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "440",
   "iso2": "LT",
@@ -57136,6 +61386,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     2232.48
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    28231.84
    ],
    "per_allsp.cov_pop_tot": [
     2008,
@@ -57466,6 +61720,21 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 4438.43,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.009,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 3.14,
+   "cost_2021ppp": 2.8208,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "442",
   "iso2": "LU",
@@ -57737,6 +62006,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     8169.91
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    88768.65
    ]
   },
   "gdp_pc_population_share_below": 0.99991,
@@ -57986,6 +62259,12 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 28589.02,
+    "year": 2024
+   }
+  },
   "region": "EAS",
   "m49": "446",
   "iso2": "MO",
@@ -58177,6 +62456,10 @@
    "IT.CEL.SETS.P2": [
     2024,
     201.14
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    571780.35
    ]
   },
   "gdp_pc_population_share_below": 0.95393,
@@ -58372,6 +62655,60 @@
      0.00104
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0421,
+     0.671,
+     0.235,
+     0.0519
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0661,
+     0.3074,
+     0.308,
+     0.0344,
+     0.2552,
+     0.0289
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.0821,
+     0.2004,
+     0.2155,
+     0.502
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.144,
+     0.0223,
+     0.3413,
+     0.261,
+     0.2314
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 132579.3,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.853,
+   "unaffordable_people": 27900000,
+   "cost_year": 2025,
+   "cost_lcu": 5381.99,
+   "cost_2021ppp": 3.4415,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "450",
@@ -58665,6 +63002,10 @@
     2023,
     17.44
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    2651585.95
+   ],
    "per_allsp.cov_pop_tot": [
     2010,
     5.7
@@ -58945,6 +63286,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0485,
+     0.5357,
+     0.2813,
+     0.1344
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0759,
+     0.3797,
+     0.0477,
+     0.243,
+     0.2341,
+     0.0196
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.148,
+     0.2476,
+     0.1879,
+     0.4165
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0582,
+     0.229,
+     0.0597,
+     0.4457,
+     0.2075
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 58147.03,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.927,
+   "unaffordable_people": 20600000,
+   "cost_year": 2025,
+   "cost_lcu": 3139.33,
+   "cost_2021ppp": 4.2137,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "454",
@@ -59233,6 +63628,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     41.27
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1162940.63
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -59559,6 +63958,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1069,
+     0.3441,
+     0.3448,
+     0.2042
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.418,
+     0.3053,
+     0.0929,
+     0.0282,
+     0.1431,
+     0.0126
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1385,
+     0.2864,
+     0.1709,
+     0.4041
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1819,
+     0.0314,
+     0.2819,
+     0.3996,
+     0.1053
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2715.0,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.014,
+   "unaffordable_people": 500000,
+   "cost_year": 2025,
+   "cost_lcu": 6.32,
+   "cost_2021ppp": 3.7151,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "458",
   "iso2": "MY",
@@ -59822,6 +64275,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     450.34
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    54300.09
    ],
    "per_allsp.cov_pop_tot": [
     2016,
@@ -60153,6 +64610,21 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 10098.69,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.042,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 42.6,
+   "cost_2021ppp": 3.7624,
+   "cost_method": "local"
+  },
   "region": "SAS",
   "m49": "462",
   "iso2": "MV",
@@ -60408,6 +64880,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1159.03
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    201973.81
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -60734,6 +65210,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0529,
+     0.4377,
+     0.3451,
+     0.1644
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1433,
+     0.3688,
+     0.2573,
+     0.0564,
+     0.1637,
+     0.0105
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1936,
+     0.3377,
+     0.225,
+     0.2438
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0745,
+     0.0746,
+     0.2626,
+     0.475,
+     0.1133
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 33735.36,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.608,
+   "unaffordable_people": 15300000,
+   "cost_year": 2025,
+   "cost_lcu": 770.79,
+   "cost_2021ppp": 3.3799,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "466",
   "iso2": "ML",
@@ -61009,6 +65539,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     33.98
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    674707.22
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -61339,6 +65873,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0314,
+     0.1517,
+     0.2358,
+     0.5812
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5279,
+     0.1867,
+     0.2092,
+     0.0458,
+     0.0064,
+     0.024
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1905.11,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.045,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 3.12,
+   "cost_2021ppp": 4.3443,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "470",
   "iso2": "MT",
@@ -61598,6 +66167,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     3623.46
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    38102.3
    ]
   },
   "gdp_pc_population_share_below": 0.9068,
@@ -61792,6 +66365,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 501.63,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "584",
   "iso2": "MH",
@@ -61899,6 +66478,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     894.22
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    10032.52
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -62231,6 +66814,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0291,
+     0.4301,
+     0.3255,
+     0.2153
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.254,
+     0.3612,
+     0.2416,
+     0.0366,
+     0.1017,
+     0.0049
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2479,
+     0.3295,
+     0.179,
+     0.2435
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1289,
+     0.0767,
+     0.2625,
+     0.4275,
+     0.1044
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4349.92,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.509,
+   "unaffordable_people": 2700000,
+   "cost_year": 2025,
+   "cost_lcu": 67.85,
+   "cost_2021ppp": 4.6772,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "478",
   "iso2": "MR",
@@ -62490,6 +67127,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     92.11
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    86998.49
    ],
    "per_allsp.cov_pop_tot": [
     2014,
@@ -62820,6 +67461,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0527,
+     0.2465,
+     0.4254,
+     0.2755
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2514,
+     0.4082,
+     0.1473,
+     0.1212,
+     0.0672,
+     0.0046
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1116,
+     0.2846,
+     0.215,
+     0.3888
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1192,
+     0.0429,
+     0.3639,
+     0.3529,
+     0.1211
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 32832.28,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.178,
+   "unaffordable_people": 200000,
+   "cost_year": 2025,
+   "cost_lcu": 97.22,
+   "cost_2021ppp": 4.0674,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "480",
   "iso2": "MU",
@@ -63075,6 +67770,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     616.21
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    656645.56
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -63409,6 +68108,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0756,
+     0.3878,
+     0.4194,
+     0.1172
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1636,
+     0.472,
+     0.1238,
+     0.1042,
+     0.1273,
+     0.009
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1997,
+     0.2988,
+     0.1579,
+     0.3437
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1718,
+     0.023,
+     0.3743,
+     0.285,
+     0.1458
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 12949.03,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.2,
+   "unaffordable_people": 26400000,
+   "cost_year": 2025,
+   "cost_lcu": 49.51,
+   "cost_2021ppp": 3.6696,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "484",
   "iso2": "MX",
@@ -63689,6 +68442,10 @@
     2023,
     760.99
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    258980.61
+   ],
    "per_allsp.cov_pop_tot": [
     2022,
     48.16
@@ -63937,6 +68694,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 243.53,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "583",
   "iso2": "FM",
@@ -64020,6 +68783,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     507.78
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    4870.54
    ]
   },
   "gdp_pc_population_share_below": 0.46811,
@@ -64210,6 +68977,60 @@
      0.00245
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1002,
+     0.3,
+     0.3979,
+     0.202
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1972,
+     0.4907,
+     0.2079,
+     0.0575,
+     0.0416,
+     0.0051
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1301,
+     0.3323,
+     0.1551,
+     0.3825
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2204,
+     0.0291,
+     0.377,
+     0.2899,
+     0.0836
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 7485.28,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.114,
+   "unaffordable_people": 300000,
+   "cost_year": 2025,
+   "cost_lcu": 33.43,
+   "cost_2021ppp": 3.2047,
+   "cost_method": "local"
   },
   "region": "ECS",
   "m49": "498",
@@ -64482,6 +69303,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     451.73
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    149705.5
    ],
    "per_allsp.cov_pop_tot": [
     2018,
@@ -65048,6 +69873,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0114,
+     0.2604,
+     0.5288,
+     0.1994
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.081,
+     0.2229,
+     0.4205,
+     0.0585,
+     0.1698,
+     0.0473
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1059,
+     0.3118,
+     0.1826,
+     0.3997
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0702,
+     0.0792,
+     0.3582,
+     0.2165,
+     0.2759
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1118591.53,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.298,
+   "unaffordable_people": 1000000,
+   "cost_year": 2025,
+   "cost_lcu": 8600.35,
+   "cost_2021ppp": 6.1267,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "496",
   "iso2": "MN",
@@ -65336,6 +70215,10 @@
     2023,
     359.61
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    22371830.59
+   ],
    "per_allsp.cov_pop_tot": [
     2020,
     92.6
@@ -65581,6 +70464,60 @@
      0.00093
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0973,
+     0.1276,
+     0.4751,
+     0.2999
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2617,
+     0.4233,
+     0.1795,
+     0.0731,
+     0.0575,
+     0.0049
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.0733,
+     0.2594,
+     0.2484,
+     0.4189
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1864,
+     0.0724,
+     0.3466,
+     0.2637,
+     0.1308
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 660.67,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.075,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 2.13,
+   "cost_2021ppp": 4.0104,
+   "cost_method": "local"
   },
   "region": "ECS",
   "m49": "499",
@@ -65869,6 +70806,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1147.7
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    13213.38
    ],
    "per_allsp.cov_pop_tot": [
     2014,
@@ -66170,6 +71111,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1335,
+     0.4179,
+     0.3199,
+     0.1286
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1553,
+     0.5646,
+     0.1146,
+     0.0274,
+     0.1229,
+     0.0152
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3597,
+     0.2967,
+     0.1286,
+     0.215
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0742,
+     0.0301,
+     0.3843,
+     0.3879,
+     0.1235
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2154.55,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.124,
+   "unaffordable_people": 4800000,
+   "cost_year": 2025,
+   "cost_lcu": 14.4,
+   "cost_2021ppp": 3.0599,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "504",
   "iso2": "MA",
@@ -66433,6 +71428,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     232.25
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    43091.04
    ],
    "per_allsp.cov_pop_tot": [
     2009,
@@ -66741,6 +71740,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0985,
+     0.4669,
+     0.2983,
+     0.1363
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1608,
+     0.4763,
+     0.0893,
+     0.0307,
+     0.2233,
+     0.0196
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1678,
+     0.2579,
+     0.2176,
+     0.3567
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0499,
+     0.2456,
+     0.1652,
+     0.3655,
+     0.1737
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1825.43,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.913,
+   "unaffordable_people": 32500000,
+   "cost_year": 2025,
+   "cost_lcu": 114.6,
+   "cost_2021ppp": 3.8116,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "508",
   "iso2": "MZ",
@@ -67020,6 +72073,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     52.96
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    36508.64
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -67350,6 +72407,32 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0469,
+     0.2283,
+     0.3957,
+     0.3291
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.1274,
+     0.2379,
+     0.4467,
+     0.0132,
+     0.1658,
+     0.0091
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 153119.73,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "104",
   "iso2": "MM",
@@ -67641,6 +72724,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     56.19
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    3062394.54
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -67971,6 +73058,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0914,
+     0.5781,
+     0.2536,
+     0.0769
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1694,
+     0.4667,
+     0.0849,
+     0.0773,
+     0.1718,
+     0.03
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.0995,
+     0.2313,
+     0.2329,
+     0.4363
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0939,
+     0.1478,
+     0.1473,
+     0.3471,
+     0.2638
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4098.19,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.479,
+   "unaffordable_people": 1500000,
+   "cost_year": 2025,
+   "cost_lcu": 35.99,
+   "cost_2021ppp": 4.1028,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "516",
   "iso2": "NA",
@@ -68235,6 +73376,10 @@
     2023,
     397.09
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    81963.86
+   ],
    "per_allsp.cov_pop_tot": [
     2015,
     43.73
@@ -68486,6 +73631,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1609.15,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "520",
   "iso2": "NR",
@@ -68605,6 +73756,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     2292.37
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    32182.95
    ]
   },
   "gdp_pc_population_share_below": 0.80892,
@@ -68880,6 +74035,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0356,
+     0.4481,
+     0.3766,
+     0.1396
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1037,
+     0.5369,
+     0.1563,
+     0.0887,
+     0.1131,
+     0.0014
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1555,
+     0.3765,
+     0.2167,
+     0.2513
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1157,
+     0.0651,
+     0.3286,
+     0.2802,
+     0.2103
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 10598.8,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.179,
+   "unaffordable_people": 5300000,
+   "cost_year": 2025,
+   "cost_lcu": 147.93,
+   "cost_2021ppp": 3.4775,
+   "cost_method": "local"
   },
   "region": "SAS",
   "m49": "524",
@@ -69168,6 +74377,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     83.96
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    211976.07
    ],
    "per_allsp.cov_pop_tot": [
     2010,
@@ -69494,6 +74707,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1246,
+     0.0941,
+     0.1867,
+     0.5945
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6657,
+     0.1602,
+     0.0892,
+     0.0221,
+     0.0076,
+     0.0552
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 3191.53,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.011,
+   "unaffordable_people": 200000,
+   "cost_year": 2025,
+   "cost_lcu": 2.66,
+   "cost_2021ppp": 2.7021,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "528",
   "iso2": "NL",
@@ -69761,6 +75009,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     6845.14
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    63830.57
    ]
   },
   "gdp_pc_population_share_below": 0.95169,
@@ -70113,6 +75365,10 @@
    "IT.CEL.SETS.P2": [
     2022,
     91.68
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    3326400.44
    ]
   },
   "gdp_pc_population_share_below": 0.86248,
@@ -70360,6 +75616,32 @@
       0.2351
      ]
     }
+   }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0304,
+     0.1176,
+     0.1845,
+     0.6675
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.607,
+     0.1152,
+     0.1145,
+     0.0877,
+     0.0263,
+     0.0492
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 3947.85,
+    "year": 2025
    }
   },
   "region": "EAS",
@@ -70617,6 +75899,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     5022.03
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    78957.01
    ]
   },
   "gdp_pc_population_share_below": 0.91529,
@@ -70866,6 +76152,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1168,
+     0.2697,
+     0.3761,
+     0.2373
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1942,
+     0.3834,
+     0.1629,
+     0.0817,
+     0.1712,
+     0.0067
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2026,
+     0.3791,
+     0.199,
+     0.2193
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1831,
+     0.0648,
+     0.2973,
+     0.3873,
+     0.0676
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 5495.91,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.253,
+   "unaffordable_people": 1800000,
+   "cost_year": 2025,
+   "cost_lcu": 70.4,
+   "cost_2021ppp": 4.3738,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "558",
   "iso2": "NI",
@@ -71101,6 +76441,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     216.55
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    109918.11
    ],
    "per_allsp.cov_pop_tot": [
     2014,
@@ -71433,6 +76777,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0537,
+     0.5031,
+     0.3571,
+     0.0861
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0793,
+     0.3325,
+     0.1888,
+     0.0914,
+     0.2844,
+     0.0237
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2826,
+     0.225,
+     0.196,
+     0.2964
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0106,
+     0.0844,
+     0.4284,
+     0.4419,
+     0.0347
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 22231.1,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.858,
+   "unaffordable_people": 24000000,
+   "cost_year": 2025,
+   "cost_lcu": 999.99,
+   "cost_2021ppp": 4.2253,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "562",
   "iso2": "NE",
@@ -71713,6 +77111,10 @@
     2023,
     26.01
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    444621.96
+   ],
    "per_allsp.cov_pop_tot": [
     2021,
     23.27
@@ -71959,6 +77361,60 @@
      0.00431
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.2509,
+     0.4624,
+     0.2104,
+     0.0763
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1315,
+     0.4706,
+     0.0454,
+     0.0848,
+     0.2179,
+     0.0498
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.0816,
+     0.2117,
+     0.2179,
+     0.4889
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0837,
+     0.2046,
+     0.0584,
+     0.4328,
+     0.2205
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 90038.54,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.805,
+   "unaffordable_people": 191200000,
+   "cost_year": 2025,
+   "cost_lcu": 1512.6,
+   "cost_2021ppp": 4.002,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "566",
@@ -72247,6 +77703,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     66.82
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1800770.86
    ],
    "per_allsp.cov_pop_tot": [
     2018,
@@ -72817,6 +78277,60 @@
     ]
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0613,
+     0.246,
+     0.3826,
+     0.3101
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2633,
+     0.5195,
+     0.0458,
+     0.1226,
+     0.0225,
+     0.0262
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2372,
+     0.3503,
+     0.1756,
+     0.2369
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1925,
+     0.0305,
+     0.348,
+     0.3481,
+     0.0809
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 27286.06,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.156,
+   "unaffordable_people": 300000,
+   "cost_year": 2025,
+   "cost_lcu": 117.14,
+   "cost_2021ppp": 4.2332,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "807",
   "iso2": "MK",
@@ -73104,6 +78618,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     639.42
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    545721.16
    ]
   },
   "gdp_pc_population_share_below": 0.58786,
@@ -73565,6 +79083,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0086,
+     0.1015,
+     0.1201,
+     0.7698
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6209,
+     0.0794,
+     0.1758,
+     0.0762,
+     0.0205,
+     0.0271
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 50929.27,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.012,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 47.04,
+   "cost_2021ppp": 3.9502,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "578",
   "iso2": "NO",
@@ -73824,6 +79377,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     8296.36
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1018585.35
    ]
   },
   "gdp_pc_population_share_below": 0.99662,
@@ -74015,6 +79572,51 @@
      0.01497,
      0.00271
     ]
+   }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.3529,
+     0.2182,
+     0.2537,
+     0.1752
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1438,
+     0.4821,
+     0.1584,
+     0.0948,
+     0.0819,
+     0.0391
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3007,
+     0.2497,
+     0.1223,
+     0.3273
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0914,
+     0.0856,
+     0.1793,
+     0.5989,
+     0.0447
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 367.54,
+    "year": 2024
    }
   },
   "region": "MEA",
@@ -74268,6 +79870,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     732.04
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    7350.76
    ]
   },
   "gdp_pc_population_share_below": 0.84927,
@@ -74543,6 +80149,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1703,
+     0.4976,
+     0.2792,
+     0.053
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1202,
+     0.4984,
+     0.1789,
+     0.0436,
+     0.1507,
+     0.0083
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.4862,
+     0.2572,
+     0.1453,
+     0.1113
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0537,
+     0.1288,
+     0.1062,
+     0.6624,
+     0.049
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 21797.85,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.63,
+   "unaffordable_people": 160700000,
+   "cost_year": 2025,
+   "cost_lcu": 257.39,
+   "cost_2021ppp": 3.2377,
+   "cost_method": "local"
   },
   "region": "MEA",
   "m49": "586",
@@ -74828,6 +80488,10 @@
     2023,
     30.49
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    435956.92
+   ],
    "per_allsp.cov_pop_tot": [
     2018,
     22.09
@@ -75076,6 +80740,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 994.73,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "585",
   "iso2": "PW",
@@ -75187,6 +80857,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1683.85
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    19894.7
    ]
   },
   "gdp_pc_population_share_below": 0.8487,
@@ -75461,6 +81135,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1519,
+     0.3905,
+     0.31,
+     0.1476
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2111,
+     0.4609,
+     0.0744,
+     0.1275,
+     0.0987,
+     0.0273
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1656,
+     0.2927,
+     0.1692,
+     0.3725
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1691,
+     0.025,
+     0.2702,
+     0.3961,
+     0.1396
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 941.49,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.514,
+   "unaffordable_people": 2400000,
+   "cost_year": 2025,
+   "cost_lcu": 2.25,
+   "cost_2021ppp": 3.8045,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "591",
   "iso2": "PA",
@@ -75712,6 +81440,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1557.81
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    18829.86
    ],
    "per_allsp.cov_pop_tot": [
     2023,
@@ -76044,6 +81776,12 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 577.66,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "598",
   "iso2": "PG",
@@ -76279,6 +82017,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     85.15
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    11553.12
    ],
    "per_allsp.cov_pop_tot": [
     2009,
@@ -76610,6 +82352,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1975,
+     0.2593,
+     0.3627,
+     0.1806
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0841,
+     0.3586,
+     0.2046,
+     0.1763,
+     0.1645,
+     0.012
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1624,
+     0.403,
+     0.1696,
+     0.265
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0831,
+     0.0384,
+     0.4424,
+     0.3305,
+     0.1056
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2547035.66,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.223,
+   "unaffordable_people": 1600000,
+   "cost_year": 2025,
+   "cost_lcu": 15268.5,
+   "cost_2021ppp": 4.4708,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "600",
   "iso2": "PY",
@@ -76901,6 +82697,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     526.51
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    50940713.2
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -77202,6 +83002,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0993,
+     0.3075,
+     0.3993,
+     0.1939
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1973,
+     0.4366,
+     0.1721,
+     0.1088,
+     0.0632,
+     0.0221
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1456,
+     0.3528,
+     0.1584,
+     0.3432
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1987,
+     0.0341,
+     0.2923,
+     0.2877,
+     0.1873
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1610.19,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.348,
+   "unaffordable_people": 12000000,
+   "cost_year": 2025,
+   "cost_lcu": 8.57,
+   "cost_2021ppp": 3.748,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "604",
   "iso2": "PE",
@@ -77481,6 +83335,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     445.53
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    32203.81
    ],
    "per_allsp.cov_pop_tot": [
     2022,
@@ -77811,6 +83669,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0391,
+     0.6927,
+     0.2283,
+     0.0399
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1856,
+     0.4167,
+     0.213,
+     0.094,
+     0.08,
+     0.0107
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1331,
+     0.2567,
+     0.2122,
+     0.398
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0898,
+     0.029,
+     0.2169,
+     0.4725,
+     0.1918
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 13785.29,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.45,
+   "unaffordable_people": 52600000,
+   "cost_year": 2025,
+   "cost_lcu": 92.07,
+   "cost_2021ppp": 3.7704,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "608",
   "iso2": "PH",
@@ -78102,6 +84014,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     194.05
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    275705.73
    ],
    "per_allsp.cov_pop_tot": [
     2018,
@@ -78428,6 +84344,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1616,
+     0.166,
+     0.3858,
+     0.2866
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.4987,
+     0.2939,
+     0.083,
+     0.0865,
+     0.0311,
+     0.0068
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1184,
+     0.2669,
+     0.2121,
+     0.4026
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2514,
+     0.0145,
+     0.4571,
+     0.2414,
+     0.0357
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 5149.71,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.073,
+   "unaffordable_people": 2800000,
+   "cost_year": 2025,
+   "cost_lcu": 9.23,
+   "cost_2021ppp": 3.6317,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "616",
   "iso2": "PL",
@@ -78687,6 +84657,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     2014.13
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    102994.16
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -79017,6 +84991,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1033,
+     0.1963,
+     0.2938,
+     0.4066
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.4251,
+     0.2853,
+     0.1454,
+     0.0804,
+     0.03,
+     0.0338
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1395.44,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.144,
+   "unaffordable_people": 1500000,
+   "cost_year": 2025,
+   "cost_lcu": 2.4,
+   "cost_2021ppp": 3.2931,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "620",
   "iso2": "PT",
@@ -79292,6 +85301,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     2971.04
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    27908.9
    ]
   },
   "gdp_pc_population_share_below": 0.86272,
@@ -79486,6 +85499,12 @@
      0.08231,
      0.00727
     ]
+   }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1374.82,
+    "year": 2025
    }
   },
   "region": "LCN",
@@ -79699,6 +85718,10 @@
    "IT.CEL.SETS.P2": [
     2024,
     126.43
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    27496.31
    ]
   },
   "gdp_pc_population_share_below": 0.89899,
@@ -79975,6 +85998,21 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 12933.89,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.019,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 7.41,
+   "cost_2021ppp": 2.3089,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "634",
   "iso2": "QA",
@@ -80194,6 +86232,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1804.35
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    258677.79
    ]
   },
   "gdp_pc_population_share_below": 0.95133,
@@ -80468,6 +86510,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1389,
+     0.1766,
+     0.3444,
+     0.3401
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2545,
+     0.4851,
+     0.156,
+     0.0626,
+     0.0328,
+     0.0091
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1849,
+     0.3176,
+     0.1743,
+     0.3232
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1969,
+     0.0507,
+     0.3903,
+     0.3122,
+     0.0499
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4904.82,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.201,
+   "unaffordable_people": 3800000,
+   "cost_year": 2025,
+   "cost_lcu": 9.04,
+   "cost_2021ppp": 3.3872,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "642",
   "iso2": "RO",
@@ -80735,6 +86831,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1051.0
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    98096.31
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -81065,6 +87165,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.044,
+     0.2159,
+     0.4459,
+     0.2942
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.1326,
+     0.3851,
+     0.2516,
+     0.1358,
+     0.0212,
+     0.0736
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 72877.44,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.124,
+   "unaffordable_people": 17800000,
+   "cost_year": 2025,
+   "cost_lcu": 104.21,
+   "cost_2021ppp": 2.8518,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "643",
   "iso2": "RU",
@@ -81332,6 +87467,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1003.33
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1457548.75
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -81664,6 +87803,21 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 78492.14,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.697,
+   "unaffordable_people": 10200000,
+   "cost_year": 2025,
+   "cost_lcu": 1706.42,
+   "cost_2021ppp": 4.0191,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "646",
   "iso2": "RW",
@@ -81928,6 +88082,10 @@
     2023,
     52.66
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1569842.78
+   ],
    "per_allsp.cov_pop_tot": [
     2013,
     28.4
@@ -82175,6 +88333,12 @@
      0.03813,
      0.00337
     ]
+   }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 816.01,
+    "year": 2025
    }
   },
   "region": "EAS",
@@ -82425,6 +88589,10 @@
     2023,
     292.81
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    16320.29
+   ],
    "per_allsp.cov_pop_tot": [
     2008,
     33.64
@@ -82645,6 +88813,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 2526.41,
+    "year": 2023
+   }
+  },
   "region": "ECS",
   "m49": "674",
   "iso2": "SM",
@@ -82744,6 +88918,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     3923.52
+   ],
+   "NY.GNP.PCAP.CN": [
+    2023,
+    50528.1
    ]
   },
   "gdp_pc_population_share_below": 0.93259,
@@ -83018,6 +89196,51 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0412,
+     0.165,
+     0.3917,
+     0.4021
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2332,
+     0.3962,
+     0.1788,
+     0.0639,
+     0.104,
+     0.0239
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1444,
+     0.295,
+     0.2261,
+     0.3344
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2037,
+     0.0705,
+     0.2773,
+     0.344,
+     0.1046
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 6529.7,
+    "year": 2025
+   }
+  },
   "region": "MEA",
   "m49": "682",
   "iso2": "SA",
@@ -83281,6 +89504,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1825.25
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    130594.0
    ]
   },
   "gdp_pc_population_share_below": 0.86532,
@@ -83561,6 +89788,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0411,
+     0.4862,
+     0.3578,
+     0.1149
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1571,
+     0.4094,
+     0.2891,
+     0.0289,
+     0.108,
+     0.0074
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3468,
+     0.3221,
+     0.1745,
+     0.1566
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0361,
+     0.1097,
+     0.2141,
+     0.5029,
+     0.1371
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 53080.51,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.455,
+   "unaffordable_people": 8600000,
+   "cost_year": 2025,
+   "cost_lcu": 866.42,
+   "cost_2021ppp": 3.2204,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "686",
@@ -83853,6 +90134,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     73.23
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1061610.16
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -84183,6 +90468,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0898,
+     0.1443,
+     0.369,
+     0.3969
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.278,
+     0.4269,
+     0.1568,
+     0.0982,
+     0.0329,
+     0.0071
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1469,
+     0.3159,
+     0.1762,
+     0.361
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2105,
+     0.0355,
+     0.4108,
+     0.2309,
+     0.1122
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 74355.89,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.085,
+   "unaffordable_people": 700000,
+   "cost_year": 2025,
+   "cost_lcu": 293.52,
+   "cost_2021ppp": 4.4424,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "688",
   "iso2": "RS",
@@ -84475,6 +90814,10 @@
     2023,
     983.69
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1487117.86
+   ],
    "per_allsp.cov_pop_tot": [
     2022,
     62.53
@@ -84681,6 +91024,21 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 13952.5,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.433,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 37.2,
+   "cost_2021ppp": 3.7028,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "690",
   "iso2": "SC",
@@ -84788,6 +91146,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     766.29
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    279049.96
    ]
   },
   "gdp_pc_population_share_below": 0.84869,
@@ -85067,6 +91429,59 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1159,
+     0.5867,
+     0.1851,
+     0.1123
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0769,
+     0.4285,
+     0.1668,
+     0.1063,
+     0.1867,
+     0.0348
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1901,
+     0.1878,
+     0.2302,
+     0.3919
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0706,
+     0.2135,
+     0.1015,
+     0.2492,
+     0.3652
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 952.29,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.619,
+   "unaffordable_people": 5500000,
+   "cost_year": 2025,
+   "cost_2021ppp": 3.2709,
+   "cost_method": "ppp"
   },
   "region": "SSF",
   "m49": "694",
@@ -85355,6 +91770,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     35.76
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    19045.89
    ],
    "per_allsp.cov_pop_tot": [
     2018,
@@ -85684,6 +92103,32 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0999,
+     0.1327,
+     0.3801,
+     0.3874
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.7237,
+     0.2091,
+     0.0452,
+     0.0167,
+     0.0032,
+     0.0021
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 5368.26,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "702",
   "iso2": "SG",
@@ -85947,6 +92392,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     3921.6
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    107365.16
    ]
   },
   "gdp_pc_population_share_below": 0.99736,
@@ -86138,6 +92587,10 @@
    "IT.CEL.SETS.P2": [
     2022,
     205.37
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    71777.54
    ]
   },
   "gdp_pc_population_share_below": 0.89957,
@@ -86412,6 +92865,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.035,
+     0.118,
+     0.2906,
+     0.5564
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5471,
+     0.2331,
+     0.1152,
+     0.0745,
+     0.0136,
+     0.0165
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1227.46,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.272,
+   "unaffordable_people": 1500000,
+   "cost_year": 2025,
+   "cost_lcu": 2.53,
+   "cost_2021ppp": 3.3156,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "703",
   "iso2": "SK",
@@ -86675,6 +93163,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1813.47
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    24549.23
    ],
    "per_allsp.cov_pop_tot": [
     2009,
@@ -87008,6 +93500,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1056,
+     0.1158,
+     0.2961,
+     0.4825
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5475,
+     0.2344,
+     0.1243,
+     0.0652,
+     0.0115,
+     0.017
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1643.62,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.023,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 2.45,
+   "cost_2021ppp": 3.3317,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "705",
   "iso2": "SI",
@@ -87267,6 +93794,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     3370.53
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    32872.4
    ]
   },
   "gdp_pc_population_share_below": 0.89261,
@@ -87461,6 +93992,12 @@
      0.04798,
      0.00424
     ]
+   }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 869.44,
+    "year": 2025
    }
   },
   "region": "EAS",
@@ -87674,6 +94211,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     111.36
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    17388.71
    ]
   },
   "gdp_pc_population_share_below": 0.18534,
@@ -87868,6 +94409,12 @@
      0.0245,
      0.00216
     ]
+   }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 991275.46,
+    "year": 2025
    }
   },
   "region": "SSF",
@@ -88129,6 +94676,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     22.37
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    19825509.1
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -88431,6 +94982,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.3192,
+     0.3714,
+     0.1828,
+     0.1266
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.181,
+     0.4192,
+     0.1093,
+     0.1146,
+     0.15,
+     0.0257
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1094,
+     0.2272,
+     0.1495,
+     0.514
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0869,
+     0.0562,
+     0.126,
+     0.5396,
+     0.1913
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 5788.08,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.579,
+   "unaffordable_people": 37500000,
+   "cost_year": 2025,
+   "cost_lcu": 31.14,
+   "cost_2021ppp": 3.393,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "710",
   "iso2": "ZA",
@@ -88718,6 +95323,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     536.59
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    115761.66
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -89048,6 +95657,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0819,
+     0.1067,
+     0.2515,
+     0.5599
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.4557,
+     0.182,
+     0.2111,
+     0.0759,
+     0.0271,
+     0.0482
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2620802.8,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.053,
+   "unaffordable_people": 2800000,
+   "cost_year": 2025,
+   "cost_lcu": 6389.97,
+   "cost_2021ppp": 5.9557,
+   "cost_method": "local"
+  },
   "region": "EAS",
   "m49": "410",
   "iso2": "KR",
@@ -89307,6 +95951,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     3136.79
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    52416055.98
    ]
   },
   "gdp_pc_population_share_below": 0.88628,
@@ -89453,6 +96101,36 @@
      0.8954
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.3922,
+     0.4423,
+     0.1309,
+     0.0347
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.024,
+     0.2614,
+     0.0719,
+     0.0601,
+     0.4191,
+     0.1635
+    ]
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.939,
+   "unaffordable_people": 11400000,
+   "cost_year": 2025,
+   "cost_2021ppp": 3.4391,
+   "cost_method": "ppp"
   },
   "region": "SSF",
   "m49": "728",
@@ -89677,6 +96355,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     72.76
+   ],
+   "NY.GNP.PCAP.CN": [
+    2015,
+    3414.46
    ],
    "per_allsp.cov_pop_tot": [
     2009,
@@ -89979,6 +96661,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1426,
+     0.0762,
+     0.2489,
+     0.5323
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5639,
+     0.1607,
+     0.1534,
+     0.0719,
+     0.0082,
+     0.0419
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1708.05,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.093,
+   "unaffordable_people": 4500000,
+   "cost_year": 2025,
+   "cost_lcu": 2.55,
+   "cost_2021ppp": 3.262,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "724",
   "iso2": "ES",
@@ -90250,6 +96967,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     3106.62
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    34161.02
    ]
   },
   "gdp_pc_population_share_below": 0.89289,
@@ -90526,6 +97247,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1554,
+     0.4647,
+     0.334,
+     0.0459
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1328,
+     0.3562,
+     0.1431,
+     0.1482,
+     0.182,
+     0.0378
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.3306,
+     0.2941,
+     0.1337,
+     0.2416
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0775,
+     0.0599,
+     0.1959,
+     0.4579,
+     0.2088
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 73869.73,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.349,
+   "unaffordable_people": 8100000,
+   "cost_year": 2025,
+   "cost_lcu": 422.73,
+   "cost_2021ppp": 4.2246,
+   "cost_method": "local"
   },
   "region": "SAS",
   "m49": "144",
@@ -90807,6 +97582,10 @@
     2023,
     134.24
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1477394.56
+   ],
    "per_allsp.cov_pop_tot": [
     2019,
     37.5
@@ -91009,6 +97788,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 3373.17,
+    "year": 2025
+   }
+  },
   "region": "LCN",
   "m49": "659",
   "iso2": "KN",
@@ -91100,6 +97885,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1294.88
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    67463.45
    ]
   },
   "gdp_pc_population_share_below": 0.85418,
@@ -91250,6 +98039,21 @@
      0.0002
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1817.8,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.071,
+   "unaffordable_people": 0,
+   "cost_year": 2025,
+   "cost_lcu": 7.92,
+   "cost_2021ppp": 4.2327,
+   "cost_method": "local"
   },
   "region": "LCN",
   "m49": "662",
@@ -91470,6 +98274,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     641.07
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    36356.07
    ]
   },
   "gdp_pc_population_share_below": 0.81148,
@@ -91808,6 +98616,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1661.99,
+    "year": 2025
+   }
+  },
   "region": "LCN",
   "m49": "670",
   "iso2": "VC",
@@ -92015,6 +98829,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     469.21
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    33239.86
    ]
   },
   "gdp_pc_population_share_below": 0.61558,
@@ -92291,6 +99109,12 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 125544.27,
+    "year": 2025
+   }
+  },
   "region": "SSF",
   "m49": "729",
   "iso2": "SD",
@@ -92535,6 +99359,10 @@
     2023,
     21.08
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    2510885.5
+   ],
    "per_allsp.cov_pop_tot": [
     2009,
     7.45
@@ -92757,6 +99585,21 @@
      0.00204
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 12213.31,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.237,
+   "unaffordable_people": 200000,
+   "cost_year": 2025,
+   "cost_lcu": 92.88,
+   "cost_2021ppp": 5.0011,
+   "cost_method": "local"
   },
   "region": "LCN",
   "m49": "740",
@@ -93001,6 +99844,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     297.05
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    244266.16
    ]
   },
   "gdp_pc_population_share_below": 0.55909,
@@ -93277,6 +100124,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0205,
+     0.0382,
+     0.103,
+     0.8383
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.7379,
+     0.1097,
+     0.0557,
+     0.0433,
+     0.0317,
+     0.0217
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 32522.77,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.049,
+   "unaffordable_people": 500000,
+   "cost_year": 2025,
+   "cost_lcu": 36.55,
+   "cost_2021ppp": 3.4143,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "752",
   "iso2": "SE",
@@ -93544,6 +100426,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     6484.76
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    650455.43
    ]
   },
   "gdp_pc_population_share_below": 0.94665,
@@ -93818,6 +100704,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1041,
+     0.1625,
+     0.172,
+     0.5614
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.5055,
+     0.1461,
+     0.1335,
+     0.1287,
+     0.0445,
+     0.0418
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4732.6,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.011,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 3.48,
+   "cost_2021ppp": 2.6276,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "756",
   "iso2": "CH",
@@ -94081,6 +101002,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     11783.67
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    94652.07
    ]
   },
   "gdp_pc_population_share_below": 0.99811,
@@ -94315,6 +101240,14 @@
     }
    }
   },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.611,
+   "unaffordable_people": 15600000,
+   "cost_year": 2025,
+   "cost_2021ppp": 5.7598,
+   "cost_method": "ppp"
+  },
   "region": "MEA",
   "m49": "760",
   "iso2": "SY",
@@ -94530,6 +101463,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     33.34
+   ],
+   "NY.GNP.PCAP.CN": [
+    2022,
+    3828801.92
    ]
   },
   "gdp_pc_population_share_below": 0.06539,
@@ -94680,6 +101617,21 @@
      0.1316
     ]
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 4795.31,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.511,
+   "unaffordable_people": 100000,
+   "cost_year": 2025,
+   "cost_lcu": 73.82,
+   "cost_2021ppp": 4.2307,
+   "cost_method": "local"
   },
   "region": "SSF",
   "m49": "678",
@@ -94928,6 +101880,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     171.05
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    95906.19
    ],
    "per_allsp.cov_pop_tot": [
     2017,
@@ -95227,6 +102183,37 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0394,
+     0.0741,
+     0.2546,
+     0.6319
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6246,
+     0.1635,
+     0.1682,
+     0.0315,
+     0.002,
+     0.0103
+    ]
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.038,
+   "unaffordable_people": 900000,
+   "cost_year": 2025,
+   "cost_lcu": 91.29,
+   "cost_2021ppp": 5.3036,
+   "cost_method": "local"
+  },
   "region": null,
   "m49": "158",
   "iso2": "TW",
@@ -95503,6 +102490,51 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0526,
+     0.2833,
+     0.3248,
+     0.3394
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0994,
+     0.59,
+     0.2321,
+     0.0287,
+     0.018,
+     0.0319
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2628,
+     0.4213,
+     0.1726,
+     0.1433
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0823,
+     0.0775,
+     0.3128,
+     0.3416,
+     0.1858
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1140.33,
+    "year": 2025
+   }
+  },
   "region": "ECS",
   "m49": "762",
   "iso2": "TJ",
@@ -95770,6 +102802,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     85.15
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    22806.55
    ],
    "per_allsp.cov_pop_tot": [
     2011,
@@ -96101,6 +103137,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0585,
+     0.4111,
+     0.4247,
+     0.1057
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0982,
+     0.2451,
+     0.2346,
+     0.1048,
+     0.3048,
+     0.0125
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.0996,
+     0.2326,
+     0.1606,
+     0.5072
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1395,
+     0.1697,
+     0.1977,
+     0.3148,
+     0.1783
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 163700.76,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.73,
+   "unaffordable_people": 51500000,
+   "cost_year": 2025,
+   "cost_lcu": 2382.19,
+   "cost_2021ppp": 3.0271,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "834",
   "iso2": "TZ",
@@ -96388,6 +103478,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     36.26
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    3274015.25
    ],
    "per_allsp.cov_pop_tot": [
     2014,
@@ -96720,6 +103814,51 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1148,
+     0.2967,
+     0.3728,
+     0.2156
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1728,
+     0.5084,
+     0.1004,
+     0.1021,
+     0.113,
+     0.0033
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2368,
+     0.2594,
+     0.1342,
+     0.3697
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.182,
+     0.0719,
+     0.1895,
+     0.4103,
+     0.1463
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 12903.73,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "764",
   "iso2": "TH",
@@ -96996,6 +104135,10 @@
     2023,
     326.5
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    258074.54
+   ],
    "per_allsp.cov_pop_tot": [
     2021,
     87.19
@@ -97238,6 +104381,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 71.42,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "626",
   "iso2": "TL",
@@ -97465,6 +104614,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     144.21
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    1428.31
    ],
    "per_allsp.cov_pop_tot": [
     2011,
@@ -97769,6 +104922,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.063,
+     0.3255,
+     0.403,
+     0.2085
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1883,
+     0.2477,
+     0.3385,
+     0.0613,
+     0.1577,
+     0.0065
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2435,
+     0.301,
+     0.2407,
+     0.2148
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.187,
+     0.1596,
+     0.2408,
+     0.2594,
+     0.1532
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 40353.64,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.537,
+   "unaffordable_people": 4600000,
+   "cost_year": 2025,
+   "cost_lcu": 863.04,
+   "cost_2021ppp": 3.3412,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "768",
   "iso2": "TG",
@@ -98060,6 +105267,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     59.61
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    807072.71
    ],
    "per_allsp.cov_pop_tot": [
     2021,
@@ -98388,6 +105599,12 @@
     }
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 835.11,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "776",
   "iso2": "TO",
@@ -98635,6 +105852,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     357.54
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    16702.18
    ]
   },
   "gdp_pc_population_share_below": 0.54764,
@@ -98912,6 +106133,21 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 6221.06,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.32,
+   "unaffordable_people": 500000,
+   "cost_year": 2025,
+   "cost_lcu": 22.35,
+   "cost_2021ppp": 4.8982,
+   "cost_method": "local"
   },
   "region": "LCN",
   "m49": "780",
@@ -99196,6 +106432,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1276.34
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    124421.14
    ]
   },
   "gdp_pc_population_share_below": 0.84852,
@@ -99473,6 +106713,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.118,
+     0.1928,
+     0.488,
+     0.2012
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2129,
+     0.5813,
+     0.1048,
+     0.067,
+     0.034,
+     0.0
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2531,
+     0.3012,
+     0.212,
+     0.2338
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1228,
+     0.0714,
+     0.4246,
+     0.2838,
+     0.0973
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 680.85,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.086,
+   "unaffordable_people": 1100000,
+   "cost_year": 2025,
+   "cost_lcu": 5.11,
+   "cost_2021ppp": 4.3882,
+   "cost_method": "local"
   },
   "region": "MEA",
   "m49": "788",
@@ -99762,6 +107056,10 @@
     2023,
     317.71
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    13616.92
+   ],
    "per_allsp.cov_pop_tot": [
     2021,
     11.73
@@ -99980,6 +107278,12 @@
      0.04498,
      0.00025
     ]
+   }
+  },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 1795.76,
+    "year": 2025
    }
   },
   "region": "ECS",
@@ -100241,6 +107545,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     581.38
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    35915.23
    ]
   },
   "gdp_pc_population_share_below": 0.54671,
@@ -100513,6 +107821,10 @@
    "SP.DYN.LE00.MA.IN": [
     2024,
     76.01
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    37001.78
    ]
   },
   "gdp_pc_population_share_below": 0.89288,
@@ -100696,6 +108008,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 763.19,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "798",
   "iso2": "TV",
@@ -100823,6 +108141,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     1723.57
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    15263.9
    ]
   },
   "gdp_pc_population_share_below": 0.53999,
@@ -101086,6 +108408,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0753,
+     0.3242,
+     0.3846,
+     0.216
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2429,
+     0.451,
+     0.1873,
+     0.0728,
+     0.0411,
+     0.0048
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1293,
+     0.4139,
+     0.2187,
+     0.238
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.2344,
+     0.0279,
+     0.3306,
+     0.2804,
+     0.1267
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 36157.59,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.04,
+   "unaffordable_people": 3500000,
+   "cost_year": 2025,
+   "cost_lcu": 75.44,
+   "cost_2021ppp": 4.4011,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "792",
   "iso2": "TR",
@@ -101345,6 +108721,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     547.81
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    723151.73
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -101987,6 +109367,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0445,
+     0.4158,
+     0.392,
+     0.1477
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1599,
+     0.3784,
+     0.1421,
+     0.0929,
+     0.2217,
+     0.005
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1397,
+     0.2843,
+     0.1767,
+     0.3993
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0862,
+     0.1367,
+     0.2312,
+     0.152,
+     0.3938
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 216669.8,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.736,
+   "unaffordable_people": 37800000,
+   "cost_year": 2025,
+   "cost_lcu": 5002.34,
+   "cost_2021ppp": 3.1453,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "800",
   "iso2": "UG",
@@ -102278,6 +109712,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     45.21
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    4333396.03
    ],
    "per_allsp.cov_pop_tot": [
     2016,
@@ -102597,6 +110035,51 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0755,
+     0.1652,
+     0.3397,
+     0.4196
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1694,
+     0.3898,
+     0.3081,
+     0.0673,
+     0.0571,
+     0.0083
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.176,
+     0.2651,
+     0.1844,
+     0.3745
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.205,
+     0.0625,
+     0.3576,
+     0.3312,
+     0.0437
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 12124.1,
+    "year": 2025
+   }
+  },
   "region": "ECS",
   "m49": "804",
   "iso2": "UA",
@@ -102876,6 +110359,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2021,
     369.9
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    242481.94
    ],
    "per_allsp.cov_pop_tot": [
     2020,
@@ -103206,6 +110693,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1842,
+     0.2252,
+     0.2701,
+     0.3205
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.2396,
+     0.4129,
+     0.1895,
+     0.0603,
+     0.0465,
+     0.0512
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 9499.08,
+    "year": 2024
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.019,
+   "unaffordable_people": 200000,
+   "cost_year": 2025,
+   "cost_lcu": 8.18,
+   "cost_2021ppp": 2.7339,
+   "cost_method": "local"
+  },
   "region": "MEA",
   "m49": "784",
   "iso2": "AE",
@@ -103477,6 +110999,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     2401.52
+   ],
+   "NY.GNP.PCAP.CN": [
+    2024,
+    189981.55
    ]
   },
   "gdp_pc_population_share_below": 0.91594,
@@ -103753,6 +111279,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0784,
+     0.0569,
+     0.1552,
+     0.7094
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.6598,
+     0.0762,
+     0.0626,
+     0.1023,
+     0.0218,
+     0.0773
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2173.86,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.029,
+   "unaffordable_people": 2000000,
+   "cost_year": 2025,
+   "cost_lcu": 1.9,
+   "cost_2021ppp": 2.1255,
+   "cost_method": "local"
+  },
   "region": "ECS",
   "m49": "826",
   "iso2": "GB",
@@ -104020,6 +111581,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2024,
     5860.24
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    43477.18
    ]
   },
   "gdp_pc_population_share_below": 0.92407,
@@ -104294,6 +111859,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.0502,
+     0.1862,
+     0.2545,
+     0.509
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.4348,
+     0.1508,
+     0.1874,
+     0.091,
+     0.042,
+     0.094
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 4474.43,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.045,
+   "unaffordable_people": 15700000,
+   "cost_year": 2025,
+   "cost_lcu": 2.86,
+   "cost_2021ppp": 2.4048,
+   "cost_method": "local"
+  },
   "region": "NAC",
   "m49": "840",
   "iso2": "US",
@@ -104561,6 +112161,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     13473.19
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    89488.53
    ]
   },
   "gdp_pc_population_share_below": 0.95476,
@@ -104839,6 +112443,41 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2021,
+    "shares": [
+     0.1147,
+     0.34,
+     0.2839,
+     0.2614
+    ]
+   },
+   "emergency_source": {
+    "year": 2021,
+    "shares": [
+     0.1996,
+     0.3053,
+     0.1376,
+     0.3089,
+     0.0194,
+     0.0292
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 49241.85,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.32,
+   "unaffordable_people": 1100000,
+   "cost_year": 2025,
+   "cost_lcu": 135.52,
+   "cost_2021ppp": 3.8171,
+   "cost_method": "local"
+  },
   "region": "LCN",
   "m49": "858",
   "iso2": "UY",
@@ -105099,6 +112738,10 @@
     2023,
     2076.09
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    984837.01
+   ],
    "per_allsp.cov_pop_tot": [
     2022,
     71.66
@@ -105348,6 +112991,60 @@
      0.00601
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0775,
+     0.276,
+     0.3836,
+     0.2629
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.071,
+     0.4227,
+     0.3749,
+     0.0177,
+     0.099,
+     0.0146
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1576,
+     0.3632,
+     0.1687,
+     0.3105
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.136,
+     0.1265,
+     0.2835,
+     0.3224,
+     0.1316
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 2502227.74,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.062,
+   "unaffordable_people": 2300000,
+   "cost_year": 2025,
+   "cost_lcu": 16429.36,
+   "cost_2021ppp": 3.8683,
+   "cost_method": "local"
   },
   "region": "ECS",
   "m49": "860",
@@ -105633,6 +113330,10 @@
     2023,
     192.12
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    50044554.81
+   ],
    "per_allsp.cov_pop_tot": [
     2018,
     25.46
@@ -105880,6 +113581,12 @@
     ]
    }
   },
+  "findex": {
+   "emergency_amount": {
+    "lcu": 26681.56,
+    "year": 2025
+   }
+  },
   "region": "EAS",
   "m49": "548",
   "iso2": "VU",
@@ -106119,6 +113826,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     143.44
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    533631.23
    ],
    "per_allsp.cov_pop_tot": [
     2019,
@@ -106424,6 +114135,47 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0329,
+     0.4262,
+     0.3874,
+     0.1535
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1059,
+     0.4782,
+     0.1496,
+     0.1471,
+     0.1149,
+     0.0044
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1606,
+     0.3341,
+     0.1592,
+     0.346
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1104,
+     0.035,
+     0.3677,
+     0.3895,
+     0.0974
+    ]
+   }
+  },
   "region": "LCN",
   "m49": "862",
   "iso2": "VE",
@@ -106659,6 +114411,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     185.99
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    568962.92
    ]
   },
   "gdp_pc_population_share_below": 0.43274,
@@ -106932,6 +114688,60 @@
      ]
     }
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0176,
+     0.1682,
+     0.4212,
+     0.393
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.2753,
+     0.4345,
+     0.2535,
+     0.0179,
+     0.0116,
+     0.0072
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.0419,
+     0.1699,
+     0.2681,
+     0.5201
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.1714,
+     0.0646,
+     0.502,
+     0.2038,
+     0.0582
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 6144702.24,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.07,
+   "unaffordable_people": 7100000,
+   "cost_year": 2025,
+   "cost_lcu": 33090.91,
+   "cost_2021ppp": 3.8617,
+   "cost_method": "local"
   },
   "region": "EAS",
   "m49": "704",
@@ -107225,6 +115035,10 @@
     2023,
     197.19
    ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    122894044.88
+   ],
    "per_allsp.cov_pop_tot": [
     2020,
     89.41
@@ -107474,6 +115288,56 @@
      0.00609
     ]
    }
+  },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.0233,
+     0.2652,
+     0.4147,
+     0.2969
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.1052,
+     0.6332,
+     0.1643,
+     0.0115,
+     0.084,
+     0.0019
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.2825,
+     0.3096,
+     0.142,
+     0.2659
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0888,
+     0.0312,
+     0.2979,
+     0.3985,
+     0.1837
+    ]
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.173,
+   "unaffordable_people": 1000000,
+   "cost_year": 2025,
+   "cost_lcu": 12.35,
+   "cost_2021ppp": 3.2986,
+   "cost_method": "local"
   },
   "region": "MEA",
   "m49": "275",
@@ -107746,6 +115610,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     345.68
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    3370.33
    ],
    "per_allsp.cov_pop_tot": [
     2016,
@@ -108072,6 +115940,28 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2022,
+    "shares": [
+     0.1089,
+     0.2519,
+     0.4058,
+     0.2333
+    ]
+   },
+   "emergency_source": {
+    "year": 2022,
+    "shares": [
+     0.0649,
+     0.7196,
+     0.1057,
+     0.0527,
+     0.0416,
+     0.0154
+    ]
+   }
+  },
   "region": "MEA",
   "m49": "887",
   "iso2": "YE",
@@ -108331,6 +116221,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     47.78
+   ],
+   "NY.GNP.PCAP.CN": [
+    2018,
+    330112.4
    ],
    "per_allsp.cov_pop_tot": [
     2014,
@@ -108662,6 +116556,60 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1048,
+     0.4673,
+     0.288,
+     0.1398
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0913,
+     0.4107,
+     0.182,
+     0.0779,
+     0.2154,
+     0.0226
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1506,
+     0.2236,
+     0.1908,
+     0.435
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0679,
+     0.2164,
+     0.1017,
+     0.3118,
+     0.3022
+    ]
+   },
+   "emergency_amount": {
+    "lcu": 1508.52,
+    "year": 2025
+   }
+  },
+  "healthy_diet": {
+   "year": 2025,
+   "unaffordable_share": 0.862,
+   "unaffordable_people": 18900000,
+   "cost_year": 2025,
+   "cost_lcu": 35.05,
+   "cost_2021ppp": 3.512,
+   "cost_method": "local"
+  },
   "region": "SSF",
   "m49": "894",
   "iso2": "ZM",
@@ -108937,6 +116885,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     79.56
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    30170.38
    ],
    "per_allsp.cov_pop_tot": [
     2015,
@@ -109266,6 +117218,47 @@
     }
    }
   },
+  "findex": {
+   "emergency": {
+    "year": 2024,
+    "shares": [
+     0.1374,
+     0.516,
+     0.2639,
+     0.0827
+    ]
+   },
+   "emergency_source": {
+    "year": 2024,
+    "shares": [
+     0.0712,
+     0.4139,
+     0.1268,
+     0.0775,
+     0.2774,
+     0.0332
+    ]
+   },
+   "cover_expenses": {
+    "year": 2024,
+    "shares": [
+     0.1305,
+     0.2104,
+     0.1637,
+     0.4954
+    ]
+   },
+   "worry": {
+    "year": 2024,
+    "shares": [
+     0.0547,
+     0.0793,
+     0.1609,
+     0.4227,
+     0.2824
+    ]
+   }
+  },
   "region": "SSF",
   "m49": "716",
   "iso2": "ZW",
@@ -109553,6 +117546,10 @@
    "SH.XPD.CHEX.PC.CD": [
     2023,
     62.93
+   ],
+   "NY.GNP.PCAP.CN": [
+    2025,
+    94934.36
    ],
    "per_allsp.cov_pop_tot": [
     2019,

@@ -226,6 +226,8 @@ def page_context(lang="en"):
             "education": sum("education" in c for c in countries),
             "gdp": sum("gdp_per_capita_usd" in c for c in countries),
             "wdi_indicators": len(g["wdi_indicators"]),
+            "findex": sum("emergency" in c.get("findex", {}) for c in countries),
+            "healthy_diet": sum("cost_2021ppp" in c.get("healthy_diet", {}) for c in countries),
             "social_protection": sum("per_allsp.cov_pop_tot" in c.get("wdi", {}) or "per_sa_allsa.cov_pop_tot" in c.get("wdi", {})
                                      for c in countries),
         },
