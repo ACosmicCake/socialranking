@@ -48,7 +48,7 @@ IMF_API = "https://www.imf.org/external/datamapper/api/v1"
 PPP_BASE_YEAR = 2021      # PIP incomes are in 2021 international dollars
 REFERENCE_YEAR = 2024     # latest year of PIP's lined-up (non-nowcast) estimates
 INFLATION_LAST_YEAR = 2026
-IMF_EDITION = "IMF World Economic Outlook, October 2026"
+IMF_EDITION = "IMF World Economic Outlook (October 2026)"
 
 # Population shares at which PIP reports each country's income threshold.
 POPSHARES = [0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98, 0.99]
