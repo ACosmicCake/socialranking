@@ -170,6 +170,25 @@ WDI_INDICATORS = {
     "FX.OWN.TOTL.OL.ZS": "Account ownership, older adults (25+)",
     "FX.OWN.TOTL.PL.ZS": "Account ownership, primary education or less",
     "FX.OWN.TOTL.SO.ZS": "Account ownership, secondary education or more",
+    # human capital, learning, connectivity, health spending
+    "HD.HCI.OVRL": "Human Capital Index (0-1)",
+    "SE.LPV.PRIM": "Learning poverty (% of 10-year-olds unable to read a simple text)",
+    "IT.CEL.SETS.P2": "Mobile cellular subscriptions (per 100 people)",
+    "SH.XPD.CHEX.PC.CD": "Current health expenditure per person (current US$)",
+}
+# Social protection coverage from the World Bank ASPIRE database: % of the population
+# living in households that receive each kind of programme, in total and by
+# quintile of pre-transfer welfare (q1 = poorest fifth). Surveys are infrequent,
+# so these use an older cut-off than WDI_SINCE.
+ASPIRE_SINCE = 2008
+WDI_SOCIAL_PROTECTION = {
+    "per_allsp.cov_pop_tot": "Coverage of social protection and labour programmes (% of population)",
+    "per_sa_allsa.cov_pop_tot": "Coverage of social assistance (% of population)",
+    "per_si_allsi.cov_pop_tot": "Coverage of social insurance (% of population)",
+    "per_lm_alllm.cov_pop_tot": "Coverage of labour market programmes (% of population)",
+    **{f"per_{p}.cov_q{q}_tot": f"Coverage of {name}, quintile {q} (% of population)"
+       for p, name in (("sa_allsa", "social assistance"), ("si_allsi", "social insurance"))
+       for q in range(1, 6)},
 }
 # Educational attainment, population 25+, cumulative (% with at least this level).
 WDI_EDUCATION = ["SE.PRM.CUAT.ZS", "SE.SEC.CUAT.LO.ZS", "SE.SEC.CUAT.UP.ZS", "SE.SEC.CUAT.PO.ZS",
@@ -260,7 +279,8 @@ def wdi(indicator, name, **params):
     params = {"format": "json", "per_page": 20000, **params}
     url = f"{WDI_API}/country/all/indicator/{indicator}?{urllib.parse.urlencode(params)}"
     meta, rows = json.loads(fetch(url, name))
-    return [r for r in rows or [] if r["value"] is not None]
+    # ASPIRE aggregates carry period labels such as "2011-21W"; keep single years only.
+    return [r for r in rows or [] if r["value"] is not None and str(r["date"]).isdigit()]
 
 
 # ---------------------------------------------------------------------------
@@ -768,6 +788,7 @@ def main():
     education, global_education = build_education(bl, bl_groups, set(economies), pop25)
 
     indicators = {ind: wdi_latest(ind, WDI_SINCE) for ind in WDI_INDICATORS}
+    indicators.update({ind: wdi_latest(ind, ASPIRE_SINCE) for ind in WDI_SOCIAL_PROTECTION})
 
     countries = []
     for code, m in economies.items():
@@ -813,9 +834,10 @@ def main():
     sources = {
         "pip": {"name": f"World Bank Poverty and Inequality Platform API, release {PIP_VERSION}",
                 "url": f"{PIP_API}/pip?version={PIP_VERSION}", "home": "https://pip.worldbank.org"},
-        "wdi": {"name": f"World Bank World Development Indicators API ({len(WDI_INDICATORS) + len(WDI_EDUCATION) + 3} "
-                        "indicators: population, GDP, PPP, education, services, food security, work, health; "
-                        "country classifications)",
+        "wdi": {"name": "World Bank World Development Indicators API "
+                        f"({len(WDI_INDICATORS) + len(WDI_SOCIAL_PROTECTION) + len(WDI_EDUCATION) + 3} "
+                        "indicators: population, GDP, PPP, education, services, food security, work, health, "
+                        "social protection (ASPIRE); country classifications)",
                 "url": f"{WDI_API}/country/all/indicator/SP.POP.TOTL",
                 "home": "https://datatopics.worldbank.org/world-development-indicators/"},
         "imf": {"name": f"{IMF_EDITION}: inflation, average consumer prices (PCPIPCH)",
@@ -832,8 +854,9 @@ def main():
         "prices": {"base_year": PPP_BASE_YEAR, "last_year": INFLATION_LAST_YEAR, "source": IMF_EDITION,
                    "max_current_inflation": MAX_CURRENT_INFLATION},
         "location": {"economies_ranked": len(ranked), "population_ranked": ranked_pop},
-        "wdi_indicators": WDI_INDICATORS,
+        "wdi_indicators": {**WDI_INDICATORS, **WDI_SOCIAL_PROTECTION},
         "wdi_since": WDI_SINCE,
+        "aspire_since": ASPIRE_SINCE,
         "aggregates": {
             code: {
                 "name": next((m["name"] for m in meta if m["id"] == code), code),

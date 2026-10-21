@@ -27,7 +27,7 @@
     const section = (id, title, body) => `<hr class="my-5"><section id="${id}" class="result-section"><h2 class="h3">${title}</h2>${body}</section>`;
     const table = (head, rows, cls = "") => `<div class="table-responsive"><table class="table table-dark table-sm align-middle ${cls}">
         <thead><tr>${head.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
-    const fmtGlance = (v, f) => v === null || v === undefined ? "-" : f === "money" ? money(v, 0) : f === "pct" ? pct(v) : fixed(v, 1);
+    const fmtGlance = (v, f) => v === null || v === undefined ? "-" : f === "money" ? money(v, 0) : f === "pct" ? pct(v) : f === "index" ? fixed(v, 2) : fixed(v, 1);
 
     // ---------------------------------------------------------------- answers
     // The fragment holds the answers, so in-page links scroll instead of changing it.
@@ -82,8 +82,10 @@
         ["world", tr("Around the world", "Khắp thế giới")], ["history", tr("Over time", "Theo thời gian")],
         ["education", tr("Education", "Học vấn")], ["work", tr("Work", "Công việc")], ["living", tr("Home", "Nhà ở")],
         ["mpi", tr("Poverty index", "Nghèo đa chiều")], ["security", tr("Security", "An ninh tài chính")],
-        ["wealth", tr("Wealth", "Tài sản")], ["country", tr("Your country", "Nước bạn")]]
-        .filter(([id]) => !(id === "work" && !work.status) && !(id === "wealth" && !r.wealth.band) && !(id === "mpi" && !r.mpi.available));
+        ["protection", tr("Social protection", "An sinh xã hội")], ["wealth", tr("Wealth", "Tài sản")],
+        ["country", tr("Your country", "Nước bạn")]]
+        .filter(([id]) => !(id === "work" && !work.status) && !(id === "wealth" && !r.wealth.band) && !(id === "mpi" && !r.mpi.available)
+            && !(id === "protection" && !r.social_protection.received && !r.social_protection.country));
     html.push(`<nav class="result-nav sticky-top" aria-label="${tr("Result sections", "Các phần kết quả")}"><div class="container d-flex flex-wrap gap-1 py-2">
         ${navItems.map(([id, label]) => `<a class="btn btn-sm btn-outline-secondary" href="#${id}">${label}</a>`).join("")}</div></nav>
         <div class="container pb-5">`);
@@ -176,6 +178,9 @@
              `Khảo sát của ${cname} đo <strong>chi tiêu</strong>, còn bạn nhập <strong>thu nhập</strong>. Hộ khá giả thường chi ít hơn thu nhập, nên thứ hạng của bạn ở ${cname} có lẽ hơi cao hơn thực tế.`)
         : tr(`${cname}'s survey measures <strong>income</strong>, and you gave <strong>spending</strong>. Households usually spend less than they earn, so your rank in ${cname} is probably somewhat understated.`,
              `Khảo sát của ${cname} đo <strong>thu nhập</strong>, còn bạn nhập <strong>chi tiêu</strong>. Hộ gia đình thường chi ít hơn thu nhập, nên thứ hạng của bạn ở ${cname} có lẽ hơi thấp hơn thực tế.`)}</div>` : ""}
+    ${inc.sensitivity ? `<p class="small text-secondary">${tr(
+        `<strong>How precise is this?</strong> People rarely know their household income exactly. If yours were ${fixed(inc.sensitivity.error * 100, 0)}% lower or higher, your world rank would be between ${pct(inc.sensitivity.global[0])} and ${pct(inc.sensitivity.global[1])}${inc.sensitivity.national ? `, and your rank in ${cname} between ${pct(inc.sensitivity.national[0])} and ${pct(inc.sensitivity.national[1])}` : ""}.`,
+        `<strong>Kết quả chính xác đến đâu?</strong> Ít ai biết chính xác thu nhập của hộ mình. Nếu thu nhập thấp hơn hoặc cao hơn ${fixed(inc.sensitivity.error * 100, 0)}%, thứ hạng thế giới của bạn sẽ nằm trong khoảng ${pct(inc.sensitivity.global[0])} đến ${pct(inc.sensitivity.global[1])}${inc.sensitivity.national ? `, và thứ hạng ở ${cname} trong khoảng ${pct(inc.sensitivity.national[0])} đến ${pct(inc.sensitivity.national[1])}` : ""}.`)}</p>` : ""}
     ${inc.national_history ? `<h3 class="h5 mt-3">${tr(`${cname} over time`, `${cname} qua các năm`)}</h3>
     <p class="small">${inc.national_history.reached
         ? tr(`Half of ${cname}'s people lived on less than your income until ${inc.national_history.reached}; the median reached ${money(inc.ppp_per_day)} a day that year.`,
@@ -191,6 +196,24 @@
              tr("World below the line", "Thế giới dưới chuẩn"), tr(`${cname} below the line`, `${cname} dưới chuẩn`)],
         inc.lines.map(l => `<tr><td>${esc(l.label)}: ${esc(l.meaning)}</td><td>${l.above ? tr("&#10003; above", "&#10003; trên") : tr("&#10007; below", "&#10007; dưới")}</td>
             <td>${pct(l.share_below)}</td><td>${pct(l.country_share_below)}</td></tr>`))}
+    <h3 class="h5 mt-4">${tr("What it takes to move up", "Cần bao nhiêu để lên hạng")}</h3>
+    ${(() => {
+        const period = answers.income_period === "year" ? tr("a year", "mỗi năm") : tr("a month", "mỗi tháng");
+        const local = inc.mode === "exact";
+        const rank = t => t.pct === 50
+            ? (t.scope === "world" ? tr("World median", "Trung vị thế giới") : tr(`${cname} median`, `Trung vị ${cname}`))
+            : (t.scope === "world" ? tr(`Top ${100 - t.pct}% of the world`, `${100 - t.pct}% cao nhất thế giới`)
+                                   : tr(`Top ${100 - t.pct}% in ${cname}`, `${100 - t.pct}% cao nhất ở ${cname}`));
+        return table([tr("To reach", "Để đạt"), tr("Per person a day (2021 int. $)", "Mỗi người mỗi ngày (đô la quốc tế 2021)"),
+                      local ? tr(`Your household's income, ${period} (${esc(r.country.currency || "")})`, `Thu nhập của hộ bạn, ${period} (${esc(r.country.currency || "")})`) : null,
+                      tr("You", "Bạn")].filter(h => h !== null),
+            inc.thresholds.map(t => `<tr><td>${rank(t)}</td><td>${money(t.ppp_per_day)}</td>
+                ${local ? `<td>${fixed(t.local, 0)}</td>` : ""}
+                <td>${t.reached ? tr("&#10003; reached", "&#10003; đã đạt") : tr(`needs ${fixed(t.multiple, 1)}&times; your income`, `cần gấp ${fixed(t.multiple, 1)} lần thu nhập của bạn`)}</td></tr>`));
+    })()}
+    <p class="small text-secondary">${tr(
+        `Income thresholds of the national and world distributions${inc.mode === "exact" ? `, converted back into ${esc(r.country.currency || "local currency")} at today's prices for a household of ${answers.household_size}` : ""}.`,
+        `Các ngưỡng thu nhập của phân phối quốc gia và thế giới${inc.mode === "exact" ? `, quy đổi ngược về ${esc(r.country.currency || "nội tệ")} theo giá hiện nay cho hộ ${answers.household_size} người` : ""}.`)} ${cite("pip")}</p>
     <h3 class="h5 mt-4">${tr("What if?", "Nếu như?")}</h3>
     <p class="small text-secondary">${tr(
         "Move the slider to see how your rank would change if your household's income per person were different. Each step roughly doubles or halves it.",
@@ -435,6 +458,53 @@
         </div>
         <div class="col-lg-6"><h3 class="h5">${tr("Food security", "An ninh lương thực")}</h3>${foodHtml}</div>
     </div>`));
+
+    // ---------------------------------------------------------------- social protection
+    const sp = r.social_protection;
+    if (sp.received || sp.country) {
+        const typeName = {
+            insurance: tr("social insurance", "bảo hiểm xã hội"),
+            assistance: tr("social assistance", "trợ giúp xã hội"),
+            labour_market: tr("labour market programmes", "chương trình thị trường lao động"),
+        };
+        const fifths = [tr("Poorest fifth", "20% nghèo nhất"), tr("Second fifth", "20% thứ hai"), tr("Middle fifth", "20% ở giữa"),
+                        tr("Fourth fifth", "20% thứ tư"), tr("Richest fifth", "20% giàu nhất")];
+        const youText = !sp.received ? tr("You didn't answer this question.", "Bạn chưa trả lời câu này.")
+            : sp.received.length === 0 ? tr("Your household receives none of these public programmes.", "Hộ bạn không nhận chương trình công nào trong số này.")
+            : tr(`Your household receives ${sp.types.map(t => `<strong>${typeName[t]}</strong>`).join(" and ")}.`,
+                 `Hộ bạn nhận ${sp.types.map(t => `<strong>${typeName[t]}</strong>`).join(" và ")}.`);
+        const rows = sp.country ? [
+            ["any", tr("Any social protection or labour programme", "Bất kỳ chương trình an sinh hoặc lao động nào")],
+            ["assistance", tr("Social assistance (cash transfers, social pensions, in-kind help)", "Trợ giúp xã hội (trợ cấp tiền mặt, lương hưu xã hội, hỗ trợ hiện vật)")],
+            ["insurance", tr("Social insurance (contributory pensions and benefits)", "Bảo hiểm xã hội (lương hưu và trợ cấp có đóng góp)")],
+            ["labour_market", tr("Labour market programmes", "Chương trình thị trường lao động")],
+        ].filter(([k]) => sp.country[k] !== undefined).map(([k, label]) => {
+            const you = !sp.received ? "" : k === "any" ? (sp.received.length ? "&#10003;" : "&#10007;") : (sp.types.includes(k) ? "&#10003;" : "&#10007;");
+            return `<tr><td>${label}</td><td>${pct(sp.country[k])}</td><td>${you}</td></tr>`;
+        }) : [];
+        html.push(section("protection", tr("Social protection", "An sinh xã hội"), `
+        <p>${youText} ${tr(
+            `Worldwide, ${pct(sp.ilo.covered_share * 100)} of people were covered by at least one social protection cash benefit in ${sp.ilo.year}, leaving ${people(sp.ilo.uncovered_people)} with none`,
+            `Trên thế giới, ${pct(sp.ilo.covered_share * 100)} dân số được ít nhất một khoản trợ cấp an sinh xã hội bằng tiền năm ${sp.ilo.year}, còn ${people(sp.ilo.uncovered_people)} người không có gì`)} ${cite(sp.ilo.cite)}.</p>
+        ${sp.country ? `<p class="small text-secondary">${tr(
+            `Share of ${cname}'s population living in a household that receives each kind of programme (household survey, ${sp.year}).`,
+            `Tỷ lệ dân số ${cname} sống trong hộ nhận từng loại chương trình (khảo sát hộ gia đình, ${sp.year}).`)}</p>
+        ${table([tr("Programme", "Chương trình"), cname, tr("Your household", "Hộ bạn")], rows)}` : `<p class="text-secondary">${tr(`ASPIRE has no survey data on programme coverage for ${cname}.`, `ASPIRE không có số liệu khảo sát về độ bao phủ chương trình ở ${cname}.`)}</p>`}
+        ${sp.world_any !== null || sp.group_any !== null || sp.region_any !== null ? `<p class="small">${[
+            sp.world_any !== null ? tr(`World: ${pct(sp.world_any)} (${sp.world_year})`, `Thế giới: ${pct(sp.world_any)} (${sp.world_year})`) : "",
+            sp.region_any !== null ? `${esc(sp.region_name)}: ${pct(sp.region_any)}` : "",
+            sp.group_any !== null ? `${esc(sp.group_name)}: ${pct(sp.group_any)}` : "",
+        ].filter(Boolean).join(" &middot; ")} ${tr("(any programme; ASPIRE aggregates cover mainly low- and middle-income economies)", "(bất kỳ chương trình nào; số liệu gộp ASPIRE chủ yếu gồm các nền kinh tế thu nhập thấp và trung bình)")}</p>` : ""}
+        ${sp.quintiles ? `<h3 class="h5 mt-3">${tr(`Coverage by income fifth in ${cname}`, `Độ bao phủ theo nhóm thu nhập ở ${cname}`)}</h3>
+            ${table([tr("Income fifth", "Nhóm thu nhập"), sp.quintiles.assistance ? tr("Social assistance", "Trợ giúp xã hội") : null,
+                     sp.quintiles.insurance ? tr("Social insurance", "Bảo hiểm xã hội") : null].filter(h => h !== null),
+                fifths.map((label, i) => `<tr class="${sp.quintile === i + 1 ? "table-active" : ""}"><td>${label}${sp.quintile === i + 1 ? ` &larr; ${tr("your income", "thu nhập của bạn")}` : ""}</td>
+                    ${sp.quintiles.assistance ? `<td>${pct(sp.quintiles.assistance[i])}</td>` : ""}${sp.quintiles.insurance ? `<td>${pct(sp.quintiles.insurance[i])}</td>` : ""}</tr>`))}
+            <p class="small text-secondary">${tr(
+                "Fifths are ranked by welfare before transfers, so a household lifted out of the poorest fifth by its benefits still counts there. Social assistance is meant to reach the poorest; social insurance usually follows formal jobs, so it tends to rise with income.",
+                "Các nhóm được xếp theo mức sống trước khi nhận trợ cấp, nên hộ thoát khỏi nhóm nghèo nhất nhờ trợ cấp vẫn được tính vào đó. Trợ giúp xã hội nhắm vào người nghèo nhất; bảo hiểm xã hội thường đi theo việc làm chính thức nên tăng theo thu nhập.")}</p>` : ""}
+        <p class="small">${cite("aspire")} ${tr("Not part of your SES index: receiving support reflects both need and access.", "Không tính vào chỉ số SES: nhận hỗ trợ phản ánh cả nhu cầu lẫn khả năng tiếp cận.")}</p>`));
+    }
 
     // ---------------------------------------------------------------- wealth
     if (r.wealth.band) {

@@ -105,6 +105,16 @@
         better-off households spend less than they earn, so entering income in a consumption country overstates your national
         rank, and vice versa. No adjustment is applied, because there is no reliable cross-country factor.</p>
 
+    <h3 class="h5">How precise is your rank?</h3>
+    <p>Survey research finds that people misreport household income substantially, and often don't know exactly what other
+        household members earn. For an exact answer we therefore also show the world and national ranks you would have at 20% less and 20% more income.
+        Where the distribution is dense (around the world median) the range is wide; near the top it is narrow.</p>
+
+    <h3 class="h5">What it takes to move up</h3>
+    <p>We invert the distributions to give the income at the median, the top 10% and the top 1% of your country and of the world, in
+        2021 international dollars per person per day. For an exact answer they are converted back into your currency at today's
+        prices for your household's size and period, so you can read them as "my household would need this much a month".</p>
+
     <h3 class="h5">Your country over time</h3>
     <p>For each economy we also keep PIP's lined-up median and share below $3.00 a day for every year since 1990, and show them next
         to your income, along with the first year the national median reached your income.</p>
@@ -248,6 +258,20 @@
         financial account {{ cite(findex.cite) }}.</p>
     <p class="small text-secondary">Limitations: the Gallup data date from 2019, before the pandemic. The FIES raw-score bands only approximate
         FAO's probabilistic classification.</p>
+    <h3 class="h5" id="social-protection">Social protection (context only)</h3>
+    <p>You can tell us which public programmes your household received in the past year. The options follow the three programme types
+        of the World Bank's ASPIRE database {{ cite("aspire") }}: <strong>social insurance</strong> (contributory pensions; unemployment,
+        sickness, maternity and work-injury benefits), <strong>social assistance</strong> (cash transfers, family allowances, social
+        pensions, food and other in-kind help, fee waivers) and <strong>labour market programmes</strong> (public works, training,
+        job-search help). We compare your answer with the share of your country's population living in households that receive each
+        type, from its latest household survey since {{ g.aspire_since }} ({{ coverage.social_protection }} economies), and with coverage
+        in each fifth of the national distribution, highlighting the fifth your income falls in. ASPIRE ranks fifths by welfare before
+        transfers, which is close to, but not the same as, the income you reported.</p>
+    <p>Globally, the ILO estimates that {{ (social_protection.covered_share * 100) | pct }} of people were covered by at least one
+        social protection cash benefit in {{ social_protection.year }}, leaving {{ social_protection.uncovered_people | people }} with none
+        {{ cite(social_protection.cite) }}. The ILO and ASPIRE numbers differ in concept: the ILO counts legal and effective coverage
+        from administrative records, ASPIRE counts receipt reported in surveys. Receiving support reflects both need and access, so
+        it isn't scored.</p>
 
     <h2 id="wealth">9. Wealth (optional)</h2>
     <p>Net worth per adult is placed in UBS's global wealth pyramid for {{ wealth_year }} {{ cite("ubs_2026") }}:</p>
@@ -262,7 +286,11 @@
     <h2 id="location">10. Your country (context only)</h2>
     <p>The results end with your country at a glance: its World Bank income group, GDP per person (and the share of the world
         living in poorer economies), the share of people below each poverty line, and key World Development Indicators, including
-        inequality (Gini) and life expectancy for your sex, compared with your region and the world {{ cite("wdi") }}. None of this is part of your SES index: your income is
+        inequality (Gini) and life expectancy for your sex, compared with your region and the world {{ cite("wdi") }}. It also
+        shows the World Bank's Human Capital Index {{ cite("hci_2020") }} (the productivity a child born today can expect to reach
+        given the country's health and schooling, relative to full health and complete education), learning poverty
+        {{ cite("learning_poverty_2022") }} (the share of 10-year-olds who cannot read and understand a simple text), mobile
+        subscriptions and health spending per person. None of this is part of your SES index: your income is
         already adjusted to your country's prices and compared globally, so counting the country again would double-count it.</p>
 
     <h2 id="index">11. The SES index</h2>
@@ -284,6 +312,7 @@
         <li>{{ coverage.education }} with national education data; {{ coverage.gdp }} with GDP per person.</li>
         <li>{{ coverage.wdi_indicators }} further World Development Indicators per country (services, food security, work, health
             and context), latest value since {{ g.wdi_since }}.</li>
+        <li>{{ coverage.social_protection }} with survey-based social protection coverage (ASPIRE), latest value since {{ g.aspire_since }}.</li>
         <li>World population {{ g.world_population | people }} ({{ g.world_population_year }}).</li>
     </ul>
 

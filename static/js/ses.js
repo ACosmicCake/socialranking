@@ -24,6 +24,12 @@
         // carried forward at the last rate for at most this many years.
         const MAX_EXTRAPOLATION_YEARS = 3;
         const MAX_HOUSEHOLD_SIZE = 50;
+        // People misreport income in surveys; show how far the rank moves at +/-20%.
+        const INCOME_ERROR = 0.2;
+        const THRESHOLD_PCTS = [50, 90, 99];
+        // ASPIRE programme types and their WDI code prefixes.
+        const SP_PROGRAMMES = [["any", "allsp"], ["assistance", "sa_allsa"], ["insurance", "si_allsi"],
+                               ["labour_market", "lm_alllm"]];
 
         // Display strings; a translated data bundle can override any of them (D.labels).
         const L = Object.assign({
@@ -51,6 +57,10 @@
                 "SI.POV.GINI": "Inequality (Gini index, 0-100)",
                 "SP.DYN.LE00.FE.IN": "Life expectancy at birth, women (years)",
                 "SP.DYN.LE00.MA.IN": "Life expectancy at birth, men (years)",
+                "HD.HCI.OVRL": "Human Capital Index (0-1)",
+                "SE.LPV.PRIM": "10-year-olds who can't read a simple text",
+                "IT.CEL.SETS.P2": "Mobile subscriptions per 100 people",
+                "SH.XPD.CHEX.PC.CD": "Health spending per person (US$)",
             },
             account_groups: {
                 sex: {F: "Women", M: "Men"},
@@ -322,6 +332,26 @@
             };
         }
 
+        // Income needed to reach the median, top 10% and top 1% of the country and the
+        // world, in 2021 $ a day and (for exact answers) in the household's own terms.
+        function incomeThresholds(answers, country, x, today) {
+            const dist = country.income;
+            const exact = answers.income_mode === "exact";
+            const toLocal = exact ? (ppp => {
+                const pl = priceLevel(country.prices, today.getFullYear());
+                return ppp * country.prices.ppp_2021 * pl.level * answers.household_size * 365
+                    / (answers.income_period === "month" ? 12 : 1);
+            }) : null;
+            const row = (scope, p, ppp) => ({
+                scope, pct: p, ppp_per_day: ppp, reached: x >= ppp, multiple: ppp / x,
+                local: toLocal ? toLocal(ppp) : null,
+            });
+            const rows = [];
+            if (dist) for (const p of THRESHOLD_PCTS) rows.push(row("country", p, nationalQuantile(dist, p / 100)));
+            for (const p of THRESHOLD_PCTS) rows.push(row("world", p, globalQuantile(p / 100)));
+            return rows;
+        }
+
         // Where income x (2021 $/day) ranks in every economy, region and income group.
         function incomeEverywhere(x) {
             const countries = D.countries.filter(c => c.income).map(c => ({
@@ -393,7 +423,14 @@
             if (answers.income_mode === "exact") {
                 result.basis = answers.income_basis || null;
                 result.basis_mismatch = Boolean(dist && result.basis && result.basis !== dist.welfare_type);
+                const lo = x * (1 - INCOME_ERROR), hi = x * (1 + INCOME_ERROR);
+                result.sensitivity = {
+                    error: INCOME_ERROR,
+                    global: [pct(globalCdf(lo)), pct(globalCdf(hi))],
+                    national: dist ? [pct(nationalCdf(dist, lo)), pct(nationalCdf(dist, hi))] : null,
+                };
             }
+            result.thresholds = incomeThresholds(answers, country, x, today);
             if (dist && dist.history) {
                 const h = dist.history;
                 result.national_history = {
@@ -707,6 +744,43 @@
             return rows;
         }
 
+        // Public programmes the household receives, against ASPIRE coverage in the country
+        // (overall and in the user's income fifth). Context only; not scored.
+        function scoreSocialProtection(answers, country, incomeNationalPct) {
+            const w = country.wdi;
+            const result = {};
+            const picked = answers.social_protection;
+            if (picked) {
+                result.received = picked.filter(k => k !== "none");
+                result.types = [...new Set(result.received.map(k => Q.social_protection_types[k]))];
+            }
+            const coverage = {};
+            for (const [key, prefix] of SP_PROGRAMMES) {
+                const v = value(w, `per_${prefix}.cov_pop_tot`);
+                if (v !== null) coverage[key] = v;
+            }
+            if (Object.keys(coverage).length) {
+                result.country = coverage;
+                result.year = SP_PROGRAMMES.map(([, prefix]) => year(w, `per_${prefix}.cov_pop_tot`)).find(y => y) || null;
+            }
+            const quintiles = {};
+            for (const [key, prefix] of SP_PROGRAMMES.filter(([k]) => k === "assistance" || k === "insurance")) {
+                const q = [1, 2, 3, 4, 5].map(i => value(w, `per_${prefix}.cov_q${i}_tot`));
+                if (q.some(v => v !== null)) quintiles[key] = q;
+            }
+            if (Object.keys(quintiles).length) result.quintiles = quintiles;
+            if (incomeNationalPct !== undefined) result.quintile = Math.min(5, Math.floor(incomeNationalPct / 20) + 1);
+            const region = regionAggregate(country), group = incomeAggregate(country);
+            result.world_any = value(world, "per_allsp.cov_pop_tot");
+            result.world_year = year(world, "per_allsp.cov_pop_tot");
+            result.region_any = region ? value(region.wdi, "per_allsp.cov_pop_tot") : null;
+            result.region_name = region ? region.name : null;
+            result.group_any = group ? value(group.wdi, "per_allsp.cov_pop_tot") : null;
+            result.group_name = group ? group.name : null;
+            result.ilo = F.social_protection;
+            return result;
+        }
+
         function scoreSecurity(answers, country, incomeNationalPct) {
             const result = {};
             const ranks = [];
@@ -774,7 +848,8 @@
             ["NY.GDP.PCAP.PP.KD", "money"], ["SP.DYN.LE00.IN", "number"], ["SH.DYN.MORT", "number"],
             ["SP.URB.TOTL.IN.ZS", "pct"], ["SE.ADT.LITR.ZS", "pct"], ["SN.ITK.DEFC.ZS", "pct"],
             ["SL.UEM.TOTL.ZS", "pct"], ["SL.EMP.VULN.ZS", "pct"], ["SH.XPD.OOPC.CH.ZS", "pct"],
-            ["EN.POP.SLUM.UR.ZS", "pct"], ["SI.POV.GINI", "number"],
+            ["EN.POP.SLUM.UR.ZS", "pct"], ["SI.POV.GINI", "number"], ["HD.HCI.OVRL", "index"],
+            ["SE.LPV.PRIM", "pct"], ["IT.CEL.SETS.P2", "number"], ["SH.XPD.CHEX.PC.CD", "money"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);
 
         function scoreLocation(country, answers) {
@@ -835,6 +910,7 @@
                 world_population: G.world_population,
             };
             result.security = scoreSecurity(answers, country, result.income.national_pct);
+            result.social_protection = scoreSocialProtection(answers, country, result.income.national_pct);
             if (country.income) {
                 const {survey_year, welfare_type, coverage, estimation_type, reference_year} = country.income;
                 result.country.survey = {survey_year, welfare_type, coverage, estimation_type, reference_year};

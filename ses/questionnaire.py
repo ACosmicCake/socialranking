@@ -126,6 +126,25 @@ ASSET_OPTIONS = [
 ]
 SMALL_ASSETS = ("radio", "tv", "phone", "computer", "animal_cart", "bicycle", "motorbike", "fridge")
 
+# Social protection programmes, grouped as in the World Bank's ASPIRE database.
+SOCIAL_PROTECTION_OPTIONS = [
+    ("contributory_pension", "An old-age, survivor or disability pension from a scheme that was paid into"),
+    ("insurance_benefit", "Unemployment, sickness, maternity or work-injury benefits"),
+    ("cash_transfer", "Government cash transfers, child or family allowances, or a social pension "
+                      "that doesn't depend on contributions"),
+    ("in_kind", "Food aid, school meals, fee waivers or other in-kind public assistance"),
+    ("labour_market", "Public works jobs, job training or job-search help"),
+    ("none", "None of these"),
+]
+# ASPIRE programme type for each option.
+SOCIAL_PROTECTION_TYPES = {
+    "contributory_pension": "insurance",
+    "insurance_benefit": "insurance",
+    "cash_transfer": "assistance",
+    "in_kind": "assistance",
+    "labour_market": "labour_market",
+}
+
 OPTIONAL_YES_NO = [("yes", "Yes"), ("no", "No"), ("skip", "Prefer not to say")]
 
 WEALTH_OPTIONS = [
@@ -516,6 +535,17 @@ SECTIONS = [
                 "options": YES_NO,
                 "source": "findex_2025",
                 "basis": "Global Findex saving question.",
+            },
+            {
+                "id": "social_protection",
+                "type": "checkbox",
+                "text": "In the past 12 months, did you or anyone in your household receive any of these? "
+                        "Tick all that apply.",
+                "help": "Count public programmes only, not private insurance or help from family.",
+                "options": SOCIAL_PROTECTION_OPTIONS,
+                "source": "aspire",
+                "basis": "World Bank ASPIRE programme types (social insurance, social assistance, labour "
+                         "market). Shown as context; not scored.",
             },
         ],
     },

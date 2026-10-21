@@ -295,3 +295,45 @@ test("national history and survey basis", () => {
     const rich = run({...FULL, income_amount: "1000000000"}).income;
     assert.equal(rich.national_history.reached, null);
 });
+
+test("rank sensitivity to misreported income", () => {
+    const inc = run(FULL).income;
+    assert.equal(inc.sensitivity.error, 0.2);
+    assert.ok(inc.sensitivity.global[0] < inc.global_pct && inc.global_pct < inc.sensitivity.global[1]);
+    assert.ok(inc.sensitivity.national[0] < inc.national_pct && inc.national_pct < inc.sensitivity.national[1]);
+    assert.equal(run(MINIMAL).income.sensitivity, undefined);  // a band already shows its range
+});
+
+test("income thresholds convert back to the household's currency", () => {
+    const inc = run(FULL).income;
+    const median = inc.thresholds.find(t => t.scope === "country" && t.pct === 50);
+    close(median.ppp_per_day, SES.country("VNM").income.median, 0.05);
+    // Entering the threshold's local amount gives back the threshold's rank.
+    const back = run({...FULL, income_amount: String(median.local)}).income;
+    close(back.national_pct, 50, 0.2);
+    close(back.ppp_per_day, median.ppp_per_day, 1e-6);
+    const top1 = inc.thresholds.find(t => t.scope === "world" && t.pct === 99);
+    close(SES.globalCdf(top1.ppp_per_day), 0.99, 1e-3);
+    assert.equal(top1.reached, inc.ppp_per_day >= top1.ppp_per_day);
+    assert.ok(run(MINIMAL).income.thresholds.every(t => t.local === null));
+});
+
+test("social protection against national coverage", () => {
+    const sp = run({...FULL, social_protection: "contributory_pension,cash_transfer"}).social_protection;
+    assert.deepEqual(sp.types.sort(), ["assistance", "insurance"]);
+    assert.ok(sp.country.any > 0 && sp.country.any <= 100);
+    assert.equal(sp.quintiles.assistance.length, 5);
+    assert.ok(sp.quintile >= 1 && sp.quintile <= 5);
+    assert.ok(sp.world_any > 40 && sp.world_any < 70);
+    assert.equal(sp.ilo.covered_share, 0.524);
+    assert.deepEqual(run({...FULL, social_protection: "none"}).social_protection.received, []);
+    assert.equal(run(FULL).social_protection.received, undefined);
+    assert.throws(() => SES.parseAnswers({...FULL, social_protection: "none,in_kind"}), SES.ValidationError);
+});
+
+test("human capital, learning poverty and connectivity in the country glance", () => {
+    const codes = run(FULL).location.glance.map(g => g.code);
+    for (const code of ["HD.HCI.OVRL", "SE.LPV.PRIM", "IT.CEL.SETS.P2", "SH.XPD.CHEX.PC.CD"]) assert.ok(codes.includes(code), code);
+    const hci = run(FULL).location.glance.find(g => g.code === "HD.HCI.OVRL");
+    assert.ok(hci.value > 0 && hci.value < 1);
+});

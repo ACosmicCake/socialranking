@@ -70,6 +70,32 @@ CITATIONS = {
         "year": 2025,
         "url": "https://www.who.int/publications/i/item/9789240117808",
     },
+    "aspire": {
+        "title": "ASPIRE: The Atlas of Social Protection - Indicators of Resilience and Equity",
+        "publisher": "World Bank",
+        "year": 2026,
+        "url": "https://www.worldbank.org/en/data/datatopics/aspire",
+    },
+    "ilo_wspr_2024": {
+        "title": "World Social Protection Report 2024-26: Universal social protection for climate action "
+                 "and a just transition",
+        "publisher": "International Labour Organization",
+        "year": 2024,
+        "url": "https://www.ilo.org/publications/flagship-reports/world-social-protection-report-2024-26-"
+               "universal-social-protection-climate",
+    },
+    "hci_2020": {
+        "title": "The Human Capital Index 2020 Update: Human Capital in the Time of COVID-19",
+        "publisher": "World Bank",
+        "year": 2020,
+        "url": "https://www.worldbank.org/en/publication/human-capital",
+    },
+    "learning_poverty_2022": {
+        "title": "The State of Global Learning Poverty: 2022 Update",
+        "publisher": "World Bank, UNESCO, UNICEF, FCDO, USAID and the Bill & Melinda Gates Foundation",
+        "year": 2022,
+        "url": "https://www.worldbank.org/en/topic/education/publication/state-of-global-learning-poverty",
+    },
     "findex_2025": {
         "title": "The Global Findex Database 2025",
         "publisher": "World Bank",
@@ -263,6 +289,15 @@ FINDEX = {
     "saved_in_account_share_lmic": 0.40,
     "year": 2024,  # survey fieldwork year of the 2025 edition
     "cite": "findex_2025",
+}
+
+# ILO World Social Protection Report 2024-26: share of the world's population
+# effectively covered by at least one social protection cash benefit (SDG 1.3.1).
+SOCIAL_PROTECTION = {
+    "covered_share": 0.524,
+    "uncovered_people": 3.8e9,
+    "year": 2023,
+    "cite": "ilo_wspr_2024",
 }
 
 FOOD_INSECURITY = {
