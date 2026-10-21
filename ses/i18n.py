@@ -162,6 +162,20 @@ QUESTIONS = {
                     "options": {"agriculture": "Nông, lâm nghiệp hoặc thủy sản",
                                 "industry": "Công nghiệp: chế biến, xây dựng, khai khoáng, điện, khí đốt hoặc nước",
                                 "services": "Dịch vụ: thương mại, vận tải, khách sạn, tài chính, hành chính, giáo dục, y tế, dịch vụ khác"}},
+    "mother_education": {
+        "text": "Mẹ bạn đã học xong đến trình độ cao nhất nào?",
+        "help": "Không bắt buộc. Nếu người khác nuôi dạy bạn thay mẹ, hãy trả lời cho người đó.",
+        "options": {"below_primary": "Không đi học, hoặc chưa học xong tiểu học", "primary": "Học xong tiểu học",
+                    "secondary": "Học một phần hoặc học xong trung học", "tertiary": "Học một phần hoặc học xong cao đẳng, đại học",
+                    "dont_know": "Không biết"},
+    },
+    "father_education": {
+        "text": "Bố bạn đã học xong đến trình độ cao nhất nào?",
+        "help": "Không bắt buộc. Nếu người khác nuôi dạy bạn thay bố, hãy trả lời cho người đó.",
+        "options": {"below_primary": "Không đi học, hoặc chưa học xong tiểu học", "primary": "Học xong tiểu học",
+                    "secondary": "Học một phần hoặc học xong trung học", "tertiary": "Học một phần hoặc học xong cao đẳng, đại học",
+                    "dont_know": "Không biết"},
+    },
     "occupation": {
         "text": "Công việc chính của bạn thuộc nhóm nào sau đây?",
         "help": "Nếu không chắc, hãy chọn nhóm có các ví dụ cần trình độ đào tạo tương đương công việc của bạn.",

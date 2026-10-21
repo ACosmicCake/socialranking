@@ -550,6 +550,53 @@
             return result;
         }
 
+        // Social mobility: each parent's education ranked among people of the same sex in their
+        // generation at ages 35-44 (Barro-Lee), against your own rank among people your age.
+        const PARENT_GAP = 30;  // years between a parent's birth and their child's
+        const AGE_MIDPOINT = {"15-24": 20, "25-34": 30, "35-44": 40, "45-54": 50, "55-64": 60, "65plus": 72};
+
+        function scoreMobility(answers, country, today) {
+            const edu = G.education, ce = country.education || {};
+            const keys = Q.parent_education_options.map(o => o[0]).filter(k => k !== "dont_know");
+            const given = [["mother", "F"], ["father", "M"]]
+                .filter(([p]) => keys.includes(answers[`${p}_education`]));
+            if (!given.length) return {};
+            if (!answers.age) return {needs_age: true};
+            const born = today.getFullYear() - AGE_MIDPOINT[answers.age];
+            const year = Math.min(2015, Math.max(1965, Math.round((born - PARENT_GAP + 40) / 5) * 5));
+            const result = {cohort_year: year, cohort_born: year - 40, parent_gap: PARENT_GAP, levels: edu.broad_levels, parents: []};
+            for (const [parent, sex] of given) {
+                const level = keys.indexOf(answers[`${parent}_education`]);
+                const ws = edu.cohorts[year][sex];
+                const cs = ce.cohorts && ce.cohorts[year] && ce.cohorts[year][sex];
+                result.parents.push({
+                    parent, sex, level, label: edu.broad_levels[level],
+                    world_shares: ws.map(pct), world_pct: pct(midrank(ws, level)),
+                    country_shares: cs ? cs.map(pct) : null, national_pct: cs ? pct(midrank(cs, level)) : undefined,
+                });
+            }
+            const rank = p => (p.national_pct !== undefined ? p.national_pct : p.world_pct);
+            const best = result.parents.reduce((a, b) => (rank(b) > rank(a) ? b : a));
+            result.best = best.parent;
+            const own = edu.broad_from_level[Q.education_options.findIndex(o => o[0] === answers.education)];
+            result.own_level = own;
+            result.own_label = edu.broad_levels[own];
+            result.direction = own > best.level ? "up" : own === best.level ? "same" : "down";
+            // Your own rank among people your age (still in education at 15-24, so not ranked).
+            const groupKey = answers.age === "65plus" ? "55-64" : answers.age;
+            const sx = answers.sex === "F" || answers.sex === "M" ? answers.sex : "MF";
+            if (edu.groups[groupKey]) {
+                result.own_world_pct = pct(midrank(edu.groups[groupKey][sx], own));
+                const cg = ce.groups && ce.groups[groupKey];
+                if (cg && cg[sx]) result.own_national_pct = pct(midrank(cg[sx], own));
+                const useNational = result.own_national_pct !== undefined && best.national_pct !== undefined;
+                result.basis = useNational ? "country" : "world";
+                result.rank_change = useNational ? Math.round(10 * (result.own_national_pct - best.national_pct)) / 10
+                    : Math.round(10 * (result.own_world_pct - best.world_pct)) / 10;
+            }
+            return result;
+        }
+
         // ------------------------------------------------------------------
         // Work
         // ------------------------------------------------------------------
@@ -1042,6 +1089,7 @@
             };
             result.security = scoreSecurity(answers, country, result.income.national_pct);
             result.social_protection = scoreSocialProtection(answers, country, result.income.national_pct);
+            result.mobility = scoreMobility(answers, country, today);
             if (country.income) {
                 const {survey_year, welfare_type, coverage, estimation_type, reference_year} = country.income;
                 result.country.survey = {survey_year, welfare_type, coverage, estimation_type, reference_year};

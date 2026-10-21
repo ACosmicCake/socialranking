@@ -96,6 +96,15 @@ WORK_OPTIONS = [
 EMPLOYED = ("employee", "employer", "own_account", "family_worker")
 VULNERABLE = ("own_account", "family_worker")
 
+# Parents' education, in the four broad Barro-Lee levels.
+PARENT_EDUCATION_OPTIONS = [
+    ("below_primary", "No schooling, or didn't finish primary school"),
+    ("primary", "Finished primary school"),
+    ("secondary", "Some or all of secondary school"),
+    ("tertiary", "Some or all of college or university"),
+    ("dont_know", "Don't know"),
+]
+
 # ISCO-08 major groups, with examples from the ILO classification.
 OCCUPATION_OPTIONS = [
     ("managers", "Manager (e.g. chief executive, director, department, shop, hotel or restaurant manager)"),
@@ -348,6 +357,19 @@ SECTIONS = [
                 "basis": "The nine ISCED 2011 attainment levels that UNESCO reports for adults 25+ "
                          "(World Bank indicators SE.PRM.CUAT.ZS to SE.TER.CUAT.DO.ZS).",
             },
+            *[
+                {
+                    "id": f"{parent}_education",
+                    "type": "radio",
+                    "text": f"What is the highest level of education your {parent} completed?",
+                    "help": "Optional. If someone else raised you in their place, answer for them.",
+                    "options": PARENT_EDUCATION_OPTIONS,
+                    "source": "barro_lee",
+                    "basis": "Barro-Lee broad attainment levels; compared with people of the same sex in your "
+                             "parent's generation at ages 35-44. Used for social mobility; not scored.",
+                }
+                for parent in ("mother", "father")
+            ],
         ],
     },
     {
