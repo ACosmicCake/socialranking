@@ -182,3 +182,11 @@ def test_parent_cohorts():
     no_school = [cohorts[y]["F"][0] for y in cohorts]
     assert all(b < a for a, b in zip(no_school, no_school[1:]))
     assert sum("cohorts" in c.get("education", {}) for c in data.countries()) > 130
+
+
+def test_exchange_rates():
+    # Official rates whose units match our PPPs: price level vs the US between 0.1 and 2.
+    rated = [c for c in data.countries() if "exchange_rate" in c]
+    assert len(rated) > 170
+    vnm = next(c for c in rated if c["iso3"] == "VNM")["exchange_rate"]
+    assert 20000 < vnm["lcu_per_usd"] < 30000 and vnm["year"] >= 2020

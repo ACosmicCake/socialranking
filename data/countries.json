@@ -1320,6 +1320,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 86.803333,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.119,
@@ -2249,6 +2253,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 131.605925,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.388,
@@ -2971,6 +2979,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.887144,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 2444.03,
@@ -3303,6 +3315,10 @@
      0.0027
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 911.993038,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -3976,6 +3992,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2.7,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 3242.25,
@@ -4566,6 +4586,10 @@
     "lcu": 905506.55,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1240.85125,
+   "year": 2025
   },
   "region": "LCN",
   "m49": "032",
@@ -5440,6 +5464,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 387.010152,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.44,
@@ -6123,6 +6151,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.79,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 3266.29,
@@ -6663,6 +6695,10 @@
     "lcu": 4891.55,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.551998,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -7459,6 +7495,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.029,
@@ -8049,6 +8089,10 @@
     "lcu": 613.43,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.7,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -8667,6 +8711,10 @@
      0.00653
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -9322,6 +9370,10 @@
      ]
     }
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.376,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -10114,6 +10166,10 @@
     "lcu": 16557.4,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 121.920837,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -11015,6 +11071,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2.0,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 2720.85,
@@ -11459,6 +11519,10 @@
      0.0035
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 3.069175,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -12326,6 +12390,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.009,
@@ -13149,6 +13217,10 @@
     "lcu": 747.64,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 2.0,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -14011,6 +14083,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.535,
@@ -14842,6 +14918,10 @@
      0.00177
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 87.158448,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -15808,6 +15888,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 6.91,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.105,
@@ -16490,6 +16574,10 @@
     "lcu": 900.47,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.735929,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -17363,6 +17451,10 @@
     "lcu": 5063.62,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 13.502383,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -18291,6 +18383,10 @@
     "lcu": 2895.54,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 5.587286,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -19396,6 +19492,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.307595,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 2175.7,
@@ -20121,6 +20221,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.735192,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.207,
@@ -20768,6 +20872,10 @@
     "lcu": 31427.88,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -21619,6 +21727,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2943.1375,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 62229.41,
@@ -22469,6 +22581,10 @@
     "lcu": 566255.37,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 4013.433104,
+   "year": 2025
   },
   "occupation": {
    "year": 2012,
@@ -23383,6 +23499,10 @@
     "lcu": 56492.31,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -24319,6 +24439,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.398106,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.03,
@@ -24843,6 +24967,10 @@
      0.00028
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 97.863152,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -25836,6 +25964,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 17111.79,
@@ -26434,6 +26566,10 @@
     "lcu": 28398.99,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -27649,6 +27785,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 951.329454,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.368,
@@ -28683,6 +28823,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 7.189847,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.113,
@@ -29566,6 +29710,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 4053.135833,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.359,
@@ -30301,6 +30449,10 @@
     "lcu": 45090.51,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 435.376187,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -31249,6 +31401,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2693.240601,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.901,
@@ -32145,6 +32301,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.773,
@@ -32939,6 +33099,10 @@
     "lcu": 457387.88,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 503.496832,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -33906,6 +34070,10 @@
     "lcu": 1186.66,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -35756,6 +35924,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.015,
@@ -36616,6 +36788,10 @@
     "lcu": 37598.95,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 21.882,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -37507,6 +37683,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.466,
@@ -38391,6 +38571,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 6.621825,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.013,
@@ -38983,6 +39167,10 @@
      0.00311
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 177.721,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -39588,6 +39776,10 @@
      0.00202
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 2.7,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -40209,6 +40401,10 @@
     "lcu": 32193.19,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 61.986567,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -41183,6 +41379,10 @@
     "lcu": 346.41,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -42160,6 +42360,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 49.227756,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.385,
@@ -43130,6 +43334,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
+  },
   "occupation": {
    "year": 2017,
    "shares": [
@@ -43762,6 +43970,10 @@
      0.095
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -44812,6 +45024,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.102,
@@ -45695,6 +45911,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 17.888921,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.681,
@@ -46410,6 +46630,10 @@
     "lcu": 5561.54,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 82.601336,
+   "year": 2024
   },
   "healthy_diet": {
    "year": 2025,
@@ -47502,6 +47726,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2.299033,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 717.87,
@@ -48335,6 +48563,10 @@
     "lcu": 2500.03,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -49194,6 +49426,10 @@
     "lcu": 2205.95,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -50359,6 +50595,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.393,
@@ -51193,6 +51433,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 71.289382,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.437,
@@ -51907,6 +52151,10 @@
     "lcu": 1245.44,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 2.742642,
+   "year": 2025
   },
   "occupation": {
    "year": 2013,
@@ -52828,6 +53076,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.053,
@@ -53726,6 +53978,10 @@
     "lcu": 1919.91,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 12.556825,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -54865,6 +55121,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.227,
@@ -55655,6 +55915,10 @@
      0.00165
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 2.7,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -56604,6 +56868,10 @@
     "lcu": 2503.47,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 7.680125,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -57848,6 +58116,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 32971.02,
@@ -58639,6 +58911,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 208.5,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 277165.08,
@@ -59387,6 +59663,10 @@
      ]
     }
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 130.626409,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -60214,6 +60494,10 @@
     "lcu": 4310.43,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 25.952675,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -61137,6 +61421,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 7.797083,
+   "year": 2025
+  },
   "region": "EAS",
   "m49": "344",
   "iso2": "HK",
@@ -61859,6 +62147,10 @@
     "lcu": 446407.93,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 353.14,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -62731,6 +63023,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 128.441487,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.018,
@@ -63598,6 +63894,10 @@
     "lcu": 11652.76,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 87.158448,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -64560,6 +64860,10 @@
     "lcu": 4057728.86,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 16477.86518,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -66450,6 +66754,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1300.0,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.28,
@@ -67380,6 +67688,10 @@
     "lcu": 3991.37,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -68447,6 +68759,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 3.451892,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.225,
@@ -69242,6 +69558,10 @@
     "lcu": 1918.53,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -70122,6 +70442,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 159.096428,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.264,
@@ -70989,6 +71313,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 149.657927,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.132,
@@ -71779,6 +72107,10 @@
     "lcu": 186.91,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.71,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -72712,6 +73044,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 521.035,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.034,
@@ -73596,6 +73932,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 129.302572,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.763,
@@ -74188,6 +74528,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.551998,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 306.67,
@@ -74646,6 +74990,10 @@
     "lcu": 356.61,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.887144,
+   "year": 2025
   },
   "occupation": {
    "year": 2017,
@@ -75309,6 +75657,10 @@
      ]
     }
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.306455,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -76096,6 +76448,10 @@
     "lcu": 13306.44,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 87.359832,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -77056,6 +77412,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 20444.136652,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.497,
@@ -77904,6 +78264,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.169,
@@ -78602,6 +78966,10 @@
     "lcu": 19811503.01,
     "year": 2024
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 89500.0,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -79455,6 +79823,10 @@
     "lcu": 1192.81,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 17.888749,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -80411,6 +80783,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 191.306667,
+   "year": 2024
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.596,
@@ -81212,6 +81588,10 @@
     "lcu": 1775.21,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 5.302567,
+   "year": 2025
   },
   "region": "MEA",
   "m49": "434",
@@ -82151,6 +82531,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.123,
@@ -83052,6 +83436,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 4438.43,
@@ -83874,6 +84262,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 8.02981,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 28589.02,
@@ -84359,6 +84751,10 @@
     "lcu": 132579.3,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 4529.751252,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -85274,6 +85670,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1161.094367,
+   "year": 2023
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.927,
@@ -86161,6 +86561,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 4.284424,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.014,
@@ -86995,6 +87399,10 @@
      ]
     }
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 15.415678,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -87852,6 +88260,10 @@
     "lcu": 33735.36,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -88713,6 +89125,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.045,
@@ -89297,6 +89713,10 @@
      0.00182
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -90007,6 +90427,10 @@
     "lcu": 4349.92,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 36.489167,
+   "year": 2023
   },
   "healthy_diet": {
    "year": 2025,
@@ -90942,6 +91366,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 45.996967,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.178,
@@ -91846,6 +92274,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 19.237508,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.2,
@@ -92526,6 +92958,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 243.53,
@@ -92945,6 +93381,10 @@
     "lcu": 7485.28,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 17.377847,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -94069,6 +94509,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 3545.143566,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.298,
@@ -94799,6 +95243,10 @@
     "lcu": 660.67,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.887144,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -95715,6 +96163,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 9.350277,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.124,
@@ -96563,6 +97015,10 @@
     "lcu": 1825.43,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 63.905,
+   "year": 2024
   },
   "healthy_diet": {
    "year": 2025,
@@ -98460,6 +98916,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 17.888733,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.479,
@@ -99107,6 +99567,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.551998,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 1609.15,
@@ -99736,6 +100200,10 @@
     "lcu": 10598.8,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 139.115438,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -100667,6 +101135,10 @@
     "lcu": 3191.53,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -101832,6 +102304,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.720108,
+   "year": 2025
+  },
   "region": "EAS",
   "m49": "554",
   "iso2": "NZ",
@@ -102576,6 +103052,10 @@
     "lcu": 5495.91,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 36.6243,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -103485,6 +103965,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.858,
@@ -104204,6 +104688,10 @@
     "lcu": 90038.54,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1518.380948,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -105187,6 +105675,10 @@
     "lcu": 27286.06,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 54.654967,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -106270,6 +106762,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 10.395833,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.012,
@@ -106906,6 +107402,10 @@
     "lcu": 367.54,
     "year": 2024
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.3845,
+   "year": 2025
   },
   "region": "MEA",
   "m49": "512",
@@ -107699,6 +108199,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 281.143001,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.63,
@@ -108383,6 +108887,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 994.73,
@@ -109026,6 +109534,10 @@
     "lcu": 941.49,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -109918,6 +110430,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 4.122724,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 577.66,
@@ -110734,6 +111250,10 @@
     "lcu": 2547035.66,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 7545.446755,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -111675,6 +112195,10 @@
     "lcu": 1610.19,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 3.567064,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -112637,6 +113161,10 @@
     "lcu": 13785.29,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 57.505097,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -113608,6 +114136,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 3.760542,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.073,
@@ -114523,6 +115055,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.144,
@@ -115137,6 +115673,10 @@
      0.00727
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -115826,6 +116366,10 @@
      ]
     }
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 3.64,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -116607,6 +117151,10 @@
     "lcu": 4904.82,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 4.470533,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -117535,6 +118083,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 83.6525,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.124,
@@ -118438,6 +118990,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1428.478276,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 78492.14,
@@ -119101,6 +119657,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2.791504,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 816.01,
@@ -119634,6 +120194,10 @@
      0.01024
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.887144,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -120242,6 +120806,10 @@
     "lcu": 6529.7,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 3.75,
+   "year": 2025
   },
   "occupation": {
    "year": 2013,
@@ -121092,6 +121660,10 @@
     "lcu": 53080.51,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -121992,6 +122564,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 103.9754,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.085,
@@ -122641,6 +123217,10 @@
      0.0066
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 14.725456,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -123333,6 +123913,10 @@
     "lcu": 952.29,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 21.304875,
+   "year": 2023
   },
   "healthy_diet": {
    "year": 2025,
@@ -124270,6 +124854,10 @@
     "lcu": 5368.26,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.30745,
+   "year": 2025
   },
   "region": "EAS",
   "m49": "702",
@@ -125253,6 +125841,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.272,
@@ -126171,6 +126763,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.023,
@@ -126739,6 +127335,10 @@
      0.00424
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 8.326842,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -128056,6 +128656,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 17.888749,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.579,
@@ -128999,6 +129603,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1422.440833,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.053,
@@ -129566,6 +130174,10 @@
      0.1635
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 2163.103873,
+   "year": 2024
   },
   "healthy_diet": {
    "year": 2025,
@@ -130317,6 +130929,10 @@
     "lcu": 1708.05,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.884969,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -131215,6 +131831,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 300.851958,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.349,
@@ -131841,6 +132461,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2.7,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 3373.17,
@@ -132132,6 +132756,10 @@
      0.0002
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 2.7,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -132832,6 +133460,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2.7,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 1661.99,
@@ -133521,6 +134153,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 546.75885,
+   "year": 2022
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 125544.27,
@@ -134120,6 +134756,10 @@
      0.00204
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 37.260179,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -134880,6 +135520,10 @@
     "lcu": 32522.77,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 9.820706,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -135743,6 +136387,10 @@
     "lcu": 4732.6,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.831356,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -136950,6 +137598,10 @@
      0.1316
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 21.745052,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -138291,6 +138943,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 10.017708,
+   "year": 2025
+  },
   "region": "ECS",
   "m49": "762",
   "iso2": "TJ",
@@ -139153,6 +139809,10 @@
     "lcu": 163700.76,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 2597.900417,
+   "year": 2024
   },
   "healthy_diet": {
    "year": 2025,
@@ -140118,6 +140778,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 32.882809,
+   "year": 2025
+  },
   "occupation": {
    "year": 2021,
    "shares": [
@@ -140774,6 +141438,10 @@
      0.00224
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -141647,6 +142315,10 @@
     "lcu": 40353.64,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 581.928481,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -142571,6 +143243,10 @@
     }
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 2.410527,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 835.11,
@@ -143325,6 +144001,10 @@
      ]
     }
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 6.748847,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -144142,6 +144822,10 @@
     "lcu": 680.85,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 2.997367,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -145579,6 +146263,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.551998,
+   "year": 2025
+  },
   "findex": {
    "emergency_amount": {
     "lcu": 763.19,
@@ -146264,6 +146952,10 @@
     "lcu": 36157.59,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 39.454813,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -147497,6 +148189,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 3602.989942,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.736,
@@ -148452,6 +149148,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 41.689072,
+   "year": 2025
+  },
   "region": "ECS",
   "m49": "804",
   "iso2": "UA",
@@ -149307,6 +150007,10 @@
     "year": 2024
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 3.6725,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.019,
@@ -150112,6 +150816,10 @@
     "lcu": 2173.86,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 0.759474,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
@@ -150980,6 +151688,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1.0,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.045,
@@ -151847,6 +152559,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 41.190979,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.32,
@@ -152554,6 +153270,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 12579.394348,
+   "year": 2025
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.062,
@@ -153169,6 +153889,10 @@
      0.00126
     ]
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 120.324286,
+   "year": 2025
   },
   "findex": {
    "emergency_amount": {
@@ -154790,6 +155514,10 @@
     "year": 2025
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 24164.885833,
+   "year": 2024
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.07,
@@ -156381,6 +157109,10 @@
     ]
    }
   },
+  "exchange_rate": {
+   "lcu_per_usd": 1355.116379,
+   "year": 2023
+  },
   "region": "MEA",
   "m49": "887",
   "iso2": "YE",
@@ -157227,6 +157959,10 @@
     "lcu": 1508.52,
     "year": 2025
    }
+  },
+  "exchange_rate": {
+   "lcu_per_usd": 25.275689,
+   "year": 2025
   },
   "healthy_diet": {
    "year": 2025,
