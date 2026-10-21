@@ -513,3 +513,10 @@ test("the slim quiz bundle validates exactly like the full one", () => {
     const VIQ = load("data.quiz.vi.js");
     assert.throws(() => VIQ.parseAnswers({...FULL, education: ""}), e => /trình độ/.test(e.errors.education));
 });
+
+test("health system capacity in the country overview", () => {
+    const g = Object.fromEntries(run(FULL).location.glance.map(x => [x.code, x]));
+    for (const code of ["SH.MED.PHYS.ZS", "SH.MED.NUMW.P3", "SH.MED.BEDS.ZS"]) {
+        assert.ok(g[code] && g[code].value > 0 && g[code].better_than_pct > 0, code);
+    }
+});
