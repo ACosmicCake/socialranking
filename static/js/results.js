@@ -73,6 +73,7 @@
         <div class="d-flex flex-wrap gap-2 justify-content-center mt-2">
             <button class="btn btn-outline-light btn-sm" id="copy-link" type="button">${tr("Copy a link to these results", "Sao chép đường dẫn kết quả")}</button>
             <button class="btn btn-outline-light btn-sm" id="save-image" type="button">${tr("Save a summary image", "Lưu ảnh tóm tắt")}</button>
+            <button class="btn btn-outline-light btn-sm" id="copy-text" type="button">${tr("Copy a text summary", "Sao chép bản tóm tắt")}</button>
             <button class="btn btn-outline-light btn-sm" id="save-csv" type="button">${tr("Download the numbers (CSV)", "Tải số liệu (CSV)")}</button>
             <button class="btn btn-outline-light btn-sm" id="save-json" type="button">${tr("Download everything (JSON)", "Tải toàn bộ (JSON)")}</button>
             <button class="btn btn-outline-light btn-sm" id="print-page" type="button">${tr("Print or save as PDF", "In hoặc lưu PDF")}</button>
@@ -979,6 +980,23 @@
         // Open collapsed details so they print too.
         root.querySelectorAll("details").forEach(d => { d.open = true; });
         window.print();
+    });
+    // A plain-text summary for chat apps; it links to the quiz, not to these answers.
+    document.getElementById("copy-text").addEventListener("click", () => {
+        const status = document.getElementById("copy-status");
+        const sorted = r.dimensions.slice().sort((a, b) => b.pct - a.pct);
+        const quizUrl = new URL(`${base}quiz.html`, window.location.href).href;
+        const lines = [
+            tr(`My household income per person is higher than ${pct(inc.global_pct)} of the world's population (top ${pct(inc.top_pct)})${inc.national_pct !== undefined ? ` and ${pct(inc.national_pct)} of people in ${r.country.name}` : ""}.`,
+               `Thu nhập bình quân đầu người của hộ tôi cao hơn ${pct(inc.global_pct)} dân số thế giới (nhóm ${pct(inc.top_pct)} cao nhất)${inc.national_pct !== undefined ? ` và ${pct(inc.national_pct)} dân số ${r.country.name}` : ""}.`),
+            tr(`SES index: ${fixed(r.ses_index, 1)}/100 (plausible range ${fixed(r.ses_index_range[0], 0)}-${fixed(r.ses_index_range[1], 0)}), across ${r.dimensions.length} dimensions.`,
+               `Chỉ số SES: ${fixed(r.ses_index, 1)}/100 (khoảng hợp lý ${fixed(r.ses_index_range[0], 0)}-${fixed(r.ses_index_range[1], 0)}), trên ${r.dimensions.length} khía cạnh.`),
+            sorted.length > 1 ? tr(`Strongest: ${lower(sorted[0].label)} (${pct(sorted[0].pct)}).`, `Mạnh nhất: ${sorted[0].label.toLowerCase()} (${pct(sorted[0].pct)}).`) : "",
+            tr(`Where do you stand? ${quizUrl}`, `Còn bạn thì sao? ${quizUrl}`),
+        ].filter(Boolean);
+        navigator.clipboard.writeText(lines.join("\n"))
+            .then(() => { status.textContent = tr("Summary copied. It doesn't include your answers.", "Đã sao chép bản tóm tắt. Bản này không chứa câu trả lời của bạn."); })
+            .catch(() => { status.textContent = tr("Your browser blocked copying.", "Trình duyệt của bạn đã chặn việc sao chép."); });
     });
     document.getElementById("save-json").addEventListener("click", () => {
         const payload = {generated: new Date().toISOString(), data_built: D.global.built, answers, results: r};
