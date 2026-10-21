@@ -1,0 +1,64 @@
+# Rebuilds the data from the World Bank, IMF and other sources every month and
+# opens a pull request when anything changed. Merging it redeploys the site.
+#
+# For the pull request step, allow it once under Settings -> Actions -> General ->
+# Workflow permissions -> "Allow GitHub Actions to create and approve pull requests".
+# Without that, the updated data are still pushed to a branch named data-refresh-*.
+name: Refresh data
+
+on:
+  schedule:
+    - cron: "17 5 3 * *"   # 05:17 UTC on the 3rd of every month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Rebuild data from the latest releases
+        run: python scripts/build_data.py --latest | tee build.log
+
+      - name: Test
+        run: python -m pytest -q
+
+      - name: Open a pull request if the data changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/; then
+            echo "Data unchanged."
+            exit 0
+          fi
+          branch="data-refresh-$(date -u +%Y%m%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add data/
+          git commit -m "Refresh data ($(date -u +%Y-%m-%d))"
+          git push -u origin "$branch"
+          {
+            echo "Automatic monthly data refresh."
+            echo
+            echo '```'
+            head -40 build.log
+            echo '```'
+          } > body.md
+          gh pr create --title "Refresh data ($(date -u +%Y-%m-%d))" --body-file body.md --base main --head "$branch" \
+            || echo "::warning::Could not open a pull request. Allow Actions to create pull requests in the repository settings, or open one from branch $branch."

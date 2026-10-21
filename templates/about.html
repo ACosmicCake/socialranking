@@ -1,7 +1,37 @@
 {% extends "layout.html" %}
-{% block title %}About{% endblock %}
+{% block title %}{{ _("About") }}{% endblock %}
 {% block main %}
 <section class="container page-section prose">
+{% if lang == "vi" %}
+    <h1>Giới thiệu</h1>
+    <p class="lead">"Nếu xếp hạng mọi người trên thế giới theo địa vị kinh tế - xã hội, tôi sẽ đứng ở đâu trên bảng xếp hạng?"</p>
+    <p>Khi bắt đầu làm bài trắc nghiệm này, tôi muốn có một câu trả lời dứt khoát: một con số cụ thể mà tôi có thể tin, nếu tôi
+        nghiên cứu đủ kỹ và ghép mọi thứ lại với nhau. Tôi muốn tránh những câu hỏi chỉ có thể trả lời theo cảm nhận, như "Bạn có
+        thấy hạnh phúc không?", và chỉ hỏi những câu có thể trả lời khách quan, để kết quả chính xác nhất có thể.</p>
+    <p>Tôi sớm nhận ra điều này gần như bất khả thi. Dữ liệu không đồng đều giữa các tầng lớp: mọi thứ tôi tìm được trên mạng đều
+        chi tiết về các tầng lớp thấp hơn nhiều so với các tầng lớp cao.</p>
+    <p>Rồi tôi gặp một vấn đề khác. Không thể so sánh trực tiếp dữ liệu của nước này với nước khác, vì nền kinh tế và giá cả khác
+        nhau, nên ngang giá sức mua (PPP) khác nhau giữa các nước. Mỗi nước cũng có lượng dữ liệu khác nhau. Ví dụ, Mỹ có nhiều
+        dữ liệu hơn Việt Nam, đất nước của tôi, rất nhiều.</p>
+    <p>Đó là những giới hạn sẵn có khi so sánh dữ liệu ở quy mô toàn cầu. Nhưng tôi vẫn muốn có một câu trả lời nào đó, vì vẫn có
+        dữ liệu bao phủ mọi quốc gia để làm việc, dù chi tiết hơn ở các tầng lớp thấp.</p>
+
+    <h2 class="h4 mt-5">Bản làm lại năm 2026</h2>
+    <p>Bài trắc nghiệm đã được làm lại để giải quyết trực tiếp những vấn đề đó:</p>
+    <ul>
+        <li><strong>Sức mua:</strong> thu nhập của bạn được quy đổi bằng lịch sử lạm phát (IMF) và hệ số PPP năm 2021 của chính nước
+            bạn, rồi so với phân phối thu nhập toàn cầu của Ngân hàng Thế giới, ghép từ 218 phân phối quốc gia, bao phủ toàn bộ
+            dân số thế giới.</li>
+        <li><strong>Dữ liệu không đồng đều:</strong> đường phân phối toàn cầu được hiệu chỉnh theo số liệu chính thức của Ngân hàng
+            Thế giới, còn phần đuôi trên được mô hình hóa từ phân vị giàu nhất của từng nước thay vì đoán.</li>
+        <li><strong>Câu hỏi khách quan:</strong> mọi câu hỏi đều lấy từ các khảo sát quốc tế (Gallup, FAO, ILO, Global Findex, định
+            nghĩa của WHO/UNICEF và SDG7, chỉ số nghèo đa chiều MPI, UNESCO, UBS). Câu hỏi chủ quan duy nhất, chiếc thang MacArthur,
+            được tách riêng để cho thấy khoảng cách giữa cách mọi người tự nhìn nhận và những gì số liệu cho thấy.</li>
+        <li><strong>So sánh chi tiết:</strong> với thế giới, khu vực, nhóm thu nhập, nước bạn, người cùng tuổi và giới, thành thị hay
+            nông thôn, và cả thu nhập của bạn ở mọi nước khác cũng như trong các năm 1990-2026.</li>
+    </ul>
+    <p>Xem trang <a href="{{ asset_base }}methodology.html">phương pháp</a> (tiếng Anh) để biết chi tiết và các giới hạn còn lại.</p>
+{% else %}
     <h1>About</h1>
     <p class="lead">"If I were to rank everyone in the world socioeconomically, where would I rank in the leaderboard?"</p>
     <p>When I first set out to create this quiz, I wanted a definitive answer: something concrete, a number I could rely on
@@ -24,11 +54,14 @@
             covering about 97% of the world's population.</li>
         <li><strong>Uneven data:</strong> the global curve is calibrated to the World Bank's official headcounts, and the top
             tail is modelled from each country's richest decile instead of being guessed.</li>
+        <li><strong>Detailed comparisons:</strong> with the world, your region, your income group, your country, people of your
+            age and sex, urban or rural areas, and your income in every other country and in every year from 1990 to 2026.</li>
         <li><strong>Objective questions:</strong> every question is taken from an established international survey (Gallup,
             FAO, Global Findex, the WHO/UNICEF and SDG7 monitoring definitions, Barro-Lee, UBS). The one subjective question,
             the MacArthur ladder, is kept apart and used to show the gap between how people see themselves and what the data
             say.</li>
     </ul>
-    <p>See the <a href="{{ base }}methodology.html">methodology</a> for the details and the limitations that remain.</p>
+    <p>See the <a href="{{ asset_base }}methodology.html">methodology</a> for the details and the limitations that remain.</p>
+{% endif %}
 </section>
 {% endblock %}

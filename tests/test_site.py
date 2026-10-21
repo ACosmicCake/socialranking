@@ -20,25 +20,34 @@ needs_node = pytest.mark.skipif(NODE is None, reason="Node.js is not installed")
 
 def test_all_pages_built(site):
     import build_site
-    for page in build_site.PAGES:
-        html = (site / f"{page}.html").read_text(encoding="utf-8")
-        assert html.startswith("<!DOCTYPE html>")
-        assert "</html>" in html
+    for folder, pages, lang in ((site, build_site.PAGES, "en"), (site / "vi", build_site.VI_PAGES, "vi")):
+        for page in pages:
+            html = (folder / f"{page}.html").read_text(encoding="utf-8")
+            assert html.startswith("<!DOCTYPE html>")
+            assert f'<html lang="{lang}"' in html
+            assert "</html>" in html
     assert (site / ".nojekyll").exists()
+
+
+def test_vietnamese_pages_are_translated(site):
+    quiz = (site / "vi" / "quiz.html").read_text(encoding="utf-8")
+    assert "Bạn sống ở quốc gia nào?" in quiz
+    assert "Việt Nam" in quiz and "data.vi.js" in quiz
+    assert "Which country do you live in?" not in quiz
 
 
 def test_internal_links_resolve(site):
     """Every relative href/src points at a file that exists in the build."""
-    for page in site.glob("*.html"):
+    for page in list(site.glob("*.html")) + list((site / "vi").glob("*.html")):
         html = page.read_text(encoding="utf-8")
         for target in re.findall(r'(?:href|src|action)="([^"#?]+)', html):
             if target.startswith(("http://", "https://", "mailto:")):
                 continue
-            assert (site / target).exists(), f"{page.name} -> {target}"
+            assert (page.parent / target).resolve().exists(), f"{page} -> {target}"
 
 
 def test_no_root_absolute_links_without_base_path(site):
-    for page in site.glob("*.html"):
+    for page in list(site.glob("*.html")) + list((site / "vi").glob("*.html")):
         assert not re.search(r'(?:href|src|action)="/(?!/)', page.read_text(encoding="utf-8")), page.name
 
 
@@ -48,6 +57,10 @@ def test_base_path_build(tmp_path):
     html = (out / "404.html").read_text(encoding="utf-8")
     assert 'href="/socialranking/static/styles.css"' in html
     assert 'href="/socialranking/quiz.html"' in html
+    vi = (out / "vi" / "404.html").read_text(encoding="utf-8")
+    assert 'href="/socialranking/static/styles.css"' in vi
+    assert 'href="/socialranking/vi/quiz.html"' in vi
+    assert 'href="/socialranking/methodology.html"' in vi  # English-only page
 
 
 def test_data_bundle(site):
@@ -58,6 +71,11 @@ def test_data_bundle(site):
     assert "sources" not in bundle["global"]
     assert set(bundle["facts"]["access"]) == {"electricity", "clean_cooking", "water", "sanitation",
                                               "hygiene", "internet", "health_hardship"}
+    text = (site / "static" / "js" / "data.vi.js").read_text(encoding="utf-8")
+    vi = json.loads(text[len("window.SES_DATA = "):].rstrip().rstrip(";"))
+    assert vi["lang"] == "vi" and vi["labels"]["dimensions"]["income"] == "Thu nhập"
+    assert len(vi["countries"]) == len(bundle["countries"])
+    assert any(c["name"] == "Việt Nam" for c in vi["countries"])
 
 
 def test_quiz_has_every_question(site):

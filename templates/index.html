@@ -1,34 +1,49 @@
 {% extends "layout.html" %}
-{% block title %}Where do you stand in the world?{% endblock %}
+{% block title %}{{ _("Where do you stand in the world?") }}{% endblock %}
 {% block main %}
 <div class="hero d-flex flex-column justify-content-center align-items-center text-center px-3">
-    <h1 class="display-4 fw-bold">Where do you stand in the world?</h1>
-    <p class="lead col-lg-7">
-        If all {{ world_population | people }} people on Earth were lined up by living standards,
-        where would you be? Answer about 30 questions taken from the surveys used by the World Bank, the UN and Gallup,
-        and see how you compare, measure by measure, using real data.
+    <h1 class="display-4 fw-bold">{{ _("Where do you stand in the world?") }}</h1>
+    <p class="lead col-lg-8">
+        {% if lang == "vi" %}
+        Nếu tất cả {{ (world_population / 1e9) | round(1) }} tỷ người trên Trái Đất xếp hàng theo mức sống, bạn sẽ đứng ở đâu?
+        Trả lời khoảng 40 câu hỏi lấy từ các cuộc khảo sát của Ngân hàng Thế giới, Liên Hợp Quốc, ILO và Gallup, và xem bạn so
+        với thế giới, với khu vực và với đất nước mình ra sao trên từng khía cạnh, bằng dữ liệu thật.
+        {% else %}
+        If all {{ world_population | people }} people on Earth were lined up by living standards, where would you be?
+        Answer about 40 questions taken from the surveys used by the World Bank, the UN, the ILO and Gallup, and see how you
+        compare with the world, your region and your own country, measure by measure, using real data.
+        {% endif %}
     </p>
-    <a class="btn btn-light btn-lg mt-2" href="{{ base }}quiz.html">Start the quiz</a>
-    <p class="small mt-3 text-white-50">Takes about 5 minutes. Your answers never leave your browser.</p>
+    <a class="btn btn-light btn-lg mt-2" href="{{ base }}quiz.html">{{ _("Start the quiz") }}</a>
+    <p class="small mt-3 text-white-50">{{ _("Takes about 10 minutes. Your answers never leave your browser.") }}</p>
 </div>
 
 <section class="container page-section">
     <div class="row g-4 text-start">
         <div class="col-md-4">
-            <h3 class="h5">Income, adjusted for prices</h3>
-            <p class="text-secondary">Your household income is converted into international dollars using your country's
-                inflation and purchasing-power data, then placed on the World Bank's global income distribution.</p>
+            <h3 class="h5">{{ _("Income, adjusted for prices") }}</h3>
+            <p class="text-secondary">{% if lang == "vi" %}Thu nhập của hộ được quy đổi sang đô la quốc tế bằng dữ liệu lạm phát
+                và sức mua của nước bạn, rồi đặt vào phân phối thu nhập toàn cầu của Ngân hàng Thế giới, cũng như của từng
+                nước trong 218 nền kinh tế.{% else %}Your household income is converted into international dollars using your
+                country's inflation and purchasing-power data, then placed on the World Bank's global income distribution, and
+                on each of 218 national ones.{% endif %}</p>
         </div>
         <div class="col-md-4">
-            <h3 class="h5">More than money</h3>
-            <p class="text-secondary">Education, clean water, sanitation, electricity, cooking fuel, internet, health costs,
-                food security, savings and wealth, each compared with the latest international monitoring data.</p>
+            <h3 class="h5">{{ _("More than money") }}</h3>
+            <p class="text-secondary">{% if lang == "vi" %}Học vấn, công việc, nước sạch, vệ sinh, điện, nhiên liệu nấu ăn,
+                Internet, chi phí y tế, an ninh lương thực, nghèo đa chiều, tiết kiệm và tài sản - mỗi thứ đều so với số liệu
+                theo dõi quốc tế mới nhất, cho cả thế giới và nước bạn.{% else %}Education, work, clean water, sanitation,
+                electricity, cooking fuel, internet, health costs, food security, multidimensional poverty, savings and wealth,
+                each compared with the latest international monitoring data for the world and for your country.{% endif %}</p>
         </div>
         <div class="col-md-4">
-            <h3 class="h5">Open about how it works</h3>
-            <p class="text-secondary">Every number links to its source. The <a href="{{ base }}methodology.html">methodology</a>
-                page shows each calculation and its limits, and the <a href="{{ base }}questionnaire.html">questionnaire</a>
-                page names the survey behind every question.</p>
+            <h3 class="h5">{{ _("Open about how it works") }}</h3>
+            <p class="text-secondary">{% if lang == "vi" %}Mọi con số đều dẫn tới nguồn. Trang
+                <a href="{{ asset_base }}methodology.html">phương pháp</a> (tiếng Anh) trình bày từng phép tính và giới hạn của
+                nó, và trang <a href="{{ base }}questionnaire.html">bảng hỏi</a> nêu khảo sát gốc của từng câu hỏi.{% else %}Every
+                number links to its source. The <a href="{{ asset_base }}methodology.html">methodology</a> page shows each
+                calculation and its limits, and the <a href="{{ base }}questionnaire.html">questionnaire</a> page names the survey
+                behind every question.{% endif %}</p>
         </div>
     </div>
 </section>
