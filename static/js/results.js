@@ -754,6 +754,13 @@
         `GDP per person isn't part of your SES index: your income is already adjusted for prices in ${cname} and compared globally, so counting the country again would double-count it.`,
         `GDP bình quân đầu người không nằm trong chỉ số SES: thu nhập của bạn đã được điều chỉnh theo giá cả ở ${cname} và so sánh toàn cầu, nên tính thêm quốc gia sẽ là tính trùng.`)}</p>`));
 
+    // Data freshness: when the data were built and from which main releases.
+    const pipVersion = String(D.global.income.pip_version || "");
+    const pipDate = pipVersion.length >= 8 ? new Date(Date.UTC(+pipVersion.slice(0, 4), +pipVersion.slice(4, 6) - 1, 1)) : null;
+    const monthYear = d => d.toLocaleDateString(locale, {month: "long", year: "numeric", timeZone: "UTC"});
+    html.push(`<p class="small text-secondary text-center mt-5 mb-0">${tr(
+        `Data as of ${esc(D.global.built)}: World Bank PIP${pipDate ? ` (${monthYear(pipDate)} release)` : ""}, ${esc(D.global.prices.source)}, World Development Indicators and the other sources listed on the <a href="${assetBase}sources.html">sources page</a>. A monthly job checks for newer releases.`,
+        `Số liệu tính đến ${esc(D.global.built)}: PIP của Ngân hàng Thế giới${pipDate ? ` (bản ${monthYear(pipDate)})` : ""}, ${esc(D.global.prices.source)}, Bộ chỉ số Phát triển Thế giới và các nguồn khác trong <a href="${assetBase}sources.html">trang nguồn</a> (tiếng Anh). Một tác vụ hằng tháng kiểm tra các bản số liệu mới hơn.`)}</p>`);
     html.push(`<hr class="my-5"><div class="text-center d-flex flex-wrap gap-2 justify-content-center">
         <a class="btn btn-light" href="${base}quiz.html" id="edit-answers">${tr("Change my answers", "Sửa câu trả lời")}</a>
         <a class="btn btn-outline-light" href="${base}methodology.html">${tr("How this was calculated", "Cách tính")}</a>
