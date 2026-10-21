@@ -584,3 +584,159 @@ html:has(#quiz) {
         display: none;
     }
 }
+
+/* ------------------------------------------------------------------ light theme
+   The top bar and the photo heroes stay dark in both themes. */
+[data-bs-theme="light"] body {
+    background: #f6f7f9;
+    color: #1f2328;
+}
+
+[data-bs-theme="light"] .navbar {
+    background: rgba(11, 11, 13, 0.92);
+}
+
+[data-bs-theme="light"] .btn-outline-light {
+    --bs-btn-color: #1f2328;
+    --bs-btn-border-color: #adb5bd;
+    --bs-btn-hover-color: #1f2328;
+    --bs-btn-hover-bg: #e9ecef;
+    --bs-btn-hover-border-color: #6c757d;
+    --bs-btn-active-color: #1f2328;
+    --bs-btn-active-bg: #dee2e6;
+    --bs-btn-active-border-color: #6c757d;
+}
+
+[data-bs-theme="light"] .btn-light {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #1f2328;
+    --bs-btn-border-color: #1f2328;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #343a40;
+    --bs-btn-hover-border-color: #343a40;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #000;
+    --bs-btn-active-border-color: #000;
+}
+
+[data-bs-theme="light"] :is(.navbar, .hero) .btn-outline-light {
+    --bs-btn-color: #f8f9fa;
+    --bs-btn-border-color: #f8f9fa;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #f8f9fa;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #f8f9fa;
+}
+
+[data-bs-theme="light"] :is(.navbar, .hero) .btn-light {
+    --bs-btn-color: #000;
+    --bs-btn-bg: #f8f9fa;
+    --bs-btn-border-color: #f8f9fa;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #e9ecef;
+}
+
+[data-bs-theme="light"] main .text-warning {
+    color: #b45309 !important;
+}
+
+[data-bs-theme="light"] main .text-bg-light {
+    background-color: #e9ecef !important;
+    color: #1f2328 !important;
+}
+
+[data-bs-theme="light"] .ladder-compare .rung-row {
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+[data-bs-theme="light"] .link-light {
+    color: #0b5394 !important;
+}
+
+[data-bs-theme="light"] .border-light {
+    border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-bs-theme="light"] .result-nav {
+    background: rgba(246, 247, 249, 0.94);
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-bs-theme="light"] .quiz-nav {
+    background: linear-gradient(rgba(246, 247, 249, 0), rgba(246, 247, 249, 0.95) 30%);
+}
+
+[data-bs-theme="light"] .options .option::before {
+    border-color: rgba(0, 0, 0, 0.45);
+}
+
+[data-bs-theme="light"] .options .btn-check:checked + .option {
+    background: rgba(3, 105, 161, 0.1);
+    border-color: #0369a1;
+    color: #0b0b0d;
+}
+
+[data-bs-theme="light"] .options .btn-check:checked + .option::before {
+    border-color: #0369a1;
+    background: #0369a1;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+[data-bs-theme="light"] .options input[type="checkbox"]:checked + .option::before {
+    box-shadow: none;
+    background-color: #0369a1;
+}
+
+[data-bs-theme="light"] .progress,
+[data-bs-theme="light"] .meter {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+[data-bs-theme="light"] .step-chip {
+    color: #6c757d;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-bs-theme="light"] .step-chip.done {
+    color: #1f2328;
+    border-color: rgba(3, 105, 161, 0.45);
+}
+
+[data-bs-theme="light"] .req-badge {
+    color: #92400e;
+    background: rgba(251, 191, 36, 0.25);
+}
+
+[data-bs-theme="light"] .stat-card {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+[data-bs-theme="light"] .stat-text,
+[data-bs-theme="light"] .source-note {
+    color: #5c636a;
+}
+
+[data-bs-theme="light"] :is(.stat-value, .legend-world, .table tr.glance-group th),
+[data-bs-theme="light"] main .highlight,
+[data-bs-theme="light"] .cite,
+[data-bs-theme="light"] details > summary {
+    color: #0369a1;
+}
+
+[data-bs-theme="light"] .hero .highlight {
+    color: var(--accent);
+}
+
+[data-bs-theme="light"] .legend-country {
+    color: #b45309;
+}
+
+[data-bs-theme="light"] .formula {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-bs-theme="light"] .table tr.you td,
+[data-bs-theme="light"] .edu-table tr.you td {
+    background: rgba(3, 105, 161, 0.1);
+}

@@ -72,7 +72,7 @@
             from $1 to $150 a day, keeping the mixture's shape between and beyond those points.</li>
     </ol>
     <p>Before calibration, the mixture is already within a few tenths of a percentage point of the official figures:</p>
-    <div class="table-responsive"><table class="table table-dark table-sm w-auto">
+    <div class="table-responsive"><table class="table table-sm w-auto">
         <thead><tr><th>Line ($/day)</th><th>Official PIP world headcount ({{ inc.reference_year }})</th><th>Our uncalibrated mixture</th></tr></thead>
         <tbody>{% for v in inc.validation %}<tr><td>{{ v.line | money }}</td><td>{{ v.official | pct(2) }}</td><td>{{ v.mixture | pct(2) }}</td></tr>{% endfor %}</tbody>
     </table></div>
@@ -87,7 +87,7 @@
             </select>
         </div>
     </div>
-    <div class="table-responsive"><table class="table table-dark table-sm w-auto" id="quantiles">
+    <div class="table-responsive"><table class="table table-sm w-auto" id="quantiles">
         <thead><tr><th>Percentile</th><th>World ({{ inc.reference_year }})</th><th class="country-col" hidden></th></tr></thead>
         <tbody>{% for q in quantiles %}<tr data-p="{{ q.p }}"><td>{{ q.p }}th</td><td>{{ q.world | money }}</td><td class="country-col" hidden></td></tr>{% endfor %}</tbody>
     </table></div>
@@ -95,7 +95,7 @@
 
     <h3 class="h5">The range option</h3>
     <p>If you pick a range, you're placed at the midpoint between the shares of people below its two ends:</p>
-    <div class="table-responsive"><table class="table table-dark table-sm w-auto">
+    <div class="table-responsive"><table class="table table-sm w-auto">
         <thead><tr><th>Range (2021 int. $ per person per day)</th><th>World percentile</th></tr></thead>
         <tbody>{% for b in band_rows %}<tr><td>{{ b.label }}</td><td>{{ b.low | pct }} to {{ b.high | pct }}</td></tr>{% endfor %}</tbody>
     </table></div>
@@ -153,7 +153,7 @@
         which gives the world map and the full table on the results page. Regions and World Bank income groups combine their
         members' distributions, weighted by population. Without any calibration, these combinations reproduce PIP's own regional
         headcounts at $3.00 a day closely:</p>
-    <div class="table-responsive"><table class="table table-dark table-sm w-auto">
+    <div class="table-responsive"><table class="table table-sm w-auto">
         <thead><tr><th>Region</th><th>PIP share below $3.00 ({{ inc.reference_year }})</th></tr></thead>
         <tbody>{% for code, r in inc.pip_regions.items() %}<tr><td>{{ r.name }}</td><td>{{ (r.share_below_3 * 100) | pct }}</td></tr>{% endfor %}</tbody>
     </table></div>
@@ -166,7 +166,7 @@
         at the same {{ inc.anchors | length }} lines and calibrate the {{ inc.reference_year }} mixture's shape to them. Your real income
         (2021 prices) is then ranked in each year. Between the published lines the shape is the {{ inc.reference_year }} one, so earlier
         years are approximate.</p>
-    <div class="table-responsive"><table class="table table-dark table-sm w-auto">
+    <div class="table-responsive"><table class="table table-sm w-auto">
         <thead><tr><th>Year</th><th>World below $3.00</th><th>Estimate</th></tr></thead>
         <tbody>{% for y, h in inc.history.items() %}<tr><td>{{ y }}</td><td>{{ (h.share_below_3 * 100) | pct }}</td><td>{{ h.estimate_type }}</td></tr>{% endfor %}</tbody>
     </table></div>
@@ -182,7 +182,7 @@
         mapped onto the nine levels. Together they cover
         {{ (100 * g.education.population_25_plus_covered / g.education.population_25_plus_world) | pct }} of the world's adults aged 25+, and
         the world shares are weighted by each country's population aged 25+:</p>
-    <div class="table-responsive"><table class="table table-dark table-sm w-auto">
+    <div class="table-responsive"><table class="table table-sm w-auto">
         <thead><tr><th>Level</th><th>Share of adults 25+</th></tr></thead>
         <tbody>{% for l in g.education.levels %}<tr><td>{{ l.label }}</td><td>{{ (g.education.world_shares[loop.index0] * 100) | pct }}</td></tr>{% endfor %}</tbody>
     </table></div>
@@ -230,7 +230,7 @@
     <h2 id="living">6. Living standards</h2>
     <p>Seven household services. World, regional, national and urban/rural shares come from the World Bank's indicators,
         mostly for {{ inc.reference_year }} {{ cite("wdi") }}. The cited monitoring reports give the matching headcounts:</p>
-    <div class="table-responsive"><table class="table table-dark table-sm">
+    <div class="table-responsive"><table class="table table-sm">
         <thead><tr><th>Service</th><th>World Bank indicator</th><th>People without</th><th>Report</th></tr></thead>
         <tbody>{% set codes = {"electricity": "EG.ELC.ACCS.ZS", "clean_cooking": "EG.CFT.ACCS.ZS", "water": "SH.H2O.SMDW.ZS",
                                 "sanitation": "SH.STA.SMSS.ZS", "hygiene": "SH.STA.HYGN.ZS", "internet": "IT.NET.USER.ZS", "health_hardship": "-"} %}
@@ -247,7 +247,7 @@
     <h2 id="mpi">7. Multidimensional poverty</h2>
     <p>The Global Multidimensional Poverty Index {{ cite("ophi_mpi") }} counts ten household deprivations. Each of three dimensions
         weighs a third, split equally among its indicators. We apply its cutoffs to your answers:</p>
-    <div class="table-responsive"><table class="table table-dark table-sm">
+    <div class="table-responsive"><table class="table table-sm">
         <thead><tr><th>Dimension</th><th>Indicator</th><th>Deprived if</th></tr></thead>
         <tbody>
             <tr><td>Health</td><td>Nutrition</td><td>A health worker has said someone in the household is undernourished (self-reported stand-in for measured height and weight)</td></tr>
@@ -274,7 +274,7 @@
         unable to afford food or shelter in the past 12 months, and whether they had friends or family to rely on. Gallup reports
         the high-vulnerability share ("about one in seven", 750 million adults); the 39% and 47% shares come from press coverage
         of the same index {{ cite("upi_gallup_2020") }}:</p>
-    <div class="table-responsive"><table class="table table-dark table-sm">
+    <div class="table-responsive"><table class="table table-sm">
         <thead><tr><th>Group</th><th>Definition</th><th>Share of adults</th></tr></thead>
         <tbody>{% for k in gallup_order %}{% set v = gallup[k] %}<tr><td>{{ v.label }}</td><td>{{ v.definition }}</td><td>{{ (v.share * 100) | pct(0) }}</td></tr>{% endfor %}</tbody>
     </table></div>
@@ -319,7 +319,7 @@
 
     <h2 id="wealth">9. Wealth (optional)</h2>
     <p>Net worth per adult is placed in UBS's global wealth pyramid for {{ wealth_year }} {{ cite("ubs_2026") }}:</p>
-    <div class="table-responsive"><table class="table table-dark table-sm w-auto">
+    <div class="table-responsive"><table class="table table-sm w-auto">
         <thead><tr><th>Net worth</th><th>Share of adults</th></tr></thead>
         <tbody>{% for b in wealth %}<tr><td>{{ b.label }}</td><td>{{ (b.share * 100) | pct }}</td></tr>{% endfor %}</tbody>
     </table></div>

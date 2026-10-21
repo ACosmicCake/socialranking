@@ -16,6 +16,8 @@ UI = {
     "We restored your answers from your last visit. They're saved only in this browser.":
         "Chúng tôi đã khôi phục câu trả lời từ lần trước. Chúng chỉ được lưu trong trình duyệt này.",
     "Start over": "Làm lại từ đầu",
+    "Switch to light theme": "Chuyển sang giao diện sáng",
+    "Switch to dark theme": "Chuyển sang giao diện tối",
     "See results now": "Xem kết quả ngay",
     "You've answered everything required. You can add the rest later.": "Bạn đã trả lời mọi câu bắt buộc. Bạn có thể bổ sung phần còn lại sau.",
     "Skip to content": "Bỏ qua đến nội dung",

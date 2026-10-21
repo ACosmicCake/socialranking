@@ -25,7 +25,7 @@
     const meter = (v, label, cls = "") => `<div class="meter ${cls}" role="img" aria-label="${esc(label)} ${pct(v)}"><div class="meter-fill" style="width: ${Math.min(Math.max(v, 0), 100)}%"></div></div>`;
     const lower = s => (VI ? s : s.charAt(0).toLowerCase() + s.slice(1));
     const section = (id, title, body) => `<hr class="my-5"><section id="${id}" class="result-section"><h2 class="h3">${title}</h2>${body}</section>`;
-    const table = (head, rows, cls = "") => `<div class="table-responsive"><table class="table table-dark table-sm align-middle ${cls}">
+    const table = (head, rows, cls = "") => `<div class="table-responsive"><table class="table table-sm align-middle ${cls}">
         <thead><tr>${head.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
     const fmtGlance = (v, f) => v === null || v === undefined ? "-" : f === "money" ? money(v, 0) : f === "pct" ? pct(v) : f === "index" ? fixed(v, 2) : fixed(v, 1);
 
@@ -984,7 +984,12 @@
     });
 
     // ---------------------------------------------------------------- charts
+    const LIGHT = document.documentElement.getAttribute("data-bs-theme") === "light";
+    const INK = LIGHT ? "#444" : "#ccc";
+    const GRID = LIGHT ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.08)";
+    const LEGEND = LIGHT ? "#222" : "#eee";
     if (typeof Chart !== "undefined") {
+        Chart.defaults.color = INK;
         const d = inc.chart;
         const toPoints = ys => d.x.map((x, i) => ({x, y: ys[i]}));
         const datasets = [{
@@ -998,8 +1003,8 @@
             label: tr("You", "Bạn"), type: "scatter", pointRadius: 7, pointBackgroundColor: "#ffffff", pointBorderColor: "#000000",
             data: [{x: d.you, y: d.you_world}].concat(d.you_country !== null ? [{x: d.you, y: d.you_country}] : []),
         });
-        const axis = text => ({display: true, text, color: "#ccc"});
-        const grid = {color: "rgba(255,255,255,0.08)"};
+        const axis = text => ({display: true, text, color: INK});
+        const grid = {color: GRID};
         new Chart(document.getElementById("incomeChart"), {
             type: "line",
             data: {datasets},
@@ -1007,11 +1012,11 @@
                 responsive: true, maintainAspectRatio: false,
                 scales: {
                     x: {type: "logarithmic", min: 0.5, max: 1000, title: axis(tr("Income per person per day (2021 int. $)", "Thu nhập mỗi người mỗi ngày (đô la quốc tế 2021)")), grid,
-                        ticks: {color: "#ccc", callback: v => [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000].includes(v) ? `$${v}` : ""}},
-                    y: {min: 0, max: 100, title: axis(tr("% of people living on less", "% số người sống bằng ít hơn")), grid, ticks: {color: "#ccc", callback: v => `${v}%`}},
+                        ticks: {color: INK, callback: v => [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000].includes(v) ? `$${v}` : ""}},
+                    y: {min: 0, max: 100, title: axis(tr("% of people living on less", "% số người sống bằng ít hơn")), grid, ticks: {color: INK, callback: v => `${v}%`}},
                 },
                 plugins: {
-                    legend: {labels: {color: "#eee"}},
+                    legend: {labels: {color: LEGEND}},
                     tooltip: {callbacks: {label: c => tr(`${c.dataset.label}: ${fixed(c.parsed.y, 1)}% live on less than $${fixed(c.parsed.x, 2)}/day`,
                                                          `${c.dataset.label}: ${fixed(c.parsed.y, 1)}% sống bằng dưới $${fixed(c.parsed.x, 2)}/ngày`)}},
                 },
@@ -1034,11 +1039,11 @@
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     scales: {
-                        y: {type: "logarithmic", position: "left", grid, ticks: {color: "#ccc", callback: v => [1, 2, 5, 10, 20, 50, 100].includes(v) ? `$${v}` : ""}},
+                        y: {type: "logarithmic", position: "left", grid, ticks: {color: INK, callback: v => [1, 2, 5, 10, 20, 50, 100].includes(v) ? `$${v}` : ""}},
                         y2: {min: 0, max: 100, position: "right", grid: {display: false}, ticks: {color: "#f87171", callback: v => `${v}%`}},
-                        x: {ticks: {color: "#ccc", maxTicksLimit: 12}, grid},
+                        x: {ticks: {color: INK, maxTicksLimit: 12}, grid},
                     },
-                    plugins: {legend: {labels: {color: "#eee"}}},
+                    plugins: {legend: {labels: {color: LEGEND}}},
                 },
             });
         }
@@ -1050,7 +1055,7 @@
             },
             options: {
                 responsive: true, maintainAspectRatio: false,
-                scales: {y: {min: 0, max: 100, grid, ticks: {color: "#ccc", callback: v => `${v}%`}}, x: {ticks: {color: "#ccc"}, grid}},
+                scales: {y: {min: 0, max: 100, grid, ticks: {color: INK, callback: v => `${v}%`}}, x: {ticks: {color: INK}, grid}},
                 plugins: {legend: {display: false}, tooltip: {callbacks: {label: c => tr(`Richer than ${fixed(c.parsed.y, 1)}% of the world`, `Khá giả hơn ${fixed(c.parsed.y, 1)}% thế giới`)}}},
             },
         });

@@ -21,6 +21,10 @@
     <link href="{{ asset_base }}static/icon.png" rel="apple-touch-icon">
     <link href="{{ asset_base }}static/manifest.webmanifest" rel="manifest">
     <link href="{{ asset_base }}static/styles.css" rel="stylesheet">
+    <script>
+    // Apply a saved light/dark choice before the page paints.
+    try { const t = localStorage.getItem("ses-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-bs-theme", t); } catch (e) {}
+    </script>
     <link rel="alternate" hreflang="{{ alt_lang }}" href="{{ alt_url }}">
     <title>SES: {% block title %}{% endblock %}</title>
 </head>
@@ -31,6 +35,8 @@
         <a class="navbar-brand fw-bold" href="{{ base }}index.html">SES</a>
         <a class="btn btn-sm btn-outline-light ms-auto me-2 ms-lg-3 me-lg-0 order-lg-last" id="lang-switch" href="{{ alt_url }}"
            hreflang="{{ alt_lang }}" lang="{{ alt_lang }}">{{ languages[alt_lang] }}</a>
+        <button class="btn btn-sm btn-outline-light me-2 order-lg-last" type="button" id="theme-toggle"
+                data-light="{{ _('Switch to light theme') }}" data-dark="{{ _('Switch to dark theme') }}"></button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -67,6 +73,25 @@
 (function () {
     const a = document.getElementById("lang-switch");
     if (a && window.location.hash) a.href = a.getAttribute("href") + window.location.hash;
+})();
+// Light/dark toggle, remembered in this browser only.
+(function () {
+    const btn = document.getElementById("theme-toggle");
+    const paint = () => {
+        const light = document.documentElement.getAttribute("data-bs-theme") === "light";
+        btn.textContent = light ? "\u263E" : "\u2600";
+        btn.setAttribute("aria-label", light ? btn.dataset.dark : btn.dataset.light);
+        btn.title = btn.getAttribute("aria-label");
+    };
+    btn.addEventListener("click", () => {
+        const next = document.documentElement.getAttribute("data-bs-theme") === "light" ? "dark" : "light";
+        document.documentElement.setAttribute("data-bs-theme", next);
+        try { localStorage.setItem("ses-theme", next); } catch (e) {}
+        // Charts and the map read the theme when drawn, so redraw the results page.
+        if (document.getElementById("results")) window.location.reload();
+        paint();
+    });
+    paint();
 })();
 // The results page keeps answers in the URL fragment, so the skip link moves focus without changing it.
 document.querySelector(".skip-link").addEventListener("click", e => {
