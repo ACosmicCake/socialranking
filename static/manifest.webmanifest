@@ -1,0 +1,13 @@
+{
+    "name": "SES: Where do you stand in the world?",
+    "short_name": "SES",
+    "description": "Compare your income, education, work, living standards and financial security with the world and your own country.",
+    "start_url": "../index.html",
+    "scope": "../",
+    "display": "standalone",
+    "background_color": "#0b0b0d",
+    "theme_color": "#0b0b0d",
+    "icons": [
+        {"src": "icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+    ]
+}
