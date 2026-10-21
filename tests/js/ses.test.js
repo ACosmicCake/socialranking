@@ -382,3 +382,26 @@ test("emergency amount is 1/20 of GNI per person at today's prices", () => {
     assert.equal(a.currency, "VND");
     assert.equal(SES.emergencyAmount("LBR", TODAY), null);  // currency units don't match
 });
+
+test("occupation by ISCO-08 skill level joins the work score", () => {
+    const base = {...FULL, country: "BRA", income_mode: "band", income_band: "b4", work_status: "employee",
+                  work_sector: "services", sex: "F", area: "urban"};
+    const statusOnly = run(base).work;
+    const prof = run({...base, occupation: "professionals"}).work;
+    const elem = run({...base, occupation: "elementary"}).work;
+    assert.equal(statusOnly.occupation, undefined);
+    assert.equal(prof.occupation.skill_level, 4);
+    assert.ok(prof.occupation.world_pct > 80 && elem.occupation.world_pct < 20);
+    assert.ok(prof.global_pct > statusOnly.global_pct && elem.global_pct < statusOnly.global_pct);
+    close(prof.global_pct, (prof.status_pct + prof.occupation.world_pct) / 2, 0.1);
+    assert.ok(prof.occupation.national_pct > 0 && prof.occupation.country_same > 0);
+    assert.ok(prof.occupation.sex_country_same > 0 && prof.occupation.area_country_same > 0);
+    // Armed forces span skill levels: shown but not ranked.
+    const army = run({...base, occupation: "armed_forces"}).work;
+    assert.equal(army.occupation.world_pct, undefined);
+    assert.equal(army.global_pct, statusOnly.global_pct);
+    // No usable survey for Vietnam: the pooled comparison still works.
+    const vn = run({...FULL, work_status: "employee", work_sector: "services", occupation: "clerks"}).work.occupation;
+    assert.equal(vn.country_shares, undefined);
+    assert.ok(vn.world_pct > 0);
+});

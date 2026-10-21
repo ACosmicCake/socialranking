@@ -16,6 +16,11 @@
    "url": "https://api.worldbank.org/v2/country/all/indicator/fin24aN?source=28",
    "home": "https://www.worldbank.org/en/publication/globalfindex"
   },
+  "join": {
+   "name": "World Bank Global Jobs Indicators Database (JOIN, API source 86): employment by occupation",
+   "url": "https://api.worldbank.org/v2/country/all/indicator/JI.EMP.PROF.ZS?source=86",
+   "home": "https://datacatalog.worldbank.org/search/dataset/0037526"
+  },
   "fpn": {
    "name": "World Bank Food Prices for Nutrition (API source 88): cost and affordability of a healthy diet",
    "url": "https://api.worldbank.org/v2/sources/88/country/all/series/CoHD_headcount/classification/all/time/all",
@@ -2857,6 +2862,84 @@
     0.71
    ]
   ]
+ },
+ "occupation": {
+  "keys": [
+   "managers",
+   "professionals",
+   "technicians",
+   "clerks",
+   "service_sales",
+   "skilled_agri",
+   "craft",
+   "machine",
+   "elementary",
+   "armed_forces"
+  ],
+  "skill_levels": [
+   4,
+   4,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   null
+  ],
+  "shares": [
+   0.063,
+   0.0975,
+   0.0759,
+   0.0515,
+   0.149,
+   0.2085,
+   0.1091,
+   0.0692,
+   0.1725,
+   0.004
+  ],
+  "by_sex": {
+   "F": [
+    0.048,
+    0.1224,
+    0.0876,
+    0.0691,
+    0.1662,
+    0.24,
+    0.0629,
+    0.0221,
+    0.18,
+    0.0017
+   ],
+   "M": [
+    0.0712,
+    0.0798,
+    0.0666,
+    0.0362,
+    0.1299,
+    0.2033,
+    0.1415,
+    0.0977,
+    0.1687,
+    0.005
+   ]
+  },
+  "economies": 115,
+  "dropped": [
+   "ARG",
+   "CHN",
+   "LBR",
+   "MDA",
+   "MDV",
+   "MWI",
+   "NGA",
+   "SOM"
+  ],
+  "employed_covered": 2230521842,
+  "employed_world": 3605534069,
+  "since": 2010
  },
  "prices": {
   "base_year": 2021,

@@ -207,6 +207,21 @@ FINDEX_ITEMS = {
     "worry": [("old_age", "fin45a"), ("business", "fin45b"), ("medical", "fin45c"), ("bills", "fin45d"),
               ("school", "fin45e")],
 }
+# Occupations: ISCO-08 major groups from the World Bank's Global Jobs Indicators
+# Database (JOIN, API source 86), harmonised household and labour-force surveys,
+# as shares of employed people aged 15-64; also by sex and urban/rural. Skill
+# levels follow ISCO-08 (managers 3-4, professionals 4, technicians 3, groups
+# 4-8 level 2, elementary 1; armed forces span levels and are left out of ranks).
+JOIN_SOURCE = 86
+OCCUPATIONS = [("managers", "SEOF", 4), ("professionals", "PROF", 4), ("technicians", "TECH", 3),
+               ("clerks", "CLRK", 2), ("service_sales", "SVMK", 2), ("skilled_agri", "SKAG", 2),
+               ("craft", "CRFT", 2), ("machine", "MACH", 2), ("elementary", "ELEM", 1),
+               ("armed_forces", "ARFC", None)]
+OCCUPATION_SINCE = 2010
+OCCUPATION_TOP_RATIO, OCCUPATION_TOP_FLOOR = 2.5, 0.10
+OCCUPATION_SUFFIXES = {"": None, ".FE": ("by_sex", "F"), ".MA": ("by_sex", "M"),
+                       ".UR": ("by_area", "urban"), ".RU": ("by_area", "rural")}
+
 # World Bank Food Prices for Nutrition (API source 88): cost of the least-cost
 # healthy diet and the share of people who can't afford it (cost > 52% of income).
 FPN_SOURCE = 88
@@ -663,6 +678,75 @@ def emergency_amount(code, indicators, prices):
     return {"lcu": round(gni[1] / 20, 2), "year": gni[0]}
 
 
+def build_occupation(adults, employment_ratio, education, agriculture):
+    """ISCO-08 major-group shares per economy (latest survey since OCCUPATION_SINCE) and pooled.
+
+    A survey is dropped when managers and professionals together exceed both 10% of workers and
+    2.5 times the share of adults with post-secondary education, a sign of miscoded occupations
+    (e.g. Nigeria 2018: 41% managers or professionals, 11% post-secondary). It is also dropped
+    when farm and elementary workers are under half of the ILO's agricultural employment share
+    (where that is at least 5%), a sign the survey misses rural areas (e.g. Argentina's urban
+    survey, China 2013).
+    """
+    raw = {}
+    for _, code, _ in OCCUPATIONS:
+        for sfx in OCCUPATION_SUFFIXES:
+            ind = f"JI.EMP.{code}{sfx}.ZS"
+            for r in wdi(ind, f"join_{ind}.json", source=JOIN_SOURCE, date=f"{OCCUPATION_SINCE}:{INFLATION_LAST_YEAR}"):
+                raw.setdefault(ind, {}).setdefault(r["country"]["id"], {})[int(r["date"])] = float(r["value"])
+    codes = [c for _, c, _ in OCCUPATIONS]
+    out, dropped = {}, []
+    pooled = {k: np.zeros(len(codes)) for k in ("all", "F", "M")}
+    weights = {k: 0.0 for k in pooled}
+    for country in raw[f"JI.EMP.{codes[0]}.ZS"]:
+        def shares(sfx, year):
+            vals = [raw.get(f"JI.EMP.{c}{sfx}.ZS", {}).get(country, {}).get(year) for c in codes]
+            if any(v is None for v in vals[:-1]):
+                return None
+            vals = np.array([v or 0.0 for v in vals])
+            return vals / vals.sum() if 0.95 <= vals.sum() <= 1.05 else None
+        years = sorted(raw[f"JI.EMP.{codes[0]}.ZS"][country], reverse=True)
+        year = next((y for y in years if shares("", y) is not None), None)
+        if year is None:
+            continue
+        total = shares("", year)
+        edu = education.get(country, {}).get("shares")
+        if edu and total[0] + total[1] > max(OCCUPATION_TOP_RATIO * sum(edu[4:]), OCCUPATION_TOP_FLOOR):
+            dropped.append(country)
+            continue
+        agri = agriculture.get(country)
+        if agri and agri[1] >= 5 and total[5] + total[8] < 0.5 * agri[1] / 100:
+            dropped.append(country)
+            continue
+        entry = {"year": year, "shares": [round(float(v), 4) for v in total]}
+        for sfx, where in OCCUPATION_SUFFIXES.items():
+            if where and (sh := shares(sfx, year)) is not None:
+                entry.setdefault(where[0], {})[where[1]] = [round(float(v), 4) for v in sh]
+        out[country] = entry
+        ratio = employment_ratio.get(country)
+        if adults.get(country) and ratio:
+            w = adults[country] * ratio[1] / 100
+            pooled["all"] += total * w
+            weights["all"] += w
+            for sex in ("F", "M"):
+                if sex in entry.get("by_sex", {}):
+                    # Half the adults of each sex, times the overall employment ratio, is close enough for weights.
+                    pooled[sex] += np.array(entry["by_sex"][sex]) * w / 2
+                    weights[sex] += w / 2
+    world = {
+        "keys": [k for k, _, _ in OCCUPATIONS],
+        "skill_levels": [lvl for _, _, lvl in OCCUPATIONS],
+        "shares": [round(float(v), 4) for v in pooled["all"] / weights["all"]],
+        "by_sex": {sex: [round(float(v), 4) for v in pooled[sex] / weights[sex]] for sex in ("F", "M")},
+        "economies": len(out),
+        "dropped": sorted(dropped),
+        "employed_covered": int(weights["all"]),
+        "employed_world": int(adults.get("WLD", 0) * employment_ratio["WLD"][1] / 100),
+        "since": OCCUPATION_SINCE,
+    }
+    return out, world
+
+
 def fpn_series(series):
     """{iso3: {year: value}} for a Food Prices for Nutrition series."""
     url = (f"{WDI_API}/sources/{FPN_SOURCE}/country/all/series/{series}/classification/all/time/all"
@@ -919,6 +1003,8 @@ def main():
               if code in pop_parts["SP.POP.0014.TO"]}
     findex, global_findex = build_findex(adults, economies)
     healthy_diet, global_healthy_diet = build_healthy_diet(prices)
+    occupation, global_occupation = build_occupation(adults, wdi_latest("SL.EMP.TOTL.SP.ZS", WDI_SINCE), education,
+                                                     indicators["SL.AGR.EMPL.ZS"])
 
     countries = []
     for code, m in economies.items():
@@ -951,6 +1037,8 @@ def main():
             entry.setdefault("findex", {})["emergency_amount"] = amount
         if code in healthy_diet:
             entry["healthy_diet"] = healthy_diet[code]
+        if code in occupation:
+            entry["occupation"] = occupation[code]
         entry["region"] = m.get("region", {}).get("id") or None
         entry["m49"] = m49.get(code)
         entry["iso2"] = iso2.get(code) or None
@@ -980,6 +1068,9 @@ def main():
         "findex": {"name": "World Bank Global Findex database via the World Bank API (source 28): financial resilience",
                    "url": f"{WDI_API}/country/all/indicator/fin24aN?source={FINDEX_SOURCE}",
                    "home": "https://www.worldbank.org/en/publication/globalfindex"},
+        "join": {"name": "World Bank Global Jobs Indicators Database (JOIN, API source 86): employment by occupation",
+                 "url": f"{WDI_API}/country/all/indicator/JI.EMP.PROF.ZS?source={JOIN_SOURCE}",
+                 "home": "https://api.worldbank.org/v2/sources/86/indicators?format=json&per_page=1000"},
         "fpn": {"name": "World Bank Food Prices for Nutrition (API source 88): cost and affordability of a healthy diet",
                 "url": f"{WDI_API}/sources/{FPN_SOURCE}/country/all/series/CoHD_headcount/classification/all/time/all",
                 "home": "https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition"},
@@ -996,6 +1087,7 @@ def main():
         "education": global_education,
         "findex": global_findex,
         "healthy_diet": global_healthy_diet,
+        "occupation": global_occupation,
         "prices": {"base_year": PPP_BASE_YEAR, "last_year": INFLATION_LAST_YEAR, "source": IMF_EDITION,
                    "max_current_inflation": MAX_CURRENT_INFLATION},
         "location": {"economies_ranked": len(ranked), "population_ranked": ranked_pop},
@@ -1030,6 +1122,9 @@ def main():
           e["world_shares"])
     print("findex:", {k: (v["economies"], round(v["adults_covered"] / max(v["adults_world"], 1), 3), v["shares"])
                       for k, v in global_findex.items()})
+    o = global_occupation
+    print(f"occupation: {o['economies']} economies, {o['employed_covered'] / o['employed_world']:.1%} of employment;",
+          "dropped", o["dropped"], "pooled", o["shares"])
     print("healthy diet:", sum("cost_2021ppp" in c.get("healthy_diet", {}) for c in countries), "economies with a cost;",
           "world", global_healthy_diet["world"], "PPP check outliers:", global_healthy_diet["outliers"])
     print("history:", {y: h["share_below_3"] for y, h in global_income["history"].items()})

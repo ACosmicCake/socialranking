@@ -157,3 +157,16 @@ def test_healthy_diet_costs():
     costs = [c["healthy_diet"]["cost_2021ppp"] for c in data.countries() if "cost_2021ppp" in c.get("healthy_diet", {})]
     assert len(costs) > 140
     assert all(1 < x < 10 for x in costs)
+
+
+def test_occupation_shares():
+    occ = data.global_data()["occupation"]
+    assert len(occ["keys"]) == len(occ["skill_levels"]) == len(occ["shares"]) == 10
+    assert math.isclose(sum(occ["shares"]), 1, abs_tol=1e-3)
+    assert occ["economies"] > 100 and occ["employed_covered"] / occ["employed_world"] > 0.5
+    assert "NGA" in occ["dropped"]  # miscoded survey
+    for c in data.countries():
+        o = c.get("occupation")
+        if o:
+            assert o["year"] >= occ["since"]
+            assert math.isclose(sum(o["shares"]), 1, abs_tol=1e-3), c["iso3"]

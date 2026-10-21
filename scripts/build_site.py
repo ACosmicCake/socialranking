@@ -129,6 +129,7 @@ def browser_data(lang="en"):
         "fies_items": qn.FIES_ITEMS,
         "work_options": qn.WORK_OPTIONS,
         "sector_options": qn.SECTOR_OPTIONS,
+        "occupation_options": qn.OCCUPATION_OPTIONS,
         "employed": list(qn.EMPLOYED),
         "vulnerable": list(qn.VULNERABLE),
         "small_assets": list(qn.SMALL_ASSETS),
@@ -163,7 +164,7 @@ def browser_data(lang="en"):
             gallup[k]["label"], gallup[k]["definition"] = label, definition
         pyramid = [{**b, "label": i18n.WEALTH[b["key"]]} for b in pyramid]
         opts = {qid: option_map(qid, sections) for qid in ("income_band", "education", "cooking", "water",
-                                                          "sanitation", "work_status", "work_sector")}
+                                                          "sanitation", "work_status", "work_sector", "occupation")}
         q.update({
             "income_bands": [(k, lo, hi, opts["income_band"][k]) for k, lo, hi, _ in qn.INCOME_BANDS],
             "education_options": [(k, opts["education"][k]) for k, _ in qn.EDUCATION_OPTIONS],
@@ -173,6 +174,7 @@ def browser_data(lang="en"):
                                    for k, _, _ in qn.SANITATION_OPTIONS],
             "work_options": [(k, opts["work_status"][k]) for k, _ in qn.WORK_OPTIONS],
             "sector_options": [(k, opts["work_sector"][k]) for k, _ in qn.SECTOR_OPTIONS],
+            "occupation_options": [(k, opts["occupation"][k]) for k, _ in qn.OCCUPATION_OPTIONS],
         })
         labels = i18n.LABELS
     out = {
@@ -227,6 +229,7 @@ def page_context(lang="en"):
             "gdp": sum("gdp_per_capita_usd" in c for c in countries),
             "wdi_indicators": len(g["wdi_indicators"]),
             "findex": sum("emergency" in c.get("findex", {}) for c in countries),
+            "occupation": sum("occupation" in c for c in countries),
             "healthy_diet": sum("cost_2021ppp" in c.get("healthy_diet", {}) for c in countries),
             "social_protection": sum("per_allsp.cov_pop_tot" in c.get("wdi", {}) or "per_sa_allsa.cov_pop_tot" in c.get("wdi", {})
                                      for c in countries),
