@@ -725,8 +725,18 @@
     updateWhatif();
 
     // ---------------------------------------------------------------- copy link / image
-    document.getElementById("copy-link").addEventListener("click", () => {
+    const copyButton = document.getElementById("copy-link");
+    // Phones and tablets get the system share sheet; elsewhere the link is copied.
+    const canShare = navigator.share && window.matchMedia("(pointer: coarse)").matches;
+    if (canShare) copyButton.textContent = tr("Share these results", "Chia sẻ kết quả");
+    copyButton.addEventListener("click", () => {
         const status = document.getElementById("copy-status");
+        if (canShare) {
+            navigator.share({title: document.title, text: tr(`I'm richer than ${pct(inc.global_pct)} of the world. Where do you stand?`,
+                                                             `Tôi khá giả hơn ${pct(inc.global_pct)} dân số thế giới. Còn bạn thì sao?`), url: shareUrl})
+                .catch(() => {});
+            return;
+        }
         navigator.clipboard.writeText(shareUrl)
             .then(() => { status.textContent = tr("Link copied. It contains your answers.", "Đã sao chép. Đường dẫn chứa câu trả lời của bạn."); })
             .catch(() => { status.textContent = tr("Copy the address from your browser's address bar.", "Hãy sao chép địa chỉ trên thanh địa chỉ của trình duyệt."); });
