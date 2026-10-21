@@ -204,6 +204,9 @@ def browser_data(lang="en"):
     return out
 
 
+SITE_ORIGIN = "https://acosmiccake.github.io"
+
+
 def page_context(lang="en"):
     g = data.global_data()
     countries = data.countries()
@@ -282,6 +285,8 @@ def build(out_dir, base_path=""):
             other = ("" if lang == "vi" else "vi/") + (page if page in VI_PAGES else "index")
             html = env.get_template(f"{page}.html").render(
                 page=page, lang=lang, base=page_base, asset_base=asset_base,
+                # Link previews need absolute URLs; only known for a deployed build.
+                site_url=f"{SITE_ORIGIN}{root}" if base_path else "",
                 alt_url=f"{asset_base}{other}.html", alt_lang="en" if lang == "vi" else "vi",
                 languages=i18n.LANGUAGES, vi_pages=VI_PAGES,
                 _=(lambda s: i18n.UI.get(s, s)) if lang == "vi" else (lambda s: s),
