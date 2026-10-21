@@ -172,6 +172,10 @@ WDI_INDICATORS = {
     "FX.OWN.TOTL.SO.ZS": "Account ownership, secondary education or more",
     # human capital, learning, connectivity, health spending
     "HD.HCI.OVRL": "Human Capital Index (0-1)",
+    "HD.HCI.OVRL.FE": "Human Capital Index, female (0-1)",
+    "HD.HCI.OVRL.MA": "Human Capital Index, male (0-1)",
+    "HD.HCI.EYRS": "Expected years of school (HCI component)",
+    "HD.HCI.LAYS": "Learning-adjusted years of school (HCI component)",
     "SE.LPV.PRIM": "Learning poverty (% of 10-year-olds unable to read a simple text)",
     "IT.CEL.SETS.P2": "Mobile cellular subscriptions (per 100 people)",
     "SH.XPD.CHEX.PC.CD": "Current health expenditure per person (current US$)",

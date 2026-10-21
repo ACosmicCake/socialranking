@@ -58,6 +58,10 @@
                 "SP.DYN.LE00.FE.IN": "Life expectancy at birth, women (years)",
                 "SP.DYN.LE00.MA.IN": "Life expectancy at birth, men (years)",
                 "HD.HCI.OVRL": "Human Capital Index (0-1)",
+                "HD.HCI.OVRL.FE": "Human Capital Index, girls (0-1)",
+                "HD.HCI.OVRL.MA": "Human Capital Index, boys (0-1)",
+                "HD.HCI.EYRS": "Expected years of school by age 18",
+                "HD.HCI.LAYS": "Learning-adjusted years of school",
                 "SE.LPV.PRIM": "10-year-olds who can't read a simple text",
                 "IT.CEL.SETS.P2": "Mobile subscriptions per 100 people",
                 "SH.XPD.CHEX.PC.CD": "Health spending per person (US$)",
@@ -1027,6 +1031,7 @@
             ["SP.URB.TOTL.IN.ZS", "pct"], ["SE.ADT.LITR.ZS", "pct"], ["SN.ITK.DEFC.ZS", "pct"],
             ["SL.UEM.TOTL.ZS", "pct"], ["SL.EMP.VULN.ZS", "pct"], ["SH.XPD.OOPC.CH.ZS", "pct"],
             ["EN.POP.SLUM.UR.ZS", "pct"], ["SI.POV.GINI", "number"], ["HD.HCI.OVRL", "index"],
+            ["HD.HCI.EYRS", "number"], ["HD.HCI.LAYS", "number"],
             ["SE.LPV.PRIM", "pct"], ["IT.CEL.SETS.P2", "number"], ["SH.XPD.CHEX.PC.CD", "money"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);
 
@@ -1037,6 +1042,10 @@
             if (answers.sex === "F" || answers.sex === "M") {
                 const code = answers.sex === "F" ? "SP.DYN.LE00.FE.IN" : "SP.DYN.LE00.MA.IN";
                 glance.splice(1, 1, [code, L.glance[code], "number"]);
+                // The Human Capital Index for children of your sex, where published.
+                const hci = answers.sex === "F" ? "HD.HCI.OVRL.FE" : "HD.HCI.OVRL.MA";
+                const at = glance.findIndex(g => g[0] === "HD.HCI.OVRL");
+                if (value(country.wdi, hci) !== null) glance.splice(at, 1, [hci, L.glance[hci], "index"]);
             }
             for (const [code, label, fmt] of glance) {
                 const v = value(country.wdi, code);

@@ -422,3 +422,12 @@ test("social mobility against parents' generation", () => {
     assert.deepEqual(run({...FULL, mother_education: "dont_know"}).mobility, {});
     assert.equal(run({...FULL, mother_education: "tertiary"}).mobility.needs_age, true);
 });
+
+test("Human Capital Index components and the index for your sex", () => {
+    const glance = run({...FULL, sex: "F"}).location.glance;
+    const codes = glance.map(g => g.code);
+    assert.ok(codes.includes("HD.HCI.OVRL.FE") && !codes.includes("HD.HCI.OVRL"));
+    const eyrs = glance.find(g => g.code === "HD.HCI.EYRS"), lays = glance.find(g => g.code === "HD.HCI.LAYS");
+    assert.ok(lays.value > 0 && lays.value < eyrs.value && eyrs.value <= 14);
+    assert.ok(run(FULL).location.glance.some(g => g.code === "HD.HCI.OVRL"));
+});
