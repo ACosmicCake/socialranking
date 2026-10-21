@@ -243,6 +243,10 @@ OCCUPATION_TOP_RATIO, OCCUPATION_TOP_FLOOR = 2.5, 0.10
 OCCUPATION_SUFFIXES = {"": None, ".FE": ("by_sex", "F"), ".MA": ("by_sex", "M"),
                        ".UR": ("by_area", "urban"), ".RU": ("by_area", "rural")}
 
+# Population by 5-year age group and sex (% of each sex's population, UN WPP via WDI).
+AGE_GROUPS = ["0004", "0509", "1014", "1519", "2024", "2529", "3034", "3539", "4044", "4549", "5054",
+              "5559", "6064", "6569", "7074", "7579", "80UP"]
+
 # World Bank Food Prices for Nutrition (API source 88): cost of the least-cost
 # healthy diet and the share of people who can't afford it (cost > 52% of income).
 FPN_SOURCE = 88
@@ -788,6 +792,26 @@ def build_occupation(adults, employment_ratio, education, agriculture):
     return out, world
 
 
+def build_age_structure():
+    """{code: {year, shares, by_sex: {F, M}}}: share of the population in each 5-year age group."""
+    totals = {sex: wdi_latest(f"SP.POP.TOTL.{sex}.IN", WDI_SINCE) for sex in ("FE", "MA")}
+    groups = {(sex, g): wdi_latest(f"SP.POP.{g}.{sex}.5Y", WDI_SINCE) for sex in ("FE", "MA") for g in AGE_GROUPS}
+    out = {}
+    for code in totals["FE"]:
+        if code not in totals["MA"] or not all(code in groups[(sex, g)] for sex in ("FE", "MA") for g in AGE_GROUPS):
+            continue
+        by_sex = {}
+        for sex, key in (("FE", "F"), ("MA", "M")):
+            shares = np.array([groups[(sex, g)][code][1] for g in AGE_GROUPS])
+            by_sex[key] = shares / shares.sum()
+        f, m = totals["FE"][code][1], totals["MA"][code][1]
+        combined = (by_sex["F"] * f + by_sex["M"] * m) / (f + m)
+        out[code] = {"year": groups[("FE", "2529")][code][0],
+                     "shares": [round(float(x), 5) for x in combined],
+                     "by_sex": {k: [round(float(x), 5) for x in v] for k, v in by_sex.items()}}
+    return out
+
+
 def fpn_series(series):
     """{iso3: {year: value}} for a Food Prices for Nutrition series."""
     url = (f"{WDI_API}/sources/{FPN_SOURCE}/country/all/series/{series}/classification/all/time/all"
@@ -1065,6 +1089,7 @@ def main():
               if code in pop_parts["SP.POP.0014.TO"]}
     findex, global_findex = build_findex(adults, economies)
     exchange_rates = wdi_latest("PA.NUS.FCRF", WDI_SINCE)
+    age_structure = build_age_structure()
     healthy_diet, global_healthy_diet = build_healthy_diet(prices)
     occupation, global_occupation = build_occupation(adults, wdi_latest("SL.EMP.TOTL.SP.ZS", WDI_SINCE), education,
                                                      indicators["SL.AGR.EMPL.ZS"])
@@ -1105,6 +1130,8 @@ def main():
             entry["healthy_diet"] = healthy_diet[code]
         if code in occupation:
             entry["occupation"] = occupation[code]
+        if code in age_structure:
+            entry["age_structure"] = age_structure[code]
         entry["region"] = m.get("region", {}).get("id") or None
         entry["m49"] = m49.get(code)
         entry["iso2"] = iso2.get(code) or None
@@ -1154,6 +1181,7 @@ def main():
         "findex": global_findex,
         "healthy_diet": global_healthy_diet,
         "occupation": global_occupation,
+        "age_structure": {"groups": AGE_GROUPS, **age_structure["WLD"]},
         "prices": {"base_year": PPP_BASE_YEAR, "last_year": INFLATION_LAST_YEAR, "source": IMF_EDITION,
                    "max_current_inflation": MAX_CURRENT_INFLATION},
         "location": {"economies_ranked": len(ranked), "population_ranked": ranked_pop},

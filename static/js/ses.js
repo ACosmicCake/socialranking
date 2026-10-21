@@ -577,6 +577,25 @@
             return result;
         }
 
+        // Age: the share of the population younger than you (half of your own 10-year band counts),
+        // from UN population estimates by 5-year group. Context only.
+        const AGE_BANDS = {"15-24": [3, 5], "25-34": [5, 7], "35-44": [7, 9], "45-54": [9, 11], "55-64": [11, 13], "65plus": [13, 17]};
+
+        function scoreAge(answers, country) {
+            const span = AGE_BANDS[answers.age];
+            const ga = G.age_structure;
+            if (!span || !ga) return {};
+            const rank = shares => sum(shares.slice(0, span[0])) + sum(shares.slice(span[0], span[1])) / 2;
+            const result = {band: answers.age, year: ga.year, world_pct: pct(rank(ga.shares)),
+                            band_share_world: pct(sum(ga.shares.slice(span[0], span[1])))};
+            const ca = country.age_structure;
+            if (ca) Object.assign(result, {national_pct: pct(rank(ca.shares)),
+                                           band_share_country: pct(sum(ca.shares.slice(span[0], span[1])))});
+            const sex = answers.sex === "F" || answers.sex === "M" ? answers.sex : null;
+            if (sex && ca) result.national_sex_pct = pct(rank(ca.by_sex[sex]));
+            return result;
+        }
+
         // Social mobility: each parent's education ranked among people of the same sex in their
         // generation at ages 35-44 (Barro-Lee), against your own rank among people your age.
         const PARENT_GAP = 30;  // years between a parent's birth and their child's
@@ -1190,6 +1209,7 @@
             result.security = scoreSecurity(answers, country, result.income.national_pct);
             result.social_protection = scoreSocialProtection(answers, country, result.income.national_pct);
             result.mobility = scoreMobility(answers, country, today);
+            result.age = scoreAge(answers, country);
             if (country.income) {
                 const {survey_year, welfare_type, coverage, estimation_type, reference_year} = country.income;
                 result.country.survey = {survey_year, welfare_type, coverage, estimation_type, reference_year};
