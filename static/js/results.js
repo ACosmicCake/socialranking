@@ -137,6 +137,15 @@
                     <span>${pct(d.pct)}${d.national_pct !== undefined ? ` <span class="text-warning small">/ ${pct(d.national_pct)}</span>` : ""}</span></div>
                 ${meter(d.pct, d.label)}
                 ${d.national_pct !== undefined ? meter(d.national_pct, `${d.label} ${r.country.name}`, "meter-country") : ""}</div>`).join("")}
+            ${(() => {
+                if (r.dimensions.length < 2) return "";
+                const sorted = r.dimensions.slice().sort((a, b) => b.pct - a.pct);
+                const top = sorted[0], low = sorted[sorted.length - 1];
+                if (top.pct - low.pct < 5) return `<p class="small text-secondary">${tr("Your dimensions are close to one another: no single one stands out.", "Các khía cạnh của bạn khá sát nhau: không có khía cạnh nào nổi bật.")}</p>`;
+                const link = d => `<a href="#${d.key}" class="link-light">${esc(VI ? d.label.toLowerCase() : lower(d.label))}</a>`;
+                return `<p class="small">${tr(`Your strongest dimension is ${link(top)} (${pct(top.pct)}); the one holding your index down most is ${link(low)} (${pct(low.pct)}).`,
+                    `Khía cạnh mạnh nhất của bạn là ${link(top)} (${pct(top.pct)}); khía cạnh kéo chỉ số của bạn xuống nhiều nhất là ${link(low)} (${pct(low.pct)}).`)}</p>`;
+            })()}
             <div class="card bg-transparent border-light mt-4"><div class="card-body">
                 <h3 class="h5">${tr("SES index", "Chỉ số SES")}: ${fixed(r.ses_index, 1)} / 100</h3>
                 <p class="mb-0 small text-secondary">${tr(
