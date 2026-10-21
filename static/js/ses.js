@@ -601,17 +601,63 @@
                 result.sector = answers.work_sector;
                 result.sector_label = Q.sector_options.find(o => o[0] === answers.work_sector)[1];
             }
-            // Job quality: the ILO's vulnerable-employment split, as a mid-rank.
+            // Job quality: the ILO's vulnerable-employment split, as a mid-rank, averaged with the
+            // occupation's ISCO skill-level rank where the user gave one.
             if (result.employed && result.world) {
                 const v = result.world.vulnerable / 100;
                 const vulnerable = Q.vulnerable.includes(status);
                 result.vulnerable = vulnerable;
-                result.global_pct = pct(vulnerable ? v / 2 : v + (1 - v) / 2);
+                const statusRank = vulnerable ? v / 2 : v + (1 - v) / 2;
+                result.status_pct = pct(statusRank);
+                let nationalRank = null;
                 if (result.country) {
                     const cv = result.country.vulnerable / 100;
-                    result.national_pct = pct(vulnerable ? cv / 2 : cv + (1 - cv) / 2);
+                    nationalRank = vulnerable ? cv / 2 : cv + (1 - cv) / 2;
+                    result.status_national_pct = pct(nationalRank);
                 }
+                const occ = answers.occupation ? scoreOccupation(answers, country) : null;
+                if (occ) result.occupation = occ;
+                const combine = (a, b) => (b === null || b === undefined ? a : (a + b) / 2);
+                result.global_pct = pct(combine(statusRank, occ && occ.world_rank));
+                if (nationalRank !== null) result.national_pct = pct(combine(nationalRank, occ && occ.national_rank));
             }
+            return result;
+        }
+
+        // Occupation: share of workers in each ISCO-08 major group, and the user's mid-rank by
+        // skill level (armed forces span several levels and get no rank).
+        function skillRank(shares, level) {
+            const levels = G.occupation.skill_levels;
+            const byLevel = [1, 2, 3, 4].map(l => sum(shares.filter((_, i) => levels[i] === l)));
+            const total = sum(byLevel);
+            return midrank(byLevel.map(x => x / total), level - 1);
+        }
+
+        function scoreOccupation(answers, country) {
+            const occ = G.occupation;
+            const idx = occ.keys.indexOf(answers.occupation);
+            const level = occ.skill_levels[idx];
+            const label = Q.occupation_options.find(o => o[0] === answers.occupation)[1];
+            const result = {key: answers.occupation, label, skill_level: level, labels: Q.occupation_options.map(o => o[1]),
+                            pooled_shares: occ.shares.map(pct), pooled_same: pct(occ.shares[idx]),
+                            economies: occ.economies, employed_covered_pct: pct(occ.employed_covered / occ.employed_world)};
+            if (level) {
+                result.world_rank = skillRank(occ.shares, level);
+                result.world_pct = pct(result.world_rank);
+            }
+            const co = country.occupation;
+            if (co) {
+                Object.assign(result, {year: co.year, country_shares: co.shares.map(pct), country_same: pct(co.shares[idx])});
+                if (level) {
+                    result.national_rank = skillRank(co.shares, level);
+                    result.national_pct = pct(result.national_rank);
+                }
+                const sexShares = co.by_sex && co.by_sex[answers.sex];
+                if (sexShares) result.sex_country_same = pct(sexShares[idx]);
+                const areaShares = co.by_area && co.by_area[answers.area];
+                if (areaShares) result.area_country_same = pct(areaShares[idx]);
+            }
+            if (occ.by_sex[answers.sex]) result.sex_pooled_same = pct(occ.by_sex[answers.sex][idx]);
             return result;
         }
 

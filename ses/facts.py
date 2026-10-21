@@ -70,6 +70,18 @@ CITATIONS = {
         "year": 2025,
         "url": "https://www.who.int/publications/i/item/9789240117808",
     },
+    "isco_08": {
+        "title": "International Standard Classification of Occupations: ISCO-08, Volume 1",
+        "publisher": "International Labour Organization",
+        "year": 2012,
+        "url": "https://ilostat.ilo.org/methods/concepts-and-definitions/classification-occupation/",
+    },
+    "join": {
+        "title": "Global Jobs Indicators Database (JOIN): employment by occupation, harmonised household surveys",
+        "publisher": "World Bank",
+        "year": 2023,
+        "url": "https://api.worldbank.org/v2/sources/86/indicators?format=json&per_page=1000",
+    },
     "fpn": {
         "title": "Food Prices for Nutrition DataHub: cost and affordability of a healthy diet (FPN 5.0)",
         "publisher": "World Bank",

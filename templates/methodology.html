@@ -200,9 +200,22 @@
         participation. If you give your sex, the same shares are shown for women or for men, worldwide and in your country.</p>
     <p>The score uses the ILO's job-quality split: own-account and contributing family work count as <em>vulnerable
         employment</em> ({{ g.aggregates.WLD.wdi["SL.EMP.VULN.ZS"][1] | pct }} of the world's workers in
-        {{ g.aggregates.WLD.wdi["SL.EMP.VULN.ZS"][0] }}). Your mid-rank among workers is the score. This is a coarse two-level
-        measure, and it's scored only for people who are working. Detailed occupation (ISCO) data would allow a finer ranking,
-        but there is no open global source for it that we can use.</p>
+        {{ g.aggregates.WLD.wdi["SL.EMP.VULN.ZS"][0] }}). Your mid-rank among workers is the status rank. On its own this is
+        a coarse two-level measure, and it's scored only for people who are working.</p>
+    <p><strong>Occupation.</strong> If you're working, you can pick your ISCO-08 major group {{ cite("isco_08") }}. ISCO-08 assigns
+        each group a skill level, from 1 (simple, routine tasks) to 4 (complex problem-solving, usually needing a degree): managers
+        3-4 (we use 4), professionals 4, technicians and associate professionals 3, clerical, service and sales, skilled
+        agricultural, craft and machine-operator groups 2, and elementary occupations 1. The armed forces span several levels and
+        aren't ranked. We compare your group with the World Bank's Global Jobs Indicators Database {{ cite("join") }}, which
+        harmonises household and labour-force surveys into the share of employed people aged 15-64 in each group, also by sex and
+        urban/rural. We use each economy's latest survey since {{ g.occupation.since }} and drop surveys that fail two plausibility
+        checks: managers and professionals together exceeding both 10% of workers and 2.5 times the share of adults with
+        post-secondary education (miscoded occupations), or farm and elementary workers falling under half of the ILO's
+        agricultural employment share (a survey that misses rural areas). Dropped: {{ g.occupation.dropped | join(", ") }}.
+        That leaves {{ g.occupation.economies }} economies with {{ (g.occupation.employed_covered / g.occupation.employed_world * 100) | pct(0) }}
+        of the world's workers, pooled with employment weights (population 15+ times the ILO employment-to-population ratio).
+        Because China is missing, the pooled shares are a reference group, not a world estimate. Your occupation's mid-rank by
+        skill level, in the pooled group and in your country, is averaged with the status rank to give the work score.</p>
 
     <h2 id="living">6. Living standards</h2>
     <p>Seven household services. World, regional, national and urban/rural shares come from the World Bank's indicators,
@@ -333,6 +346,7 @@
         <li>{{ coverage.education }} with national education data; {{ coverage.gdp }} with GDP per person.</li>
         <li>{{ coverage.wdi_indicators }} further World Development Indicators per country (services, food security, work, health
             and context), latest value since {{ g.wdi_since }}.</li>
+        <li>{{ coverage.occupation }} with a usable survey of occupations (ISCO-08 major groups).</li>
         <li>{{ coverage.findex }} with Global Findex financial-resilience data; {{ coverage.healthy_diet }} with the cost of a
             healthy diet.</li>
         <li>{{ coverage.social_protection }} with survey-based social protection coverage (ASPIRE), latest value since {{ g.aspire_since }}.</li>

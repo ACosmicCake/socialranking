@@ -162,6 +162,27 @@ QUESTIONS = {
                     "options": {"agriculture": "Nông, lâm nghiệp hoặc thủy sản",
                                 "industry": "Công nghiệp: chế biến, xây dựng, khai khoáng, điện, khí đốt hoặc nước",
                                 "services": "Dịch vụ: thương mại, vận tải, khách sạn, tài chính, hành chính, giáo dục, y tế, dịch vụ khác"}},
+    "occupation": {
+        "text": "Công việc chính của bạn thuộc nhóm nào sau đây?",
+        "help": "Nếu không chắc, hãy chọn nhóm có các ví dụ cần trình độ đào tạo tương đương công việc của bạn.",
+        "options": {
+            "managers": "Nhà quản lý (ví dụ: giám đốc điều hành, giám đốc, trưởng phòng, quản lý cửa hàng, khách sạn hoặc nhà hàng)",
+            "professionals": "Chuyên gia, chuyên môn bậc cao (ví dụ: bác sĩ, giáo viên, kỹ sư, luật sư, kế toán, lập trình viên)",
+            "technicians": "Kỹ thuật viên, chuyên môn bậc trung (ví dụ: kỹ thuật viên phòng thí nghiệm hoặc kỹ thuật, nhân viên "
+                           "cấp cứu, hỗ trợ CNTT, đại diện bán hàng, môi giới bất động sản, nhân viên sổ sách)",
+            "clerks": "Nhân viên văn phòng (ví dụ: nhân viên hành chính, thư ký, giao dịch viên ngân hàng, lễ tân, tổng đài viên)",
+            "service_sales": "Nhân viên dịch vụ hoặc bán hàng (ví dụ: bán hàng, đầu bếp, phục vụ, cắt tóc, trông trẻ hoặc "
+                             "chăm sóc, bảo vệ)",
+            "skilled_agri": "Nông dân, lao động lâm nghiệp hoặc ngư dân có kỹ năng (trồng trọt, chăn nuôi hoặc đánh bắt chủ "
+                            "yếu để bán hoặc nuôi gia đình)",
+            "craft": "Thợ thủ công hoặc thợ nghề (ví dụ: thợ xây, thợ điện, thợ ống nước, thợ máy, thợ may, thợ làm bánh)",
+            "machine": "Thợ vận hành máy móc, lắp ráp hoặc lái xe (ví dụ: công nhân vận hành máy trong nhà máy, tài xế xe buýt, "
+                       "xe tải hoặc taxi)",
+            "elementary": "Lao động giản đơn (ví dụ: lao công, giúp việc gia đình, lao động phổ thông, làm thuê nông nghiệp, "
+                          "khuân vác, phụ bếp, bán hàng rong không phải đồ ăn)",
+            "armed_forces": "Lực lượng vũ trang",
+        },
+    },
     "electricity": {"text": "Nhà bạn có điện không (điện lưới, lưới điện nhỏ hoặc hệ thống điện mặt trời)?"},
     "cooking": {"text": "Hộ bạn chủ yếu nấu ăn bằng gì?",
                 "options": {"electricity": "Điện (bếp điện, bếp từ, lò vi sóng)",

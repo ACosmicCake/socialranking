@@ -327,6 +327,29 @@
         ${edu.country_mean_years ? tr(`Average years of schooling in ${cname} (ages 25-64, 2015): ${edu.country_mean_years}.`, `Số năm đi học trung bình ở ${cname} (25-64 tuổi, 2015): ${fixed(edu.country_mean_years, 2)}.`) : ""}</p>
     ${groupHtml}`));
 
+    // ---------------------------------------------------------------- occupation (within work)
+    function occupationHtml(o) {
+        if (!o) return "";
+        const levelName = {1: tr("1 (simple, routine tasks)", "1 (công việc đơn giản, lặp lại)"), 2: tr("2 (operating machinery, handling information, trades)", "2 (vận hành máy móc, xử lý thông tin, nghề thủ công)"),
+                           3: tr("3 (complex technical and practical tasks)", "3 (công việc kỹ thuật và thực hành phức tạp)"), 4: tr("4 (complex problem-solving, usually a degree)", "4 (giải quyết vấn đề phức tạp, thường cần bằng đại học)")};
+        const head = [tr("Occupation group", "Nhóm nghề"), tr(`${o.economies} economies`, `${o.economies} nền kinh tế`), o.country_shares ? cname : null].filter(h => h !== null);
+        const rows = o.labels.map((label, i) => `<tr class="${i === o.labels.indexOf(o.label) ? "table-active" : ""}"><td>${esc(label.split(" (")[0])}${label === o.label ? ` &larr; ${tr("you", "bạn")}` : ""}</td>
+            <td>${pct(o.pooled_shares[i])}</td>${o.country_shares ? `<td>${pct(o.country_shares[i])}</td>` : ""}</tr>`);
+        const like = [];
+        if (o.sex_country_same !== undefined) like.push(tr(`${pct(o.sex_country_same)} of working ${answers.sex === "F" ? "women" : "men"} in ${cname}`, `${pct(o.sex_country_same)} ${answers.sex === "F" ? "phụ nữ" : "nam giới"} đang làm việc ở ${cname}`));
+        if (o.area_country_same !== undefined) like.push(tr(`${pct(o.area_country_same)} of workers in ${answers.area === "urban" ? "urban" : "rural"} ${cname}`, `${pct(o.area_country_same)} lao động ở ${answers.area === "urban" ? "thành thị" : "nông thôn"} ${cname}`));
+        return `<h3 class="h5 mt-4">${tr("Your occupation", "Nghề nghiệp của bạn")}</h3>
+        <p>${o.skill_level ? tr(`ISCO-08 puts this group at skill level <strong>${levelName[o.skill_level]}</strong>. By skill level, your occupation ranks above about <strong>${pct(o.world_pct)}</strong> of workers in the ${o.economies} economies with survey data${o.national_pct !== undefined ? ` and ${pct(o.national_pct)} in ${cname}` : ""}.`,
+                                `ISCO-08 xếp nhóm này ở trình độ kỹ năng <strong>${levelName[o.skill_level]}</strong>. Theo trình độ kỹ năng, nghề của bạn xếp trên khoảng <strong>${pct(o.world_pct)}</strong> lao động ở ${o.economies} nền kinh tế có số liệu khảo sát${o.national_pct !== undefined ? ` và ${pct(o.national_pct)} ở ${cname}` : ""}.`)
+                             : tr("The armed forces span several skill levels, so this occupation isn't ranked.", "Lực lượng vũ trang gồm nhiều trình độ kỹ năng, nên nghề này không được xếp hạng.")}
+            ${o.country_same !== undefined ? tr(` ${pct(o.country_same)} of workers in ${cname} are in the same group${like.length ? `, as are ${like.join(" and ")}` : ""}.`,
+                                                ` ${pct(o.country_same)} lao động ở ${cname} cùng nhóm với bạn${like.length ? `, cũng như ${like.join(" và ")}` : ""}.`)
+                                           : tr(` We don't have a usable recent survey of occupations for ${cname}.`, ` Chúng tôi chưa có khảo sát nghề nghiệp gần đây đủ tin cậy cho ${cname}.`)}</p>
+        ${table(head, rows)}
+        <p class="small text-secondary">${tr(`Shares of employed people aged 15-64 from harmonised household and labour-force surveys${o.year ? ` (${cname}: ${o.year})` : ""}; the ${o.economies} economies cover ${pct(o.employed_covered_pct, 0)} of the world's workers, and their pooled shares are weighted by employment. It is not a world estimate: China has no usable survey.`,
+                                             `Tỷ lệ người có việc làm 15-64 tuổi từ các khảo sát hộ gia đình và lực lượng lao động đã chuẩn hóa${o.year ? ` (${cname}: ${o.year})` : ""}; ${o.economies} nền kinh tế này chiếm ${pct(o.employed_covered_pct, 0)} lao động thế giới, tỷ lệ gộp được gia quyền theo số người có việc. Đây không phải ước tính toàn cầu: Trung Quốc không có khảo sát dùng được.`)} ${cite("join")} ${cite("isco_08")}</p>`;
+    }
+
     // ---------------------------------------------------------------- work
     if (work.status) {
         const statusRows = [["employee", tr("Employees (wage and salary)", "Người làm công hưởng lương")], ["employer", tr("Employers", "Chủ sử dụng lao động")],
@@ -347,8 +370,11 @@
                      ` ILO xếp lao động tự làm và lao động gia đình vào nhóm <em>việc làm dễ tổn thương</em>: ít có hợp đồng chính thức, bảo trợ xã hội hay thu nhập ổn định. ${pct(work.world.vulnerable)} lao động thế giới ở vị trí này${work.country ? `, và ${pct(work.country.vulnerable)} ở ${cname}` : ""}.`)
                 : tr(` Wage and salaried workers and employers are not in what the ILO calls vulnerable employment, unlike ${pct(work.world.vulnerable)} of the world's workers${work.country ? ` (${pct(work.country.vulnerable)} in ${cname})` : ""}.`,
                      ` Người làm công hưởng lương và chủ sử dụng lao động không thuộc nhóm việc làm dễ tổn thương theo ILO, khác với ${pct(work.world.vulnerable)} lao động thế giới${work.country ? ` (${pct(work.country.vulnerable)} ở ${cname})` : ""}.`))
-                + tr(` On this measure your work situation is better than about <strong>${pct(work.global_pct)}</strong> of workers worldwide${work.national_pct !== undefined ? ` and ${pct(work.national_pct)} in ${cname}` : ""}.`,
-                     ` Theo thước đo này, tình trạng việc làm của bạn tốt hơn khoảng <strong>${pct(work.global_pct)}</strong> lao động trên thế giới${work.national_pct !== undefined ? ` và ${pct(work.national_pct)} ở ${cname}` : ""}.`);
+                + (work.occupation && work.occupation.world_pct !== undefined
+                    ? tr(` Combining that with your occupation's skill level, your work situation is better than about <strong>${pct(work.global_pct)}</strong> of workers worldwide${work.national_pct !== undefined ? ` and ${pct(work.national_pct)} in ${cname}` : ""}.`,
+                         ` Kết hợp với trình độ kỹ năng của nghề nghiệp, tình trạng việc làm của bạn tốt hơn khoảng <strong>${pct(work.global_pct)}</strong> lao động trên thế giới${work.national_pct !== undefined ? ` và ${pct(work.national_pct)} ở ${cname}` : ""}.`)
+                    : tr(` On this measure your work situation is better than about <strong>${pct(work.global_pct)}</strong> of workers worldwide${work.national_pct !== undefined ? ` and ${pct(work.national_pct)} in ${cname}` : ""}.`,
+                         ` Theo thước đo này, tình trạng việc làm của bạn tốt hơn khoảng <strong>${pct(work.global_pct)}</strong> lao động trên thế giới${work.national_pct !== undefined ? ` và ${pct(work.national_pct)} ở ${cname}` : ""}.`));
         } else if (work.status === "unemployed") {
             workText = tr(` Unemployment is ${pct(work.unemployment.world)} of the world's labour force${work.unemployment.country !== null ? ` and ${pct(work.unemployment.country)} in ${cname}` : ""}.`,
                           ` Tỷ lệ thất nghiệp là ${pct(work.unemployment.world)} lực lượng lao động thế giới${work.unemployment.country !== null ? ` và ${pct(work.unemployment.country)} ở ${cname}` : ""}.`);
@@ -366,7 +392,8 @@
             <div class="col-lg-6"><h3 class="h6">${tr("Workers by sector", "Lao động theo ngành")}</h3>${table([tr("Sector", "Ngành"), tr("World", "Thế giới"), cname, ...sexHead], sectorRows)}</div>
         </div>
         <p class="small text-secondary">${tr(`ILO modelled estimates, ${work.world ? work.world.year : ""}`, `Ước tính mô hình của ILO, ${work.world ? work.world.year : ""}`)} ${cite("ilo_wdi")}. ${tr(
-            "Only two categories are ranked (vulnerable or not), so this score is coarse.", "Chỉ xếp hạng hai nhóm (dễ tổn thương hay không), nên điểm này còn thô.")}</p>`));
+            "Status in employment ranks only two categories (vulnerable or not), so it is coarse on its own.", "Vị thế việc làm chỉ xếp hạng hai nhóm (dễ tổn thương hay không), nên tự nó còn thô.")}</p>
+        ${occupationHtml(work.occupation)}`));
     }
 
     // ---------------------------------------------------------------- living standards

@@ -96,6 +96,24 @@ WORK_OPTIONS = [
 EMPLOYED = ("employee", "employer", "own_account", "family_worker")
 VULNERABLE = ("own_account", "family_worker")
 
+# ISCO-08 major groups, with examples from the ILO classification.
+OCCUPATION_OPTIONS = [
+    ("managers", "Manager (e.g. chief executive, director, department, shop, hotel or restaurant manager)"),
+    ("professionals", "Professional (e.g. doctor, teacher, engineer, lawyer, accountant, software developer)"),
+    ("technicians", "Technician or associate professional (e.g. lab or engineering technician, paramedic, "
+                    "IT support, sales or real-estate agent, bookkeeper)"),
+    ("clerks", "Clerical support worker (e.g. office clerk, secretary, bank teller, receptionist, call-centre agent)"),
+    ("service_sales", "Service or sales worker (e.g. shop salesperson, cook, waiter, hairdresser, child-care "
+                      "or care worker, security guard)"),
+    ("skilled_agri", "Skilled farmer, forestry worker or fisher (growing crops, raising animals or fishing "
+                     "mainly for sale or to feed the household)"),
+    ("craft", "Craft or trades worker (e.g. builder, electrician, plumber, mechanic, tailor, baker)"),
+    ("machine", "Plant or machine operator, assembler or driver (e.g. factory machine operator, bus, truck or taxi driver)"),
+    ("elementary", "Elementary occupation (e.g. cleaner, domestic helper, labourer, farm hand, porter, "
+                   "kitchen helper, street vendor of non-food goods)"),
+    ("armed_forces", "Armed forces"),
+]
+
 SECTOR_OPTIONS = [
     ("agriculture", "Agriculture, forestry or fishing"),
     ("industry", "Industry: manufacturing, construction, mining, electricity, gas or water"),
@@ -355,6 +373,17 @@ SECTIONS = [
                 "show_if": ("work_status", "|".join(EMPLOYED)),
                 "source": "ilo_wdi",
                 "basis": "ILO broad economic sectors (ISIC Rev.4 aggregates).",
+            },
+            {
+                "id": "occupation",
+                "type": "radio",
+                "text": "Which of these best describes your main job?",
+                "help": "If you're unsure, pick the group whose examples need about the same training as your job.",
+                "options": OCCUPATION_OPTIONS,
+                "show_if": ("work_status", "|".join(EMPLOYED)),
+                "source": "isco_08",
+                "basis": "ILO International Standard Classification of Occupations (ISCO-08) major groups, "
+                         "compared with the World Bank's Global Jobs Indicators Database.",
             },
         ],
     },

@@ -18,7 +18,7 @@ a cited report.
 |---|---|---|---|
 | **Income** (headline) | Household income after tax ÷ household size, in local currency, converted to 2021 PPP $/day with IMF inflation | World Bank PIP (September 2026 release): world, regions, income groups, all 218 economies, urban/rural (China), 1990-2026 | 2024 (+ history, 2026 nowcast) |
 | **Education** | Highest completed level, 9 ISCED 2011 levels; age and sex | UNESCO attainment of adults 25+ (World Bank WDI); Barro-Lee v3 for age/sex groups and missing countries | 2010-2025; 2015 |
-| **Work** | ILO status in employment (ICSE-93) and sector | ILO modelled estimates: employment by status and sector, vulnerable employment, unemployment (WDI) | 2025 |
+| **Work** | ILO status in employment (ICSE-93), sector, and occupation (ISCO-08 major group, ranked by skill level) | ILO modelled estimates: employment by status and sector, vulnerable employment, unemployment (WDI); World Bank Global Jobs Indicators Database: occupations in 115 economies, by sex and urban/rural | 2010-2025 |
 | **Living standards** | SDG definitions: electricity (7.1.1), clean cooking (7.1.2), JMP water/sanitation/hygiene ladders, Internet use (ITU), health-cost hardship (3.8.2) | WDI national, urban, rural and regional shares; Tracking SDG7 2026, JMP 2025, ITU 2025, UHC 2025 | 2022-2025 |
 | **Multidimensional poverty** (shown, not in the index) | Global MPI's 10 indicators: nutrition, child mortality, schooling, attendance, cooking fuel, sanitation, water, electricity, housing, assets | UNDP/OPHI Global MPI 2026; UN-Habitat overcrowding | 2026 |
 | **Financial security** | Gallup World Poll basic-needs items; FAO Food Insecurity Experience Scale (8 items); Global Findex account, saving, emergency funds, months of expenses covered, source of emergency money, biggest worry | Gallup 2020; FAO food insecurity for the world and each country (WDI); SOFI 2026; Findex 2025 for 142 economies (World Bank API) | 2019-2025 |
@@ -38,7 +38,7 @@ The results page shows:
 - the income your household would need, in your own currency, to reach the median, top 10% and top 1% of your country and the world;
 - a "what if?" slider for different incomes;
 - education compared with the world, your country and people of your age and sex;
-- work status and sector compared with the ILO's estimates;
+- work status and sector compared with the ILO's estimates, and your occupation's skill level compared with surveys in 115 economies;
 - every household service compared with the world, your region, your country and your urban/rural area;
 - your Multidimensional Poverty Index score and deprivations, and overcrowding;
 - food security against FAO's world and country figures, and financial resilience against Global Findex;
@@ -97,7 +97,7 @@ small territories).
 |---|---|
 | [World Bank Poverty and Inequality Platform API](https://pip.worldbank.org) | National percentiles for 2024 (all 218 economies), China's urban/rural distributions, world and regional headcounts for 1990-2024 and the 2026 nowcast, survey years, PPP factors |
 | [World Bank WDI API](https://datatopics.worldbank.org/world-development-indicators/) | Economies, regions and income groups; population and population 25+; GDP per capita; `PA.NUS.PRVT.PP`; UNESCO educational attainment (8 indicators); 80+ indicators on services (national/urban/rural), food security (FAO), work (ILO, by sex), account ownership (Findex, by group), human capital, health, social protection (ASPIRE, by income fifth) and context, for every economy and aggregate |
-| [World Bank API: Global Findex and Food Prices for Nutrition](https://api.worldbank.org/v2/sources) | Financial-resilience answers for 142 economies; cost of a healthy diet and the share who can't afford it |
+| [World Bank API: Global Findex, Food Prices for Nutrition, Global Jobs Indicators](https://api.worldbank.org/v2/sources) | Financial-resilience answers for 142 economies; cost of a healthy diet and the share who can't afford it; occupations (ISCO-08) for 115 economies |
 | [IMF World Economic Outlook, October 2026](https://www.imf.org/external/datamapper/PCPIPCH@WEO) | Consumer-price inflation, 2022-2026 |
 | [Barro-Lee v3](https://github.com/barrolee/BarroLeeDataSet) | Education by age and sex; education for countries without WDI data |
 | [ISO 3166 / ISO 4217](https://github.com/datasets/country-codes) | Common country names, currencies, map codes |
