@@ -73,6 +73,8 @@
         <div class="d-flex flex-wrap gap-2 justify-content-center mt-2">
             <button class="btn btn-outline-light btn-sm" id="copy-link" type="button">${tr("Copy a link to these results", "Sao chép đường dẫn kết quả")}</button>
             <button class="btn btn-outline-light btn-sm" id="save-image" type="button">${tr("Save a summary image", "Lưu ảnh tóm tắt")}</button>
+            <button class="btn btn-outline-light btn-sm" id="save-csv" type="button">${tr("Download the numbers (CSV)", "Tải số liệu (CSV)")}</button>
+            <button class="btn btn-outline-light btn-sm" id="save-json" type="button">${tr("Download everything (JSON)", "Tải toàn bộ (JSON)")}</button>
         </div>
         <span class="small text-white-50 mt-1" id="copy-status" aria-live="polite"></span>
     </div>`);
@@ -709,6 +711,61 @@
         a.download = tr("where-i-stand.png", "vi-tri-cua-toi.png");
         a.href = c.toDataURL("image/png");
         a.click();
+    });
+
+    // ---------------------------------------------------------------- data downloads
+    function download(name, type, text) {
+        const a = document.createElement("a");
+        a.download = name;
+        a.href = URL.createObjectURL(new Blob([text], {type}));
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }
+    // One row per measure: section, measure, your value, world, your country. Percentiles are the
+    // share of people below you (people level with you count as half).
+    function summaryRows() {
+        const rows = [["section", "measure", "you", "world", "country"]];
+        const add = (section, measure, you, world = "", country = "") => {
+            if (you !== undefined && you !== null) rows.push([section, measure, you, world ?? "", country ?? ""]);
+        };
+        add("summary", "SES index (0-100)", r.ses_index);
+        for (const d of r.dimensions) add("summary", `${d.key} percentile`, "", d.pct, d.national_pct);
+        add("income", "income per person per day (2021 int. $)", inc.ppp_per_day.toFixed(2), inc.world_median, r.country.median_ppp);
+        add("income", "percentile", "", inc.global_pct, inc.national_pct);
+        if (inc.sensitivity) {
+            add("income", "percentile at -20% income", "", inc.sensitivity.global[0], inc.sensitivity.national && inc.sensitivity.national[0]);
+            add("income", "percentile at +20% income", "", inc.sensitivity.global[1], inc.sensitivity.national && inc.sensitivity.national[1]);
+        }
+        for (const t of inc.thresholds) add("income", `${t.scope} ${t.pct}th percentile (2021 int. $/day)`, t.ppp_per_day.toFixed(2));
+        for (const l of inc.lines) add("income", `share below $${l.line.toFixed(2)}/day`, l.above ? "above" : "below", l.share_below, l.country_share_below);
+        if (inc.healthy_diet.cost_2021ppp !== undefined) {
+            add("income", "healthy diet cost (2021 int. $/day)", inc.healthy_diet.cost_2021ppp.toFixed(2));
+            add("income", "healthy diet affordable (world, country: % who can't afford)", inc.healthy_diet.affordable ? "yes" : "no",
+                inc.healthy_diet.world && Math.round(inc.healthy_diet.world.unaffordable_share * 1000) / 10, inc.healthy_diet.unaffordable_pct);
+        }
+        add("education", edu.label, "", edu.global_pct, edu.national_pct);
+        if (r.mobility.rank_change !== undefined) add("education", "rank change vs better-ranked parent (points)", r.mobility.rank_change);
+        if (work.status) add("work", `status: ${work.status}`, "", work.status_pct ?? work.global_pct, work.status_national_pct ?? work.national_pct);
+        if (work.occupation) add("work", `occupation: ${work.occupation.key} (skill level ${work.occupation.skill_level ?? "-"})`, "", work.occupation.world_pct, work.occupation.national_pct);
+        if (liv.global_pct !== undefined) add("living", "living standards", "", liv.global_pct, liv.national_pct);
+        if (r.mpi.available) add("living", "MPI deprivation score (%)", r.mpi.score);
+        if (sec.gallup_group) add("security", `Gallup vulnerability: ${sec.gallup_group}`, "", sec.gallup_pct);
+        if (sec.fies_level) add("security", `FIES: ${sec.fies_level} (${sec.fies_raw}/8)`, "", sec.fies_pct, sec.fies_national_pct);
+        if (sec.emergency) add("security", `emergency money: ${sec.emergency.key}`, "", sec.emergency.world_pct, sec.emergency.national_pct);
+        if (sec.cover_expenses) add("security", `cover expenses: ${sec.cover_expenses.key}`, "", sec.cover_expenses.world_pct, sec.cover_expenses.national_pct);
+        if (r.wealth.band) add("wealth", r.wealth.band, "", r.wealth.global_pct);
+        const sp = r.social_protection;
+        if (sp.received) add("social protection", "programme types received", sp.types.join(" + ") || "none", sp.world_any, sp.country && sp.country.any);
+        return rows;
+    }
+    const csvCell = v => { const t = String(v); return /[",\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t; };
+    document.getElementById("save-csv").addEventListener("click", () => {
+        download(tr("where-i-stand.csv", "vi-tri-cua-toi.csv"), "text/csv;charset=utf-8",
+                 "\ufeff" + summaryRows().map(row => row.map(csvCell).join(",")).join("\r\n"));
+    });
+    document.getElementById("save-json").addEventListener("click", () => {
+        const payload = {generated: new Date().toISOString(), data_built: D.global.built, answers, results: r};
+        download(tr("where-i-stand.json", "vi-tri-cua-toi.json"), "application/json", JSON.stringify(payload, null, 1));
     });
 
     // ---------------------------------------------------------------- charts
