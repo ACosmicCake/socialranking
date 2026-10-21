@@ -155,6 +155,8 @@ WDI_INDICATORS = {
     "SI.DST.FRST.20": "Income share held by lowest 20%",
     "SI.POV.NAHC": "Poverty headcount ratio at national poverty lines (% of population)",
     "GD_WBL_OVL_LAW": "Women, Business and the Law: legal framework index (0-100)",
+    "EN.ATM.PM25.MC.M3": "PM2.5 air pollution, mean annual exposure (micrograms per cubic metre)",
+    "VC.IHR.PSRC.P5": "Intentional homicides (per 100,000 people)",
     # by sex
     "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
     "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",

@@ -7,7 +7,7 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (110 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
+   "name": "World Bank World Development Indicators API (112 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
   },
@@ -3153,6 +3153,8 @@
   "SI.DST.FRST.20": "Income share held by lowest 20%",
   "SI.POV.NAHC": "Poverty headcount ratio at national poverty lines (% of population)",
   "GD_WBL_OVL_LAW": "Women, Business and the Law: legal framework index (0-100)",
+  "EN.ATM.PM25.MC.M3": "PM2.5 air pollution, mean annual exposure (micrograms per cubic metre)",
+  "VC.IHR.PSRC.P5": "Intentional homicides (per 100,000 people)",
   "SP.DYN.LE00.FE.IN": "Life expectancy at birth, female (years)",
   "SP.DYN.LE00.MA.IN": "Life expectancy at birth, male (years)",
   "SE.ADT.LITR.FE.ZS": "Adult literacy rate, female (15+)",
@@ -3374,6 +3376,14 @@
     "GD_WBL_OVL_LAW": [
      2025,
      66.97
+    ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     32.87
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     5.2
     ],
     "SP.DYN.LE00.FE.IN": [
      2024,
@@ -3680,6 +3690,14 @@
      2022,
      23.33
     ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     27.3
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     0.8
+    ],
     "SP.DYN.LE00.FE.IN": [
      2024,
      79.7
@@ -3973,6 +3991,14 @@
      2022,
      2.8
     ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     14.41
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     2.1
+    ],
     "SP.DYN.LE00.FE.IN": [
      2024,
      81.79
@@ -4261,6 +4287,14 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      18.92
+    ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     17.35
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     19.7
     ],
     "SP.DYN.LE00.FE.IN": [
      2024,
@@ -4567,6 +4601,14 @@
      2022,
      31.91
     ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     45.36
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     3.9
+    ],
     "SP.DYN.LE00.FE.IN": [
      2024,
      74.34
@@ -4851,6 +4893,14 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      0.2
+    ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     6.92
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     5.4
     ],
     "SP.DYN.LE00.FE.IN": [
      2024,
@@ -5157,6 +5207,14 @@
      2025,
      50.4
     ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     55.16
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     2.8
+    ],
     "SP.DYN.LE00.FE.IN": [
      2024,
      74.22
@@ -5453,6 +5511,14 @@
     "EN.POP.SLUM.UR.ZS": [
      2022,
      53.71
+    ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     35.44
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     12.2
     ],
     "SP.DYN.LE00.FE.IN": [
      2024,
