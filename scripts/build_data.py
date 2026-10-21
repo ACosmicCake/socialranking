@@ -175,6 +175,8 @@ WDI_INDICATORS = {
     "SE.LPV.PRIM": "Learning poverty (% of 10-year-olds unable to read a simple text)",
     "IT.CEL.SETS.P2": "Mobile cellular subscriptions (per 100 people)",
     "SH.XPD.CHEX.PC.CD": "Current health expenditure per person (current US$)",
+    # Findex sets its emergency amount at 1/20 of GNI per person in local currency.
+    "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
 }
 # Social protection coverage from the World Bank ASPIRE database: % of the population
 # living in households that receive each kind of programme, in total and by
@@ -190,6 +192,27 @@ WDI_SOCIAL_PROTECTION = {
        for p, name in (("sa_allsa", "social assistance"), ("si_allsi", "social insurance"))
        for q in range(1, 6)},
 }
+# Global Findex 2025 financial-resilience items (World Bank API source 28): each
+# answer's share of adults 15+. Main source of emergency money is asked only of
+# those who could raise it, so every group is normalised to sum to one.
+FINDEX_SOURCE = 28
+FINDEX_SINCE = 2021
+FINDEX_ITEMS = {
+    "emergency": [("not_possible", "fin24aN"), ("very_difficult", "fin24aVD"),
+                  ("somewhat_difficult", "fin24aSD"), ("not_difficult", "fin24aND")],
+    "emergency_source": [("savings", "fin24sav"), ("family", "fin24fam"), ("work", "fin24work"),
+                         ("borrowing", "fin24bor"), ("sale_of_assets", "fin24sell"), ("other", "fin24other")],
+    "cover_expenses": [("under_2_weeks", "fin24ba"), ("one_month", "fin24bb"), ("two_months", "fin24bc"),
+                       ("over_2_months", "fin24bd")],
+    "worry": [("old_age", "fin45a"), ("business", "fin45b"), ("medical", "fin45c"), ("bills", "fin45d"),
+              ("school", "fin45e")],
+}
+# World Bank Food Prices for Nutrition (API source 88): cost of the least-cost
+# healthy diet and the share of people who can't afford it (cost > 52% of income).
+FPN_SOURCE = 88
+FPN_SERIES = ["CoHD_LCU", "CoHD_PPP", "CoHD_headcount", "CoHD_unafford_n"]
+HEALTHY_DIET_INCOME_SHARE = 0.52
+
 # Educational attainment, population 25+, cumulative (% with at least this level).
 WDI_EDUCATION = ["SE.PRM.CUAT.ZS", "SE.SEC.CUAT.LO.ZS", "SE.SEC.CUAT.UP.ZS", "SE.SEC.CUAT.PO.ZS",
                  "SE.TER.CUAT.ST.ZS", "SE.TER.CUAT.BA.ZS", "SE.TER.CUAT.MS.ZS", "SE.TER.CUAT.DO.ZS"]
@@ -588,6 +611,109 @@ def wdi_by_year(indicator, since):
     return out
 
 
+def build_findex(adults, economies):
+    """Findex resilience answers per economy (latest complete year) and adult-weighted world shares."""
+    raw = {}
+    for group, items in FINDEX_ITEMS.items():
+        for _, ind in items:
+            rows = wdi(ind, f"findex_{ind}.json", source=FINDEX_SOURCE, date=f"{FINDEX_SINCE}:{INFLATION_LAST_YEAR}")
+            for r in rows:
+                raw.setdefault(ind, {}).setdefault(r["countryiso3code"] or r["country"]["id"], {})[int(r["date"])] = \
+                    float(r["value"])
+    out, world = {}, {}
+    for group, items in FINDEX_ITEMS.items():
+        inds = [ind for _, ind in items]
+        acc, weight, n = np.zeros(len(items)), 0.0, 0
+        codes = set().union(*(raw.get(ind, {}).keys() for ind in inds)) & set(economies)
+        for code in codes:
+            years = [y for y in raw[inds[0]].get(code, {})
+                     if all(y in raw.get(ind, {}).get(code, {}) for ind in inds)]
+            # Keep the latest year with a usable answer set (some 2024 phone surveys report zeros only).
+            for y in sorted(years, reverse=True):
+                vals = np.array([raw[ind][code][y] for ind in inds])
+                if vals.sum() > 50:
+                    break
+            else:
+                continue
+            shares = vals / vals.sum()
+            out.setdefault(code, {})[group] = {"year": y, "shares": [round(float(v), 4) for v in shares]}
+            if adults.get(code):
+                acc += shares * adults[code]
+                weight += adults[code]
+                n += 1
+        world[group] = {"keys": [k for k, _ in items], "indicators": inds,
+                        "shares": [round(float(v), 4) for v in acc / weight], "economies": n,
+                        "adults_covered": int(weight), "adults_world": int(adults.get("WLD", 0))}
+    return out, world
+
+
+def emergency_amount(code, indicators, prices):
+    """Findex's emergency amount, 1/20 of GNI per capita in local currency, if its units check out.
+
+    GNI in local currency, converted with our PPPs and prices, should be near GDP per person
+    in 2021 PPP $; a large gap means WDI and PIP use different currency units (e.g. Liberia).
+    """
+    gni = indicators["NY.GNP.PCAP.CN"].get(code)
+    gdp = indicators["NY.GDP.PCAP.PP.KD"].get(code)
+    if not (gni and gdp and prices and str(gni[0]) in prices["price_index"]):
+        return None
+    ratio = gni[1] / prices["ppp_2021"] / prices["price_index"][str(gni[0])] / gdp[1]
+    if not 1 / 3 <= ratio <= 3:
+        return None
+    return {"lcu": round(gni[1] / 20, 2), "year": gni[0]}
+
+
+def fpn_series(series):
+    """{iso3: {year: value}} for a Food Prices for Nutrition series."""
+    url = (f"{WDI_API}/sources/{FPN_SOURCE}/country/all/series/{series}/classification/all/time/all"
+           "?format=json&per_page=20000")
+    out = {}
+    for r in json.loads(fetch(url, f"fpn_{series}.json"))["source"]["data"]:
+        if r["value"] is None:
+            continue
+        v = {x["concept"]: x["id"] for x in r["variable"]}
+        out.setdefault(v["Country"], {})[int(v["Time"][2:])] = float(r["value"])
+    return out
+
+
+def build_healthy_diet(prices):
+    """Cost of a healthy diet in local currency and 2021 international $, and who can't afford it."""
+    data = {s: fpn_series(s) for s in FPN_SERIES}
+    out, checks = {}, []
+    for code, by_year in data["CoHD_headcount"].items():
+        y = max(by_year)
+        entry = {"year": y, "unaffordable_share": round(by_year[y] / 100, 4)}
+        people = data["CoHD_unafford_n"].get(code, {}).get(y)
+        if people is not None:
+            entry["unaffordable_people"] = round(people * 1e6)
+        cost = data["CoHD_LCU"].get(code, {})
+        if cost:
+            # Convert the local-currency cost with the same prices and PPPs as your income. Check it
+            # against FPN's own current-PPP cost deflated by US inflation; where they disagree (a
+            # redenomination such as Sierra Leone's or Bulgaria's, or very high inflation) use the latter.
+            cy = max(cost)
+            p = prices.get(code)
+            current = data["CoHD_PPP"].get(code, {}).get(cy)
+            us = prices["USA"]["price_index"].get(str(cy))
+            entry["cost_year"] = cy
+            local = cost[cy] / p["price_index"][str(cy)] / p["ppp_2021"] if p and str(cy) in p["price_index"] else None
+            alt = current / us if current and us else None
+            if local and alt:
+                checks.append((code, local / alt))
+            if local and (not alt or 0.8 <= local / alt <= 1.25):
+                entry.update(cost_lcu=round(cost[cy], 4), cost_2021ppp=round(local, 4), cost_method="local")
+            elif alt:
+                entry.update(cost_2021ppp=round(alt, 4), cost_method="ppp")
+        out[code] = entry
+    world = out.get("WLD")
+    if world and "WLD" in data["CoHD_PPP"]:
+        wy = max(data["CoHD_PPP"]["WLD"])
+        world = {**world, "cost_ppp_current": data["CoHD_PPP"]["WLD"][wy], "cost_ppp_year": wy}
+    outliers = sorted((c, round(r, 2)) for c, r in checks if not 0.8 <= r <= 1.25)
+    return out, {"world": world, "income_share": HEALTHY_DIET_INCOME_SHARE,
+                 "checked": len(checks), "outliers": outliers}
+
+
 def attainment_shares(series, code, ms_over_ba, do_over_ms):
     """Nine exclusive ISCED shares from WDI's cumulative indicators (see build_education)."""
     prm, lo, up, po, st, ba, ms, do = series
@@ -789,6 +915,10 @@ def main():
 
     indicators = {ind: wdi_latest(ind, WDI_SINCE) for ind in WDI_INDICATORS}
     indicators.update({ind: wdi_latest(ind, ASPIRE_SINCE) for ind in WDI_SOCIAL_PROTECTION})
+    adults = {code: total - pop_parts["SP.POP.0014.TO"][code][1] for code, (_, total) in population.items()
+              if code in pop_parts["SP.POP.0014.TO"]}
+    findex, global_findex = build_findex(adults, economies)
+    healthy_diet, global_healthy_diet = build_healthy_diet(prices)
 
     countries = []
     for code, m in economies.items():
@@ -814,6 +944,13 @@ def main():
             entry["income"] = {k: v for k, v in income[code].items() if k not in ("population", "survey_ppp")}
         if code in education:
             entry["education"] = education[code]
+        if code in findex:
+            entry["findex"] = findex[code]
+        amount = emergency_amount(code, indicators, prices.get(code))
+        if amount:
+            entry.setdefault("findex", {})["emergency_amount"] = amount
+        if code in healthy_diet:
+            entry["healthy_diet"] = healthy_diet[code]
         entry["region"] = m.get("region", {}).get("id") or None
         entry["m49"] = m49.get(code)
         entry["iso2"] = iso2.get(code) or None
@@ -840,6 +977,12 @@ def main():
                         "social protection (ASPIRE); country classifications)",
                 "url": f"{WDI_API}/country/all/indicator/SP.POP.TOTL",
                 "home": "https://datatopics.worldbank.org/world-development-indicators/"},
+        "findex": {"name": "World Bank Global Findex database via the World Bank API (source 28): financial resilience",
+                   "url": f"{WDI_API}/country/all/indicator/fin24aN?source={FINDEX_SOURCE}",
+                   "home": "https://www.worldbank.org/en/publication/globalfindex"},
+        "fpn": {"name": "World Bank Food Prices for Nutrition (API source 88): cost and affordability of a healthy diet",
+                "url": f"{WDI_API}/sources/{FPN_SOURCE}/country/all/series/CoHD_headcount/classification/all/time/all",
+                "home": "https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition"},
         "imf": {"name": f"{IMF_EDITION}: inflation, average consumer prices (PCPIPCH)",
                 "url": f"{IMF_API}/PCPIPCH", "home": "https://www.imf.org/external/datamapper/PCPIPCH@WEO"},
         **{k: {kk: v[kk] for kk in ("name", "url", "home")} for k, v in GITHUB_SOURCES.items()},
@@ -851,6 +994,8 @@ def main():
         "world_population_year": world_pop_year,
         "income": global_income,
         "education": global_education,
+        "findex": global_findex,
+        "healthy_diet": global_healthy_diet,
         "prices": {"base_year": PPP_BASE_YEAR, "last_year": INFLATION_LAST_YEAR, "source": IMF_EDITION,
                    "max_current_inflation": MAX_CURRENT_INFLATION},
         "location": {"economies_ranked": len(ranked), "population_ranked": ranked_pop},
@@ -883,6 +1028,10 @@ def main():
     print(f"education: {e['countries_wdi']} WDI + {e['countries_barro_lee']} Barro-Lee, "
           f"{e['population_25_plus_covered'] / e['population_25_plus_world']:.1%} of adults 25+; world shares",
           e["world_shares"])
+    print("findex:", {k: (v["economies"], round(v["adults_covered"] / max(v["adults_world"], 1), 3), v["shares"])
+                      for k, v in global_findex.items()})
+    print("healthy diet:", sum("cost_2021ppp" in c.get("healthy_diet", {}) for c in countries), "economies with a cost;",
+          "world", global_healthy_diet["world"], "PPP check outliers:", global_healthy_diet["outliers"])
     print("history:", {y: h["share_below_3"] for y, h in global_income["history"].items()})
     print("urban/rural:", {c["iso3"]: list(c["income"]["by_area"]) for c in countries if "by_area" in c.get("income", {})})
     return 0

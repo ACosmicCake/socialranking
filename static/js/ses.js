@@ -62,6 +62,16 @@
                 "IT.CEL.SETS.P2": "Mobile subscriptions per 100 people",
                 "SH.XPD.CHEX.PC.CD": "Health spending per person (US$)",
             },
+            findex: {
+                emergency: {not_possible: "Not possible", very_difficult: "Possible, but very difficult",
+                            somewhat_difficult: "Possible, but somewhat difficult", not_difficult: "Possible and not difficult at all"},
+                cover_expenses: {under_2_weeks: "Less than two weeks", one_month: "About one month",
+                                 two_months: "About two months", over_2_months: "More than two months"},
+                emergency_source: {savings: "Savings", family: "Family or friends", work: "Work", borrowing: "Borrowing",
+                                   sale_of_assets: "Selling something", other: "Other"},
+                worry: {old_age: "Money for old age", business: "Money for a business", medical: "Medical costs",
+                        bills: "Monthly expenses or bills", school: "School fees", none: "None of these"},
+            },
             account_groups: {
                 sex: {F: "Women", M: "Men"},
                 income: {poor: "Poorest 40% of households", rich: "Richest 60% of households"},
@@ -332,6 +342,40 @@
             };
         }
 
+        // The least-cost healthy diet in the country (World Bank Food Prices for Nutrition) against
+        // income x. FAO and the World Bank count it unaffordable above 52% of income.
+        function healthyDiet(country, x, today) {
+            const hd = country.healthy_diet, gw = G.healthy_diet;
+            const result = {income_share_rule: gw.income_share, world: gw.world};
+            if (!hd) return result;
+            Object.assign(result, {year: hd.year, unaffordable_pct: pct(hd.unaffordable_share),
+                                   unaffordable_people: hd.unaffordable_people || null});
+            if (hd.cost_2021ppp !== undefined) {
+                Object.assign(result, {
+                    cost_year: hd.cost_year, cost_2021ppp: hd.cost_2021ppp,
+                    share_of_income: hd.cost_2021ppp / x,
+                    affordable: hd.cost_2021ppp <= gw.income_share * x,
+                });
+                if (hd.cost_lcu !== undefined) {
+                    const prices = country.prices;
+                    result.cost_local_today = hd.cost_lcu * priceLevel(prices, today.getFullYear()).level
+                        / prices.price_index[hd.cost_year];
+                }
+            }
+            return result;
+        }
+
+        // Findex's emergency amount (1/20 of GNI per person) in today's local currency.
+        function emergencyAmount(country, today) {
+            const a = country.findex && country.findex.emergency_amount;
+            if (!a) return null;
+            const prices = country.prices;
+            const scale = priceLevel(prices, today.getFullYear()).level / prices.price_index[a.year];
+            const raw = a.lcu * scale;
+            const unit = Math.pow(10, Math.max(0, Math.floor(Math.log10(raw)) - 1));
+            return {amount: Math.round(raw / unit) * unit, currency: country.currency, gni_year: a.year};
+        }
+
         // Income needed to reach the median, top 10% and top 1% of the country and the
         // world, in 2021 $ a day and (for exact answers) in the household's own terms.
         function incomeThresholds(answers, country, x, today) {
@@ -431,6 +475,7 @@
                 };
             }
             result.thresholds = incomeThresholds(answers, country, x, today);
+            result.healthy_diet = healthyDiet(country, x, today);
             if (dist && dist.history) {
                 const h = dist.history;
                 result.national_history = {
@@ -781,6 +826,44 @@
             return result;
         }
 
+        // Global Findex 2025 resilience: emergency funds (scored), how long expenses could be covered,
+        // the main source of emergency money and the biggest financial worry (context).
+        function scoreResilience(answers, country) {
+            const out = {};
+            const fx = country.findex || {};
+            const ordered = (group, answer) => {
+                const w = G.findex[group];
+                const idx = w.keys.indexOf(answer);
+                const r = {key: answer, label: L.findex[group][answer], world_shares: w.shares.map(pct),
+                           world_pct: pct(midrank(w.shares, idx)), share_below: midrank(w.shares, idx),
+                           world_economies: w.economies, labels: w.keys.map(k => L.findex[group][k])};
+                if (fx[group]) {
+                    Object.assign(r, {country_shares: fx[group].shares.map(pct), year: fx[group].year,
+                                      national_pct: pct(midrank(fx[group].shares, idx))});
+                }
+                return r;
+            };
+            const choice = (group, answer) => {
+                const w = G.findex[group];
+                const idx = w.keys.indexOf(answer);
+                const r = {key: answer, label: L.findex[group][answer], labels: w.keys.map(k => L.findex[group][k]),
+                           world_shares: w.shares.map(pct), world_economies: w.economies};
+                if (idx >= 0) r.world_same = pct(w.shares[idx]);
+                if (fx[group]) {
+                    Object.assign(r, {country_shares: fx[group].shares.map(pct), year: fx[group].year});
+                    if (idx >= 0) r.country_same = pct(fx[group].shares[idx]);
+                }
+                return r;
+            };
+            if (answers.emergency_funds) out.emergency = ordered("emergency", answers.emergency_funds);
+            if (answers.cover_expenses) out.cover_expenses = ordered("cover_expenses", answers.cover_expenses);
+            if (answers.emergency_source && answers.emergency_funds && answers.emergency_funds !== "not_possible") {
+                out.emergency_source = choice("emergency_source", answers.emergency_source);
+            }
+            if (answers.worry) out.worry = choice("worry", answers.worry);
+            return out;
+        }
+
         function scoreSecurity(answers, country, incomeNationalPct) {
             const result = {};
             const ranks = [];
@@ -815,6 +898,8 @@
                 if (cs) result.fies_national_pct = pct(foodRank(cs, level));
             }
             result.fies_answered = fies.filter(a => a !== null && a !== undefined).length;
+            Object.assign(result, scoreResilience(answers, country));
+            if (result.emergency) ranks.push(result.emergency.share_below);
             for (const key of ["account", "saved"]) {
                 if (answers[key]) result[key] = answers[key] === "yes";
             }
@@ -945,6 +1030,7 @@
             country: iso3 => byIso3[iso3],
             nationalCdf, nationalQuantile, globalCdf, globalQuantile, gridCdf, groupCdf,
             exactIncomeAvailable, parseAnswers, score, rankIncome, toPppPerDay, ladderRung, ValidationError,
+            emergencyAmount: (iso3, today) => (byIso3[iso3] ? emergencyAmount(byIso3[iso3], today || new Date()) : null),
         };
     }
 

@@ -110,6 +110,17 @@
         household members earn. For an exact answer we therefore also show the world and national ranks you would have at 20% less and 20% more income.
         Where the distribution is dense (around the world median) the range is wide; near the top it is narrow.</p>
 
+    <h3 class="h5">Can you afford a healthy diet?</h3>
+    <p>The World Bank's Food Prices for Nutrition data {{ cite("fpn") }} give, for {{ coverage.healthy_diet }} economies, the cost of the
+        cheapest diet that meets national dietary guidelines, from retail prices, and the share of people who can't afford it
+        (world, {{ g.healthy_diet.world.year }}: {{ (g.healthy_diet.world.unaffordable_share * 100) | pct }},
+        {{ g.healthy_diet.world.unaffordable_people | people }} people). Following the FAO and World Bank method used in SOFI
+        {{ cite("sofi_2026") }}, a diet is unaffordable when it costs more than {{ (g.healthy_diet.income_share * 100) | pct(0) }}
+        of income, the average share of income that people in low-income countries spend on food. We convert the local-currency cost with the same price index and PPPs
+        as your income, so the two are directly comparable. Where that disagrees with FPN's own PPP cost by more than 25% (a currency
+        redenomination or very high inflation: {{ g.healthy_diet.outliers | map(attribute=0) | join(", ") }}), we use FPN's PPP cost
+        deflated by US inflation instead.</p>
+
     <h3 class="h5">What it takes to move up</h3>
     <p>We invert the distributions to give the income at the median, the top 10% and the top 1% of your country and of the world, in
         2021 international dollars per person per day. For an exact answer they are converted back into your currency at today's
@@ -249,8 +260,18 @@
         severe and of moderate-or-severe food insecurity for the world and each country {{ cite("fao_wdi") }}
         (world, {{ g.aggregates.WLD.wdi["SN.ITK.MSFI.ZS"][0] }}: {{ g.aggregates.WLD.wdi["SN.ITK.MSFI.ZS"][1] | pct }} moderate or severe,
         {{ g.aggregates.WLD.wdi["SN.ITK.SVFI.ZS"][1] | pct }} severe; SOFI's latest headline is {{ (food.moderate_or_severe_share * 100) | pct }}
-        for {{ food.year }} {{ cite(food.cite) }}). Your financial-security score is the average of your Gallup and FIES mid-ranks
+        for {{ food.year }} {{ cite(food.cite) }}). Your financial-security score is the average of your Gallup, FIES and Findex emergency-money mid-ranks
         (whichever you answered).</p>
+    <p><strong>Financial resilience</strong> uses four Global Findex questions {{ cite("findex_2025") }}. Findex asks whether
+        people could raise one-twentieth of their country's gross national income per person within 30 days and how difficult it
+        would be; we show that amount in your currency (GNI per person from WDI, moved to today's prices, and only where its currency
+        units match our price data). Your answer is ranked against the shares of adults giving each answer in your country and in
+        the world ({{ g.findex.emergency.economies }} economies, {{ (g.findex.emergency.adults_covered / g.findex.emergency.adults_world * 100) | pct(0) }}
+        of the world's adults; the world share is our average weighted by adult population), and this rank is the third part of
+        your financial-security score. As context we also compare how long you could cover expenses after losing your main
+        income (asked in {{ g.findex.cover_expenses.economies }} mostly low- and middle-income economies), the main source of
+        emergency money, and your biggest financial worry. Findex reports the latest wave per economy (2024 for most, 2021 for many
+        high-income economies).</p>
     <p>We also show <strong>account ownership</strong> for the world and your country (Global Findex via WDI), including among
         people like you: your sex, your age group (15-24 or 25+), your education (primary or less, or secondary or more), and your
         household's income group (poorest 40% or richest 60%, from your national income rank). As context only, we also show
@@ -312,6 +333,8 @@
         <li>{{ coverage.education }} with national education data; {{ coverage.gdp }} with GDP per person.</li>
         <li>{{ coverage.wdi_indicators }} further World Development Indicators per country (services, food security, work, health
             and context), latest value since {{ g.wdi_since }}.</li>
+        <li>{{ coverage.findex }} with Global Findex financial-resilience data; {{ coverage.healthy_diet }} with the cost of a
+            healthy diet.</li>
         <li>{{ coverage.social_protection }} with survey-based social protection coverage (ASPIRE), latest value since {{ g.aspire_since }}.</li>
         <li>World population {{ g.world_population | people }} ({{ g.world_population_year }}).</li>
     </ul>

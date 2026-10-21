@@ -134,3 +134,26 @@ def test_exact_income_coverage():
 def test_location_shares():
     total = sum(c.get("gdp_pc_population_share_same", 0) for c in data.countries())
     assert math.isclose(total, 1, abs_tol=1e-3)
+
+
+def test_findex_resilience_shares():
+    findex = data.global_data()["findex"]
+    for group, w in findex.items():
+        assert math.isclose(sum(w["shares"]), 1, abs_tol=1e-3), group
+        assert len(w["shares"]) == len(w["keys"])
+    # Emergency funds cover nearly all adults; the coverage question is asked in developing economies only.
+    assert findex["emergency"]["adults_covered"] / findex["emergency"]["adults_world"] > 0.9
+    assert findex["cover_expenses"]["economies"] > 80
+    for c in data.countries():
+        for group, v in c.get("findex", {}).items():
+            if group != "emergency_amount":
+                assert math.isclose(sum(v["shares"]), 1, abs_tol=1e-3), (c["iso3"], group)
+
+
+def test_healthy_diet_costs():
+    hd = data.global_data()["healthy_diet"]
+    assert 0.2 < hd["world"]["unaffordable_share"] < 0.5
+    assert hd["checked"] > 120 and len(hd["outliers"]) <= 5
+    costs = [c["healthy_diet"]["cost_2021ppp"] for c in data.countries() if "cost_2021ppp" in c.get("healthy_diet", {})]
+    assert len(costs) > 140
+    assert all(1 < x < 10 for x in costs)

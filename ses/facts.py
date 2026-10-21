@@ -70,6 +70,12 @@ CITATIONS = {
         "year": 2025,
         "url": "https://www.who.int/publications/i/item/9789240117808",
     },
+    "fpn": {
+        "title": "Food Prices for Nutrition DataHub: cost and affordability of a healthy diet (FPN 5.0)",
+        "publisher": "World Bank",
+        "year": 2026,
+        "url": "https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition",
+    },
     "aspire": {
         "title": "ASPIRE: The Atlas of Social Protection - Indicators of Resilience and Equity",
         "publisher": "World Bank",
