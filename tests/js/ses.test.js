@@ -431,3 +431,15 @@ test("Human Capital Index components and the index for your sex", () => {
     assert.ok(lays.value > 0 && lays.value < eyrs.value && eyrs.value <= 14);
     assert.ok(run(FULL).location.glance.some(g => g.code === "HD.HCI.OVRL"));
 });
+
+test("the same living standard in another currency", () => {
+    const inc = run(FULL).income;
+    // Back in Vietnam, the equivalent is the household's own income.
+    const home = SES.equivalentIncome("VNM", inc.ppp_per_day, 4, "month", TODAY);
+    close(home.amount, 20e6, 1);
+    close(home.national_pct, inc.national_pct, 0.05);
+    const us = SES.equivalentIncome("USA", inc.ppp_per_day, 4, "month", TODAY);
+    assert.equal(us.currency, "USD");
+    assert.ok(us.amount > 1000 && us.amount < 20000 && us.national_pct < inc.national_pct);
+    assert.equal(SES.equivalentIncome("ZWE", inc.ppp_per_day, 4, "month", TODAY), null);  // no reliable prices
+});

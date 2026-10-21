@@ -1120,6 +1120,19 @@
             return result;
         }
 
+        // The household income in another economy's currency, at today's prices, that gives the same
+        // living standard (2021 PPP $ per person per day), and where it ranks there.
+        function equivalentIncome(country, pppPerDay, householdSize, period, today) {
+            if (!exactIncomeAvailable(country)) return null;
+            const level = priceLevel(country.prices, today.getFullYear()).level;
+            const perDay = pppPerDay * country.prices.ppp_2021 * level;
+            return {
+                iso3: country.iso3, name: country.name, currency: country.currency,
+                amount: perDay * householdSize * 365 / (period === "year" ? 1 : 12),
+                national_pct: country.income ? pct(nationalCdf(country.income, pppPerDay)) : null,
+            };
+        }
+
         // Quick income-only ranking, for the what-if simulator.
         function rankIncome(country, x) {
             return {
@@ -1133,6 +1146,8 @@
             country: iso3 => byIso3[iso3],
             nationalCdf, nationalQuantile, globalCdf, globalQuantile, gridCdf, groupCdf,
             exactIncomeAvailable, parseAnswers, score, rankIncome, toPppPerDay, ladderRung, ValidationError,
+            equivalentIncome: (iso3, pppPerDay, householdSize, period, today) =>
+                (byIso3[iso3] ? equivalentIncome(byIso3[iso3], pppPerDay, householdSize || 1, period || "month", today || new Date()) : null),
             emergencyAmount: (iso3, today) => (byIso3[iso3] ? emergencyAmount(byIso3[iso3], today || new Date()) : null),
         };
     }
