@@ -517,7 +517,25 @@
     </ul></details>
     <p class="small text-secondary">${tr(
         `"Safely managed" water and sanitation also require the water to be free from contamination and waste to be safely treated, which you can't check yourself, so we classify your answers approximately. Country, region and urban/rural figures`,
-        `Nước và vệ sinh "được quản lý an toàn" còn đòi hỏi nước không bị nhiễm bẩn và chất thải được xử lý an toàn, điều bạn không tự kiểm tra được, nên câu trả lời được phân loại gần đúng. Số liệu quốc gia, khu vực, thành thị/nông thôn`)} ${cite("wdi")}, ${tr(`mostly for ${refYear}.`, `phần lớn cho năm ${refYear}.`)}</p>`));
+        `Nước và vệ sinh "được quản lý an toàn" còn đòi hỏi nước không bị nhiễm bẩn và chất thải được xử lý an toàn, điều bạn không tự kiểm tra được, nên câu trả lời được phân loại gần đúng. Số liệu quốc gia, khu vực, thành thị/nông thôn`)} ${cite("wdi")}, ${tr(`mostly for ${refYear}.`, `phần lớn cho năm ${refYear}.`)}</p>
+    ${phoneHtml()}`));
+
+    // ---------------------------------------------------------------- mobile phone (Findex connectivity)
+    function phoneHtml() {
+        const ph = liv.phone;
+        if (!ph) return "";
+        const rows = ph.labels.map((label, i) => `<tr class="${label === ph.label ? "table-active" : ""}"><td>${esc(label)}${label === ph.label ? ` &larr; ${tr("you", "bạn")}` : ""}</td>
+            <td>${pct(ph.world_shares[i])}</td><td>${ph.country_shares ? pct(ph.country_shares[i]) : "-"}</td></tr>`);
+        const better = ph.key === "none" ? "" : tr(`You're better connected than about <strong>${pct(ph.world_pct)}</strong> of adults worldwide${ph.national_pct !== undefined ? ` and ${pct(ph.national_pct)} in ${cname}` : ""} (counting half of those with the same kind of phone).`,
+            `Bạn được kết nối tốt hơn khoảng <strong>${pct(ph.world_pct)}</strong> người trưởng thành trên thế giới${ph.national_pct !== undefined ? ` và ${pct(ph.national_pct)} ở ${cname}` : ""} (tính một nửa số người có cùng loại điện thoại).`);
+        return `<h3 class="h5 mt-4">${tr("Mobile phone", "Điện thoại di động")}</h3>
+            <div class="row g-4"><div class="col-lg-6">
+            <p class="small">${tr("Your main phone", "Điện thoại chính của bạn")}: <strong>${esc(ph.label.toLowerCase())}</strong>. ${better}</p>
+            ${table([tr("Main phone", "Điện thoại chính"), tr("World", "Thế giới"), cname], rows)}
+            <p class="small text-secondary">${tr(`Adults 15 and over in the ${ph.world_economies} economies in the Global Findex 2025 connectivity module${ph.year ? ` (${cname}: ${ph.year})` : ""}, weighted by adult population. Context only; not scored.`,
+                `Người từ 15 tuổi ở ${ph.world_economies} nền kinh tế trong phần kết nối của Global Findex 2025${ph.year ? ` (${cname}: ${ph.year})` : ""}, gia quyền theo dân số trưởng thành. Chỉ để tham khảo; không tính điểm.`)} ${cite("findex_2025")}</p>
+            </div></div>`;
+    }
 
     // ---------------------------------------------------------------- MPI
     if (r.mpi.available) {
@@ -964,6 +982,7 @@
         if (work.status) add("work", `status: ${work.status}`, "", work.status_pct ?? work.global_pct, work.status_national_pct ?? work.national_pct);
         if (work.occupation) add("work", `occupation: ${work.occupation.key} (skill level ${work.occupation.skill_level ?? "-"})`, "", work.occupation.world_pct, work.occupation.national_pct);
         if (liv.global_pct !== undefined) add("living", "living standards", "", liv.global_pct, liv.national_pct);
+        if (liv.phone) add("living", `mobile phone: ${liv.phone.key}`, "", liv.phone.world_pct, liv.phone.national_pct);
         if (r.mpi.available) add("living", "MPI deprivation score (%)", r.mpi.score);
         if (sec.gallup_group) add("security", `Gallup vulnerability: ${sec.gallup_group}`, "", sec.gallup_pct);
         if (sec.fies_level) add("security", `FIES: ${sec.fies_level} (${sec.fies_raw}/8)`, "", sec.fies_pct, sec.fies_national_pct);

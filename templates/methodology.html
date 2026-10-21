@@ -243,6 +243,12 @@
     <p class="small text-secondary">Limitations: "safely managed" water also requires water free from contamination, and sanitation
         requires safe treatment of waste, neither of which a respondent can verify. The health item simplifies SDG 3.8.2 and has no
         country breakdown.</p>
+    <p>As context, not scored, we compare your <strong>mobile phone</strong> with the Global Findex 2025 connectivity questions
+        {{ cite("findex_2025") }}: the share of adults who own a mobile phone, and whose main phone is a smartphone, split into no
+        phone, a basic phone and a smartphone. The world shares pool {{ g.findex.phone.economies }} economies with
+        {{ (g.findex.phone.adults_covered / g.findex.phone.adults_world * 100) | pct(0) }} of the world's adults, weighted by adult
+        population: {{ (g.findex.phone.shares[0] * 100) | pct(0) }} have no phone, {{ (g.findex.phone.shares[1] * 100) | pct(0) }}
+        a basic phone and {{ (g.findex.phone.shares[2] * 100) | pct(0) }} a smartphone.</p>
 
     <h2 id="mpi">7. Multidimensional poverty</h2>
     <p>The Global Multidimensional Poverty Index {{ cite("ophi_mpi") }} counts ten household deprivations. Each of three dimensions

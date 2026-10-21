@@ -2993,6 +2993,25 @@
    "economies": 98,
    "adults_covered": 4829734193,
    "adults_world": 6210117111
+  },
+  "phone": {
+   "keys": [
+    "none",
+    "basic",
+    "smartphone"
+   ],
+   "indicators": [
+    "con1",
+    "con9a"
+   ],
+   "shares": [
+    0.1528,
+    0.1815,
+    0.6657
+   ],
+   "economies": 139,
+   "adults_covered": 5896709961,
+   "adults_world": 6210117111
   }
  },
  "healthy_diet": {

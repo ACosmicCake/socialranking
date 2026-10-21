@@ -228,6 +228,12 @@ FINDEX_ITEMS = {
     "worry": [("old_age", "fin45a"), ("business", "fin45b"), ("medical", "fin45c"), ("bills", "fin45d"),
               ("school", "fin45e")],
 }
+# Phone ownership from the Findex 2025 connectivity module (% of adults): owns a mobile
+# phone (con1) and main phone is a smartphone (con9a), split into none/basic/smartphone.
+FINDEX_DERIVED = {
+    "phone": (["con1", "con9a"], ["none", "basic", "smartphone"],
+              lambda own, smart: [100 - own, max(own - smart, 0.0), smart]),
+}
 # Occupations: ISCO-08 major groups from the World Bank's Global Jobs Indicators
 # Database (JOIN, API source 86), harmonised household and labour-force surveys,
 # as shares of employed people aged 15-64; also by sex and urban/rural. Skill
@@ -659,23 +665,25 @@ def wdi_by_year(indicator, since):
 def build_findex(adults, economies):
     """Findex resilience answers per economy (latest complete year) and adult-weighted world shares."""
     raw = {}
-    for group, items in FINDEX_ITEMS.items():
-        for _, ind in items:
+    groups = {g: ([ind for _, ind in items], [k for k, _ in items], lambda *v: list(v))
+              for g, items in FINDEX_ITEMS.items()}
+    groups.update(FINDEX_DERIVED)
+    for inds, _, _ in groups.values():
+        for ind in inds:
             rows = wdi(ind, f"findex_{ind}.json", source=FINDEX_SOURCE, date=f"{FINDEX_SINCE}:{INFLATION_LAST_YEAR}")
             for r in rows:
                 raw.setdefault(ind, {}).setdefault(r["countryiso3code"] or r["country"]["id"], {})[int(r["date"])] = \
                     float(r["value"])
     out, world = {}, {}
-    for group, items in FINDEX_ITEMS.items():
-        inds = [ind for _, ind in items]
-        acc, weight, n = np.zeros(len(items)), 0.0, 0
+    for group, (inds, keys, split) in groups.items():
+        acc, weight, n = np.zeros(len(keys)), 0.0, 0
         codes = set().union(*(raw.get(ind, {}).keys() for ind in inds)) & set(economies)
         for code in codes:
             years = [y for y in raw[inds[0]].get(code, {})
                      if all(y in raw.get(ind, {}).get(code, {}) for ind in inds)]
             # Keep the latest year with a usable answer set (some 2024 phone surveys report zeros only).
             for y in sorted(years, reverse=True):
-                vals = np.array([raw[ind][code][y] for ind in inds])
+                vals = np.array(split(*(raw[ind][code][y] for ind in inds)))
                 if vals.sum() > 50:
                     break
             else:
@@ -686,7 +694,7 @@ def build_findex(adults, economies):
                 acc += shares * adults[code]
                 weight += adults[code]
                 n += 1
-        world[group] = {"keys": [k for k, _ in items], "indicators": inds,
+        world[group] = {"keys": keys, "indicators": inds,
                         "shares": [round(float(v), 4) for v in acc / weight], "economies": n,
                         "adults_covered": int(weight), "adults_world": int(adults.get("WLD", 0))}
     return out, world
