@@ -177,9 +177,8 @@
     if (sec.account !== undefined) bank.push(sec.account
         ? `You have an account, as do ${pct(findex.account_share * 100, 0)} of adults worldwide; ${people(findex.unbanked_adults)} adults have none.`
         : `You don't have an account. Neither do ${people(findex.unbanked_adults)} adults (${pct(100 - findex.account_share * 100, 0)}).`);
-    if (sec.saved !== undefined) bank.push(sec.saved
-        ? `You saved money in the past year, as did ${pct(findex.saved_share * 100, 0)} of adults.`
-        : `You didn't save money in the past year; ${pct(100 - findex.saved_share * 100, 0)} of adults also didn't.`);
+    if (sec.saved !== undefined) bank.push(`${sec.saved ? "You saved money in the past year." : "You didn't save money in the past year."}
+        For comparison, ${pct(findex.saved_in_account_share_lmic * 100, 0)} of adults in low- and middle-income economies saved in a financial account in 2024.`);
     html.push(`<hr class="my-5"><h2 id="security" class="h3">Financial security</h2>
     <div class="row g-4">
         <div class="col-md-6"><h3 class="h5">Basic needs</h3>
@@ -187,7 +186,7 @@
                 ${pct(sec.gallup_share_pct, 0)} of the world's adults are in this group. You're more secure than about
                 <strong>${pct(sec.global_pct)}</strong> of adults.
                 ${sec.gallup_group === "high" ? `You're one of the roughly ${people(D.facts.gallup_people_high)} people Gallup found struggling with no safety net.` : ""}
-                ${cite("gallup_2020")}</p>` : `<p class="text-secondary">Not answered.</p>`}
+                ${cite("gallup_2020")} ${cite("upi_gallup_2020")}</p>` : `<p class="text-secondary">Not answered.</p>`}
         </div>
         <div class="col-md-6"><h3 class="h5">Food security</h3>${foodHtml}</div>
         <div class="col-md-6"><h3 class="h5">Banking and saving</h3>

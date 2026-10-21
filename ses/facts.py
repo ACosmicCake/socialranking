@@ -76,6 +76,12 @@ CITATIONS = {
         "year": 2020,
         "url": "https://news.gallup.com/poll/312401/750-million-struggling-meet-basic-needs-no-safety-net.aspx",
     },
+    "upi_gallup_2020": {
+        "title": "Gallup Basic Needs Vulnerability Index: 95% of world's 'highly vulnerable' live in undeveloped nations",
+        "publisher": "UPI, reporting Gallup's index (47% low, 39% moderate vulnerability)",
+        "year": 2020,
+        "url": "https://www.upi.com/Top_News/World-News/2020/07/20/Index-95-of-worlds-highly-vulnerable-live-in-undeveloped-nations/6511595259542",
+    },
     "fies": {
         "title": "The Food Insecurity Experience Scale (FIES) survey module",
         "publisher": "FAO, Voices of the Hungry",
@@ -210,7 +216,9 @@ GALLUP_PEOPLE_HIGH = 750e6
 FINDEX = {
     "account_share": 0.79,
     "unbanked_adults": 1.3e9,
-    "saved_share": 0.55,
+    # Low- and middle-income economies only: Findex does not headline a
+    # worldwide "saved any money" share for 2024.
+    "saved_in_account_share_lmic": 0.40,
     "year": 2024,  # survey fieldwork year of the 2025 edition
     "cite": "findex_2025",
 }
@@ -225,10 +233,12 @@ FOOD_INSECURITY = {
 }
 
 # UBS global wealth pyramid, adults, year-end 2025 (net worth in US$).
+# UBS's release says the two lowest bands each hold "just over 41%" of adults
+# and 1.5% hold more than $1 million; the $100k-$1m band is the remainder.
 WEALTH_PYRAMID = [
-    {"key": "under_10k", "label": "Less than $10,000", "low": 0, "high": 10_000, "share": 0.421},
-    {"key": "10k_100k", "label": "$10,000 to $100,000", "low": 10_000, "high": 100_000, "share": 0.411},
-    {"key": "100k_1m", "label": "$100,000 to $1 million", "low": 100_000, "high": 1_000_000, "share": 0.153},
+    {"key": "under_10k", "label": "Less than $10,000", "low": 0, "high": 10_000, "share": 0.41},
+    {"key": "10k_100k", "label": "$10,000 to $100,000", "low": 10_000, "high": 100_000, "share": 0.41},
+    {"key": "100k_1m", "label": "$100,000 to $1 million", "low": 100_000, "high": 1_000_000, "share": 0.165},
     {"key": "over_1m", "label": "More than $1 million", "low": 1_000_000, "high": None, "share": 0.015},
 ]
 WEALTH_YEAR = 2025
