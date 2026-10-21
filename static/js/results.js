@@ -142,6 +142,17 @@
                 <p class="mb-0 small text-secondary">${tr(
                     `The average of the ${r.dimensions.length} world scores above, weighted equally. It summarises your position but isn't itself a percentile: no dataset records all of these dimensions for the same people. See the <a href="${assetBase}methodology.html#index">methodology</a>.`,
                     `Trung bình của ${r.dimensions.length} điểm thế giới ở trên, trọng số bằng nhau. Nó tóm tắt vị trí của bạn nhưng bản thân không phải là một bách phân vị: không có bộ dữ liệu nào ghi nhận tất cả các khía cạnh này cho cùng một người. Xem <a href="${base}methodology.html#index">phương pháp</a>.`)}</p>
+                ${(() => {
+                    const names = {income: tr("income", "thu nhập"), education: tr("education", "học vấn"), work: tr("work", "công việc"),
+                                   living: tr("living standards", "mức sống"), security: tr("financial security", "an ninh tài chính"),
+                                   wealth: tr("wealth", "tài sản")};
+                    const have = new Set(r.dimensions.map(d => d.key));
+                    const missing = Object.keys(names).filter(k => !have.has(k) && !(k === "work" && work.status && !work.employed));
+                    if (!missing.length) return "";
+                    return `<p class="small mt-2 mb-0">${tr(`Not included yet: ${missing.map(k => names[k]).join(", ")}.`,
+                        `Chưa tính: ${missing.map(k => names[k]).join(", ")}.`)}
+                        <a href="${base}quiz.html" class="prefill-quiz">${tr("Add answers", "Thêm câu trả lời")}</a></p>`;
+                })()}
             </div></div>
         </div>
         <div class="col-lg-5">
@@ -681,9 +692,9 @@
     html.length = 0;
 
     // "Change my answers" opens the quiz with these answers filled in (saved only in this browser).
-    document.getElementById("edit-answers").addEventListener("click", () => {
+    root.querySelectorAll("#edit-answers, .prefill-quiz").forEach(link => link.addEventListener("click", () => {
         try { localStorage.setItem("socialranking-quiz-v1", JSON.stringify({answers: form, step: 0, furthest: 99})); } catch (e) { /* no storage */ }
-    });
+    }));
 
     // Highlight the section being read in the section bar, and offer a way back to the top.
     const navLinks = Array.from(root.querySelectorAll(".result-nav a"));
