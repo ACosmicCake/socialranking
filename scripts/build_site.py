@@ -211,7 +211,7 @@ def page_context(lang="en"):
     options = [
         {"iso3": c["iso3"], "name": names[c["iso3"]], "currency": c.get("currency") or "",
          "currency_name": c.get("currency_name") or "", "exact": exact_income_available(c),
-         "welfare": c.get("income", {}).get("welfare_type", "")}
+         "welfare": c.get("income", {}).get("welfare_type", ""), "iso2": c.get("iso2") or ""}
         for c in countries
     ]
     options.sort(key=lambda c: c["name"].casefold())

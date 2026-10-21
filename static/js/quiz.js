@@ -216,9 +216,36 @@
         window.location.href = `${form.getAttribute("action")}#${params.toString()}`;
     });
 
+    // Country search: filter the list as you type, and suggest the country of the browser's locale.
+    const filter = document.getElementById("country-filter");
+    const allOptions = Array.from(country.options).slice(1);
+    const norm = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    filter.addEventListener("input", () => {
+        const q = norm(filter.value.trim());
+        allOptions.forEach(o => { o.hidden = Boolean(q) && !norm(o.textContent).includes(q) && o.value.toLowerCase() !== q; });
+        const matches = allOptions.filter(o => !o.hidden);
+        if (matches.length === 1 && country.value !== matches[0].value) {
+            country.value = matches[0].value;
+            country.dispatchEvent(new Event("change", {bubbles: true}));
+        }
+    });
+    const suggest = document.getElementById("country-suggest");
+    const region = (navigator.languages || [navigator.language || ""]).map(l => (l.split("-")[1] || "").toUpperCase()).find(Boolean);
+    const guess = region && allOptions.find(o => o.dataset.iso2 === region);
+    function updateSuggest() {
+        suggest.hidden = !guess || country.value === guess.value;
+        if (guess) suggest.textContent = suggest.dataset.template.replace("{country}", guess.textContent);
+    }
+    suggest.addEventListener("click", () => {
+        country.value = guess.value;
+        country.dispatchEvent(new Event("change", {bubbles: true}));
+    });
+    country.addEventListener("change", updateSuggest);
+
     const resumeAt = restore();
     if (resumeAt !== false) document.getElementById("restored").hidden = false;
     updateCountry();
     updateConditional();
+    updateSuggest();
     show(resumeAt || 0);
 })();

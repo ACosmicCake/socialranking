@@ -8,13 +8,17 @@
     {% if q.stem %}<p class="fw-semibold mb-2">{{ q.stem }}</p>{% endif %}
     {% if q.type == "country" %}
         <label class="form-label fs-5" for="country">{{ q.text }}{% if q.required %} <span class="badge req-badge align-middle">{{ _("Required") }}</span>{% endif %}</label>
+        <input type="search" id="country-filter" class="form-control mb-2" autocomplete="off"
+               placeholder="{{ _('Type to search the list') }}" aria-label="{{ _('Search countries') }}">
         <select name="country" id="country" class="form-select form-select-lg" required>
             <option value="" disabled selected>{{ _("Choose your country...") }}</option>
             {% for c in country_options %}
-            <option value="{{ c.iso3 }}" data-currency="{{ c.currency }}" data-currency-name="{{ c.currency_name }}"
+            <option value="{{ c.iso3 }}" data-iso2="{{ c.iso2 }}" data-currency="{{ c.currency }}" data-currency-name="{{ c.currency_name }}"
                     data-exact="{{ 'yes' if c.exact else 'no' }}" data-welfare="{{ c.welfare }}">{{ c.name }}</option>
             {% endfor %}
         </select>
+        <button type="button" class="btn btn-sm btn-outline-info mt-2" id="country-suggest" hidden
+                data-template="{{ _('Use {country}?') }}"></button>
     {% elif q.type == "number" %}
         <label class="form-label fs-5" for="{{ q.id }}">{{ q.text }}{% if q.required %} <span class="badge req-badge align-middle">{{ _("Required") }}</span>{% endif %}</label>
         {% if q.id == "income_amount" %}
