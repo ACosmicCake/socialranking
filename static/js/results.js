@@ -708,9 +708,16 @@
     const spiHtml = spi ? `<p class="small">${tr(
         `<strong>How reliable are ${cname}'s numbers?</strong> Its statistical system scores ${fixed(spi[1], 0)} out of 100 on the World Bank's Statistical Performance Indicators (${spi[0]}), against a median of ${fixed(spiAll[Math.floor(spiAll.length / 2)], 0)} across ${spiAll.length} economies. Lower scores generally mean a weaker statistical system, with fewer or older surveys, so treat national comparisons with more caution.`,
         `<strong>Số liệu của ${cname} đáng tin đến đâu?</strong> Hệ thống thống kê của nước này đạt ${fixed(spi[1], 0)}/100 theo Chỉ số Hiệu quả Thống kê của Ngân hàng Thế giới (${spi[0]}), so với trung vị ${fixed(spiAll[Math.floor(spiAll.length / 2)], 0)} của ${spiAll.length} nền kinh tế. Điểm thấp hơn thường nghĩa là hệ thống thống kê yếu hơn, với ít khảo sát hơn hoặc khảo sát cũ hơn, nên hãy thận trọng hơn với các so sánh trong nước.`)} ${cite("wdi")}</p>` : "";
+    // Prices: the IMF's inflation rate for this year and the rise since 2021.
+    const pr = country.prices;
+    const lastYear = pr && Math.max(...Object.keys(pr.price_index).map(Number));
+    const priceHtml = pr && pr.current_inflation !== undefined ? `<p class="small">${tr(
+        `<strong>Prices:</strong> consumer prices in ${cname} are rising about ${pct(pr.current_inflation * 100)} a year (IMF, ${lastYear}) and are ${pct((pr.price_index[lastYear] - 1) * 100, 0)} higher than in 2021. An income that doesn't grow loses about ${pct(100 * (1 - 1 / (1 + pr.current_inflation)))} of its buying power a year.`,
+        `<strong>Giá cả:</strong> giá tiêu dùng ở ${cname} đang tăng khoảng ${pct(pr.current_inflation * 100)} mỗi năm (IMF, ${lastYear}) và cao hơn ${pct((pr.price_index[lastYear] - 1) * 100, 0)} so với năm 2021. Một khoản thu nhập không tăng sẽ mất khoảng ${pct(100 * (1 - 1 / (1 + pr.current_inflation)))} sức mua mỗi năm.`)} ${cite("imf_weo")}</p>` : "";
     html.push(section("country", tr(`${cname} at a glance`, `Tổng quan về ${cname}`), `
     ${typicalHtml}
     ${spiHtml}
+    ${priceHtml}
     <p>${loc.income_group ? tr(`The World Bank classifies ${cname} as <strong>${esc(lower(loc.income_group))}</strong>. `,
                                `Ngân hàng Thế giới xếp ${cname} vào nhóm <strong>${esc(loc.income_group.toLowerCase())}</strong>. `) : ""}
         ${loc.gdp_per_capita_usd !== undefined ? tr(`GDP per person was ${money(loc.gdp_per_capita_usd, 0)} in ${loc.gdp_year} (market exchange rates); ${pct(loc.share_in_poorer_countries_pct)} of the world lives in countries with a lower GDP per person.`,
