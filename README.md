@@ -211,7 +211,7 @@ python -m pytest                          # also runs the Node tests if Node.js 
 node --test tests/js/ses.test.js          # Node tests on their own (build the site first)
 ```
 
-An optional browser walkthrough builds the site with the Pages base path and drives the quiz and results in Chromium
+A browser walkthrough (also run by the "Browser walkthrough" GitHub workflow on every push and pull request) builds the site with the Pages base path and drives the quiz and results in Chromium
 (desktop, phone and Vietnamese), failing on JavaScript errors, missing sections, horizontal scrolling or broken downloads:
 
 ```bash

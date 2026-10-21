@@ -1,0 +1,43 @@
+# Browser walkthrough of the built site (tests/e2e/walkthrough.py): quiz and results in
+# Chromium at desktop and phone widths, in English and Vietnamese. Reported as its own
+# check; it doesn't gate the Pages deploy.
+name: Browser walkthrough
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  walkthrough:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt playwright==1.47.0
+          python -m playwright install --with-deps chromium
+
+      - name: Run the walkthrough
+        run: python tests/e2e/walkthrough.py screenshots
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: walkthrough-screenshots
+          path: screenshots
+          if-no-files-found: ignore
