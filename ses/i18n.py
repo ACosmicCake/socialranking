@@ -423,6 +423,7 @@ LABELS = {
         "income": {"poor": "40% hộ nghèo nhất", "rich": "60% hộ khá giả nhất"},
         "age": {"young": "Thanh niên (15-24 tuổi)", "older": "Người từ 25 tuổi"},
         "education": {"low": "Học vấn tiểu học trở xuống", "high": "Học vấn trung học trở lên"},
+        "area": {"urban": "Người ở thành thị", "rural": "Người ở nông thôn"},
     },
     "no_cooking": "Không nấu ăn ở nhà",
     "errors": {

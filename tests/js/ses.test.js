@@ -597,3 +597,10 @@ test("country glance compares with the income group", () => {
     const hci = loc.glance.find(g => g.code === "HD.HCI.OVRL");
     assert.ok(hci.group_estimated && hci.group > 0.3 && hci.group < 0.8);
 });
+
+test("account ownership among rural or urban adults", () => {
+    const groups = run({...FULL, area: "rural"}).security.account_groups;
+    const rural = groups.find(g => g.label === "Rural adults");
+    assert.ok(rural && rural.world > 60 && rural.world < 90 && rural.country > 40 && rural.country < 95);
+    assert.equal(run(FULL).security.account_groups.find(g => g.label === "Rural adults"), undefined);
+});
