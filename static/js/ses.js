@@ -81,6 +81,12 @@
                 "SE.LPV.PRIM": "10-year-olds who can't read a simple text",
                 "IT.CEL.SETS.P2": "Mobile subscriptions per 100 people",
                 "SH.XPD.CHEX.PC.CD": "Health spending per person (US$)",
+                "SL.UEM.NEET.ZS": "Young people (15-24) not in work, education or training",
+                "SL.TLF.CACT.FE.ZS": "Women in the labour force (share of women 15+)",
+                "SG.GEN.PARL.ZS": "Seats in parliament held by women",
+                "SH.STA.MMRT": "Maternal deaths per 100,000 live births",
+                "SP.DYN.TFRT.IN": "Births per woman",
+                "SP.ADO.TFRT": "Births per 1,000 girls aged 15-19",
             },
             findex: {
                 emergency: {not_possible: "Not possible", very_difficult: "Possible, but very difficult",
@@ -1143,13 +1149,15 @@
             ["HD.HCI.OVRL", "index"],
             ["HD.HCI.EYRS", "number"], ["HD.HCI.LAYS", "number"],
             ["SE.LPV.PRIM", "pct"], ["IT.CEL.SETS.P2", "number"], ["SH.XPD.CHEX.PC.CD", "money"],
+            ["SL.UEM.NEET.ZS", "pct"], ["SL.TLF.CACT.FE.ZS", "pct"], ["SG.GEN.PARL.ZS", "pct"], ["SH.STA.MMRT", "number"],
+            ["SP.DYN.TFRT.IN", "number"], ["SP.ADO.TFRT", "number"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);
 
         // Which way is better, for ranking countries: 1 higher, -1 lower. Indicators that aren't
         // better or worse (urbanisation, health spending) or aren't comparable across countries
         // (national poverty lines) get no rank.
-        const LOWER_BETTER = /^(SH\.DYN\.MORT|SN\.ITK\.DEFC|SL\.UEM|SL\.EMP\.VULN|SH\.XPD\.OOPC|EN\.POP\.SLUM|SI\.POV\.GINI|SI\.DST\.10TH|EN\.ATM\.PM25|VC\.IHR|SH\.STA\.STNT|SE\.LPV)/;
-        const UNRANKED = /^(SP\.URB|SH\.XPD\.CHEX|SI\.POV\.NAHC)/;
+        const LOWER_BETTER = /^(SH\.DYN\.MORT|SN\.ITK\.DEFC|SL\.UEM|SL\.EMP\.VULN|SH\.XPD\.OOPC|EN\.POP\.SLUM|SI\.POV\.GINI|SI\.DST\.10TH|EN\.ATM\.PM25|VC\.IHR|SH\.STA\.STNT|SE\.LPV|SH\.STA\.MMRT|SP\.ADO\.TFRT)/;
+        const UNRANKED = /^(SP\.URB|SH\.XPD\.CHEX|SI\.POV\.NAHC|SL\.TLF\.CACT|SP\.DYN\.TFRT)/;
 
         // Share of the world's population living in economies that do worse on this indicator
         // (economies with the same value count half), among economies with data.

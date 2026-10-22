@@ -794,9 +794,9 @@
              `<abbr title="${tr("Share of the world's population living in economies that do worse on this indicator", "Tỷ lệ dân số thế giới sống ở các nền kinh tế kém hơn về chỉ số này")}">${tr("Better than", "Hơn")}</abbr>`].filter(x => x !== null), (() => {
         // Group the indicators so the long table scans easily.
         const groups = [
-            [tr("Economy and inequality", "Kinh tế và bất bình đẳng"), /^(NY\.|SI\.|GD_WBL)/],
+            [tr("Economy and inequality", "Kinh tế và bất bình đẳng"), /^(NY\.|SI\.|GD_WBL|SG\.)/],
             [tr("Work", "Việc làm"), /^SL\./],
-            [tr("Health", "Sức khỏe"), /^(SP\.DYN|SH\.|SN\.)/],
+            [tr("Health", "Sức khỏe"), /^(SP\.DYN|SP\.ADO|SH\.|SN\.)/],
             [tr("Education and skills", "Giáo dục và kỹ năng"), /^(SE\.|HD\.)/],
             [tr("Living conditions and safety", "Điều kiện sống và an toàn"), /./],
         ];

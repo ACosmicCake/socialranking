@@ -562,3 +562,14 @@ test("Saving, borrowing and digital payments are compared with Findex", () => {
     // Context only: the security score doesn't change.
     assert.equal(sec.global_pct, run(FULL).security.global_pct);
 });
+
+test("youth, gender and demography indicators in the country glance", () => {
+    const glance = run(FULL).location.glance;
+    const get = code => glance.find(g => g.code === code);
+    for (const code of ["SL.UEM.NEET.ZS", "SG.GEN.PARL.ZS", "SH.STA.MMRT", "SP.ADO.TFRT"]) {
+        assert.ok(get(code) && get(code).better_than_pct > 0, code);
+    }
+    // Fertility and women's labour-force participation are shown but not ranked.
+    assert.equal(get("SP.DYN.TFRT.IN").better_than_pct, null);
+    assert.equal(get("SL.TLF.CACT.FE.ZS").better_than_pct, null);
+});

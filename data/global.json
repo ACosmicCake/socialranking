@@ -7,7 +7,7 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (119 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
+   "name": "World Bank World Development Indicators API (124 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
   },
@@ -3316,7 +3316,7 @@
   "SL.SRV.EMPL.MA.ZS": "Employment in services, male",
   "SL.UEM.TOTL.FE.ZS": "Unemployment, female",
   "SL.UEM.TOTL.MA.ZS": "Unemployment, male",
-  "SL.TLF.CACT.FE.ZS": "Labour force participation, female",
+  "SL.TLF.CACT.FE.ZS": "Labor force participation rate, female (% of female population ages 15+, modeled ILO estimate)",
   "SL.TLF.CACT.MA.ZS": "Labour force participation, male",
   "FX.OWN.TOTL.40.ZS": "Account ownership, poorest 40% of households",
   "FX.OWN.TOTL.60.ZS": "Account ownership, richest 60% of households",
@@ -3332,6 +3332,11 @@
   "SE.LPV.PRIM": "Learning poverty (% of 10-year-olds unable to read a simple text)",
   "IT.CEL.SETS.P2": "Mobile cellular subscriptions (per 100 people)",
   "SH.XPD.CHEX.PC.CD": "Current health expenditure per person (current US$)",
+  "SL.UEM.NEET.ZS": "Share of youth not in education, employment or training (% of youth population)",
+  "SG.GEN.PARL.ZS": "Proportion of seats held by women in national parliaments (%)",
+  "SH.STA.MMRT": "Maternal mortality ratio (modeled estimate, per 100,000 live births)",
+  "SP.DYN.TFRT.IN": "Fertility rate, total (births per woman)",
+  "SP.ADO.TFRT": "Adolescent fertility rate (births per 1,000 women ages 15-19)",
   "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
   "per_allsp.cov_pop_tot": "Coverage of social protection and labour programmes (% of population)",
   "per_sa_allsa.cov_pop_tot": "Coverage of social assistance (% of population)",
@@ -3682,6 +3687,22 @@
      2023,
      1317.26
     ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     27.25
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     197.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     2.19
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     38.34
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      56.26
@@ -4015,6 +4036,22 @@
      2023,
      881.29
     ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     23.35
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     66.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     1.34
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     14.28
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      61.52
@@ -4336,6 +4373,26 @@
      2023,
      2968.54
     ],
+    "SL.UEM.NEET.ZS": [
+     2025,
+     11.38
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     31.74
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     11.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     1.55
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     11.35
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      63.73
@@ -4652,6 +4709,26 @@
     "SH.XPD.CHEX.PC.CD": [
      2023,
      816.2
+    ],
+    "SL.UEM.NEET.ZS": [
+     2025,
+     18.09
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     36.57
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     77.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     1.79
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     50.36
     ],
     "per_allsp.cov_pop_tot": [
      2021,
@@ -4986,6 +5063,26 @@
      2023,
      310.97
     ],
+    "SL.UEM.NEET.ZS": [
+     2021,
+     32.16
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     16.92
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     47.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     2.98
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     37.83
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      50.64
@@ -5298,6 +5395,26 @@
     "SH.XPD.CHEX.PC.CD": [
      2023,
      12698.73
+    ],
+    "SL.UEM.NEET.ZS": [
+     2025,
+     11.75
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     29.55
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     16.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     1.59
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     11.68
     ]
    }
   },
@@ -5632,6 +5749,26 @@
      2023,
      82.49
     ],
+    "SL.UEM.NEET.ZS": [
+     2025,
+     25.55
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     11.22
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     120.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     1.98
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     20.98
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      72.54
@@ -5952,6 +6089,22 @@
     "SH.XPD.CHEX.PC.CD": [
      2023,
      79.37
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     27.03
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     448.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     4.26
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     91.92
     ]
    }
   },
