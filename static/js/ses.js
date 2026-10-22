@@ -1240,6 +1240,8 @@
                 const item = {code, label, fmt, value: v, year: year(country.wdi, code),
                               world: value(world, code), region: region ? value(region.wdi, code) : null,
                               better_than_pct: populationRank(code, v)};
+                const e = (country.wdi_earlier || {})[code];
+                if (e) item.earlier = {year: e[0], value: e[1]};
                 if (item.world === null && (item.world = estimateAggregate(code)) !== null) item.world_estimated = true;
                 if (region && item.region === null && (item.region = estimateAggregate(code, country.region)) !== null) {
                     item.region_estimated = true;

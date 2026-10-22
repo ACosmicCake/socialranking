@@ -213,3 +213,11 @@ def test_findex_online_activities():
     online = data.global_data()["findex_online"]
     assert online["economies"] > 60 and set(online["lmy"]["shares"]) == set(online["keys"])
     assert 0.3 < online["lmy"]["shares"]["social_media"] < 0.6 and online["lmy"]["shares"]["earn"] < 0.15
+
+
+def test_glance_trends():
+    for c in data.countries():
+        for code, (year, _) in c.get("wdi_earlier", {}).items():
+            assert c["wdi"][code][0] - year >= 5, (c["iso3"], code)
+    vnm = next(c for c in data.countries() if c["iso3"] == "VNM")
+    assert vnm["wdi_earlier"]["SP.DYN.LE00.IN"][0] <= 2016

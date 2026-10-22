@@ -617,3 +617,11 @@ test("online activities against the country and low- and middle-income economies
     const us = run({...FULL, country: "USA", income_mode: "band", income_band: "b7", internet: "yes", online: "none"}).living.online;
     assert.ok(us && us.year === null && us.done.length === 0);
 });
+
+test("country glance shows the value about ten years earlier", () => {
+    const glance = run(FULL).location.glance;
+    const le = glance.find(g => g.code === "SP.DYN.LE00.IN");
+    assert.ok(le.earlier && le.year - le.earlier.year >= 5 && le.earlier.value > 60);
+    const net = glance.find(g => g.code === "IT.NET.USER.ZS");
+    if (net) assert.ok(net.earlier.value < net.value);
+});
