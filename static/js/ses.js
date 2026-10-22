@@ -728,6 +728,20 @@
                 }
                 const occ = answers.occupation ? scoreOccupation(answers, country) : null;
                 if (occ) result.occupation = occ;
+                // Informal employment (context): your job against your country's and the world's
+                // workers, and those of your sex. Formal jobs rank above all informal ones.
+                const inf = answers.informal;
+                if (inf && G.informality) {
+                    const c = country.informality, w = G.informality;
+                    const rank = share => inf === "formal" ? pct((1 + share) / 2) : inf === "informal" ? pct(share / 2) : null;
+                    const sex = answers.sex === "F" || answers.sex === "M" ? answers.sex : null;
+                    result.informality = {
+                        key: inf, world: pct(w.total), world_year: w.year, world_pct: rank(w.total),
+                        world_sex: sex && w[sex] !== undefined ? pct(w[sex]) : null,
+                        country: c ? pct(c.total) : null, year: c ? c.year : null, national_pct: c ? rank(c.total) : null,
+                        country_sex: c && sex && c[sex] !== undefined ? pct(c[sex]) : null, sex,
+                    };
+                }
                 const combine = (a, b) => (b === null || b === undefined ? a : (a + b) / 2);
                 result.global_pct = pct(combine(statusRank, occ && occ.world_rank));
                 const statusBand = vulnerable ? [0, v] : [v, 1];

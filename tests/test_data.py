@@ -221,3 +221,10 @@ def test_glance_trends():
             assert c["wdi"][code][0] - year >= 5, (c["iso3"], code)
     vnm = next(c for c in data.countries() if c["iso3"] == "VNM")
     assert vnm["wdi_earlier"]["SP.DYN.LE00.IN"][0] <= 2016
+
+
+def test_informality():
+    inf = data.global_data()["informality"]
+    assert 0.5 < inf["total"] < 0.65 and inf["economies"] > 120
+    shares = [c["informality"]["total"] for c in data.countries() if "informality" in c]
+    assert all(0 <= v <= 1 for v in shares) and min(shares) < 0.1 and max(shares) > 0.9

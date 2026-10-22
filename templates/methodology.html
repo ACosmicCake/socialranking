@@ -227,7 +227,15 @@
         Because China is missing, the pooled shares are a reference group, not a world estimate. Your occupation's mid-rank by
         skill level, in the pooled group and in your country, is averaged with the status rank to give the work score.</p>
 
-    <h2 id="living">6. Living standards</h2>
+        <p>As context, not scored, you can say whether your main job is <strong>formal</strong>: as an employee, your employer pays
+        social security contributions for you (or you get paid annual and sick leave); as a business owner or self-employed,
+        your business is registered. This is a simplified version of the ILO's definition of informal employment (SDG 8.3.1)
+        {{ cite("ilo_informality") }}. We compare it with the informal share of employment in your country (the latest labour-force
+        survey since {{ g.wdi_since }}, {{ g.informality.economies }} economies, also by sex) and in the world
+        ({{ (g.informality.total * 100) | pct(0) }} in {{ g.informality.year }}, the ILO's modelled estimate). A formal job ranks
+        above every informal one, with half of your own group counted.</p>
+
+<h2 id="living">6. Living standards</h2>
     <p>Seven household services. World, regional, national and urban/rural shares come from the World Bank's indicators,
         mostly for {{ inc.reference_year }} {{ cite("wdi") }}. The cited monitoring reports give the matching headcounts:</p>
     <div class="table-responsive"><table class="table table-sm">

@@ -496,7 +496,27 @@
         </div>
         <p class="small text-secondary">${tr(`ILO modelled estimates, ${work.world ? work.world.year : ""}`, `Ước tính mô hình của ILO, ${work.world ? work.world.year : ""}`)} ${cite("ilo_wdi")}. ${tr(
             "Status in employment ranks only two categories (vulnerable or not), so it is coarse on its own.", "Vị thế việc làm chỉ xếp hạng hai nhóm (dễ tổn thương hay không), nên tự nó còn thô.")}</p>
-        ${occupationHtml(work.occupation)}`));
+        ${occupationHtml(work.occupation)}
+        ${informalityHtml(work.informality)}`));
+    }
+
+    // ---------------------------------------------------------------- informal employment (ILO)
+    function informalityHtml(inf) {
+        if (!inf) return "";
+        const who = {F: tr("women", "phụ nữ"), M: tr("men", "nam giới")}[inf.sex];
+        const yours = inf.key === "formal" ? tr("Your main job is formal.", "Công việc chính của bạn là việc làm chính thức.")
+            : inf.key === "informal" ? tr("Your main job is informal.", "Công việc chính của bạn là việc làm phi chính thức.")
+            : tr("You weren't sure whether your job is formal.", "Bạn không chắc công việc của mình có chính thức không.");
+        const rank = inf.world_pct === null ? "" : " " + tr(
+            `In job security terms that puts you ahead of about <strong>${pct(inf.world_pct)}</strong> of the world's workers${inf.national_pct !== null ? ` and ${pct(inf.national_pct)} in ${cname}` : ""} (counting half of those in the same position).`,
+            `Về độ an toàn của việc làm, bạn hơn khoảng <strong>${pct(inf.world_pct)}</strong> người lao động trên thế giới${inf.national_pct !== null ? ` và ${pct(inf.national_pct)} ở ${cname}` : ""} (tính một nửa số người cùng vị trí).`);
+        const shares = tr(
+            `${pct(inf.world, 0)} of the world's workers have informal jobs (${inf.world_year} ILO estimate${inf.world_sex !== null ? `; ${who}: ${pct(inf.world_sex, 0)}` : ""})${inf.country !== null ? `; in ${cname}, ${pct(inf.country, 0)}${inf.country_sex !== null ? ` (${who}: ${pct(inf.country_sex, 0)})` : ""} in ${inf.year}` : `; there's no survey figure for ${cname}`}.`,
+            `${pct(inf.world, 0)} người lao động trên thế giới làm việc phi chính thức (ước tính của ILO năm ${inf.world_year}${inf.world_sex !== null ? `; ${who}: ${pct(inf.world_sex, 0)}` : ""})${inf.country !== null ? `; ở ${cname} là ${pct(inf.country, 0)}${inf.country_sex !== null ? ` (${who}: ${pct(inf.country_sex, 0)})` : ""} năm ${inf.year}` : `; không có số liệu khảo sát cho ${cname}`}.`);
+        return `<h3 class="h5 mt-4">${tr("Formal or informal work", "Việc làm chính thức hay phi chính thức")}</h3>
+            <p>${yours}${rank}</p>
+            <p class="small">${shares} ${tr("Informal jobs usually come without social security, paid leave or a written contract.", "Việc làm phi chính thức thường không có bảo hiểm xã hội, nghỉ phép có lương hay hợp đồng bằng văn bản.")} ${cite("ilo_informality")}</p>
+            <p class="small text-secondary">${tr("Context only; not part of your work score.", "Chỉ để tham khảo; không tính vào điểm công việc.")}</p>`;
     }
 
     // ---------------------------------------------------------------- living standards
@@ -1047,6 +1067,7 @@
         if (work.status) add("work", `status: ${work.status}`, "", work.status_pct ?? work.global_pct, work.status_national_pct ?? work.national_pct);
         if (work.occupation) add("work", `occupation: ${work.occupation.key} (skill level ${work.occupation.skill_level ?? "-"})`, "", work.occupation.world_pct, work.occupation.national_pct);
         if (liv.global_pct !== undefined) add("living", "living standards", "", liv.global_pct, liv.national_pct);
+        if (work.informality && work.informality.world_pct !== null) add("work", `informal employment: ${work.informality.key}`, "", work.informality.world_pct, work.informality.national_pct);
         if (liv.phone) add("living", `mobile phone: ${liv.phone.key}`, "", liv.phone.world_pct, liv.phone.national_pct);
         // Shares of adults who did each online activity; Findex asks only in low- and middle-income economies.
         if (liv.online) for (const i of liv.online.items) {

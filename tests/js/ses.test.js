@@ -645,3 +645,16 @@ test("youth unemployment, schooling and health-risk indicators are ranked lower-
     // Viet Nam's youth unemployment is far below the world's, so it beats most of the world.
     assert.ok(get("SL.UEM.1524.ZS").better_than_pct > 50);
 });
+
+test("informal employment against ILO SDG 8.3.1", () => {
+    const base = {...FULL, work_status: "employee", work_sector: "services", sex: "F"};
+    const formal = run({...base, informal: "formal"}).work.informality;
+    const informal = run({...base, informal: "informal"}).work.informality;
+    assert.ok(formal.world > 50 && formal.world < 65 && formal.year >= 2014);
+    // Formal jobs rank above every informal one.
+    assert.ok(formal.world_pct > 50 && informal.world_pct < 50 && formal.national_pct > informal.national_pct);
+    assert.ok(formal.country_sex !== null && formal.world_sex !== null);
+    assert.equal(run({...base, informal: "not_sure"}).work.informality.world_pct, null);
+    // The work score itself doesn't change.
+    assert.equal(run({...base, informal: "formal"}).work.global_pct, run(base).work.global_pct);
+});

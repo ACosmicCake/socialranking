@@ -32,7 +32,9 @@
     <h2 id="work">3. Công việc</h2>
     <p>Vị thế việc làm theo ILO (người làm công, chủ, tự làm, lao động gia đình) được xếp theo việc làm dễ tổn thương
         {{ cite("ilo_wdi") }}. Nếu bạn chọn nhóm nghề ISCO-08, thứ hạng theo trình độ kỹ năng của nghề (so với khảo sát của
-        {{ g.occupation.economies }} nền kinh tế) {{ cite("join") }} được lấy trung bình với vị thế việc làm.</p>
+        {{ g.occupation.economies }} nền kinh tế) {{ cite("join") }} được lấy trung bình với vị thế việc làm. Để tham khảo,
+        việc làm chính thức hay phi chính thức của bạn được so với tỷ lệ việc làm phi chính thức ở nước bạn và trên thế giới
+        ({{ (g.informality.total * 100) | pct(0) }}, ILO) {{ cite("ilo_informality") }}.</p>
 
     <h2 id="living">4. Mức sống</h2>
     <p>Điện, nhiên liệu nấu sạch, nước, vệ sinh, rửa tay, Internet và chi phí y tế theo định nghĩa của các mục tiêu phát triển bền

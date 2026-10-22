@@ -3089,6 +3089,13 @@
   },
   "economies": 75
  },
+ "informality": {
+  "year": 2025,
+  "economies": 141,
+  "total": 0.5789,
+  "M": 0.5921,
+  "F": 0.5593
+ },
  "healthy_diet": {
   "world": {
    "year": 2025,

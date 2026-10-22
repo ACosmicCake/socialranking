@@ -8,6 +8,8 @@ The quiz form, the /questionnaire page and the scorer all read from here.
 
 YES_NO = [("yes", "Yes"), ("no", "No")]
 
+INFORMAL_OPTIONS = [("formal", "Yes, it's formal"), ("informal", "No, it's informal"), ("not_sure", "Not sure")]
+
 ONLINE_OPTIONS = [("social_media", "Used social media"), ("news", "Read news online"),
                   ("learn", "Looked up information to learn, train or study"),
                   ("government", "Used government services or information online"),
@@ -419,6 +421,18 @@ SECTIONS = [
                 "source": "isco_08",
                 "basis": "ILO International Standard Classification of Occupations (ISCO-08) major groups, "
                          "compared with the World Bank's Global Jobs Indicators Database.",
+            },
+            {
+                "id": "informal",
+                "type": "radio",
+                "text": "Is your main job formal?",
+                "help": "Formal means: as an employee, your employer pays social security or pension contributions "
+                        "for you (or you get paid annual and sick leave); as a business owner or self-employed, your "
+                        "business is registered.",
+                "options": INFORMAL_OPTIONS,
+                "show_if": ("work_status", "|".join(EMPLOYED)),
+                "source": "ilo_informality",
+                "basis": "ILO definition of informal employment (SDG 8.3.1), simplified. Shown as context; not scored.",
             },
         ],
     },
