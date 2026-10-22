@@ -8,6 +8,16 @@ versions.
 """
 
 LANGUAGES = {"en": "English", "vi": "Tiếng Việt"}
+CODE = "vi"
+
+# Water and sanitation ladder status shown next to your answer.
+WATER_STATUS = {"safely_managed": "Được quản lý an toàn (ước tính)", "basic": "Cơ bản", "limited": "Hạn chế",
+                "unimproved": "Chưa cải thiện", "surface": "Nước mặt"}
+SANITATION_STATUS = {"safely_managed": "Được quản lý an toàn (ước tính)", "basic": "Cơ bản", "limited": "Hạn chế",
+                     "unimproved": "Chưa cải thiện", "open": "Đi vệ sinh ngoài trời"}
+# Why exact local-currency income isn't offered for some countries.
+PRICE_NOTES = {"exact_income_reason": "tiền tệ đã thay đổi không theo tỷ giá cố định, hoặc lạm phát rất cao",
+               "currency_change": "đồng tiền đã được thay thế theo tỷ giá cố định từ sau cuộc khảo sát"}
 
 UI = {
     # navigation and layout
