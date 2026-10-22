@@ -625,3 +625,13 @@ test("country glance shows the value about ten years earlier", () => {
     const net = glance.find(g => g.code === "IT.NET.USER.ZS");
     if (net) assert.ok(net.earlier.value < net.value);
 });
+
+test("health system, environment, ageing and broadband indicators", () => {
+    const glance = run(FULL).location.glance;
+    const get = code => glance.find(g => g.code === code);
+    assert.ok(get("SH.IMM.MEAS").better_than_pct > 0 && get("IT.NET.BBND.P2").better_than_pct > 0);
+    for (const code of ["EN.GHG.CO2.PC.CE.AR5", "SE.XPD.TOTL.GD.ZS", "SP.POP.65UP.TO.ZS"]) {
+        assert.ok(get(code), code);
+        assert.equal(get(code).better_than_pct, null, code);
+    }
+});
