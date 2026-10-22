@@ -3042,6 +3042,21 @@
    "economies": 142,
    "adults_covered": 6001300782,
    "adults_world": 6210117111
+  },
+  "account": {
+   "indicator": "account.t.d",
+   "share": 0.7691,
+   "economies": 145,
+   "adults_covered": 6007725720,
+   "adults_world": 6210117111,
+   "by_sex": {
+    "F": 0.7663,
+    "M": 0.8086
+   },
+   "by_area": {
+    "rural": 0.7502,
+    "urban": 0.8177
+   }
   }
  },
  "healthy_diet": {

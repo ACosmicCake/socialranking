@@ -104,6 +104,7 @@
                 income: {poor: "Poorest 40% of households", rich: "Richest 60% of households"},
                 age: {young: "Young adults (15-24)", older: "Adults 25 and over"},
                 education: {low: "Primary education or less", high: "Secondary education or more"},
+                area: {urban: "Urban adults", rural: "Rural adults"},
             },
             no_cooking: "No cooking at home",
             errors: {
@@ -961,6 +962,13 @@
             const level = Q.education_options.map(o => o[0]).indexOf(answers.education);
             if (level >= 0) add(level <= 1 ? G_.education.low : G_.education.high,
                                 level <= 1 ? "FX.OWN.TOTL.PL.ZS" : "FX.OWN.TOTL.SO.ZS");
+            // Rural or urban adults, from the Findex series directly (shares, not percentages).
+            const area = answers.area;
+            const w = ((G.findex_yes || {}).account || {}).by_area, c = ((country.findex_yes || {}).account || {}).by_area;
+            if ((area === "urban" || area === "rural") && ((w && w[area] !== undefined) || (c && c[area] !== undefined))) {
+                rows.push({label: G_.area[area], world: w && w[area] !== undefined ? pct(w[area]) : null,
+                           country: c && c[area] !== undefined ? pct(c[area]) : null});
+            }
             return rows;
         }
 

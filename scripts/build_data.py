@@ -243,7 +243,7 @@ FINDEX_DERIVED = {
 }
 # Yes/no Findex items shown as context next to your answers (% of adults, latest wave).
 FINDEX_YES = {"saved": "save.any.t.d", "saved_old_age": "fin17f", "borrowed": "fin22a.22a1.22g.d",
-              "digital_payment": "g20.any"}
+              "digital_payment": "g20.any", "account": "account.t.d"}
 # Findex breakdowns of the derived groups (indicator suffixes): women, men, rural, urban.
 FINDEX_GROUP_SUFFIXES = {".1": ("by_sex", "F"), ".2": ("by_sex", "M"), ".9": ("by_area", "rural"),
                          ".10": ("by_area", "urban")}
@@ -746,6 +746,11 @@ def build_findex_yes(adults, economies):
                 n += 1
         world[key] = {"indicator": ind, "share": round(acc / weight, 4), "economies": n,
                       "adults_covered": int(weight), "adults_world": int(adults.get("WLD", 0))}
+        # Findex's own world figures for women, men, rural and urban adults, where published.
+        for suffix, (by, group) in FINDEX_GROUP_SUFFIXES.items():
+            wld = raw.get(suffix, {}).get("WLD")
+            if wld:
+                world[key].setdefault(by, {})[group] = round(wld[max(wld)], 4)
     return out, world
 
 
