@@ -82,6 +82,12 @@ CITATIONS = {
         "year": 2023,
         "url": "https://api.worldbank.org/v2/sources/86/indicators?format=json&per_page=1000",
     },
+    "ilo_informality": {
+        "title": "SDG indicator 8.3.1: proportion of informal employment in total employment, by sex (ILOSTAT)",
+        "publisher": "International Labour Organization",
+        "year": 2026,
+        "url": "https://ilostat.ilo.org/topics/informality/",
+    },
     "fpn": {
         "title": "Food Prices for Nutrition DataHub: cost and affordability of a healthy diet (FPN 5.0)",
         "publisher": "World Bank",

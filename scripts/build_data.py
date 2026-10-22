@@ -270,6 +270,11 @@ FINDEX_YES = {"saved": "save.any.t.d", "saved_old_age": "fin17f", "borrowed": "f
 # asked in low- and middle-income economies, whose published aggregate is LMY).
 FINDEX_ONLINE = {"social_media": "con30c", "news": "con30d", "learn": "con30e", "government": "con30g",
                  "job": "con30h", "earn": "con30f"}
+# Informal employment (SDG 8.3.1) from ILOSTAT: share of employment that is informal, in
+# total and by sex. Countries: the latest labour-force survey since WDI_SINCE; world: ILO's
+# modelled estimate (aggregate X01) for the last full year, not its projections.
+ILO_API = "https://rplumber.ilo.org/data/indicator/"
+INFORMALITY_INDICATOR = "SDG_0831_SEX_ECO_RT_A"
 # Findex breakdowns of the derived groups (indicator suffixes): women, men, rural, urban.
 FINDEX_GROUP_SUFFIXES = {".1": ("by_sex", "F"), ".2": ("by_sex", "M"), ".9": ("by_area", "rural"),
                          ".10": ("by_area", "urban")}
@@ -375,7 +380,12 @@ def fetch(url, name):
             try:
                 req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; socialranking-data-build)", "Accept": "*/*"})
                 with urllib.request.urlopen(req, timeout=120) as r:
-                    path.write_bytes(r.read())
+                    body = r.read()
+                # Some services (behind Cloudflare) answer 200 with an empty body when they
+                # refuse a request; never cache that as data.
+                if not body:
+                    raise OSError(f"empty response from {url}")
+                path.write_bytes(body)
                 break
             except OSError:
                 if attempt == 3:
@@ -811,6 +821,27 @@ def build_findex_online(economies):
     return out, {"keys": list(FINDEX_ONLINE), "indicators": FINDEX_ONLINE, "lmy": lmy, "economies": len(out)}
 
 
+def build_informality(economies):
+    """Informal share of employment per economy (latest survey) and for the world."""
+    url = f"{ILO_API}?{urllib.parse.urlencode({'id': INFORMALITY_INDICATOR, 'format': '.csv'})}"
+    df = pd.read_csv(io.BytesIO(fetch(url, f"ilo_{INFORMALITY_INDICATOR}.csv")), encoding="utf-8-sig")
+    df = df[(df["classif1"] == "ECO_SECTOR_TOTAL") & df["obs_value"].notna()
+            & df["sex"].isin(["SEX_T", "SEX_F", "SEX_M"])]
+    keys = {"SEX_T": "total", "SEX_F": "F", "SEX_M": "M"}
+    out = {}
+    surveys = df[df["ref_area"].isin(economies) & (df["time"] >= WDI_SINCE) & (df["time"] <= INFLATION_LAST_YEAR)]
+    for code, rows in surveys.groupby("ref_area"):
+        latest = rows[rows["sex"] == "SEX_T"]["time"].max()
+        if pd.isna(latest):
+            continue
+        year = rows[rows["time"] == latest]
+        out[code] = {"year": int(latest), **{keys[r.sex]: round(float(r.obs_value) / 100, 4) for r in year.itertuples()}}
+    world = df[(df["ref_area"] == "X01") & (df["time"] < INFLATION_LAST_YEAR)]
+    last = int(world["time"].max())
+    return out, {"year": last, "economies": len(out),
+                 **{keys[r.sex]: round(float(r.obs_value) / 100, 4) for r in world[world["time"] == last].itertuples()}}
+
+
 def findex_breakdowns(group, out):
     """Add a derived group's shares for women, men, rural and urban adults, in the economy's year."""
     inds, _, split = FINDEX_DERIVED[group]
@@ -1230,6 +1261,7 @@ def main():
     findex, global_findex = build_findex(adults, economies)
     findex_yes, global_findex_yes = build_findex_yes(adults, economies)
     findex_online, global_findex_online = build_findex_online(economies)
+    informality, global_informality = build_informality(economies)
     exchange_rates = wdi_latest("PA.NUS.FCRF", WDI_SINCE)
     age_structure = build_age_structure()
     healthy_diet, global_healthy_diet = build_healthy_diet(prices)
@@ -1266,6 +1298,8 @@ def main():
             entry["findex_yes"] = findex_yes[code]
         if code in findex_online:
             entry["findex_online"] = findex_online[code]
+        if code in informality:
+            entry["informality"] = informality[code]
         rate = market_rate(code, exchange_rates, prices.get(code))
         if rate:
             entry["exchange_rate"] = rate
@@ -1329,6 +1363,7 @@ def main():
         "findex": global_findex,
         "findex_yes": global_findex_yes,
         "findex_online": global_findex_online,
+        "informality": global_informality,
         "healthy_diet": global_healthy_diet,
         "occupation": global_occupation,
         "age_structure": {"groups": AGE_GROUPS, **age_structure["WLD"]},
@@ -1364,6 +1399,7 @@ def main():
     print(f"education: {e['countries_wdi']} WDI + {e['countries_barro_lee']} Barro-Lee, "
           f"{e['population_25_plus_covered'] / e['population_25_plus_world']:.1%} of adults 25+; world shares",
           e["world_shares"])
+    print("informality:", global_informality)
     print("findex online:", global_findex_online["economies"], global_findex_online["lmy"])
     print("findex yes/no:", {k: (v["economies"], v["share"]) for k, v in global_findex_yes.items()})
     print("findex:", {k: (v["economies"], round(v["adults_covered"] / max(v["adults_world"], 1), 3), v["shares"])

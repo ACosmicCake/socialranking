@@ -316,6 +316,13 @@ QUESTIONS = {
                     "borrowing": "Vay ngân hàng, chủ lao động hoặc người cho vay tư nhân",
                     "sale_of_assets": "Bán thứ gì đó tôi sở hữu", "other": "Nguồn khác"},
     },
+    "informal": {
+        "text": "Công việc chính của bạn có phải là việc làm chính thức không?",
+        "help": "Chính thức nghĩa là: nếu là người làm công, chủ đóng bảo hiểm xã hội hoặc lương hưu cho bạn (hoặc bạn "
+                "được nghỉ phép năm và nghỉ ốm có lương); nếu là chủ hoặc tự làm, cơ sở kinh doanh của bạn có đăng ký.",
+        "options": {"formal": "Có, là việc làm chính thức", "informal": "Không, là việc làm phi chính thức",
+                    "not_sure": "Không chắc"},
+    },
     "online": {
         "text": "Trong 3 tháng qua, bạn đã làm những việc nào sau đây trên mạng? Chọn tất cả phù hợp.",
         "options": {"social_media": "Dùng mạng xã hội", "news": "Đọc tin tức trên mạng",
