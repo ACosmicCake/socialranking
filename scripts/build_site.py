@@ -135,6 +135,7 @@ def browser_data(lang="en"):
         "vulnerable": list(qn.VULNERABLE),
         "small_assets": list(qn.SMALL_ASSETS),
         "social_protection_types": qn.SOCIAL_PROTECTION_TYPES,
+        "online_options": dict(qn.ONLINE_OPTIONS),
     }
     labels = None
     if lang == "vi":
@@ -166,7 +167,7 @@ def browser_data(lang="en"):
         pyramid = [{**b, "label": i18n.WEALTH[b["key"]]} for b in pyramid]
         opts = {qid: option_map(qid, sections) for qid in ("income_band", "education", "cooking", "water",
                                                           "sanitation", "work_status", "work_sector", "occupation",
-                                                          "mother_education")}
+                                                          "mother_education", "online")}
         q.update({
             "income_bands": [(k, lo, hi, opts["income_band"][k]) for k, lo, hi, _ in qn.INCOME_BANDS],
             "education_options": [(k, opts["education"][k]) for k, _ in qn.EDUCATION_OPTIONS],
@@ -178,6 +179,7 @@ def browser_data(lang="en"):
             "sector_options": [(k, opts["work_sector"][k]) for k, _ in qn.SECTOR_OPTIONS],
             "occupation_options": [(k, opts["occupation"][k]) for k, _ in qn.OCCUPATION_OPTIONS],
             "parent_education_options": [(k, opts["mother_education"][k]) for k, _ in qn.PARENT_EDUCATION_OPTIONS],
+            "online_options": {k: opts["online"][k] for k, _ in qn.ONLINE_OPTIONS},
         })
         labels = i18n.LABELS
     out = {

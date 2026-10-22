@@ -207,3 +207,9 @@ def test_aggregates_have_indicators():
         assert len(aggregates[code]["wdi"]) > 50, code
     le = {code: aggregates[code]["wdi"]["SP.DYN.LE00.IN"][1] for code in ["LIC", "LMC", "UMC", "HIC"]}
     assert le["LIC"] < le["LMC"] < le["UMC"] < le["HIC"]
+
+
+def test_findex_online_activities():
+    online = data.global_data()["findex_online"]
+    assert online["economies"] > 60 and set(online["lmy"]["shares"]) == set(online["keys"])
+    assert 0.3 < online["lmy"]["shares"]["social_media"] < 0.6 and online["lmy"]["shares"]["earn"] < 0.15

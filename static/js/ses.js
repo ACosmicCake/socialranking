@@ -841,6 +841,16 @@
             const answered = items.filter(i => i.has !== null && i.has !== undefined);
             const result = {items, answered: answered.length, area: answers.area || null,
                             region_name: region ? region.name : null};
+            // Online activities (internet users only), against your country and low- and middle-income economies.
+            const online = answers.internet === "yes" ? answers.online : null;
+            if (online && G.findex_online && G.findex_online.lmy) {
+                const fo = G.findex_online, c = country.findex_online;
+                result.online = {
+                    done: online.filter(k => k !== "none"), year: c ? c.year : null, economies: fo.economies,
+                    items: fo.keys.map(key => ({key, label: Q.online_options[key], you: online.includes(key),
+                                                lmy: pct(fo.lmy.shares[key]), country: c ? pct(c.shares[key]) : null})),
+                };
+            }
             if (answers.phone && G.findex.phone) {
                 // Also among adults of your sex and in your kind of area, where Findex reports them.
                 const ph = result.phone = findexRank("phone", answers.phone, country);
