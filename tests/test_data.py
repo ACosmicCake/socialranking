@@ -197,3 +197,13 @@ def test_exchange_rates():
     assert len(rated) > 170
     vnm = next(c for c in rated if c["iso3"] == "VNM")["exchange_rate"]
     assert 20000 < vnm["lcu_per_usd"] < 30000 and vnm["year"] >= 2020
+
+
+def test_aggregates_have_indicators():
+    # Income-group aggregates come from the API under 2-character ids (XM, XN, XT, XD) with no
+    # ISO3 code; they must still be stored under LIC/LMC/UMC/HIC like the regions and the world.
+    aggregates = data.global_data()["aggregates"]
+    for code in ["WLD", "EAS", "SSF", "LIC", "LMC", "UMC", "HIC"]:
+        assert len(aggregates[code]["wdi"]) > 50, code
+    le = {code: aggregates[code]["wdi"]["SP.DYN.LE00.IN"][1] for code in ["LIC", "LMC", "UMC", "HIC"]}
+    assert le["LIC"] < le["LMC"] < le["UMC"] < le["HIC"]
