@@ -209,6 +209,11 @@ WDI_INDICATORS = {
     "SE.XPD.TOTL.GD.ZS": "Government expenditure on education, total (% of GDP)",
     "SP.POP.65UP.TO.ZS": "Population ages 65 and above (% of total population)",
     "IT.NET.BBND.P2": "Fixed broadband subscriptions (per 100 people)",
+    "SL.UEM.1524.ZS": "Unemployment, youth total (% of total labor force ages 15-24, modeled ILO estimate)",
+    "SE.SEC.CMPT.LO.ZS": "Lower secondary completion rate, total (% of relevant age group)",
+    "SH.STA.TRAF.P5": "Mortality caused by road traffic injury (per 100,000 population)",
+    "SH.STA.SUIC.P5": "Suicide mortality rate (per 100,000 population)",
+    "SH.PRV.SMOK": "Prevalence of current tobacco use (% of adults)",
     # Findex sets its emergency amount at 1/20 of GNI per person in local currency.
     "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
 }
@@ -220,7 +225,8 @@ TREND_INDICATORS = ["NY.GDP.PCAP.PP.KD", "SP.DYN.LE00.IN", "SH.DYN.MORT", "SP.UR
                     "EN.ATM.PM25.MC.M3", "VC.IHR.PSRC.P5", "SH.STA.STNT.ZS", "SH.MED.PHYS.ZS", "SE.PRM.CMPT.ZS",
                     "SE.TER.ENRR", "IT.CEL.SETS.P2", "SH.XPD.CHEX.PC.CD", "SL.UEM.NEET.ZS", "SL.TLF.CACT.FE.ZS",
                     "SG.GEN.PARL.ZS", "SH.STA.MMRT", "SP.DYN.TFRT.IN", "SP.ADO.TFRT", "IT.NET.USER.ZS",
-                    "SH.IMM.MEAS", "EN.GHG.CO2.PC.CE.AR5", "SE.XPD.TOTL.GD.ZS", "SP.POP.65UP.TO.ZS", "IT.NET.BBND.P2"]
+                    "SH.IMM.MEAS", "EN.GHG.CO2.PC.CE.AR5", "SE.XPD.TOTL.GD.ZS", "SP.POP.65UP.TO.ZS", "IT.NET.BBND.P2",
+                    "SL.UEM.1524.ZS", "SE.SEC.CMPT.LO.ZS", "SH.STA.TRAF.P5", "SH.STA.SUIC.P5", "SH.PRV.SMOK"]
 TREND_GAP, TREND_MIN_GAP = 10, 5
 # Social protection coverage from the World Bank ASPIRE database: % of the population
 # living in households that receive each kind of programme, in total and by

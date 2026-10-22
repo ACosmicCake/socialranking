@@ -7,7 +7,7 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (129 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
+   "name": "World Bank World Development Indicators API (134 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
   },
@@ -3387,6 +3387,11 @@
   "SE.XPD.TOTL.GD.ZS": "Government expenditure on education, total (% of GDP)",
   "SP.POP.65UP.TO.ZS": "Population ages 65 and above (% of total population)",
   "IT.NET.BBND.P2": "Fixed broadband subscriptions (per 100 people)",
+  "SL.UEM.1524.ZS": "Unemployment, youth total (% of total labor force ages 15-24, modeled ILO estimate)",
+  "SE.SEC.CMPT.LO.ZS": "Lower secondary completion rate, total (% of relevant age group)",
+  "SH.STA.TRAF.P5": "Mortality caused by road traffic injury (per 100,000 population)",
+  "SH.STA.SUIC.P5": "Suicide mortality rate (per 100,000 population)",
+  "SH.PRV.SMOK": "Prevalence of current tobacco use (% of adults)",
   "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
   "per_allsp.cov_pop_tot": "Coverage of social protection and labour programmes (% of population)",
   "per_sa_allsa.cov_pop_tot": "Coverage of social assistance (% of population)",
@@ -3773,6 +3778,26 @@
      2025,
      20.11
     ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     13.41
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2024,
+     77.89
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     16.75
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     9.13
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     20.28
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      56.26
@@ -4142,6 +4167,26 @@
      2025,
      36.46
     ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     12.55
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2024,
+     97.3
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     16.51
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     8.61
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     23.11
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      61.52
@@ -4503,6 +4548,26 @@
      2025,
      34.45
     ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     13.99
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2024,
+     91.88
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     7.45
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     12.54
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     24.88
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      63.73
@@ -4859,6 +4924,26 @@
     "IT.NET.BBND.P2": [
      2025,
      20.54
+    ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     12.19
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2024,
+     81.54
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     17.3
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     6.88
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     13.58
     ],
     "per_allsp.cov_pop_tot": [
      2021,
@@ -5233,6 +5318,26 @@
      2025,
      9.69
     ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     18.65
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2024,
+     66.66
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     16.98
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     3.43
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     18.91
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      50.64
@@ -5585,6 +5690,26 @@
     "IT.NET.BBND.P2": [
      2025,
      39.96
+    ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     9.77
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2023,
+     100.78
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     11.94
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     14.99
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     15.29
     ]
    }
   },
@@ -5959,6 +6084,26 @@
      2025,
      4.27
     ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     15.4
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2024,
+     86.55
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     15.63
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     11.54
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     23.61
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      72.54
@@ -6315,6 +6460,26 @@
     "IT.NET.BBND.P2": [
      2025,
      1.12
+    ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     10.08
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2023,
+     44.36
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     27.42
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     7.3
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     8.92
     ]
    }
   },
@@ -6684,6 +6849,26 @@
     "IT.NET.BBND.P2": [
      2025,
      0.57
+    ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     10.15
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2023,
+     38.61
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     28.67
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     6.33
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     10.88
     ],
     "per_allsp.cov_pop_tot": [
      2021,
@@ -7066,6 +7251,26 @@
      2025,
      5.05
     ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     13.14
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2024,
+     73.69
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     17.43
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     8.83
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     20.43
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      55.11
@@ -7443,6 +7648,26 @@
      2025,
      33.01
     ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     15.62
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2023,
+     93.03
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     17.15
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     7.73
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     21.51
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      62.22
@@ -7803,6 +8028,26 @@
     "IT.NET.BBND.P2": [
      2025,
      38.71
+    ],
+    "SL.UEM.1524.ZS": [
+     2025,
+     11.54
+    ],
+    "SE.SEC.CMPT.LO.ZS": [
+     2024,
+     95.56
+    ],
+    "SH.STA.TRAF.P5": [
+     2019,
+     8.73
+    ],
+    "SH.STA.SUIC.P5": [
+     2021,
+     14.29
+    ],
+    "SH.PRV.SMOK": [
+     2024,
+     20.21
     ],
     "per_allsp.cov_pop_tot": [
      2021,

@@ -635,3 +635,13 @@ test("health system, environment, ageing and broadband indicators", () => {
         assert.equal(get(code).better_than_pct, null, code);
     }
 });
+
+test("youth unemployment, schooling and health-risk indicators are ranked lower-is-better where apt", () => {
+    const glance = run(FULL).location.glance;
+    const get = code => glance.find(g => g.code === code);
+    for (const code of ["SL.UEM.1524.ZS", "SE.SEC.CMPT.LO.ZS", "SH.STA.TRAF.P5", "SH.STA.SUIC.P5", "SH.PRV.SMOK"]) {
+        assert.ok(get(code) && get(code).better_than_pct !== null, code);
+    }
+    // Viet Nam's youth unemployment is far below the world's, so it beats most of the world.
+    assert.ok(get("SL.UEM.1524.ZS").better_than_pct > 50);
+});
