@@ -242,6 +242,15 @@ SECTIONS = [
                 "basis": "World Bank list of economies (217). Used to convert your income with "
                          "your country's consumer price index and purchasing-power-parity factor.",
             },
+            {
+                "id": "region",
+                "type": "region",
+                "text": "Which region of your country do you live in?",
+                "help": "Optional. Regions follow the Subnational Human Development Index (provinces, states or "
+                        "groups of them).",
+                "source": "gdl_shdi",
+                "basis": "Global Data Lab's Subnational Human Development Index regions. Shown as context; not scored.",
+            },
         ],
     },
     {

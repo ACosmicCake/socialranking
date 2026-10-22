@@ -228,3 +228,14 @@ def test_informality():
     assert 0.5 < inf["total"] < 0.65 and inf["economies"] > 120
     shares = [c["informality"]["total"] for c in data.countries() if "informality" in c]
     assert all(0 <= v <= 1 for v in shares) and min(shares) < 0.1 and max(shares) > 0.9
+
+
+def test_subnational_hdi():
+    sub = data.global_data()["subnational"]
+    assert sub["economies"] > 150 and sub["regions"] > 1500
+    codes = []
+    for c in data.countries():
+        for r in c.get("subnational", {}).get("regions", []):
+            codes.append(r[0])
+            assert 0.1 < r[2] < 1 and 30 < r[3] < 90, r
+    assert len(codes) == len(set(codes))

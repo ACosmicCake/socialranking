@@ -658,3 +658,16 @@ test("informal employment against ILO SDG 8.3.1", () => {
     // The work score itself doesn't change.
     assert.equal(run({...base, informal: "formal"}).work.global_pct, run(base).work.global_pct);
 });
+
+test("your region against the country and the world (Subnational HDI)", () => {
+    const regions = SES.regions("VNM");
+    assert.ok(regions.length >= 5);
+    const top = run({...FULL, region: regions.find(r => r[1] === "Red River Delta")[0]}).location.region;
+    const low = run({...FULL, region: regions.find(r => r[1] === "Central Highlands")[0]}).location.region;
+    assert.ok(top.values[0] > top.national[0] && low.values[0] < low.national[0]);
+    assert.ok(top.national_rank > low.national_rank && top.world_rank > low.world_rank);
+    assert.ok(top.world[0] > 0.6 && top.world[0] < 0.8 && top.world_regions > 1500);
+    // Unknown or missing regions are simply left out.
+    assert.equal(run({...FULL, region: "XYZr1"}).location.region, null);
+    assert.equal(run(FULL).location.region, null);
+});

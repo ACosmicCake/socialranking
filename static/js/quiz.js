@@ -42,6 +42,7 @@
             const values = String(value).split(",");
             inputs.forEach(input => {
                 if (input.type === "radio" || input.type === "checkbox") input.checked = values.includes(input.value);
+                else if (input.id === "region") input.dataset.pending = value;  // options arrive with the country
                 else input.value = value;
             });
         }
@@ -98,8 +99,22 @@
         });
     }
 
+    // Regions of the chosen country (Subnational HDI); the question hides where there are none.
+    const regionSelect = document.getElementById("region");
+    function updateRegions(iso3) {
+        if (!regionSelect) return;
+        const keep = regionSelect.value || regionSelect.dataset.pending || "";
+        delete regionSelect.dataset.pending;
+        const list = iso3 ? SES.regions(iso3) : [];
+        regionSelect.length = 1;
+        for (const [code, name] of list) regionSelect.add(new Option(name, code));
+        regionSelect.value = list.some(([code]) => code === keep) ? keep : "";
+        document.getElementById("q-region").hidden = !list.length;
+    }
+
     function updateCountry() {
         const opt = country.selectedOptions[0];
+        updateRegions(opt && opt.value);
         if (!opt || !opt.value) return;
         currencyLabel.textContent = opt.dataset.currency
             ? `${opt.dataset.currency} (${opt.dataset.currencyName})` : localCurrency;

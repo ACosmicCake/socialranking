@@ -1246,8 +1246,51 @@
             ["HD.HCI.OVRL", "HD.HCI.OVRL.FE", "HD.HCI.OVRL.MA"],
         ];
 
+        // Regions (Global Data Lab SHDI) of every economy: [code, name, hdi, life expectancy, expected
+        // schooling, mean schooling, GNI per person, population in thousands].
+        let allRegions = null, worldRegionMeans = null;
+        function regionWorld() {
+            if (!allRegions) {
+                allRegions = D.countries.flatMap(c => (c.subnational ? c.subnational.regions : []));
+                // Population-weighted averages of the national figures, for a world column.
+                const nat = D.countries.map(c => c.subnational && c.subnational.national).filter(Boolean);
+                worldRegionMeans = [0, 1, 2, 3, 4].map(i => {
+                    let s = 0, w = 0;
+                    for (const n of nat) if (n[i] !== null && n[5]) { s += n[i] * n[5]; w += n[5]; }
+                    return w ? s / w : null;
+                });
+            }
+            return {allRegions, worldRegionMeans};
+        }
+
+        // Share of the population (people level with you counting half) living in regions with a lower HDI.
+        function regionRank(regions, hdi) {
+            let below = 0, total = 0;
+            for (const r of regions) {
+                if (r[2] === null || !r[7]) continue;
+                total += r[7];
+                if (r[2] < hdi) below += r[7];
+                else if (r[2] === hdi) below += r[7] / 2;
+            }
+            return total ? pct(below / total) : null;
+        }
+
+        function scoreRegion(answers, country) {
+            const sub = country.subnational;
+            const r = sub && answers.region ? sub.regions.find(x => x[0] === answers.region) : null;
+            if (!r) return null;
+            const {allRegions: everywhere, worldRegionMeans: world} = regionWorld();
+            return {
+                code: r[0], name: r[1], year: sub.year, regions_in_country: sub.regions.length,
+                values: r.slice(2, 7), national: sub.national ? sub.national.slice(0, 5) : null, world,
+                national_rank: regionRank(sub.regions, r[2]), world_rank: regionRank(everywhere, r[2]),
+                world_regions: everywhere.length,
+            };
+        }
+
         function scoreLocation(country, answers) {
             const result = {glance: []};
+            result.region = scoreRegion(answers, country);
             const region = regionAggregate(country), group = incomeAggregate(country);
             const glance = GLANCE.slice();
             if (answers.sex === "F" || answers.sex === "M") {
@@ -1383,6 +1426,7 @@
             equivalentIncome: (iso3, pppPerDay, householdSize, period, today) =>
                 (byIso3[iso3] ? equivalentIncome(byIso3[iso3], pppPerDay, householdSize || 1, period || "month", today || new Date()) : null),
             emergencyAmount: (iso3, today) => (byIso3[iso3] ? emergencyAmount(byIso3[iso3], today || new Date()) : null),
+            regions: iso3 => ((byIso3[iso3] || {}).subnational || {regions: []}).regions.map(r => [r[0], r[1]]),
         };
     }
 

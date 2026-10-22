@@ -37,6 +37,10 @@ jobs:
 
       - name: Rebuild data from the latest releases
         run: python scripts/build_data.py --latest | tee build.log
+        env:
+          # Global Data Lab API token (free account) for the Subnational HDI. Without it the
+          # build keeps the regions already committed in data/countries.json.
+          GDL_TOKEN: ${{ secrets.GDL_TOKEN }}
 
       - name: Test
         run: python -m pytest -q
