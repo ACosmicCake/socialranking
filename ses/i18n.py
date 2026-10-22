@@ -285,6 +285,11 @@ QUESTIONS = {
     "account": {"text": "Bạn (tự mình hoặc cùng người khác) có tài khoản ở ngân hàng hoặc tổ chức tài chính khác, hoặc "
                         "dùng dịch vụ tiền di động không?"},
     "saved": {"text": "Trong 12 tháng qua, bạn có tự để dành được khoản tiền nào không, bằng bất kỳ cách nào?"},
+    "borrowed": {"text": "Trong 12 tháng qua, bạn có tự vay tiền từ ngân hàng hoặc tổ chức tài chính khác, hoặc qua tài "
+                         "khoản tiền di động không?"},
+    "digital_payment": {"text": "Trong 12 tháng qua, bạn có thực hiện hoặc nhận một khoản thanh toán điện tử không? Bao gồm "
+                                "trả bằng thẻ hoặc điện thoại, thanh toán trực tuyến, và lương, lương hưu hoặc tiền chuyển "
+                                "vào tài khoản."},
     "emergency_funds": {
         "text": "Hãy hình dung bạn gặp việc khẩn cấp và cần trả một khoản bằng một phần hai mươi thu nhập bình quân "
                 "đầu người một năm của nước bạn. Bạn có thể xoay được số tiền đó trong 30 ngày tới không, và khó đến mức nào?",

@@ -302,9 +302,6 @@ GALLUP_PEOPLE_HIGH = 750e6
 FINDEX = {
     "account_share": 0.79,
     "unbanked_adults": 1.3e9,
-    # Low- and middle-income economies only: Findex does not headline a
-    # worldwide "saved any money" share for 2024.
-    "saved_in_account_share_lmic": 0.40,
     "year": 2024,  # survey fieldwork year of the 2025 edition
     "cite": "findex_2025",
 }

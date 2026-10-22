@@ -545,3 +545,15 @@ test("Mobile phone is ranked as context only", () => {
     for (const g of groups) assert.ok(g.pct > 0 && g.pct < 50);
     assert.deepEqual(smart.phone.groups, []);
 });
+
+test("Saving, borrowing and digital payments are compared with Findex", () => {
+    const sec = run({...FULL, sex: "F", area: "urban", saved: "yes", borrowed: "no", digital_payment: "yes"}).security;
+    assert.deepEqual(sec.findex_yes.map(y => y.key), ["saved", "borrowed", "digital_payment"]);
+    for (const y of sec.findex_yes) assert.ok(y.world > 5 && y.world < 90 && y.country > 0 && y.year >= 2021);
+    // Splits only where Findex reports them (not for borrowing in Viet Nam).
+    assert.deepEqual(sec.findex_yes[0].groups.map(g => g.key), ["F", "urban"]);
+    assert.deepEqual(sec.findex_yes[1].groups, []);
+    assert.equal(sec.findex_yes[1].has, false);
+    // Context only: the security score doesn't change.
+    assert.equal(sec.global_pct, run(FULL).security.global_pct);
+});

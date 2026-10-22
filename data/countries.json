@@ -457,6 +457,20 @@
     "year": 2024
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.0562
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.0205
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.0788
+   }
+  },
   "occupation": {
    "year": 2013,
    "shares": [
@@ -1424,6 +1438,44 @@
    "emergency_amount": {
     "lcu": 56306.57,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.2858,
+    "by_sex": {
+     "F": 0.2638,
+     "M": 0.3099
+    },
+    "by_area": {
+     "rural": 0.2494,
+     "urban": 0.3517
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1085,
+    "by_sex": {
+     "F": 0.108,
+     "M": 0.109
+    },
+    "by_area": {
+     "rural": 0.0884,
+     "urban": 0.1448
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3531,
+    "by_sex": {
+     "F": 0.3203,
+     "M": 0.389
+    },
+    "by_area": {
+     "rural": 0.2942,
+     "urban": 0.4596
+    }
    }
   },
   "exchange_rate": {
@@ -2463,6 +2515,36 @@
    "emergency_amount": {
     "lcu": 39065.01,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3806,
+    "by_sex": {
+     "F": 0.2925,
+     "M": 0.4654
+    },
+    "by_area": {
+     "rural": 0.2609,
+     "urban": 0.4296
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0654
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.1309,
+    "by_sex": {
+     "F": 0.0597,
+     "M": 0.1995
+    },
+    "by_area": {
+     "rural": 0.0587,
+     "urban": 0.1602
+    }
    }
   },
   "exchange_rate": {
@@ -5185,6 +5267,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4805,
+    "by_sex": {
+     "F": 0.4444,
+     "M": 0.5209
+    },
+    "by_area": {
+     "rural": 0.4235,
+     "urban": 0.5086
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.3261,
+    "by_sex": {
+     "F": 0.3374,
+     "M": 0.3134
+    },
+    "by_area": {
+     "rural": 0.3144,
+     "urban": 0.3318
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7221,
+    "by_sex": {
+     "F": 0.7456,
+     "M": 0.6958
+    },
+    "by_area": {
+     "rural": 0.6439,
+     "urban": 0.7607
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 1240.85125,
    "year": 2025
@@ -6166,6 +6286,44 @@
    "emergency_amount": {
     "lcu": 177868.35,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4197,
+    "by_sex": {
+     "F": 0.4189,
+     "M": 0.4208
+    },
+    "by_area": {
+     "rural": 0.4356,
+     "urban": 0.401
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2336,
+    "by_sex": {
+     "F": 0.2364,
+     "M": 0.2302
+    },
+    "by_area": {
+     "rural": 0.2628,
+     "urban": 0.199
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6058,
+    "by_sex": {
+     "F": 0.5881,
+     "M": 0.6278
+    },
+    "by_area": {
+     "rural": 0.5975,
+     "urban": 0.6156
+    }
    }
   },
   "exchange_rate": {
@@ -7568,6 +7726,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8298,
+    "by_sex": {
+     "F": 0.8367,
+     "M": 0.8224
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.5729,
+    "by_sex": {
+     "F": 0.594,
+     "M": 0.5501
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9895,
+    "by_sex": {
+     "F": 0.9987,
+     "M": 0.9796
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 1.551998,
    "year": 2025
@@ -8473,6 +8657,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.92,
+    "by_sex": {
+     "F": 0.9198,
+     "M": 0.9202
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.5652,
+    "by_sex": {
+     "F": 0.5332,
+     "M": 0.5989
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.993,
+    "by_sex": {
+     "F": 0.9893,
+     "M": 0.9969
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 0.884969,
    "year": 2025
@@ -9172,6 +9382,44 @@
    "emergency_amount": {
     "lcu": 613.43,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.2666,
+    "by_sex": {
+     "F": 0.2364,
+     "M": 0.2984
+    },
+    "by_area": {
+     "rural": 0.2144,
+     "urban": 0.342
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2222,
+    "by_sex": {
+     "F": 0.1512,
+     "M": 0.2971
+    },
+    "by_area": {
+     "rural": 0.2138,
+     "urban": 0.2343
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5159,
+    "by_sex": {
+     "F": 0.4068,
+     "M": 0.6311
+    },
+    "by_area": {
+     "rural": 0.4661,
+     "urban": 0.588
+    }
    }
   },
   "exchange_rate": {
@@ -11530,6 +11778,44 @@
    "emergency_amount": {
     "lcu": 16557.4,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.2039,
+    "by_sex": {
+     "F": 0.1999,
+     "M": 0.208
+    },
+    "by_area": {
+     "rural": 0.2196,
+     "urban": 0.1838
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1315,
+    "by_sex": {
+     "F": 0.1297,
+     "M": 0.1333
+    },
+    "by_area": {
+     "rural": 0.1616,
+     "urban": 0.0929
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3395,
+    "by_sex": {
+     "F": 0.2339,
+     "M": 0.4481
+    },
+    "by_area": {
+     "rural": 0.35,
+     "urban": 0.326
+    }
    }
   },
   "exchange_rate": {
@@ -14009,6 +14295,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7164,
+    "by_sex": {
+     "F": 0.6753,
+     "M": 0.7592
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.4797,
+    "by_sex": {
+     "F": 0.4397,
+     "M": 0.5213
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9741,
+    "by_sex": {
+     "F": 0.9726,
+     "M": 0.9758
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 0.884969,
    "year": 2025
@@ -14941,6 +15253,44 @@
    "emergency_amount": {
     "lcu": 747.64,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6868,
+    "by_sex": {
+     "F": 0.6081,
+     "M": 0.7743
+    },
+    "by_area": {
+     "rural": 0.6688,
+     "urban": 0.775
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1891,
+    "by_sex": {
+     "F": 0.1633,
+     "M": 0.2178
+    },
+    "by_area": {
+     "rural": 0.1874,
+     "urban": 0.1976
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5116,
+    "by_sex": {
+     "F": 0.4549,
+     "M": 0.5746
+    },
+    "by_area": {
+     "rural": 0.4886,
+     "urban": 0.6237
+    }
    }
   },
   "exchange_rate": {
@@ -15912,6 +16262,44 @@
    "emergency_amount": {
     "lcu": 47699.74,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5822,
+    "by_sex": {
+     "F": 0.5685,
+     "M": 0.5979
+    },
+    "by_area": {
+     "rural": 0.5913,
+     "urban": 0.5623
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1268,
+    "by_sex": {
+     "F": 0.1311,
+     "M": 0.1219
+    },
+    "by_area": {
+     "rural": 0.1228,
+     "urban": 0.1356
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4775,
+    "by_sex": {
+     "F": 0.432,
+     "M": 0.5293
+    },
+    "by_area": {
+     "rural": 0.4767,
+     "urban": 0.4792
+    }
    }
   },
   "exchange_rate": {
@@ -17961,6 +18349,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5107,
+    "by_sex": {
+     "F": 0.4773,
+     "M": 0.5451
+    },
+    "by_area": {
+     "rural": 0.425,
+     "urban": 0.5881
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1929,
+    "by_sex": {
+     "F": 0.193,
+     "M": 0.1928
+    },
+    "by_area": {
+     "rural": 0.1822,
+     "urban": 0.2025
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4364,
+    "by_sex": {
+     "F": 0.4035,
+     "M": 0.4702
+    },
+    "by_area": {
+     "rural": 0.3645,
+     "urban": 0.5012
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 6.91,
    "year": 2025
@@ -18752,6 +19178,44 @@
    "emergency_amount": {
     "lcu": 900.47,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5038,
+    "by_sex": {
+     "F": 0.5061,
+     "M": 0.5015
+    },
+    "by_area": {
+     "rural": 0.4846,
+     "urban": 0.5922
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1169,
+    "by_sex": {
+     "F": 0.1001,
+     "M": 0.1345
+    },
+    "by_area": {
+     "rural": 0.1092,
+     "urban": 0.152
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6207,
+    "by_sex": {
+     "F": 0.5849,
+     "M": 0.6584
+    },
+    "by_area": {
+     "rural": 0.5906,
+     "urban": 0.7593
+    }
    }
   },
   "exchange_rate": {
@@ -19735,6 +20199,44 @@
    "emergency_amount": {
     "lcu": 5063.62,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5474,
+    "by_sex": {
+     "F": 0.5199,
+     "M": 0.5807
+    },
+    "by_area": {
+     "rural": 0.5208,
+     "urban": 0.6157
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2304,
+    "by_sex": {
+     "F": 0.2018,
+     "M": 0.2649
+    },
+    "by_area": {
+     "rural": 0.2241,
+     "urban": 0.2466
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5695,
+    "by_sex": {
+     "F": 0.5432,
+     "M": 0.6011
+    },
+    "by_area": {
+     "rural": 0.5651,
+     "urban": 0.5807
+    }
    }
   },
   "exchange_rate": {
@@ -20773,6 +21275,44 @@
    "emergency_amount": {
     "lcu": 2895.54,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4675,
+    "by_sex": {
+     "F": 0.3936,
+     "M": 0.5479
+    },
+    "by_area": {
+     "rural": 0.4483,
+     "urban": 0.4817
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.4692,
+    "by_sex": {
+     "F": 0.4039,
+     "M": 0.5404
+    },
+    "by_area": {
+     "rural": 0.4301,
+     "urban": 0.4982
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7736,
+    "by_sex": {
+     "F": 0.7283,
+     "M": 0.823
+    },
+    "by_area": {
+     "rural": 0.7444,
+     "urban": 0.7953
+    }
    }
   },
   "exchange_rate": {
@@ -22858,6 +23398,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6409,
+    "by_sex": {
+     "F": 0.6635,
+     "M": 0.6157
+    },
+    "by_area": {
+     "rural": 0.6057,
+     "urban": 0.7103
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1396,
+    "by_sex": {
+     "F": 0.1308,
+     "M": 0.1493
+    },
+    "by_area": {
+     "rural": 0.1136,
+     "urban": 0.1909
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.776,
+    "by_sex": {
+     "F": 0.7864,
+     "M": 0.7644
+    },
+    "by_area": {
+     "rural": 0.7287,
+     "urban": 0.8693
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 1.735192,
    "year": 2025
@@ -23614,6 +24192,36 @@
    "emergency_amount": {
     "lcu": 31427.88,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5602,
+    "by_sex": {
+     "F": 0.5342,
+     "M": 0.5895
+    },
+    "by_area": {
+     "rural": 0.5387,
+     "urban": 0.6405
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0845
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4844,
+    "by_sex": {
+     "F": 0.4174,
+     "M": 0.5597
+    },
+    "by_area": {
+     "rural": 0.4391,
+     "urban": 0.6532
+    }
    }
   },
   "exchange_rate": {
@@ -25505,6 +26113,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3974,
+    "by_sex": {
+     "F": 0.4005,
+     "M": 0.3938
+    },
+    "by_area": {
+     "rural": 0.3726,
+     "urban": 0.5276
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1653,
+    "by_sex": {
+     "F": 0.1521,
+     "M": 0.1804
+    },
+    "by_area": {
+     "rural": 0.1725,
+     "urban": 0.1275
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.323,
+    "by_sex": {
+     "F": 0.2981,
+     "M": 0.3514
+    },
+    "by_area": {
+     "rural": 0.2738,
+     "urban": 0.5814
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 4013.433104,
    "year": 2025
@@ -26527,6 +27173,44 @@
    "emergency_amount": {
     "lcu": 56492.31,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6566,
+    "by_sex": {
+     "F": 0.6459,
+     "M": 0.6679
+    },
+    "by_area": {
+     "rural": 0.5785,
+     "urban": 0.7401
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1008,
+    "by_sex": {
+     "F": 0.0773,
+     "M": 0.1258
+    },
+    "by_area": {
+     "rural": 0.0697,
+     "urban": 0.1341
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5964,
+    "by_sex": {
+     "F": 0.5166,
+     "M": 0.6812
+    },
+    "by_area": {
+     "rural": 0.484,
+     "urban": 0.7166
+    }
    }
   },
   "exchange_rate": {
@@ -27572,6 +28256,32 @@
    "emergency_amount": {
     "lcu": 3897.83,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7815,
+    "by_sex": {
+     "F": 0.7611,
+     "M": 0.8026
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.8101,
+    "by_sex": {
+     "F": 0.8119,
+     "M": 0.8081
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9835,
+    "by_sex": {
+     "F": 0.9836,
+     "M": 0.9834
+    }
    }
   },
   "exchange_rate": {
@@ -29994,6 +30704,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4555,
+    "by_sex": {
+     "F": 0.4287,
+     "M": 0.4836
+    },
+    "by_area": {
+     "rural": 0.436,
+     "urban": 0.6147
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1147,
+    "by_sex": {
+     "F": 0.104,
+     "M": 0.1259
+    },
+    "by_area": {
+     "rural": 0.1112,
+     "urban": 0.1433
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.1804,
+    "by_sex": {
+     "F": 0.1669,
+     "M": 0.1946
+    },
+    "by_area": {
+     "rural": 0.1625,
+     "urban": 0.3267
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 581.928481,
    "year": 2025
@@ -31380,6 +32128,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.5809,
+    "by_sex": {
+     "F": 0.5327,
+     "M": 0.635
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.2419,
+    "by_sex": {
+     "F": 0.2046,
+     "M": 0.2838
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.8429,
+    "by_sex": {
+     "F": 0.8412,
+     "M": 0.8448
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 951.329454,
    "year": 2025
@@ -32524,6 +33298,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.7553,
+    "by_sex": {
+     "F": 0.7479,
+     "M": 0.7624
+    },
+    "by_area": {
+     "rural": 0.682,
+     "urban": 0.7906
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.4075,
+    "by_sex": {
+     "F": 0.397,
+     "M": 0.4174
+    },
+    "by_area": {
+     "rural": 0.3385,
+     "urban": 0.4369
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8872,
+    "by_sex": {
+     "F": 0.889,
+     "M": 0.8855
+    },
+    "by_area": {
+     "rural": 0.8336,
+     "urban": 0.9108
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 7.189847,
    "year": 2025
@@ -33517,6 +34329,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.347,
+    "by_sex": {
+     "F": 0.3019,
+     "M": 0.396
+    },
+    "by_area": {
+     "rural": 0.295,
+     "urban": 0.3792
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1355,
+    "by_sex": {
+     "F": 0.0924,
+     "M": 0.1823
+    },
+    "by_area": {
+     "rural": 0.1144,
+     "urban": 0.1485
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4923,
+    "by_sex": {
+     "F": 0.4477,
+     "M": 0.5409
+    },
+    "by_area": {
+     "rural": 0.4267,
+     "urban": 0.533
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 4053.135833,
    "year": 2025
@@ -34361,6 +35211,44 @@
    "emergency_amount": {
     "lcu": 45090.51,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4432,
+    "by_sex": {
+     "F": 0.3641,
+     "M": 0.5337
+    },
+    "by_area": {
+     "rural": 0.4347,
+     "urban": 0.4847
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1067,
+    "by_sex": {
+     "F": 0.072,
+     "M": 0.1464
+    },
+    "by_area": {
+     "rural": 0.1158,
+     "urban": 0.0622
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2833,
+    "by_sex": {
+     "F": 0.2268,
+     "M": 0.348
+    },
+    "by_area": {
+     "rural": 0.281,
+     "urban": 0.2948
+    }
    }
   },
   "exchange_rate": {
@@ -35416,6 +36304,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5796,
+    "by_sex": {
+     "F": 0.5488,
+     "M": 0.6085
+    },
+    "by_area": {
+     "rural": 0.5255,
+     "urban": 0.6288
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0882
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3707,
+    "by_sex": {
+     "F": 0.3031,
+     "M": 0.4339
+    },
+    "by_area": {
+     "rural": 0.2722,
+     "urban": 0.4603
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 2693.240601,
    "year": 2025
@@ -36418,6 +37336,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5379,
+    "by_sex": {
+     "F": 0.513,
+     "M": 0.5628
+    },
+    "by_area": {
+     "rural": 0.4336,
+     "urban": 0.6263
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0636
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5417,
+    "by_sex": {
+     "F": 0.4857,
+     "M": 0.5976
+    },
+    "by_area": {
+     "rural": 0.45,
+     "urban": 0.6193
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 581.928481,
    "year": 2025
@@ -37317,6 +38265,44 @@
    "emergency_amount": {
     "lcu": 457387.88,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5128,
+    "by_sex": {
+     "F": 0.4567,
+     "M": 0.5707
+    },
+    "by_area": {
+     "rural": 0.4673,
+     "urban": 0.5545
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1423,
+    "by_sex": {
+     "F": 0.1353,
+     "M": 0.1496
+    },
+    "by_area": {
+     "rural": 0.1408,
+     "urban": 0.1437
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6046,
+    "by_sex": {
+     "F": 0.5561,
+     "M": 0.6546
+    },
+    "by_area": {
+     "rural": 0.6217,
+     "urban": 0.5889
+    }
    }
   },
   "exchange_rate": {
@@ -38394,6 +39380,44 @@
    "emergency_amount": {
     "lcu": 1186.66,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.653,
+    "by_sex": {
+     "F": 0.6278,
+     "M": 0.681
+    },
+    "by_area": {
+     "rural": 0.6432,
+     "urban": 0.6874
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.3777,
+    "by_sex": {
+     "F": 0.3589,
+     "M": 0.3985
+    },
+    "by_area": {
+     "rural": 0.3695,
+     "urban": 0.4067
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8845,
+    "by_sex": {
+     "F": 0.8688,
+     "M": 0.902
+    },
+    "by_area": {
+     "rural": 0.8733,
+     "urban": 0.9239
+    }
    }
   },
   "exchange_rate": {
@@ -40491,6 +41515,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.4514,
+    "by_sex": {
+     "F": 0.3978,
+     "M": 0.5119
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.3124,
+    "by_sex": {
+     "F": 0.2927,
+     "M": 0.3347
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.8719,
+    "by_sex": {
+     "F": 0.8633,
+     "M": 0.8817
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 0.884969,
    "year": 2025
@@ -41460,6 +42510,32 @@
    "emergency_amount": {
     "lcu": 37598.95,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8182,
+    "by_sex": {
+     "F": 0.7837,
+     "M": 0.8538
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.3133,
+    "by_sex": {
+     "F": 0.2734,
+     "M": 0.3544
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9411,
+    "by_sex": {
+     "F": 0.9222,
+     "M": 0.9606
+    }
    }
   },
   "exchange_rate": {
@@ -42462,6 +43538,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.643,
+    "by_sex": {
+     "F": 0.6395,
+     "M": 0.6463
+    },
+    "by_area": {
+     "rural": 0.616,
+     "urban": 0.6953
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0624
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5647,
+    "by_sex": {
+     "F": 0.5248,
+     "M": 0.6034
+    },
+    "by_area": {
+     "rural": 0.4985,
+     "urban": 0.6932
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 581.928481,
    "year": 2025
@@ -43450,6 +44556,32 @@
    "emergency_amount": {
     "lcu": 26169.27,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8457,
+    "by_sex": {
+     "F": 0.8727,
+     "M": 0.8191
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.5316,
+    "by_sex": {
+     "F": 0.4839,
+     "M": 0.5783
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 1.0,
+    "by_sex": {
+     "F": 1.0,
+     "M": 1.0
+    }
    }
   },
   "exchange_rate": {
@@ -45537,6 +46669,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5213,
+    "by_sex": {
+     "F": 0.463,
+     "M": 0.5817
+    },
+    "by_area": {
+     "rural": 0.4998,
+     "urban": 0.5326
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2929,
+    "by_sex": {
+     "F": 0.2479,
+     "M": 0.3396
+    },
+    "by_area": {
+     "rural": 0.3132,
+     "urban": 0.2822
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5253,
+    "by_sex": {
+     "F": 0.4955,
+     "M": 0.5561
+    },
+    "by_area": {
+     "rural": 0.5327,
+     "urban": 0.5213
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 61.986567,
    "year": 2025
@@ -46619,6 +47789,44 @@
    "emergency_amount": {
     "lcu": 346.41,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3643,
+    "by_sex": {
+     "F": 0.3048,
+     "M": 0.4299
+    },
+    "by_area": {
+     "rural": 0.3231,
+     "urban": 0.4014
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1615,
+    "by_sex": {
+     "F": 0.1163,
+     "M": 0.2113
+    },
+    "by_area": {
+     "rural": 0.1504,
+     "urban": 0.1715
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.433,
+    "by_sex": {
+     "F": 0.3564,
+     "M": 0.5173
+    },
+    "by_area": {
+     "rural": 0.4157,
+     "urban": 0.4485
+    }
    }
   },
   "exchange_rate": {
@@ -47707,6 +48915,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.23,
+    "by_sex": {
+     "F": 0.1647,
+     "M": 0.2939
+    },
+    "by_area": {
+     "rural": 0.1952,
+     "urban": 0.2499
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1043,
+    "by_sex": {
+     "F": 0.1186,
+     "M": 0.0903
+    },
+    "by_area": {
+     "rural": 0.0982,
+     "urban": 0.1078
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3633,
+    "by_sex": {
+     "F": 0.3155,
+     "M": 0.41
+    },
+    "by_area": {
+     "rural": 0.3467,
+     "urban": 0.3728
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 49.227756,
    "year": 2025
@@ -48785,6 +50031,44 @@
    "emergency_amount": {
     "lcu": 268.73,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4049,
+    "by_sex": {
+     "F": 0.3445,
+     "M": 0.4808
+    },
+    "by_area": {
+     "rural": 0.3482,
+     "urban": 0.4785
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1148,
+    "by_sex": {
+     "F": 0.0966,
+     "M": 0.1377
+    },
+    "by_area": {
+     "rural": 0.0989,
+     "urban": 0.1355
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2796,
+    "by_sex": {
+     "F": 0.2312,
+     "M": 0.3406
+    },
+    "by_area": {
+     "rural": 0.2419,
+     "urban": 0.3286
+    }
    }
   },
   "exchange_rate": {
@@ -50727,6 +52011,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7777,
+    "by_sex": {
+     "F": 0.7702,
+     "M": 0.7863
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.3364,
+    "by_sex": {
+     "F": 0.3294,
+     "M": 0.3445
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9865,
+    "by_sex": {
+     "F": 0.994,
+     "M": 0.9778
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 0.884969,
    "year": 2025
@@ -51715,6 +53025,41 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.583,
+    "by_sex": {
+     "F": 0.5965,
+     "M": 0.5654
+    },
+    "by_area": {
+     "rural": 0.583
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2351,
+    "by_sex": {
+     "F": 0.2048,
+     "M": 0.2746
+    },
+    "by_area": {
+     "rural": 0.2351
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6122,
+    "by_sex": {
+     "F": 0.6181,
+     "M": 0.6046
+    },
+    "by_area": {
+     "rural": 0.6122
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 17.888921,
    "year": 2025
@@ -52535,6 +53880,36 @@
    "emergency_amount": {
     "lcu": 5561.54,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4907,
+    "by_sex": {
+     "F": 0.4929,
+     "M": 0.4885
+    },
+    "by_area": {
+     "rural": 0.4707,
+     "urban": 0.579
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0432
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2066,
+    "by_sex": {
+     "F": 0.1572,
+     "M": 0.2593
+    },
+    "by_area": {
+     "rural": 0.1631,
+     "urban": 0.3981
+    }
    }
   },
   "exchange_rate": {
@@ -54712,6 +56087,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7627,
+    "by_sex": {
+     "F": 0.7852,
+     "M": 0.7393
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.5297,
+    "by_sex": {
+     "F": 0.5266,
+     "M": 0.5329
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9847,
+    "by_sex": {
+     "F": 0.9851,
+     "M": 0.9844
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 0.884969,
    "year": 2025
@@ -55679,6 +57080,32 @@
    "emergency_amount": {
     "lcu": 2205.95,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7292,
+    "by_sex": {
+     "F": 0.7265,
+     "M": 0.732
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.4436,
+    "by_sex": {
+     "F": 0.4402,
+     "M": 0.4473
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9845,
+    "by_sex": {
+     "F": 0.9912,
+     "M": 0.9772
+    }
    }
   },
   "exchange_rate": {
@@ -57017,6 +58444,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.697,
+    "by_sex": {
+     "F": 0.722,
+     "M": 0.6733
+    },
+    "by_area": {
+     "rural": 0.6476,
+     "urban": 0.7423
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0649
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6652,
+    "by_sex": {
+     "F": 0.6197,
+     "M": 0.7083
+    },
+    "by_area": {
+     "rural": 0.6264,
+     "urban": 0.7007
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 581.928481,
    "year": 2025
@@ -57957,6 +59414,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5644,
+    "by_sex": {
+     "F": 0.6029,
+     "M": 0.5227
+    },
+    "by_area": {
+     "rural": 0.5842,
+     "urban": 0.5434
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0551
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2771,
+    "by_sex": {
+     "F": 0.2395,
+     "M": 0.3177
+    },
+    "by_area": {
+     "rural": 0.191,
+     "urban": 0.3682
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 71.289382,
    "year": 2025
@@ -58780,6 +60267,44 @@
    "emergency_amount": {
     "lcu": 1245.44,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3622,
+    "by_sex": {
+     "F": 0.365,
+     "M": 0.3588
+    },
+    "by_area": {
+     "rural": 0.3373,
+     "urban": 0.4016
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2441,
+    "by_sex": {
+     "F": 0.2614,
+     "M": 0.2238
+    },
+    "by_area": {
+     "rural": 0.2362,
+     "urban": 0.2566
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6938,
+    "by_sex": {
+     "F": 0.6983,
+     "M": 0.6886
+    },
+    "by_area": {
+     "rural": 0.6288,
+     "urban": 0.7969
+    }
    }
   },
   "exchange_rate": {
@@ -59812,6 +61337,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.856,
+    "by_sex": {
+     "F": 0.8568,
+     "M": 0.8551
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.5467,
+    "by_sex": {
+     "F": 0.5849,
+     "M": 0.5066
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9948,
+    "by_sex": {
+     "F": 0.9929,
+     "M": 0.9968
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 0.884969,
    "year": 2025
@@ -60819,6 +62370,44 @@
    "emergency_amount": {
     "lcu": 1919.91,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.8201,
+    "by_sex": {
+     "F": 0.7983,
+     "M": 0.8438
+    },
+    "by_area": {
+     "rural": 0.8143,
+     "urban": 0.8271
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2949,
+    "by_sex": {
+     "F": 0.2507,
+     "M": 0.3427
+    },
+    "by_area": {
+     "rural": 0.2545,
+     "urban": 0.343
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8036,
+    "by_sex": {
+     "F": 0.77,
+     "M": 0.8401
+    },
+    "by_area": {
+     "rural": 0.7486,
+     "urban": 0.8693
+    }
    }
   },
   "exchange_rate": {
@@ -62129,6 +63718,32 @@
    "emergency_amount": {
     "lcu": 1167.35,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.4502,
+    "by_sex": {
+     "F": 0.4292,
+     "M": 0.4712
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.2011,
+    "by_sex": {
+     "F": 0.1487,
+     "M": 0.253
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.914,
+    "by_sex": {
+     "F": 0.884,
+     "M": 0.9437
+    }
    }
   },
   "exchange_rate": {
@@ -64187,6 +65802,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.34,
+    "by_sex": {
+     "F": 0.2955,
+     "M": 0.389
+    },
+    "by_area": {
+     "rural": 0.2957,
+     "urban": 0.4384
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0892
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2258,
+    "by_sex": {
+     "F": 0.1837,
+     "M": 0.2721
+    },
+    "by_area": {
+     "rural": 0.1926,
+     "urban": 0.2995
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 7.680125,
    "year": 2025
@@ -64953,6 +66598,44 @@
    "emergency_amount": {
     "lcu": 776359.14,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5142,
+    "by_sex": {
+     "F": 0.4982,
+     "M": 0.5302
+    },
+    "by_area": {
+     "rural": 0.4437,
+     "urban": 0.6836
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1084,
+    "by_sex": {
+     "F": 0.0955,
+     "M": 0.1213
+    },
+    "by_area": {
+     "rural": 0.1013,
+     "urban": 0.1256
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3177,
+    "by_sex": {
+     "F": 0.2646,
+     "M": 0.3708
+    },
+    "by_area": {
+     "rural": 0.256,
+     "urban": 0.4659
+    }
    }
   },
   "healthy_diet": {
@@ -68239,6 +69922,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4124,
+    "by_sex": {
+     "F": 0.352,
+     "M": 0.4871
+    },
+    "by_area": {
+     "rural": 0.3708,
+     "urban": 0.4711
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1057,
+    "by_sex": {
+     "F": 0.0925,
+     "M": 0.1222
+    },
+    "by_area": {
+     "rural": 0.1125,
+     "urban": 0.0962
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3005,
+    "by_sex": {
+     "F": 0.2104,
+     "M": 0.4119
+    },
+    "by_area": {
+     "rural": 0.2533,
+     "urban": 0.3669
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 25.952675,
    "year": 2025
@@ -69271,6 +70992,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.679,
+    "by_sex": {
+     "F": 0.6591,
+     "M": 0.703
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.7,
+    "by_sex": {
+     "F": 0.7226,
+     "M": 0.6727
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9277,
+    "by_sex": {
+     "F": 0.9161,
+     "M": 0.9418
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 7.797083,
    "year": 2025
@@ -70094,6 +71841,32 @@
    "emergency_amount": {
     "lcu": 446407.93,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.5878,
+    "by_sex": {
+     "F": 0.5638,
+     "M": 0.6148
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.1892,
+    "by_sex": {
+     "F": 0.1719,
+     "M": 0.2087
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.8637,
+    "by_sex": {
+     "F": 0.8458,
+     "M": 0.8839
+    }
    }
   },
   "exchange_rate": {
@@ -71077,6 +72850,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8867,
+    "by_sex": {
+     "F": 0.8838,
+     "M": 0.8895
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.7336,
+    "by_sex": {
+     "F": 0.7174,
+     "M": 0.7495
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9987,
+    "by_sex": {
+     "F": 1.0,
+     "M": 0.9975
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 128.441487,
    "year": 2025
@@ -72053,6 +73852,44 @@
    "emergency_amount": {
     "lcu": 11652.76,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3865,
+    "by_sex": {
+     "F": 0.3552,
+     "M": 0.4172
+    },
+    "by_area": {
+     "rural": 0.3633,
+     "urban": 0.4369
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1509,
+    "by_sex": {
+     "F": 0.12,
+     "M": 0.1812
+    },
+    "by_area": {
+     "rural": 0.1572,
+     "urban": 0.137
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4846,
+    "by_sex": {
+     "F": 0.4267,
+     "M": 0.5415
+    },
+    "by_area": {
+     "rural": 0.482,
+     "urban": 0.4902
+    }
    }
   },
   "exchange_rate": {
@@ -73127,6 +74964,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5299,
+    "by_sex": {
+     "F": 0.5646,
+     "M": 0.4956
+    },
+    "by_area": {
+     "rural": 0.525,
+     "urban": 0.5355
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1512,
+    "by_sex": {
+     "F": 0.1495,
+     "M": 0.1529
+    },
+    "by_area": {
+     "rural": 0.1592,
+     "urban": 0.1422
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4269,
+    "by_sex": {
+     "F": 0.4348,
+     "M": 0.4191
+    },
+    "by_area": {
+     "rural": 0.4051,
+     "urban": 0.4517
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 16477.86518,
    "year": 2025
@@ -74199,6 +76074,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4835,
+    "by_sex": {
+     "F": 0.4608,
+     "M": 0.5061
+    },
+    "by_area": {
+     "rural": 0.4749,
+     "urban": 0.4925
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2373,
+    "by_sex": {
+     "F": 0.1976,
+     "M": 0.2769
+    },
+    "by_area": {
+     "rural": 0.2394,
+     "urban": 0.2351
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8598,
+    "by_sex": {
+     "F": 0.8164,
+     "M": 0.9032
+    },
+    "by_area": {
+     "rural": 0.87,
+     "urban": 0.8492
+    }
+   }
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.374,
@@ -75230,6 +77143,44 @@
    "emergency_amount": {
     "lcu": 352225.37,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4334,
+    "by_sex": {
+     "F": 0.4032,
+     "M": 0.4617
+    },
+    "by_area": {
+     "rural": 0.366,
+     "urban": 0.4805
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1163,
+    "by_sex": {
+     "F": 0.0597,
+     "M": 0.1692
+    },
+    "by_area": {
+     "rural": 0.0911,
+     "urban": 0.1338
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2498,
+    "by_sex": {
+     "F": 0.1555,
+     "M": 0.338
+    },
+    "by_area": {
+     "rural": 0.2246,
+     "urban": 0.2674
+    }
    }
   },
   "exchange_rate": {
@@ -76271,6 +78222,32 @@
    "emergency_amount": {
     "lcu": 3991.37,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8527,
+    "by_sex": {
+     "F": 0.8404,
+     "M": 0.8655
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.541,
+    "by_sex": {
+     "F": 0.5668,
+     "M": 0.5143
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9822,
+    "by_sex": {
+     "F": 0.9847,
+     "M": 0.9795
+    }
    }
   },
   "exchange_rate": {
@@ -77511,6 +79488,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.6914,
+    "by_sex": {
+     "F": 0.6668,
+     "M": 0.7172
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.7951,
+    "by_sex": {
+     "F": 0.8049,
+     "M": 0.7849
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9116,
+    "by_sex": {
+     "F": 0.9007,
+     "M": 0.923
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 3.451892,
    "year": 2025
@@ -78415,6 +80418,32 @@
    "emergency_amount": {
     "lcu": 1918.53,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7274,
+    "by_sex": {
+     "F": 0.6821,
+     "M": 0.7696
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.55,
+    "by_sex": {
+     "F": 0.5591,
+     "M": 0.5415
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9578,
+    "by_sex": {
+     "F": 0.9515,
+     "M": 0.9636
+    }
    }
   },
   "exchange_rate": {
@@ -79372,6 +81401,32 @@
    "emergency_amount": {
     "lcu": 62686.65,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.6349,
+    "by_sex": {
+     "F": 0.6052,
+     "M": 0.6655
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.1204,
+    "by_sex": {
+     "F": 0.1042,
+     "M": 0.1371
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.4967,
+    "by_sex": {
+     "F": 0.4564,
+     "M": 0.5383
+    }
    }
   },
   "exchange_rate": {
@@ -80351,6 +82406,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8194,
+    "by_sex": {
+     "F": 0.809,
+     "M": 0.8305
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.6119,
+    "by_sex": {
+     "F": 0.6,
+     "M": 0.6245
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9579,
+    "by_sex": {
+     "F": 0.9566,
+     "M": 0.9593
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 149.657927,
    "year": 2025
@@ -81250,6 +83331,44 @@
    "emergency_amount": {
     "lcu": 186.91,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3161,
+    "by_sex": {
+     "F": 0.3313,
+     "M": 0.302
+    },
+    "by_area": {
+     "rural": 0.2661,
+     "urban": 0.3381
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1269,
+    "by_sex": {
+     "F": 0.1068,
+     "M": 0.1455
+    },
+    "by_area": {
+     "rural": 0.1464,
+     "urban": 0.1183
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3823,
+    "by_sex": {
+     "F": 0.2817,
+     "M": 0.4753
+    },
+    "by_area": {
+     "rural": 0.3696,
+     "urban": 0.3879
+    }
    }
   },
   "exchange_rate": {
@@ -82294,6 +84413,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5296,
+    "by_sex": {
+     "F": 0.4953,
+     "M": 0.5676
+    },
+    "by_area": {
+     "rural": 0.5457,
+     "urban": 0.512
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.3278,
+    "by_sex": {
+     "F": 0.3021,
+     "M": 0.3563
+    },
+    "by_area": {
+     "rural": 0.3302,
+     "urban": 0.325
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8502,
+    "by_sex": {
+     "F": 0.821,
+     "M": 0.8827
+    },
+    "by_area": {
+     "rural": 0.8279,
+     "urban": 0.8746
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 521.035,
    "year": 2025
@@ -83286,6 +85443,44 @@
    "emergency_amount": {
     "lcu": 15036.33,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.7019,
+    "by_sex": {
+     "F": 0.6797,
+     "M": 0.7252
+    },
+    "by_area": {
+     "rural": 0.687,
+     "urban": 0.7556
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.3755,
+    "by_sex": {
+     "F": 0.2993,
+     "M": 0.4552
+    },
+    "by_area": {
+     "rural": 0.3622,
+     "urban": 0.4232
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8928,
+    "by_sex": {
+     "F": 0.855,
+     "M": 0.9324
+    },
+    "by_area": {
+     "rural": 0.8767,
+     "urban": 0.9507
+    }
    }
   },
   "exchange_rate": {
@@ -84521,6 +86716,36 @@
    "emergency_amount": {
     "lcu": 356.61,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3513,
+    "by_sex": {
+     "F": 0.3624,
+     "M": 0.3397
+    },
+    "by_area": {
+     "rural": 0.3394,
+     "urban": 0.3892
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0962
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4714,
+    "by_sex": {
+     "F": 0.4565,
+     "M": 0.4872
+    },
+    "by_area": {
+     "rural": 0.4302,
+     "urban": 0.6024
+    }
    }
   },
   "exchange_rate": {
@@ -86181,6 +88406,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4374,
+    "by_sex": {
+     "F": 0.4816,
+     "M": 0.3896
+    },
+    "by_area": {
+     "rural": 0.4306,
+     "urban": 0.4586
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1801,
+    "by_sex": {
+     "F": 0.1714,
+     "M": 0.1895
+    },
+    "by_area": {
+     "rural": 0.178,
+     "urban": 0.1867
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6746,
+    "by_sex": {
+     "F": 0.6539,
+     "M": 0.697
+    },
+    "by_area": {
+     "rural": 0.661,
+     "urban": 0.7173
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 87.359832,
    "year": 2025
@@ -87250,6 +89513,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3564,
+    "by_sex": {
+     "F": 0.3841,
+     "M": 0.3287
+    },
+    "by_area": {
+     "rural": 0.3553,
+     "urban": 0.3798
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0689
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2653,
+    "by_sex": {
+     "F": 0.3084,
+     "M": 0.2222
+    },
+    "by_area": {
+     "rural": 0.2511,
+     "urban": 0.5686
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 20444.136652,
    "year": 2025
@@ -88208,6 +90501,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.6955,
+    "by_sex": {
+     "F": 0.6594,
+     "M": 0.7383
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.2273,
+    "by_sex": {
+     "F": 0.1861,
+     "M": 0.2763
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9535,
+    "by_sex": {
+     "F": 0.9584,
+     "M": 0.9476
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 0.884969,
    "year": 2025
@@ -89015,6 +91334,36 @@
    "emergency_amount": {
     "lcu": 19811503.01,
     "year": 2024
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.2856,
+    "by_sex": {
+     "F": 0.3123,
+     "M": 0.2579
+    },
+    "by_area": {
+     "rural": 0.2723,
+     "urban": 0.3115
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0593
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2025,
+    "by_sex": {
+     "F": 0.1367,
+     "M": 0.2707
+    },
+    "by_area": {
+     "rural": 0.2242,
+     "urban": 0.1602
+    }
    }
   },
   "exchange_rate": {
@@ -89978,6 +92327,44 @@
    "emergency_amount": {
     "lcu": 1192.81,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5416,
+    "by_sex": {
+     "F": 0.5428,
+     "M": 0.5401
+    },
+    "by_area": {
+     "rural": 0.532,
+     "urban": 0.6089
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1665,
+    "by_sex": {
+     "F": 0.1766,
+     "M": 0.1546
+    },
+    "by_area": {
+     "rural": 0.1672,
+     "urban": 0.1614
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5835,
+    "by_sex": {
+     "F": 0.5774,
+     "M": 0.5908
+    },
+    "by_area": {
+     "rural": 0.5777,
+     "urban": 0.625
+    }
    }
   },
   "exchange_rate": {
@@ -91041,6 +93428,44 @@
     }
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.7017,
+    "by_sex": {
+     "F": 0.6757,
+     "M": 0.7276
+    },
+    "by_area": {
+     "rural": 0.6936,
+     "urban": 0.7152
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1253,
+    "by_sex": {
+     "F": 0.1285,
+     "M": 0.122
+    },
+    "by_area": {
+     "rural": 0.1356,
+     "urban": 0.1083
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5019,
+    "by_sex": {
+     "F": 0.4375,
+     "M": 0.5661
+    },
+    "by_area": {
+     "rural": 0.445,
+     "urban": 0.5963
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 191.306667,
    "year": 2024
@@ -91951,6 +94376,44 @@
    "emergency_amount": {
     "lcu": 1775.21,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.37,
+    "by_sex": {
+     "F": 0.3574,
+     "M": 0.3824
+    },
+    "by_area": {
+     "rural": 0.3617,
+     "urban": 0.377
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1217,
+    "by_sex": {
+     "F": 0.0905,
+     "M": 0.1525
+    },
+    "by_area": {
+     "rural": 0.11,
+     "urban": 0.1316
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2347,
+    "by_sex": {
+     "F": 0.1635,
+     "M": 0.3049
+    },
+    "by_area": {
+     "rural": 0.2345,
+     "urban": 0.2349
+    }
    }
   },
   "exchange_rate": {
@@ -93061,6 +95524,32 @@
    "emergency_amount": {
     "lcu": 1411.59,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.6562,
+    "by_sex": {
+     "F": 0.612,
+     "M": 0.7046
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.1195,
+    "by_sex": {
+     "F": 0.099,
+     "M": 0.1419
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9076,
+    "by_sex": {
+     "F": 0.8813,
+     "M": 0.9365
+    }
    }
   },
   "exchange_rate": {
@@ -95506,6 +97995,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.2938,
+    "by_sex": {
+     "F": 0.2721,
+     "M": 0.3173
+    },
+    "by_area": {
+     "rural": 0.281,
+     "urban": 0.3605
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0678
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2174,
+    "by_sex": {
+     "F": 0.17,
+     "M": 0.2689
+    },
+    "by_area": {
+     "rural": 0.1922,
+     "urban": 0.3487
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 4529.751252,
    "year": 2025
@@ -96530,6 +99049,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6129,
+    "by_sex": {
+     "F": 0.6134,
+     "M": 0.6123
+    },
+    "by_area": {
+     "rural": 0.6211,
+     "urban": 0.5388
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1078,
+    "by_sex": {
+     "F": 0.1068,
+     "M": 0.109
+    },
+    "by_area": {
+     "rural": 0.1097,
+     "urban": 0.0915
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4886,
+    "by_sex": {
+     "F": 0.4514,
+     "M": 0.5292
+    },
+    "by_area": {
+     "rural": 0.474,
+     "urban": 0.6198
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 1161.094367,
    "year": 2023
@@ -97521,6 +100078,44 @@
    "emergency_amount": {
     "lcu": 2715.0,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6174,
+    "by_sex": {
+     "F": 0.5945,
+     "M": 0.6395
+    },
+    "by_area": {
+     "rural": 0.5883,
+     "urban": 0.6426
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1505,
+    "by_sex": {
+     "F": 0.1012,
+     "M": 0.1981
+    },
+    "by_area": {
+     "rural": 0.1139,
+     "urban": 0.1823
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7747,
+    "by_sex": {
+     "F": 0.7426,
+     "M": 0.8057
+    },
+    "by_area": {
+     "rural": 0.7383,
+     "urban": 0.8063
+    }
    }
   },
   "exchange_rate": {
@@ -99403,6 +101998,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.658,
+    "by_sex": {
+     "F": 0.6768,
+     "M": 0.6385
+    },
+    "by_area": {
+     "rural": 0.6216,
+     "urban": 0.7692
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1179,
+    "by_sex": {
+     "F": 0.1068,
+     "M": 0.1293
+    },
+    "by_area": {
+     "rural": 0.1107,
+     "urban": 0.1398
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5177,
+    "by_sex": {
+     "F": 0.4251,
+     "M": 0.6133
+    },
+    "by_area": {
+     "rural": 0.4889,
+     "urban": 0.6056
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 581.928481,
    "year": 2025
@@ -100371,6 +103004,32 @@
    "emergency_amount": {
     "lcu": 1905.11,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7064,
+    "by_sex": {
+     "F": 0.6556,
+     "M": 0.7572
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.3894,
+    "by_sex": {
+     "F": 0.3293,
+     "M": 0.4494
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9073,
+    "by_sex": {
+     "F": 0.8895,
+     "M": 0.9251
+    }
    }
   },
   "exchange_rate": {
@@ -101848,6 +104507,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4832,
+    "by_sex": {
+     "F": 0.4741,
+     "M": 0.4933
+    },
+    "by_area": {
+     "rural": 0.4213,
+     "urban": 0.6202
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1333,
+    "by_sex": {
+     "F": 0.1205,
+     "M": 0.1477
+    },
+    "by_area": {
+     "rural": 0.1214,
+     "urban": 0.1596
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2438,
+    "by_sex": {
+     "F": 0.2116,
+     "M": 0.28
+    },
+    "by_area": {
+     "rural": 0.1854,
+     "urban": 0.3731
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 36.489167,
    "year": 2023
@@ -102888,6 +105585,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4837,
+    "by_sex": {
+     "F": 0.4448,
+     "M": 0.5231
+    },
+    "by_area": {
+     "rural": 0.4657,
+     "urban": 0.5141
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1888,
+    "by_sex": {
+     "F": 0.1436,
+     "M": 0.2346
+    },
+    "by_area": {
+     "rural": 0.1866,
+     "urban": 0.1925
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6404,
+    "by_sex": {
+     "F": 0.5883,
+     "M": 0.6933
+    },
+    "by_area": {
+     "rural": 0.6369,
+     "urban": 0.6464
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 45.996967,
    "year": 2025
@@ -103900,6 +106635,44 @@
    "emergency_amount": {
     "lcu": 12949.03,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4834,
+    "by_sex": {
+     "F": 0.4221,
+     "M": 0.5499
+    },
+    "by_area": {
+     "rural": 0.4023,
+     "urban": 0.5411
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1514,
+    "by_sex": {
+     "F": 0.1054,
+     "M": 0.2014
+    },
+    "by_area": {
+     "rural": 0.1267,
+     "urban": 0.169
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4139,
+    "by_sex": {
+     "F": 0.3454,
+     "M": 0.4883
+    },
+    "by_area": {
+     "rural": 0.3333,
+     "urban": 0.4712
+    }
    }
   },
   "exchange_rate": {
@@ -105184,6 +107957,36 @@
    "emergency_amount": {
     "lcu": 7485.28,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4088,
+    "by_sex": {
+     "F": 0.3984,
+     "M": 0.4207
+    },
+    "by_area": {
+     "rural": 0.3805,
+     "urban": 0.5069
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.098
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5046,
+    "by_sex": {
+     "F": 0.4909,
+     "M": 0.5203
+    },
+    "by_area": {
+     "rural": 0.4318,
+     "urban": 0.7573
+    }
    }
   },
   "exchange_rate": {
@@ -106493,6 +109296,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4791,
+    "by_sex": {
+     "F": 0.4885,
+     "M": 0.4688
+    },
+    "by_area": {
+     "rural": 0.416,
+     "urban": 0.5574
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.4191,
+    "by_sex": {
+     "F": 0.4333,
+     "M": 0.4034
+    },
+    "by_area": {
+     "rural": 0.4437,
+     "urban": 0.3886
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.9491,
+    "by_sex": {
+     "F": 0.965,
+     "M": 0.9314
+    },
+    "by_area": {
+     "rural": 0.9477,
+     "urban": 0.9507
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 3545.143566,
    "year": 2025
@@ -107332,6 +110173,44 @@
    "emergency_amount": {
     "lcu": 660.67,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3938,
+    "by_sex": {
+     "F": 0.3439,
+     "M": 0.4466
+    },
+    "by_area": {
+     "rural": 0.3507,
+     "urban": 0.4948
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.159,
+    "by_sex": {
+     "F": 0.1318,
+     "M": 0.1878
+    },
+    "by_area": {
+     "rural": 0.1481,
+     "urban": 0.1846
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6434,
+    "by_sex": {
+     "F": 0.5925,
+     "M": 0.6973
+    },
+    "by_area": {
+     "rural": 0.6417,
+     "urban": 0.6473
+    }
    }
   },
   "exchange_rate": {
@@ -108359,6 +111238,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.2166,
+    "by_sex": {
+     "F": 0.168,
+     "M": 0.2679
+    },
+    "by_area": {
+     "rural": 0.1673,
+     "urban": 0.2579
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0137
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3199,
+    "by_sex": {
+     "F": 0.2302,
+     "M": 0.4147
+    },
+    "by_area": {
+     "rural": 0.2907,
+     "urban": 0.3444
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 9.350277,
    "year": 2025
@@ -109316,6 +112225,44 @@
    "emergency_amount": {
     "lcu": 1825.43,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.477,
+    "by_sex": {
+     "F": 0.4229,
+     "M": 0.5316
+    },
+    "by_area": {
+     "rural": 0.4452,
+     "urban": 0.5921
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1453,
+    "by_sex": {
+     "F": 0.1042,
+     "M": 0.1868
+    },
+    "by_area": {
+     "rural": 0.1228,
+     "urban": 0.2268
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5051,
+    "by_sex": {
+     "F": 0.4121,
+     "M": 0.5989
+    },
+    "by_area": {
+     "rural": 0.437,
+     "urban": 0.7515
+    }
    }
   },
   "exchange_rate": {
@@ -110325,6 +113272,28 @@
    "emergency_amount": {
     "lcu": 153119.73,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.4193,
+    "by_sex": {
+     "F": 0.4095,
+     "M": 0.4296
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.0995
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.3991,
+    "by_sex": {
+     "F": 0.3666,
+     "M": 0.4333
+    }
    }
   },
   "occupation": {
@@ -111396,6 +114365,44 @@
    "emergency_amount": {
     "lcu": 4098.19,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6056,
+    "by_sex": {
+     "F": 0.6273,
+     "M": 0.5825
+    },
+    "by_area": {
+     "rural": 0.6085,
+     "urban": 0.5942
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2181,
+    "by_sex": {
+     "F": 0.2202,
+     "M": 0.2159
+    },
+    "by_area": {
+     "rural": 0.2251,
+     "urban": 0.1902
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6762,
+    "by_sex": {
+     "F": 0.6822,
+     "M": 0.6698
+    },
+    "by_area": {
+     "rural": 0.6529,
+     "urban": 0.7688
+    }
    }
   },
   "exchange_rate": {
@@ -112855,6 +115862,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.374,
+    "by_sex": {
+     "F": 0.3903,
+     "M": 0.356
+    },
+    "by_area": {
+     "rural": 0.3677,
+     "urban": 0.4036
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.164,
+    "by_sex": {
+     "F": 0.1992,
+     "M": 0.1252
+    },
+    "by_area": {
+     "rural": 0.1734,
+     "urban": 0.1201
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2807,
+    "by_sex": {
+     "F": 0.2179,
+     "M": 0.3502
+    },
+    "by_area": {
+     "rural": 0.2667,
+     "urban": 0.3462
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 139.115438,
    "year": 2025
@@ -113894,6 +116939,32 @@
    "emergency_amount": {
     "lcu": 3191.53,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8082,
+    "by_sex": {
+     "F": 0.7919,
+     "M": 0.825
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.3444,
+    "by_sex": {
+     "F": 0.2913,
+     "M": 0.3992
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9879,
+    "by_sex": {
+     "F": 0.988,
+     "M": 0.9877
+    }
    }
   },
   "exchange_rate": {
@@ -115232,6 +118303,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.858,
+    "by_sex": {
+     "F": 0.8516,
+     "M": 0.8648
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.6038,
+    "by_sex": {
+     "F": 0.6052,
+     "M": 0.6023
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.976,
+    "by_sex": {
+     "F": 0.9883,
+     "M": 0.963
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 1.720108,
    "year": 2025
@@ -116085,6 +119182,36 @@
    "emergency_amount": {
     "lcu": 5495.91,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3789,
+    "by_sex": {
+     "F": 0.3435,
+     "M": 0.4184
+    },
+    "by_area": {
+     "rural": 0.3546,
+     "urban": 0.4028
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0752
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.1639,
+    "by_sex": {
+     "F": 0.1541,
+     "M": 0.1748
+    },
+    "by_area": {
+     "rural": 0.1276,
+     "urban": 0.212
+    }
    }
   },
   "exchange_rate": {
@@ -117105,6 +120232,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3354,
+    "by_sex": {
+     "F": 0.3556,
+     "M": 0.3139
+    },
+    "by_area": {
+     "rural": 0.3171,
+     "urban": 0.4282
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0294
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.1226,
+    "by_sex": {
+     "F": 0.0957,
+     "M": 0.1513
+    },
+    "by_area": {
+     "rural": 0.1227,
+     "urban": 0.1221
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 581.928481,
    "year": 2025
@@ -117933,6 +121090,36 @@
    "emergency_amount": {
     "lcu": 90038.54,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.7226,
+    "by_sex": {
+     "F": 0.7014,
+     "M": 0.7438
+    },
+    "by_area": {
+     "rural": 0.7539,
+     "urban": 0.6877
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0911
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5448,
+    "by_sex": {
+     "F": 0.4587,
+     "M": 0.6308
+    },
+    "by_area": {
+     "rural": 0.504,
+     "urban": 0.5903
+    }
    }
   },
   "exchange_rate": {
@@ -119096,6 +122283,44 @@
    "emergency_amount": {
     "lcu": 27286.06,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.468,
+    "by_sex": {
+     "F": 0.4015,
+     "M": 0.5375
+    },
+    "by_area": {
+     "rural": 0.4329,
+     "urban": 0.5159
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2576,
+    "by_sex": {
+     "F": 0.2374,
+     "M": 0.2786
+    },
+    "by_area": {
+     "rural": 0.2002,
+     "urban": 0.3358
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7519,
+    "by_sex": {
+     "F": 0.673,
+     "M": 0.8342
+    },
+    "by_area": {
+     "rural": 0.7217,
+     "urban": 0.7931
+    }
    }
   },
   "exchange_rate": {
@@ -120352,6 +123577,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8714,
+    "by_sex": {
+     "F": 0.8966,
+     "M": 0.8472
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.6682,
+    "by_sex": {
+     "F": 0.6684,
+     "M": 0.6679
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9948,
+    "by_sex": {
+     "F": 1.0,
+     "M": 0.9898
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 10.395833,
    "year": 2025
@@ -121097,6 +124348,36 @@
    "emergency_amount": {
     "lcu": 367.54,
     "year": 2024
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3893,
+    "by_sex": {
+     "F": 0.3959,
+     "M": 0.3862
+    },
+    "by_area": {
+     "rural": 0.3841,
+     "urban": 0.4111
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0883
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6044,
+    "by_sex": {
+     "F": 0.5921,
+     "M": 0.6103
+    },
+    "by_area": {
+     "rural": 0.6345,
+     "urban": 0.5796
+    }
    }
   },
   "exchange_rate": {
@@ -121999,6 +125280,36 @@
    "emergency_amount": {
     "lcu": 21797.85,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.2682,
+    "by_sex": {
+     "F": 0.1591,
+     "M": 0.3747
+    },
+    "by_area": {
+     "rural": 0.2177,
+     "urban": 0.314
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0804
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2464,
+    "by_sex": {
+     "F": 0.0878,
+     "M": 0.4011
+    },
+    "by_area": {
+     "rural": 0.1896,
+     "urban": 0.2978
+    }
    }
   },
   "exchange_rate": {
@@ -123511,6 +126822,44 @@
    "emergency_amount": {
     "lcu": 941.49,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4905,
+    "by_sex": {
+     "F": 0.4854,
+     "M": 0.4958
+    },
+    "by_area": {
+     "rural": 0.385,
+     "urban": 0.6158
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1587,
+    "by_sex": {
+     "F": 0.1392,
+     "M": 0.1792
+    },
+    "by_area": {
+     "rural": 0.1179,
+     "urban": 0.2071
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5208,
+    "by_sex": {
+     "F": 0.4873,
+     "M": 0.5561
+    },
+    "by_area": {
+     "rural": 0.4233,
+     "urban": 0.6368
+    }
    }
   },
   "exchange_rate": {
@@ -125409,6 +128758,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.375,
+    "by_sex": {
+     "F": 0.3278,
+     "M": 0.4249
+    },
+    "by_area": {
+     "rural": 0.3251,
+     "urban": 0.4481
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2158,
+    "by_sex": {
+     "F": 0.1927,
+     "M": 0.2401
+    },
+    "by_area": {
+     "rural": 0.2031,
+     "urban": 0.2344
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5547,
+    "by_sex": {
+     "F": 0.5511,
+     "M": 0.5585
+    },
+    "by_area": {
+     "rural": 0.531,
+     "urban": 0.5894
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 7545.446755,
    "year": 2025
@@ -126458,6 +129845,44 @@
    "emergency_amount": {
     "lcu": 1610.19,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4399,
+    "by_sex": {
+     "F": 0.3733,
+     "M": 0.5073
+    },
+    "by_area": {
+     "rural": 0.385,
+     "urban": 0.4853
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.208,
+    "by_sex": {
+     "F": 0.1813,
+     "M": 0.2351
+    },
+    "by_area": {
+     "rural": 0.2439,
+     "urban": 0.1784
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5171,
+    "by_sex": {
+     "F": 0.4657,
+     "M": 0.5692
+    },
+    "by_area": {
+     "rural": 0.455,
+     "urban": 0.5685
+    }
    }
   },
   "exchange_rate": {
@@ -127530,6 +130955,44 @@
    "emergency_amount": {
     "lcu": 13785.29,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5364,
+    "by_sex": {
+     "F": 0.5618,
+     "M": 0.5102
+    },
+    "by_area": {
+     "rural": 0.4902,
+     "urban": 0.6155
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1205,
+    "by_sex": {
+     "F": 0.1174,
+     "M": 0.1236
+    },
+    "by_area": {
+     "rural": 0.1145,
+     "urban": 0.1307
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4033,
+    "by_sex": {
+     "F": 0.457,
+     "M": 0.348
+    },
+    "by_area": {
+     "rural": 0.3363,
+     "urban": 0.5182
+    }
    }
   },
   "exchange_rate": {
@@ -128612,6 +132075,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6197,
+    "by_sex": {
+     "F": 0.5919,
+     "M": 0.6504
+    },
+    "by_area": {
+     "rural": 0.6351,
+     "urban": 0.5816
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1944,
+    "by_sex": {
+     "F": 0.1722,
+     "M": 0.219
+    },
+    "by_area": {
+     "rural": 0.1958,
+     "urban": 0.1911
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8209,
+    "by_sex": {
+     "F": 0.8319,
+     "M": 0.8088
+    },
+    "by_area": {
+     "rural": 0.8189,
+     "urban": 0.8259
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 3.760542,
    "year": 2025
@@ -129635,6 +133136,32 @@
    "emergency_amount": {
     "lcu": 1395.44,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.6326,
+    "by_sex": {
+     "F": 0.5743,
+     "M": 0.697
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.3044,
+    "by_sex": {
+     "F": 0.2304,
+     "M": 0.3861
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9064,
+    "by_sex": {
+     "F": 0.882,
+     "M": 0.9334
+    }
    }
   },
   "exchange_rate": {
@@ -131976,6 +135503,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4927,
+    "by_sex": {
+     "F": 0.4814,
+     "M": 0.5049
+    },
+    "by_area": {
+     "rural": 0.4637,
+     "urban": 0.5563
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.202,
+    "by_sex": {
+     "F": 0.2059,
+     "M": 0.1977
+    },
+    "by_area": {
+     "rural": 0.1889,
+     "urban": 0.2305
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6361,
+    "by_sex": {
+     "F": 0.624,
+     "M": 0.6492
+    },
+    "by_area": {
+     "rural": 0.5674,
+     "urban": 0.787
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 4.470533,
    "year": 2025
@@ -133011,6 +136576,32 @@
    "emergency_amount": {
     "lcu": 72877.44,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.3732,
+    "by_sex": {
+     "F": 0.335,
+     "M": 0.4181
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.3078,
+    "by_sex": {
+     "F": 0.2962,
+     "M": 0.3215
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.8742,
+    "by_sex": {
+     "F": 0.8774,
+     "M": 0.8703
+    }
    }
   },
   "exchange_rate": {
@@ -136061,6 +139652,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5711,
+    "by_sex": {
+     "F": 0.5115,
+     "M": 0.604
+    },
+    "by_area": {
+     "rural": 0.6221,
+     "urban": 0.565
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.3054,
+    "by_sex": {
+     "F": 0.2777,
+     "M": 0.3207
+    },
+    "by_area": {
+     "rural": 0.2612,
+     "urban": 0.3107
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7572,
+    "by_sex": {
+     "F": 0.6957,
+     "M": 0.7912
+    },
+    "by_area": {
+     "rural": 0.735,
+     "urban": 0.7599
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 3.75,
    "year": 2025
@@ -137019,6 +140648,44 @@
    "emergency_amount": {
     "lcu": 53080.51,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.777,
+    "by_sex": {
+     "F": 0.7787,
+     "M": 0.7751
+    },
+    "by_area": {
+     "rural": 0.7378,
+     "urban": 0.8196
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2267,
+    "by_sex": {
+     "F": 0.2515,
+     "M": 0.1994
+    },
+    "by_area": {
+     "rural": 0.2495,
+     "urban": 0.202
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7348,
+    "by_sex": {
+     "F": 0.7054,
+     "M": 0.7671
+    },
+    "by_area": {
+     "rural": 0.6981,
+     "urban": 0.7747
+    }
    }
   },
   "exchange_rate": {
@@ -138028,6 +141695,44 @@
    "emergency_amount": {
     "lcu": 74355.89,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5032,
+    "by_sex": {
+     "F": 0.4586,
+     "M": 0.5522
+    },
+    "by_area": {
+     "rural": 0.5165,
+     "urban": 0.4829
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2254,
+    "by_sex": {
+     "F": 0.2206,
+     "M": 0.2306
+    },
+    "by_area": {
+     "rural": 0.2003,
+     "urban": 0.2639
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7705,
+    "by_sex": {
+     "F": 0.7397,
+     "M": 0.8042
+    },
+    "by_area": {
+     "rural": 0.7479,
+     "urban": 0.8053
+    }
    }
   },
   "exchange_rate": {
@@ -139560,6 +143265,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6126,
+    "by_sex": {
+     "F": 0.6069,
+     "M": 0.6187
+    },
+    "by_area": {
+     "rural": 0.5714,
+     "urban": 0.6883
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0935
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.3673,
+    "by_sex": {
+     "F": 0.3402,
+     "M": 0.3962
+    },
+    "by_area": {
+     "rural": 0.2887,
+     "urban": 0.5116
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 21.304875,
    "year": 2023
@@ -140596,6 +144331,32 @@
    "emergency_amount": {
     "lcu": 5368.26,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8552,
+    "by_sex": {
+     "F": 0.8581,
+     "M": 0.8521
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.4442,
+    "by_sex": {
+     "F": 0.4127,
+     "M": 0.4779
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9484,
+    "by_sex": {
+     "F": 0.9304,
+     "M": 0.9676
+    }
    }
   },
   "exchange_rate": {
@@ -141752,6 +145513,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7851,
+    "by_sex": {
+     "F": 0.7606,
+     "M": 0.8115
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.3441,
+    "by_sex": {
+     "F": 0.3002,
+     "M": 0.3913
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9455,
+    "by_sex": {
+     "F": 0.93,
+     "M": 0.9622
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 0.884969,
    "year": 2025
@@ -142778,6 +146565,32 @@
    "emergency_amount": {
     "lcu": 1643.62,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.6491,
+    "by_sex": {
+     "F": 0.6019,
+     "M": 0.699
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.4235,
+    "by_sex": {
+     "F": 0.3739,
+     "M": 0.4761
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9702,
+    "by_sex": {
+     "F": 0.9531,
+     "M": 0.9883
+    }
    }
   },
   "exchange_rate": {
@@ -144923,6 +148736,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.534,
+    "by_sex": {
+     "F": 0.5379,
+     "M": 0.5296
+    },
+    "by_area": {
+     "rural": 0.5537,
+     "urban": 0.5147
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1322,
+    "by_sex": {
+     "F": 0.1191,
+     "M": 0.1472
+    },
+    "by_area": {
+     "rural": 0.124,
+     "urban": 0.1404
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6717,
+    "by_sex": {
+     "F": 0.6508,
+     "M": 0.6956
+    },
+    "by_area": {
+     "rural": 0.6289,
+     "urban": 0.7139
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 17.888749,
    "year": 2025
@@ -145972,6 +149823,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.6973,
+    "by_sex": {
+     "F": 0.7051,
+     "M": 0.6902
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.6863,
+    "by_sex": {
+     "F": 0.64,
+     "M": 0.7285
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9794,
+    "by_sex": {
+     "F": 0.9773,
+     "M": 0.9813
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 1422.440833,
    "year": 2025
@@ -146616,6 +150493,24 @@
      0.4191,
      0.1635
     ]
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.172,
+    "by_sex": {
+     "F": 0.1815,
+     "M": 0.1612
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.0263
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.0481
    }
   },
   "exchange_rate": {
@@ -147473,6 +151368,32 @@
    "emergency_amount": {
     "lcu": 1708.05,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7813,
+    "by_sex": {
+     "F": 0.7467,
+     "M": 0.8158
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.5191,
+    "by_sex": {
+     "F": 0.4874,
+     "M": 0.5508
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9753,
+    "by_sex": {
+     "F": 0.9616,
+     "M": 0.989
+    }
    }
   },
   "exchange_rate": {
@@ -148480,6 +152401,44 @@
    "emergency_amount": {
     "lcu": 73869.73,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3605,
+    "by_sex": {
+     "F": 0.3529,
+     "M": 0.3691
+    },
+    "by_area": {
+     "rural": 0.3617,
+     "urban": 0.3581
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1837,
+    "by_sex": {
+     "F": 0.1964,
+     "M": 0.1692
+    },
+    "by_area": {
+     "rural": 0.2078,
+     "urban": 0.1384
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4726,
+    "by_sex": {
+     "F": 0.4098,
+     "M": 0.5438
+    },
+    "by_area": {
+     "rural": 0.4802,
+     "urban": 0.4584
+    }
    }
   },
   "exchange_rate": {
@@ -152706,6 +156665,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8696,
+    "by_sex": {
+     "F": 0.8583,
+     "M": 0.8804
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.4869,
+    "by_sex": {
+     "F": 0.4522,
+     "M": 0.5202
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9906,
+    "by_sex": {
+     "F": 0.9872,
+     "M": 0.9939
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 9.820706,
    "year": 2025
@@ -153677,6 +157662,32 @@
    "emergency_amount": {
     "lcu": 4732.6,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8269,
+    "by_sex": {
+     "F": 0.8221,
+     "M": 0.832
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.614,
+    "by_sex": {
+     "F": 0.5795,
+     "M": 0.6511
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9822,
+    "by_sex": {
+     "F": 0.9803,
+     "M": 0.9841
+    }
    }
   },
   "exchange_rate": {
@@ -156002,6 +160013,32 @@
     }
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7497,
+    "by_sex": {
+     "F": 0.7368,
+     "M": 0.7632
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.6195,
+    "by_sex": {
+     "F": 0.618,
+     "M": 0.621
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.8775,
+    "by_sex": {
+     "F": 0.8495,
+     "M": 0.9065
+    }
+   }
+  },
   "healthy_diet": {
    "year": 2025,
    "unaffordable_share": 0.038,
@@ -156518,6 +160555,44 @@
    "emergency_amount": {
     "lcu": 1140.33,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.283,
+    "by_sex": {
+     "F": 0.2355,
+     "M": 0.3331
+    },
+    "by_area": {
+     "rural": 0.2496,
+     "urban": 0.3628
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1708,
+    "by_sex": {
+     "F": 0.1459,
+     "M": 0.1971
+    },
+    "by_area": {
+     "rural": 0.1558,
+     "urban": 0.2067
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4933,
+    "by_sex": {
+     "F": 0.4032,
+     "M": 0.5885
+    },
+    "by_area": {
+     "rural": 0.4941,
+     "urban": 0.4917
+    }
    }
   },
   "exchange_rate": {
@@ -157491,6 +161566,36 @@
    "emergency_amount": {
     "lcu": 163700.76,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5271,
+    "by_sex": {
+     "F": 0.4959,
+     "M": 0.5623
+    },
+    "by_area": {
+     "rural": 0.5116,
+     "urban": 0.5951
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.091
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.5714,
+    "by_sex": {
+     "F": 0.5294,
+     "M": 0.6186
+    },
+    "by_area": {
+     "rural": 0.5324,
+     "urban": 0.7414
+    }
    }
   },
   "exchange_rate": {
@@ -158565,6 +162670,44 @@
    "emergency_amount": {
     "lcu": 12903.73,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6309,
+    "by_sex": {
+     "F": 0.5915,
+     "M": 0.6717
+    },
+    "by_area": {
+     "rural": 0.6179,
+     "urban": 0.6599
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1803,
+    "by_sex": {
+     "F": 0.1919,
+     "M": 0.1683
+    },
+    "by_area": {
+     "rural": 0.1897,
+     "urban": 0.1594
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8275,
+    "by_sex": {
+     "F": 0.8267,
+     "M": 0.8283
+    },
+    "by_area": {
+     "rural": 0.8183,
+     "urban": 0.8481
+    }
    }
   },
   "exchange_rate": {
@@ -160283,6 +164426,44 @@
    "emergency_amount": {
     "lcu": 40353.64,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6476,
+    "by_sex": {
+     "F": 0.5932,
+     "M": 0.7042
+    },
+    "by_area": {
+     "rural": 0.6335,
+     "urban": 0.6735
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1344,
+    "by_sex": {
+     "F": 0.0967,
+     "M": 0.1736
+    },
+    "by_area": {
+     "rural": 0.1114,
+     "urban": 0.1763
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.531,
+    "by_sex": {
+     "F": 0.3982,
+     "M": 0.669
+    },
+    "by_area": {
+     "rural": 0.4939,
+     "urban": 0.5985
+    }
    }
   },
   "exchange_rate": {
@@ -163074,6 +167255,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4825,
+    "by_sex": {
+     "F": 0.45,
+     "M": 0.5164
+    },
+    "by_area": {
+     "rural": 0.4301,
+     "urban": 0.5433
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0525
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2368,
+    "by_sex": {
+     "F": 0.1296,
+     "M": 0.3486
+    },
+    "by_area": {
+     "rural": 0.1901,
+     "urban": 0.291
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 2.997367,
    "year": 2025
@@ -165516,6 +169727,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4121,
+    "by_sex": {
+     "F": 0.3876,
+     "M": 0.4371
+    },
+    "by_area": {
+     "rural": 0.3889,
+     "urban": 0.4231
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.4171,
+    "by_sex": {
+     "F": 0.2825,
+     "M": 0.5539
+    },
+    "by_area": {
+     "rural": 0.3119,
+     "urban": 0.4665
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7142,
+    "by_sex": {
+     "F": 0.5753,
+     "M": 0.8555
+    },
+    "by_area": {
+     "rural": 0.5937,
+     "urban": 0.7708
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 39.454813,
    "year": 2025
@@ -166920,6 +171169,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.8341,
+    "by_sex": {
+     "F": 0.7853,
+     "M": 0.8902
+    },
+    "by_area": {
+     "rural": 0.832,
+     "urban": 0.8478
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2904,
+    "by_sex": {
+     "F": 0.2327,
+     "M": 0.357
+    },
+    "by_area": {
+     "rural": 0.2909,
+     "urban": 0.2873
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7064,
+    "by_sex": {
+     "F": 0.6513,
+     "M": 0.7699
+    },
+    "by_area": {
+     "rural": 0.6884,
+     "urban": 0.8291
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 3602.989942,
    "year": 2025
@@ -167981,6 +172268,44 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4047,
+    "by_sex": {
+     "F": 0.3446,
+     "M": 0.4687
+    },
+    "by_area": {
+     "rural": 0.3516,
+     "urban": 0.4644
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.2862,
+    "by_sex": {
+     "F": 0.2604,
+     "M": 0.3136
+    },
+    "by_area": {
+     "rural": 0.266,
+     "urban": 0.302
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.8289,
+    "by_sex": {
+     "F": 0.7913,
+     "M": 0.869
+    },
+    "by_area": {
+     "rural": 0.8322,
+     "urban": 0.8256
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 41.689072,
    "year": 2025
@@ -168914,6 +173239,32 @@
     "year": 2024
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.336,
+    "by_sex": {
+     "F": 0.2152,
+     "M": 0.3806
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.2394,
+    "by_sex": {
+     "F": 0.1956,
+     "M": 0.2555
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.7661,
+    "by_sex": {
+     "F": 0.7655,
+     "M": 0.7664
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 3.6725,
    "year": 2025
@@ -169828,6 +174179,32 @@
    "emergency_amount": {
     "lcu": 2173.86,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.8176,
+    "by_sex": {
+     "F": 0.8251,
+     "M": 0.8099
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.5497,
+    "by_sex": {
+     "F": 0.5658,
+     "M": 0.5331
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9917,
+    "by_sex": {
+     "F": 0.9928,
+     "M": 0.9905
+    }
    }
   },
   "exchange_rate": {
@@ -170807,6 +175184,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.7861,
+    "by_sex": {
+     "F": 0.7635,
+     "M": 0.8091
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.662,
+    "by_sex": {
+     "F": 0.6665,
+     "M": 0.6575
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.9297,
+    "by_sex": {
+     "F": 0.9569,
+     "M": 0.902
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 1.0,
    "year": 2025
@@ -171784,6 +176187,32 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2021,
+    "share": 0.3787,
+    "by_sex": {
+     "F": 0.3705,
+     "M": 0.3878
+    }
+   },
+   "borrowed": {
+    "year": 2021,
+    "share": 0.4201,
+    "by_sex": {
+     "F": 0.4236,
+     "M": 0.4162
+    }
+   },
+   "digital_payment": {
+    "year": 2021,
+    "share": 0.6799,
+    "by_sex": {
+     "F": 0.6893,
+     "M": 0.6694
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 41.190979,
    "year": 2025
@@ -172599,6 +177028,44 @@
    "emergency_amount": {
     "lcu": 2502227.74,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3223,
+    "by_sex": {
+     "F": 0.3224,
+     "M": 0.3223
+    },
+    "by_area": {
+     "rural": 0.2785,
+     "urban": 0.4026
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1175,
+    "by_sex": {
+     "F": 0.1074,
+     "M": 0.1283
+    },
+    "by_area": {
+     "rural": 0.0992,
+     "urban": 0.151
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.4988,
+    "by_sex": {
+     "F": 0.4857,
+     "M": 0.5129
+    },
+    "by_area": {
+     "rural": 0.487,
+     "urban": 0.5205
+    }
    }
   },
   "exchange_rate": {
@@ -174275,6 +178742,44 @@
     }
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.5201,
+    "by_sex": {
+     "F": 0.4583,
+     "M": 0.5824
+    },
+    "by_area": {
+     "rural": 0.5243,
+     "urban": 0.5323
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1537,
+    "by_sex": {
+     "F": 0.1193,
+     "M": 0.1885
+    },
+    "by_area": {
+     "rural": 0.1353,
+     "urban": 0.1534
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7552,
+    "by_sex": {
+     "F": 0.7513,
+     "M": 0.7593
+    },
+    "by_area": {
+     "rural": 0.6974,
+     "urban": 0.8143
+    }
+   }
+  },
   "age_structure": {
    "year": 2025,
    "shares": [
@@ -175127,6 +179632,36 @@
     "year": 2025
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.6857,
+    "by_sex": {
+     "F": 0.707,
+     "M": 0.6634
+    },
+    "by_area": {
+     "rural": 0.6749,
+     "urban": 0.7076
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0811
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.6238,
+    "by_sex": {
+     "F": 0.614,
+     "M": 0.634
+    },
+    "by_area": {
+     "rural": 0.5952,
+     "urban": 0.6819
+    }
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 24164.885833,
    "year": 2024
@@ -175898,6 +180433,36 @@
       0.0851,
       0.8628
      ]
+    }
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.3088,
+    "by_sex": {
+     "F": 0.2966,
+     "M": 0.3206
+    },
+    "by_area": {
+     "rural": 0.304,
+     "urban": 0.3145
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.068
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.2083,
+    "by_sex": {
+     "F": 0.1267,
+     "M": 0.2878
+    },
+    "by_area": {
+     "rural": 0.1835,
+     "urban": 0.2382
     }
    }
   },
@@ -176902,6 +181467,24 @@
     ]
    }
   },
+  "findex_yes": {
+   "saved": {
+    "year": 2022,
+    "share": 0.2164,
+    "by_sex": {
+     "F": 0.1622,
+     "M": 0.2705
+    }
+   },
+   "borrowed": {
+    "year": 2022,
+    "share": 0.0179
+   },
+   "digital_payment": {
+    "year": 2022,
+    "share": 0.0933
+   }
+  },
   "exchange_rate": {
    "lcu_per_usd": 1355.116379,
    "year": 2023
@@ -177857,6 +182440,44 @@
    "emergency_amount": {
     "lcu": 1508.52,
     "year": 2025
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.684,
+    "by_sex": {
+     "F": 0.6459,
+     "M": 0.7255
+    },
+    "by_area": {
+     "rural": 0.6523,
+     "urban": 0.7279
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.1814,
+    "by_sex": {
+     "F": 0.1393,
+     "M": 0.2272
+    },
+    "by_area": {
+     "rural": 0.1597,
+     "urban": 0.2113
+    }
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.7116,
+    "by_sex": {
+     "F": 0.6765,
+     "M": 0.7498
+    },
+    "by_area": {
+     "rural": 0.6857,
+     "urban": 0.7473
+    }
    }
   },
   "exchange_rate": {
@@ -178899,6 +183520,36 @@
       0.2537,
       0.6369
      ]
+    }
+   }
+  },
+  "findex_yes": {
+   "saved": {
+    "year": 2024,
+    "share": 0.4585,
+    "by_sex": {
+     "F": 0.4325,
+     "M": 0.4881
+    },
+    "by_area": {
+     "rural": 0.4364,
+     "urban": 0.5198
+    }
+   },
+   "borrowed": {
+    "year": 2024,
+    "share": 0.0634
+   },
+   "digital_payment": {
+    "year": 2024,
+    "share": 0.467,
+    "by_sex": {
+     "F": 0.4361,
+     "M": 0.5023
+    },
+    "by_area": {
+     "rural": 0.4211,
+     "urban": 0.5944
     }
    }
   },

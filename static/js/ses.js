@@ -1083,6 +1083,22 @@
             for (const key of ["account", "saved"]) {
                 if (answers[key]) result[key] = answers[key] === "yes";
             }
+            // Saving, formal borrowing and digital payments: Findex shares for the world, your country
+            // and, where reported, adults of your sex and area. Context only.
+            result.findex_yes = [];
+            for (const key of ["saved", "borrowed", "digital_payment"]) {
+                const w = (G.findex_yes || {})[key];
+                if (!answers[key] || !w) continue;
+                const c = (country.findex_yes || {})[key];
+                const item = {key, has: answers[key] === "yes", world: pct(w.share), world_economies: w.economies};
+                if (c) {
+                    Object.assign(item, {country: pct(c.share), year: c.year});
+                    item.groups = [["by_sex", answers.sex], ["by_area", answers.area]]
+                        .filter(([by, g]) => g && c[by] && c[by][g] !== undefined)
+                        .map(([by, g]) => ({by, key: g, share: pct(c[by][g])}));
+                }
+                result.findex_yes.push(item);
+            }
             result.account_world = value(world, "FX.OWN.TOTL.ZS");
             result.account_country = value(country.wdi, "FX.OWN.TOTL.ZS");
             result.account_groups = accountGroups(answers, country, incomeNationalPct);
