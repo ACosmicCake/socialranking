@@ -206,6 +206,15 @@ WDI_INDICATORS = {
     # Findex sets its emergency amount at 1/20 of GNI per person in local currency.
     "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
 }
+# Trends in the country glance: each indicator's value about TREND_GAP years before its latest
+# one, from the same WDI download (so at least TREND_MIN_GAP years apart, within WDI_SINCE).
+TREND_INDICATORS = ["NY.GDP.PCAP.PP.KD", "SP.DYN.LE00.IN", "SH.DYN.MORT", "SP.URB.TOTL.IN.ZS", "SE.ADT.LITR.ZS",
+                    "SN.ITK.DEFC.ZS", "SL.UEM.TOTL.ZS", "SL.EMP.VULN.ZS", "SH.XPD.OOPC.CH.ZS", "EN.POP.SLUM.UR.ZS",
+                    "SI.POV.GINI", "SI.DST.10TH.10", "SI.DST.FRST.20", "SI.POV.NAHC", "GD_WBL_OVL_LAW",
+                    "EN.ATM.PM25.MC.M3", "VC.IHR.PSRC.P5", "SH.STA.STNT.ZS", "SH.MED.PHYS.ZS", "SE.PRM.CMPT.ZS",
+                    "SE.TER.ENRR", "IT.CEL.SETS.P2", "SH.XPD.CHEX.PC.CD", "SL.UEM.NEET.ZS", "SL.TLF.CACT.FE.ZS",
+                    "SG.GEN.PARL.ZS", "SH.STA.MMRT", "SP.DYN.TFRT.IN", "SP.ADO.TFRT", "IT.NET.USER.ZS"]
+TREND_GAP, TREND_MIN_GAP = 10, 5
 # Social protection coverage from the World Bank ASPIRE database: % of the population
 # living in households that receive each kind of programme, in total and by
 # quintile of pre-transfer welfare (q1 = poorest fifth). Surveys are infrequent,
@@ -670,6 +679,20 @@ def wdi_latest(indicator, since, name=None):
         code, year = r["countryiso3code"] or r["country"]["id"], int(r["date"])
         code = INCOME_GROUP_IDS.get(code, code)
         if code and (code not in out or year > out[code][0]):
+            out[code] = (year, float(r["value"]))
+    return out
+
+
+def wdi_earlier(indicator, since, latest, gap=TREND_GAP):
+    """Per economy, the value closest to `gap` years before its latest one (at least TREND_MIN_GAP back)."""
+    rows = wdi(indicator, f"wdi_{indicator}.json", date=f"{since}:{INFLATION_LAST_YEAR}")
+    out = {}
+    for r in rows:
+        code, year = r["countryiso3code"], int(r["date"])
+        if code not in latest or latest[code][0] - year < TREND_MIN_GAP:
+            continue
+        target = latest[code][0] - gap
+        if code not in out or abs(year - target) < abs(out[code][0] - target):
             out[code] = (year, float(r["value"]))
     return out
 
@@ -1187,6 +1210,7 @@ def main():
     education, global_education = build_education(bl, bl_groups, set(economies), pop25)
 
     indicators = {ind: wdi_latest(ind, WDI_SINCE) for ind in WDI_INDICATORS}
+    earlier = {ind: wdi_earlier(ind, WDI_SINCE, indicators[ind]) for ind in TREND_INDICATORS}
     indicators.update({ind: wdi_latest(ind, ASPIRE_SINCE) for ind in WDI_SOCIAL_PROTECTION})
     adults = {code: total - pop_parts["SP.POP.0014.TO"][code][1] for code, (_, total) in population.items()
               if code in pop_parts["SP.POP.0014.TO"]}
@@ -1246,6 +1270,8 @@ def main():
         entry["iso2"] = iso2.get(code) or None
         entry["wdi"] = {ind: [vals[code][0], round(vals[code][1], 2)] for ind, vals in indicators.items()
                         if code in vals}
+        entry["wdi_earlier"] = {ind: [vals[code][0], round(vals[code][1], 2)] for ind, vals in earlier.items()
+                                if code in vals}
         countries.append(entry)
     countries.sort(key=lambda c: c["name"].casefold())
 
