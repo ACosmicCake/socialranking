@@ -4,13 +4,16 @@
     if (!root) return;
     const base = window.SES_BASE || "";
     const assetBase = window.SES_ASSET_BASE || base;
-    const VI = window.SES_LANG === "vi";
-    const tr = (en, vi) => (VI ? vi : en);
+    const LANG = window.SES_LANG || "en";
+    const VI = LANG === "vi";
+    // Text in English and Vietnamese; the build adds a third argument for other languages
+    // (scripts/jsi18n.py), and English stands in where a translation is missing.
+    const tr = (en, vi, other) => (VI ? vi : LANG !== "en" && other !== undefined ? other : en);
     const D = SES.data;
     const citations = D.facts.citations;
 
     // ---------------------------------------------------------------- formatting
-    const locale = VI ? "vi-VN" : "en-US";
+    const locale = {vi: "vi-VN", es: "es-ES"}[LANG] || "en-US";
     const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"})[c]);
     const fixed = (v, d) => Number(v).toLocaleString(locale, {minimumFractionDigits: d, maximumFractionDigits: d});
     const pct = (v, d = 1) => v === null || v === undefined ? "-" : `${fixed(v, d)}%`;
