@@ -20,7 +20,7 @@ needs_node = pytest.mark.skipif(NODE is None, reason="Node.js is not installed")
 
 def test_all_pages_built(site):
     import build_site
-    for folder, pages, lang in ((site, build_site.PAGES, "en"), (site / "vi", build_site.VI_PAGES, "vi")):
+    for folder, pages, lang in ((site, build_site.PAGES, "en"), (site / "vi", build_site.LANGS["vi"]["pages"], "vi")):
         for page in pages:
             html = (folder / f"{page}.html").read_text(encoding="utf-8")
             assert html.startswith("<!DOCTYPE html>")
