@@ -1,5 +1,5 @@
 {
- "built": "2026-10-21",
+ "built": "2026-10-22",
  "sources": {
   "pip": {
    "name": "World Bank Poverty and Inequality Platform API, release 20260922_2021_01_02_PROD",
@@ -3011,6 +3011,29 @@
    ],
    "economies": 139,
    "adults_covered": 5896709961,
+   "adults_world": 6210117111
+  }
+ },
+ "findex_yes": {
+  "saved": {
+   "indicator": "save.any.t.d",
+   "share": 0.5584,
+   "economies": 142,
+   "adults_covered": 6001300782,
+   "adults_world": 6210117111
+  },
+  "borrowed": {
+   "indicator": "fin22a.22a1.22g.d",
+   "share": 0.2788,
+   "economies": 142,
+   "adults_covered": 6001300782,
+   "adults_world": 6210117111
+  },
+  "digital_payment": {
+   "indicator": "g20.any",
+   "share": 0.6538,
+   "economies": 142,
+   "adults_covered": 6001300782,
    "adults_world": 6210117111
   }
  },

@@ -631,7 +631,26 @@ SECTIONS = [
                 "text": "In the past 12 months, have you personally saved or set aside any money, by any method?",
                 "options": YES_NO,
                 "source": "findex_2025",
-                "basis": "Global Findex saving question.",
+                "basis": "Global Findex saving question (saved any money). Shown as context; not scored.",
+            },
+            {
+                "id": "borrowed",
+                "type": "radio",
+                "text": "In the past 12 months, have you personally borrowed any money from a bank or another financial "
+                        "institution, or using a mobile money account?",
+                "options": YES_NO,
+                "source": "findex_2025",
+                "basis": "Global Findex formal borrowing (bank, similar institution or mobile money). Shown as context; "
+                         "not scored.",
+            },
+            {
+                "id": "digital_payment",
+                "type": "radio",
+                "text": "In the past 12 months, have you made or received a digital payment? This includes paying with a "
+                        "card or phone, paying online, and wages, pensions or transfers paid into an account.",
+                "options": YES_NO,
+                "source": "findex_2025",
+                "basis": "Global Findex: made or received a digital payment. Shown as context; not scored.",
             },
             {
                 "id": "emergency_funds",

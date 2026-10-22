@@ -234,6 +234,8 @@ FINDEX_DERIVED = {
     "phone": (["con1", "con9a"], ["none", "basic", "smartphone"],
               lambda own, smart: [100 - own, max(own - smart, 0.0), smart]),
 }
+# Yes/no Findex items shown as context next to your answers (% of adults, latest wave).
+FINDEX_YES = {"saved": "save.any.t.d", "borrowed": "fin22a.22a1.22g.d", "digital_payment": "g20.any"}
 # Findex breakdowns of the derived groups (indicator suffixes): women, men, rural, urban.
 FINDEX_GROUP_SUFFIXES = {".1": ("by_sex", "F"), ".2": ("by_sex", "M"), ".9": ("by_area", "rural"),
                          ".10": ("by_area", "urban")}
@@ -705,6 +707,37 @@ def build_findex(adults, economies):
     return out, world
 
 
+def build_findex_yes(adults, economies):
+    """Shares of adults answering yes, per economy (latest wave, with sex and area splits) and world."""
+    out, world = {}, {}
+    for key, ind in FINDEX_YES.items():
+        raw = {}
+        for suffix in ["", *FINDEX_GROUP_SUFFIXES]:
+            for r in wdi(ind + suffix, f"findex_{ind}{suffix}.json", source=FINDEX_SOURCE,
+                         date=f"{FINDEX_SINCE}:{INFLATION_LAST_YEAR}"):
+                raw.setdefault(suffix, {}).setdefault(r["countryiso3code"] or r["country"]["id"], {})[int(r["date"])] = \
+                    float(r["value"]) / 100
+        acc = weight = 0.0
+        n = 0
+        for code, years in raw.get("", {}).items():
+            if code not in economies:
+                continue
+            y = max(years)
+            item = {"year": y, "share": round(years[y], 4)}
+            for suffix, (by, group) in FINDEX_GROUP_SUFFIXES.items():
+                v = raw.get(suffix, {}).get(code, {}).get(y)
+                if v is not None:
+                    item.setdefault(by, {})[group] = round(v, 4)
+            out.setdefault(code, {})[key] = item
+            if adults.get(code):
+                acc += years[y] * adults[code]
+                weight += adults[code]
+                n += 1
+        world[key] = {"indicator": ind, "share": round(acc / weight, 4), "economies": n,
+                      "adults_covered": int(weight), "adults_world": int(adults.get("WLD", 0))}
+    return out, world
+
+
 def findex_breakdowns(group, out):
     """Add a derived group's shares for women, men, rural and urban adults, in the economy's year."""
     inds, _, split = FINDEX_DERIVED[group]
@@ -1121,6 +1154,7 @@ def main():
     adults = {code: total - pop_parts["SP.POP.0014.TO"][code][1] for code, (_, total) in population.items()
               if code in pop_parts["SP.POP.0014.TO"]}
     findex, global_findex = build_findex(adults, economies)
+    findex_yes, global_findex_yes = build_findex_yes(adults, economies)
     exchange_rates = wdi_latest("PA.NUS.FCRF", WDI_SINCE)
     age_structure = build_age_structure()
     healthy_diet, global_healthy_diet = build_healthy_diet(prices)
@@ -1153,6 +1187,8 @@ def main():
             entry["education"] = education[code]
         if code in findex:
             entry["findex"] = findex[code]
+        if code in findex_yes:
+            entry["findex_yes"] = findex_yes[code]
         rate = market_rate(code, exchange_rates, prices.get(code))
         if rate:
             entry["exchange_rate"] = rate
@@ -1212,6 +1248,7 @@ def main():
         "income": global_income,
         "education": global_education,
         "findex": global_findex,
+        "findex_yes": global_findex_yes,
         "healthy_diet": global_healthy_diet,
         "occupation": global_occupation,
         "age_structure": {"groups": AGE_GROUPS, **age_structure["WLD"]},
@@ -1247,6 +1284,7 @@ def main():
     print(f"education: {e['countries_wdi']} WDI + {e['countries_barro_lee']} Barro-Lee, "
           f"{e['population_25_plus_covered'] / e['population_25_plus_world']:.1%} of adults 25+; world shares",
           e["world_shares"])
+    print("findex yes/no:", {k: (v["economies"], v["share"]) for k, v in global_findex_yes.items()})
     print("findex:", {k: (v["economies"], round(v["adults_covered"] / max(v["adults_world"], 1), 3), v["shares"])
                       for k, v in global_findex.items()})
     o = global_occupation

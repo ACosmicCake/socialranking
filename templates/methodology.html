@@ -304,9 +304,13 @@
         high-income economies).</p>
     <p>We also show <strong>account ownership</strong> for the world and your country (Global Findex via WDI), including among
         people like you: your sex, your age group (15-24 or 25+), your education (primary or less, or secondary or more), and your
-        household's income group (poorest 40% or richest 60%, from your national income rank). As context only, we also show
-        saving. {{ (findex.saved_in_account_share_lmic * 100) | pct(0) }} of adults in low- and middle-income economies saved in a
-        financial account {{ cite(findex.cite) }}.</p>
+        household's income group (poorest 40% or richest 60%, from your national income rank). As context only, we also compare
+        three yes/no answers with Findex {{ cite("findex_2025") }}: saving any money in the past year
+        ({{ (g.findex_yes.saved.share * 100) | pct(0) }} of adults worldwide), borrowing from a bank, similar institution or
+        mobile money account ({{ (g.findex_yes.borrowed.share * 100) | pct(0) }}), and making or receiving a digital payment
+        ({{ (g.findex_yes.digital_payment.share * 100) | pct(0) }}). World shares average {{ g.findex_yes.saved.economies }}
+        economies weighted by adult population; national figures are also shown for women or men and urban or rural adults
+        where Findex reports them.</p>
     <p class="small text-secondary">Limitations: the Gallup data date from 2019, before the pandemic. The FIES raw-score bands only approximate
         FAO's probabilistic classification.</p>
     <h3 class="h5" id="social-protection">Social protection (context only)</h3>

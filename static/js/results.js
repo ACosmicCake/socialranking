@@ -604,9 +604,25 @@
     if (sec.account !== undefined) bank.push(`${sec.account ? tr("You have an account.", "Bạn có tài khoản.") : tr("You don't have an account.", "Bạn không có tài khoản.")}
         ${tr(`${pct(sec.account_world, 0)} of adults worldwide have one${sec.account_country !== null ? `, and ${pct(sec.account_country, 0)} in ${cname}` : ""}.`,
              `${pct(sec.account_world, 0)} người trưởng thành trên thế giới có tài khoản${sec.account_country !== null ? `, và ${pct(sec.account_country, 0)} ở ${cname}` : ""}.`)}`);
-    if (sec.saved !== undefined) bank.push(`${sec.saved ? tr("You saved money in the past year.", "Bạn đã tiết kiệm được tiền trong năm qua.") : tr("You didn't save money in the past year.", "Bạn không tiết kiệm được tiền trong năm qua.")}
-        ${tr(`For comparison, ${pct(findex.saved_in_account_share_lmic * 100, 0)} of adults in low- and middle-income economies saved in a financial account in 2024.`,
-             `Để so sánh, ${pct(findex.saved_in_account_share_lmic * 100, 0)} người trưởng thành ở các nền kinh tế thu nhập thấp và trung bình đã tiết kiệm qua tài khoản năm 2024.`)}`);
+    const yesText = {
+        saved: [tr("You saved money in the past year.", "Bạn đã tiết kiệm được tiền trong năm qua."),
+                tr("You didn't save money in the past year.", "Bạn không tiết kiệm được tiền trong năm qua."),
+                tr("saved any money", "đã tiết kiệm tiền")],
+        borrowed: [tr("You borrowed from a bank, similar institution or mobile money account.", "Bạn đã vay từ ngân hàng, tổ chức tương tự hoặc tài khoản tiền di động."),
+                   tr("You didn't borrow from a bank, similar institution or mobile money account.", "Bạn không vay từ ngân hàng, tổ chức tương tự hoặc tài khoản tiền di động."),
+                   tr("borrowed this way", "đã vay theo cách này")],
+        digital_payment: [tr("You made or received a digital payment.", "Bạn đã thực hiện hoặc nhận thanh toán điện tử."),
+                          tr("You didn't make or receive a digital payment.", "Bạn không thực hiện hoặc nhận thanh toán điện tử."),
+                          tr("made or received one", "đã thực hiện hoặc nhận")],
+    };
+    const yesGroup = {F: tr("women", "phụ nữ"), M: tr("men", "nam giới"), urban: tr("urban adults", "người ở thành thị"), rural: tr("rural adults", "người ở nông thôn")};
+    for (const y of sec.findex_yes) {
+        const [yes, no, did] = yesText[y.key];
+        const groups = (y.groups || []).map(g => `${yesGroup[g.key]} ${pct(g.share, 0)}`).join(", ");
+        bank.push(`${y.has ? yes : no} ${tr(
+            `${pct(y.world, 0)} of adults worldwide ${did}${y.country !== undefined ? `; in ${cname}, ${pct(y.country, 0)} (${groups ? `${groups}; ` : ""}${y.year})` : ""}.`,
+            `${pct(y.world, 0)} người trưởng thành trên thế giới ${did}${y.country !== undefined ? `; ở ${cname} là ${pct(y.country, 0)} (${groups ? `${groups}; ` : ""}${y.year})` : ""}.`)}`);
+    }
     html.push(section("security", tr("Financial security", "An ninh tài chính"), `
     ${sec.global_pct !== undefined ? `<p>${tr(`Combining basic needs, food security and emergency money, you're more financially secure than about <strong>${pct(sec.global_pct)}</strong> of people worldwide.`,
                                               `Gộp nhu cầu cơ bản, an ninh lương thực và khả năng xoay tiền khẩn cấp, bạn an toàn về tài chính hơn khoảng <strong>${pct(sec.global_pct)}</strong> người trên thế giới.`)}</p>` : ""}
