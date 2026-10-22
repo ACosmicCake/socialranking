@@ -519,6 +519,27 @@
             <p class="small text-secondary">${tr("Context only; not part of your work score.", "Chỉ để tham khảo; không tính vào điểm công việc.")}</p>`;
     }
 
+    // ---------------------------------------------------------------- your region (Subnational HDI)
+    function regionHtml(rg) {
+        if (!rg) return "";
+        const rows = [
+            [tr("Human Development Index (0-1)", "Chỉ số Phát triển Con người (0-1)"), v => fixed(v, 3)],
+            [tr("Life expectancy at birth (years)", "Tuổi thọ trung bình (năm)"), v => fixed(v, 1)],
+            [tr("Expected years of schooling", "Số năm đi học kỳ vọng"), v => fixed(v, 1)],
+            [tr("Mean years of schooling (adults 25+)", "Số năm đi học trung bình (người từ 25 tuổi)"), v => fixed(v, 1)],
+            [tr("Income per person (GNI, 2017 PPP $ a year)", "Thu nhập bình quân đầu người (GNI, đô la PPP 2017 mỗi năm)"), v => money(v, 0)],
+        ];
+        const cell = (arr, i, f) => arr && arr[i] !== null && arr[i] !== undefined ? f(arr[i]) : "-";
+        return `<h3 class="h5">${tr(`Your region: ${esc(rg.name)}`, `Vùng của bạn: ${esc(rg.name)}`)}</h3>
+            <p>${tr(`${esc(rg.name)} has a Human Development Index of <strong>${fixed(rg.values[0], 3)}</strong>${rg.national ? ` (${cname}: ${fixed(rg.national[0], 3)})` : ""}. That is higher than in regions home to about <strong>${pct(rg.national_rank)}</strong> of ${cname}'s people and <strong>${pct(rg.world_rank)}</strong> of the world's (${fixed(rg.world_regions, 0)} regions, counting half of your own).`,
+                `${esc(rg.name)} có Chỉ số Phát triển Con người <strong>${fixed(rg.values[0], 3)}</strong>${rg.national ? ` (${cname}: ${fixed(rg.national[0], 3)})` : ""}. Mức này cao hơn các vùng nơi khoảng <strong>${pct(rg.national_rank)}</strong> dân số ${cname} và <strong>${pct(rg.world_rank)}</strong> dân số thế giới sinh sống (${fixed(rg.world_regions, 0)} vùng, tính một nửa vùng của bạn).`)}</p>
+            ${table([tr("Indicator", "Chỉ số"), esc(rg.name), cname, tr("World", "Thế giới")],
+                rows.map(([label, f], i) => `<tr><td>${label}</td><td>${cell(rg.values, i, f)}</td><td>${cell(rg.national, i, f)}</td>
+                    <td>${rg.world[i] === null ? "-" : `<abbr title="${tr("Population-weighted average of the national figures", "Trung bình gia quyền theo dân số của các số liệu quốc gia")}">≈</abbr>${f(rg.world[i])}`}</td></tr>`))}
+            <p class="small text-secondary">${tr(`Global Data Lab's Subnational Human Development Index, ${rg.year}, which divides ${cname} into ${rg.regions_in_country} regions. Region names are in English. Context only; not part of your SES index.`,
+                `Chỉ số Phát triển Con người cấp địa phương của Global Data Lab, ${rg.year}, chia ${cname} thành ${rg.regions_in_country} vùng. Tên vùng giữ nguyên tiếng Anh. Chỉ để tham khảo; không tính vào chỉ số SES.`)} ${cite("gdl_shdi")}</p>`;
+    }
+
     // ---------------------------------------------------------------- living standards
     const mark = has => has === null || has === undefined ? `<span class="text-secondary" title="${tr("Not answered", "Chưa trả lời")}">&ndash;</span>`
         : has ? `<span class="text-success" title="${tr("You have this", "Bạn có")}">&#10003;</span>` : `<span class="text-danger" title="${tr("You lack this", "Bạn không có")}">&#10007;</span>`;
@@ -831,6 +852,7 @@
         `<strong>Prices:</strong> consumer prices in ${cname} are rising about ${pct(pr.current_inflation * 100)} a year (IMF, ${lastYear}) and are ${pct((pr.price_index[lastYear] - 1) * 100, 0)} higher than in 2021. An income that doesn't grow loses about ${pct(100 * (1 - 1 / (1 + pr.current_inflation)))} of its buying power a year.`,
         `<strong>Giá cả:</strong> giá tiêu dùng ở ${cname} đang tăng khoảng ${pct(pr.current_inflation * 100)} mỗi năm (IMF, ${lastYear}) và cao hơn ${pct((pr.price_index[lastYear] - 1) * 100, 0)} so với năm 2021. Một khoản thu nhập không tăng sẽ mất khoảng ${pct(100 * (1 - 1 / (1 + pr.current_inflation)))} sức mua mỗi năm.`)} ${cite("imf_weo")}</p>` : "";
     html.push(section("country", tr(`${cname} at a glance`, `Tổng quan về ${cname}`), `
+    ${regionHtml(loc.region)}
     ${typicalHtml}
     ${spiHtml}
     ${priceHtml}
@@ -1068,6 +1090,7 @@
         if (work.occupation) add("work", `occupation: ${work.occupation.key} (skill level ${work.occupation.skill_level ?? "-"})`, "", work.occupation.world_pct, work.occupation.national_pct);
         if (liv.global_pct !== undefined) add("living", "living standards", "", liv.global_pct, liv.national_pct);
         if (work.informality && work.informality.world_pct !== null) add("work", `informal employment: ${work.informality.key}`, "", work.informality.world_pct, work.informality.national_pct);
+        if (loc.region) add("location", `region: ${loc.region.name} (HDI ${loc.region.values[0]}; share of people in regions with lower HDI)`, "", loc.region.world_rank, loc.region.national_rank);
         if (liv.phone) add("living", `mobile phone: ${liv.phone.key}`, "", liv.phone.world_pct, liv.phone.national_pct);
         // Shares of adults who did each online activity; Findex asks only in low- and middle-income economies.
         if (liv.online) for (const i of liv.online.items) {

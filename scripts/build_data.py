@@ -27,6 +27,8 @@ import datetime
 import io
 import json
 import math
+import os
+import re
 import sys
 import time
 import urllib.parse
@@ -275,6 +277,13 @@ FINDEX_ONLINE = {"social_media": "con30c", "news": "con30d", "learn": "con30e", 
 # modelled estimate (aggregate X01) for the last full year, not its projections.
 ILO_API = "https://rplumber.ilo.org/data/indicator/"
 INFORMALITY_INDICATOR = "SDG_0831_SEX_ECO_RT_A"
+# Subnational Human Development Index (Global Data Lab, Radboud University): HDI, life
+# expectancy, expected and mean years of schooling, GNI per person and population for about
+# 1,800 regions. Downloads need a free GDL account's API token in GDL_TOKEN; without one the
+# build keeps the regions already in data/countries.json.
+GDL_URL = "https://globaldatalab.org/shdi/download/{indicator}/"
+GDL_INDICATORS = ["shdi", "lifexp", "esch", "msch", "lgnic", "pop"]
+GDL_CODES = {"XKO": "XKX"}  # GDL's Kosovo code
 # Findex breakdowns of the derived groups (indicator suffixes): women, men, rural, urban.
 FINDEX_GROUP_SUFFIXES = {".1": ("by_sex", "F"), ".2": ("by_sex", "M"), ".9": ("by_area", "rural"),
                          ".10": ("by_area", "urban")}
@@ -842,6 +851,79 @@ def build_informality(economies):
                  **{keys[r.sex]: round(float(r.obs_value) / 100, 4) for r in world[world["time"] == last].itertuples()}}
 
 
+def gdl_csv(indicator, token):
+    """One SHDI indicator for every national and subnational area and year (cached)."""
+    path = RAW_DIR / f"gdl_{indicator}.csv"
+    if REFRESH or not path.exists():
+        url = GDL_URL.format(indicator=indicator) + "?" + urllib.parse.urlencode({"token": token})
+        headers = {"User-Agent": "Mozilla/5.0 (compatible; socialranking-data-build)"}
+        # The download form lists GDL's internal country ids; ask for all of them.
+        form = fetch_with_retries(urllib.request.Request(url, headers=headers)).decode("utf-8", "replace")
+        ids = re.findall(r'name="countries\[\]"[^>]*value="([^"]*)"|value="([^"]*)"[^>]*name="countries\[\]"', form)
+        fields = [("countries[]", a or b) for a, b in ids] + [
+            ("levels[]", "1"), ("levels[]", "4"), ("interpolation", "1"), ("extrapolation", "0"),
+            ("transposition", "vars"), ("format", "csv")]
+        body = fetch_with_retries(urllib.request.Request(url, data=urllib.parse.urlencode(fields).encode(),
+                                                         headers=headers))
+        if not body.startswith(b"Country,"):
+            raise OSError(f"GDL returned no CSV for {indicator} (is GDL_TOKEN valid?)")
+        print(f"downloaded GDL {indicator}")
+        path.write_bytes(body)
+        time.sleep(5)  # GDL resets connections when asked too quickly
+    return pd.read_csv(path, encoding="utf-8")
+
+
+def fetch_with_retries(req):
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                return r.read()
+        except OSError:
+            if attempt == 4:
+                raise
+            time.sleep(10 * (attempt + 1))
+
+
+def build_regions(economies):
+    """Per economy: its GDL regions' latest SHDI indicators, and the national figures."""
+    token = os.environ.get("GDL_TOKEN")
+    if not token and not all((RAW_DIR / f"gdl_{i}.csv").exists() for i in GDL_INDICATORS):
+        previous = OUT_DIR / "countries.json"
+        if previous.exists():
+            print("GDL_TOKEN not set: keeping the regions from the previous build")
+            return {c["iso3"]: c["subnational"] for c in json.loads(previous.read_text()) if "subnational" in c}
+        print("GDL_TOKEN not set: no subnational data")
+        return {}
+    frames = {ind: gdl_csv(ind, token).set_index("GDLCODE") for ind in GDL_INDICATORS}
+    base = frames["shdi"]
+    year = max(int(c.rsplit("_", 1)[1]) for c in base.columns if c.startswith("shdi_") and base[c].notna().sum() > 1000)
+
+    def value(ind, code, digits):
+        v = frames[ind].at[code, f"{ind}_{year}"] if code in frames[ind].index else None
+        if v is None or pd.isna(v):
+            return None
+        v = math.exp(v) if ind == "lgnic" else v  # GNI per person comes as its log
+        return round(float(v), digits)
+
+    out = {}
+    digits = {"shdi": 3, "lifexp": 1, "esch": 1, "msch": 1, "lgnic": 0, "pop": 0}
+    for code, rows in base.groupby("ISO_Code"):
+        code = GDL_CODES.get(code, code)
+        if code not in economies:
+            continue
+        entry = {"year": year, "regions": []}
+        for gdl, r in rows.iterrows():
+            values = [value(ind, gdl, digits[ind]) for ind in GDL_INDICATORS]
+            if r["Level"] == "National":
+                entry["national"] = values
+            elif values[0] is not None:
+                entry["regions"].append([gdl, r["Region"], *values])
+        entry["regions"].sort(key=lambda x: x[1].casefold())
+        if entry["regions"]:
+            out[code] = entry
+    return out
+
+
 def findex_breakdowns(group, out):
     """Add a derived group's shares for women, men, rural and urban adults, in the economy's year."""
     inds, _, split = FINDEX_DERIVED[group]
@@ -1262,6 +1344,7 @@ def main():
     findex_yes, global_findex_yes = build_findex_yes(adults, economies)
     findex_online, global_findex_online = build_findex_online(economies)
     informality, global_informality = build_informality(economies)
+    subnational = build_regions(economies)
     exchange_rates = wdi_latest("PA.NUS.FCRF", WDI_SINCE)
     age_structure = build_age_structure()
     healthy_diet, global_healthy_diet = build_healthy_diet(prices)
@@ -1300,6 +1383,8 @@ def main():
             entry["findex_online"] = findex_online[code]
         if code in informality:
             entry["informality"] = informality[code]
+        if code in subnational:
+            entry["subnational"] = subnational[code]
         rate = market_rate(code, exchange_rates, prices.get(code))
         if rate:
             entry["exchange_rate"] = rate
@@ -1364,6 +1449,11 @@ def main():
         "findex_yes": global_findex_yes,
         "findex_online": global_findex_online,
         "informality": global_informality,
+        # Columns of each region in countries[].subnational.regions (after code and name).
+        "subnational": {"fields": ["hdi", "life_expectancy", "expected_schooling", "mean_schooling",
+                                   "gni_per_capita", "population_thousands"],
+                        "source": "Global Data Lab, Subnational Human Development Index",
+                        "economies": len(subnational), "regions": sum(len(v["regions"]) for v in subnational.values())},
         "healthy_diet": global_healthy_diet,
         "occupation": global_occupation,
         "age_structure": {"groups": AGE_GROUPS, **age_structure["WLD"]},
@@ -1399,6 +1489,7 @@ def main():
     print(f"education: {e['countries_wdi']} WDI + {e['countries_barro_lee']} Barro-Lee, "
           f"{e['population_25_plus_covered'] / e['population_25_plus_world']:.1%} of adults 25+; world shares",
           e["world_shares"])
+    print("subnational:", len(subnational), "economies,", sum(len(v["regions"]) for v in subnational.values()), "regions")
     print("informality:", global_informality)
     print("findex online:", global_findex_online["economies"], global_findex_online["lmy"])
     print("findex yes/no:", {k: (v["economies"], v["share"]) for k, v in global_findex_yes.items()})

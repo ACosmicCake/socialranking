@@ -19,6 +19,11 @@
         </select>
         <button type="button" class="btn btn-sm btn-outline-info mt-2" id="country-suggest" hidden
                 data-template="{{ _('Use {country}?') }}"></button>
+    {% elif q.type == "region" %}
+        <label class="form-label fs-5" for="region">{{ q.text }}</label>
+        <select name="region" id="region" class="form-select form-select-lg">
+            <option value="">{{ _("Choose your region...") }}</option>
+        </select>
     {% elif q.type == "number" %}
         <label class="form-label fs-5" for="{{ q.id }}">{{ q.text }}{% if q.required %} <span class="badge req-badge align-middle">{{ _("Required") }}</span>{% endif %}</label>
         {% if q.id == "income_amount" %}

@@ -14,7 +14,7 @@
         <a href="#education">Education</a> &middot; <a href="#work">Work</a> &middot; <a href="#living">Living standards</a> &middot;
         <a href="#mpi">Multidimensional poverty</a> &middot; <a href="#security">Financial security</a> &middot;
         <a href="#wealth">Wealth</a> &middot; <a href="#location">Your country</a> &middot; <a href="#index">SES index</a> &middot;
-        <a href="#ladder">Self-placement</a> &middot; <a href="#coverage">Coverage</a> &middot; <a href="#languages">Languages</a> &middot;
+        <a href="#ladder">Self-placement</a> &middot; <a href="#regions">Your region</a> &middot; <a href="#coverage">Coverage</a> &middot; <a href="#languages">Languages</a> &middot;
         <a href="#changes">What changed</a> &middot; <a href="#reproduce">Reproducing the data</a>
     </nav>
 
@@ -420,7 +420,16 @@
         <li>World population {{ g.world_population | people }} ({{ g.world_population_year }}).</li>
     </ul>
 
-    <h2 id="languages">Languages</h2>
+        <h2 id="regions">Your region</h2>
+    <p>If you pick your region, we compare it with your country and the world using the Global Data Lab's Subnational Human
+        Development Index {{ cite("gdl_shdi") }}: the HDI, life expectancy, expected and mean years of schooling, and income
+        (GNI) per person in 2017 PPP dollars, for {{ g.subnational.regions }} regions in {{ g.subnational.economies }} economies.
+        We also say what share of your country's and of the world's population lives in regions with a lower HDI (people in
+        your own region counted half). The world column is a population-weighted average of the national figures, so it
+        differs slightly from UNDP's world HDI. Regions are provinces, states or groups of them, as defined by the survey data
+        behind the index. Context only; not part of the SES index.</p>
+
+<h2 id="languages">Languages</h2>
     <p>The quiz, results, questionnaire, FAQ and about pages are also available in Vietnamese. The Vietnamese survey wording is
         our own translation, not the official Vietnamese version of each instrument. Country names come from the Unicode CLDR
         (via Babel).</p>

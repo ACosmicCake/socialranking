@@ -283,6 +283,8 @@ def quiz_data(full):
         amount = c.get("findex", {}).get("emergency_amount")
         if amount:
             entry["findex"] = {"emergency_amount": amount}
+        if "subnational" in c:
+            entry["subnational"] = {"regions": [r[:2] for r in c["subnational"]["regions"]]}
         countries.append(entry)
     slim = {
         "lang": full["lang"],

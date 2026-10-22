@@ -82,6 +82,12 @@ CITATIONS = {
         "year": 2023,
         "url": "https://api.worldbank.org/v2/sources/86/indicators?format=json&per_page=1000",
     },
+    "gdl_shdi": {
+        "title": "Subnational Human Development Index (SHDI): HDI and its components for about 1,800 regions",
+        "publisher": "Global Data Lab, Radboud University",
+        "year": 2025,
+        "url": "https://globaldatalab.org/shdi/",
+    },
     "ilo_informality": {
         "title": "SDG indicator 8.3.1: proportion of informal employment in total employment, by sex (ILOSTAT)",
         "publisher": "International Labour Organization",

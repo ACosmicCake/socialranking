@@ -3096,6 +3096,19 @@
   "M": 0.5921,
   "F": 0.5593
  },
+ "subnational": {
+  "fields": [
+   "hdi",
+   "life_expectancy",
+   "expected_schooling",
+   "mean_schooling",
+   "gni_per_capita",
+   "population_thousands"
+  ],
+  "source": "Global Data Lab, Subnational Human Development Index",
+  "economies": 167,
+  "regions": 1804
+ },
  "healthy_diet": {
   "world": {
    "year": 2025,

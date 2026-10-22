@@ -47,6 +47,7 @@ UI = {
     "about {n} min left": "còn khoảng {n} phút",
     "almost done": "sắp xong",
     "Quiz sections": "Các phần của bài",
+    "Choose your region...": "Chọn vùng của bạn...",
     "Next: {section}": "Tiếp theo: {section}",
     "Only questions marked Required are needed. The rest are optional, but each one adds detail to your results.":
         "Chỉ những câu có nhãn Bắt buộc là cần trả lời. Các câu khác không bắt buộc, nhưng mỗi câu giúp kết quả chi tiết hơn.",
@@ -315,6 +316,10 @@ QUESTIONS = {
                     "work": "Tiền từ làm việc, kể cả làm thêm giờ hoặc làm thêm việc thứ hai",
                     "borrowing": "Vay ngân hàng, chủ lao động hoặc người cho vay tư nhân",
                     "sale_of_assets": "Bán thứ gì đó tôi sở hữu", "other": "Nguồn khác"},
+    },
+    "region": {
+        "text": "Bạn sống ở vùng nào của đất nước?",
+        "help": "Không bắt buộc. Các vùng theo Chỉ số Phát triển Con người cấp địa phương (tỉnh, bang hoặc nhóm tỉnh).",
     },
     "informal": {
         "text": "Công việc chính của bạn có phải là việc làm chính thức không?",
