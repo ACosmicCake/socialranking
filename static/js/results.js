@@ -834,7 +834,12 @@
             const rows = loc.glance.filter(g => !used.has(g.code) && re.test(g.code));
             rows.forEach(g => used.add(g.code));
             if (!rows.length) return [];
-            return [`<tr class="glance-group"><th colspan="${cols}">${title}</th></tr>`].concat(rows.map(g =>
+            // How many ranked indicators in this group beat the median person's economy.
+            const ranked = rows.filter(g => g.better_than_pct !== null && g.better_than_pct !== undefined);
+            const ahead = ranked.filter(g => g.better_than_pct > 50).length;
+            const tally = ranked.length ? ` <span class="glance-tally">${tr(`better than half the world on ${ahead} of ${ranked.length}`,
+                                                                        `hơn một nửa thế giới ở ${ahead}/${ranked.length} chỉ số`)}</span>` : "";
+            return [`<tr class="glance-group"><th colspan="${cols}">${title}${tally}</th></tr>`].concat(rows.map(g =>
                 `<tr><td>${esc(g.label)} <span class="small text-secondary">(${g.year})</span></td><td>${fmtGlance(g.value, g.fmt)}${trend(g)}</td>
                 ${loc.region_name ? `<td>${est(g.region_estimated)}${fmtGlance(g.region, g.fmt)}</td>` : ""}
                 ${loc.group_name ? `<td class="d-none d-md-table-cell">${est(g.group_estimated)}${fmtGlance(g.group, g.fmt)}</td>` : ""}<td>${est(g.world_estimated)}${fmtGlance(g.world, g.fmt)}</td>

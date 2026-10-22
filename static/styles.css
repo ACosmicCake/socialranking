@@ -550,6 +550,13 @@ main:focus {
     text-align: left;
 }
 
+.table tr.glance-group th .glance-tally {
+    margin-left: 0.5rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    opacity: 0.75;
+}
 .table tr.glance-group th {
     padding-top: 0.9rem;
     font-size: 0.75rem;
