@@ -1159,6 +1159,24 @@
         const LOWER_BETTER = /^(SH\.DYN\.MORT|SN\.ITK\.DEFC|SL\.UEM|SL\.EMP\.VULN|SH\.XPD\.OOPC|EN\.POP\.SLUM|SI\.POV\.GINI|SI\.DST\.10TH|EN\.ATM\.PM25|VC\.IHR|SH\.STA\.STNT|SE\.LPV|SH\.STA\.MMRT|SP\.ADO\.TFRT)/;
         const UNRANKED = /^(SP\.URB|SH\.XPD\.CHEX|SI\.POV\.NAHC|SL\.TLF\.CACT|SP\.DYN\.TFRT)/;
 
+        // Population-weighted average over economies with data (in a region, if given), for indicators
+        // without a published aggregate. Not for inequality measures or national poverty lines, whose
+        // averages mean something else, and only when the data cover at least half the population.
+        const NO_ESTIMATE = /^SI\./;
+        function estimateAggregate(code, regionCode) {
+            if (NO_ESTIMATE.test(code)) return null;
+            let sum = 0, covered = 0, total = 0;
+            for (const c of D.countries) {
+                if (!c.population || (regionCode && c.region !== regionCode)) continue;
+                total += c.population;
+                const x = value(c.wdi, code);
+                if (x === null) continue;
+                sum += x * c.population;
+                covered += c.population;
+            }
+            return total && covered >= total / 2 ? sum / covered : null;
+        }
+
         // Share of the world's population living in economies that do worse on this indicator
         // (economies with the same value count half), among economies with data.
         function populationRank(code, v) {
@@ -1200,9 +1218,14 @@
             for (const [code, label, fmt] of glance) {
                 const v = value(country.wdi, code);
                 if (v === null) continue;
-                result.glance.push({code, label, fmt, value: v, year: year(country.wdi, code),
-                                    world: value(world, code), region: region ? value(region.wdi, code) : null,
-                                    better_than_pct: populationRank(code, v)});
+                const item = {code, label, fmt, value: v, year: year(country.wdi, code),
+                              world: value(world, code), region: region ? value(region.wdi, code) : null,
+                              better_than_pct: populationRank(code, v)};
+                if (item.world === null && (item.world = estimateAggregate(code)) !== null) item.world_estimated = true;
+                if (region && item.region === null && (item.region = estimateAggregate(code, country.region)) !== null) {
+                    item.region_estimated = true;
+                }
+                result.glance.push(item);
             }
             result.region_name = region ? region.name : null;
             result.income_group = groupLabel(country.income_group);

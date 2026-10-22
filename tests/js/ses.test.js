@@ -573,3 +573,18 @@ test("youth, gender and demography indicators in the country glance", () => {
     assert.equal(get("SP.DYN.TFRT.IN").better_than_pct, null);
     assert.equal(get("SL.TLF.CACT.FE.ZS").better_than_pct, null);
 });
+
+test("missing world and regional aggregates are estimated, except for inequality", () => {
+    const glance = run(FULL).location.glance;
+    const get = code => glance.find(g => g.code === code);
+    const neet = get("SL.UEM.NEET.ZS");
+    assert.ok(neet.world_estimated && neet.world > 5 && neet.world < 35);
+    // No estimate when the economies with data hold under half the population (China has no NEET figure).
+    assert.equal(neet.region, null);
+    const gender = get("GD_WBL_OVL_LAW");
+    assert.ok(gender.region_estimated && gender.region > 30 && gender.region < 100);
+    assert.ok(get("HD.HCI.OVRL").world > 0.4 && get("HD.HCI.OVRL").world < 0.8);
+    // Published aggregates are left alone; Gini is never averaged.
+    assert.equal(get("SP.DYN.LE00.IN").world_estimated, undefined);
+    assert.equal(get("SI.POV.GINI").world, null);
+});
