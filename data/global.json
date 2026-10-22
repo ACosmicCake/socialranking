@@ -3059,6 +3059,36 @@
    }
   }
  },
+ "findex_online": {
+  "keys": [
+   "social_media",
+   "news",
+   "learn",
+   "government",
+   "job",
+   "earn"
+  ],
+  "indicators": {
+   "social_media": "con30c",
+   "news": "con30d",
+   "learn": "con30e",
+   "government": "con30g",
+   "job": "con30h",
+   "earn": "con30f"
+  },
+  "lmy": {
+   "year": 2024,
+   "shares": {
+    "social_media": 0.4526,
+    "news": 0.3946,
+    "learn": 0.2555,
+    "government": 0.181,
+    "job": 0.1087,
+    "earn": 0.062
+   }
+  },
+  "economies": 75
+ },
  "healthy_diet": {
   "world": {
    "year": 2025,

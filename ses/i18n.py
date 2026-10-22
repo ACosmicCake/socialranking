@@ -305,6 +305,13 @@ QUESTIONS = {
                     "borrowing": "Vay ngân hàng, chủ lao động hoặc người cho vay tư nhân",
                     "sale_of_assets": "Bán thứ gì đó tôi sở hữu", "other": "Nguồn khác"},
     },
+    "online": {
+        "text": "Trong 3 tháng qua, bạn đã làm những việc nào sau đây trên mạng? Chọn tất cả phù hợp.",
+        "options": {"social_media": "Dùng mạng xã hội", "news": "Đọc tin tức trên mạng",
+                    "learn": "Tìm thông tin để học tập hoặc đào tạo", "government": "Dùng dịch vụ hoặc thông tin của nhà nước trên mạng",
+                    "job": "Tìm hoặc nộp đơn xin việc trên mạng", "earn": "Dùng ứng dụng hoặc trang web để kiếm tiền",
+                    "none": "Không việc nào"},
+    },
     "phone": {
         "text": "Bạn có điện thoại di động không? Nếu có nhiều chiếc, hãy nghĩ đến chiếc bạn dùng nhiều nhất.",
         "options": {"smartphone": "Có, điện thoại thông minh", "basic": "Có, điện thoại phổ thông (chỉ nghe gọi và nhắn tin)",

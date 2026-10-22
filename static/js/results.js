@@ -518,7 +518,27 @@
     <p class="small text-secondary">${tr(
         `"Safely managed" water and sanitation also require the water to be free from contamination and waste to be safely treated, which you can't check yourself, so we classify your answers approximately. Country, region and urban/rural figures`,
         `Nước và vệ sinh "được quản lý an toàn" còn đòi hỏi nước không bị nhiễm bẩn và chất thải được xử lý an toàn, điều bạn không tự kiểm tra được, nên câu trả lời được phân loại gần đúng. Số liệu quốc gia, khu vực, thành thị/nông thôn`)} ${cite("wdi")}, ${tr(`mostly for ${refYear}.`, `phần lớn cho năm ${refYear}.`)}</p>
-    ${phoneHtml()}`));
+    ${phoneHtml()}
+    ${onlineHtml()}`));
+
+    // ---------------------------------------------------------------- online activities (Findex connectivity)
+    function onlineHtml() {
+        const on = liv.online;
+        if (!on) return "";
+        const mark = you => you ? `<span class="text-success" title="${tr("You did this", "Bạn đã làm")}">&#10003;</span>` : `<span class="text-secondary">&ndash;</span>`;
+        const n = on.done.length;
+        return `<h3 class="h5 mt-4">${tr("What you do online", "Bạn làm gì trên mạng")}</h3>
+            <div class="row g-4"><div class="col-lg-8">
+            <p class="small">${tr(`You did ${n} of these ${on.items.length} things online in the past three months.`, `Bạn đã làm ${n} trong ${on.items.length} việc này trên mạng trong ba tháng qua.`)}
+                ${tr(`The columns show the share of <em>all</em> adults (not only internet users) who did each.`, `Các cột là tỷ lệ trên <em>tất cả</em> người trưởng thành (không chỉ người dùng Internet) đã làm từng việc.`)}</p>
+            ${table([tr("Online in the past 3 months", "Trên mạng trong 3 tháng qua"), tr("You", "Bạn"), on.year ? cname : null,
+                     tr("Low- and middle-income economies", "Các nền kinh tế thu nhập thấp và trung bình")].filter(x => x !== null),
+                on.items.map(i => `<tr class="${i.you ? "table-active" : ""}"><td>${esc(i.label)}</td><td class="fs-5">${mark(i.you)}</td>
+                    ${on.year ? `<td>${pct(i.country, 0)}</td>` : ""}<td>${pct(i.lmy, 0)}</td></tr>`))}
+            <p class="small text-secondary">${tr(`Global Findex 2025 connectivity questions, asked in ${on.economies} low- and middle-income economies${on.year ? ` (${cname}: ${on.year})` : `; not asked in ${cname}`}. Context only; not scored.`,
+                `Các câu hỏi về kết nối của Global Findex 2025, được hỏi ở ${on.economies} nền kinh tế thu nhập thấp và trung bình${on.year ? ` (${cname}: ${on.year})` : `; không hỏi ở ${cname}`}. Chỉ để tham khảo; không tính điểm.`)} ${cite("findex_2025")}</p>
+            </div></div>`;
+    }
 
     // ---------------------------------------------------------------- mobile phone (Findex connectivity)
     function phoneHtml() {

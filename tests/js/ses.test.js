@@ -604,3 +604,16 @@ test("account ownership among rural or urban adults", () => {
     assert.ok(rural && rural.world > 60 && rural.world < 90 && rural.country > 40 && rural.country < 95);
     assert.equal(run(FULL).security.account_groups.find(g => g.label === "Rural adults"), undefined);
 });
+
+test("online activities against the country and low- and middle-income economies", () => {
+    const on = run({...FULL, internet: "yes", online: "social_media,job"}).living.online;
+    assert.deepEqual(on.done, ["social_media", "job"]);
+    assert.equal(on.items.length, 6);
+    const social = on.items.find(i => i.key === "social_media");
+    assert.ok(social.you && social.lmy > 30 && social.lmy < 60 && social.country > 50);
+    assert.equal(on.items.find(i => i.key === "news").you, false);
+    // Only for internet users; high-income economies have no country column.
+    assert.equal(run({...FULL, internet: "no", online: "news"}).living.online, undefined);
+    const us = run({...FULL, country: "USA", income_mode: "band", income_band: "b7", internet: "yes", online: "none"}).living.online;
+    assert.ok(us && us.year === null && us.done.length === 0);
+});

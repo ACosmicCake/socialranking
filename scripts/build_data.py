@@ -244,6 +244,10 @@ FINDEX_DERIVED = {
 # Yes/no Findex items shown as context next to your answers (% of adults, latest wave).
 FINDEX_YES = {"saved": "save.any.t.d", "saved_old_age": "fin17f", "borrowed": "fin22a.22a1.22g.d",
               "digital_payment": "g20.any", "account": "account.t.d"}
+# Online activities in the past three months (Findex 2025 connectivity module, % of adults;
+# asked in low- and middle-income economies, whose published aggregate is LMY).
+FINDEX_ONLINE = {"social_media": "con30c", "news": "con30d", "learn": "con30e", "government": "con30g",
+                 "job": "con30h", "earn": "con30f"}
 # Findex breakdowns of the derived groups (indicator suffixes): women, men, rural, urban.
 FINDEX_GROUP_SUFFIXES = {".1": ("by_sex", "F"), ".2": ("by_sex", "M"), ".9": ("by_area", "rural"),
                          ".10": ("by_area", "urban")}
@@ -754,6 +758,23 @@ def build_findex_yes(adults, economies):
     return out, world
 
 
+def build_findex_online(economies):
+    """Share of adults who did each online activity, per economy and for low- and middle-income economies."""
+    raw = {}
+    for key, ind in FINDEX_ONLINE.items():
+        for r in wdi(ind, f"findex_{ind}.json", source=FINDEX_SOURCE, date=f"{FINDEX_SINCE}:{INFLATION_LAST_YEAR}"):
+            code = r["countryiso3code"] or r["country"]["id"]
+            raw.setdefault(code, {}).setdefault(int(r["date"]), {})[key] = round(float(r["value"]) / 100, 4)
+    out = {}
+    for code, years in raw.items():
+        complete = [y for y, v in years.items() if len(v) == len(FINDEX_ONLINE)]
+        if complete and (code in economies or code == "LMY"):
+            y = max(complete)
+            out[code] = {"year": y, "shares": years[y]}
+    lmy = out.pop("LMY", None)
+    return out, {"keys": list(FINDEX_ONLINE), "indicators": FINDEX_ONLINE, "lmy": lmy, "economies": len(out)}
+
+
 def findex_breakdowns(group, out):
     """Add a derived group's shares for women, men, rural and urban adults, in the economy's year."""
     inds, _, split = FINDEX_DERIVED[group]
@@ -1171,6 +1192,7 @@ def main():
               if code in pop_parts["SP.POP.0014.TO"]}
     findex, global_findex = build_findex(adults, economies)
     findex_yes, global_findex_yes = build_findex_yes(adults, economies)
+    findex_online, global_findex_online = build_findex_online(economies)
     exchange_rates = wdi_latest("PA.NUS.FCRF", WDI_SINCE)
     age_structure = build_age_structure()
     healthy_diet, global_healthy_diet = build_healthy_diet(prices)
@@ -1205,6 +1227,8 @@ def main():
             entry["findex"] = findex[code]
         if code in findex_yes:
             entry["findex_yes"] = findex_yes[code]
+        if code in findex_online:
+            entry["findex_online"] = findex_online[code]
         rate = market_rate(code, exchange_rates, prices.get(code))
         if rate:
             entry["exchange_rate"] = rate
@@ -1265,6 +1289,7 @@ def main():
         "education": global_education,
         "findex": global_findex,
         "findex_yes": global_findex_yes,
+        "findex_online": global_findex_online,
         "healthy_diet": global_healthy_diet,
         "occupation": global_occupation,
         "age_structure": {"groups": AGE_GROUPS, **age_structure["WLD"]},
@@ -1300,6 +1325,7 @@ def main():
     print(f"education: {e['countries_wdi']} WDI + {e['countries_barro_lee']} Barro-Lee, "
           f"{e['population_25_plus_covered'] / e['population_25_plus_world']:.1%} of adults 25+; world shares",
           e["world_shares"])
+    print("findex online:", global_findex_online["economies"], global_findex_online["lmy"])
     print("findex yes/no:", {k: (v["economies"], v["share"]) for k, v in global_findex_yes.items()})
     print("findex:", {k: (v["economies"], round(v["adults_covered"] / max(v["adults_world"], 1), 3), v["shares"])
                       for k, v in global_findex.items()})

@@ -8,6 +8,12 @@ The quiz form, the /questionnaire page and the scorer all read from here.
 
 YES_NO = [("yes", "Yes"), ("no", "No")]
 
+ONLINE_OPTIONS = [("social_media", "Used social media"), ("news", "Read news online"),
+                  ("learn", "Looked up information to learn, train or study"),
+                  ("government", "Used government services or information online"),
+                  ("job", "Searched or applied for a job online"),
+                  ("earn", "Used apps or websites to earn money"), ("none", "None of these")]
+
 PHONE_OPTIONS = [("smartphone", "Yes, a smartphone"), ("basic", "Yes, a basic phone (calls and text messages only)"),
                  ("none", "No")]
 
@@ -473,6 +479,16 @@ SECTIONS = [
                 "options": YES_NO,
                 "source": "itu_2025",
                 "basis": "ITU definition of an Internet user (SDG 17.8.1).",
+            },
+            {
+                "id": "online",
+                "type": "checkbox",
+                "show_if": ("internet", "yes"),
+                "text": "In the past 3 months, which of these have you done online? Tick all that apply.",
+                "options": ONLINE_OPTIONS,
+                "source": "findex_2025",
+                "basis": "Global Findex 2025 connectivity questions on online activities (asked in low- and "
+                         "middle-income economies). Shown as context; not scored.",
             },
             {
                 "id": "phone",
