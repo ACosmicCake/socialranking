@@ -7,6 +7,40 @@ body {
     color: #e9ecef;
 }
 
+/* Bootstrap's grey (#6c757d) is only 4.2:1 on the dark background; WCAG AA needs 4.5:1. */
+[data-bs-theme="dark"] .text-secondary,
+[data-bs-theme="dark"] .link-secondary {
+    color: #9aa1a9 !important;
+}
+[data-bs-theme="dark"] .btn-outline-secondary {
+    --bs-btn-color: #9aa1a9;
+}
+/* The light theme's page background (#f6f7f9) needs darker grey and blue for 4.5:1. */
+[data-bs-theme="light"] .text-secondary,
+[data-bs-theme="light"] .link-secondary {
+    color: #5c636a !important;
+}
+[data-bs-theme="light"] .btn-outline-secondary {
+    --bs-btn-color: #5c636a;
+}
+[data-bs-theme="light"] {
+    --bs-link-color: #0a58ca;
+    --bs-link-color-rgb: 10, 88, 202;
+}
+[data-bs-theme="light"] .text-info {
+    color: #087990 !important;
+}
+[data-bs-theme="light"] .btn-outline-info {
+    --bs-btn-color: #087990;
+    --bs-btn-border-color: #087990;
+}
+[data-bs-theme="light"] code {
+    color: #ab296a;
+}
+[data-bs-theme="light"] .table tr.glance-group th .glance-tally {
+    opacity: 1;
+}
+
 .navbar {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(6px);

@@ -26,7 +26,8 @@
     const lower = s => (VI ? s : s.charAt(0).toLowerCase() + s.slice(1));
     const section = (id, title, body) => `<hr class="my-5"><section id="${id}" class="result-section"><h2 class="h3">${title}</h2>${body}</section>`;
     const table = (head, rows, cls = "") => `<div class="table-responsive"><table class="table table-sm align-middle ${cls}">
-        <thead><tr>${head.map(h => h && typeof h === "object" ? `<th class="${h.cls}">${h.html}</th>` : `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
+        <thead><tr>${head.map(h => h && typeof h === "object" ? `<th class="${h.cls}">${h.html}</th>`
+            : h === "" ? `<th><span class="visually-hidden">${tr("Details", "Chi tiết")}</span></th>` : `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
     const fmtGlance = (v, f) => v === null || v === undefined ? "-" : f === "money" ? money(v, 0) : f === "pct" ? pct(v) : f === "index" ? fixed(v, 2) : fixed(v, 1);
 
     // ---------------------------------------------------------------- answers
