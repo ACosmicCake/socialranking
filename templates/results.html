@@ -15,8 +15,8 @@
         integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"
         integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
-<script src="{{ asset_base }}static/js/data{{ '.vi' if lang == 'vi' else '' }}.js"></script>
+<script src="{{ asset_base }}static/js/data{{ lang_suffix }}.js"></script>
 <script src="{{ asset_base }}static/js/ses.js"></script>
 <script>window.SES_BASE = "{{ base }}"; window.SES_ASSET_BASE = "{{ asset_base }}"; window.SES_LANG = "{{ lang }}";</script>
-<script src="{{ asset_base }}static/js/results.js"></script>
+<script src="{{ asset_base }}static/js/{{ results_js }}"></script>
 {% endblock %}

@@ -28,6 +28,7 @@ sys.path.insert(0, str(ROOT))
 from ses import data, facts, i18n  # noqa: E402
 from ses import questionnaire as qn  # noqa: E402
 from ses.distributions import global_cdf, global_quantile  # noqa: E402
+from jsi18n import inject  # noqa: E402
 
 PAGES = ["index", "quiz", "results", "methodology", "questionnaire", "sources", "faq", "about", "creator", "404"]
 
@@ -300,7 +301,16 @@ def build(out_dir, base_path=""):
     if out_dir.exists():
         shutil.rmtree(out_dir)
     shutil.copytree(ROOT / "static", out_dir / "static")
+    results_src = (ROOT / "static" / "js" / "results.js").read_text(encoding="utf-8")
+    results_js = {}
     for lang, spec in LANGS.items():
+        # Languages beyond English and Vietnamese get their own copy of results.js with the
+        # module's RESULTS translations added to each tr() call.
+        results_js[lang] = "results.js"
+        if getattr(spec["module"], "RESULTS", None) is not None:
+            results_js[lang] = f"results{spec['suffix']}.js"
+            (out_dir / "static" / "js" / results_js[lang]).write_text(
+                inject(results_src, spec["module"].RESULTS)[0], encoding="utf-8")
         suffix = spec["suffix"]
         full = browser_data(lang)
         for name, bundle in ((f"data{suffix}.js", full), (f"data.quiz{suffix}.js", quiz_data(full))):
@@ -328,6 +338,7 @@ def build(out_dir, base_path=""):
                 # Link previews need absolute URLs; only known for a deployed build.
                 site_url=f"{SITE_ORIGIN}{root}" if base_path else "",
                 alternates=alternates, languages=LANGUAGES, lang_pages=pages,
+                lang_suffix=spec["suffix"], results_js=results_js[lang],
                 _=(lambda s, mod=mod: mod.UI.get(s, s)) if mod else (lambda s: s),
                 **context)
             (out_dir / subdir / f"{page}.html").write_text(html, encoding="utf-8")

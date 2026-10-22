@@ -119,7 +119,7 @@
             const a = SES.emergencyAmount(opt.value);
             amount.hidden = !a;
             if (a) amount.textContent = amount.dataset.template.replace("{amount}",
-                `${a.amount.toLocaleString(document.documentElement.lang === "vi" ? "vi-VN" : "en-US")} ${a.currency}`);
+                `${a.amount.toLocaleString({vi: "vi-VN", es: "es-ES"}[document.documentElement.lang] || "en-US")} ${a.currency}`);
         }
         const allowed = opt.dataset.exact === "yes";
         exact.disabled = !allowed;
