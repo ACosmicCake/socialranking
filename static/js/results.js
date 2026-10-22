@@ -1039,11 +1039,19 @@
         if (work.occupation) add("work", `occupation: ${work.occupation.key} (skill level ${work.occupation.skill_level ?? "-"})`, "", work.occupation.world_pct, work.occupation.national_pct);
         if (liv.global_pct !== undefined) add("living", "living standards", "", liv.global_pct, liv.national_pct);
         if (liv.phone) add("living", `mobile phone: ${liv.phone.key}`, "", liv.phone.world_pct, liv.phone.national_pct);
+        // Shares of adults who did each online activity; Findex asks only in low- and middle-income economies.
+        if (liv.online) for (const i of liv.online.items) {
+            add("living", `online: ${i.key} (% of adults; world column = low- and middle-income economies)`, i.you ? "yes" : "no", i.lmy, i.country ?? "");
+        }
         if (r.mpi.available) add("living", "MPI deprivation score (%)", r.mpi.score);
         if (sec.gallup_group) add("security", `Gallup vulnerability: ${sec.gallup_group}`, "", sec.gallup_pct);
         if (sec.fies_level) add("security", `FIES: ${sec.fies_level} (${sec.fies_raw}/8)`, "", sec.fies_pct, sec.fies_national_pct);
         if (sec.emergency) add("security", `emergency money: ${sec.emergency.key}`, "", sec.emergency.world_pct, sec.emergency.national_pct);
         if (sec.cover_expenses) add("security", `cover expenses: ${sec.cover_expenses.key}`, "", sec.cover_expenses.world_pct, sec.cover_expenses.national_pct);
+        for (const y of sec.findex_yes || []) {
+            add("security", `${y.key.replace(/_/g, " ")} (% of adults${y.world_partial ? `; world column = ${y.world_economies} surveyed economies` : ""})`,
+                y.has ? "yes" : "no", y.world, y.country ?? "");
+        }
         if (r.wealth.band) add("wealth", r.wealth.band, "", r.wealth.global_pct);
         const sp = r.social_protection;
         if (sp.received) add("social protection", "programme types received", sp.types.join(" + ") || "none", sp.world_any, sp.country && sp.country.any);
