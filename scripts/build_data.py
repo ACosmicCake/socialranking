@@ -196,6 +196,13 @@ WDI_INDICATORS = {
     "SE.LPV.PRIM": "Learning poverty (% of 10-year-olds unable to read a simple text)",
     "IT.CEL.SETS.P2": "Mobile cellular subscriptions (per 100 people)",
     "SH.XPD.CHEX.PC.CD": "Current health expenditure per person (current US$)",
+    # youth, gender and demography
+    "SL.UEM.NEET.ZS": "Share of youth not in education, employment or training (% of youth population)",
+    "SL.TLF.CACT.FE.ZS": "Labor force participation rate, female (% of female population ages 15+, modeled ILO estimate)",
+    "SG.GEN.PARL.ZS": "Proportion of seats held by women in national parliaments (%)",
+    "SH.STA.MMRT": "Maternal mortality ratio (modeled estimate, per 100,000 live births)",
+    "SP.DYN.TFRT.IN": "Fertility rate, total (births per woman)",
+    "SP.ADO.TFRT": "Adolescent fertility rate (births per 1,000 women ages 15-19)",
     # Findex sets its emergency amount at 1/20 of GNI per person in local currency.
     "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
 }
