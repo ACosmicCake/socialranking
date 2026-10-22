@@ -278,6 +278,8 @@ WDI_EDUCATION = ["SE.PRM.CUAT.ZS", "SE.SEC.CUAT.LO.ZS", "SE.SEC.CUAT.UP.ZS", "SE
 EDUCATION_SINCE = 2010
 POP_25_PLUS_PARTS = ["SP.POP.0014.TO", "SP.POP.1519.FE", "SP.POP.1519.MA", "SP.POP.2024.FE", "SP.POP.2024.MA"]
 WDI_AGGREGATES = ["WLD", "EAS", "ECS", "LCN", "MEA", "NAC", "SAS", "SSF", "LIC", "LMC", "UMC", "HIC"]
+# The API reports income-group aggregates with an empty ISO3 code and these 2-character ids.
+INCOME_GROUP_IDS = {"XM": "LIC", "XN": "LMC", "XT": "UMC", "XD": "HIC"}
 
 # Separate urban and rural distributions, where PIP publishes them (only China in
 # the September 2026 release; India and Indonesia are now national only).
@@ -662,6 +664,7 @@ def wdi_latest(indicator, since, name=None):
     out = {}
     for r in rows:
         code, year = r["countryiso3code"] or r["country"]["id"], int(r["date"])
+        code = INCOME_GROUP_IDS.get(code, code)
         if code and (code not in out or year > out[code][0]):
             out[code] = (year, float(r["value"]))
     return out
