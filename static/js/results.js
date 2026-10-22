@@ -742,6 +742,7 @@
     }
 
     // ---------------------------------------------------------------- country at a glance
+    const est = estimated => estimated ? `<abbr title="${tr("Estimate: population-weighted average of the economies with data", "Ước tính: trung bình gia quyền theo dân số của các nền kinh tế có số liệu")}">≈</abbr>` : "";
     const loc = r.location;
     // You and the typical person in your country: median income, median education, most common work status.
     const typicalRows = [];
@@ -768,8 +769,8 @@
     // How reliable the national numbers are: the World Bank's statistical performance score.
     const spi = country.wdi && country.wdi["IQ.SPI.OVRL"];
     const spiAll = D.countries.map(c => c.wdi && c.wdi["IQ.SPI.OVRL"] && c.wdi["IQ.SPI.OVRL"][1]).filter(Boolean).sort((a, b) => a - b);
-    const rankNote = `<p class="small text-secondary">${tr(`"Better than" is the share of the world's population living in economies that do worse on that indicator, where lower is better for mortality, pollution, inequality and similar measures. Indicators that aren't better or worse in themselves are not ranked.`,
-        `"Hơn" là tỷ lệ dân số thế giới sống ở các nền kinh tế kém hơn về chỉ số đó; với tử vong, ô nhiễm, bất bình đẳng và các chỉ số tương tự thì thấp hơn là tốt hơn. Các chỉ số không mang nghĩa tốt hay xấu thì không được xếp hạng.`)}</p>`;
+    const rankNote = `<p class="small text-secondary">${tr(`"Better than" is the share of the world's population living in economies that do worse on that indicator, where lower is better for mortality, pollution, inequality and similar measures. Indicators that aren't better or worse in themselves are not ranked. ≈ marks a population-weighted average of the economies with data, where the World Bank publishes no aggregate.`,
+        `"Hơn" là tỷ lệ dân số thế giới sống ở các nền kinh tế kém hơn về chỉ số đó; với tử vong, ô nhiễm, bất bình đẳng và các chỉ số tương tự thì thấp hơn là tốt hơn. Các chỉ số không mang nghĩa tốt hay xấu thì không được xếp hạng. Dấu ≈ là trung bình gia quyền theo dân số của các nền kinh tế có số liệu, khi Ngân hàng Thế giới không công bố số tổng hợp.`)}</p>`;
     const spiHtml = spi ? `<p class="small">${tr(
         `<strong>How reliable are ${cname}'s numbers?</strong> Its statistical system scores ${fixed(spi[1], 0)} out of 100 on the World Bank's Statistical Performance Indicators (${spi[0]}), against a median of ${fixed(spiAll[Math.floor(spiAll.length / 2)], 0)} across ${spiAll.length} economies. Lower scores generally mean a weaker statistical system, with fewer or older surveys, so treat national comparisons with more caution.`,
         `<strong>Số liệu của ${cname} đáng tin đến đâu?</strong> Hệ thống thống kê của nước này đạt ${fixed(spi[1], 0)}/100 theo Chỉ số Hiệu quả Thống kê của Ngân hàng Thế giới (${spi[0]}), so với trung vị ${fixed(spiAll[Math.floor(spiAll.length / 2)], 0)} của ${spiAll.length} nền kinh tế. Điểm thấp hơn thường nghĩa là hệ thống thống kê yếu hơn, với ít khảo sát hơn hoặc khảo sát cũ hơn, nên hãy thận trọng hơn với các so sánh trong nước.`)} ${cite("wdi")}</p>` : "";
@@ -808,7 +809,7 @@
             if (!rows.length) return [];
             return [`<tr class="glance-group"><th colspan="${cols}">${title}</th></tr>`].concat(rows.map(g =>
                 `<tr><td>${esc(g.label)} <span class="small text-secondary">(${g.year})</span></td><td>${fmtGlance(g.value, g.fmt)}</td>
-                ${loc.region_name ? `<td>${fmtGlance(g.region, g.fmt)}</td>` : ""}<td>${fmtGlance(g.world, g.fmt)}</td>
+                ${loc.region_name ? `<td>${est(g.region_estimated)}${fmtGlance(g.region, g.fmt)}</td>` : ""}<td>${est(g.world_estimated)}${fmtGlance(g.world, g.fmt)}</td>
                 <td>${g.better_than_pct === null ? "" : pct(g.better_than_pct, 0)}</td></tr>`));
         });
     })())}
