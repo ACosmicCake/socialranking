@@ -1086,11 +1086,14 @@
             // Saving, formal borrowing and digital payments: Findex shares for the world, your country
             // and, where reported, adults of your sex and area. Context only.
             result.findex_yes = [];
-            for (const key of ["saved", "borrowed", "digital_payment"]) {
+            for (const key of ["saved", "saved_old_age", "borrowed", "digital_payment"]) {
                 const w = (G.findex_yes || {})[key];
-                if (!answers[key] || !w) continue;
+                // Saving for old age is only asked of people who saved.
+                const answer = key === "saved_old_age" && answers.saved === "no" ? "no" : answers[key];
+                if (!answer || !w) continue;
                 const c = (country.findex_yes || {})[key];
-                const item = {key, has: answers[key] === "yes", world: pct(w.share), world_economies: w.economies};
+                const item = {key, has: answer === "yes", world: pct(w.share), world_economies: w.economies,
+                              world_partial: w.adults_covered < 0.9 * w.adults_world};
                 if (c) {
                     Object.assign(item, {country: pct(c.share), year: c.year});
                     item.groups = [["by_sex", answers.sex], ["by_area", answers.area]]

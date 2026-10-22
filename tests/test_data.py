@@ -147,7 +147,7 @@ def test_findex_resilience_shares():
     # Phone ownership: about 85% of adults own a phone and two-thirds use a smartphone (Findex 2025).
     assert findex["phone"]["economies"] > 120
     yes = data.global_data()["findex_yes"]
-    assert all(v["economies"] > 120 for v in yes.values())
+    assert all(v["economies"] > (90 if k == "saved_old_age" else 120) for k, v in yes.items())
     assert 0.4 < yes["saved"]["share"] < 0.7 and 0.15 < yes["borrowed"]["share"] < 0.4
     assert 0.5 < yes["digital_payment"]["share"] < 0.8
     assert 0.08 < findex["phone"]["shares"][0] < 0.25 and 0.55 < findex["phone"]["shares"][2] < 0.8

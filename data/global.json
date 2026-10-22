@@ -3022,6 +3022,13 @@
    "adults_covered": 6001300782,
    "adults_world": 6210117111
   },
+  "saved_old_age": {
+   "indicator": "fin17f",
+   "share": 0.1641,
+   "economies": 98,
+   "adults_covered": 4829734193,
+   "adults_world": 6210117111
+  },
   "borrowed": {
    "indicator": "fin22a.22a1.22g.d",
    "share": 0.2788,
