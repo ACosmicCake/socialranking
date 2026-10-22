@@ -9,7 +9,8 @@ JavaScript error, missing results section, horizontal scrolling or broken downlo
 
 The page libraries come from jsDelivr. Without internet access, set SES_CDN_DIR to a folder
 holding the npm packages (bs, cj, d3, tj, wa, each unpacked as <name>/package/...).
-CHROMIUM_PATH can point at a specific Chromium binary.
+CHROMIUM_PATH can point at a specific Chromium binary. With AXE_PATH set to axe-core's
+axe.min.js, it also fails on serious or critical accessibility violations in either theme.
 """
 import functools
 import http.server
@@ -164,6 +165,25 @@ with sync_playwright() as pw:
         assert w <= width, f"{tag}: page is {w}px wide"
         print(tag, "ok")
         ctx.close()
+    # Accessibility: no serious or critical axe-core violations in either theme. AXE_PATH points at
+    # axe.min.js (the CI installs axe-core from npm); the check is skipped when it isn't set.
+    if os.environ.get("AXE_PATH"):
+        axe = Path(os.environ["AXE_PATH"]).read_text()
+        results = ("results.html#country=VNM&income_mode=band&income_band=b4&education=bachelor&sex=F&area=rural"
+                   "&internet=yes&online=news&phone=basic&saved=yes&borrowed=no&account=yes&emergency_funds=very_difficult")
+        for theme in ("dark", "light"):
+            for path in ["index.html", "quiz.html", "methodology.html", results, "vi/" + results]:
+                page = b.new_page(viewport={"width": 1280, "height": 900})
+                page.route("https://cdn.jsdelivr.net/**", route)
+                page.add_init_script(f"try {{ localStorage.setItem('ses-theme', '{theme}'); }} catch (e) {{}}")
+                page.goto(BASE + path); page.wait_for_timeout(1000)
+                page.add_script_tag(content=axe)
+                found = page.evaluate("""async () => (await axe.run(document, {resultTypes: ["violations"]})).violations
+                    .filter(v => ["serious", "critical"].includes(v.impact))
+                    .map(v => `${v.id}: ${v.nodes.slice(0, 3).map(n => n.target.join(" ")).join(", ")}`)""")
+                assert not found, f"{theme} {path.split('#')[0]}: {found}"
+                page.close()
+        print("accessibility ok")
     b.close()
     server.shutdown()
     print('screenshots in', OUT)

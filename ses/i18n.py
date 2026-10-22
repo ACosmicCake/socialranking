@@ -42,6 +42,7 @@ UI = {
         "Chỉ những câu có nhãn Bắt buộc là cần trả lời. Các câu khác không bắt buộc, nhưng mỗi câu giúp kết quả chi tiết hơn.",
     "Methodology": "Phương pháp",
     "Questionnaire": "Bảng hỏi",
+    "Main": "Điều hướng chính",
     "Sources": "Nguồn",
     "FAQ": "Hỏi đáp",
     "About": "Giới thiệu",

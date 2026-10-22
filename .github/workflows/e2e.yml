@@ -32,8 +32,13 @@ jobs:
           pip install -r requirements.txt playwright==1.47.0
           python -m playwright install --with-deps chromium
 
+      - name: Install axe-core for the accessibility check
+        run: npm install --no-save --prefix "$RUNNER_TEMP/axe" axe-core@4.10.2
+
       - name: Run the walkthrough
         run: python tests/e2e/walkthrough.py screenshots
+        env:
+          AXE_PATH: ${{ runner.temp }}/axe/node_modules/axe-core/axe.min.js
 
       - uses: actions/upload-artifact@v4
         if: always()
