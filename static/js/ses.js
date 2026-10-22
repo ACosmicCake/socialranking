@@ -92,6 +92,11 @@
                 "SE.XPD.TOTL.GD.ZS": "Public spending on education (% of GDP)",
                 "SP.POP.65UP.TO.ZS": "People aged 65 and over",
                 "IT.NET.BBND.P2": "Fixed broadband subscriptions per 100 people",
+                "SL.UEM.1524.ZS": "Youth unemployment (15-24, share of the youth labour force)",
+                "SE.SEC.CMPT.LO.ZS": "Lower-secondary completion rate (gross, can exceed 100%)",
+                "SH.STA.TRAF.P5": "Road traffic deaths per 100,000 people",
+                "SH.STA.SUIC.P5": "Suicides per 100,000 people",
+                "SH.PRV.SMOK": "Adults who use tobacco",
             },
             findex: {
                 emergency: {not_possible: "Not possible", very_difficult: "Possible, but very difficult",
@@ -1175,13 +1180,14 @@
             ["SL.UEM.NEET.ZS", "pct"], ["SL.TLF.CACT.FE.ZS", "pct"], ["SG.GEN.PARL.ZS", "pct"], ["SH.STA.MMRT", "number"],
             ["SP.DYN.TFRT.IN", "number"], ["SP.ADO.TFRT", "number"], ["SH.IMM.MEAS", "pct"],
             ["SE.XPD.TOTL.GD.ZS", "pct"], ["SP.POP.65UP.TO.ZS", "pct"], ["IT.NET.BBND.P2", "number"],
-            ["EN.GHG.CO2.PC.CE.AR5", "number"],
+            ["EN.GHG.CO2.PC.CE.AR5", "number"], ["SL.UEM.1524.ZS", "pct"], ["SE.SEC.CMPT.LO.ZS", "pct"],
+            ["SH.STA.TRAF.P5", "number"], ["SH.STA.SUIC.P5", "number"], ["SH.PRV.SMOK", "pct"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);
 
         // Which way is better, for ranking countries: 1 higher, -1 lower. Indicators that aren't
         // better or worse (urbanisation, health spending) or aren't comparable across countries
         // (national poverty lines) get no rank.
-        const LOWER_BETTER = /^(SH\.DYN\.MORT|SN\.ITK\.DEFC|SL\.UEM|SL\.EMP\.VULN|SH\.XPD\.OOPC|EN\.POP\.SLUM|SI\.POV\.GINI|SI\.DST\.10TH|EN\.ATM\.PM25|VC\.IHR|SH\.STA\.STNT|SE\.LPV|SH\.STA\.MMRT|SP\.ADO\.TFRT)/;
+        const LOWER_BETTER = /^(SH\.DYN\.MORT|SN\.ITK\.DEFC|SL\.UEM|SL\.EMP\.VULN|SH\.XPD\.OOPC|EN\.POP\.SLUM|SI\.POV\.GINI|SI\.DST\.10TH|EN\.ATM\.PM25|VC\.IHR|SH\.STA\.STNT|SE\.LPV|SH\.STA\.MMRT|SP\.ADO\.TFRT|SH\.STA\.TRAF|SH\.STA\.SUIC|SH\.PRV\.SMOK)/;
         const UNRANKED = /^(SP\.URB|SH\.XPD\.CHEX|SI\.POV\.NAHC|SL\.TLF\.CACT|SP\.DYN\.TFRT|EN\.GHG|SE\.XPD|SP\.POP)/;
 
         // Population-weighted average over economies with data (in a region or income group, if given), for indicators
