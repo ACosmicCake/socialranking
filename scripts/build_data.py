@@ -203,6 +203,12 @@ WDI_INDICATORS = {
     "SH.STA.MMRT": "Maternal mortality ratio (modeled estimate, per 100,000 live births)",
     "SP.DYN.TFRT.IN": "Fertility rate, total (births per woman)",
     "SP.ADO.TFRT": "Adolescent fertility rate (births per 1,000 women ages 15-19)",
+    # health system, environment, ageing, connectivity, public spending
+    "SH.IMM.MEAS": "Immunization, measles (% of children ages 12-23 months)",
+    "EN.GHG.CO2.PC.CE.AR5": "Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita)",
+    "SE.XPD.TOTL.GD.ZS": "Government expenditure on education, total (% of GDP)",
+    "SP.POP.65UP.TO.ZS": "Population ages 65 and above (% of total population)",
+    "IT.NET.BBND.P2": "Fixed broadband subscriptions (per 100 people)",
     # Findex sets its emergency amount at 1/20 of GNI per person in local currency.
     "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
 }
@@ -213,7 +219,8 @@ TREND_INDICATORS = ["NY.GDP.PCAP.PP.KD", "SP.DYN.LE00.IN", "SH.DYN.MORT", "SP.UR
                     "SI.POV.GINI", "SI.DST.10TH.10", "SI.DST.FRST.20", "SI.POV.NAHC", "GD_WBL_OVL_LAW",
                     "EN.ATM.PM25.MC.M3", "VC.IHR.PSRC.P5", "SH.STA.STNT.ZS", "SH.MED.PHYS.ZS", "SE.PRM.CMPT.ZS",
                     "SE.TER.ENRR", "IT.CEL.SETS.P2", "SH.XPD.CHEX.PC.CD", "SL.UEM.NEET.ZS", "SL.TLF.CACT.FE.ZS",
-                    "SG.GEN.PARL.ZS", "SH.STA.MMRT", "SP.DYN.TFRT.IN", "SP.ADO.TFRT", "IT.NET.USER.ZS"]
+                    "SG.GEN.PARL.ZS", "SH.STA.MMRT", "SP.DYN.TFRT.IN", "SP.ADO.TFRT", "IT.NET.USER.ZS",
+                    "SH.IMM.MEAS", "EN.GHG.CO2.PC.CE.AR5", "SE.XPD.TOTL.GD.ZS", "SP.POP.65UP.TO.ZS", "IT.NET.BBND.P2"]
 TREND_GAP, TREND_MIN_GAP = 10, 5
 # Social protection coverage from the World Bank ASPIRE database: % of the population
 # living in households that receive each kind of programme, in total and by

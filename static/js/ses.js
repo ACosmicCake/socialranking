@@ -87,6 +87,11 @@
                 "SH.STA.MMRT": "Maternal deaths per 100,000 live births",
                 "SP.DYN.TFRT.IN": "Births per woman",
                 "SP.ADO.TFRT": "Births per 1,000 girls aged 15-19",
+                "SH.IMM.MEAS": "Children (12-23 months) vaccinated against measles",
+                "EN.GHG.CO2.PC.CE.AR5": "CO2 emissions per person (tonnes)",
+                "SE.XPD.TOTL.GD.ZS": "Public spending on education (% of GDP)",
+                "SP.POP.65UP.TO.ZS": "People aged 65 and over",
+                "IT.NET.BBND.P2": "Fixed broadband subscriptions per 100 people",
             },
             findex: {
                 emergency: {not_possible: "Not possible", very_difficult: "Possible, but very difficult",
@@ -1168,14 +1173,16 @@
             ["HD.HCI.EYRS", "number"], ["HD.HCI.LAYS", "number"],
             ["SE.LPV.PRIM", "pct"], ["IT.CEL.SETS.P2", "number"], ["SH.XPD.CHEX.PC.CD", "money"],
             ["SL.UEM.NEET.ZS", "pct"], ["SL.TLF.CACT.FE.ZS", "pct"], ["SG.GEN.PARL.ZS", "pct"], ["SH.STA.MMRT", "number"],
-            ["SP.DYN.TFRT.IN", "number"], ["SP.ADO.TFRT", "number"],
+            ["SP.DYN.TFRT.IN", "number"], ["SP.ADO.TFRT", "number"], ["SH.IMM.MEAS", "pct"],
+            ["SE.XPD.TOTL.GD.ZS", "pct"], ["SP.POP.65UP.TO.ZS", "pct"], ["IT.NET.BBND.P2", "number"],
+            ["EN.GHG.CO2.PC.CE.AR5", "number"],
         ].map(([code, fmt]) => [code, L.glance[code], fmt]);
 
         // Which way is better, for ranking countries: 1 higher, -1 lower. Indicators that aren't
         // better or worse (urbanisation, health spending) or aren't comparable across countries
         // (national poverty lines) get no rank.
         const LOWER_BETTER = /^(SH\.DYN\.MORT|SN\.ITK\.DEFC|SL\.UEM|SL\.EMP\.VULN|SH\.XPD\.OOPC|EN\.POP\.SLUM|SI\.POV\.GINI|SI\.DST\.10TH|EN\.ATM\.PM25|VC\.IHR|SH\.STA\.STNT|SE\.LPV|SH\.STA\.MMRT|SP\.ADO\.TFRT)/;
-        const UNRANKED = /^(SP\.URB|SH\.XPD\.CHEX|SI\.POV\.NAHC|SL\.TLF\.CACT|SP\.DYN\.TFRT)/;
+        const UNRANKED = /^(SP\.URB|SH\.XPD\.CHEX|SI\.POV\.NAHC|SL\.TLF\.CACT|SP\.DYN\.TFRT|EN\.GHG|SE\.XPD|SP\.POP)/;
 
         // Population-weighted average over economies with data (in a region or income group, if given), for indicators
         // without a published aggregate. Not for inequality measures or national poverty lines, whose

@@ -7,7 +7,7 @@
    "home": "https://pip.worldbank.org"
   },
   "wdi": {
-   "name": "World Bank World Development Indicators API (124 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
+   "name": "World Bank World Development Indicators API (129 indicators: population, GDP, PPP, education, services, food security, work, health, social protection (ASPIRE); country classifications)",
    "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL",
    "home": "https://datatopics.worldbank.org/world-development-indicators/"
   },
@@ -3382,6 +3382,11 @@
   "SH.STA.MMRT": "Maternal mortality ratio (modeled estimate, per 100,000 live births)",
   "SP.DYN.TFRT.IN": "Fertility rate, total (births per woman)",
   "SP.ADO.TFRT": "Adolescent fertility rate (births per 1,000 women ages 15-19)",
+  "SH.IMM.MEAS": "Immunization, measles (% of children ages 12-23 months)",
+  "EN.GHG.CO2.PC.CE.AR5": "Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita)",
+  "SE.XPD.TOTL.GD.ZS": "Government expenditure on education, total (% of GDP)",
+  "SP.POP.65UP.TO.ZS": "Population ages 65 and above (% of total population)",
+  "IT.NET.BBND.P2": "Fixed broadband subscriptions (per 100 people)",
   "NY.GNP.PCAP.CN": "GNI per capita (current local currency)",
   "per_allsp.cov_pop_tot": "Coverage of social protection and labour programmes (% of population)",
   "per_sa_allsa.cov_pop_tot": "Coverage of social assistance (% of population)",
@@ -3748,6 +3753,26 @@
      2024,
      38.34
     ],
+    "SH.IMM.MEAS": [
+     2024,
+     84.3
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     4.69
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2023,
+     3.57
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     10.4
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     20.11
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      56.26
@@ -4097,6 +4122,26 @@
      2024,
      14.28
     ],
+    "SH.IMM.MEAS": [
+     2024,
+     89.8
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     7.35
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2023,
+     3.51
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     13.92
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     36.46
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      61.52
@@ -4438,6 +4483,26 @@
      2024,
      11.35
     ],
+    "SH.IMM.MEAS": [
+     2024,
+     94.07
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     6.62
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2022,
+     4.57
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     18.51
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     34.45
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      63.73
@@ -4774,6 +4839,26 @@
     "SP.ADO.TFRT": [
      2024,
      50.36
+    ],
+    "SH.IMM.MEAS": [
+     2024,
+     86.03
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     2.68
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2023,
+     3.82
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     10.16
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     20.54
     ],
     "per_allsp.cov_pop_tot": [
      2021,
@@ -5128,6 +5213,26 @@
      2024,
      37.83
     ],
+    "SH.IMM.MEAS": [
+     2024,
+     84.36
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     4.09
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2022,
+     4.38
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     5.19
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     9.69
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      50.64
@@ -5460,6 +5565,26 @@
     "SP.ADO.TFRT": [
      2024,
      11.68
+    ],
+    "SH.IMM.MEAS": [
+     2024,
+     92.0
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     13.66
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2022,
+     4.84
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     18.59
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     39.96
     ]
    }
   },
@@ -5814,6 +5939,26 @@
      2024,
      20.98
     ],
+    "SH.IMM.MEAS": [
+     2024,
+     96.9
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     1.98
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2024,
+     2.86
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     7.35
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     4.27
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      72.54
@@ -6150,6 +6295,26 @@
     "SP.ADO.TFRT": [
      2024,
      91.92
+    ],
+    "SH.IMM.MEAS": [
+     2024,
+     69.07
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     0.7
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2023,
+     3.26
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     3.23
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     1.12
     ]
    }
   },
@@ -6499,6 +6664,26 @@
     "SP.ADO.TFRT": [
      2024,
      90.7
+    ],
+    "SH.IMM.MEAS": [
+     2024,
+     66.65
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     0.3
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2022,
+     2.98
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     3.32
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     0.57
     ],
     "per_allsp.cov_pop_tot": [
      2021,
@@ -6861,6 +7046,26 @@
      2024,
      42.49
     ],
+    "SH.IMM.MEAS": [
+     2024,
+     86.02
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     1.6
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2023,
+     3.39
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     6.04
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     5.05
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      55.11
@@ -7218,6 +7423,26 @@
      2024,
      23.55
     ],
+    "SH.IMM.MEAS": [
+     2024,
+     90.25
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     6.38
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2023,
+     3.62
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     11.91
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     33.01
+    ],
     "per_allsp.cov_pop_tot": [
      2021,
      62.22
@@ -7558,6 +7783,26 @@
     "SP.ADO.TFRT": [
      2024,
      8.66
+    ],
+    "SH.IMM.MEAS": [
+     2024,
+     93.58
+    ],
+    "EN.GHG.CO2.PC.CE.AR5": [
+     2024,
+     9.75
+    ],
+    "SE.XPD.TOTL.GD.ZS": [
+     2022,
+     4.7
+    ],
+    "SP.POP.65UP.TO.ZS": [
+     2025,
+     20.0
+    ],
+    "IT.NET.BBND.P2": [
+     2025,
+     38.71
     ],
     "per_allsp.cov_pop_tot": [
      2021,

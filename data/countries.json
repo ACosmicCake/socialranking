@@ -924,6 +924,26 @@
     2024,
     61.5
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    55.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.28
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2017,
+    4.34
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.43
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    0.08
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     29716.42
@@ -1053,6 +1073,22 @@
    "IT.NET.USER.ZS": [
     2014,
     7.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    60.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.24
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.36
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.0
    ]
   },
   "gdp_pc_population_share_below": 0.00176,
@@ -2104,6 +2140,26 @@
     2024,
     12.4
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    81.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.79
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.09
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.62
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    24.88
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1126131.36
@@ -2273,6 +2329,26 @@
    "IT.NET.USER.ZS": [
     2014,
     54.3
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.84
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.18
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    12.54
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    7.16
    ]
   },
   "gdp_pc_population_share_below": 0.61574,
@@ -3274,6 +3350,26 @@
     2024,
     8.58
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.98
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    8.98
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.81
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    13.32
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     781300.25
@@ -3367,6 +3463,26 @@
    "IT.NET.USER.ZS": [
     2014,
     29.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.95
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.55
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.2
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    4.08
    ]
   },
   "gdp_pc_population_share_below": 0.53999,
@@ -3620,6 +3736,14 @@
    "SP.ADO.TFRT": [
     2024,
     34.75
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.54
    ]
   },
   "wdi_earlier": {
@@ -3642,6 +3766,14 @@
    "SP.ADO.TFRT": [
     2014,
     43.06
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.14
    ]
   },
   "gdp_pc_population_share_below": 0.838,
@@ -4057,6 +4189,22 @@
     2024,
     3.4
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.9
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    16.56
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    52.36
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     48880.63
@@ -4130,6 +4278,22 @@
    "IT.NET.USER.ZS": [
     2014,
     86.1
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.07
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    12.93
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    39.02
    ]
   },
   "gdp_pc_population_share_below": 0.91735,
@@ -4842,6 +5006,26 @@
     2024,
     139.39
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    53.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.74
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.51
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.89
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.36
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     3177444.68
@@ -4991,6 +5175,26 @@
    "IT.NET.USER.ZS": [
     2014,
     21.36
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    56.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.14
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    3.49
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.69
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.32
    ]
   },
   "gdp_pc_population_share_below": 0.42214,
@@ -5422,6 +5626,26 @@
     2024,
     32.08
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.8
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.11
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.34
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    10.68
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     64845.08
@@ -5495,6 +5719,26 @@
    "IT.NET.USER.ZS": [
     2014,
     67.78
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.15
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.3
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.11
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    12.12
    ]
   },
   "gdp_pc_population_share_below": 0.85375,
@@ -6476,6 +6720,26 @@
     2024,
     25.56
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    82.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.01
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.63
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    26.1
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     18110131.0
@@ -6645,6 +6909,26 @@
    "IT.NET.USER.ZS": [
     2014,
     64.7
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.42
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.36
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    11.03
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    15.15
    ]
   },
   "gdp_pc_population_share_below": 0.81157,
@@ -7735,6 +8019,26 @@
     2024,
     12.82
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.47
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.44
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    14.44
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    20.31
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     3557367.06
@@ -7908,6 +8212,26 @@
    "IT.NET.USER.ZS": [
     2014,
     54.62
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.91
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.25
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    10.92
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    9.34
    ]
   },
   "gdp_pc_population_share_below": 0.57993,
@@ -8260,6 +8584,22 @@
     2024,
     18.02
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.15
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    3.62
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.76
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    17.49
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     65325.83
@@ -8301,6 +8641,22 @@
    "SP.ADO.TFRT": [
     2014,
     34.86
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.13
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.85
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    11.64
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    18.57
    ]
   },
   "gdp_pc_population_share_below": 0.89288,
@@ -9261,6 +9617,26 @@
     2024,
     6.42
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    91.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    14.1
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.06
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    18.09
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    36.48
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     97831.02
@@ -9366,6 +9742,22 @@
    "IT.NET.USER.ZS": [
     2014,
     84.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    16.89
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.9
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.7
    ]
   },
   "gdp_pc_population_share_below": 0.94794,
@@ -10342,6 +10734,26 @@
     2024,
     3.6
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    6.32
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.28
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    21.09
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    30.13
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     55856.98
@@ -10451,6 +10863,26 @@
    "IT.NET.USER.ZS": [
     2015,
     83.94
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    7.71
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.5
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.46
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.6
    ]
   },
   "gdp_pc_population_share_below": 0.94552,
@@ -11235,6 +11667,26 @@
     2024,
     34.86
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    71.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.81
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.66
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    9.17
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    21.75
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     12268.67
@@ -11384,6 +11836,26 @@
    "IT.NET.USER.ZS": [
     2015,
     77.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.64
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.63
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.79
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    19.71
    ]
   },
   "gdp_pc_population_share_below": 0.56184,
@@ -11891,6 +12363,26 @@
     2024,
     24.52
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    86.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.64
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.74
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.09
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    25.27
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     37881.25
@@ -11968,6 +12460,26 @@
    "IT.NET.USER.ZS": [
     2014,
     76.92
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.97
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.25
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    10.21
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    20.19
    ]
   },
   "gdp_pc_population_share_below": 0.89894,
@@ -12846,6 +13358,26 @@
     2024,
     7.22
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    23.9
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.89
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.02
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    16.99
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     10613.82
@@ -12931,6 +13463,26 @@
    "IT.NET.USER.ZS": [
     2014,
     90.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    25.32
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.37
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.59
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    21.9
    ]
   },
   "gdp_pc_population_share_below": 0.86252,
@@ -14037,6 +14589,26 @@
     2024,
     70.81
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.72
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    2.03
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.67
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    8.09
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     331147.93
@@ -14202,6 +14774,26 @@
    "IT.NET.USER.ZS": [
     2014,
     9.05
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.49
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.1
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.9
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.96
    ]
   },
   "gdp_pc_population_share_below": 0.19491,
@@ -14955,6 +15547,26 @@
     2024,
     45.01
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.52
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.56
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.09
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    37.48
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     54417.01
@@ -15044,6 +15656,26 @@
    "IT.NET.USER.ZS": [
     2014,
     71.92
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.4
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.36
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    12.92
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.93
    ]
   },
   "gdp_pc_population_share_below": 0.85732,
@@ -15689,6 +16321,26 @@
     2024,
     8.17
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.94
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    5.05
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    18.28
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    36.26
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     31175.68
@@ -15850,6 +16502,26 @@
    "IT.NET.USER.ZS": [
     2014,
     59.02
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.77
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.82
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.31
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    28.34
    ]
   },
   "gdp_pc_population_share_below": 0.58636,
@@ -16818,6 +17490,26 @@
     2024,
     3.5
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    7.31
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    6.28
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.96
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    44.23
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     54440.95
@@ -16923,6 +17615,26 @@
    "IT.NET.USER.ZS": [
     2014,
     85.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    8.72
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.56
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.16
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    35.78
    ]
   },
   "gdp_pc_population_share_below": 0.94406,
@@ -17928,6 +18640,26 @@
     2024,
     55.6
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    84.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.93
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    4.62
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.23
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    9.75
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     14952.81
@@ -18081,6 +18813,26 @@
    "IT.NET.USER.ZS": [
     2014,
     38.7
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.59
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.14
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.08
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.84
    ]
   },
   "gdp_pc_population_share_below": 0.56341,
@@ -19118,6 +19870,26 @@
     2024,
     76.41
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    44.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.49
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.23
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.15
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.28
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     953994.81
@@ -19283,6 +20055,26 @@
    "IT.NET.USER.ZS": [
     2014,
     6.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    65.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.49
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.16
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.04
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.41
    ]
   },
   "gdp_pc_population_share_below": 0.17559,
@@ -19565,6 +20357,22 @@
     2024,
     1.53
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.14
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.87
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    22.61
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    51.3
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     146810.63
@@ -19610,6 +20418,22 @@
    "SP.ADO.TFRT": [
     2014,
     6.91
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.28
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    1.54
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    16.11
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    54.67
    ]
   },
   "gdp_pc_population_share_below": 0.9999,
@@ -20331,6 +21155,26 @@
     2024,
     8.71
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.01
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.85
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.63
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    2.92
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     370164.21
@@ -20492,6 +21336,26 @@
    "IT.NET.USER.ZS": [
     2014,
     30.3
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.54
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.46
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.63
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    3.41
    ]
   },
   "gdp_pc_population_share_below": 0.46884,
@@ -21555,6 +22419,26 @@
     2024,
     64.44
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    67.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.29
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    7.54
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.74
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    12.07
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     34634.66
@@ -21724,6 +22608,26 @@
    "IT.NET.USER.ZS": [
     2014,
     34.6
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.79
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.48
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.58
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.59
    ]
   },
   "gdp_pc_population_share_below": 0.52563,
@@ -22493,6 +23397,26 @@
     2024,
     10.78
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    69.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    6.45
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.25
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    22.86
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    29.39
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     18009.35
@@ -22654,6 +23578,26 @@
    "IT.NET.USER.ZS": [
     2014,
     49.92
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    5.83
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.31
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    17.25
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    15.22
    ]
   },
   "gdp_pc_population_share_below": 0.58747,
@@ -23718,6 +24662,26 @@
     2024,
     53.45
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.74
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2020,
+    8.06
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.08
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    7.44
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     101272.31
@@ -23863,6 +24827,26 @@
    "IT.NET.USER.ZS": [
     2014,
     36.74
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.29
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.89
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.56
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.53
    ]
   },
   "gdp_pc_population_share_below": 0.5631,
@@ -24951,6 +25935,26 @@
     2024,
     41.46
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.32
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.62
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    11.48
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    24.08
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     57910.71
@@ -25116,6 +26120,26 @@
    "IT.NET.USER.ZS": [
     2014,
     54.55
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.73
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.95
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.96
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    11.98
    ]
   },
   "gdp_pc_population_share_below": 0.58808,
@@ -25399,6 +26423,22 @@
    "SP.ADO.TFRT": [
     2024,
     15.14
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.33
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.17
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    10.11
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    24.91
    ]
   },
   "wdi_earlier": {
@@ -25437,6 +26477,22 @@
    "SP.ADO.TFRT": [
     2014,
     20.91
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.12
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.01
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.87
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    19.4
    ]
   }
  },
@@ -26209,6 +27265,26 @@
     2024,
     8.05
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    20.24
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2016,
+    4.43
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    7.24
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    21.18
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     43514.04
@@ -26298,6 +27374,22 @@
    "IT.NET.USER.ZS": [
     2014,
     68.77
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    19.45
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.16
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    7.26
    ]
   },
   "gdp_pc_population_share_below": 0.86404,
@@ -27373,6 +28465,26 @@
     2024,
     38.03
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.31
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.5
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    22.24
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    37.02
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     17109.92
@@ -27486,6 +28598,26 @@
    "IT.NET.USER.ZS": [
     2014,
     55.49
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.69
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.19
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    20.21
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    20.5
    ]
   },
   "gdp_pc_population_share_below": 0.85057,
@@ -28272,6 +29404,26 @@
     2024,
     85.53
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.27
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.33
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.68
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.85
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     628557.66
@@ -28437,6 +29589,26 @@
    "IT.NET.USER.ZS": [
     2014,
     6.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.15
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.05
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.6
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.03
    ]
   },
   "gdp_pc_population_share_below": 0.07237,
@@ -29288,6 +30460,26 @@
     2024,
     52.49
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    86.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.07
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2025,
+    4.5
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.55
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    0.02
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1244588.1
@@ -29437,6 +30629,26 @@
    "IT.NET.USER.ZS": [
     2014,
     1.04
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.04
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    6.37
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.22
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.02
    ]
   },
   "gdp_pc_population_share_below": 0.0,
@@ -30512,6 +31724,26 @@
     2024,
     47.31
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.1
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.18
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.38
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    4.15
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     11325107.37
@@ -30641,6 +31873,26 @@
    "IT.NET.USER.ZS": [
     2014,
     14.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.46
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    1.45
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.57
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.43
    ]
   },
   "gdp_pc_population_share_below": 0.39716,
@@ -31732,6 +32984,26 @@
     2024,
     105.39
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    71.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.35
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.84
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.82
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    2.13
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1129846.2
@@ -31893,6 +33165,26 @@
    "IT.NET.USER.ZS": [
     2014,
     16.21
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    71.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.4
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.58
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.85
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.08
    ]
   },
   "gdp_pc_population_share_below": 0.18157,
@@ -32850,6 +34142,26 @@
     2024,
     4.5
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    14.01
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.84
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.26
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    42.52
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     77956.69
@@ -32955,6 +34267,26 @@
    "IT.NET.USER.ZS": [
     2014,
     87.12
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    16.38
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.84
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    16.01
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    35.27
    ]
   },
   "gdp_pc_population_share_below": 0.91736,
@@ -33541,6 +34873,26 @@
     2024,
     37.94
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.29
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.35
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    7.15
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    8.31
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     559911.3
@@ -33638,6 +34990,26 @@
    "IT.NET.USER.ZS": [
     2014,
     40.26
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.51
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.52
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.16
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    3.72
    ]
   },
   "gdp_pc_population_share_below": 0.53512,
@@ -33968,6 +35340,22 @@
     2024,
     10.53
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.57
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    9.51
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    56.36
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     70198.18
@@ -34009,6 +35397,22 @@
    "SP.ADO.TFRT": [
     2014,
     18.53
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.86
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2018,
+    2.16
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.16
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    39.01
    ]
   },
   "gdp_pc_population_share_below": 0.9981,
@@ -34889,6 +36293,26 @@
     2024,
     161.35
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    41.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.06
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.83
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.2
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.02
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     342235.8
@@ -34974,6 +36398,26 @@
    "IT.NET.USER.ZS": [
     2014,
     2.7
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    47.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.03
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.22
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    1.95
+   ],
+   "IT.NET.BBND.P2": [
+    2015,
+    0.04
    ]
   },
   "gdp_pc_population_share_below": 0.00713,
@@ -35814,6 +37258,26 @@
     2024,
     132.13
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    66.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.14
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.2
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.12
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.0
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     567979.75
@@ -35959,6 +37423,26 @@
    "IT.NET.USER.ZS": [
     2014,
     2.9
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    45.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.1
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.32
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.06
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.07
    ]
   },
   "gdp_pc_population_share_below": 0.06282,
@@ -36304,6 +37788,10 @@
    "SP.ADO.TFRT": [
     2024,
     8.27
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.41
    ]
   },
   "wdi_earlier": {
@@ -36334,6 +37822,10 @@
    "SP.ADO.TFRT": [
     2014,
     13.61
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    17.32
    ]
   },
   "gdp_pc_population_share_below": 0.95391,
@@ -37378,6 +38870,26 @@
     2024,
     5.61
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.94
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.91
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    14.59
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    23.73
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     16192434.15
@@ -37543,6 +39055,26 @@
    "IT.NET.USER.ZS": [
     2014,
     61.11
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.41
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.75
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    11.25
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    13.94
    ]
   },
   "gdp_pc_population_share_below": 0.83557,
@@ -38639,6 +40171,26 @@
     2024,
     5.2
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    9.32
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.9
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    14.91
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    47.19
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     99083.95
@@ -38792,6 +40344,22 @@
    "IT.NET.USER.ZS": [
     2015,
     50.3
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    7.93
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    10.05
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    14.44
    ]
   },
   "gdp_pc_population_share_below": 0.62044,
@@ -39898,6 +41466,26 @@
     2024,
     58.39
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.8
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2020,
+    5.26
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    10.2
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    17.22
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     34099641.49
@@ -40071,6 +41659,26 @@
    "IT.NET.USER.ZS": [
     2014,
     52.57
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    91.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.82
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.63
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.11
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    10.8
    ]
   },
   "gdp_pc_population_share_below": 0.5731,
@@ -40923,6 +42531,26 @@
     2024,
     53.8
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    70.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.51
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.34
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.45
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    0.39
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     901810.24
@@ -41080,6 +42708,26 @@
    "IT.NET.USER.ZS": [
     2014,
     6.98
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    80.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.22
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.74
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.29
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.22
    ]
   },
   "gdp_pc_population_share_below": 0.18523,
@@ -42104,6 +43752,26 @@
     2024,
     105.22
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    55.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.06
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    2.84
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.08
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.03
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     2079600.47
@@ -42245,6 +43913,26 @@
    "IT.NET.USER.ZS": [
     2014,
     3.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    69.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.05
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    1.95
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.13
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.0
    ]
   },
   "gdp_pc_population_share_below": 0.03028,
@@ -43217,6 +44905,26 @@
     2024,
     108.1
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    72.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.34
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.34
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.06
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    1.27
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1310334.84
@@ -43302,6 +45010,26 @@
    "IT.NET.USER.ZS": [
     2014,
     7.11
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    80.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.06
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.18
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.66
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.01
    ]
   },
   "gdp_pc_population_share_below": 0.1941,
@@ -44416,6 +46144,26 @@
     2024,
     24.84
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.63
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.31
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.75
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    23.29
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     9147757.67
@@ -44585,6 +46333,26 @@
    "IT.NET.USER.ZS": [
     2014,
     53.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.69
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.68
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.76
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    10.83
    ]
   },
   "gdp_pc_population_share_below": 0.84994,
@@ -45661,6 +47429,26 @@
     2024,
     6.31
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.83
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    4.09
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    23.61
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    29.6
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     23733.19
@@ -45826,6 +47614,22 @@
    "IT.NET.USER.ZS": [
     2014,
     68.57
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.21
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    19.23
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    23.33
    ]
   },
   "gdp_pc_population_share_below": 0.85685,
@@ -46592,6 +48396,26 @@
     2024,
     48.24
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.91
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    8.44
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.04
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    3.08
+   ],
    "NY.GNP.PCAP.CN": [
     2019,
     9093.55
@@ -46681,6 +48505,26 @@
    "IT.NET.USER.ZS": [
     2014,
     29.07
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.38
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    9.61
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.2
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.07
    ]
   },
   "gdp_pc_population_share_below": 0.58031,
@@ -46999,6 +48843,18 @@
     2024,
     12.47
    ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    5.44
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.3
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    31.51
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     41607.05
@@ -47028,6 +48884,18 @@
    "SP.ADO.TFRT": [
     2014,
     31.84
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.95
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    13.93
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    23.43
    ]
   },
   "gdp_pc_population_share_below": 0.85373,
@@ -48052,6 +49920,26 @@
     2024,
     6.98
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.4
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.74
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    14.93
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    37.56
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     32862.39
@@ -48165,6 +50053,26 @@
    "IT.NET.USER.ZS": [
     2014,
     69.33
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    86.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    5.67
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.42
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    12.5
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    28.3
    ]
   },
   "gdp_pc_population_share_below": 0.89938,
@@ -49203,6 +51111,26 @@
     2024,
     5.75
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    7.13
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.3
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    21.18
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    38.87
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     751978.94
@@ -49316,6 +51244,26 @@
    "IT.NET.USER.ZS": [
     2014,
     74.23
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    10.19
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.94
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.1
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    28.48
    ]
   },
   "gdp_pc_population_share_below": 0.86984,
@@ -50343,6 +52291,26 @@
     2024,
     90.56
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    75.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.59
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.61
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.65
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    1.6
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1676426.48
@@ -50516,6 +52484,26 @@
    "IT.NET.USER.ZS": [
     2014,
     10.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    59.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.43
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.31
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.52
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.52
    ]
   },
   "gdp_pc_population_share_below": 0.40274,
@@ -51536,6 +53524,26 @@
     2024,
     1.06
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.28
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    6.36
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    21.12
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    43.39
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     523385.45
@@ -51645,6 +53653,26 @@
    "IT.NET.USER.ZS": [
     2014,
     95.99
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.41
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.64
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.7
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    41.49
    ]
   },
   "gdp_pc_population_share_below": 0.95402,
@@ -52287,6 +54315,26 @@
     2024,
     19.1
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    75.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.77
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2018,
+    3.75
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.97
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    1.47
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     711080.73
@@ -52428,6 +54476,22 @@
    "IT.NET.USER.ZS": [
     2014,
     17.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    71.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.88
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.12
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.0
    ]
   },
   "gdp_pc_population_share_below": 0.43758,
@@ -52856,6 +54920,26 @@
     2024,
     33.97
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    80.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.27
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    5.39
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    13.2
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    20.86
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     28911.81
@@ -52925,6 +55009,26 @@
    "IT.NET.USER.ZS": [
     2014,
     57.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.95
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.33
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    9.64
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    15.33
    ]
   },
   "gdp_pc_population_share_below": 0.61414,
@@ -54048,6 +56152,26 @@
     2024,
     50.16
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.99
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.76
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.19
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    11.2
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     643863.75
@@ -54217,6 +56341,26 @@
    "IT.NET.USER.ZS": [
     2014,
     49.58
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    82.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.1
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.62
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.74
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    5.82
    ]
   },
   "gdp_pc_population_share_below": 0.61415,
@@ -55331,6 +57475,26 @@
     2024,
     54.31
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    74.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.64
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.69
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.6
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    17.25
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     6928.17
@@ -55504,6 +57668,26 @@
    "IT.NET.USER.ZS": [
     2014,
     45.59
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.71
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.21
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.64
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    8.23
    ]
   },
   "gdp_pc_population_share_below": 0.5596,
@@ -56608,6 +58792,22 @@
     2024,
     41.13
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.5
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.27
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    11.69
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     146574.23
@@ -56777,6 +58977,22 @@
    "IT.NET.USER.ZS": [
     2014,
     33.89
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.39
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.2
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    3.15
    ]
   },
   "gdp_pc_population_share_below": 0.40765,
@@ -57874,6 +60090,26 @@
     2024,
     53.45
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.51
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.32
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.31
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    12.46
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     5374.5
@@ -58047,6 +60283,26 @@
    "IT.NET.USER.ZS": [
     2014,
     24.76
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.11
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.82
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.13
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    5.17
    ]
   },
   "gdp_pc_population_share_below": 0.53434,
@@ -58543,6 +60799,22 @@
     2024,
     152.87
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    53.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.55
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.76
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.1
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     3485607.49
@@ -58620,6 +60892,22 @@
    "IT.NET.USER.ZS": [
     2014,
     18.86
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    53.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.08
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.27
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.28
    ]
   },
   "gdp_pc_population_share_below": 0.55788,
@@ -59049,6 +61337,22 @@
    "SP.ADO.TFRT": [
     2024,
     65.16
+   ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.22
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.26
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.17
    ]
   },
   "wdi_earlier": {
@@ -59123,6 +61427,22 @@
    "IT.NET.USER.ZS": [
     2014,
     0.99
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.19
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.93
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.01
    ]
   },
   "gdp_pc_population_share_below": 0.02642,
@@ -60147,6 +62467,26 @@
     2024,
     4.67
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    7.76
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.21
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    21.8
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    35.35
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     30030.72
@@ -60260,6 +62600,26 @@
    "IT.NET.USER.ZS": [
     2014,
     84.24
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    17.31
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.33
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.89
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    28.23
    ]
   },
   "gdp_pc_population_share_below": 0.86515,
@@ -61338,6 +63698,26 @@
     2024,
     68.16
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.88
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    6.03
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.35
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    2.51
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     66815.19
@@ -61495,6 +63875,26 @@
    "IT.NET.USER.ZS": [
     2014,
     25.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.87
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.28
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.4
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.45
    ]
   },
   "gdp_pc_population_share_below": 0.45365,
@@ -62359,6 +64759,26 @@
     2024,
     68.2
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    72.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.15
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    2.3
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.3
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.59
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     111230.87
@@ -62520,6 +64940,26 @@
    "IT.NET.USER.ZS": [
     2014,
     7.7
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    54.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.12
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.6
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.94
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.47
    ]
   },
   "gdp_pc_population_share_below": 0.04623,
@@ -62782,6 +65222,18 @@
     2024,
     4.4
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.04
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.78
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    34.59
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     520045.75
@@ -62811,6 +65263,18 @@
    "SP.ADO.TFRT": [
     2014,
     10.48
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.04
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    16.9
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    35.81
    ]
   },
   "gdp_pc_population_share_below": 0.9539,
@@ -63637,6 +66101,26 @@
     2024,
     20.91
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    91.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.62
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.25
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.63
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    1.8
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     14357.37
@@ -63786,6 +66270,26 @@
    "IT.NET.USER.ZS": [
     2014,
     37.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.7
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.77
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.21
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.35
    ]
   },
   "gdp_pc_population_share_below": 0.55811,
@@ -64810,6 +67314,26 @@
     2024,
     2.99
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.54
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    6.38
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    24.2
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    36.48
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     50000.57
@@ -64927,6 +67451,26 @@
    "IT.NET.USER.ZS": [
     2014,
     86.53
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    9.05
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.14
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    20.21
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    32.2
    ]
   },
   "gdp_pc_population_share_below": 0.92246,
@@ -65951,6 +68495,26 @@
     2024,
     3.3
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.32
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    22.54
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    48.93
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     44118.91
@@ -66056,6 +68620,26 @@
    "IT.NET.USER.ZS": [
     2014,
     83.75
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    91.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.93
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2017,
+    5.46
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.85
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    40.14
    ]
   },
   "gdp_pc_population_share_below": 0.90687,
@@ -66434,6 +69018,18 @@
     2024,
     23.84
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.46
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    11.95
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    35.55
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     2745403.77
@@ -66475,6 +69071,18 @@
    "SP.ADO.TFRT": [
     2014,
     39.85
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.56
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.32
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    18.0
    ]
   },
   "gdp_pc_population_share_below": 0.85136,
@@ -67429,6 +70037,26 @@
     2024,
     89.47
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    57.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.05
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.32
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.13
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    4.69
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     4688324.62
@@ -67542,6 +70170,26 @@
    "IT.NET.USER.ZS": [
     2014,
     38.07
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    61.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.17
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.67
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.02
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.55
    ]
   },
   "gdp_pc_population_share_below": 0.57277,
@@ -68631,6 +71279,26 @@
     2024,
     56.14
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.18
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.81
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.18
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.52
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     65073.97
@@ -68792,6 +71460,26 @@
    "IT.NET.USER.ZS": [
     2014,
     15.56
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.22
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.23
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.61
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.13
    ]
   },
   "gdp_pc_population_share_below": 0.04589,
@@ -69643,6 +72331,26 @@
     2024,
     19.37
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.53
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.98
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    15.99
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    30.42
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     24908.81
@@ -69784,6 +72492,26 @@
    "IT.NET.USER.ZS": [
     2014,
     49.1
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.65
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.94
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.14
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    15.84
    ]
   },
   "gdp_pc_population_share_below": 0.58588,
@@ -70826,6 +73554,26 @@
     2024,
     5.24
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    6.94
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.24
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    23.7
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    45.61
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     55475.55
@@ -70935,6 +73683,26 @@
    "IT.NET.USER.ZS": [
     2014,
     86.19
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    9.62
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.83
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    21.05
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    36.34
    ]
   },
   "gdp_pc_population_share_below": 0.93383,
@@ -72046,6 +74814,26 @@
     2024,
     57.45
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.7
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    2.91
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.79
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.66
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     38398.19
@@ -72207,6 +74995,26 @@
    "IT.NET.USER.ZS": [
     2014,
     19.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.53
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.4
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.36
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.25
    ]
   },
   "gdp_pc_population_share_below": 0.42845,
@@ -72474,6 +75282,18 @@
    "SP.ADO.TFRT": [
     2024,
     8.53
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    16.15
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.84
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    60.97
    ]
   },
   "wdi_earlier": {
@@ -72500,6 +75320,18 @@
    "SP.ADO.TFRT": [
     2014,
     11.28
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    16.37
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    17.33
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    39.62
    ]
   }
  },
@@ -73514,6 +76346,26 @@
     2024,
     6.85
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    91.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.05
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    3.38
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    24.4
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    44.68
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     23347.0
@@ -73623,6 +76475,26 @@
    "IT.NET.USER.ZS": [
     2014,
     63.21
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.52
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    3.68
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    21.08
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    28.97
    ]
   },
   "gdp_pc_population_share_below": 0.85557,
@@ -73896,6 +76768,18 @@
    "SP.ADO.TFRT": [
     2024,
     35.05
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    10.45
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    11.53
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    31.98
    ]
   },
   "wdi_earlier": {
@@ -73926,6 +76810,18 @@
    "SP.ADO.TFRT": [
     2014,
     40.52
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    8.54
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.72
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    18.51
    ]
   },
   "gdp_pc_population_share_below": 0.93258,
@@ -74376,6 +77272,26 @@
     2024,
     28.62
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.5
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.13
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.63
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    29.77
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     30884.02
@@ -74445,6 +77361,26 @@
    "IT.NET.USER.ZS": [
     2014,
     51.6
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.96
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.48
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    10.07
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    16.48
    ]
   },
   "gdp_pc_population_share_below": 0.61556,
@@ -74826,6 +77762,18 @@
    "SP.ADO.TFRT": [
     2024,
     31.51
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    13.1
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    1.84
    ]
   },
   "wdi_earlier": {
@@ -74860,6 +77808,18 @@
    "SP.ADO.TFRT": [
     2014,
     46.81
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.55
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.81
    ]
   },
   "gdp_pc_population_share_below": 0.89955,
@@ -75888,6 +78848,26 @@
     2024,
     67.86
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.11
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.08
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.96
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    5.34
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     50069.4
@@ -76057,6 +79037,26 @@
    "IT.NET.USER.ZS": [
     2014,
     23.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    68.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.93
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.99
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.15
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.77
    ]
   },
   "gdp_pc_population_share_below": 0.55559,
@@ -76819,6 +79819,26 @@
     2024,
     116.77
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    60.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.35
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.72
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.47
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.01
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     15527182.83
@@ -76964,6 +79984,26 @@
    "IT.NET.USER.ZS": [
     2014,
     6.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    51.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.21
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.42
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.51
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.01
    ]
   },
   "gdp_pc_population_share_below": 0.1774,
@@ -77554,6 +80594,22 @@
     2024,
     80.29
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    65.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.16
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.24
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.39
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     659420.45
@@ -77691,6 +80747,22 @@
    "IT.NET.USER.ZS": [
     2014,
     3.32
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    81.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.2
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.82
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.08
    ]
   },
   "gdp_pc_population_share_below": 0.0721,
@@ -78533,6 +81605,26 @@
     2024,
     68.46
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.56
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2018,
+    4.45
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.98
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    12.94
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     5543301.57
@@ -78622,6 +81714,22 @@
    "IT.NET.USER.ZS": [
     2014,
     32.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.74
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.31
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    6.0
    ]
   },
   "gdp_pc_population_share_below": 0.86469,
@@ -79470,6 +82578,26 @@
     2024,
     49.26
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    77.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.3
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    0.96
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.79
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.31
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     352176.05
@@ -79587,6 +82715,26 @@
    "IT.NET.USER.ZS": [
     2014,
     11.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    69.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.31
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    1.75
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.11
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.0
    ]
   },
   "gdp_pc_population_share_below": 0.21643,
@@ -80691,6 +83839,26 @@
     2024,
     81.25
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    79.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.14
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.55
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.54
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    4.58
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     86208.63
@@ -80852,6 +84020,26 @@
    "IT.NET.USER.ZS": [
     2014,
     23.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.1
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.09
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.42
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.74
    ]
   },
   "gdp_pc_population_share_below": 0.43623,
@@ -81699,6 +84887,22 @@
     2024,
     1.15
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.6
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.81
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    23.67
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    40.27
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     488901.44
@@ -81760,6 +84964,22 @@
    "IT.NET.USER.ZS": [
     2014,
     79.87
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.58
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.57
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    15.38
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    31.17
    ]
   },
   "gdp_pc_population_share_below": 0.92315,
@@ -82796,6 +86016,26 @@
     2024,
     17.39
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.46
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    3.8
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    21.16
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    37.54
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     8928158.59
@@ -82893,6 +86133,26 @@
    "IT.NET.USER.ZS": [
     2014,
     75.65
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.56
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.6
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.06
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    26.16
    ]
   },
   "gdp_pc_population_share_below": 0.85418,
@@ -83905,6 +87165,26 @@
     2024,
     3.07
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    8.52
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    7.31
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    15.98
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    37.52
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     12601010.69
@@ -84014,6 +87294,26 @@
    "IT.NET.USER.ZS": [
     2014,
     98.16
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    10.58
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.64
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    13.68
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    36.53
    ]
   },
   "gdp_pc_population_share_below": 0.99731,
@@ -85114,6 +88414,26 @@
     2024,
     13.04
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.17
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.1
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    7.38
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    3.15
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     233055.23
@@ -85271,6 +88591,26 @@
    "IT.NET.USER.ZS": [
     2015,
     14.9
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.71
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.9
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.47
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.2
    ]
   },
   "gdp_pc_population_share_below": 0.21789,
@@ -86377,6 +89717,26 @@
     2024,
     25.65
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.87
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.28
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    7.54
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    4.92
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     81154577.21
@@ -86550,6 +89910,26 @@
    "IT.NET.USER.ZS": [
     2014,
     17.14
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    86.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.95
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.29
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.08
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.31
    ]
   },
   "gdp_pc_population_share_below": 0.4782,
@@ -87621,6 +91001,26 @@
     2024,
     25.79
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    9.05
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.82
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.58
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    12.06
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     2907887547.35
@@ -87758,6 +91158,26 @@
    "IT.NET.USER.ZS": [
     2014,
     39.35
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    7.81
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.62
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.01
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    7.54
    ]
   },
   "gdp_pc_population_share_below": 0.43773,
@@ -88849,6 +92269,22 @@
     2024,
     57.31
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    91.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.18
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.45
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    17.63
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     7044507.36
@@ -88990,6 +92426,22 @@
    "IT.NET.USER.ZS": [
     2014,
     11.65
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    70.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.78
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.05
+   ],
+   "IT.NET.BBND.P2": [
+    2017,
+    10.91
    ]
   },
   "gdp_pc_population_share_below": 0.52858,
@@ -90026,6 +93478,26 @@
     2024,
     4.01
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    6.04
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    2.9
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    16.21
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    32.3
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     79827.44
@@ -90135,6 +93607,26 @@
    "IT.NET.USER.ZS": [
     2014,
     83.49
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    7.76
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.74
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    13.11
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.02
    ]
   },
   "gdp_pc_population_share_below": 0.99923,
@@ -90397,6 +93889,10 @@
     2024,
     8.5
    ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    23.61
+   ],
    "NY.GNP.PCAP.CN": [
     2023,
     69738.34
@@ -90418,6 +93914,10 @@
    "SP.ADO.TFRT": [
     2014,
     10.65
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    20.24
    ]
   },
   "gdp_pc_population_share_below": 0.95475,
@@ -91379,6 +94879,26 @@
     2024,
     5.7
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.77
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.93
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.69
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    29.18
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     205336.73
@@ -91484,6 +95004,26 @@
    "IT.NET.USER.ZS": [
     2014,
     75.02
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    8.02
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.69
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    11.02
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    26.98
    ]
   },
   "gdp_pc_population_share_below": 0.93259,
@@ -92524,6 +96064,26 @@
     2024,
     2.87
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.08
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.07
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    25.1
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    31.78
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     38370.7
@@ -92637,6 +96197,26 @@
    "IT.NET.USER.ZS": [
     2014,
     55.64
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    87.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    5.69
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.04
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    22.03
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    23.71
    ]
   },
   "gdp_pc_population_share_below": 0.89957,
@@ -93578,6 +97158,26 @@
     2024,
     36.09
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.84
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    5.51
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.58
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    15.98
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1253733.02
@@ -93727,6 +97327,26 @@
    "IT.NET.USER.ZS": [
     2014,
     40.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.58
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.02
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.4
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    5.42
    ]
   },
   "gdp_pc_population_share_below": 0.56365,
@@ -94667,6 +98287,26 @@
     2024,
     1.63
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    7.84
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    3.34
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    29.99
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    38.63
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     5719985.83
@@ -94768,6 +98408,26 @@
    "IT.NET.USER.ZS": [
     2014,
     89.11
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    10.01
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.42
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    26.92
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    29.64
    ]
   },
   "gdp_pc_population_share_below": 0.87118,
@@ -95838,6 +99498,26 @@
     2024,
     17.72
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.09
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.23
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.75
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    7.02
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     3738.24
@@ -95987,6 +99667,26 @@
    "IT.NET.USER.ZS": [
     2014,
     46.2
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.94
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.77
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.32
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    4.0
    ]
   },
   "gdp_pc_population_share_below": 0.52717,
@@ -97001,6 +100701,26 @@
     2024,
     17.44
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    12.57
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.86
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    9.0
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    15.32
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     7101821.15
@@ -97166,6 +100886,26 @@
    "IT.NET.USER.ZS": [
     2014,
     66.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    13.08
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.43
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.76
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    12.06
    ]
   },
   "gdp_pc_population_share_below": 0.80892,
@@ -98190,6 +101930,26 @@
     2024,
     54.5
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.38
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    4.02
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.02
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    3.04
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     300726.57
@@ -98355,6 +102115,26 @@
    "IT.NET.USER.ZS": [
     2014,
     16.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.34
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.72
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.44
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.22
    ]
   },
   "gdp_pc_population_share_below": 0.18706,
@@ -98855,6 +102635,26 @@
     2024,
     44.04
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    79.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.59
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    16.39
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.38
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.03
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     6133.46
@@ -98980,6 +102780,26 @@
    "IT.NET.USER.ZS": [
     2014,
     12.25
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.53
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    11.51
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.68
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.43
    ]
   },
   "gdp_pc_population_share_below": 0.1949,
@@ -99505,6 +103325,10 @@
     2024,
     7.71
    ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    10.51
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     7132.12
@@ -99606,6 +103430,10 @@
    "SP.ADO.TFRT": [
     2014,
     10.96
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.54
    ]
   },
   "gdp_pc_population_share_below": 0.56346,
@@ -100513,6 +104341,26 @@
     2024,
     1.43
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    23.67
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    6.44
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.17
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    1.01
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     12148.41
@@ -100610,6 +104458,26 @@
    "IT.NET.USER.ZS": [
     2015,
     82.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    25.19
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2016,
+    5.96
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.41
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.31
    ]
   },
   "gdp_pc_population_share_below": 0.8641,
@@ -101675,6 +105543,26 @@
     2024,
     27.53
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.49
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    6.83
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.97
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    7.8
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     266128.72
@@ -101844,6 +105732,26 @@
    "IT.NET.USER.ZS": [
     2014,
     28.3
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.68
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.53
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.97
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.89
    ]
   },
   "gdp_pc_population_share_below": 0.40675,
@@ -102872,6 +106780,26 @@
     2024,
     81.93
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    69.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.35
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.23
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.81
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    2.72
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     44866349.14
@@ -103017,6 +106945,26 @@
    "IT.NET.USER.ZS": [
     2014,
     14.26
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    81.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.65
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.94
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.13
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.24
    ]
   },
   "gdp_pc_population_share_below": 0.18609,
@@ -104041,6 +107989,26 @@
     2024,
     7.25
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.65
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.32
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    22.2
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    25.75
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     23084.75
@@ -104210,6 +108178,26 @@
    "IT.NET.USER.ZS": [
     2014,
     75.83
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.8
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.47
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    19.52
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    25.32
    ]
   },
   "gdp_pc_population_share_below": 0.85535,
@@ -105007,6 +108995,26 @@
     2024,
     20.67
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    67.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.9
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    1.22
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    10.44
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    7.29
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     396230060.24
@@ -105100,6 +109108,26 @@
    "IT.NET.USER.ZS": [
     2014,
     73.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    82.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.93
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2016,
+    2.18
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.79
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    17.84
    ]
   },
   "gdp_pc_population_share_below": 0.46812,
@@ -106195,6 +110223,26 @@
     2024,
     69.55
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.43
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    6.62
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.88
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.38
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     23856.11
@@ -106336,6 +110384,26 @@
    "IT.NET.USER.ZS": [
     2014,
     22.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.29
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    7.64
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.9
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.07
    ]
   },
   "gdp_pc_population_share_below": 0.07002,
@@ -107324,6 +111392,26 @@
     2024,
     124.74
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    82.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.15
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.27
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.33
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.27
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     851.82
@@ -107441,6 +111529,26 @@
    "IT.NET.USER.ZS": [
     2014,
     5.41
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    58.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.26
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.2
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.18
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.13
    ]
   },
   "gdp_pc_population_share_below": 0.04518,
@@ -108331,6 +112439,22 @@
     2024,
     5.83
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    8.66
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.19
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    4.52
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     35504.2
@@ -108412,6 +112536,22 @@
    "IT.NET.USER.ZS": [
     2014,
     17.76
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    9.62
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.48
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.98
    ]
   },
   "gdp_pc_population_share_below": 0.5458,
@@ -108702,6 +112842,14 @@
     2024,
     1.8
    ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    21.38
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    50.01
+   ],
    "NY.GNP.PCAP.CN": [
     2023,
     174971.14
@@ -108755,6 +112903,14 @@
    "IT.NET.USER.ZS": [
     2014,
     95.21
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    16.37
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    42.0
    ]
   },
   "gdp_pc_population_share_below": 0.99999,
@@ -109791,6 +113947,26 @@
     2024,
     5.52
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    86.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.49
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.25
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.72
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    27.85
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     28231.84
@@ -109960,6 +114136,26 @@
    "IT.NET.USER.ZS": [
     2014,
     72.13
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.5
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.51
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.88
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.34
    ]
   },
   "gdp_pc_population_share_below": 0.86479,
@@ -110902,6 +115098,26 @@
     2024,
     4.0
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    10.56
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    3.74
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    15.81
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    40.32
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     88768.65
@@ -111007,6 +115223,26 @@
    "IT.NET.USER.ZS": [
     2015,
     96.38
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    17.65
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.86
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.2
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    33.58
    ]
   },
   "gdp_pc_population_share_below": 0.99991,
@@ -111736,6 +115972,22 @@
     2024,
     0.48
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.53
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.5
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    15.09
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    29.86
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     571780.35
@@ -111793,6 +116045,22 @@
    "IT.NET.USER.ZS": [
     2014,
     69.78
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.36
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.05
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.61
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    26.46
    ]
   },
   "gdp_pc_population_share_below": 0.95393,
@@ -112625,6 +116893,26 @@
     2024,
     128.69
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    46.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.15
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.05
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.47
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    0.12
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     2651585.95
@@ -112722,6 +117010,26 @@
    "IT.NET.USER.ZS": [
     2014,
     3.7
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    66.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.13
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.38
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.79
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.1
    ]
   },
   "gdp_pc_population_share_below": 0.00781,
@@ -113745,6 +118053,26 @@
     2024,
     113.32
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.22
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    2.75
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.59
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.09
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1162940.63
@@ -113898,6 +118226,26 @@
    "IT.NET.USER.ZS": [
     2014,
     5.83
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.3
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.33
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.07
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.05
    ]
   },
   "gdp_pc_population_share_below": 0.0237,
@@ -114921,6 +119269,26 @@
     2024,
     5.72
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    8.32
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.51
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.03
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    13.55
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     54300.09
@@ -115086,6 +119454,26 @@
    "IT.NET.USER.ZS": [
     2014,
     63.67
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    8.19
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.21
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.71
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    9.97
    ]
   },
   "gdp_pc_population_share_below": 0.61603,
@@ -115946,6 +120334,26 @@
     2024,
     5.03
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.57
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.17
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.96
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    19.65
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     201973.81
@@ -116091,6 +120499,26 @@
    "IT.NET.USER.ZS": [
     2014,
     49.28
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    5.3
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.09
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.01
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    4.8
    ]
   },
   "gdp_pc_population_share_below": 0.80886,
@@ -117106,6 +121534,26 @@
     2024,
     135.91
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    72.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.3
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.18
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.36
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.77
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     674707.22
@@ -117259,6 +121707,26 @@
    "IT.NET.USER.ZS": [
     2014,
     7.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    65.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.16
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.09
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.63
+   ],
+   "IT.NET.BBND.P2": [
+    2015,
+    0.02
    ]
   },
   "gdp_pc_population_share_below": 0.08165,
@@ -118271,6 +122739,26 @@
     2024,
     10.0
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.18
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.71
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.54
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    44.51
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     38102.3
@@ -118384,6 +122872,26 @@
    "IT.NET.USER.ZS": [
     2014,
     73.11
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    5.47
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.85
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.33
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    34.88
    ]
   },
   "gdp_pc_population_share_below": 0.9068,
@@ -118842,6 +123350,26 @@
     2024,
     71.25
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    7.7
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.88
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    2.35
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     10032.52
@@ -118963,6 +123491,22 @@
    "IT.NET.USER.ZS": [
     2014,
     16.8
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    79.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.8
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.76
    ]
   },
   "gdp_pc_population_share_below": 0.57309,
@@ -120035,6 +124579,26 @@
     2024,
     87.57
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.97
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    7.61
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.25
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.95
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     86998.49
@@ -120200,6 +124764,26 @@
    "IT.NET.USER.ZS": [
     2014,
     11.8
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    75.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.7
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.56
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.53
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.21
    ]
   },
   "gdp_pc_population_share_below": 0.18544,
@@ -121237,6 +125821,26 @@
     2024,
     19.2
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.54
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    4.25
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    14.11
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    27.97
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     656645.56
@@ -121398,6 +126002,26 @@
    "IT.NET.USER.ZS": [
     2014,
     44.8
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.16
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.82
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.88
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    14.09
    ]
   },
   "gdp_pc_population_share_below": 0.61559,
@@ -122500,6 +127124,26 @@
     2024,
     59.32
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    80.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.64
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.06
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.52
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    21.74
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     258980.61
@@ -122677,6 +127321,26 @@
    "IT.NET.USER.ZS": [
     2014,
     44.39
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.01
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.07
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.65
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    10.88
    ]
   },
   "gdp_pc_population_share_below": 0.7927,
@@ -123145,6 +127809,26 @@
     2024,
     43.69
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    81.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2020,
+    11.56
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.18
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    5.82
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     4870.54
@@ -123206,6 +127890,26 @@
    "IT.NET.USER.ZS": [
     2014,
     29.65
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    12.23
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.91
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.85
    ]
   },
   "gdp_pc_population_share_below": 0.46811,
@@ -123959,6 +128663,26 @@
     2024,
     22.66
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    84.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.42
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    6.56
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    16.86
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    29.63
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     149705.5
@@ -124124,6 +128848,26 @@
    "IT.NET.USER.ZS": [
     2014,
     67.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.81
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.34
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    11.71
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    15.23
    ]
   },
   "gdp_pc_population_share_below": 0.57964,
@@ -124457,6 +129201,22 @@
    "SP.ADO.TFRT": [
     2024,
     9.3
+   ],
+   "SH.IMM.MEAS": [
+    2024,
+    88.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.73
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    36.01
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    55.68
    ]
   },
   "wdi_earlier": {
@@ -124523,6 +129283,22 @@
    "IT.NET.USER.ZS": [
     2014,
     92.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    90.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    1.02
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    34.12
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    49.27
    ]
   },
   "gdp_pc_population_share_below": 1.0,
@@ -125634,6 +130410,26 @@
     2024,
     19.05
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    7.85
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    5.21
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.43
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    15.78
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     22371830.59
@@ -125807,6 +130603,26 @@
    "IT.NET.USER.ZS": [
     2014,
     19.94
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.59
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.71
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.84
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    6.77
    ]
   },
   "gdp_pc_population_share_below": 0.55916,
@@ -126637,6 +131453,18 @@
     2024,
     8.71
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    23.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    18.29
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    32.31
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     13213.38
@@ -126802,6 +131630,18 @@
    "IT.NET.USER.ZS": [
     2014,
     63.89
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    76.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.42
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    16.45
    ]
   },
   "gdp_pc_population_share_below": 0.8115,
@@ -127776,6 +132616,26 @@
     2024,
     24.76
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.84
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    6.02
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.45
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    7.3
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     43091.04
@@ -127901,6 +132761,26 @@
    "IT.NET.USER.ZS": [
     2014,
     56.77
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.74
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.48
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.8
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.9
    ]
   },
   "gdp_pc_population_share_below": 0.47045,
@@ -128989,6 +133869,26 @@
     2024,
     151.88
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    65.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.29
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.98
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.73
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.14
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     36508.64
@@ -129154,6 +134054,26 @@
    "IT.NET.USER.ZS": [
     2014,
     6.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.22
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.4
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.74
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.14
    ]
   },
   "gdp_pc_population_share_below": 0.01182,
@@ -130165,6 +135085,26 @@
     2024,
     33.19
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    71.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.58
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2019,
+    2.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    7.52
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    2.87
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     3062394.54
@@ -130310,6 +135250,22 @@
    "IT.NET.USER.ZS": [
     2014,
     7.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.35
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.63
+   ],
+   "IT.NET.BBND.P2": [
+    2015,
+    0.06
    ]
   },
   "gdp_pc_population_share_below": 0.13267,
@@ -131376,6 +136332,26 @@
     2024,
     65.95
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    79.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.2
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    9.08
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.79
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    2.83
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     81963.86
@@ -131529,6 +136505,26 @@
    "IT.NET.USER.ZS": [
     2014,
     14.84
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.39
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.67
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.53
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.78
    ]
   },
   "gdp_pc_population_share_below": 0.47516,
@@ -131969,6 +136965,26 @@
     2024,
     75.27
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.78
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.01
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    9.96
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     32182.95
@@ -132034,6 +137050,22 @@
    "IT.NET.USER.ZS": [
     2017,
     62.39
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.47
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    1.5
    ]
   },
   "gdp_pc_population_share_below": 0.80892,
@@ -133126,6 +138158,26 @@
     2024,
     66.49
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.54
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.69
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.62
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    10.07
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     211976.07
@@ -133275,6 +138327,26 @@
    "IT.NET.USER.ZS": [
     2014,
     15.44
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.27
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.47
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.48
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.91
    ]
   },
   "gdp_pc_population_share_below": 0.13938,
@@ -134273,6 +139345,26 @@
     2024,
     1.75
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    6.6
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.18
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.87
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    42.98
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     63830.57
@@ -134382,6 +139474,26 @@
    "IT.NET.USER.ZS": [
     2014,
     91.67
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    9.59
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.4
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    17.76
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    40.23
    ]
   },
   "gdp_pc_population_share_below": 0.95169,
@@ -134809,6 +139921,18 @@
     2024,
     11.7
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    17.08
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    11.78
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    19.37
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     3326400.44
@@ -134854,6 +139978,18 @@
    "SP.ADO.TFRT": [
     2014,
     19.04
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    17.03
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.8
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    20.73
    ]
   },
   "gdp_pc_population_share_below": 0.86248,
@@ -135745,6 +140881,26 @@
     2024,
     10.25
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    6.01
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.21
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.61
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    38.05
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     78957.01
@@ -135838,6 +140994,26 @@
    "IT.NET.USER.ZS": [
     2014,
     84.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    7.81
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.8
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.56
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    31.17
    ]
   },
   "gdp_pc_population_share_below": 0.91529,
@@ -136847,6 +142023,26 @@
     2024,
     93.17
    ],
+   "SH.IMM.MEAS": [
+    2023,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.83
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.87
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.7
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    5.78
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     109918.11
@@ -136984,6 +142180,26 @@
    "IT.NET.USER.ZS": [
     2014,
     17.6
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.81
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.08
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.7
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.84
    ]
   },
   "gdp_pc_population_share_below": 0.42759,
@@ -138072,6 +143288,26 @@
     2024,
     141.55
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    81.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.12
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.07
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.62
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.11
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     444621.96
@@ -138233,6 +143469,26 @@
    "IT.NET.USER.ZS": [
     2014,
     1.25
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    80.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.11
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.1
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.44
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.16
    ]
   },
   "gdp_pc_population_share_below": 0.02687,
@@ -139010,6 +144266,26 @@
     2024,
     83.96
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    57.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.57
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    0.32
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.07
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.08
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1800770.86
@@ -139175,6 +144451,26 @@
    "IT.NET.USER.ZS": [
     2014,
     21.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    42.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.66
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    0.47
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.97
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.01
    ]
   },
   "gdp_pc_population_share_below": 0.09103,
@@ -139598,6 +144894,18 @@
    "SP.ADO.TFRT": [
     2024,
     0.51
+   ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.5
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.71
    ]
   },
   "wdi_earlier": {
@@ -139648,6 +144956,18 @@
    "SP.ADO.TFRT": [
     2014,
     0.61
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.63
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    10.95
    ]
   }
  },
@@ -140510,6 +145830,22 @@
     2024,
     12.43
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    73.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    18.52
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    29.89
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     545721.16
@@ -140623,6 +145959,22 @@
    "IT.NET.USER.ZS": [
     2015,
     70.38
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.36
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    13.4
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    17.72
    ]
   },
   "gdp_pc_population_share_below": 0.58786,
@@ -140884,6 +146236,14 @@
    "SP.ADO.TFRT": [
     2024,
     25.31
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    10.79
    ]
   },
   "wdi_earlier": {
@@ -140906,6 +146266,14 @@
    "SP.ADO.TFRT": [
     2014,
     40.23
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.51
    ]
   },
   "gdp_pc_population_share_below": 0.85374,
@@ -141926,6 +147294,26 @@
     2024,
     1.28
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    7.18
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.43
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    19.08
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    45.16
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1018585.35
@@ -142035,6 +147423,26 @@
    "IT.NET.USER.ZS": [
     2014,
     96.3
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    9.15
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.64
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    16.27
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    38.49
    ]
   },
   "gdp_pc_population_share_below": 0.99662,
@@ -142761,6 +148169,26 @@
     2024,
     5.65
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    18.65
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.38
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.69
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    11.06
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     7350.76
@@ -142858,6 +148286,26 @@
    "IT.NET.USER.ZS": [
     2014,
     70.22
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    18.75
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2017,
+    6.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.57
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    4.4
    ]
   },
   "gdp_pc_population_share_below": 0.84927,
@@ -143954,6 +149402,26 @@
     2024,
     39.86
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    86.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.81
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.95
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.36
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    1.47
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     435956.92
@@ -144127,6 +149595,26 @@
    "IT.NET.USER.ZS": [
     2014,
     10.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    71.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.79
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.2
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.82
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.94
    ]
   },
   "gdp_pc_population_share_below": 0.14301,
@@ -144580,6 +150068,26 @@
     2024,
     30.18
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    82.84
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.44
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    11.83
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    7.33
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     19894.7
@@ -144653,6 +150161,22 @@
    "SP.ADO.TFRT": [
     2014,
     29.1
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    71.56
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.52
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    6.27
    ]
   },
   "gdp_pc_population_share_below": 0.8487,
@@ -145723,6 +151247,26 @@
     2024,
     55.85
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.74
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.47
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    9.66
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    18.13
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     18829.86
@@ -145896,6 +151440,26 @@
    "IT.NET.USER.ZS": [
     2014,
     44.92
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.77
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.08
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.2
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    7.97
    ]
   },
   "gdp_pc_population_share_below": 0.84871,
@@ -146708,6 +152272,26 @@
     2024,
     53.52
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    44.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.52
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    0.78
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.59
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.23
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     11553.12
@@ -146849,6 +152433,26 @@
    "IT.NET.USER.ZS": [
     2014,
     6.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    65.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.65
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    1.63
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.84
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.15
    ]
   },
   "gdp_pc_population_share_below": 0.39935,
@@ -147960,6 +153564,26 @@
     2024,
     70.22
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.16
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.53
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.72
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    12.88
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     50940713.2
@@ -148113,6 +153737,26 @@
    "IT.NET.USER.ZS": [
     2014,
     43.01
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    84.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.98
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.6
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.56
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    3.05
    ]
   },
   "gdp_pc_population_share_below": 0.55823,
@@ -149186,6 +154830,26 @@
     2024,
     42.93
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.02
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    4.36
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    9.47
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    11.68
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     32203.81
@@ -149359,6 +155023,26 @@
    "IT.NET.USER.ZS": [
     2014,
     40.24
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.77
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.7
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.19
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    5.87
    ]
   },
   "gdp_pc_population_share_below": 0.58164,
@@ -150469,6 +156153,26 @@
     2024,
     31.32
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    80.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.5
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2025,
+    3.97
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.72
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    7.14
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     275705.73
@@ -150638,6 +156342,26 @@
    "IT.NET.USER.ZS": [
     2014,
     34.7
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    81.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    2.83
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.77
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.79
    ]
   },
   "gdp_pc_population_share_below": 0.45381,
@@ -151705,6 +157429,26 @@
     2024,
     5.85
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    7.55
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.31
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.75
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    25.36
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     102994.16
@@ -151874,6 +157618,26 @@
    "IT.NET.USER.ZS": [
     2014,
     66.6
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    7.96
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.94
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    15.38
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    18.9
    ]
   },
   "gdp_pc_population_share_below": 0.85736,
@@ -152914,6 +158678,26 @@
     2024,
     6.57
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.32
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.55
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    24.94
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    45.24
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     27908.9
@@ -153027,6 +158811,26 @@
    "IT.NET.USER.ZS": [
     2014,
     64.59
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.58
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.12
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    20.57
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.46
    ]
   },
   "gdp_pc_population_share_below": 0.86272,
@@ -153559,6 +159363,22 @@
     2024,
     13.29
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.82
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    4.27
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    25.27
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    27.99
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     27496.31
@@ -153628,6 +159448,22 @@
    "IT.NET.USER.ZS": [
     2014,
     76.13
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.21
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.07
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.15
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    17.12
    ]
   },
   "gdp_pc_population_share_below": 0.89899,
@@ -154457,6 +160293,26 @@
     2024,
     5.49
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    47.33
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2020,
+    3.23
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    1.7
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    11.82
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     258677.79
@@ -154546,6 +160402,26 @@
    "IT.NET.USER.ZS": [
     2014,
     91.49
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    51.48
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.61
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    1.05
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    10.16
    ]
   },
   "gdp_pc_population_share_below": 0.95133,
@@ -155617,6 +161493,26 @@
     2024,
     32.78
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    78.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.72
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    3.28
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.14
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    35.8
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     98096.31
@@ -155786,6 +161682,26 @@
    "IT.NET.USER.ZS": [
     2014,
     54.08
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.97
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.12
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    17.21
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    20.11
    ]
   },
   "gdp_pc_population_share_below": 0.8514,
@@ -156822,6 +162738,26 @@
     2024,
     12.16
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    13.98
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.16
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    17.79
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    27.13
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1457548.75
@@ -156991,6 +162927,26 @@
    "IT.NET.USER.ZS": [
     2014,
     70.52
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    12.13
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.01
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    13.53
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    17.22
    ]
   },
   "gdp_pc_population_share_below": 0.81799,
@@ -157931,6 +163887,26 @@
     2024,
     30.59
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.16
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    4.61
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.02
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.6
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1569842.78
@@ -158104,6 +164080,26 @@
    "IT.NET.USER.ZS": [
     2014,
     10.6
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.08
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.2
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.96
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.03
    ]
   },
   "gdp_pc_population_share_below": 0.07031,
@@ -158702,6 +164698,26 @@
     2024,
     43.53
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.6
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    5.46
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.07
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.88
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     16320.29
@@ -158823,6 +164839,26 @@
    "SP.ADO.TFRT": [
     2014,
     51.28
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.43
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.41
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.87
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.01
    ]
   },
   "gdp_pc_population_share_below": 0.53996,
@@ -159240,6 +165276,22 @@
     2024,
     1.17
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    85.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    2.9
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    23.15
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    35.79
+   ],
    "NY.GNP.PCAP.CN": [
     2023,
     50528.1
@@ -159309,6 +165361,22 @@
    "IT.NET.USER.ZS": [
     2016,
     55.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    81.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.19
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.49
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    34.69
    ]
   },
   "gdp_pc_population_share_below": 0.93259,
@@ -160341,6 +166409,26 @@
     2024,
     11.08
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    18.48
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.48
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.06
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    44.07
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     130594.0
@@ -160438,6 +166526,22 @@
    "IT.NET.USER.ZS": [
     2014,
     64.71
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    20.7
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.23
+   ],
+   "IT.NET.BBND.P2": [
+    2015,
+    21.14
    ]
   },
   "gdp_pc_population_share_below": 0.86532,
@@ -161480,6 +167584,26 @@
     2024,
     59.14
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    87.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.77
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    6.16
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.65
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    4.04
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1061610.16
@@ -161637,6 +167761,26 @@
    "IT.NET.USER.ZS": [
     2014,
     17.7
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    80.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.59
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.73
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.52
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.73
    ]
   },
   "gdp_pc_population_share_below": 0.17925,
@@ -162744,6 +168888,22 @@
     2024,
     13.11
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    84.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.4
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    23.05
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    33.37
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1487117.86
@@ -162921,6 +169081,22 @@
    "IT.NET.USER.ZS": [
     2014,
     62.08
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    86.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2016,
+    3.5
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.88
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    16.74
    ]
   },
   "gdp_pc_population_share_below": 0.81719,
@@ -163378,6 +169554,26 @@
     2024,
     53.47
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    7.24
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.45
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.75
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    31.6
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     279049.96
@@ -163463,6 +169659,26 @@
    "IT.NET.USER.ZS": [
     2014,
     51.25
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    10.14
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.95
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.06
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    11.3
    ]
   },
   "gdp_pc_population_share_below": 0.84869,
@@ -164550,6 +170766,26 @@
     2024,
     91.19
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.17
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.62
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.28
+   ],
+   "IT.NET.BBND.P2": [
+    2021,
+    0.0
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     19045.89
@@ -164695,6 +170931,22 @@
    "IT.NET.USER.ZS": [
     2014,
     6.06
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    80.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.18
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    1.74
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.15
    ]
   },
   "gdp_pc_population_share_below": 0.0441,
@@ -165636,6 +171888,26 @@
     2024,
     2.21
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    9.75
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    2.19
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    14.21
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    27.81
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     107365.16
@@ -165733,6 +172005,26 @@
    "IT.NET.USER.ZS": [
     2014,
     79.03
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    9.85
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.01
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    9.0
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.01
    ]
   },
   "gdp_pc_population_share_below": 0.99736,
@@ -166003,6 +172295,14 @@
     2024,
     16.64
    ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.92
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    14.48
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     71777.54
@@ -166032,6 +172332,14 @@
    "SP.ADO.TFRT": [
     2014,
     30.24
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.07
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.64
    ]
   },
   "gdp_pc_population_share_below": 0.89957,
@@ -167056,6 +173364,26 @@
     2024,
     24.48
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.51
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.66
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    19.04
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    33.81
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     24549.23
@@ -167221,6 +173549,26 @@
    "IT.NET.USER.ZS": [
     2014,
     79.98
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.27
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.2
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.15
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    22.0
    ]
   },
   "gdp_pc_population_share_below": 0.86182,
@@ -168218,6 +174566,26 @@
     2024,
     3.38
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    6.27
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.28
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    22.21
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    34.23
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     32872.4
@@ -168327,6 +174695,26 @@
    "IT.NET.USER.ZS": [
     2014,
     71.59
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.85
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.34
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.02
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.0
    ]
   },
   "gdp_pc_population_share_below": 0.89261,
@@ -168934,6 +175322,26 @@
     2024,
     49.39
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    78.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.38
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    8.29
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.67
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.11
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     17388.71
@@ -169019,6 +175427,22 @@
    "IT.NET.USER.ZS": [
     2014,
     9.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    76.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.61
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.52
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.22
    ]
   },
   "gdp_pc_population_share_below": 0.18534,
@@ -169599,6 +176023,26 @@
     2024,
     115.42
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    64.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.05
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.62
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    0.72
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     19825509.1
@@ -169704,6 +176148,26 @@
    "IT.NET.USER.ZS": [
     2014,
     1.63
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    48.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.06
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2018,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.39
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.52
    ]
   },
   "gdp_pc_population_share_below": 0.0213,
@@ -170798,6 +177262,26 @@
     2024,
     51.84
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    76.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    6.88
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    6.02
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.89
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    5.35
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     115761.66
@@ -170971,6 +177455,26 @@
    "IT.NET.USER.ZS": [
     2014,
     49.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    84.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    8.75
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.49
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.37
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    3.07
    ]
   },
   "gdp_pc_population_share_below": 0.54766,
@@ -171987,6 +178491,26 @@
     2024,
     0.53
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    11.36
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.41
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.33
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    47.8
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     52416055.98
@@ -172096,6 +178620,26 @@
    "IT.NET.USER.ZS": [
     2014,
     87.56
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    12.43
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    4.24
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    12.95
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    37.99
    ]
   },
   "gdp_pc_population_share_below": 0.88628,
@@ -172641,6 +179185,22 @@
     2024,
     96.28
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    72.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2016,
+    1.57
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.08
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    0.0
+   ],
    "NY.GNP.PCAP.CN": [
     2015,
     3414.46
@@ -172738,6 +179298,18 @@
    "IT.NET.USER.ZS": [
     2014,
     2.6
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    54.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.53
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.0
    ]
   },
   "gdp_pc_population_share_below": 0.06853,
@@ -173778,6 +180350,26 @@
     2024,
     4.85
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.51
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.59
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    21.64
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    39.23
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     34161.02
@@ -173895,6 +180487,26 @@
    "IT.NET.USER.ZS": [
     2014,
     76.19
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    5.49
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.28
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    18.54
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    27.84
    ]
   },
   "gdp_pc_population_share_below": 0.89289,
@@ -174988,6 +181600,26 @@
     2024,
     14.72
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.06
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    1.83
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.47
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    8.47
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1477394.56
@@ -175145,6 +181777,26 @@
    "IT.NET.USER.ZS": [
     2014,
     10.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.86
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    1.86
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.99
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.63
    ]
   },
   "gdp_pc_population_share_below": 0.47553,
@@ -175528,6 +182180,26 @@
     2024,
     36.41
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.88
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.5
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    11.72
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    46.74
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     67463.45
@@ -175593,6 +182265,26 @@
    "IT.NET.USER.ZS": [
     2014,
     65.38
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.07
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.85
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.62
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    29.77
    ]
   },
   "gdp_pc_population_share_below": 0.85418,
@@ -176196,6 +182888,26 @@
     2024,
     27.17
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    83.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.71
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.85
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    9.96
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    13.57
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     36356.07
@@ -176289,6 +183001,26 @@
    "IT.NET.USER.ZS": [
     2014,
     53.18
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.02
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.89
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.99
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    16.19
    ]
   },
   "gdp_pc_population_share_below": 0.81148,
@@ -176550,6 +183282,10 @@
    "SP.ADO.TFRT": [
     2024,
     13.22
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    19.65
    ]
   },
   "wdi_earlier": {
@@ -176568,6 +183304,10 @@
    "SP.ADO.TFRT": [
     2014,
     18.72
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.03
    ]
   },
   "gdp_pc_population_share_below": 0.85136,
@@ -177063,6 +183803,26 @@
     2024,
     40.77
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.31
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    6.46
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.25
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    29.46
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     33239.86
@@ -177148,6 +183908,26 @@
    "IT.NET.USER.ZS": [
     2014,
     47.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.86
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    4.96
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    9.53
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    13.68
    ]
   },
   "gdp_pc_population_share_below": 0.61558,
@@ -178051,6 +184831,22 @@
     2024,
     64.53
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    46.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.43
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.39
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    0.06
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     2510885.5
@@ -178152,6 +184948,22 @@
    "SP.ADO.TFRT": [
     2014,
     80.06
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    86.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.48
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.67
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.05
    ]
   },
   "gdp_pc_population_share_below": 0.07532,
@@ -178745,6 +185557,26 @@
     2024,
     46.86
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    73.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.06
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.87
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    8.19
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    18.75
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     244266.16
@@ -178838,6 +185670,26 @@
    "IT.NET.USER.ZS": [
     2014,
     40.08
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    70.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.56
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    5.53
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.13
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    8.06
    ]
   },
   "gdp_pc_population_share_below": 0.55909,
@@ -179868,6 +186720,26 @@
     2024,
     1.7
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.57
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    7.32
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.91
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    40.62
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     650455.43
@@ -179981,6 +186853,26 @@
    "IT.NET.USER.ZS": [
     2015,
     90.61
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.41
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.63
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    19.7
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    33.84
    ]
   },
   "gdp_pc_population_share_below": 0.94665,
@@ -181005,6 +187897,26 @@
     2024,
     1.48
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.75
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    4.86
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    20.43
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    47.02
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     94652.07
@@ -181118,6 +188030,26 @@
    "IT.NET.USER.ZS": [
     2015,
     87.48
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.99
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.93
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    17.89
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    43.17
    ]
   },
   "gdp_pc_population_share_below": 0.99811,
@@ -181858,6 +188790,22 @@
     2024,
     38.62
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    81.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.27
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.84
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    6.86
+   ],
    "NY.GNP.PCAP.CN": [
     2022,
     3828801.92
@@ -181935,6 +188883,22 @@
    "SP.ADO.TFRT": [
     2014,
     44.25
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    65.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.53
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.17
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.47
    ]
   },
   "gdp_pc_population_share_below": 0.06539,
@@ -182558,6 +189522,26 @@
     2024,
     85.18
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    87.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.63
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.03
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.94
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    2.99
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     95906.19
@@ -182695,6 +189679,26 @@
    "IT.NET.USER.ZS": [
     2014,
     24.41
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.67
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.43
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.57
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.56
    ]
   },
   "gdp_pc_population_share_below": 0.45362,
@@ -184200,6 +191204,26 @@
     2024,
     39.44
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.92
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.44
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.07
+   ],
+   "IT.NET.BBND.P2": [
+    2023,
+    0.98
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     22806.55
@@ -184349,6 +191373,26 @@
    "IT.NET.USER.ZS": [
     2014,
     17.49
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.57
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.59
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.96
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.07
    ]
   },
   "gdp_pc_population_share_below": 0.17427,
@@ -185444,6 +192488,26 @@
     2024,
     112.61
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    84.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.31
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    3.16
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.04
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.25
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     3274015.25
@@ -185605,6 +192669,26 @@
    "IT.NET.USER.ZS": [
     2014,
     7.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.22
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.38
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.95
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.17
    ]
   },
   "gdp_pc_population_share_below": 0.1228,
@@ -186696,6 +193780,26 @@
     2024,
     25.05
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.96
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    2.52
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    16.02
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    14.89
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     258074.54
@@ -186861,6 +193965,26 @@
    "IT.NET.USER.ZS": [
     2014,
     34.89
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.88
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.92
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    10.32
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    7.75
    ]
   },
   "gdp_pc_population_share_below": 0.564,
@@ -187515,6 +194639,26 @@
     2024,
     26.78
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    72.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.5
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.24
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    5.23
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.01
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     1428.31
@@ -187640,6 +194784,26 @@
    "IT.NET.USER.ZS": [
     2014,
     17.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    74.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.63
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    7.51
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.26
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.09
    ]
   },
   "gdp_pc_population_share_below": 0.13144,
@@ -188748,6 +195912,26 @@
     2024,
     76.38
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    81.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.31
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.14
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.48
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    1.42
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     807072.71
@@ -188909,6 +196093,26 @@
    "IT.NET.USER.ZS": [
     2014,
     5.7
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    77.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.25
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.42
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.46
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.17
    ]
   },
   "gdp_pc_population_share_below": 0.13161,
@@ -189753,6 +196957,26 @@
     2024,
     25.07
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    1.63
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    5.31
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.85
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    8.17
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     16702.18
@@ -189846,6 +197070,26 @@
    "IT.NET.USER.ZS": [
     2014,
     35.95
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.24
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2017,
+    4.64
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.01
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.69
    ]
   },
   "gdp_pc_population_share_below": 0.54764,
@@ -190759,6 +198003,26 @@
     2024,
     36.03
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    19.58
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    3.23
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    12.93
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    27.03
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     124421.14
@@ -190848,6 +198112,26 @@
    "IT.NET.USER.ZS": [
     2014,
     62.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    27.65
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.59
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.01
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    17.46
    ]
   },
   "gdp_pc_population_share_below": 0.84852,
@@ -191958,6 +199242,26 @@
     2024,
     4.21
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.62
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    6.73
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    9.94
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    14.97
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     13616.92
@@ -192099,6 +199403,26 @@
    "IT.NET.USER.ZS": [
     2014,
     46.16
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.68
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    6.22
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.97
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    5.03
    ]
   },
   "gdp_pc_population_share_below": 0.46894,
@@ -192680,6 +200004,26 @@
     2024,
     20.14
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    10.86
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    4.29
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.81
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    5.22
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     35915.23
@@ -192761,6 +200105,26 @@
    "SP.ADO.TFRT": [
     2014,
     28.3
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    10.41
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2019,
+    3.12
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.57
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.04
    ]
   },
   "gdp_pc_population_share_below": 0.54671,
@@ -193120,6 +200484,18 @@
     2024,
     15.65
    ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.92
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    2.95
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    11.68
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     37001.78
@@ -193161,6 +200537,18 @@
    "SP.ADO.TFRT": [
     2014,
     23.26
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.17
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    2.75
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    8.25
    ]
   },
   "gdp_pc_population_share_below": 0.89288,
@@ -193657,6 +201045,26 @@
     2024,
     26.79
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    12.85
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    7.04
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    4.52
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     15263.9
@@ -193726,6 +201134,22 @@
    "SP.ADO.TFRT": [
     2014,
     32.59
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    5.42
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    4.1
    ]
   },
   "gdp_pc_population_share_below": 0.53999,
@@ -194775,6 +202199,26 @@
     2024,
     11.18
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    95.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    5.38
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    3.1
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    10.57
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    23.43
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     723151.73
@@ -194948,6 +202392,26 @@
    "IT.NET.USER.ZS": [
     2015,
     53.74
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    94.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    4.6
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.41
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    7.62
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    11.36
    ]
   },
   "gdp_pc_population_share_below": 0.838,
@@ -195329,6 +202793,18 @@
    "SP.ADO.TFRT": [
     2024,
     31.14
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    23.12
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    10.07
    ]
   },
   "wdi_earlier": {
@@ -195367,6 +202843,18 @@
    "SP.ADO.TFRT": [
     2014,
     40.47
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.0
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    17.27
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    8.92
    ]
   },
   "gdp_pc_population_share_below": 0.90679,
@@ -196470,6 +203958,26 @@
     2024,
     104.73
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.17
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    2.56
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.23
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.21
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     4333396.03
@@ -196635,6 +204143,26 @@
    "IT.NET.USER.ZS": [
     2014,
     5.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.13
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    1.91
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    1.94
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.15
    ]
   },
   "gdp_pc_population_share_below": 0.08474,
@@ -197627,6 +205155,26 @@
     2024,
     10.94
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    91.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.13
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    5.14
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    18.97
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    21.65
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     242481.94
@@ -197788,6 +205336,26 @@
    "IT.NET.USER.ZS": [
     2014,
     46.24
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    56.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    5.86
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.87
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    15.15
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    9.31
    ]
   },
   "gdp_pc_population_share_below": 0.53519,
@@ -198721,6 +206289,26 @@
     2024,
     2.82
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    18.26
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    3.89
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    1.79
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    40.84
+   ],
    "NY.GNP.PCAP.CN": [
     2024,
     189981.55
@@ -198818,6 +206406,22 @@
    "IT.NET.USER.ZS": [
     2014,
     90.4
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    24.58
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    1.5
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    13.25
    ]
   },
   "gdp_pc_population_share_below": 0.91594,
@@ -199852,6 +207456,26 @@
     2024,
     7.82
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.22
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    5.91
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    19.7
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    42.16
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     43477.18
@@ -199965,6 +207589,26 @@
    "IT.NET.USER.ZS": [
     2014,
     91.61
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    93.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.66
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.6
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    17.77
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    36.58
    ]
   },
   "gdp_pc_population_share_below": 0.92407,
@@ -200993,6 +208637,26 @@
     2024,
     12.41
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    13.62
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    5.42
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    18.39
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    38.86
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     89488.53
@@ -201102,6 +208766,26 @@
    "IT.NET.USER.ZS": [
     2014,
     73.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    16.42
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    4.93
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.31
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    30.27
    ]
   },
   "gdp_pc_population_share_below": 0.95476,
@@ -202138,6 +209822,26 @@
     2024,
     25.1
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    2.57
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.76
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    16.28
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    33.04
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     984837.01
@@ -202307,6 +210011,26 @@
    "IT.NET.USER.ZS": [
     2014,
     61.46
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    96.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    2.01
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    4.27
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    14.61
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    25.04
    ]
   },
   "gdp_pc_population_share_below": 0.85376,
@@ -203103,6 +210827,26 @@
     2024,
     34.14
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.09
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    5.47
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    6.07
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    34.74
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     50044554.81
@@ -203252,6 +210996,26 @@
    "IT.NET.USER.ZS": [
     2014,
     35.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    3.74
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.71
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    4.73
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    2.71
    ]
   },
   "gdp_pc_population_share_below": 0.44904,
@@ -203911,6 +211675,26 @@
     2024,
     65.77
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    61.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.87
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2024,
+    7.64
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    4.38
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    1.16
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     533631.23
@@ -204020,6 +211804,26 @@
    "SP.ADO.TFRT": [
     2014,
     75.32
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.67
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.17
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.74
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.76
    ]
   },
   "gdp_pc_population_share_below": 0.45358,
@@ -204953,6 +212757,22 @@
     2024,
     73.19
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    71.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    3.39
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    10.02
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    12.94
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     568962.92
@@ -205030,6 +212850,22 @@
    "IT.NET.USER.ZS": [
     2014,
     57.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    89.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    6.34
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.54
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    7.93
    ]
   },
   "gdp_pc_population_share_below": 0.43274,
@@ -206069,6 +213905,26 @@
     2024,
     33.95
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    98.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    4.27
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2022,
+    2.89
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    9.49
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    23.71
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     122894044.88
@@ -206238,6 +214094,26 @@
    "IT.NET.USER.ZS": [
     2014,
     41.0
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    97.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    1.95
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    3.54
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    6.45
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    6.55
    ]
   },
   "gdp_pc_population_share_below": 0.51319,
@@ -207073,6 +214949,22 @@
     2024,
     35.33
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    89.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2021,
+    5.43
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.85
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    8.16
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     3370.33
@@ -207234,6 +215126,22 @@
    "IT.NET.USER.ZS": [
     2014,
     53.67
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    99.0
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2015,
+    4.66
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.22
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    5.32
    ]
   },
   "gdp_pc_population_share_below": 0.42692,
@@ -208122,6 +216030,22 @@
     2024,
     73.89
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    41.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.26
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.55
+   ],
+   "IT.NET.BBND.P2": [
+    2022,
+    1.27
+   ],
    "NY.GNP.PCAP.CN": [
     2018,
     330112.4
@@ -208247,6 +216171,22 @@
    "IT.NET.USER.ZS": [
     2014,
     22.55
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    64.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.94
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    2.7
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.12
    ]
   },
   "gdp_pc_population_share_below": 0.01618,
@@ -209326,6 +217266,26 @@
     2024,
     115.48
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    88.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.54
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    4.07
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    2.0
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    0.79
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     30170.38
@@ -209483,6 +217443,26 @@
    "IT.NET.USER.ZS": [
     2014,
     6.5
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    85.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.35
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    5.15
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    1.74
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    0.13
    ]
   },
   "gdp_pc_population_share_below": 0.12012,
@@ -210559,6 +218539,26 @@
     2024,
     95.52
    ],
+   "SH.IMM.MEAS": [
+    2024,
+    90.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2024,
+    0.77
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2023,
+    0.38
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2025,
+    3.56
+   ],
+   "IT.NET.BBND.P2": [
+    2024,
+    1.94
+   ],
    "NY.GNP.PCAP.CN": [
     2025,
     94934.36
@@ -210712,6 +218712,26 @@
    "IT.NET.USER.ZS": [
     2014,
     16.36
+   ],
+   "SH.IMM.MEAS": [
+    2014,
+    92.0
+   ],
+   "EN.GHG.CO2.PC.CE.AR5": [
+    2014,
+    0.89
+   ],
+   "SE.XPD.TOTL.GD.ZS": [
+    2014,
+    6.14
+   ],
+   "SP.POP.65UP.TO.ZS": [
+    2015,
+    3.22
+   ],
+   "IT.NET.BBND.P2": [
+    2014,
+    1.07
    ]
   },
   "gdp_pc_population_share_below": 0.40067,
