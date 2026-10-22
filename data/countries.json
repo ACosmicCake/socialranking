@@ -1453,6 +1453,10 @@
      "urban": 0.3517
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0365
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1085,
@@ -2529,6 +2533,10 @@
      "rural": 0.2609,
      "urban": 0.4296
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0742
    },
    "borrowed": {
     "year": 2024,
@@ -5280,6 +5288,10 @@
      "urban": 0.5086
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0746
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.3261,
@@ -6300,6 +6312,10 @@
      "rural": 0.4356,
      "urban": 0.401
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0225
    },
    "borrowed": {
     "year": 2024,
@@ -9397,6 +9413,10 @@
      "urban": 0.342
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0362
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.2222,
@@ -11792,6 +11812,10 @@
      "rural": 0.2196,
      "urban": 0.1838
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0286
    },
    "borrowed": {
     "year": 2024,
@@ -15268,6 +15292,18 @@
      "urban": 0.775
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1173,
+    "by_sex": {
+     "F": 0.1042,
+     "M": 0.1319
+    },
+    "by_area": {
+     "rural": 0.0988,
+     "urban": 0.2078
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1891,
@@ -16276,6 +16312,10 @@
      "rural": 0.5913,
      "urban": 0.5623
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0298
    },
    "borrowed": {
     "year": 2024,
@@ -18362,6 +18402,10 @@
      "urban": 0.5881
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0629
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1929,
@@ -19191,6 +19235,18 @@
     "by_area": {
      "rural": 0.4846,
      "urban": 0.5922
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1175,
+    "by_sex": {
+     "F": 0.1182,
+     "M": 0.1168
+    },
+    "by_area": {
+     "rural": 0.1148,
+     "urban": 0.1299
     }
    },
    "borrowed": {
@@ -20213,6 +20269,10 @@
      "rural": 0.5208,
      "urban": 0.6157
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0776
    },
    "borrowed": {
     "year": 2024,
@@ -21288,6 +21348,18 @@
     "by_area": {
      "rural": 0.4483,
      "urban": 0.4817
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1012,
+    "by_sex": {
+     "F": 0.0871,
+     "M": 0.1167
+    },
+    "by_area": {
+     "rural": 0.1166,
+     "urban": 0.0898
     }
    },
    "borrowed": {
@@ -23411,6 +23483,18 @@
      "urban": 0.7103
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1819,
+    "by_sex": {
+     "F": 0.1928,
+     "M": 0.1698
+    },
+    "by_area": {
+     "rural": 0.1516,
+     "urban": 0.2417
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1396,
@@ -24206,6 +24290,10 @@
      "rural": 0.5387,
      "urban": 0.6405
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0686
    },
    "borrowed": {
     "year": 2024,
@@ -26126,6 +26214,10 @@
      "urban": 0.5276
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0233
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1653,
@@ -27187,6 +27279,10 @@
      "rural": 0.5785,
      "urban": 0.7401
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0504
    },
    "borrowed": {
     "year": 2024,
@@ -30717,6 +30813,10 @@
      "urban": 0.6147
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0453
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1147,
@@ -33311,6 +33411,18 @@
      "urban": 0.7906
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.4343,
+    "by_sex": {
+     "F": 0.4369,
+     "M": 0.4318
+    },
+    "by_area": {
+     "rural": 0.3735,
+     "urban": 0.4635
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.4075,
@@ -34342,6 +34454,10 @@
      "urban": 0.3792
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0262
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1355,
@@ -35224,6 +35340,18 @@
     "by_area": {
      "rural": 0.4347,
      "urban": 0.4847
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1133,
+    "by_sex": {
+     "F": 0.0701,
+     "M": 0.1629
+    },
+    "by_area": {
+     "rural": 0.1117,
+     "urban": 0.1214
     }
    },
    "borrowed": {
@@ -36317,6 +36445,10 @@
      "urban": 0.6288
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0395
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0882
@@ -37349,6 +37481,10 @@
      "urban": 0.6263
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0439
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0636
@@ -38278,6 +38414,18 @@
     "by_area": {
      "rural": 0.4673,
      "urban": 0.5545
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1198,
+    "by_sex": {
+     "F": 0.0866,
+     "M": 0.154
+    },
+    "by_area": {
+     "rural": 0.1006,
+     "urban": 0.1374
     }
    },
    "borrowed": {
@@ -39393,6 +39541,18 @@
     "by_area": {
      "rural": 0.6432,
      "urban": 0.6874
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.2837,
+    "by_sex": {
+     "F": 0.2671,
+     "M": 0.302
+    },
+    "by_area": {
+     "rural": 0.2769,
+     "urban": 0.3073
     }
    },
    "borrowed": {
@@ -43551,6 +43711,10 @@
      "urban": 0.6953
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0445
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0624
@@ -46682,6 +46846,18 @@
      "urban": 0.5326
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.104,
+    "by_sex": {
+     "F": 0.0536,
+     "M": 0.1563
+    },
+    "by_area": {
+     "rural": 0.1096,
+     "urban": 0.101
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.2929,
@@ -47803,6 +47979,10 @@
      "rural": 0.3231,
      "urban": 0.4014
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.071
    },
    "borrowed": {
     "year": 2024,
@@ -48928,6 +49108,10 @@
      "urban": 0.2499
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.018
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1043,
@@ -50045,6 +50229,10 @@
      "rural": 0.3482,
      "urban": 0.4785
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0487
    },
    "borrowed": {
     "year": 2024,
@@ -53037,6 +53225,10 @@
      "rural": 0.583
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0581
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.2351,
@@ -53894,6 +54086,10 @@
      "rural": 0.4707,
      "urban": 0.579
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0425
    },
    "borrowed": {
     "year": 2024,
@@ -58457,6 +58653,10 @@
      "urban": 0.7423
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0692
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0649
@@ -59427,6 +59627,10 @@
      "urban": 0.5434
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0452
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0551
@@ -60281,6 +60485,10 @@
      "rural": 0.3373,
      "urban": 0.4016
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0372
    },
    "borrowed": {
     "year": 2024,
@@ -62383,6 +62591,18 @@
     "by_area": {
      "rural": 0.8143,
      "urban": 0.8271
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1807,
+    "by_sex": {
+     "F": 0.1299,
+     "M": 0.2358
+    },
+    "by_area": {
+     "rural": 0.134,
+     "urban": 0.2365
     }
    },
    "borrowed": {
@@ -65815,6 +66035,10 @@
      "urban": 0.4384
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.032
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0892
@@ -66612,6 +66836,10 @@
      "rural": 0.4437,
      "urban": 0.6836
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0457
    },
    "borrowed": {
     "year": 2024,
@@ -69934,6 +70162,10 @@
      "rural": 0.3708,
      "urban": 0.4711
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0565
    },
    "borrowed": {
     "year": 2024,
@@ -73867,6 +74099,10 @@
      "urban": 0.4369
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0663
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1509,
@@ -74975,6 +75211,18 @@
     "by_area": {
      "rural": 0.525,
      "urban": 0.5355
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.102,
+    "by_sex": {
+     "F": 0.0883,
+     "M": 0.1156
+    },
+    "by_area": {
+     "rural": 0.0994,
+     "urban": 0.105
     }
    },
    "borrowed": {
@@ -76087,6 +76335,10 @@
      "urban": 0.4925
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0764
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.2373,
@@ -77157,6 +77409,10 @@
      "rural": 0.366,
      "urban": 0.4805
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0381
    },
    "borrowed": {
     "year": 2024,
@@ -83346,6 +83602,10 @@
      "urban": 0.3381
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0087
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1269,
@@ -84426,6 +84686,18 @@
      "urban": 0.512
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1981,
+    "by_sex": {
+     "F": 0.1795,
+     "M": 0.2189
+    },
+    "by_area": {
+     "rural": 0.1959,
+     "urban": 0.2006
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.3278,
@@ -85456,6 +85728,18 @@
     "by_area": {
      "rural": 0.687,
      "urban": 0.7556
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1144,
+    "by_sex": {
+     "F": 0.0847,
+     "M": 0.1454
+    },
+    "by_area": {
+     "rural": 0.1127,
+     "urban": 0.1206
     }
    },
    "borrowed": {
@@ -86730,6 +87014,10 @@
      "rural": 0.3394,
      "urban": 0.3892
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0713
    },
    "borrowed": {
     "year": 2024,
@@ -88419,6 +88707,10 @@
      "urban": 0.4586
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0297
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1801,
@@ -89525,6 +89817,10 @@
      "rural": 0.3553,
      "urban": 0.3798
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0571
    },
    "borrowed": {
     "year": 2024,
@@ -91349,6 +91645,10 @@
      "urban": 0.3115
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0091
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0593
@@ -92341,6 +92641,10 @@
      "rural": 0.532,
      "urban": 0.6089
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0336
    },
    "borrowed": {
     "year": 2024,
@@ -93441,6 +93745,10 @@
      "urban": 0.7152
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0438
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1253,
@@ -94390,6 +94698,10 @@
      "rural": 0.3617,
      "urban": 0.377
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.061
    },
    "borrowed": {
     "year": 2024,
@@ -98008,6 +98320,10 @@
      "urban": 0.3605
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0267
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0678
@@ -99062,6 +99378,10 @@
      "urban": 0.5388
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.026
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1078,
@@ -100091,6 +100411,18 @@
     "by_area": {
      "rural": 0.5883,
      "urban": 0.6426
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.3229,
+    "by_sex": {
+     "F": 0.3063,
+     "M": 0.339
+    },
+    "by_area": {
+     "rural": 0.3117,
+     "urban": 0.3327
     }
    },
    "borrowed": {
@@ -102010,6 +102342,10 @@
      "rural": 0.6216,
      "urban": 0.7692
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0752
    },
    "borrowed": {
     "year": 2024,
@@ -104520,6 +104856,10 @@
      "urban": 0.6202
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0731
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1333,
@@ -105598,6 +105938,18 @@
      "urban": 0.5141
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1251,
+    "by_sex": {
+     "F": 0.111,
+     "M": 0.1394
+    },
+    "by_area": {
+     "rural": 0.1327,
+     "urban": 0.1123
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1888,
@@ -106649,6 +107001,10 @@
      "rural": 0.4023,
      "urban": 0.5411
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0614
    },
    "borrowed": {
     "year": 2024,
@@ -107971,6 +108327,10 @@
      "rural": 0.3805,
      "urban": 0.5069
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0206
    },
    "borrowed": {
     "year": 2024,
@@ -109309,6 +109669,10 @@
      "urban": 0.5574
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0575
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.4191,
@@ -110187,6 +110551,10 @@
      "rural": 0.3507,
      "urban": 0.4948
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0662
    },
    "borrowed": {
     "year": 2024,
@@ -111251,6 +111619,10 @@
      "urban": 0.2579
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0044
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0137
@@ -112239,6 +112611,10 @@
      "rural": 0.4452,
      "urban": 0.5921
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0227
    },
    "borrowed": {
     "year": 2024,
@@ -114380,6 +114756,18 @@
      "urban": 0.5942
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1751,
+    "by_sex": {
+     "F": 0.1561,
+     "M": 0.1953
+    },
+    "by_area": {
+     "rural": 0.1623,
+     "urban": 0.2259
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.2181,
@@ -115874,6 +116262,10 @@
      "rural": 0.3677,
      "urban": 0.4036
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0439
    },
    "borrowed": {
     "year": 2024,
@@ -119197,6 +119589,10 @@
      "urban": 0.4028
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0174
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0752
@@ -120245,6 +120641,10 @@
      "urban": 0.4282
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0143
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0294
@@ -121104,6 +121504,10 @@
      "rural": 0.7539,
      "urban": 0.6877
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0707
    },
    "borrowed": {
     "year": 2024,
@@ -122296,6 +122700,18 @@
     "by_area": {
      "rural": 0.4329,
      "urban": 0.5159
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1332,
+    "by_sex": {
+     "F": 0.1006,
+     "M": 0.1673
+    },
+    "by_area": {
+     "rural": 0.1249,
+     "urban": 0.1446
     }
    },
    "borrowed": {
@@ -124363,6 +124779,10 @@
      "urban": 0.4111
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0708
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0883
@@ -125294,6 +125714,10 @@
      "rural": 0.2177,
      "urban": 0.314
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0301
    },
    "borrowed": {
     "year": 2024,
@@ -126836,6 +127260,10 @@
      "rural": 0.385,
      "urban": 0.6158
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0812
    },
    "borrowed": {
     "year": 2024,
@@ -128771,6 +129199,10 @@
      "urban": 0.4481
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0548
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.2158,
@@ -129859,6 +130291,10 @@
      "rural": 0.385,
      "urban": 0.4853
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0854
    },
    "borrowed": {
     "year": 2024,
@@ -130969,6 +131405,10 @@
      "rural": 0.4902,
      "urban": 0.6155
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0752
    },
    "borrowed": {
     "year": 2024,
@@ -132086,6 +132526,18 @@
     "by_area": {
      "rural": 0.6351,
      "urban": 0.5816
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.2009,
+    "by_sex": {
+     "F": 0.188,
+     "M": 0.2152
+    },
+    "by_area": {
+     "rural": 0.204,
+     "urban": 0.1932
     }
    },
    "borrowed": {
@@ -135515,6 +135967,10 @@
      "rural": 0.4637,
      "urban": 0.5563
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0747
    },
    "borrowed": {
     "year": 2024,
@@ -139665,6 +140121,18 @@
      "urban": 0.565
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1278,
+    "by_sex": {
+     "F": 0.0879,
+     "M": 0.1498
+    },
+    "by_area": {
+     "rural": 0.1171,
+     "urban": 0.129
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.3054,
@@ -140662,6 +141130,10 @@
      "rural": 0.7378,
      "urban": 0.8196
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0644
    },
    "borrowed": {
     "year": 2024,
@@ -141708,6 +142180,18 @@
     "by_area": {
      "rural": 0.5165,
      "urban": 0.4829
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1411,
+    "by_sex": {
+     "F": 0.1129,
+     "M": 0.172
+    },
+    "by_area": {
+     "rural": 0.1196,
+     "urban": 0.1744
     }
    },
    "borrowed": {
@@ -143277,6 +143761,10 @@
      "rural": 0.5714,
      "urban": 0.6883
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0214
    },
    "borrowed": {
     "year": 2024,
@@ -148749,6 +149237,10 @@
      "urban": 0.5147
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.078
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1322,
@@ -152415,6 +152907,10 @@
      "rural": 0.3617,
      "urban": 0.3581
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.047
    },
    "borrowed": {
     "year": 2024,
@@ -160570,6 +161066,10 @@
      "urban": 0.3628
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0181
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1708,
@@ -161580,6 +162080,10 @@
      "rural": 0.5116,
      "urban": 0.5951
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0399
    },
    "borrowed": {
     "year": 2024,
@@ -162683,6 +163187,18 @@
     "by_area": {
      "rural": 0.6179,
      "urban": 0.6599
+    }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.2583,
+    "by_sex": {
+     "F": 0.2053,
+     "M": 0.3131
+    },
+    "by_area": {
+     "rural": 0.2573,
+     "urban": 0.2603
     }
    },
    "borrowed": {
@@ -164440,6 +164956,10 @@
      "rural": 0.6335,
      "urban": 0.6735
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0776
    },
    "borrowed": {
     "year": 2024,
@@ -167268,6 +167788,18 @@
      "urban": 0.5433
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1108,
+    "by_sex": {
+     "F": 0.0443,
+     "M": 0.1802
+    },
+    "by_area": {
+     "rural": 0.089,
+     "urban": 0.1362
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0525
@@ -169740,6 +170272,18 @@
      "urban": 0.4231
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.1602,
+    "by_sex": {
+     "F": 0.1117,
+     "M": 0.2094
+    },
+    "by_area": {
+     "rural": 0.1645,
+     "urban": 0.1581
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.4171,
@@ -171182,6 +171726,10 @@
      "urban": 0.8478
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0908
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.2904,
@@ -172280,6 +172828,10 @@
      "rural": 0.3516,
      "urban": 0.4644
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0572
    },
    "borrowed": {
     "year": 2024,
@@ -177043,6 +177595,10 @@
      "urban": 0.4026
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.024
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1175,
@@ -178755,6 +179311,10 @@
      "urban": 0.5323
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0415
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1537,
@@ -179645,6 +180205,18 @@
      "urban": 0.7076
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.2016,
+    "by_sex": {
+     "F": 0.2337,
+     "M": 0.1681
+    },
+    "by_area": {
+     "rural": 0.18,
+     "urban": 0.2456
+    }
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.0811
@@ -180448,6 +181020,10 @@
      "rural": 0.304,
      "urban": 0.3145
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0179
    },
    "borrowed": {
     "year": 2024,
@@ -182455,6 +183031,10 @@
      "urban": 0.7279
     }
    },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.056
+   },
    "borrowed": {
     "year": 2024,
     "share": 0.1814,
@@ -183535,6 +184115,10 @@
      "rural": 0.4364,
      "urban": 0.5198
     }
+   },
+   "saved_old_age": {
+    "year": 2024,
+    "share": 0.0206
    },
    "borrowed": {
     "year": 2024,

@@ -235,7 +235,8 @@ FINDEX_DERIVED = {
               lambda own, smart: [100 - own, max(own - smart, 0.0), smart]),
 }
 # Yes/no Findex items shown as context next to your answers (% of adults, latest wave).
-FINDEX_YES = {"saved": "save.any.t.d", "borrowed": "fin22a.22a1.22g.d", "digital_payment": "g20.any"}
+FINDEX_YES = {"saved": "save.any.t.d", "saved_old_age": "fin17f", "borrowed": "fin22a.22a1.22g.d",
+              "digital_payment": "g20.any"}
 # Findex breakdowns of the derived groups (indicator suffixes): women, men, rural, urban.
 FINDEX_GROUP_SUFFIXES = {".1": ("by_sex", "F"), ".2": ("by_sex", "M"), ".9": ("by_area", "rural"),
                          ".10": ("by_area", "urban")}

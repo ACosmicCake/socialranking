@@ -285,6 +285,7 @@ QUESTIONS = {
     "account": {"text": "Bạn (tự mình hoặc cùng người khác) có tài khoản ở ngân hàng hoặc tổ chức tài chính khác, hoặc "
                         "dùng dịch vụ tiền di động không?"},
     "saved": {"text": "Trong 12 tháng qua, bạn có tự để dành được khoản tiền nào không, bằng bất kỳ cách nào?"},
+    "saved_old_age": {"text": "Bạn có để dành một phần số tiền đó cho tuổi già không?"},
     "borrowed": {"text": "Trong 12 tháng qua, bạn có tự vay tiền từ ngân hàng hoặc tổ chức tài chính khác, hoặc qua tài "
                          "khoản tiền di động không?"},
     "digital_payment": {"text": "Trong 12 tháng qua, bạn có thực hiện hoặc nhận một khoản thanh toán điện tử không? Bao gồm "

@@ -608,6 +608,9 @@
         saved: [tr("You saved money in the past year.", "Bạn đã tiết kiệm được tiền trong năm qua."),
                 tr("You didn't save money in the past year.", "Bạn không tiết kiệm được tiền trong năm qua."),
                 tr("saved any money", "đã tiết kiệm tiền")],
+        saved_old_age: [tr("You saved for old age.", "Bạn đã để dành cho tuổi già."),
+                        tr("You didn't save for old age.", "Bạn không để dành cho tuổi già."),
+                        tr("saved for old age", "đã để dành cho tuổi già")],
         borrowed: [tr("You borrowed from a bank, similar institution or mobile money account.", "Bạn đã vay từ ngân hàng, tổ chức tương tự hoặc tài khoản tiền di động."),
                    tr("You didn't borrow from a bank, similar institution or mobile money account.", "Bạn không vay từ ngân hàng, tổ chức tương tự hoặc tài khoản tiền di động."),
                    tr("borrowed this way", "đã vay theo cách này")],
@@ -620,8 +623,8 @@
         const [yes, no, did] = yesText[y.key];
         const groups = (y.groups || []).map(g => `${yesGroup[g.key]} ${pct(g.share, 0)}`).join(", ");
         bank.push(`${y.has ? yes : no} ${tr(
-            `${pct(y.world, 0)} of adults worldwide ${did}${y.country !== undefined ? `; in ${cname}, ${pct(y.country, 0)} (${groups ? `${groups}; ` : ""}${y.year})` : ""}.`,
-            `${pct(y.world, 0)} người trưởng thành trên thế giới ${did}${y.country !== undefined ? `; ở ${cname} là ${pct(y.country, 0)} (${groups ? `${groups}; ` : ""}${y.year})` : ""}.`)}`);
+            `${pct(y.world, 0)} of adults ${y.world_partial ? `in the ${y.world_economies} economies surveyed (mostly low- and middle-income)` : "worldwide"} ${did}${y.country !== undefined ? `; in ${cname}, ${pct(y.country, 0)} (${groups ? `${groups}; ` : ""}${y.year})` : ""}.`,
+            `${pct(y.world, 0)} người trưởng thành ${y.world_partial ? `ở ${y.world_economies} nền kinh tế được khảo sát (chủ yếu thu nhập thấp và trung bình)` : "trên thế giới"} ${did}${y.country !== undefined ? `; ở ${cname} là ${pct(y.country, 0)} (${groups ? `${groups}; ` : ""}${y.year})` : ""}.`)}`);
     }
     html.push(section("security", tr("Financial security", "An ninh tài chính"), `
     ${sec.global_pct !== undefined ? `<p>${tr(`Combining basic needs, food security and emergency money, you're more financially secure than about <strong>${pct(sec.global_pct)}</strong> of people worldwide.`,

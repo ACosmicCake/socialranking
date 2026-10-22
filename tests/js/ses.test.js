@@ -549,6 +549,11 @@ test("Mobile phone is ranked as context only", () => {
 test("Saving, borrowing and digital payments are compared with Findex", () => {
     const sec = run({...FULL, sex: "F", area: "urban", saved: "yes", borrowed: "no", digital_payment: "yes"}).security;
     assert.deepEqual(sec.findex_yes.map(y => y.key), ["saved", "borrowed", "digital_payment"]);
+    // Old-age saving: asked only of savers, so not saving counts as no; pooled over surveyed economies.
+    const old = run({...FULL, saved: "no", saved_old_age: "yes"}).security.findex_yes.find(y => y.key === "saved_old_age");
+    assert.equal(old.has, false);
+    assert.ok(old.world_partial && old.world > 5 && old.world < 40 && old.country > 0);
+    assert.equal(sec.findex_yes.find(y => y.key === "saved").world_partial, false);
     for (const y of sec.findex_yes) assert.ok(y.world > 5 && y.world < 90 && y.country > 0 && y.year >= 2021);
     // Splits only where Findex reports them (not for borrowing in Viet Nam).
     assert.deepEqual(sec.findex_yes[0].groups.map(g => g.key), ["F", "urban"]);

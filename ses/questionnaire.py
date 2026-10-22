@@ -634,6 +634,16 @@ SECTIONS = [
                 "basis": "Global Findex saving question (saved any money). Shown as context; not scored.",
             },
             {
+                "id": "saved_old_age",
+                "type": "radio",
+                "show_if": ("saved", "yes"),
+                "text": "Did you save or set aside any of that money for old age?",
+                "options": YES_NO,
+                "source": "findex_2025",
+                "basis": "Global Findex: saved for old age (asked in low- and middle-income economies). Shown as "
+                         "context; not scored.",
+            },
+            {
                 "id": "borrowed",
                 "type": "radio",
                 "text": "In the past 12 months, have you personally borrowed any money from a bank or another financial "
