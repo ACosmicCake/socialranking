@@ -588,3 +588,12 @@ test("missing world and regional aggregates are estimated, except for inequality
     assert.equal(get("SP.DYN.LE00.IN").world_estimated, undefined);
     assert.equal(get("SI.POV.GINI").world, null);
 });
+
+test("country glance compares with the income group", () => {
+    const loc = run(FULL).location;
+    assert.ok(loc.group_name);
+    const le = loc.glance.find(g => g.code === "SP.DYN.LE00.IN");
+    assert.ok(le.group > 50 && le.group < 90 && le.group_estimated === undefined);
+    const hci = loc.glance.find(g => g.code === "HD.HCI.OVRL");
+    assert.ok(hci.group_estimated && hci.group > 0.3 && hci.group < 0.8);
+});

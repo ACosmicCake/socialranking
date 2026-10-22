@@ -6110,19 +6110,1415 @@
   },
   "LIC": {
    "name": "Low income",
-   "wdi": {}
+   "wdi": {
+    "EG.ELC.ACCS.ZS": [
+     2024,
+     48.8
+    ],
+    "EG.ELC.ACCS.UR.ZS": [
+     2024,
+     77.63
+    ],
+    "EG.ELC.ACCS.RU.ZS": [
+     2024,
+     37.09
+    ],
+    "EG.CFT.ACCS.ZS": [
+     2024,
+     15.61
+    ],
+    "EG.CFT.ACCS.UR.ZS": [
+     2024,
+     31.53
+    ],
+    "EG.CFT.ACCS.RU.ZS": [
+     2024,
+     7.31
+    ],
+    "SH.H2O.SMDW.ZS": [
+     2024,
+     32.98
+    ],
+    "SH.H2O.SMDW.UR.ZS": [
+     2024,
+     54.68
+    ],
+    "SH.H2O.SMDW.RU.ZS": [
+     2024,
+     19.61
+    ],
+    "SH.H2O.BASW.ZS": [
+     2024,
+     60.3
+    ],
+    "SH.STA.SMSS.ZS": [
+     2024,
+     26.89
+    ],
+    "SH.STA.SMSS.UR.ZS": [
+     2024,
+     35.57
+    ],
+    "SH.STA.SMSS.RU.ZS": [
+     2024,
+     21.54
+    ],
+    "SH.STA.BASS.ZS": [
+     2024,
+     33.25
+    ],
+    "SH.STA.ODFC.ZS": [
+     2024,
+     17.25
+    ],
+    "SH.STA.HYGN.ZS": [
+     2024,
+     24.58
+    ],
+    "SH.STA.HYGN.UR.ZS": [
+     2024,
+     38.86
+    ],
+    "SH.STA.HYGN.RU.ZS": [
+     2024,
+     19.88
+    ],
+    "IT.NET.USER.ZS": [
+     2025,
+     23.4
+    ],
+    "FX.OWN.TOTL.ZS": [
+     2024,
+     46.44
+    ],
+    "SN.ITK.MSFI.ZS": [
+     2024,
+     65.44
+    ],
+    "SN.ITK.SVFI.ZS": [
+     2024,
+     26.83
+    ],
+    "SN.ITK.DEFC.ZS": [
+     2024,
+     27.33
+    ],
+    "SL.EMP.WORK.ZS": [
+     2025,
+     21.08
+    ],
+    "SL.EMP.MPYR.ZS": [
+     2025,
+     2.84
+    ],
+    "SL.FAM.WORK.ZS": [
+     2025,
+     21.42
+    ],
+    "SL.EMP.VULN.ZS": [
+     2025,
+     76.08
+    ],
+    "SL.AGR.EMPL.ZS": [
+     2025,
+     59.37
+    ],
+    "SL.IND.EMPL.ZS": [
+     2025,
+     10.19
+    ],
+    "SL.SRV.EMPL.ZS": [
+     2025,
+     30.44
+    ],
+    "SL.UEM.TOTL.ZS": [
+     2025,
+     4.89
+    ],
+    "SL.TLF.CACT.ZS": [
+     2025,
+     64.36
+    ],
+    "SP.URB.TOTL.IN.ZS": [
+     2025,
+     35.16
+    ],
+    "SP.DYN.LE00.IN": [
+     2024,
+     65.24
+    ],
+    "SH.DYN.MORT": [
+     2024,
+     68.8
+    ],
+    "NY.GDP.PCAP.PP.KD": [
+     2025,
+     2481.01
+    ],
+    "SH.XPD.OOPC.CH.ZS": [
+     2023,
+     44.48
+    ],
+    "SE.ADT.LITR.ZS": [
+     2024,
+     63.57
+    ],
+    "EN.POP.SLUM.UR.ZS": [
+     2022,
+     61.16
+    ],
+    "GD_WBL_OVL_LAW": [
+     2025,
+     52.27
+    ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     31.35
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     10.4
+    ],
+    "IQ.SPI.OVRL": [
+     2024,
+     56.01
+    ],
+    "SH.MED.PHYS.ZS": [
+     2022,
+     0.34
+    ],
+    "SH.MED.NUMW.P3": [
+     2022,
+     1.14
+    ],
+    "SE.PRM.CMPT.ZS": [
+     2023,
+     62.94
+    ],
+    "SE.TER.ENRR": [
+     2021,
+     9.28
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     67.7
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     62.81
+    ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     56.42
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     70.94
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2025,
+     18.3
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2025,
+     28.6
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2024,
+     40.6
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2024,
+     52.54
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     15.28
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     25.48
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     1.82
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     3.61
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     29.44
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     15.35
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     82.89
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     70.91
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     63.19
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     56.47
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     6.96
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     12.64
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     29.84
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     30.89
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     4.71
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     5.03
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     54.68
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     74.29
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2024,
+     37.32
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2024,
+     52.51
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2024,
+     40.21
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2024,
+     49.93
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2024,
+     37.61
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2024,
+     63.47
+    ],
+    "SE.LPV.PRIM": [
+     2019,
+     91.03
+    ],
+    "IT.CEL.SETS.P2": [
+     2025,
+     69.3
+    ],
+    "SH.XPD.CHEX.PC.CD": [
+     2023,
+     37.74
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     24.78
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     346.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     4.46
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     90.7
+    ],
+    "per_allsp.cov_pop_tot": [
+     2021,
+     18.28
+    ]
+   }
   },
   "LMC": {
    "name": "Lower middle income",
-   "wdi": {}
+   "wdi": {
+    "EG.ELC.ACCS.ZS": [
+     2024,
+     91.36
+    ],
+    "EG.ELC.ACCS.UR.ZS": [
+     2024,
+     96.24
+    ],
+    "EG.ELC.ACCS.RU.ZS": [
+     2024,
+     88.04
+    ],
+    "EG.CFT.ACCS.ZS": [
+     2024,
+     63.78
+    ],
+    "EG.CFT.ACCS.UR.ZS": [
+     2024,
+     80.7
+    ],
+    "EG.CFT.ACCS.RU.ZS": [
+     2024,
+     50.82
+    ],
+    "SH.H2O.SMDW.ZS": [
+     2024,
+     69.15
+    ],
+    "SH.H2O.SMDW.UR.ZS": [
+     2024,
+     74.31
+    ],
+    "SH.H2O.SMDW.RU.ZS": [
+     2024,
+     65.49
+    ],
+    "SH.H2O.BASW.ZS": [
+     2024,
+     90.83
+    ],
+    "SH.STA.SMSS.ZS": [
+     2024,
+     51.89
+    ],
+    "SH.STA.SMSS.UR.ZS": [
+     2024,
+     47.83
+    ],
+    "SH.STA.SMSS.RU.ZS": [
+     2024,
+     54.77
+    ],
+    "SH.STA.BASS.ZS": [
+     2024,
+     73.88
+    ],
+    "SH.STA.ODFC.ZS": [
+     2024,
+     7.34
+    ],
+    "SH.STA.HYGN.ZS": [
+     2024,
+     75.25
+    ],
+    "SH.STA.HYGN.UR.ZS": [
+     2024,
+     77.98
+    ],
+    "SH.STA.HYGN.RU.ZS": [
+     2024,
+     73.42
+    ],
+    "IT.NET.USER.ZS": [
+     2025,
+     62.9
+    ],
+    "FX.OWN.TOTL.ZS": [
+     2024,
+     70.39
+    ],
+    "SN.ITK.MSFI.ZS": [
+     2024,
+     41.77
+    ],
+    "SN.ITK.SVFI.ZS": [
+     2024,
+     16.75
+    ],
+    "SN.ITK.DEFC.ZS": [
+     2024,
+     12.15
+    ],
+    "SL.EMP.WORK.ZS": [
+     2025,
+     29.65
+    ],
+    "SL.EMP.MPYR.ZS": [
+     2025,
+     4.9
+    ],
+    "SL.FAM.WORK.ZS": [
+     2025,
+     14.48
+    ],
+    "SL.EMP.VULN.ZS": [
+     2025,
+     65.46
+    ],
+    "SL.AGR.EMPL.ZS": [
+     2025,
+     39.77
+    ],
+    "SL.IND.EMPL.ZS": [
+     2025,
+     22.39
+    ],
+    "SL.SRV.EMPL.ZS": [
+     2025,
+     37.85
+    ],
+    "SL.UEM.TOTL.ZS": [
+     2025,
+     4.5
+    ],
+    "SL.TLF.CACT.ZS": [
+     2025,
+     58.21
+    ],
+    "SP.URB.TOTL.IN.ZS": [
+     2025,
+     42.01
+    ],
+    "SP.DYN.LE00.IN": [
+     2024,
+     69.52
+    ],
+    "SH.DYN.MORT": [
+     2024,
+     43.8
+    ],
+    "NY.GDP.PCAP.PP.KD": [
+     2025,
+     9350.3
+    ],
+    "SH.XPD.OOPC.CH.ZS": [
+     2023,
+     47.01
+    ],
+    "SE.ADT.LITR.ZS": [
+     2024,
+     78.28
+    ],
+    "EN.POP.SLUM.UR.ZS": [
+     2018,
+     25.25
+    ],
+    "GD_WBL_OVL_LAW": [
+     2025,
+     58.38
+    ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     49.57
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     4.4
+    ],
+    "IQ.SPI.OVRL": [
+     2024,
+     64.1
+    ],
+    "SH.MED.PHYS.ZS": [
+     2022,
+     0.71
+    ],
+    "SH.MED.NUMW.P3": [
+     2022,
+     1.65
+    ],
+    "SH.MED.BEDS.ZS": [
+     2021,
+     1.52
+    ],
+    "SE.PRM.CMPT.ZS": [
+     2024,
+     88.0
+    ],
+    "SE.TER.ENRR": [
+     2024,
+     27.44
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     71.34
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     67.81
+    ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     72.31
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     84.15
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2025,
+     56.9
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2025,
+     68.7
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2024,
+     67.59
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2024,
+     73.2
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     23.54
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     32.68
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     2.5
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     6.09
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     25.31
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     9.1
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     73.96
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     61.24
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     50.34
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     34.52
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     13.95
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     26.58
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     35.71
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     38.91
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     4.94
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     4.28
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     39.21
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     76.81
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2024,
+     63.39
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2024,
+     75.04
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2024,
+     64.45
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2024,
+     72.57
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2024,
+     66.02
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2024,
+     75.59
+    ],
+    "SE.LPV.PRIM": [
+     2019,
+     62.06
+    ],
+    "IT.CEL.SETS.P2": [
+     2025,
+     89.9
+    ],
+    "SH.XPD.CHEX.PC.CD": [
+     2023,
+     84.6
+    ],
+    "SL.UEM.NEET.ZS": [
+     2024,
+     21.8
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     23.63
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     235.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     2.62
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     42.49
+    ],
+    "per_allsp.cov_pop_tot": [
+     2021,
+     55.11
+    ]
+   }
   },
   "UMC": {
    "name": "Upper middle income",
-   "wdi": {}
+   "wdi": {
+    "EG.ELC.ACCS.ZS": [
+     2024,
+     99.32
+    ],
+    "EG.ELC.ACCS.UR.ZS": [
+     2024,
+     99.8
+    ],
+    "EG.ELC.ACCS.RU.ZS": [
+     2024,
+     98.46
+    ],
+    "EG.CFT.ACCS.ZS": [
+     2024,
+     90.16
+    ],
+    "EG.CFT.ACCS.UR.ZS": [
+     2024,
+     96.16
+    ],
+    "EG.CFT.ACCS.RU.ZS": [
+     2024,
+     78.04
+    ],
+    "SH.H2O.SMDW.ZS": [
+     2024,
+     78.13
+    ],
+    "SH.H2O.SMDW.UR.ZS": [
+     2024,
+     85.11
+    ],
+    "SH.H2O.SMDW.RU.ZS": [
+     2024,
+     62.36
+    ],
+    "SH.H2O.BASW.ZS": [
+     2024,
+     95.88
+    ],
+    "SH.STA.SMSS.ZS": [
+     2024,
+     62.4
+    ],
+    "SH.STA.SMSS.UR.ZS": [
+     2024,
+     69.87
+    ],
+    "SH.STA.SMSS.RU.ZS": [
+     2024,
+     45.53
+    ],
+    "SH.STA.BASS.ZS": [
+     2024,
+     94.15
+    ],
+    "SH.STA.ODFC.ZS": [
+     2024,
+     0.43
+    ],
+    "SH.STA.HYGN.ZS": [
+     2024,
+     93.49
+    ],
+    "SH.STA.HYGN.UR.ZS": [
+     2024,
+     95.01
+    ],
+    "SH.STA.HYGN.RU.ZS": [
+     2024,
+     90.46
+    ],
+    "IT.NET.USER.ZS": [
+     2025,
+     88.8
+    ],
+    "FX.OWN.TOTL.ZS": [
+     2024,
+     84.04
+    ],
+    "SN.ITK.MSFI.ZS": [
+     2024,
+     12.61
+    ],
+    "SN.ITK.SVFI.ZS": [
+     2024,
+     2.76
+    ],
+    "SN.ITK.DEFC.ZS": [
+     2024,
+     4.0
+    ],
+    "SL.EMP.WORK.ZS": [
+     2025,
+     61.26
+    ],
+    "SL.EMP.MPYR.ZS": [
+     2025,
+     3.95
+    ],
+    "SL.FAM.WORK.ZS": [
+     2025,
+     7.57
+    ],
+    "SL.EMP.VULN.ZS": [
+     2025,
+     34.78
+    ],
+    "SL.AGR.EMPL.ZS": [
+     2025,
+     19.84
+    ],
+    "SL.IND.EMPL.ZS": [
+     2025,
+     27.74
+    ],
+    "SL.SRV.EMPL.ZS": [
+     2025,
+     52.42
+    ],
+    "SL.UEM.TOTL.ZS": [
+     2025,
+     5.18
+    ],
+    "SL.TLF.CACT.ZS": [
+     2025,
+     62.73
+    ],
+    "SP.URB.TOTL.IN.ZS": [
+     2025,
+     68.23
+    ],
+    "SP.DYN.LE00.IN": [
+     2024,
+     76.05
+    ],
+    "SH.DYN.MORT": [
+     2024,
+     13.1
+    ],
+    "NY.GDP.PCAP.PP.KD": [
+     2025,
+     21748.88
+    ],
+    "SH.XPD.OOPC.CH.ZS": [
+     2023,
+     31.22
+    ],
+    "SE.ADT.LITR.ZS": [
+     2024,
+     96.17
+    ],
+    "EN.POP.SLUM.UR.ZS": [
+     2022,
+     24.3
+    ],
+    "GD_WBL_OVL_LAW": [
+     2025,
+     68.63
+    ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     26.67
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     5.7
+    ],
+    "IQ.SPI.OVRL": [
+     2024,
+     69.27
+    ],
+    "SH.MED.PHYS.ZS": [
+     2022,
+     2.41
+    ],
+    "SH.MED.NUMW.P3": [
+     2022,
+     3.83
+    ],
+    "SH.MED.BEDS.ZS": [
+     2023,
+     4.52
+    ],
+    "SE.PRM.CMPT.ZS": [
+     2023,
+     95.17
+    ],
+    "SE.TER.ENRR": [
+     2024,
+     64.6
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     78.94
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     73.25
+    ],
+    "SE.ADT.LITR.FE.ZS": [
+     2024,
+     94.87
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2024,
+     97.48
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2025,
+     87.9
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2025,
+     89.7
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2024,
+     82.45
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2024,
+     85.62
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     61.96
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     60.74
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     2.49
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     5.05
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     11.93
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     4.32
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     35.55
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     34.21
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     17.03
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     21.94
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     20.58
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     33.08
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     62.39
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     44.97
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     5.15
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     5.21
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     53.42
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     72.13
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2024,
+     76.76
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2024,
+     88.87
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2024,
+     78.66
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2024,
+     84.97
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2024,
+     78.79
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2024,
+     87.99
+    ],
+    "SE.LPV.PRIM": [
+     2019,
+     33.74
+    ],
+    "IT.CEL.SETS.P2": [
+     2025,
+     132.4
+    ],
+    "SH.XPD.CHEX.PC.CD": [
+     2023,
+     610.38
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     26.95
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     57.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     1.52
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     23.55
+    ],
+    "per_allsp.cov_pop_tot": [
+     2021,
+     62.22
+    ]
+   }
   },
   "HIC": {
    "name": "High income",
-   "wdi": {}
+   "wdi": {
+    "EG.ELC.ACCS.ZS": [
+     2024,
+     99.97
+    ],
+    "EG.ELC.ACCS.UR.ZS": [
+     2024,
+     99.99
+    ],
+    "EG.ELC.ACCS.RU.ZS": [
+     2024,
+     99.86
+    ],
+    "EG.CFT.ACCS.ZS": [
+     2024,
+     99.53
+    ],
+    "EG.CFT.ACCS.UR.ZS": [
+     2024,
+     99.91
+    ],
+    "EG.CFT.ACCS.RU.ZS": [
+     2024,
+     98.52
+    ],
+    "SH.H2O.SMDW.ZS": [
+     2024,
+     95.79
+    ],
+    "SH.H2O.SMDW.UR.ZS": [
+     2024,
+     96.4
+    ],
+    "SH.H2O.BASW.ZS": [
+     2024,
+     99.16
+    ],
+    "SH.STA.SMSS.ZS": [
+     2024,
+     84.39
+    ],
+    "SH.STA.SMSS.UR.ZS": [
+     2024,
+     87.35
+    ],
+    "SH.STA.SMSS.RU.ZS": [
+     2024,
+     71.49
+    ],
+    "SH.STA.BASS.ZS": [
+     2024,
+     98.34
+    ],
+    "SH.STA.ODFC.ZS": [
+     2024,
+     0.01
+    ],
+    "IT.NET.USER.ZS": [
+     2025,
+     94.2
+    ],
+    "FX.OWN.TOTL.ZS": [
+     2024,
+     94.91
+    ],
+    "SN.ITK.MSFI.ZS": [
+     2024,
+     7.91
+    ],
+    "SN.ITK.SVFI.ZS": [
+     2024,
+     1.76
+    ],
+    "SN.ITK.DEFC.ZS": [
+     2024,
+     2.55
+    ],
+    "SL.EMP.WORK.ZS": [
+     2025,
+     88.89
+    ],
+    "SL.EMP.MPYR.ZS": [
+     2025,
+     3.06
+    ],
+    "SL.FAM.WORK.ZS": [
+     2025,
+     0.65
+    ],
+    "SL.EMP.VULN.ZS": [
+     2025,
+     8.05
+    ],
+    "SL.AGR.EMPL.ZS": [
+     2025,
+     2.89
+    ],
+    "SL.IND.EMPL.ZS": [
+     2025,
+     22.2
+    ],
+    "SL.SRV.EMPL.ZS": [
+     2025,
+     74.9
+    ],
+    "SL.UEM.TOTL.ZS": [
+     2025,
+     4.41
+    ],
+    "SL.TLF.CACT.ZS": [
+     2025,
+     61.02
+    ],
+    "SP.URB.TOTL.IN.ZS": [
+     2025,
+     80.25
+    ],
+    "SP.DYN.LE00.IN": [
+     2024,
+     80.39
+    ],
+    "SH.DYN.MORT": [
+     2024,
+     5.1
+    ],
+    "NY.GDP.PCAP.PP.KD": [
+     2025,
+     59555.51
+    ],
+    "SH.XPD.OOPC.CH.ZS": [
+     2023,
+     13.35
+    ],
+    "SE.ADT.LITR.ZS": [
+     2020,
+     97.71
+    ],
+    "EN.POP.SLUM.UR.ZS": [
+     2022,
+     1.09
+    ],
+    "GD_WBL_OVL_LAW": [
+     2025,
+     78.07
+    ],
+    "EN.ATM.PM25.MC.M3": [
+     2023,
+     12.97
+    ],
+    "VC.IHR.PSRC.P5": [
+     2023,
+     2.9
+    ],
+    "IQ.SPI.OVRL": [
+     2024,
+     80.94
+    ],
+    "SH.MED.PHYS.ZS": [
+     2022,
+     3.78
+    ],
+    "SH.MED.NUMW.P3": [
+     2022,
+     10.24
+    ],
+    "SH.MED.BEDS.ZS": [
+     2022,
+     5.24
+    ],
+    "SE.PRM.CMPT.ZS": [
+     2024,
+     97.84
+    ],
+    "SE.TER.ENRR": [
+     2024,
+     82.04
+    ],
+    "SP.DYN.LE00.FE.IN": [
+     2024,
+     83.24
+    ],
+    "SP.DYN.LE00.MA.IN": [
+     2024,
+     77.76
+    ],
+    "SE.ADT.LITR.MA.ZS": [
+     2020,
+     98.13
+    ],
+    "IT.NET.USER.FE.ZS": [
+     2025,
+     93.6
+    ],
+    "IT.NET.USER.MA.ZS": [
+     2025,
+     94.9
+    ],
+    "FX.OWN.TOTL.FE.ZS": [
+     2024,
+     94.52
+    ],
+    "FX.OWN.TOTL.MA.ZS": [
+     2024,
+     95.31
+    ],
+    "SL.EMP.WORK.FE.ZS": [
+     2025,
+     91.34
+    ],
+    "SL.EMP.WORK.MA.ZS": [
+     2025,
+     86.88
+    ],
+    "SL.EMP.MPYR.FE.ZS": [
+     2025,
+     1.76
+    ],
+    "SL.EMP.MPYR.MA.ZS": [
+     2025,
+     4.13
+    ],
+    "SL.FAM.WORK.FE.ZS": [
+     2025,
+     0.98
+    ],
+    "SL.FAM.WORK.MA.ZS": [
+     2025,
+     0.37
+    ],
+    "SL.EMP.VULN.FE.ZS": [
+     2025,
+     6.9
+    ],
+    "SL.EMP.VULN.MA.ZS": [
+     2025,
+     8.99
+    ],
+    "SL.AGR.EMPL.FE.ZS": [
+     2025,
+     1.92
+    ],
+    "SL.AGR.EMPL.MA.ZS": [
+     2025,
+     3.69
+    ],
+    "SL.IND.EMPL.FE.ZS": [
+     2025,
+     11.12
+    ],
+    "SL.IND.EMPL.MA.ZS": [
+     2025,
+     31.26
+    ],
+    "SL.SRV.EMPL.FE.ZS": [
+     2025,
+     86.97
+    ],
+    "SL.SRV.EMPL.MA.ZS": [
+     2025,
+     65.05
+    ],
+    "SL.UEM.TOTL.FE.ZS": [
+     2025,
+     4.61
+    ],
+    "SL.UEM.TOTL.MA.ZS": [
+     2025,
+     4.24
+    ],
+    "SL.TLF.CACT.FE.ZS": [
+     2025,
+     54.29
+    ],
+    "SL.TLF.CACT.MA.ZS": [
+     2025,
+     67.92
+    ],
+    "FX.OWN.TOTL.40.ZS": [
+     2024,
+     92.82
+    ],
+    "FX.OWN.TOTL.60.ZS": [
+     2024,
+     96.31
+    ],
+    "FX.OWN.TOTL.YG.ZS": [
+     2024,
+     88.6
+    ],
+    "FX.OWN.TOTL.OL.ZS": [
+     2024,
+     95.88
+    ],
+    "FX.OWN.TOTL.PL.ZS": [
+     2024,
+     82.8
+    ],
+    "FX.OWN.TOTL.SO.ZS": [
+     2024,
+     96.34
+    ],
+    "SE.LPV.PRIM": [
+     2019,
+     8.01
+    ],
+    "IT.CEL.SETS.P2": [
+     2025,
+     141.6
+    ],
+    "SH.XPD.CHEX.PC.CD": [
+     2023,
+     6100.42
+    ],
+    "SL.UEM.NEET.ZS": [
+     2025,
+     10.56
+    ],
+    "SG.GEN.PARL.ZS": [
+     2025,
+     31.22
+    ],
+    "SH.STA.MMRT": [
+     2023,
+     10.0
+    ],
+    "SP.DYN.TFRT.IN": [
+     2024,
+     1.42
+    ],
+    "SP.ADO.TFRT": [
+     2024,
+     8.66
+    ],
+    "per_allsp.cov_pop_tot": [
+     2021,
+     77.83
+    ]
+   }
   }
  },
  "regions": {

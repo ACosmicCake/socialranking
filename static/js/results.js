@@ -26,7 +26,7 @@
     const lower = s => (VI ? s : s.charAt(0).toLowerCase() + s.slice(1));
     const section = (id, title, body) => `<hr class="my-5"><section id="${id}" class="result-section"><h2 class="h3">${title}</h2>${body}</section>`;
     const table = (head, rows, cls = "") => `<div class="table-responsive"><table class="table table-sm align-middle ${cls}">
-        <thead><tr>${head.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
+        <thead><tr>${head.map(h => h && typeof h === "object" ? `<th class="${h.cls}">${h.html}</th>` : `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
     const fmtGlance = (v, f) => v === null || v === undefined ? "-" : f === "money" ? money(v, 0) : f === "pct" ? pct(v) : f === "index" ? fixed(v, 2) : fixed(v, 1);
 
     // ---------------------------------------------------------------- answers
@@ -791,7 +791,8 @@
         ${loc.median ? tr(`Half of ${cname}'s people live on less than ${money(loc.median)} a day.`, `Một nửa dân số ${cname} sống bằng dưới ${money(loc.median)} mỗi ngày.`) : ""}</p>
     ${loc.poverty ? table([tr("Poverty line", "Chuẩn nghèo"), `${cname}, ${refYear}`, tr("World", "Thế giới")], loc.poverty.map((pv, i) =>
         `<tr><td>${money(pv.line)} ${tr("a day", "mỗi ngày")}</td><td>${pct(pv.pct)}</td><td>${pct(inc.lines[i].share_below)}</td></tr>`)) : ""}
-    ${table([tr("Indicator", "Chỉ số"), cname, loc.region_name ? esc(loc.region_name) : null, tr("World", "Thế giới"),
+    ${table([tr("Indicator", "Chỉ số"), cname, loc.region_name ? esc(loc.region_name) : null,
+             loc.group_name ? {cls: "d-none d-md-table-cell", html: esc(loc.group_name)} : null, tr("World", "Thế giới"),
              `<abbr title="${tr("Share of the world's population living in economies that do worse on this indicator", "Tỷ lệ dân số thế giới sống ở các nền kinh tế kém hơn về chỉ số này")}">${tr("Better than", "Hơn")}</abbr>`].filter(x => x !== null), (() => {
         // Group the indicators so the long table scans easily.
         const groups = [
@@ -801,7 +802,7 @@
             [tr("Education and skills", "Giáo dục và kỹ năng"), /^(SE\.|HD\.)/],
             [tr("Living conditions and safety", "Điều kiện sống và an toàn"), /./],
         ];
-        const cols = loc.region_name ? 5 : 4;
+        const cols = 4 + (loc.region_name ? 1 : 0) + (loc.group_name ? 1 : 0);
         const used = new Set();
         return groups.flatMap(([title, re]) => {
             const rows = loc.glance.filter(g => !used.has(g.code) && re.test(g.code));
@@ -809,7 +810,8 @@
             if (!rows.length) return [];
             return [`<tr class="glance-group"><th colspan="${cols}">${title}</th></tr>`].concat(rows.map(g =>
                 `<tr><td>${esc(g.label)} <span class="small text-secondary">(${g.year})</span></td><td>${fmtGlance(g.value, g.fmt)}</td>
-                ${loc.region_name ? `<td>${est(g.region_estimated)}${fmtGlance(g.region, g.fmt)}</td>` : ""}<td>${est(g.world_estimated)}${fmtGlance(g.world, g.fmt)}</td>
+                ${loc.region_name ? `<td>${est(g.region_estimated)}${fmtGlance(g.region, g.fmt)}</td>` : ""}
+                ${loc.group_name ? `<td class="d-none d-md-table-cell">${est(g.group_estimated)}${fmtGlance(g.group, g.fmt)}</td>` : ""}<td>${est(g.world_estimated)}${fmtGlance(g.world, g.fmt)}</td>
                 <td>${g.better_than_pct === null ? "" : pct(g.better_than_pct, 0)}</td></tr>`));
         });
     })())}

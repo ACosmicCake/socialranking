@@ -1159,15 +1159,16 @@
         const LOWER_BETTER = /^(SH\.DYN\.MORT|SN\.ITK\.DEFC|SL\.UEM|SL\.EMP\.VULN|SH\.XPD\.OOPC|EN\.POP\.SLUM|SI\.POV\.GINI|SI\.DST\.10TH|EN\.ATM\.PM25|VC\.IHR|SH\.STA\.STNT|SE\.LPV|SH\.STA\.MMRT|SP\.ADO\.TFRT)/;
         const UNRANKED = /^(SP\.URB|SH\.XPD\.CHEX|SI\.POV\.NAHC|SL\.TLF\.CACT|SP\.DYN\.TFRT)/;
 
-        // Population-weighted average over economies with data (in a region, if given), for indicators
+        // Population-weighted average over economies with data (in a region or income group, if given), for indicators
         // without a published aggregate. Not for inequality measures or national poverty lines, whose
         // averages mean something else, and only when the data cover at least half the population.
         const NO_ESTIMATE = /^SI\./;
-        function estimateAggregate(code, regionCode) {
+        function estimateAggregate(code, regionCode, incomeGroup) {
             if (NO_ESTIMATE.test(code)) return null;
             let sum = 0, covered = 0, total = 0;
             for (const c of D.countries) {
                 if (!c.population || (regionCode && c.region !== regionCode)) continue;
+                if (incomeGroup && c.income_group !== incomeGroup) continue;
                 total += c.population;
                 const x = value(c.wdi, code);
                 if (x === null) continue;
@@ -1224,6 +1225,12 @@
                 if (item.world === null && (item.world = estimateAggregate(code)) !== null) item.world_estimated = true;
                 if (region && item.region === null && (item.region = estimateAggregate(code, country.region)) !== null) {
                     item.region_estimated = true;
+                }
+                if (group) {
+                    item.group = value(group.wdi, code);
+                    if (item.group === null && (item.group = estimateAggregate(code, null, country.income_group)) !== null) {
+                        item.group_estimated = true;
+                    }
                 }
                 result.glance.push(item);
             }
